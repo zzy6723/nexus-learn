@@ -1,0 +1,93 @@
+{
+  "lecture_id": "optimisation_001",
+  "knowledge_objects": [
+    {
+      "id": "objective_function",
+      "name": "Objective Function",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "A function that assigns a real value to each feasible input in an optimisation problem.",
+      "source_span": "an objective function assigns a real value to each feasible input"
+    },
+    {
+      "id": "optimisation_problem",
+      "name": "Optimisation Problem",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "A problem that asks for an input that makes the objective function as small or as large as possible.",
+      "source_span": "An optimisation problem asks for an input that makes the objective function as small or as large as possible"
+    },
+    {
+      "id": "unconstrained_minimisation_problem",
+      "name": "Unconstrained Minimisation Problem",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "An optimisation problem where feasible inputs are all points in a space and the goal is to minimise a differentiable function.",
+      "source_span": "unconstrained minimisation problem"
+    },
+    {
+      "id": "gradient",
+      "name": "Gradient",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "The vector of partial derivatives of a differentiable function, describing local change.",
+      "source_span": "gradient \\(\\nabla f(x)\\)"
+    },
+    {
+      "id": "descent_direction",
+      "name": "Descent Direction",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "A direction that points toward the direction of steepest local decrease, given by the negative gradient.",
+      "source_span": "descent direction"
+    },
+    {
+      "id": "gradient_descent",
+      "name": "Gradient Descent",
+      "type": "Method",
+      "aliases": [],
+      "short_definition": "A first-order iterative method that repeatedly moves in the direction of the negative gradient.",
+      "source_span": "Gradient descent is a first-order iterative method that repeatedly moves in this direction"
+    },
+    {
+      "id": "step_size",
+      "name": "Step Size",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "A scalar that controls how far the method moves at each iteration.",
+      "source_span": "step size"
+    },
+    {
+      "id": "line_search",
+      "name": "Line Search",
+      "type": "Method",
+      "aliases": [],
+      "short_definition": "A method for choosing a step size that gives sufficient decrease in the objective function.",
+      "source_span": "A line search is a method for choosing a step size that gives sufficient decrease in the objective function"
+    },
+    {
+      "id": "convex_function",
+      "name": "Convex Function",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "A function for which every local minimum is also a global minimum.",
+      "source_span": "convex functions"
+    },
+    {
+      "id": "stationary_point",
+      "name": "Stationary Point",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "A point where the gradient is zero.",
+      "source_span": "stationary point"
+    },
+    {
+      "id": "gradient_descent_update",
+      "name": "Gradient Descent Update",
+      "type": "Formula",
+      "aliases": [],
+      "short_definition": "The update rule for gradient descent: x_{k+1} = x_k - alpha_k * gradient f(x_k).",
+      "source_span": "x_{k+1} = x_k - \\alpha_k \\nabla f(x_k)"
+    }
+  ]
+}

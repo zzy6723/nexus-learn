@@ -1,0 +1,45 @@
+{
+  "lecture_id": "ml_optimization_001",
+  "knowledge_objects": [
+    {
+      "id": "loss_function",
+      "name": "Loss Function",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "A function that assigns a numerical cost to the model's current behavior.",
+      "source_span": "A loss function L(θ) assigns a numerical cost to the model's current behavior."
+    },
+    {
+      "id": "gradient_descent",
+      "name": "Gradient Descent",
+      "type": "Method",
+      "aliases": [],
+      "short_definition": "An iterative method for minimizing a differentiable loss function by moving in the negative gradient direction.",
+      "source_span": "Gradient descent is an iterative method for minimizing a differentiable loss function."
+    },
+    {
+      "id": "learning_rate",
+      "name": "Learning Rate",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "A scalar that controls the size of each update step in gradient descent.",
+      "source_span": "The scalar η is the learning rate. It controls the size of each update step."
+    },
+    {
+      "id": "stochastic_gradient_descent",
+      "name": "Stochastic Gradient Descent",
+      "type": "Method",
+      "aliases": [],
+      "short_definition": "A variant of gradient descent that uses a small batch of training examples to estimate the gradient at each step.",
+      "source_span": "Stochastic gradient descent uses a small batch of training examples to estimate the gradient at each step."
+    },
+    {
+      "id": "gradient_descent_update_formula",
+      "name": "Gradient Descent Update Formula",
+      "type": "Formula",
+      "aliases": [],
+      "short_definition": "θ_{t+1} = θ_t - η ∇L(θ_t) updates parameters by moving in the negative gradient direction scaled by learning rate.",
+      "source_span": "θ_{t+1} = θ_t - η ∇L(θ_t)"
+    }
+  ]
+}

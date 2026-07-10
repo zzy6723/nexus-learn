@@ -1,0 +1,65 @@
+{
+  "lecture_id": "calculus_001",
+  "knowledge_objects": [
+    {
+      "id": "partial_derivative",
+      "name": "Partial Derivative",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "A partial derivative measures how a function changes when one coordinate changes while the other coordinates are held fixed.",
+      "source_span": "A partial derivative measures how f changes when one coordinate changes while the other coordinates are held fixed."
+    },
+    {
+      "id": "gradient",
+      "name": "Gradient",
+      "type": "Concept",
+      "aliases": [
+        "nabla f"
+      ],
+      "short_definition": "The gradient collects partial derivatives into a vector.",
+      "source_span": "The gradient ∇f(x) collects these partial derivatives into a vector."
+    },
+    {
+      "id": "directional_derivative",
+      "name": "Directional Derivative",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "For a unit direction u, the directional derivative is ∇f(x)·u, so the gradient points in the direction of steepest local increase.",
+      "source_span": "For a unit direction u, the directional derivative is ∇f(x)·u, so the gradient points in the direction of steepest local increase."
+    },
+    {
+      "id": "stationary_point",
+      "name": "Stationary Point",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "A point where the gradient is the zero vector is called a stationary point.",
+      "source_span": "A point where the gradient is the zero vector is called a stationary point."
+    },
+    {
+      "id": "taylor_approximation",
+      "name": "Taylor Approximation",
+      "type": "Method",
+      "aliases": [
+        "Taylor series"
+      ],
+      "short_definition": "Taylor approximation describes the local behavior of a differentiable function near a point.",
+      "source_span": "Taylor approximation describes the local behavior of a differentiable function near a point."
+    },
+    {
+      "id": "first_order_taylor_approximation",
+      "name": "First-Order Taylor Approximation",
+      "type": "Formula",
+      "aliases": [],
+      "short_definition": "The first-order Taylor approximation around a is f(a+h) ≈ f(a) + ∇f(a)·h.",
+      "source_span": "f(a+h) ≈ f(a) + ∇f(a)·h."
+    },
+    {
+      "id": "hessian_matrix",
+      "name": "Hessian Matrix",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "The Hessian matrix describes local curvature for twice differentiable functions.",
+      "source_span": "the Hessian matrix, which describes local curvature."
+    }
+  ]
+}

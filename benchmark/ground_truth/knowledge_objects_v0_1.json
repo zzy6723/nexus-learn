@@ -1,0 +1,218 @@
+{
+  "version": "v0.1",
+  "created": "2026-07-10",
+  "description": "Human-authored ground truth for Experiment 001: Knowledge Object extraction.",
+  "scope": "Small benchmark for validating whether an LLM can extract meaningful Knowledge Objects from short STEM learning materials.",
+  "notes": [
+    "This ground truth is intentionally small and hand-authored.",
+    "Object types are provisional for Experiment 001 and should not be treated as the final ADR-003 schema.",
+    "source_span is used for grounding individual Knowledge Objects. Evidence remains a Connection-layer concept."
+  ],
+  "allowed_object_types": [
+    "Concept",
+    "Method",
+    "Formula"
+  ],
+  "lectures": [
+    {
+      "lecture_id": "calculus_001",
+      "path": "benchmark/lectures/calculus_001.md",
+      "expected_objects": [
+        {
+          "id": "partial_derivative",
+          "name": "Partial Derivative",
+          "type": "Concept",
+          "aliases": ["partial derivatives"],
+          "source_span": "A partial derivative measures how \\(f\\) changes when one coordinate changes while the other coordinates are held fixed."
+        },
+        {
+          "id": "gradient",
+          "name": "Gradient",
+          "type": "Concept",
+          "aliases": ["\\nabla f(x)"],
+          "source_span": "The gradient \\(\\nabla f(x)\\) collects these partial derivatives into a vector."
+        },
+        {
+          "id": "directional_derivative",
+          "name": "Directional Derivative",
+          "type": "Concept",
+          "aliases": [],
+          "source_span": "For a unit direction \\(u\\), the directional derivative is \\(\\nabla f(x)\\cdot u\\), so the gradient points in the direction of steepest local increase."
+        },
+        {
+          "id": "stationary_point",
+          "name": "Stationary Point",
+          "type": "Concept",
+          "aliases": [],
+          "source_span": "A point where the gradient is the zero vector is called a stationary point."
+        },
+        {
+          "id": "taylor_approximation",
+          "name": "Taylor Approximation",
+          "type": "Method",
+          "aliases": ["first-order Taylor approximation", "second-order approximation"],
+          "source_span": "Taylor approximation describes the local behavior of a differentiable function near a point."
+        },
+        {
+          "id": "first_order_taylor_formula",
+          "name": "First-order Taylor Approximation Formula",
+          "type": "Formula",
+          "aliases": [],
+          "source_span": "f(a+h) \\approx f(a) + \\nabla f(a)\\cdot h."
+        },
+        {
+          "id": "hessian_matrix",
+          "name": "Hessian Matrix",
+          "type": "Concept",
+          "aliases": ["Hessian"],
+          "source_span": "For twice differentiable functions, a second-order approximation also includes the Hessian matrix, which describes local curvature."
+        }
+      ]
+    },
+    {
+      "lecture_id": "linear_algebra_001",
+      "path": "benchmark/lectures/linear_algebra_001.md",
+      "expected_objects": [
+        {
+          "id": "vector_space",
+          "name": "Vector Space",
+          "type": "Concept",
+          "aliases": [],
+          "source_span": "A vector space is a set of objects called vectors that can be added together and multiplied by scalars while satisfying the vector space axioms."
+        },
+        {
+          "id": "basis",
+          "name": "Basis",
+          "type": "Concept",
+          "aliases": [],
+          "source_span": "A basis is a set of independent vectors that can represent every vector in the space through linear combinations."
+        },
+        {
+          "id": "dimension",
+          "name": "Dimension",
+          "type": "Concept",
+          "aliases": [],
+          "source_span": "The number of vectors in a basis is the dimension of the vector space."
+        },
+        {
+          "id": "matrix",
+          "name": "Matrix",
+          "type": "Concept",
+          "aliases": ["matrices"],
+          "source_span": "A matrix is a rectangular array of numbers that can represent a linear transformation once bases have been chosen for the input and output spaces."
+        },
+        {
+          "id": "linear_transformation",
+          "name": "Linear Transformation",
+          "type": "Concept",
+          "aliases": [],
+          "source_span": "Matrix multiplication corresponds to composing linear transformations, and changing a basis changes the matrix representation without changing the underlying transformation."
+        },
+        {
+          "id": "eigenvector",
+          "name": "Eigenvector",
+          "type": "Concept",
+          "aliases": [],
+          "source_span": "For a square matrix \\(A\\), an eigenvector is a nonzero vector \\(v\\) whose direction is preserved by the transformation represented by \\(A\\)."
+        },
+        {
+          "id": "eigenvalue",
+          "name": "Eigenvalue",
+          "type": "Concept",
+          "aliases": ["\\lambda"],
+          "source_span": "The corresponding eigenvalue \\(\\lambda\\) satisfies"
+        },
+        {
+          "id": "eigenvalue_equation",
+          "name": "Eigenvalue Equation",
+          "type": "Formula",
+          "aliases": [],
+          "source_span": "Av = \\lambda v."
+        },
+        {
+          "id": "characteristic_polynomial",
+          "name": "Characteristic Polynomial",
+          "type": "Concept",
+          "aliases": [],
+          "source_span": "Eigenvalues are connected to the characteristic polynomial \\(\\det(\\lambda I - A)\\)."
+        }
+      ]
+    },
+    {
+      "lecture_id": "optimisation_001",
+      "path": "benchmark/lectures/optimisation_001.md",
+      "expected_objects": [
+        {
+          "id": "objective_function",
+          "name": "Objective Function",
+          "type": "Concept",
+          "aliases": [],
+          "source_span": "In mathematical optimisation, an objective function assigns a real value to each feasible input."
+        },
+        {
+          "id": "optimisation_problem",
+          "name": "Optimisation Problem",
+          "type": "Concept",
+          "aliases": [],
+          "source_span": "An optimisation problem asks for an input that makes the objective function as small or as large as possible."
+        },
+        {
+          "id": "unconstrained_minimisation_problem",
+          "name": "Unconstrained Minimisation Problem",
+          "type": "Concept",
+          "aliases": [],
+          "source_span": "In an unconstrained minimisation problem, the feasible inputs are usually all points in a space such as \\(\\mathbb{R}^n\\), and the goal is to minimise a differentiable function \\(f(x)\\)."
+        },
+        {
+          "id": "descent_direction",
+          "name": "Descent Direction",
+          "type": "Concept",
+          "aliases": ["negative gradient"],
+          "source_span": "The negative gradient \\(-\\nabla f(x)\\) is a descent direction because it points toward the direction of steepest local decrease."
+        },
+        {
+          "id": "gradient_descent",
+          "name": "Gradient Descent",
+          "type": "Method",
+          "aliases": ["first-order iterative method"],
+          "source_span": "Gradient descent is a first-order iterative method that repeatedly moves in this direction:"
+        },
+        {
+          "id": "gradient_descent_update",
+          "name": "Gradient Descent Update",
+          "type": "Formula",
+          "aliases": [],
+          "source_span": "x_{k+1} = x_k - \\alpha_k \\nabla f(x_k)."
+        },
+        {
+          "id": "step_size",
+          "name": "Step Size",
+          "type": "Concept",
+          "aliases": ["\\alpha_k"],
+          "source_span": "The scalar \\(\\alpha_k\\) is the step size."
+        },
+        {
+          "id": "line_search",
+          "name": "Line Search",
+          "type": "Method",
+          "aliases": [],
+          "source_span": "A line search is a method for choosing a step size that gives sufficient decrease in the objective function."
+        },
+        {
+          "id": "convex_function",
+          "name": "Convex Function",
+          "type": "Concept",
+          "aliases": ["convex functions"],
+          "source_span": "For convex functions, every local minimum is also a global minimum."
+        },
+        {
+          "id": "stationary_point",
+          "name": "Stationary Point",
+          "type": "Concept",
+          "aliases": [],
+          "source_span": "A stationary point is a point where the gradient is zero."
+        }
+      ]
+    }
+  ]
+}
