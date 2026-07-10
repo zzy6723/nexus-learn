@@ -3,7 +3,7 @@
 **Status:** Benchmark input  
 **Version:** v0.1  
 **Created:** 2026-07-10  
-**Source:** Authored for this repository.
+**Source:** Authored for this repository
 
 ---
 
