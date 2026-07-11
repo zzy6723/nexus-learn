@@ -16,7 +16,17 @@ The active benchmark now covers:
 - linear algebra,
 - optimisation.
 
-The model extracted 27 Knowledge Objects against 26 ground-truth objects. Manual semantic evaluation found approximately 25 matched ground-truth objects, giving high precision and high recall for a first baseline.
+The model extracted 27 Knowledge Objects. Evaluation under `benchmark/evaluation_protocol.md`, including one resolved manual adjudication item, found 25 matched required objects out of 26 required ground-truth objects, plus 2 optional supporting objects.
+
+Aggregate development metrics:
+
+- required precision: 1.000
+- required recall: 0.962
+- required F1: 0.980
+- required type accuracy: 0.960
+- exact source-span rate: 0.556
+- manual matches: 1
+- unresolved adjudications: 0
 
 The experiment supports the core assumption that short STEM learning materials can be converted into structured Knowledge Objects before Relation Discovery.
 
@@ -28,8 +38,8 @@ The experiment supports the core assumption that short STEM learning materials c
 - The model did not produce obvious generic chunks, headings, or hallucinated objects.
 - `calculus_001` was almost perfectly extracted.
 - `linear_algebra_001` exposed ambiguity between `Concept` and `Formula`, especially for `Characteristic Polynomial`.
-- `optimisation_001` extracted all expected objects and added `Gradient`, which is meaningful for later cross-course connections.
-- Source grounding was semantically valid, but not always exact-string because LaTeX notation was normalized.
+- `optimisation_001` extracted all required objects and added optional `Gradient`, which is meaningful for later cross-course connections.
+- Source grounding was semantically valid in many cases, but exact-string matching failed often because notation was normalized or copied without Markdown escape characters.
 
 ---
 
@@ -76,6 +86,4 @@ The next iteration should revise the prompt to:
 3. clarify that named formula-related objects may still be `Concept` if the object is a mathematical construct rather than the equation itself;
 4. decide whether useful supporting objects should be added to ground truth or treated as spurious.
 
-After that, rerun the same benchmark and compare outputs against this baseline.
-
-If the second run improves boundary control without increasing noise, the project can move toward drafting ADR-003: Knowledge Object.
+After that, compare future runs against this baseline under the same evaluation protocol.

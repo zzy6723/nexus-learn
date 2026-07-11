@@ -10,14 +10,50 @@ The benchmark is intentionally small at the beginning. Its purpose is to make ex
 
 ```text
 benchmark/
+├── annotation_guidelines.md
+├── evaluation_protocol.md
 ├── lectures/
-│   ├── calculus_001.md
-│   ├── linear_algebra_001.md
-│   └── optimisation_001.md
+│   ├── development/
+│   │   ├── calculus_001.md
+│   │   ├── linear_algebra_001.md
+│   │   └── optimisation_001.md
+│   └── holdout/
+│       ├── calculus_002.md
+│       ├── linear_algebra_002.md
+│       └── probability_001.md
 ├── ground_truth/
-│   └── knowledge_objects_v0_1.json
+│   ├── development_v0_1.json
+│   └── holdout_v0_1.json
 └── results/
 ```
+
+---
+
+# Splits
+
+## Development
+
+The development split is used for prompt debugging, error analysis, and benchmark design.
+
+Current development lectures:
+
+- `lectures/development/calculus_001.md`
+- `lectures/development/linear_algebra_001.md`
+- `lectures/development/optimisation_001.md`
+
+Development results must not be interpreted as evidence of generalization.
+
+## Holdout
+
+The holdout split is used for unseen evaluation after the prompt, schema, ground truth, matching rules, and evaluation protocol are frozen.
+
+Current holdout lectures:
+
+- `lectures/holdout/calculus_002.md`
+- `lectures/holdout/linear_algebra_002.md`
+- `lectures/holdout/probability_001.md`
+
+Do not run models on the holdout split until the evaluation protocol is frozen.
 
 ---
 
@@ -33,29 +69,35 @@ This keeps the benchmark suitable for public GitHub use.
 
 # Ground Truth
 
-`ground_truth/knowledge_objects_v0_1.json` defines the expected Knowledge Objects for Experiment 001.
+Ground truth is hand-authored and should be treated as a small evaluation reference, not as a final ontology.
 
-The ground truth is hand-authored and should be treated as a small evaluation reference, not as a final ontology.
+Current ground truth files:
 
-The current object types are provisional:
+- `ground_truth/development_v0_1.json`
+- `ground_truth/holdout_v0_1.json`
+
+The current object types are:
 
 - `Concept`
 - `Method`
 - `Formula`
 
-These types should be revised after Experiment 001 before ADR-003 is finalized.
+These types are defined for the MVP and Technical Validation phase in ADR-003.
 
 ---
 
 # Results
 
-Experiment outputs and evaluation summaries may be stored in `results/` or inside the corresponding experiment directory.
+Detailed model outputs and evaluation artifacts are stored inside the corresponding experiment directory.
+
+`benchmark/results/` is reserved for benchmark-level aggregate summaries that compare multiple experiments.
 
 When an experiment uses this benchmark, it should record:
 
-- Input version
-- Prompt or method version
-- Model used
-- Output file
-- Evaluation notes
-- Conclusion
+- benchmark split;
+- ground truth version;
+- prompt or method version;
+- model used;
+- output file;
+- evaluation notes;
+- conclusion.

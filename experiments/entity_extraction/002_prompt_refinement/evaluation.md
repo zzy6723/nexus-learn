@@ -13,7 +13,7 @@ Evaluate whether the refined prompt improves boundary control compared with `001
 
 The evaluation compares model output against:
 
-- `benchmark/ground_truth/knowledge_objects_v0_1.json`
+- `benchmark/ground_truth/development_v0_1.json`
 
 ---
 
@@ -44,29 +44,27 @@ The v0.2 prompt added explicit rules for:
 
 # Results
 
-| Lecture | Precision | Recall | Type Accuracy | Exact Source Spans | Notes |
+| Lecture | Required Precision | Required Recall | Type Accuracy | Exact Source Spans | Notes |
 | --- | --- | --- | --- | --- | --- |
 | `calculus_001` | 7/7 | 7/7 | 7/7 | 3/7 | Same object quality as baseline, but the model still normalized several mathematical spans. |
-| `linear_algebra_001` | 9/10 | 9/9 | 9/9 | 8/10 | Fixed both baseline boundary errors: `Eigenvalue Equation` was extracted as `Formula`, and `Characteristic Polynomial` was typed as `Concept`. |
-| `optimisation_001` | 10/11 | 10/10 | 10/10 | 11/11 | Extracted all expected objects and added useful supporting object `Gradient`. Some spans are exact but short. |
+| `linear_algebra_001` | 9/9 | 9/9 | 9/9 | 8/10 | Fixed both baseline boundary errors: `Eigenvalue Equation` was extracted as `Formula`, and `Characteristic Polynomial` was typed as `Concept`; extracted optional `Matrix Multiplication`. |
+| `optimisation_001` | 10/10 | 10/10 | 10/10 | 11/11 | Extracted all required objects and optional `Gradient`. Some spans are exact but short. |
 
 Overall:
 
 | Metric | Result |
 | --- | --- |
 | Total extracted objects | 28 |
-| Ground-truth objects | 26 |
-| Matched ground-truth objects | 26 |
-| Useful extra objects | 2 |
-| Approximate strict precision | 26/28 |
-| Approximate useful precision | 28/28 |
-| Approximate recall | 26/26 |
-| Type accuracy on matched objects | 26/26 |
+| Required ground-truth objects | 26 |
+| Optional ground-truth objects extracted | 2 |
+| Matched required objects | 26 |
+| Unsupported objects | 0 |
+| Required precision | 26/26 |
+| Required recall | 26/26 |
+| Type accuracy on matched required objects | 26/26 |
 | Exact source spans | 22/28 |
 
-Precision and recall are approximate because matching was manually judged by semantic equivalence rather than exact ID equality.
-
-`Approximate strict precision` treats useful extra objects as false positives. `Approximate useful precision` treats explicitly grounded useful supporting objects as acceptable Knowledge Objects.
+Precision and recall use the `required` / `optional` scoring policy from `benchmark/evaluation_protocol.md`. Matching was manually judged by semantic equivalence rather than exact ID equality.
 
 ---
 
@@ -89,7 +87,7 @@ Precision and recall are approximate because matching was manually judged by sem
 - `linear_algebra_001`: extracted `Matrix Multiplication`.
 - `optimisation_001`: extracted `Gradient`.
 
-Both objects are grounded and useful for later Relation Discovery, so they are better understood as ground-truth boundary questions rather than pure model errors.
+Both objects are grounded and useful for later Relation Discovery. They are now treated as optional objects in the development ground truth.
 
 ## Source Span Problems
 
@@ -126,4 +124,4 @@ The prompt refinement succeeded on boundary control but only partially succeeded
 
 This suggests that ADR-003 can begin drafting the conceptual Knowledge Object schema, but exact grounding should remain an engineering concern for later implementation.
 
-The next step is to decide whether useful supporting objects should be included in ground truth. If yes, `Matrix Multiplication` and `Gradient` should be added to a future benchmark version.
+The next step is holdout validation under the frozen annotation and evaluation protocol.

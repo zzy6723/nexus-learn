@@ -1,6 +1,6 @@
 # Experiment 001: Baseline Knowledge Object Extraction
  
-**Version:** v0.1 (Planned)
+**Version:** v0.1 (Completed on development set)
 **Experiment Area:** Entity Extraction
 
 ---
@@ -23,13 +23,13 @@ Given short STEM lecture snippets, can an LLM extract meaningful educational ent
 
 Canonical benchmark inputs:
 
-- `benchmark/lectures/calculus_001.md`
-- `benchmark/lectures/linear_algebra_001.md`
-- `benchmark/lectures/optimisation_001.md`
+- `benchmark/lectures/development/calculus_001.md`
+- `benchmark/lectures/development/linear_algebra_001.md`
+- `benchmark/lectures/development/optimisation_001.md`
 
 Ground truth:
 
-- `benchmark/ground_truth/knowledge_objects_v0_1.json`
+- `benchmark/ground_truth/development_v0_1.json`
 
 ---
 
@@ -65,7 +65,7 @@ These types are provisional and should be refined after the experiment before AD
 
 # Evaluation
 
-Manual evaluation should compare model output against `benchmark/ground_truth/knowledge_objects_v0_1.json`.
+Automated evaluation compares model output against `benchmark/ground_truth/development_v0_1.json`.
 
 Core checks:
 
@@ -76,6 +76,21 @@ Core checks:
 - Source grounding quality
 - Duplicate rate
 - Noise rate
+
+Run:
+
+```bash
+python3 scripts/evaluate_entity_extraction.py \
+  --experiment 001_baseline \
+  --adjudication adjudication_resolved.json
+```
+
+Evaluation artifacts are written to:
+
+- `experiments/entity_extraction/001_baseline/evaluation/metrics.json`
+- `experiments/entity_extraction/001_baseline/evaluation/matches.json`
+- `experiments/entity_extraction/001_baseline/evaluation/errors.json`
+- `experiments/entity_extraction/001_baseline/evaluation/summary.md`
 
 ---
 
@@ -117,7 +132,10 @@ Optional arguments:
 ```bash
 python3 scripts/run_entity_extraction.py --model deepseek-v4-flash --temperature 0
 python3 scripts/run_entity_extraction.py --only calculus_001
+python3 scripts/run_entity_extraction.py --dry-run --overwrite
 ```
+
+The runner refuses to overwrite existing per-lecture artifacts by default. Use a new run directory for holdout runs, or pass `--overwrite` only when deliberately replacing a previous dry run or failed run.
 
 Outputs are written to:
 
@@ -128,3 +146,11 @@ Outputs are written to:
 Run metadata is written to:
 
 - `experiments/entity_extraction/001_baseline/metadata/`
+
+Rendered request payloads are written to:
+
+- `experiments/entity_extraction/001_baseline/rendered_inputs/`
+
+Raw API responses are written to:
+
+- `experiments/entity_extraction/001_baseline/raw_responses/`

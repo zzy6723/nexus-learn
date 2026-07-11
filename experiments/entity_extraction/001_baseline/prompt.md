@@ -1,7 +1,7 @@
 # Baseline Prompt
 
 **Experiment:** `experiments/entity_extraction/001_baseline`  
-**Version:** v0.1  
+**Version:** v0.1 (Frozen)  
 **Created:** 2026-07-10
 
 ---

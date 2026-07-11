@@ -4,12 +4,12 @@ This experiment uses the canonical benchmark lecture snippets rather than duplic
 
 Inputs:
 
-- `benchmark/lectures/calculus_001.md`
-- `benchmark/lectures/linear_algebra_001.md`
-- `benchmark/lectures/optimisation_001.md`
+- `benchmark/lectures/development/calculus_001.md`
+- `benchmark/lectures/development/linear_algebra_001.md`
+- `benchmark/lectures/development/optimisation_001.md`
 
 Ground truth:
 
-- `benchmark/ground_truth/knowledge_objects_v0_1.json`
+- `benchmark/ground_truth/development_v0_1.json`
 
 Keeping inputs in `benchmark/` makes later experiments comparable across prompt versions and model versions.

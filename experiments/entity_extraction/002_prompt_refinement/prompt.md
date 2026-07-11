@@ -1,7 +1,7 @@
 # Refined Prompt
 
 **Experiment:** `experiments/entity_extraction/002_prompt_refinement`  
-**Version:** v0.2  
+**Version:** v0.2 (Frozen)  
 **Created:** 2026-07-10
 
 ---

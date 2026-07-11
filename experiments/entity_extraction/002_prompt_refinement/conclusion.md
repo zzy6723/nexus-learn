@@ -10,14 +10,26 @@
 
 The refined prompt improved Knowledge Object boundary control compared with the baseline.
 
-The model extracted all 26 ground-truth objects across the active benchmark and assigned correct provisional types to all matched objects.
+The model extracted all 26 required ground-truth objects across the active development benchmark and assigned correct provisional types to all matched required objects.
+
+This includes one resolved manual adjudication item for a Taylor-formula label variant.
 
 It also extracted two useful supporting objects:
 
 - `Matrix Multiplication`
 - `Gradient`
 
-These objects are grounded and potentially valuable for later Relation Discovery, but they are not included in the current ground truth.
+These objects are grounded and potentially valuable for later Relation Discovery. They are now represented as optional objects in the development ground truth.
+
+Aggregate development metrics:
+
+- required precision: 1.000
+- required recall: 1.000
+- required F1: 1.000
+- required type accuracy: 1.000
+- exact source-span rate: 0.786
+- manual matches: 1
+- unresolved adjudications: 0
 
 ---
 
@@ -27,7 +39,7 @@ These objects are grounded and potentially valuable for later Relation Discovery
 - The model now types `Characteristic Polynomial` as `Concept`.
 - Calculus recall stayed stable.
 - Optimisation extraction remained strong.
-- Useful supporting objects continue to appear, which suggests the benchmark boundary needs a deliberate policy.
+- Useful supporting objects continue to appear; the benchmark now treats them as optional rather than unsupported errors.
 - Exact source-span grounding improved in some places but remains inconsistent.
 
 ---
@@ -53,7 +65,7 @@ Exact `source_span` should not be treated as solved by prompt engineering alone.
 
 # Decision
 
-This experiment provides enough evidence to start drafting ADR-003: Knowledge Object.
+This experiment provides enough development evidence to support ADR-003 as an initial MVP schema decision.
 
 ADR-003 should not overfit to this small benchmark, but it can define the initial conceptual schema and boundary rules for:
 
@@ -67,10 +79,4 @@ ADR-003 should not overfit to this small benchmark, but it can define the initia
 
 # Next Step
 
-Draft `docs/decisions/003-knowledge-object.md`.
-
-Before Relation Discovery begins, create a benchmark v0.2 decision:
-
-1. whether to add useful supporting objects to ground truth;
-2. whether `source_span` requires exact substring matching or semantic grounding;
-3. whether automated evaluation should normalize LaTeX before span matching.
+Freeze the benchmark and evaluation protocol, then run both baseline and refined prompts on the holdout split before making a final holdout-backed conclusion.

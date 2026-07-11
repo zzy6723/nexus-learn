@@ -13,7 +13,7 @@ Evaluate whether the baseline prompt extracts useful Knowledge Objects from shor
 
 The evaluation compares model output against:
 
-- `benchmark/ground_truth/knowledge_objects_v0_1.json`
+- `benchmark/ground_truth/development_v0_1.json`
 
 ---
 
@@ -89,24 +89,27 @@ The original `ml_optimization_001` run was superseded after the benchmark was re
 
 # Results
 
-| Lecture | Precision | Recall | Type Accuracy | Grounding Quality | Notes |
+| Lecture | Required Precision | Required Recall | Type Accuracy | Exact Source Spans | Notes |
 | --- | --- | --- | --- | --- | --- |
-| `calculus_001` | 7/7 | 7/7 | 7/7 | Good, but not always exact-string | All expected objects extracted. `First-order Taylor Approximation Formula` was named `First-Order Taylor Approximation`, but the object is semantically correct and typed as `Formula`. |
-| `linear_algebra_001` | 8/9 | 8/9 | 7/8 | Good, but not always exact-string | Added `Matrix Multiplication`; missed `Eigenvalue Equation` as a separate Formula; typed `Characteristic Polynomial` as `Formula` instead of `Concept`. |
-| `optimisation_001` | 10/11 | 10/10 | 10/10 | Good, but not always exact-string | All expected objects extracted. Added `Gradient`, which is meaningful but not included in this lecture's ground truth. |
+| `calculus_001` | 7/7 | 7/7 | 7/7 | 3/7 | All required objects extracted. `First-order Taylor Approximation Formula` was named `First-Order Taylor Approximation`, but the object is semantically correct and typed as `Formula`. |
+| `linear_algebra_001` | 8/8 | 8/9 | 7/8 | 6/9 | Extracted optional `Matrix Multiplication`; missed `Eigenvalue Equation` as a separate Formula; typed `Characteristic Polynomial` as `Formula` instead of `Concept`. |
+| `optimisation_001` | 10/10 | 10/10 | 10/10 | 6/11 | All required objects extracted. Extracted optional `Gradient`. |
 
 Overall:
 
 | Metric | Result |
 | --- | --- |
 | Total extracted objects | 27 |
-| Ground-truth objects | 26 |
-| Matched ground-truth objects | 25 |
-| Approximate precision | 25/27 |
-| Approximate recall | 25/26 |
-| Type accuracy on matched objects | 24/25 |
+| Required ground-truth objects | 26 |
+| Optional ground-truth objects extracted | 2 |
+| Matched required objects | 25 |
+| Unsupported objects | 0 |
+| Required precision | 25/25 |
+| Required recall | 25/26 |
+| Type accuracy on matched required objects | 24/25 |
+| Exact source spans | 15/27 |
 
-Precision and recall are approximate because matching was manually judged by semantic equivalence rather than exact ID equality.
+Precision and recall use the `required` / `optional` scoring policy from `benchmark/evaluation_protocol.md`. Matching was manually judged by semantic equivalence rather than exact ID equality.
 
 ---
 
@@ -116,12 +119,12 @@ Precision and recall are approximate because matching was manually judged by sem
 
 - `linear_algebra_001`: missed `Eigenvalue Equation` as a separate Formula object, although the equation appeared inside the `Eigenvalue` source span.
 
-## Spurious Object
+## Optional Object
 
 - `linear_algebra_001`: extracted `Matrix Multiplication`, which is meaningful but not included in the current ground truth.
-- `optimisation_001`: extracted `Gradient`, which is meaningful and useful for later cross-course connections, but not included in this lecture's ground truth.
+- `optimisation_001`: extracted `Gradient`, which is meaningful and useful for later cross-course connections.
 
-These may indicate that the ground truth is slightly under-specified rather than that the model is simply wrong.
+These are now treated as optional objects in the development ground truth rather than unsupported false positives.
 
 ## Wrong Type
 
@@ -149,7 +152,7 @@ The main weakness is not noise; it is boundary control.
 
 The model tends to:
 
-- Extract meaningful but unannotated supporting objects.
+- Extract useful supporting objects.
 - Merge a formula into a related concept instead of extracting it as a separate object.
 - Treat some formula-like concepts as `Formula`.
 - Normalize notation in `source_span`, which complicates exact grounding checks.
@@ -164,7 +167,7 @@ The next iteration should focus on:
 
 - clearer object inclusion rules,
 - clearer separation between `Concept` and `Formula`,
-- a decision on whether benchmark ground truth should include useful supporting objects such as `Matrix Multiplication` and `Gradient`,
+- clearer handling of optional supporting objects,
 - stricter `source_span` requirements if automated grounding evaluation is planned.
 
 The result supports continuing to ADR-003 after one more prompt iteration or after expanding the benchmark.

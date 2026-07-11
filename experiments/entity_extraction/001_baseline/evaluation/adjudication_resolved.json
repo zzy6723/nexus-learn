@@ -1,0 +1,13 @@
+{
+  "decisions": [
+    {
+      "lecture_id": "calculus_001",
+      "prediction_index": 5,
+      "predicted_label": "First-Order Taylor Approximation",
+      "predicted_type": "Formula",
+      "decision": "matched",
+      "ground_truth_id": "first_order_taylor_formula",
+      "rationale": "The label is slightly underspecified, but the predicted type is Formula and the source span is the displayed first-order Taylor formula."
+    }
+  ]
+}

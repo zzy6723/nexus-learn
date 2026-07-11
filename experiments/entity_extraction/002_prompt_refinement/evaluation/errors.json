@@ -1,0 +1,60 @@
+[
+  {
+    "lecture_id": "calculus_001",
+    "prediction_index": 0,
+    "predicted_id": "partial_derivative",
+    "predicted_label": "Partial Derivative",
+    "error_type": "invalid_source_span",
+    "source_span": "A partial derivative measures how f changes when one coordinate changes while the other coordinates are held fixed."
+  },
+  {
+    "lecture_id": "calculus_001",
+    "prediction_index": 1,
+    "predicted_id": "gradient",
+    "predicted_label": "Gradient",
+    "error_type": "invalid_source_span",
+    "source_span": "The gradient ∇f(x) collects these partial derivatives into a vector."
+  },
+  {
+    "lecture_id": "calculus_001",
+    "prediction_index": 2,
+    "predicted_id": "directional_derivative",
+    "predicted_label": "Directional Derivative",
+    "error_type": "invalid_source_span",
+    "source_span": "For a unit direction u, the directional derivative is ∇f(x)·u, so the gradient points in the direction of steepest local increase."
+  },
+  {
+    "lecture_id": "calculus_001",
+    "prediction_index": 5,
+    "predicted_id": "first_order_taylor_approximation",
+    "predicted_label": "First-Order Taylor Approximation",
+    "error_type": "invalid_source_span",
+    "source_span": "f(a+h) ≈ f(a) + ∇f(a)·h."
+  },
+  {
+    "lecture_id": "linear_algebra_001",
+    "prediction_index": 5,
+    "predicted_id": "matrix_multiplication",
+    "predicted_label": "Matrix Multiplication",
+    "predicted_type": "Method",
+    "ground_truth_id": "matrix_multiplication",
+    "ground_truth_type": "Concept",
+    "error_type": "optional_type_error"
+  },
+  {
+    "lecture_id": "linear_algebra_001",
+    "prediction_index": 7,
+    "predicted_id": "eigenvalue",
+    "predicted_label": "Eigenvalue",
+    "error_type": "invalid_source_span",
+    "source_span": "The corresponding eigenvalue \\(\\lambda\\) satisfies \\(Av = \\lambda v\\)."
+  },
+  {
+    "lecture_id": "linear_algebra_001",
+    "prediction_index": 9,
+    "predicted_id": "eigenvalue_equation",
+    "predicted_label": "Eigenvalue Equation",
+    "error_type": "invalid_source_span",
+    "source_span": "\\[ Av = \\lambda v. \\]"
+  }
+]

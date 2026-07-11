@@ -1,0 +1,234 @@
+{
+  "version": "v0.1",
+  "split": "holdout",
+  "status": "frozen_not_run",
+  "created": "2026-07-11",
+  "description": "Human-authored frozen holdout ground truth for Knowledge Object extraction. Model execution has not yet been run.",
+  "annotation_guidelines": "benchmark/annotation_guidelines.md",
+  "evaluation_protocol": "benchmark/evaluation_protocol.md",
+  "allowed_object_types": [
+    "Concept",
+    "Method",
+    "Formula"
+  ],
+  "lectures": [
+    {
+      "lecture_id": "calculus_002",
+      "path": "benchmark/lectures/holdout/calculus_002.md",
+      "objects": [
+        {
+          "id": "composite_function",
+          "name": "Composite Function",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": ["The composite function \\(h = f \\circ g\\) maps an input \\(x \\in \\mathbb{R}^m\\) to \\(f(g(x))\\)."]
+        },
+        {
+          "id": "chain_rule",
+          "name": "Chain Rule",
+          "type": "Concept",
+          "category": "required",
+          "aliases": ["multivariable chain rule"],
+          "source_spans": ["The chain rule describes how the derivative of the composite function depends on the derivatives of \\(f\\) and \\(g\\)."]
+        },
+        {
+          "id": "jacobian_matrix",
+          "name": "Jacobian Matrix",
+          "type": "Concept",
+          "category": "required",
+          "aliases": ["Jacobian"],
+          "source_spans": ["the Jacobian matrix \\(J_g(x)\\) collects all first-order partial derivatives of the output components of \\(g\\)"]
+        },
+        {
+          "id": "local_linear_approximation",
+          "name": "Local Linear Approximation",
+          "type": "Concept",
+          "category": "optional",
+          "aliases": [],
+          "source_spans": ["It gives the best local linear approximation to \\(g\\) near \\(x\\)."]
+        },
+        {
+          "id": "multivariable_chain_rule_formula",
+          "name": "Multivariable Chain Rule Formula",
+          "type": "Formula",
+          "category": "required",
+          "aliases": [],
+          "source_spans": ["\\nabla h(x) = J_g(x)^\\top \\nabla f(g(x))."]
+        },
+        {
+          "id": "gradient",
+          "name": "Gradient",
+          "type": "Concept",
+          "category": "optional",
+          "aliases": ["gradients"],
+          "source_spans": ["This formula shows how gradients and Jacobian matrices work together."]
+        }
+      ]
+    },
+    {
+      "lecture_id": "linear_algebra_002",
+      "path": "benchmark/lectures/holdout/linear_algebra_002.md",
+      "objects": [
+        {
+          "id": "inner_product",
+          "name": "Inner Product",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": ["An inner product is an operation that takes two vectors and returns a scalar."]
+        },
+        {
+          "id": "dot_product",
+          "name": "Dot Product",
+          "type": "Concept",
+          "category": "optional",
+          "aliases": [],
+          "source_spans": ["In Euclidean space, the standard inner product is the dot product."]
+        },
+        {
+          "id": "orthogonal_vectors",
+          "name": "Orthogonal Vectors",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": ["Two vectors are orthogonal when their inner product is zero."]
+        },
+        {
+          "id": "orthogonal_projection",
+          "name": "Orthogonal Projection",
+          "type": "Method",
+          "category": "required",
+          "aliases": [],
+          "source_spans": ["Orthogonal projection is a method for finding the closest point in a subspace to a given vector."]
+        },
+        {
+          "id": "projection_formula",
+          "name": "Projection Formula",
+          "type": "Formula",
+          "category": "required",
+          "aliases": [],
+          "source_spans": ["\\operatorname{proj}_u(v) = \\frac{v \\cdot u}{u \\cdot u}u."]
+        },
+        {
+          "id": "least_squares_problem",
+          "name": "Least Squares Problem",
+          "type": "Concept",
+          "category": "required",
+          "aliases": ["least squares problems"],
+          "source_spans": ["the least squares problem asks for a vector \\(x\\) that minimizes \\(\\|Ax-b\\|^2\\)."]
+        },
+        {
+          "id": "normal_equations",
+          "name": "Normal Equations",
+          "type": "Formula",
+          "category": "required",
+          "aliases": [],
+          "source_spans": ["A^\\top A x = A^\\top b."]
+        },
+        {
+          "id": "subspace",
+          "name": "Subspace",
+          "type": "Concept",
+          "category": "optional",
+          "aliases": [],
+          "source_spans": ["the closest point in a subspace to a given vector"]
+        }
+      ]
+    },
+    {
+      "lecture_id": "probability_001",
+      "path": "benchmark/lectures/holdout/probability_001.md",
+      "objects": [
+        {
+          "id": "random_variable",
+          "name": "Random Variable",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": ["A random variable is a function that assigns a numerical value to each outcome of a random experiment."]
+        },
+        {
+          "id": "probability_distribution",
+          "name": "Probability Distribution",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": ["The probability distribution of a random variable describes how probability is assigned to its possible values."]
+        },
+        {
+          "id": "expected_value",
+          "name": "Expected Value",
+          "type": "Concept",
+          "category": "required",
+          "aliases": ["expectation"],
+          "source_spans": ["The expected value of a random variable is a weighted average of its possible values."]
+        },
+        {
+          "id": "expected_value_formula",
+          "name": "Expected Value Formula",
+          "type": "Formula",
+          "category": "required",
+          "aliases": [],
+          "source_spans": ["\\mathbb{E}[X] = \\sum_x x P(X=x)."]
+        },
+        {
+          "id": "variance",
+          "name": "Variance",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": ["Variance measures how far a random variable typically is from its expected value."]
+        },
+        {
+          "id": "variance_formula",
+          "name": "Variance Formula",
+          "type": "Formula",
+          "category": "required",
+          "aliases": [],
+          "source_spans": ["\\operatorname{Var}(X) = \\mathbb{E}[(X-\\mathbb{E}[X])^2]."]
+        },
+        {
+          "id": "conditional_probability",
+          "name": "Conditional Probability",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": ["Conditional probability measures the probability of an event given that another event has occurred."]
+        },
+        {
+          "id": "conditional_probability_formula",
+          "name": "Conditional Probability Formula",
+          "type": "Formula",
+          "category": "required",
+          "aliases": [],
+          "source_spans": ["P(A \\mid B) = \\frac{P(A \\cap B)}{P(B)}."]
+        },
+        {
+          "id": "bayes_rule",
+          "name": "Bayes' Rule",
+          "type": "Concept",
+          "category": "required",
+          "aliases": ["Bayes rule", "Bayes' theorem"],
+          "source_spans": ["Bayes' rule rewrites conditional probability in a form that is useful for updating beliefs:"]
+        },
+        {
+          "id": "bayes_rule_formula",
+          "name": "Bayes' Rule Formula",
+          "type": "Formula",
+          "category": "required",
+          "aliases": [],
+          "source_spans": ["P(A \\mid B) = \\frac{P(B \\mid A)P(A)}{P(B)}."]
+        },
+        {
+          "id": "event",
+          "name": "Event",
+          "type": "Concept",
+          "category": "optional",
+          "aliases": ["events"],
+          "source_spans": ["the probability of an event given that another event has occurred"]
+        }
+      ]
+    }
+  ]
+}
