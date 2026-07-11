@@ -89,19 +89,31 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--output-dir",
-        help="Directory for parsed prediction JSON. Default: <experiment>/output.",
+        help=(
+            "Directory for parsed prediction JSON. Default: <experiment>/output "
+            "for development, or <experiment>/runs/holdout_v0_1/run_01/output for holdout."
+        ),
     )
     parser.add_argument(
         "--rendered-inputs-dir",
-        help="Directory for rendered request payloads. Default: <experiment>/rendered_inputs.",
+        help=(
+            "Directory for rendered request payloads. Default: <experiment>/rendered_inputs "
+            "for development, or <experiment>/runs/holdout_v0_1/run_01/rendered_inputs for holdout."
+        ),
     )
     parser.add_argument(
         "--raw-responses-dir",
-        help="Directory for raw API responses. Default: <experiment>/raw_responses.",
+        help=(
+            "Directory for raw API responses. Default: <experiment>/raw_responses "
+            "for development, or <experiment>/runs/holdout_v0_1/run_01/raw_responses for holdout."
+        ),
     )
     parser.add_argument(
         "--metadata-dir",
-        help="Directory for run metadata. Default: <experiment>/metadata.",
+        help=(
+            "Directory for run metadata. Default: <experiment>/metadata "
+            "for development, or <experiment>/runs/holdout_v0_1/run_01/metadata for holdout."
+        ),
     )
     parser.add_argument(
         "--dry-run",
@@ -123,6 +135,23 @@ def resolve_path(path_text: str | None, default: Path) -> Path:
     if path.is_absolute():
         return path
     return ROOT / path
+
+
+def default_artifact_dirs(experiment_dir: Path, split: str) -> dict[str, Path]:
+    if split == "holdout":
+        run_dir = experiment_dir / "runs" / "holdout_v0_1" / "run_01"
+        return {
+            "output": run_dir / "output",
+            "rendered_inputs": run_dir / "rendered_inputs",
+            "raw_responses": run_dir / "raw_responses",
+            "metadata": run_dir / "metadata",
+        }
+    return {
+        "output": experiment_dir / "output",
+        "rendered_inputs": experiment_dir / "rendered_inputs",
+        "raw_responses": experiment_dir / "raw_responses",
+        "metadata": experiment_dir / "metadata",
+    }
 
 
 def display_path(path: Path) -> str:
@@ -297,7 +326,7 @@ def parse_model_content(content: str) -> dict[str, Any]:
 
 
 def write_json(path: Path, data: Any) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
+    os.makedirs(path.parent, exist_ok=True)
     path.write_text(
         json.dumps(data, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",
@@ -397,11 +426,12 @@ def main() -> int:
     experiment_dir = ENTITY_EXTRACTION_DIR / args.experiment
     prompt_path = experiment_dir / "prompt.md"
     ground_truth_default = ROOT / "benchmark" / "ground_truth" / f"{args.split}_v0_1.json"
+    artifact_defaults = default_artifact_dirs(experiment_dir, args.split)
     ground_truth_path = resolve_path(args.ground_truth, ground_truth_default)
-    output_dir = resolve_path(args.output_dir, experiment_dir / "output")
-    rendered_inputs_dir = resolve_path(args.rendered_inputs_dir, experiment_dir / "rendered_inputs")
-    raw_responses_dir = resolve_path(args.raw_responses_dir, experiment_dir / "raw_responses")
-    metadata_dir = resolve_path(args.metadata_dir, experiment_dir / "metadata")
+    output_dir = resolve_path(args.output_dir, artifact_defaults["output"])
+    rendered_inputs_dir = resolve_path(args.rendered_inputs_dir, artifact_defaults["rendered_inputs"])
+    raw_responses_dir = resolve_path(args.raw_responses_dir, artifact_defaults["raw_responses"])
+    metadata_dir = resolve_path(args.metadata_dir, artifact_defaults["metadata"])
     git_commit_at_start = git_commit()
     git_dirty_at_start = git_dirty()
 
@@ -441,10 +471,8 @@ def main() -> int:
             )
             return 2
 
-    output_dir.mkdir(parents=True, exist_ok=True)
-    rendered_inputs_dir.mkdir(parents=True, exist_ok=True)
-    raw_responses_dir.mkdir(parents=True, exist_ok=True)
-    metadata_dir.mkdir(parents=True, exist_ok=True)
+    for directory in [output_dir, rendered_inputs_dir, raw_responses_dir, metadata_dir]:
+        os.makedirs(directory, exist_ok=True)
 
     for lecture in lectures:
         lecture_id = lecture["lecture_id"]

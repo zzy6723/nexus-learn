@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-LECTURE_DIR = ROOT / "benchmark" / "lectures"
+LECTURE_DIR = ROOT / "benchmark" / "lectures" / "development"
 ENTITY_EXTRACTION_DIR = ROOT / "experiments" / "entity_extraction"
 
 

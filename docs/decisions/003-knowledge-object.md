@@ -62,9 +62,11 @@ The MVP uses three initial Knowledge Object types.
 | --- | --- | --- |
 | `Concept` | A mathematical, scientific, or technical construct, property, structure, or named idea. | `Gradient`, `Vector Space`, `Characteristic Polynomial`, `Stationary Point` |
 | `Method` | A procedure, algorithm, technique, or approximation process. | `Gradient Descent`, `Line Search`, `Taylor Approximation` |
-| `Formula` | A symbolic equation, update rule, displayed mathematical expression, or formula that defines or characterizes an object. | `Av = lambda v`, `x_{k+1} = x_k - alpha_k nabla f(x_k)` |
+| `Formula` | A symbolic equation, update rule, displayed mathematical expression, or formula that defines or characterizes an object. | `Eigenvalue Equation`, `Gradient Descent Update`, `Conditional Probability Formula` |
 
 These types are intentionally minimal. More types should only be added after experiments show that the current schema cannot represent important STEM learning objects.
+
+This decision establishes an initial working schema for the MVP and Technical Validation phase. It does not claim that these three types form a complete ontology for all STEM knowledge.
 
 ---
 
@@ -84,6 +86,8 @@ Examples:
 
 A named mathematical construct should usually remain a `Concept` even when it is closely associated with a formula.
 
+Named mathematical laws, rules, theorems, identities, and properties should normally be represented as `Concept` unless the object describes an executable procedure.
+
 ## Method
 
 Use `Method` for procedures, algorithms, techniques, or approximation processes.
@@ -100,9 +104,11 @@ Use `Formula` for symbolic equations, update rules, or displayed mathematical ex
 
 Examples:
 
-- `Av = lambda v`
-- `x_{k+1} = x_k - alpha_k nabla f(x_k)`
-- `f(a+h) approx f(a) + nabla f(a) dot h`
+- `Eigenvalue Equation`
+- `Gradient Descent Update`
+- `Conditional Probability Formula`
+
+Formula object names should use human-readable descriptive labels. The symbolic expression itself should be stored in source grounding.
 
 Displayed equations should usually be extracted as `Formula` objects when they define, characterize, or update a concept or method.
 
@@ -287,4 +293,4 @@ Evaluation should avoid rewarding graph size alone. Connection quality remains m
 - `docs/product_definition.md`
 - `experiments/entity_extraction/001_baseline`
 - `experiments/entity_extraction/002_prompt_refinement`
-- `benchmark/ground_truth/knowledge_objects_v0_1.json`
+- `benchmark/ground_truth/development_v0_1.json`
