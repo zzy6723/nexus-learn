@@ -1,0 +1,116 @@
+[
+  {
+    "lecture_id": "calculus_002",
+    "prediction_index": 0,
+    "predicted_id": "composite_function",
+    "predicted_label": "Composite Function",
+    "error_type": "invalid_source_span",
+    "source_span": "The composite function h = f ∘ g maps an input x ∈ ℝ^m to f(g(x))."
+  },
+  {
+    "lecture_id": "calculus_002",
+    "prediction_index": 1,
+    "predicted_id": "chain_rule",
+    "predicted_label": "Chain Rule",
+    "error_type": "invalid_source_span",
+    "source_span": "The chain rule describes how the derivative of the composite function depends on the derivatives of f and g."
+  },
+  {
+    "lecture_id": "calculus_002",
+    "prediction_index": 1,
+    "predicted_id": "chain_rule",
+    "predicted_label": "Chain Rule",
+    "predicted_type": "Method",
+    "ground_truth_id": "chain_rule",
+    "ground_truth_type": "Concept",
+    "error_type": "wrong_type"
+  },
+  {
+    "lecture_id": "calculus_002",
+    "prediction_index": 2,
+    "predicted_id": "jacobian_matrix",
+    "predicted_label": "Jacobian Matrix",
+    "error_type": "invalid_source_span",
+    "source_span": "the Jacobian matrix J_g(x) collects all first-order partial derivatives of the output components of g."
+  },
+  {
+    "lecture_id": "calculus_002",
+    "prediction_index": 3,
+    "predicted_id": "gradient",
+    "predicted_label": "Gradient",
+    "error_type": "invalid_source_span",
+    "source_span": "∇h(x) = J_g(x)^⊤ ∇f(g(x))"
+  },
+  {
+    "lecture_id": "calculus_002",
+    "prediction_index": 4,
+    "predicted_id": "multivariable_chain_rule_formula",
+    "predicted_label": "Multivariable Chain Rule Formula",
+    "error_type": "invalid_source_span",
+    "source_span": "∇h(x) = J_g(x)^⊤ ∇f(g(x))."
+  },
+  {
+    "lecture_id": "linear_algebra_002",
+    "prediction_index": 4,
+    "predicted_id": "projection_formula",
+    "predicted_label": "Projection Formula",
+    "error_type": "invalid_source_span",
+    "source_span": "proj_u(v) = (v·u)/(u·u) u"
+  },
+  {
+    "lecture_id": "linear_algebra_002",
+    "prediction_index": 6,
+    "predicted_id": "normal_equations",
+    "predicted_label": "Normal Equations",
+    "error_type": "invalid_source_span",
+    "source_span": "A^T A x = A^T b"
+  },
+  {
+    "lecture_id": "probability_001",
+    "prediction_index": 3,
+    "predicted_id": "expected_value_formula_discrete",
+    "predicted_label": "Expected Value Formula (Discrete)",
+    "error_type": "invalid_source_span",
+    "source_span": "For a discrete random variable X, the expected value is E[X] = sum_x x P(X=x)."
+  },
+  {
+    "lecture_id": "probability_001",
+    "prediction_index": 5,
+    "predicted_id": "variance_formula",
+    "predicted_label": "Variance Formula",
+    "error_type": "invalid_source_span",
+    "source_span": "Var(X) = E[(X-E[X])^2]."
+  },
+  {
+    "lecture_id": "probability_001",
+    "prediction_index": 7,
+    "predicted_id": "conditional_probability_formula",
+    "predicted_label": "Conditional Probability Formula",
+    "error_type": "invalid_source_span",
+    "source_span": "P(A|B) = P(A∩B)/P(B)."
+  },
+  {
+    "lecture_id": "probability_001",
+    "prediction_index": 8,
+    "predicted_id": "bayes_rule",
+    "predicted_label": "Bayes' Rule",
+    "error_type": "invalid_source_span",
+    "source_span": "Bayes' rule rewrites conditional probability in a form that is useful for updating beliefs: P(A|B) = P(B|A)P(A)/P(B)."
+  },
+  {
+    "lecture_id": "probability_001",
+    "prediction_index": 8,
+    "predicted_id": "bayes_rule",
+    "predicted_label": "Bayes' Rule",
+    "predicted_type": "Formula",
+    "ground_truth_id": "bayes_rule",
+    "ground_truth_type": "Concept",
+    "error_type": "wrong_type"
+  },
+  {
+    "lecture_id": "probability_001",
+    "ground_truth_id": "bayes_rule_formula",
+    "ground_truth_label": "Bayes' Rule Formula",
+    "error_type": "missing_required_object"
+  }
+]

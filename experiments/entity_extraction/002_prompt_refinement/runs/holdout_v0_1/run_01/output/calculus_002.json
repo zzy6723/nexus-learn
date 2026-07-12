@@ -1,0 +1,47 @@
+{
+  "lecture_id": "calculus_002",
+  "knowledge_objects": [
+    {
+      "id": "composite_function",
+      "name": "Composite Function",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "A function formed by applying one function to the result of another.",
+      "source_span": "The composite function h = f ∘ g maps an input x ∈ ℝ^m to f(g(x))."
+    },
+    {
+      "id": "chain_rule",
+      "name": "Chain Rule",
+      "type": "Method",
+      "aliases": [
+        "multivariable chain rule"
+      ],
+      "short_definition": "A rule describing how the derivative of a composite function depends on the derivatives of its constituent functions.",
+      "source_span": "The chain rule describes how the derivative of the composite function depends on the derivatives of f and g."
+    },
+    {
+      "id": "jacobian_matrix",
+      "name": "Jacobian Matrix",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "A matrix of all first-order partial derivatives of a vector-valued function, giving the best local linear approximation.",
+      "source_span": "the Jacobian matrix J_g(x) collects all first-order partial derivatives of the output components of g."
+    },
+    {
+      "id": "gradient",
+      "name": "Gradient",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "A vector of partial derivatives of a scalar-valued function.",
+      "source_span": "∇h(x) = J_g(x)^⊤ ∇f(g(x))."
+    },
+    {
+      "id": "multivariable_chain_rule_formula",
+      "name": "Multivariable Chain Rule Formula",
+      "type": "Formula",
+      "aliases": [],
+      "short_definition": "The formula ∇h(x) = J_g(x)^⊤ ∇f(g(x)) relating the gradient of the composite to the Jacobian and gradient of the outer function.",
+      "source_span": "∇h(x) = J_g(x)^⊤ ∇f(g(x))."
+    }
+  ]
+}

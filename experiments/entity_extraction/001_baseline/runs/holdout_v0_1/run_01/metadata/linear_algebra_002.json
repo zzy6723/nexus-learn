@@ -1,0 +1,40 @@
+{
+  "provider": "deepseek",
+  "lecture_id": "linear_algebra_002",
+  "split": "holdout",
+  "ground_truth": "benchmark/ground_truth/holdout_v0_1.json",
+  "lecture_path": "benchmark/lectures/holdout/linear_algebra_002.md",
+  "prompt_path": "experiments/entity_extraction/001_baseline/prompt.md",
+  "model_requested": "deepseek-v4-flash",
+  "model_returned": "deepseek-v4-flash",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "finish_reason": "stop",
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "max_tokens": 4096,
+  "run_timestamp": "2026-07-11T17:59:02.850328+00:00",
+  "latency_ms": 4962,
+  "prompt_sha256": "7fd313ebe7b57966ab88f6b5a476fb0308e16725b09a63c4c66c011a74cb2963",
+  "input_sha256": "3dc3988a5349037895e62f9385f190702cfed5f76d78ee49d736e9cf45f09f84",
+  "rendered_input_sha256": "c4d90a7173682f151d6900ab7ebce6893e9e0bfe878d6b692e5100703d3223a6",
+  "git_commit_at_start": "8c8d061dd0f09129b7c01dfa92d7cdec71150545",
+  "git_dirty_at_start": false,
+  "usage": {
+    "prompt_tokens": 538,
+    "completion_tokens": 588,
+    "total_tokens": 1126,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 538
+  },
+  "request_success": true,
+  "api_error": null,
+  "json_parse_success": true,
+  "json_parse_error": null,
+  "prediction_schema_valid": null,
+  "repair_status": "not_attempted",
+  "retry_count": 0,
+  "dry_run": false
+}

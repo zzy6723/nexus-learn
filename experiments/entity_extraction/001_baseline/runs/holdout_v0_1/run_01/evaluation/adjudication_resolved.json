@@ -1,0 +1,13 @@
+{
+  "decisions": [
+    {
+      "lecture_id": "probability_001",
+      "prediction_index": 3,
+      "predicted_label": "Expected Value Formula (Discrete)",
+      "predicted_type": "Formula",
+      "decision": "matched",
+      "ground_truth_id": "expected_value_formula",
+      "rationale": "The prediction refers to the same discrete expected value formula as the ground-truth Formula object. The parenthetical qualifier only makes the lecture context explicit."
+    }
+  ]
+}

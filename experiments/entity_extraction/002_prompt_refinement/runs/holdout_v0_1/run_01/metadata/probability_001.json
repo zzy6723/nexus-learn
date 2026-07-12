@@ -1,0 +1,40 @@
+{
+  "provider": "deepseek",
+  "lecture_id": "probability_001",
+  "split": "holdout",
+  "ground_truth": "benchmark/ground_truth/holdout_v0_1.json",
+  "lecture_path": "benchmark/lectures/holdout/probability_001.md",
+  "prompt_path": "experiments/entity_extraction/002_prompt_refinement/prompt.md",
+  "model_requested": "deepseek-v4-flash",
+  "model_returned": "deepseek-v4-flash",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "finish_reason": "stop",
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "max_tokens": 4096,
+  "run_timestamp": "2026-07-11T17:59:22.831104+00:00",
+  "latency_ms": 6281,
+  "prompt_sha256": "12d85ea9b3ed66b751b637d7ce2e459c69368b9685bbc39c4713c24ff69feeeb",
+  "input_sha256": "0e31a3e291c7581b4f5466b472fbdd285616577e38f1f49ebe18bbf4d1a27161",
+  "rendered_input_sha256": "b3a5aa4215d437c8083a7ad4ec210881d13de6eed4020ead60a8d93686ba6a77",
+  "git_commit_at_start": "8c8d061dd0f09129b7c01dfa92d7cdec71150545",
+  "git_dirty_at_start": true,
+  "usage": {
+    "prompt_tokens": 715,
+    "completion_tokens": 765,
+    "total_tokens": 1480,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 715
+  },
+  "request_success": true,
+  "api_error": null,
+  "json_parse_success": true,
+  "json_parse_error": null,
+  "prediction_schema_valid": null,
+  "repair_status": "not_attempted",
+  "retry_count": 0,
+  "dry_run": false
+}

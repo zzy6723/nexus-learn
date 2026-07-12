@@ -1,0 +1,23 @@
+{
+  "model": "deepseek-v4-flash",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You extract structured Knowledge Objects from STEM learning materials.\n\nA Knowledge Object is a meaningful educational entity, such as a concept, method, or formula, that may later participate in typed learning relations.\n\nDo not extract ordinary words, section headings, whole paragraphs, or vague topics.\n\nDo not generate relations, connections, prerequisites, or learning explanations.\n\nEvery extracted object must be grounded in the input through a source span copied from the lecture text.\n"
+    },
+    {
+      "role": "user",
+      "content": "Extract Knowledge Objects from the following lecture snippet.\n\nAllowed object types:\n\n- `Concept`\n- `Method`\n- `Formula`\n\nReturn only valid JSON with this schema:\n\n```json\n{\n  \"lecture_id\": \"linear_algebra_002\",\n  \"knowledge_objects\": [\n    {\n      \"id\": \"lower_snake_case_stable_identifier\",\n      \"name\": \"Canonical Name\",\n      \"type\": \"Concept | Method | Formula\",\n      \"aliases\": [\"optional alias\"],\n      \"short_definition\": \"One sentence definition based only on the input.\",\n      \"source_span\": \"Exact text span from the input that grounds the object.\"\n    }\n  ]\n}\n```\n\nRules:\n\n1. Use only information present in the lecture snippet.\n2. Prefer canonical mathematical names.\n3. Merge duplicates into one object.\n4. Keep `source_span` short but sufficient.\n5. Do not output `RELATED_TO`, prerequisites, or any relation type.\n6. If no valid Knowledge Objects exist, return an empty `knowledge_objects` list.\n\nLecture ID:\n\n```text\nlinear_algebra_002\n```\n\nLecture snippet:\n\n```text\nAn inner product is an operation that takes two vectors and returns a scalar. In Euclidean space, the standard inner product is the dot product. Two vectors are orthogonal when their inner product is zero.\n\nOrthogonal projection is a method for finding the closest point in a subspace to a given vector. If \\(u\\) is a nonzero vector, the projection of \\(v\\) onto the one-dimensional subspace spanned by \\(u\\) is\n\n\\[\n\\operatorname{proj}_u(v) = \\frac{v \\cdot u}{u \\cdot u}u.\n\\]\n\nLeast squares problems use projection ideas to solve inconsistent systems. Given a matrix \\(A\\) and a vector \\(b\\), the least squares problem asks for a vector \\(x\\) that minimizes \\(\\|Ax-b\\|^2\\). When the columns of \\(A\\) are independent, the solution satisfies the normal equations\n\n\\[\nA^\\top A x = A^\\top b.\n\\]\n```\n"
+    }
+  ],
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "max_tokens": 4096,
+  "stream": false,
+  "response_format": {
+    "type": "json_object"
+  },
+  "thinking": {
+    "type": "disabled"
+  }
+}

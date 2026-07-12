@@ -36,17 +36,34 @@ The current development metrics use resolved manual adjudication for one Taylor-
 
 ## Holdout Validation
 
-Pending.
+Completed.
 
-The holdout evaluation will compare the baseline and refined prompts on unseen STEM materials using a frozen benchmark, annotation protocol, and evaluation procedure.
+The holdout evaluation compared the baseline and refined prompts on unseen STEM materials using a frozen benchmark, annotation protocol, and evaluation procedure.
+
+Comparison document:
+
+- `experiments/entity_extraction/holdout_comparison.md`
+
+Selected prompt:
+
+- `002_prompt_refinement`
+
+Holdout aggregate metrics:
+
+| Run | Required Precision | Required Recall | Required F1 | Required Type Accuracy | Exact Source Span Rate |
+| --- | --- | --- | --- | --- | --- |
+| `001_baseline` | 1.000 | 0.950 | 0.974 | 0.895 | 0.476 |
+| `002_prompt_refinement` | 1.000 | 0.950 | 0.974 | 0.895 | 0.762 |
+
+The refined prompt did not improve required-object identification or required-object type classification on holdout. It was selected because it improved exact source-span grounding on the current holdout benchmark without reducing the other measured extraction metrics.
 
 ---
 
-# Current Development Conclusion
+# Current Conclusion
 
-Development validation suggests that Knowledge Object extraction is operationally feasible for short English STEM snippets.
+Development and holdout validation suggest that Knowledge Object extraction is operationally viable for the MVP on the current benchmark of short, authored STEM lecture snippets.
 
-The refined prompt improves development performance over the baseline under the automated evaluation protocol, especially on required-object recall, required type accuracy, and exact source-span grounding.
+The refined prompt improved development performance over the baseline under the automated evaluation protocol. On holdout, it matched the baseline on required precision, recall, F1, and required type accuracy, while improving exact source-span grounding.
 
 The current evidence supports an initial MVP schema with:
 
@@ -54,18 +71,16 @@ The current evidence supports an initial MVP schema with:
 - `Method`
 - `Formula`
 
-This is evidence for operational viability, not ontology completeness.
+This is evidence for operational viability within the current benchmark scope, not ontology completeness or general STEM-wide performance.
 
 ---
 
 # Next Steps
 
-1. Commit the frozen benchmark, prompts, runner, and evaluator before running holdout.
-2. Use run-specific directories for holdout execution so development and holdout artifacts cannot mix.
-3. Run both `001_baseline` and `002_prompt_refinement` on the holdout split.
-4. Compare results under the same frozen evaluation protocol.
-5. Decide whether a later stability run is necessary.
-6. Update the final Entity Extraction conclusion.
+1. Use `002_prompt_refinement` as the default Knowledge Object extraction prompt for the next Technical Validation stage.
+2. Decide whether to run a repeated-run stability test before making any stability claim.
+3. If moving directly to Relation Extraction, record that run-to-run stability remains unvalidated.
+4. Keep `001_baseline` as the valid comparison run; it should not be treated as a failed experiment.
 
 Recommended holdout run layout:
 

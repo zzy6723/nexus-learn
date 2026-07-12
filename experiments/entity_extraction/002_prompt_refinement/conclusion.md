@@ -1,7 +1,7 @@
 # Conclusion
 
 **Experiment:** `experiments/entity_extraction/002_prompt_refinement`  
-**Status:** Completed  
+**Status:** Completed; selected as default prompt for the next Technical Validation stage  
 **Created:** 2026-07-10
 
 ---
@@ -30,6 +30,8 @@ Aggregate development metrics:
 - exact source-span rate: 0.786
 - manual matches: 1
 - unresolved adjudications: 0
+
+Holdout comparison later showed that the refined prompt matched the baseline on required-object precision, recall, F1, and required-object type accuracy, while improving exact `source_span` grounding on the current holdout benchmark.
 
 ---
 
@@ -75,8 +77,16 @@ ADR-003 should not overfit to this small benchmark, but it can define the initia
 - useful supporting objects,
 - distinction between Knowledge Objects and Connection-layer Evidence.
 
+After holdout comparison, `002_prompt_refinement` is selected as the default Knowledge Object extraction prompt for the next Technical Validation stage.
+
+This selection is based on improved exact source grounding, not improved object coverage or type classification. On holdout, the refined prompt achieved the same required precision, required recall, required F1 score, required-object type accuracy, false-positive count, and false-negative count as the baseline, while increasing the exact source-span rate from `0.476` to `0.762`.
+
+This result is limited to the current benchmark of short, authored STEM lecture snippets and should not be interpreted as evidence of general STEM-wide performance.
+
 ---
 
 # Next Step
 
-Freeze the benchmark and evaluation protocol, then run both baseline and refined prompts on the holdout split before making a final holdout-backed conclusion.
+Use `002_prompt_refinement` as the default Knowledge Object extraction prompt for the next Technical Validation stage.
+
+Before making any stability claim, run a repeated-run stability test. If the project proceeds directly to Relation Extraction, record that run-to-run stability remains unvalidated.

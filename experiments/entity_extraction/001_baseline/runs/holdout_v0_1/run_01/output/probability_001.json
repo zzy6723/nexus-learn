@@ -1,0 +1,81 @@
+{
+  "lecture_id": "probability_001",
+  "knowledge_objects": [
+    {
+      "id": "random_variable",
+      "name": "Random Variable",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "A function that assigns a numerical value to each outcome of a random experiment.",
+      "source_span": "A random variable is a function that assigns a numerical value to each outcome of a random experiment."
+    },
+    {
+      "id": "probability_distribution",
+      "name": "Probability Distribution",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "Describes how probability is assigned to the possible values of a random variable.",
+      "source_span": "The probability distribution of a random variable describes how probability is assigned to its possible values."
+    },
+    {
+      "id": "expected_value",
+      "name": "Expected Value",
+      "type": "Concept",
+      "aliases": [
+        "mean"
+      ],
+      "short_definition": "A weighted average of the possible values of a random variable.",
+      "source_span": "The expected value of a random variable is a weighted average of its possible values."
+    },
+    {
+      "id": "expected_value_formula_discrete",
+      "name": "Expected Value Formula (Discrete)",
+      "type": "Formula",
+      "aliases": [],
+      "short_definition": "For a discrete random variable X, E[X] = sum_x x P(X=x).",
+      "source_span": "For a discrete random variable X, the expected value is E[X] = sum_x x P(X=x)."
+    },
+    {
+      "id": "variance",
+      "name": "Variance",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "Measures how far a random variable typically is from its expected value.",
+      "source_span": "Variance measures how far a random variable typically is from its expected value."
+    },
+    {
+      "id": "variance_formula",
+      "name": "Variance Formula",
+      "type": "Formula",
+      "aliases": [],
+      "short_definition": "Var(X) = E[(X - E[X])^2].",
+      "source_span": "Var(X) = E[(X-E[X])^2]."
+    },
+    {
+      "id": "conditional_probability",
+      "name": "Conditional Probability",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "Measures the probability of an event given that another event has occurred.",
+      "source_span": "Conditional probability measures the probability of an event given that another event has occurred."
+    },
+    {
+      "id": "conditional_probability_formula",
+      "name": "Conditional Probability Formula",
+      "type": "Formula",
+      "aliases": [],
+      "short_definition": "P(A|B) = P(A∩B)/P(B) if P(B)>0.",
+      "source_span": "P(A|B) = P(A∩B)/P(B)."
+    },
+    {
+      "id": "bayes_rule",
+      "name": "Bayes' Rule",
+      "type": "Formula",
+      "aliases": [
+        "Bayes' theorem"
+      ],
+      "short_definition": "Rewrites conditional probability as P(A|B) = P(B|A)P(A)/P(B).",
+      "source_span": "Bayes' rule rewrites conditional probability in a form that is useful for updating beliefs: P(A|B) = P(B|A)P(A)/P(B)."
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 # ADR-003: Knowledge Object
 
 **Status:** Accepted  
-**Version:** v0.1  
-**Date:** 2026-07-10  
+**Version:** v0.2  
+**Date:** 2026-07-12  
 **Owner:** Project
 
 Terminology follows `docs/glossary.md`.
@@ -15,12 +15,14 @@ The project aims to support Learning Continuity by reconnecting newly acquired k
 
 Before the system can discover Relations or propose Connection Hypotheses, it needs stable units of knowledge that can participate in later typed connections.
 
-The first technical validation focused on Knowledge Object extraction:
+The first technical validation focused on Knowledge Object extraction using development and holdout mini lecture benchmarks:
 
 - `experiments/entity_extraction/001_baseline`
 - `experiments/entity_extraction/002_prompt_refinement`
 
-Experiment 002 extracted all 26 ground-truth objects across the active benchmark and assigned correct provisional types to all matched objects. It also exposed important boundary questions around useful supporting objects and exact source grounding.
+Development validation was used for prompt iteration and error analysis. Holdout validation was then run under the frozen benchmark and evaluation protocol.
+
+On holdout, the baseline and refined prompts achieved the same required-object precision, recall, F1 score, and required-object type accuracy. The refined prompt did not improve object identification or type classification on unseen materials, but it improved exact source grounding on the current holdout benchmark.
 
 This ADR defines the initial Knowledge Object model for the MVP.
 
@@ -34,11 +36,17 @@ Knowledge Objects may participate in Relations and Connections, but they do not 
 
 Evidence belongs to the Connection layer because Evidence justifies why two or more Knowledge Objects are related. A Knowledge Object may have source grounding, but source grounding is not the same thing as Connection-layer Evidence.
 
+For the next Technical Validation stage, `experiments/entity_extraction/002_prompt_refinement/prompt.md` is the default Knowledge Object extraction prompt.
+
+This prompt is selected because it improved exact `source_span` grounding on the current holdout benchmark without reducing required-object precision, recall, F1 score, required-object type accuracy, false-positive count, or false-negative count. It is not selected because it improved object coverage or type classification.
+
 ---
 
 # Scope Boundary
 
 For the initial MVP, Knowledge Object extraction is limited to English text or Markdown STEM learning snippets.
+
+The current validation evidence applies only to short, authored STEM lecture snippets. It does not establish general STEM-wide extraction performance.
 
 The following are out of scope for this ADR:
 
@@ -187,7 +195,7 @@ Rules:
 - Automated evaluation should distinguish exact source-span matches from semantic source grounding.
 - Future implementation may need deterministic span matching, LaTeX normalization, or post-processing.
 
-Experiment 002 showed that prompt engineering alone did not fully solve exact source-span grounding.
+Entity extraction validation showed that prompt engineering alone did not fully solve exact source-span grounding.
 
 ---
 
@@ -199,7 +207,7 @@ Useful supporting objects may be extracted if they satisfy all of the following:
 - They are meaningful educational entities.
 - They are likely to support later typed Relations or Connection Hypotheses.
 
-Examples from Experiment 002:
+Examples from development prompt refinement:
 
 - `Matrix Multiplication`
 - `Gradient`
@@ -221,6 +229,47 @@ Do not extract:
 - Relations;
 - Connection Hypotheses;
 - Evidence.
+
+---
+
+# Validation Evidence
+
+Entity Extraction validation is recorded in:
+
+- `experiments/entity_extraction/holdout_comparison.md`
+
+The holdout comparison used:
+
+- ground truth: `benchmark/ground_truth/holdout_v0_1.json`;
+- baseline prompt: `experiments/entity_extraction/001_baseline/prompt.md`;
+- refined prompt: `experiments/entity_extraction/002_prompt_refinement/prompt.md`;
+- model: `deepseek-v4-flash`;
+- temperature: `0.0`;
+- top-p: `1.0`;
+- max tokens: `4096`.
+
+Holdout aggregate results:
+
+| Metric | `001_baseline` | `002_prompt_refinement` |
+| --- | ---: | ---: |
+| Required precision | 1.000 | 1.000 |
+| Required recall | 0.950 | 0.950 |
+| Required F1 | 0.974 | 0.974 |
+| Required type accuracy | 0.895 | 0.895 |
+| False positives | 0 | 0 |
+| False negatives | 1 | 1 |
+| Exact source-span rate | 0.476 | 0.762 |
+
+The result supports the operational viability of Knowledge Object extraction for the MVP on the current benchmark of short, authored STEM lecture snippets.
+
+The result does not show that:
+
+- the schema is a complete STEM ontology;
+- the approach generalizes to long documents, parsed PDFs, noisy text, or all STEM disciplines;
+- Knowledge Object extraction is stable across repeated runs;
+- Relation Extraction or Connection Discovery is solved.
+
+Known remaining limitations include type-boundary ambiguity and exact Markdown or LaTeX span preservation.
 
 ---
 
@@ -259,15 +308,17 @@ Rejected for the MVP because the initial experiments only justify a smaller sche
 - The system has stable units for Relation Discovery.
 - The schema is simple enough to evaluate.
 - The boundary between Knowledge Objects and Connection-layer Evidence is clear.
-- The object types match early experimental evidence.
+- The object types match current MVP benchmark evidence.
 - Supporting objects can be captured without turning extraction into raw chunking.
+- The selected extraction prompt has better exact source grounding on the current holdout benchmark than the baseline.
 
 ## Negative
 
 - Some educational entities may be forced into broad types.
-- The `Concept` vs `Formula` boundary requires careful evaluation.
+- The `Concept`, `Method`, and `Formula` boundaries require careful evaluation.
 - Exact source grounding is not solved by the schema alone.
 - Future STEM materials may require additional object types.
+- Run-to-run stability has not yet been validated.
 
 ---
 
@@ -294,3 +345,7 @@ Evaluation should avoid rewarding graph size alone. Connection quality remains m
 - `experiments/entity_extraction/001_baseline`
 - `experiments/entity_extraction/002_prompt_refinement`
 - `benchmark/ground_truth/development_v0_1.json`
+- `benchmark/ground_truth/holdout_v0_1.json`
+- `benchmark/annotation_guidelines.md`
+- `benchmark/evaluation_protocol.md`
+- `experiments/entity_extraction/holdout_comparison.md`
