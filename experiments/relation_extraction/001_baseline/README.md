@@ -74,6 +74,13 @@ checks the rendered model input against an explicit field whitelist. It also
 records repository state, request parameters, source hashes, artifact paths, and
 request/parse/schema status in metadata.
 
+The v0.1 development baseline is one global request containing all 41 candidate
+pairs, the 46 referenced Knowledge Objects, and all 6 relevant lectures. After a
+formal run, `finish_reason`, result count, pair alignment, and
+`prediction_schema_valid` must be checked before evaluation. Any incomplete run
+must remain preserved under its original run ID; it must not be silently replaced
+using `--overwrite`.
+
 Runner regression tests are defined in `tests/test_relation_runner.py`. They use
 mocked API behavior and have not yet been executed.
 

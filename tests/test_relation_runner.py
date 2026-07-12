@@ -217,6 +217,56 @@ class RelationRunnerTest(unittest.TestCase):
         raw_text = self.artifact_path(run_dir, "output", ".raw.txt")
         self.assertEqual(raw_text.read_text(encoding="utf-8"), "not valid JSON")
 
+    def test_prediction_schema_failure_is_recorded(self) -> None:
+        run_dir = self.temporary_root / "prediction_schema_failure"
+        api_response = {
+            "model": "synthetic-model",
+            "choices": [{
+                "finish_reason": "stop",
+                "message": {
+                    "content": json.dumps({
+                        "results": [{
+                            "pair_id": "rel_dev_001",
+                            "source": {
+                                "lecture_id": "calculus_001",
+                                "ko_id": "gradient",
+                            },
+                            "target": {
+                                "lecture_id": "calculus_001",
+                                "ko_id": "partial_derivative",
+                            },
+                            "relation_type": "INVALID_RELATION",
+                            "evidence_spans": [],
+                            "rationale": "Synthetic invalid Relation label.",
+                        }]
+                    })
+                },
+            }],
+            "usage": {"prompt_tokens": 1, "completion_tokens": 1},
+        }
+        with mock.patch.dict(os.environ, {"DEEPSEEK_API_KEY": "test-key"}):
+            return_code, api_mock = self.invoke(
+                self.runner_args("prediction_schema_failure"),
+                api_response=api_response,
+            )
+
+        self.assertEqual(return_code, 1)
+        api_mock.assert_called_once()
+        metadata = self.read_json(self.artifact_path(run_dir, "metadata"))
+        self.assertEqual(metadata["run_status"], "prediction_schema_failed")
+        self.assertTrue(metadata["request_success"])
+        self.assertTrue(metadata["json_parse_success"])
+        self.assertFalse(metadata["prediction_schema_valid"])
+        self.assertTrue(metadata["prediction_schema_error"])
+        self.assertTrue(self.artifact_path(run_dir, "raw_responses").is_file())
+        prediction_path = self.artifact_path(run_dir, "output")
+        self.assertTrue(prediction_path.is_file())
+        prediction = self.read_json(prediction_path)
+        self.assertEqual(
+            prediction["results"][0]["relation_type"],
+            "INVALID_RELATION",
+        )
+
     def test_mocked_success_writes_parsed_output(self) -> None:
         run_dir = self.temporary_root / "mocked_success"
 

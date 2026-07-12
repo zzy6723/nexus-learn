@@ -137,6 +137,11 @@ Its model-facing input is built from the frozen Relation candidate pairs, their
 referenced Knowledge Objects, and the relevant lecture text. Candidate endpoints
 are serialized deterministically as unordered `ko_a` / `ko_b` values.
 
+The Experiment 002A development baseline uses one request containing all 41
+candidate pairs and their referenced materials: 6 lectures and 46 Knowledge
+Objects. This single-request design is the v0.1 baseline; deterministic batching
+is deferred unless a preserved run demonstrates an output-length failure.
+
 Allowed model-facing candidate data:
 
 - opaque `pair_id`;
@@ -164,6 +169,11 @@ experiments/relation_extraction/001_baseline/
 The runner supports dry runs, no-overwrite protection, explicit run directories,
 request and input hashes, repository state captured at startup, raw responses,
 parsed outputs, and API/parse/schema failure metadata.
+
+Because the baseline is a single long request, every formal run must be checked
+for a normal `finish_reason`, exactly 41 returned results, and a successful
+prediction-schema validation. A truncated or incomplete run must be preserved
+under its original run ID rather than silently replaced with `--overwrite`.
 
 Runner regression tests are defined in:
 
