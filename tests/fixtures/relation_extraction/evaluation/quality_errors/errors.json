@@ -1,0 +1,22 @@
+[
+  {
+    "pair_id": "rel_dev_001",
+    "error_type": "missing_evidence"
+  },
+  {
+    "pair_id": "rel_dev_002",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "optimisation_001",
+    "span": "This sentence does not exist in the optimisation lecture.",
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_003",
+    "error_type": "unexpected_evidence_for_no_relation"
+  },
+  {
+    "pair_id": "rel_dev_004",
+    "error_type": "missing_rationale"
+  }
+]

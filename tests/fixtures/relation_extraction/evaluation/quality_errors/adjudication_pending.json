@@ -1,0 +1,57 @@
+[
+  {
+    "pair_id": "rel_dev_001",
+    "category": "positive",
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "gradient_descent"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "gradient"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "predicted_evidence_spans": [],
+    "gold_evidence_spans": [
+      {
+        "lecture_id": "optimisation_001",
+        "span": "The negative gradient \\(-\\nabla f(x)\\) is a descent direction because it points toward the direction of steepest local decrease."
+      },
+      {
+        "lecture_id": "optimisation_001",
+        "span": "Gradient descent is a first-order iterative method that repeatedly moves in this direction:"
+      }
+    ],
+    "status": "pending"
+  },
+  {
+    "pair_id": "rel_dev_002",
+    "category": "positive",
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "gradient_descent_update"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "gradient_descent"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "predicted_evidence_spans": [
+      {
+        "lecture_id": "optimisation_001",
+        "span": "This sentence does not exist in the optimisation lecture."
+      }
+    ],
+    "gold_evidence_spans": [
+      {
+        "lecture_id": "optimisation_001",
+        "span": "x_{k+1} = x_k - \\alpha_k \\nabla f(x_k)."
+      }
+    ],
+    "status": "pending"
+  }
+]

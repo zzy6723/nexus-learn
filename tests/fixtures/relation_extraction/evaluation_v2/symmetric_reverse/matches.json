@@ -1,0 +1,48 @@
+[
+  {
+    "pair_id": "rel_dev_001",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "synthetic_relation_001",
+        "ko_id": "gradient_descent"
+      },
+      "target": {
+        "lecture_id": "synthetic_relation_001",
+        "ko_id": "gradient_ascent"
+      },
+      "relation_type": "CONTRASTS_WITH"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "synthetic_relation_001",
+        "ko_id": "gradient_ascent"
+      },
+      "target": {
+        "lecture_id": "synthetic_relation_001",
+        "ko_id": "gradient_descent"
+      },
+      "relation_type": "CONTRASTS_WITH"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "synthetic_relation_001",
+        "span": "Gradient descent moves against the gradient to reduce an objective, whereas gradient ascent moves with the gradient to increase it.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  }
+]

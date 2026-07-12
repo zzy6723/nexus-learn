@@ -1,0 +1,72 @@
+{
+  "evaluation_status": "final",
+  "total_pairs": 6,
+  "primary_scored_pairs": 4,
+  "positive_pairs": 2,
+  "hard_negative_pairs": 2,
+  "ambiguous_pairs": 1,
+  "schema_gap_pairs": 1,
+  "strict_edge_accuracy": 0.0,
+  "strict_edge_correct_count": 0,
+  "relation_type_accuracy_ignoring_direction": 0.0,
+  "relation_type_correct_count": 0,
+  "direction_accuracy": 1.0,
+  "direction_correct_count": 2,
+  "direction_scored_count": 2,
+  "positive_relation_accuracy": 0.0,
+  "positive_relation_correct_count": 0,
+  "no_relation_accuracy": 0.0,
+  "no_relation_correct_count": 0,
+  "acceptable_accuracy_ambiguous": 0.0,
+  "ambiguous_acceptable_count": 0,
+  "macro_f1_supported_labels": 0.0,
+  "macro_f1_included_labels": [
+    "REQUIRES",
+    "FORMALIZES",
+    "NO_RELATION"
+  ],
+  "related_to_prediction_rate": 1.0,
+  "related_to_overuse_count": 4,
+  "unsupported_relation_count": 2,
+  "exact_evidence_span_rate": 1.0,
+  "exact_evidence_span_count": 6,
+  "evidence_span_count": 6,
+  "invalid_evidence_span_count": 0,
+  "missing_evidence_count": 0,
+  "unexpected_no_relation_evidence_count": 0,
+  "missing_rationale_count": 0,
+  "manual_adjudication_count": 0,
+  "pending_adjudication_count": 0,
+  "schema_gap_predictions": [
+    {
+      "pair_id": "rel_dev_006",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "optimisation_001",
+          "ko_id": "line_search"
+        },
+        "target": {
+          "lecture_id": "optimisation_001",
+          "ko_id": "step_size"
+        },
+        "relation_type": "RELATED_TO"
+      },
+      "evidence_spans": [
+        {
+          "lecture_id": "optimisation_001",
+          "span": "A line search is a method for choosing a step size that gives sufficient decrease in the objective function."
+        }
+      ],
+      "rationale": "Extreme fallback test."
+    }
+  ],
+  "relation_coverage": {
+    "REQUIRES": "synthetic_test_coverage",
+    "APPLIED_IN": "ambiguous_only",
+    "EXTENDS": "not_covered",
+    "CONTRASTS_WITH": "not_covered",
+    "FORMALIZES": "synthetic_test_coverage",
+    "RELATED_TO": "schema_gap_only",
+    "NO_RELATION": "synthetic_test_coverage"
+  }
+}

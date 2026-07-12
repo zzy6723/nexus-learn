@@ -1,0 +1,52 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_001",
+      "source": {"lecture_id": "optimisation_001", "ko_id": "gradient_descent"},
+      "target": {"lecture_id": "optimisation_001", "ko_id": "gradient"},
+      "relation_type": "RELATED_TO",
+      "evidence_spans": [{"lecture_id": "optimisation_001", "span": "Gradient descent is a first-order iterative method that repeatedly moves in this direction:"}],
+      "rationale": "Extreme fallback test."
+    },
+    {
+      "pair_id": "rel_dev_002",
+      "source": {"lecture_id": "optimisation_001", "ko_id": "gradient_descent_update"},
+      "target": {"lecture_id": "optimisation_001", "ko_id": "gradient_descent"},
+      "relation_type": "RELATED_TO",
+      "evidence_spans": [{"lecture_id": "optimisation_001", "span": "x_{k+1} = x_k - \\alpha_k \\nabla f(x_k)."}],
+      "rationale": "Extreme fallback test."
+    },
+    {
+      "pair_id": "rel_dev_003",
+      "source": {"lecture_id": "calculus_001", "ko_id": "hessian_matrix"},
+      "target": {"lecture_id": "calculus_001", "ko_id": "stationary_point"},
+      "relation_type": "RELATED_TO",
+      "evidence_spans": [{"lecture_id": "calculus_001", "span": "A point where the gradient is the zero vector is called a stationary point."}],
+      "rationale": "Extreme fallback test."
+    },
+    {
+      "pair_id": "rel_dev_004",
+      "source": {"lecture_id": "probability_001", "ko_id": "expected_value_formula"},
+      "target": {"lecture_id": "probability_001", "ko_id": "bayes_rule"},
+      "relation_type": "RELATED_TO",
+      "evidence_spans": [{"lecture_id": "probability_001", "span": "Bayes' rule rewrites conditional probability in a form that is useful for updating beliefs:"}],
+      "rationale": "Extreme fallback test."
+    },
+    {
+      "pair_id": "rel_dev_005",
+      "source": {"lecture_id": "calculus_001", "ko_id": "gradient"},
+      "target": {"lecture_id": "optimisation_001", "ko_id": "gradient_descent"},
+      "relation_type": "RELATED_TO",
+      "evidence_spans": [{"lecture_id": "optimisation_001", "span": "Gradient descent is a first-order iterative method that repeatedly moves in this direction:"}],
+      "rationale": "Extreme fallback test."
+    },
+    {
+      "pair_id": "rel_dev_006",
+      "source": {"lecture_id": "optimisation_001", "ko_id": "line_search"},
+      "target": {"lecture_id": "optimisation_001", "ko_id": "step_size"},
+      "relation_type": "RELATED_TO",
+      "evidence_spans": [{"lecture_id": "optimisation_001", "span": "A line search is a method for choosing a step size that gives sufficient decrease in the objective function."}],
+      "rationale": "Extreme fallback test."
+    }
+  ]
+}

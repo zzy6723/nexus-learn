@@ -1,0 +1,123 @@
+{
+  "version": "synthetic_v0.1",
+  "split": "synthetic",
+  "status": "test_fixture",
+  "created": "2026-07-12",
+  "description": "Small synthetic ground truth for testing the Relation evaluator.",
+  "annotation_guidelines": "benchmark/relation_annotation_guidelines.md",
+  "evaluation_protocol": "benchmark/relation_evaluation_protocol.md",
+  "knowledge_object_ground_truths": [
+    "benchmark/ground_truth/development_v0_1.json",
+    "benchmark/ground_truth/holdout_v0_1.json"
+  ],
+  "notes": [
+    "This fixture tests evaluator behavior and is not a development or holdout benchmark.",
+    "Pair IDs follow the strict rel_dev_NNN format required by the shared ground-truth checker."
+  ],
+  "allowed_relation_types": [
+    "REQUIRES",
+    "APPLIED_IN",
+    "EXTENDS",
+    "CONTRASTS_WITH",
+    "FORMALIZES",
+    "RELATED_TO",
+    "NO_RELATION"
+  ],
+  "primary_scoring_categories": [
+    "positive",
+    "hard_negative"
+  ],
+  "relation_coverage": {
+    "REQUIRES": "synthetic_test_coverage",
+    "APPLIED_IN": "ambiguous_only",
+    "EXTENDS": "not_covered",
+    "CONTRASTS_WITH": "not_covered",
+    "FORMALIZES": "synthetic_test_coverage",
+    "RELATED_TO": "schema_gap_only",
+    "NO_RELATION": "synthetic_test_coverage"
+  },
+  "lectures": [
+    "calculus_001",
+    "optimisation_001",
+    "probability_001"
+  ],
+  "pairs": [
+    {
+      "pair_id": "rel_dev_001",
+      "category": "positive",
+      "source": {"lecture_id": "optimisation_001", "ko_id": "gradient_descent"},
+      "target": {"lecture_id": "optimisation_001", "ko_id": "gradient"},
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {"lecture_id": "optimisation_001", "span": "The negative gradient \\(-\\nabla f(x)\\) is a descent direction because it points toward the direction of steepest local decrease."},
+        {"lecture_id": "optimisation_001", "span": "Gradient descent is a first-order iterative method that repeatedly moves in this direction:"}
+      ],
+      "rationale": "Gradient descent depends on the gradient direction."
+    },
+    {
+      "pair_id": "rel_dev_002",
+      "category": "positive",
+      "source": {"lecture_id": "optimisation_001", "ko_id": "gradient_descent_update"},
+      "target": {"lecture_id": "optimisation_001", "ko_id": "gradient_descent"},
+      "relation_type": "FORMALIZES",
+      "symmetric": false,
+      "evidence_spans": [
+        {"lecture_id": "optimisation_001", "span": "x_{k+1} = x_k - \\alpha_k \\nabla f(x_k)."}
+      ],
+      "rationale": "The update equation formalizes gradient descent."
+    },
+    {
+      "pair_id": "rel_dev_003",
+      "category": "hard_negative",
+      "source": {"lecture_id": "calculus_001", "ko_id": "hessian_matrix"},
+      "target": {"lecture_id": "calculus_001", "ko_id": "stationary_point"},
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The snippet does not support a direct v0.1 Relation between these objects."
+    },
+    {
+      "pair_id": "rel_dev_004",
+      "category": "hard_negative",
+      "source": {"lecture_id": "probability_001", "ko_id": "expected_value_formula"},
+      "target": {"lecture_id": "probability_001", "ko_id": "bayes_rule"},
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The snippet does not support a direct v0.1 Relation between these objects."
+    },
+    {
+      "pair_id": "rel_dev_005",
+      "category": "ambiguous",
+      "source": {"lecture_id": "calculus_001", "ko_id": "gradient"},
+      "target": {"lecture_id": "optimisation_001", "ko_id": "gradient_descent"},
+      "relation_type": "APPLIED_IN",
+      "symmetric": false,
+      "acceptable_alternatives": [
+        {
+          "source": {"lecture_id": "optimisation_001", "ko_id": "gradient_descent"},
+          "target": {"lecture_id": "calculus_001", "ko_id": "gradient"},
+          "relation_type": "REQUIRES"
+        }
+      ],
+      "evidence_spans": [
+        {"lecture_id": "calculus_001", "span": "the gradient points in the direction of steepest local increase"},
+        {"lecture_id": "optimisation_001", "span": "Gradient descent is a first-order iterative method that repeatedly moves in this direction:"}
+      ],
+      "rationale": "Either the applied-in edge or the reverse dependency edge is acceptable for this synthetic case."
+    },
+    {
+      "pair_id": "rel_dev_006",
+      "category": "schema_gap",
+      "source": {"lecture_id": "optimisation_001", "ko_id": "line_search"},
+      "target": {"lecture_id": "optimisation_001", "ko_id": "step_size"},
+      "relation_type": "RELATED_TO",
+      "symmetric": false,
+      "evidence_spans": [
+        {"lecture_id": "optimisation_001", "span": "A line search is a method for choosing a step size that gives sufficient decrease in the objective function."}
+      ],
+      "rationale": "The pair exposes a missing SELECTS or CHOOSES relation and is excluded from primary scoring."
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "pair_id": "rel_dev_001",
+    "error_type": "overused_related_to",
+    "gold_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_001",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "REQUIRES",
+    "predicted_relation_type": "RELATED_TO"
+  },
+  {
+    "pair_id": "rel_dev_002",
+    "error_type": "overused_related_to",
+    "gold_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_002",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "FORMALIZES",
+    "predicted_relation_type": "RELATED_TO"
+  },
+  {
+    "pair_id": "rel_dev_003",
+    "error_type": "overused_related_to",
+    "gold_relation_type": "NO_RELATION"
+  },
+  {
+    "pair_id": "rel_dev_003",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "RELATED_TO"
+  },
+  {
+    "pair_id": "rel_dev_003",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "RELATED_TO"
+  },
+  {
+    "pair_id": "rel_dev_004",
+    "error_type": "overused_related_to",
+    "gold_relation_type": "NO_RELATION"
+  },
+  {
+    "pair_id": "rel_dev_004",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "RELATED_TO"
+  },
+  {
+    "pair_id": "rel_dev_004",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "RELATED_TO"
+  }
+]

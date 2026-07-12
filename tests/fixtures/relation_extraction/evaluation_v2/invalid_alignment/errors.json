@@ -1,0 +1,33 @@
+[
+  {
+    "error_type": "duplicate_pair_id",
+    "pair_id": "rel_dev_001",
+    "prediction_index": 1
+  },
+  {
+    "error_type": "candidate_pair_mismatch",
+    "pair_id": "rel_dev_003",
+    "prediction_index": 2,
+    "predicted_source": {
+      "lecture_id": "probability_001",
+      "ko_id": "expected_value_formula"
+    },
+    "predicted_target": {
+      "lecture_id": "probability_001",
+      "ko_id": "bayes_rule"
+    }
+  },
+  {
+    "error_type": "unknown_pair_id",
+    "pair_id": "rel_dev_999",
+    "prediction_index": 5
+  },
+  {
+    "error_type": "missing_predictions",
+    "pair_ids": [
+      "rel_dev_002",
+      "rel_dev_003",
+      "rel_dev_006"
+    ]
+  }
+]

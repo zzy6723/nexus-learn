@@ -1,0 +1,28 @@
+[
+  {
+    "pair_id": "rel_dev_001",
+    "error_type": "wrong_direction",
+    "gold_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "gradient_descent"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "gradient"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "gradient"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "gradient_descent"
+      },
+      "relation_type": "REQUIRES"
+    }
+  }
+]

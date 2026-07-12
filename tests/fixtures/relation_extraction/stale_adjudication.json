@@ -1,0 +1,20 @@
+{
+  "decisions": [
+    {
+      "pair_id": "rel_dev_001",
+      "predicted_edge": {
+        "source": {"lecture_id": "optimisation_001", "ko_id": "gradient_descent"},
+        "target": {"lecture_id": "optimisation_001", "ko_id": "gradient"},
+        "relation_type": "REQUIRES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "optimisation_001",
+          "span": "Gradient descent is a first-order iterative method that repeatedly moves in this direction:"
+        }
+      ],
+      "decision": "supported",
+      "rationale": "This decision intentionally captures evidence that differs from the current quality-errors prediction."
+    }
+  ]
+}

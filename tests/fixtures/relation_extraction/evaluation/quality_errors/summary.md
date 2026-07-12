@@ -1,0 +1,39 @@
+# Relation Extraction Evaluation
+
+**Status:** draft_pending_adjudication
+**Ground truth:** `tests/fixtures/relation_extraction/synthetic_ground_truth.json`
+**Predictions:** `tests/fixtures/relation_extraction/quality_errors_predictions.json`
+
+## Primary Metrics
+
+| Metric | Value |
+| --- | ---: |
+| Strict edge accuracy | 1.000 |
+| Relation type accuracy ignoring direction | 1.000 |
+| Direction accuracy | 1.000 |
+| Positive Relation accuracy | 1.000 |
+| NO_RELATION accuracy | 1.000 |
+
+Primary-scored pairs: 4 of 6.
+
+## Grounding And Audit
+
+| Metric | Value |
+| --- | ---: |
+| Exact evidence-span rate | 0.800 |
+| Missing evidence | 1 |
+| Missing rationale | 1 |
+| Pending adjudication | 2 |
+| RELATED_TO overuse | 0 |
+
+## Coverage Boundary
+
+- `REQUIRES`: synthetic_test_coverage
+- `APPLIED_IN`: ambiguous_only
+- `EXTENDS`: not_covered
+- `CONTRASTS_WITH`: not_covered
+- `FORMALIZES`: synthetic_test_coverage
+- `RELATED_TO`: schema_gap_only
+- `NO_RELATION`: synthetic_test_coverage
+
+Ambiguous and schema-gap pairs are excluded from primary metrics. Unsupported or low-support labels must not be interpreted as validated.

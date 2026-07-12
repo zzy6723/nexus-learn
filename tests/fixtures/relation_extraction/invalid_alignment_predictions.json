@@ -1,0 +1,52 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_001",
+      "source": {"lecture_id": "optimisation_001", "ko_id": "gradient_descent"},
+      "target": {"lecture_id": "optimisation_001", "ko_id": "gradient"},
+      "relation_type": "REQUIRES",
+      "evidence_spans": [],
+      "rationale": "First occurrence of a deliberately duplicated pair ID."
+    },
+    {
+      "pair_id": "rel_dev_001",
+      "source": {"lecture_id": "optimisation_001", "ko_id": "gradient_descent_update"},
+      "target": {"lecture_id": "optimisation_001", "ko_id": "gradient_descent"},
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [],
+      "rationale": "Second occurrence of the deliberately duplicated pair ID."
+    },
+    {
+      "pair_id": "rel_dev_003",
+      "source": {"lecture_id": "probability_001", "ko_id": "expected_value_formula"},
+      "target": {"lecture_id": "probability_001", "ko_id": "bayes_rule"},
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "These endpoints intentionally do not belong to rel_dev_003."
+    },
+    {
+      "pair_id": "rel_dev_004",
+      "source": {"lecture_id": "probability_001", "ko_id": "expected_value_formula"},
+      "target": {"lecture_id": "probability_001", "ko_id": "bayes_rule"},
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "A valid result retained alongside the fatal alignment errors."
+    },
+    {
+      "pair_id": "rel_dev_005",
+      "source": {"lecture_id": "calculus_001", "ko_id": "gradient"},
+      "target": {"lecture_id": "optimisation_001", "ko_id": "gradient_descent"},
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [],
+      "rationale": "A valid result retained alongside the fatal alignment errors."
+    },
+    {
+      "pair_id": "rel_dev_999",
+      "source": {"lecture_id": "optimisation_001", "ko_id": "line_search"},
+      "target": {"lecture_id": "optimisation_001", "ko_id": "step_size"},
+      "relation_type": "RELATED_TO",
+      "evidence_spans": [],
+      "rationale": "This pair ID is intentionally unknown."
+    }
+  ]
+}

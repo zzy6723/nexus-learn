@@ -1,0 +1,14 @@
+[
+  {
+    "error_type": "schema_error",
+    "pair_id": "rel_dev_001",
+    "evidence_index": 0,
+    "message": "Evidence requires non-empty string lecture_id and span fields."
+  },
+  {
+    "error_type": "missing_predictions",
+    "pair_ids": [
+      "rel_dev_001"
+    ]
+  }
+]

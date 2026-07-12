@@ -1,0 +1,34 @@
+{
+  "version": "synthetic_v0.1",
+  "split": "synthetic",
+  "status": "test_fixture",
+  "created": "2026-07-12",
+  "description": "Knowledge Objects for the symmetric Relation evaluator fixture.",
+  "annotation_guidelines": "benchmark/annotation_guidelines.md",
+  "evaluation_protocol": "benchmark/evaluation_protocol.md",
+  "allowed_object_types": ["Concept", "Method", "Formula"],
+  "lectures": [
+    {
+      "lecture_id": "synthetic_relation_001",
+      "path": "benchmark/lectures/synthetic/synthetic_relation_001.md",
+      "objects": [
+        {
+          "id": "gradient_descent",
+          "name": "Gradient Descent",
+          "type": "Method",
+          "category": "required",
+          "aliases": [],
+          "source_spans": ["Gradient descent"]
+        },
+        {
+          "id": "gradient_ascent",
+          "name": "Gradient Ascent",
+          "type": "Method",
+          "category": "required",
+          "aliases": [],
+          "source_spans": ["gradient ascent"]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,278 @@
+[
+  {
+    "pair_id": "rel_dev_001",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "gradient_descent"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "gradient"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "gradient_descent"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "gradient"
+      },
+      "relation_type": "RELATED_TO"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "optimisation_001",
+        "span": "Gradient descent is a first-order iterative method that repeatedly moves in this direction:",
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_002",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "gradient_descent_update"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "gradient_descent"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "gradient_descent_update"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "gradient_descent"
+      },
+      "relation_type": "RELATED_TO"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "optimisation_001",
+        "span": "x_{k+1} = x_k - \\alpha_k \\nabla f(x_k).",
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_003",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "calculus_001",
+        "ko_id": "hessian_matrix"
+      },
+      "target": {
+        "lecture_id": "calculus_001",
+        "ko_id": "stationary_point"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "calculus_001",
+        "ko_id": "hessian_matrix"
+      },
+      "target": {
+        "lecture_id": "calculus_001",
+        "ko_id": "stationary_point"
+      },
+      "relation_type": "RELATED_TO"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "calculus_001",
+        "span": "A point where the gradient is the zero vector is called a stationary point.",
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_004",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "expected_value_formula"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "bayes_rule"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "expected_value_formula"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "bayes_rule"
+      },
+      "relation_type": "RELATED_TO"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "probability_001",
+        "span": "Bayes' rule rewrites conditional probability in a form that is useful for updating beliefs:",
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_005",
+    "category": "ambiguous",
+    "primary_scored": false,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "calculus_001",
+        "ko_id": "gradient"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "gradient_descent"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "accepted_alternatives": [
+      {
+        "source": {
+          "lecture_id": "optimisation_001",
+          "ko_id": "gradient_descent"
+        },
+        "target": {
+          "lecture_id": "calculus_001",
+          "ko_id": "gradient"
+        },
+        "relation_type": "REQUIRES"
+      }
+    ],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "calculus_001",
+        "ko_id": "gradient"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "gradient_descent"
+      },
+      "relation_type": "RELATED_TO"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "optimisation_001",
+        "span": "Gradient descent is a first-order iterative method that repeatedly moves in this direction:",
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_006",
+    "category": "schema_gap",
+    "primary_scored": false,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "line_search"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "step_size"
+      },
+      "relation_type": "RELATED_TO"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "line_search"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "step_size"
+      },
+      "relation_type": "RELATED_TO"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "optimisation_001",
+        "span": "A line search is a method for choosing a step size that gives sufficient decrease in the objective function.",
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  }
+]
