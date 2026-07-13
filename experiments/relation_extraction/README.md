@@ -145,7 +145,7 @@ Purpose:
 Minimal development prompt refinement derived from the completed baseline error
 analysis.
 
-Status: Selected for unseen holdout evaluation; freeze commit pending.
+Status: Selected for unseen holdout evaluation; development method frozen.
 
 The refinement preserves the benchmark, Relation schema, runner, evaluator, and
 I/O contract. It targets endpoint serialization, `FORMALIZES` precedence, direct
@@ -190,6 +190,11 @@ candidate pairs and their referenced materials: 6 lectures and 46 Knowledge
 Objects. This single-request design is the v0.1 baseline; deterministic batching
 is deferred unless a preserved run demonstrates an output-length failure.
 
+The completed unseen holdout also uses one request. Its expected model-facing
+input contains 40 candidate pairs, 4 lectures, and 36 referenced oracle Knowledge
+Objects. The holdout benchmark is constructed and validated but must receive its
+user-owned freeze commit before either prompt is run.
+
 Allowed model-facing candidate data:
 
 - opaque `pair_id`;
@@ -218,23 +223,28 @@ The runner supports dry runs, no-overwrite protection, explicit run directories,
 request and input hashes, repository state captured at startup, raw responses,
 parsed outputs, and API/parse/schema failure metadata.
 
-Because the baseline is a single long request, every formal run must be checked
-for a normal `finish_reason`, exactly 41 returned results, and a successful
-prediction-schema validation. A truncated or incomplete run must be preserved
-under its original run ID rather than silently replaced with `--overwrite`.
+Because each split uses a single request, every formal run must be checked for a
+normal `finish_reason`, the split's exact result count (`41` for development or
+`40` for holdout), and a successful prediction-schema validation. A truncated
+or incomplete run must be preserved under its original run ID rather than
+silently replaced with `--overwrite`.
 
 Runner regression tests are defined in:
 
 - `tests/test_relation_runner.py`
+- `tests/test_relation_ground_truth_checker.py`
 
-They use mocked API responses and temporary directories. The tests were added but
-were not executed as part of the runner implementation.
+Runner tests use mocked API responses, mocked repository state, and temporary
+directories. The complete Relation evaluator, runner, and ground-truth-checker
+suite contains 21 tests and passed during holdout construction validation.
 
 ---
 
 # Next Steps
 
-1. Create and record the user-owned freeze commit for the selected Prompt 002 result.
-2. Construct and annotate the unseen Relation holdout under the frozen protocol.
-3. Run both baseline and Prompt 002 on the same holdout with identical settings.
+1. Create the user-owned freeze commit for the completed holdout benchmark.
+2. Without editing tracked files, run baseline and Prompt 002 from clean states
+   with identical settings and the same freeze commit.
+3. Confirm both metadata files captured that commit and
+   `git_dirty_at_start = false`, then backfill the plan's commit placeholder.
 4. Blind and finalize evidence adjudication before comparing holdout results.

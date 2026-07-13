@@ -51,7 +51,10 @@ REQUIRED_PAIR_KEYS = {
     "evidence_spans",
     "rationale",
 }
-OPAQUE_PAIR_ID = re.compile(r"rel_dev_\d{3}")
+PAIR_ID_PREFIX_BY_SPLIT = {
+    "development": "rel_dev",
+    "holdout": "rel_holdout",
+}
 
 
 def parse_args() -> argparse.Namespace:
@@ -266,6 +269,16 @@ def validate_ground_truth(data: Any) -> tuple[list[str], dict[str, Any]]:
     if missing:
         errors.append(f"missing top-level keys: {sorted(missing)}")
 
+    split = data.get("split")
+    pair_id_prefix = PAIR_ID_PREFIX_BY_SPLIT.get(split)
+    if pair_id_prefix is None:
+        errors.append(
+            "split must be one of "
+            + ", ".join(sorted(PAIR_ID_PREFIX_BY_SPLIT))
+        )
+        pair_id_prefix = "rel_invalid"
+    pair_id_pattern = re.compile(rf"{re.escape(pair_id_prefix)}_\d{{3}}")
+
     gt_paths = data.get("knowledge_object_ground_truths")
     if not isinstance(gt_paths, list) or not all(isinstance(item, str) for item in gt_paths):
         errors.append("knowledge_object_ground_truths must be a list of paths")
@@ -315,8 +328,10 @@ def validate_ground_truth(data: Any) -> tuple[list[str], dict[str, Any]]:
         pair_id = pair.get("pair_id", f"pairs[{index}]")
         if missing_pair:
             errors.append(f"{pair_id}: missing keys {sorted(missing_pair)}")
-        if not isinstance(pair_id, str) or not OPAQUE_PAIR_ID.fullmatch(pair_id):
-            errors.append(f"{pair_id}: pair_id must match rel_dev_NNN")
+        if not isinstance(pair_id, str) or not pair_id_pattern.fullmatch(pair_id):
+            errors.append(
+                f"{pair_id}: pair_id must match {pair_id_prefix}_NNN for split {split!r}"
+            )
             pair_id = f"pairs[{index}]"
         elif pair_id in seen_ids:
             errors.append(f"{pair_id}: duplicate pair_id")
@@ -388,7 +403,9 @@ def validate_ground_truth(data: Any) -> tuple[list[str], dict[str, Any]]:
                 errors=errors,
             )
 
-    expected_ids = {f"rel_dev_{index:03d}" for index in range(1, len(pairs) + 1)}
+    expected_ids = {
+        f"{pair_id_prefix}_{index:03d}" for index in range(1, len(pairs) + 1)
+    }
     if seen_ids != expected_ids:
         missing_ids = sorted(expected_ids - seen_ids)
         extra_ids = sorted(seen_ids - expected_ids)

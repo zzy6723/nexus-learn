@@ -1,7 +1,7 @@
 # Relation Extraction 002 Prompt Refinement
 
 **Stage:** Experiment 002A: Oracle-KO Typed Relation Extraction  
-**Status:** Selected for unseen holdout evaluation; freeze commit pending  
+**Status:** Selected for unseen holdout evaluation; development method frozen  
 **Prompt version:** v0.2  
 **Created:** 2026-07-13
 
@@ -192,6 +192,7 @@ and the `rel_dev_014` evidence self-containment error remain documented
 limitations.
 
 The prompt content is now locked at the SHA-256 above. `prompt.md` must not be
-changed during holdout construction or evaluation. The repository freeze commit
-must be created and recorded by the user before any unseen holdout lecture or gold
-label is authored.
+changed during holdout construction or evaluation. The development method was
+frozen at commit `18e687d5cd7909531918b51e2d6bef38cb64a053` before any unseen
+holdout lecture or gold label was authored. The completed holdout now awaits its
+separate benchmark freeze commit before either prompt is run.

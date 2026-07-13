@@ -336,7 +336,11 @@ def validate_cross_file(records: list[LectureRecord]) -> list[str]:
 
 
 def main() -> int:
-    paths = sorted(GROUND_TRUTH_DIR.glob("*_v0_1.json"))
+    paths = sorted(
+        path
+        for path in GROUND_TRUTH_DIR.glob("*_v0_1.json")
+        if not path.name.startswith("relations_")
+    )
     if not paths:
         print("No ground-truth files found.", file=sys.stderr)
         return 2

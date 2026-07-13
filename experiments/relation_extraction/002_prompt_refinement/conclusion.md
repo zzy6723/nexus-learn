@@ -2,7 +2,7 @@
 
 **Stage:** Experiment 002A: Oracle-KO Typed Relation Extraction  
 **Run:** `runs/development_v0_1/run_01`  
-**Status:** Selected for unseen holdout evaluation; freeze commit pending  
+**Status:** Selected for unseen holdout evaluation; development method frozen  
 **Evaluation status:** `final`
 
 ---
@@ -43,7 +43,9 @@ absence of positive-to-`NO_RELATION` regression, not strict accuracy alone.
 
 The selected prompt content is locked at SHA-256
 `e3b0e53f3ceed60c60d082fa9c4a67f9497e64d50664118227cd9bea9fbc12af`.
-It is not yet a production prompt, and the freeze commit is pending user action.
+It is not yet a production prompt. The development method was frozen at commit
+`18e687d5cd7909531918b51e2d6bef38cb64a053`, and the completed holdout now awaits
+its separate benchmark freeze commit.
 
 The complete analysis and limitations are recorded in
 `experiments/relation_extraction/development_comparison.md`. The 13 pair-level

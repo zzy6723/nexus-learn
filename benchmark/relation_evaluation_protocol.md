@@ -1,9 +1,13 @@
 # Relation Evaluation Protocol
 
-**Status:** Draft  
+**Status:** Frozen for holdout construction at `18e687d5cd7909531918b51e2d6bef38cb64a053`  
 **Version:** v0.1  
 **Created:** 2026-07-12  
 **Owner:** Project
+
+The scoring, matching, category, evidence, and adjudication rules are
+content-locked for Relation holdout evaluation. Any semantic change after the
+freeze commit requires a new protocol version.
 
 Terminology follows `docs/glossary.md`.
 

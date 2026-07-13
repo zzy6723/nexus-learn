@@ -1,9 +1,13 @@
 # Relation Annotation Guidelines
 
-**Status:** Draft  
+**Status:** Frozen for holdout construction at `18e687d5cd7909531918b51e2d6bef38cb64a053`  
 **Version:** v0.1  
 **Created:** 2026-07-12  
 **Owner:** Project
+
+The annotation rules are content-locked for Relation holdout construction. Any
+semantic change after the freeze commit requires a new version and invalidates
+direct v0.1 holdout comparison.
 
 Terminology follows `docs/glossary.md`.
 
