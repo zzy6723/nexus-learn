@@ -140,6 +140,24 @@ Purpose:
 - measure whether `RELATED_TO` is overused;
 - check whether evidence spans are copied exactly.
 
+## `002_prompt_refinement`
+
+Minimal development prompt refinement derived from the completed baseline error
+analysis.
+
+Status: Development dry-run validated; formal run pending.
+
+The refinement preserves the benchmark, Relation schema, runner, evaluator, and
+I/O contract. It targets endpoint serialization, `FORMALIZES` precedence, direct
+evidence gating, `NO_RELATION` under insufficient support, `RELATED_TO` fallback
+prevention, and self-contained evidence selection.
+
+See:
+
+- `experiments/relation_extraction/002_prompt_refinement/README.md`;
+- `experiments/relation_extraction/002_prompt_refinement/prompt.md`;
+- `experiments/relation_extraction/002_prompt_refinement/conclusion.md`.
+
 ---
 
 # Runner
@@ -201,7 +219,7 @@ were not executed as part of the runner implementation.
 
 # Next Steps
 
-1. Create Prompt 002 only from the completed baseline error-analysis targets.
-2. Re-evaluate on the development benchmark without changing the frozen benchmark.
-3. Compare baseline and refinement at both aggregate and pair levels.
+1. Commit the validated Prompt 002 setup and begin from a clean working tree.
+2. Execute a clean-state formal refinement run without changing the frozen benchmark.
+3. Finalize evidence adjudication and compare baseline and refinement at aggregate and pair levels.
 4. Freeze the selected Relation prompt and evaluation procedure before creating a Relation holdout.
