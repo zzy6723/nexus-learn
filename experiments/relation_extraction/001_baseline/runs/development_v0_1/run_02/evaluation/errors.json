@@ -1,0 +1,108 @@
+[
+  {
+    "pair_id": "rel_dev_010",
+    "error_type": "wrong_direction",
+    "gold_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "optimisation_problem"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "objective_function"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "objective_function"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "optimisation_problem"
+      },
+      "relation_type": "REQUIRES"
+    }
+  },
+  {
+    "pair_id": "rel_dev_014",
+    "error_type": "evidence_does_not_support_relation",
+    "adjudication_rationale": "The span explains the role of a step size but refers only to 'the method' without identifying that method as gradient descent, so it does not independently establish the predicted pair."
+  },
+  {
+    "pair_id": "rel_dev_020",
+    "error_type": "wrong_direction",
+    "gold_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "orthogonal_projection"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "least_squares_problem"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "least_squares_problem"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "orthogonal_projection"
+      },
+      "relation_type": "APPLIED_IN"
+    }
+  },
+  {
+    "pair_id": "rel_dev_021",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "FORMALIZES",
+    "predicted_relation_type": "APPLIED_IN"
+  },
+  {
+    "pair_id": "rel_dev_035",
+    "error_type": "overused_related_to",
+    "gold_relation_type": "NO_RELATION"
+  },
+  {
+    "pair_id": "rel_dev_035",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "RELATED_TO"
+  },
+  {
+    "pair_id": "rel_dev_035",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "RELATED_TO"
+  },
+  {
+    "pair_id": "rel_dev_037",
+    "error_type": "overused_related_to",
+    "gold_relation_type": "NO_RELATION"
+  },
+  {
+    "pair_id": "rel_dev_037",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "RELATED_TO"
+  },
+  {
+    "pair_id": "rel_dev_037",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "RELATED_TO"
+  },
+  {
+    "pair_id": "rel_dev_038",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "APPLIED_IN"
+  },
+  {
+    "pair_id": "rel_dev_038",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "APPLIED_IN"
+  }
+]

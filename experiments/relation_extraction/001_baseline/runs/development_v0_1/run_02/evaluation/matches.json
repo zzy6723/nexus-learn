@@ -1,0 +1,1858 @@
+[
+  {
+    "pair_id": "rel_dev_001",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "calculus_001",
+        "ko_id": "gradient"
+      },
+      "target": {
+        "lecture_id": "calculus_001",
+        "ko_id": "partial_derivative"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "calculus_001",
+        "ko_id": "gradient"
+      },
+      "target": {
+        "lecture_id": "calculus_001",
+        "ko_id": "partial_derivative"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "calculus_001",
+        "span": "The gradient \\(\\nabla f(x)\\) collects these partial derivatives into a vector.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  },
+  {
+    "pair_id": "rel_dev_002",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "calculus_001",
+        "ko_id": "directional_derivative"
+      },
+      "target": {
+        "lecture_id": "calculus_001",
+        "ko_id": "gradient"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "calculus_001",
+        "ko_id": "directional_derivative"
+      },
+      "target": {
+        "lecture_id": "calculus_001",
+        "ko_id": "gradient"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "calculus_001",
+        "span": "For a unit direction \\(u\\), the directional derivative is \\(\\nabla f(x)\\cdot u\\), so the gradient points in the direction of steepest local increase.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  },
+  {
+    "pair_id": "rel_dev_003",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "calculus_001",
+        "ko_id": "stationary_point"
+      },
+      "target": {
+        "lecture_id": "calculus_001",
+        "ko_id": "gradient"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "calculus_001",
+        "ko_id": "stationary_point"
+      },
+      "target": {
+        "lecture_id": "calculus_001",
+        "ko_id": "gradient"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "calculus_001",
+        "span": "A point where the gradient is the zero vector is called a stationary point.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  },
+  {
+    "pair_id": "rel_dev_004",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "calculus_001",
+        "ko_id": "first_order_taylor_formula"
+      },
+      "target": {
+        "lecture_id": "calculus_001",
+        "ko_id": "taylor_approximation"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "calculus_001",
+        "ko_id": "first_order_taylor_formula"
+      },
+      "target": {
+        "lecture_id": "calculus_001",
+        "ko_id": "taylor_approximation"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "calculus_001",
+        "span": "The first-order Taylor approximation around \\(a\\) is\n\n\\[\nf(a+h) \\approx f(a) + \\nabla f(a)\\cdot h.\n\\]",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_005",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "basis"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "vector_space"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "basis"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "vector_space"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "linear_algebra_001",
+        "span": "A basis is a set of independent vectors that can represent every vector in the space through linear combinations.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  },
+  {
+    "pair_id": "rel_dev_006",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "dimension"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "basis"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "dimension"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "basis"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "linear_algebra_001",
+        "span": "The number of vectors in a basis is the dimension of the vector space.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  },
+  {
+    "pair_id": "rel_dev_007",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "matrix"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "linear_transformation"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "matrix"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "linear_transformation"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "linear_algebra_001",
+        "span": "A matrix is a rectangular array of numbers that can represent a linear transformation once bases have been chosen for the input and output spaces.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  },
+  {
+    "pair_id": "rel_dev_008",
+    "category": "ambiguous",
+    "primary_scored": false,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "matrix_multiplication"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "linear_transformation"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "matrix_multiplication"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "linear_transformation"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "linear_algebra_001",
+        "span": "Matrix multiplication corresponds to composing linear transformations",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  },
+  {
+    "pair_id": "rel_dev_009",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "eigenvalue_equation"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "eigenvalue"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "eigenvalue_equation"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "eigenvalue"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "linear_algebra_001",
+        "span": "The corresponding eigenvalue \\(\\lambda\\) satisfies\n\n\\[\nAv = \\lambda v.\n\\]",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_010",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "optimisation_problem"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "objective_function"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "objective_function"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "optimisation_problem"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": false,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "optimisation_001",
+        "span": "An optimisation problem asks for an input that makes the objective function as small or as large as possible.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_011",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "unconstrained_minimisation_problem"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "optimisation_problem"
+      },
+      "relation_type": "EXTENDS"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "unconstrained_minimisation_problem"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "optimisation_problem"
+      },
+      "relation_type": "EXTENDS"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "optimisation_001",
+        "span": "In an unconstrained minimisation problem, the feasible inputs are usually all points in a space such as \\(\\mathbb{R}^n\\), and the goal is to minimise a differentiable function \\(f(x)\\).",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  },
+  {
+    "pair_id": "rel_dev_012",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "gradient_descent"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "gradient"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "gradient_descent"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "gradient"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "optimisation_001",
+        "span": "Gradient descent is a first-order iterative method that repeatedly moves in this direction:\n\n\\[\nx_{k+1} = x_k - \\alpha_k \\nabla f(x_k).\n\\]",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_013",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "gradient_descent_update"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "gradient_descent"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "gradient_descent_update"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "gradient_descent"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "optimisation_001",
+        "span": "Gradient descent is a first-order iterative method that repeatedly moves in this direction:\n\n\\[\nx_{k+1} = x_k - \\alpha_k \\nabla f(x_k).\n\\]",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_014",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "step_size"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "gradient_descent"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "step_size"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "gradient_descent"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "optimisation_001",
+        "span": "The scalar \\(\\alpha_k\\) is the step size. It controls how far the method moves at iteration \\(k\\).",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "not_supported"
+  },
+  {
+    "pair_id": "rel_dev_015",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "calculus_002",
+        "ko_id": "chain_rule"
+      },
+      "target": {
+        "lecture_id": "calculus_002",
+        "ko_id": "composite_function"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "calculus_002",
+        "ko_id": "chain_rule"
+      },
+      "target": {
+        "lecture_id": "calculus_002",
+        "ko_id": "composite_function"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "calculus_002",
+        "span": "The chain rule describes how the derivative of the composite function depends on the derivatives of \\(f\\) and \\(g\\).",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  },
+  {
+    "pair_id": "rel_dev_016",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "calculus_002",
+        "ko_id": "multivariable_chain_rule_formula"
+      },
+      "target": {
+        "lecture_id": "calculus_002",
+        "ko_id": "chain_rule"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "calculus_002",
+        "ko_id": "multivariable_chain_rule_formula"
+      },
+      "target": {
+        "lecture_id": "calculus_002",
+        "ko_id": "chain_rule"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "calculus_002",
+        "span": "For the scalar-valued composite function \\(h(x)=f(g(x))\\), the multivariable chain rule can be written as\n\n\\[\n\\nabla h(x) = J_g(x)^\\top \\nabla f(g(x)).\n\\]",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_017",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "calculus_002",
+        "ko_id": "jacobian_matrix"
+      },
+      "target": {
+        "lecture_id": "calculus_002",
+        "ko_id": "multivariable_chain_rule_formula"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "calculus_002",
+        "ko_id": "jacobian_matrix"
+      },
+      "target": {
+        "lecture_id": "calculus_002",
+        "ko_id": "multivariable_chain_rule_formula"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "calculus_002",
+        "span": "\\nabla h(x) = J_g(x)^\\top \\nabla f(g(x)).",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_018",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "orthogonal_vectors"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "inner_product"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "orthogonal_vectors"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "inner_product"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "linear_algebra_002",
+        "span": "Two vectors are orthogonal when their inner product is zero.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  },
+  {
+    "pair_id": "rel_dev_019",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "projection_formula"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "orthogonal_projection"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "projection_formula"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "orthogonal_projection"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "linear_algebra_002",
+        "span": "If \\(u\\) is a nonzero vector, the projection of \\(v\\) onto the one-dimensional subspace spanned by \\(u\\) is\n\n\\[\n\\operatorname{proj}_u(v) = \\frac{v \\cdot u}{u \\cdot u}u.\n\\]",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_020",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "orthogonal_projection"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "least_squares_problem"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "least_squares_problem"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "orthogonal_projection"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": false,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "linear_algebra_002",
+        "span": "Least squares problems use projection ideas to solve inconsistent systems.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_021",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "normal_equations"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "least_squares_problem"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "normal_equations"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "least_squares_problem"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": true,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "linear_algebra_002",
+        "span": "When the columns of \\(A\\) are independent, the solution satisfies the normal equations\n\n\\[\nA^\\top A x = A^\\top b.\n\\]",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_022",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "probability_distribution"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "random_variable"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "probability_distribution"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "random_variable"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "probability_001",
+        "span": "The probability distribution of a random variable describes how probability is assigned to its possible values.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  },
+  {
+    "pair_id": "rel_dev_023",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "expected_value"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "random_variable"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "expected_value"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "random_variable"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "probability_001",
+        "span": "The expected value of a random variable is a weighted average of its possible values.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  },
+  {
+    "pair_id": "rel_dev_024",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "expected_value_formula"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "expected_value"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "expected_value_formula"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "expected_value"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "probability_001",
+        "span": "For a discrete random variable \\(X\\), the expected value is\n\n\\[\n\\mathbb{E}[X] = \\sum_x x P(X=x).\n\\]",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_025",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "variance"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "expected_value"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "variance"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "expected_value"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "probability_001",
+        "span": "Variance measures how far a random variable typically is from its expected value.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  },
+  {
+    "pair_id": "rel_dev_026",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "variance_formula"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "variance"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "variance_formula"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "variance"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "probability_001",
+        "span": "It can be defined as\n\n\\[\n\\operatorname{Var}(X) = \\mathbb{E}[(X-\\mathbb{E}[X])^2].\n\\]",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_027",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "conditional_probability_formula"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "conditional_probability"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "conditional_probability_formula"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "conditional_probability"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "probability_001",
+        "span": "If \\(P(B)>0\\), then\n\n\\[\nP(A \\mid B) = \\frac{P(A \\cap B)}{P(B)}.\n\\]",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_028",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "bayes_rule"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "conditional_probability"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "bayes_rule"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "conditional_probability"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "probability_001",
+        "span": "Bayes' rule rewrites conditional probability in a form that is useful for updating beliefs:",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  },
+  {
+    "pair_id": "rel_dev_029",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "bayes_rule_formula"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "bayes_rule"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "bayes_rule_formula"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "bayes_rule"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "probability_001",
+        "span": "Bayes' rule rewrites conditional probability in a form that is useful for updating beliefs:\n\n\\[\nP(A \\mid B) = \\frac{P(B \\mid A)P(A)}{P(B)}.\n\\]",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_030",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "variance"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "orthogonal_projection"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "orthogonal_projection"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "variance"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_031",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "basis"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "conditional_probability"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "basis"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "conditional_probability"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_032",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "line_search"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "bayes_rule"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "line_search"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "bayes_rule"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_033",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "eigenvalue_equation"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "expected_value_formula"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "eigenvalue_equation"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "expected_value_formula"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_034",
+    "category": "schema_gap",
+    "primary_scored": false,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "line_search"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "step_size"
+      },
+      "relation_type": "RELATED_TO"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "line_search"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "step_size"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "optimisation_001",
+        "span": "A line search is a method for choosing a step size that gives sufficient decrease in the objective function.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_035",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "calculus_001",
+        "ko_id": "hessian_matrix"
+      },
+      "target": {
+        "lecture_id": "calculus_001",
+        "ko_id": "stationary_point"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "calculus_001",
+        "ko_id": "hessian_matrix"
+      },
+      "target": {
+        "lecture_id": "calculus_001",
+        "ko_id": "stationary_point"
+      },
+      "relation_type": "RELATED_TO"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "calculus_001",
+        "span": "For twice differentiable functions, a second-order approximation also includes the Hessian matrix, which describes local curvature.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "calculus_001",
+        "span": "A point where the gradient is the zero vector is called a stationary point.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_036",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "basis"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "eigenvalue_equation"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "basis"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "eigenvalue_equation"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_037",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "calculus_002",
+        "ko_id": "composite_function"
+      },
+      "target": {
+        "lecture_id": "calculus_002",
+        "ko_id": "local_linear_approximation"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "calculus_002",
+        "ko_id": "composite_function"
+      },
+      "target": {
+        "lecture_id": "calculus_002",
+        "ko_id": "local_linear_approximation"
+      },
+      "relation_type": "RELATED_TO"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "calculus_002",
+        "span": "The composite function \\(h = f \\circ g\\) maps an input \\(x \\in \\mathbb{R}^m\\) to \\(f(g(x))\\).",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "calculus_002",
+        "span": "It gives the best local linear approximation to \\(g\\) near \\(x\\).",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_038",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "dot_product"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "normal_equations"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "dot_product"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "normal_equations"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "linear_algebra_002",
+        "span": "When the columns of \\(A\\) are independent, the solution satisfies the normal equations\n\n\\[\nA^\\top A x = A^\\top b.\n\\]",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_039",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "expected_value_formula"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "bayes_rule"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "bayes_rule"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "expected_value_formula"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_040",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "convex_function"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "line_search"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "convex_function"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "line_search"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_041",
+    "category": "ambiguous",
+    "primary_scored": false,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "calculus_001",
+        "ko_id": "gradient"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "gradient_descent"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "accepted_alternatives": [
+      {
+        "source": {
+          "lecture_id": "optimisation_001",
+          "ko_id": "gradient_descent"
+        },
+        "target": {
+          "lecture_id": "calculus_001",
+          "ko_id": "gradient"
+        },
+        "relation_type": "REQUIRES"
+      }
+    ],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "gradient_descent"
+      },
+      "target": {
+        "lecture_id": "calculus_001",
+        "ko_id": "gradient"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "optimisation_001",
+        "span": "Gradient descent is a first-order iterative method that repeatedly moves in this direction:\n\n\\[\nx_{k+1} = x_k - \\alpha_k \\nabla f(x_k).\n\\]",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "supported"
+  }
+]

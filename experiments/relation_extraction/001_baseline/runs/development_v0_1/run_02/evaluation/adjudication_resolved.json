@@ -1,0 +1,290 @@
+{
+  "decisions": [
+    {
+      "pair_id": "rel_dev_004",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "calculus_001",
+          "ko_id": "first_order_taylor_formula"
+        },
+        "target": {
+          "lecture_id": "calculus_001",
+          "ko_id": "taylor_approximation"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "calculus_001",
+          "span": "The first-order Taylor approximation around \\(a\\) is\n\n\\[\nf(a+h) \\approx f(a) + \\nabla f(a)\\cdot h.\n\\]"
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The span directly introduces the first-order Taylor approximation and gives the formula that expresses it."
+    },
+    {
+      "pair_id": "rel_dev_009",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "linear_algebra_001",
+          "ko_id": "eigenvalue_equation"
+        },
+        "target": {
+          "lecture_id": "linear_algebra_001",
+          "ko_id": "eigenvalue"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "linear_algebra_001",
+          "span": "The corresponding eigenvalue \\(\\lambda\\) satisfies\n\n\\[\nAv = \\lambda v.\n\\]"
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The span states that an eigenvalue satisfies the displayed eigenvalue equation, directly supporting the formalization edge."
+    },
+    {
+      "pair_id": "rel_dev_012",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "optimisation_001",
+          "ko_id": "gradient_descent"
+        },
+        "target": {
+          "lecture_id": "optimisation_001",
+          "ko_id": "gradient"
+        },
+        "relation_type": "REQUIRES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "optimisation_001",
+          "span": "Gradient descent is a first-order iterative method that repeatedly moves in this direction:\n\n\\[\nx_{k+1} = x_k - \\alpha_k \\nabla f(x_k).\n\\]"
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The span names gradient descent and shows that its iterative update explicitly depends on the gradient."
+    },
+    {
+      "pair_id": "rel_dev_013",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "optimisation_001",
+          "ko_id": "gradient_descent_update"
+        },
+        "target": {
+          "lecture_id": "optimisation_001",
+          "ko_id": "gradient_descent"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "optimisation_001",
+          "span": "Gradient descent is a first-order iterative method that repeatedly moves in this direction:\n\n\\[\nx_{k+1} = x_k - \\alpha_k \\nabla f(x_k).\n\\]"
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The span introduces gradient descent and immediately supplies its update equation, so the formula formalizes the method."
+    },
+    {
+      "pair_id": "rel_dev_014",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "optimisation_001",
+          "ko_id": "step_size"
+        },
+        "target": {
+          "lecture_id": "optimisation_001",
+          "ko_id": "gradient_descent"
+        },
+        "relation_type": "APPLIED_IN"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "optimisation_001",
+          "span": "The scalar \\(\\alpha_k\\) is the step size. It controls how far the method moves at iteration \\(k\\)."
+        }
+      ],
+      "decision": "not_supported",
+      "rationale": "The span explains the role of a step size but refers only to 'the method' without identifying that method as gradient descent, so it does not independently establish the predicted pair."
+    },
+    {
+      "pair_id": "rel_dev_016",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "calculus_002",
+          "ko_id": "multivariable_chain_rule_formula"
+        },
+        "target": {
+          "lecture_id": "calculus_002",
+          "ko_id": "chain_rule"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "calculus_002",
+          "span": "For the scalar-valued composite function \\(h(x)=f(g(x))\\), the multivariable chain rule can be written as\n\n\\[\n\\nabla h(x) = J_g(x)^\\top \\nabla f(g(x)).\n\\]"
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The span explicitly identifies the displayed equation as the multivariable chain rule, directly supporting the formalization edge."
+    },
+    {
+      "pair_id": "rel_dev_017",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "calculus_002",
+          "ko_id": "jacobian_matrix"
+        },
+        "target": {
+          "lecture_id": "calculus_002",
+          "ko_id": "multivariable_chain_rule_formula"
+        },
+        "relation_type": "APPLIED_IN"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "calculus_002",
+          "span": "\\nabla h(x) = J_g(x)^\\top \\nabla f(g(x))."
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The displayed multivariable chain-rule formula explicitly uses the Jacobian matrix term, supporting that the Jacobian is applied in the formula."
+    },
+    {
+      "pair_id": "rel_dev_019",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "linear_algebra_002",
+          "ko_id": "projection_formula"
+        },
+        "target": {
+          "lecture_id": "linear_algebra_002",
+          "ko_id": "orthogonal_projection"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "linear_algebra_002",
+          "span": "If \\(u\\) is a nonzero vector, the projection of \\(v\\) onto the one-dimensional subspace spanned by \\(u\\) is\n\n\\[\n\\operatorname{proj}_u(v) = \\frac{v \\cdot u}{u \\cdot u}u.\n\\]"
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The span describes the projection operation and gives the equation that formalizes it."
+    },
+    {
+      "pair_id": "rel_dev_024",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "probability_001",
+          "ko_id": "expected_value_formula"
+        },
+        "target": {
+          "lecture_id": "probability_001",
+          "ko_id": "expected_value"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "probability_001",
+          "span": "For a discrete random variable \\(X\\), the expected value is\n\n\\[\n\\mathbb{E}[X] = \\sum_x x P(X=x).\n\\]"
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The span names expected value and immediately provides its discrete formula."
+    },
+    {
+      "pair_id": "rel_dev_026",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "probability_001",
+          "ko_id": "variance_formula"
+        },
+        "target": {
+          "lecture_id": "probability_001",
+          "ko_id": "variance"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "probability_001",
+          "span": "It can be defined as\n\n\\[\n\\operatorname{Var}(X) = \\mathbb{E}[(X-\\mathbb{E}[X])^2].\n\\]"
+        }
+      ],
+      "decision": "supported",
+      "rationale": "Although the introductory pronoun is contextual, the displayed Var(X) equation itself unambiguously defines variance and supports the formalization edge."
+    },
+    {
+      "pair_id": "rel_dev_027",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "probability_001",
+          "ko_id": "conditional_probability_formula"
+        },
+        "target": {
+          "lecture_id": "probability_001",
+          "ko_id": "conditional_probability"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "probability_001",
+          "span": "If \\(P(B)>0\\), then\n\n\\[\nP(A \\mid B) = \\frac{P(A \\cap B)}{P(B)}.\n\\]"
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The equation gives the defining formula for conditional probability under its stated condition."
+    },
+    {
+      "pair_id": "rel_dev_029",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "probability_001",
+          "ko_id": "bayes_rule_formula"
+        },
+        "target": {
+          "lecture_id": "probability_001",
+          "ko_id": "bayes_rule"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "probability_001",
+          "span": "Bayes' rule rewrites conditional probability in a form that is useful for updating beliefs:\n\n\\[\nP(A \\mid B) = \\frac{P(B \\mid A)P(A)}{P(B)}.\n\\]"
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The span explicitly names Bayes' rule and provides the equation that formalizes it."
+    },
+    {
+      "pair_id": "rel_dev_041",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "optimisation_001",
+          "ko_id": "gradient_descent"
+        },
+        "target": {
+          "lecture_id": "calculus_001",
+          "ko_id": "gradient"
+        },
+        "relation_type": "REQUIRES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "optimisation_001",
+          "span": "Gradient descent is a first-order iterative method that repeatedly moves in this direction:\n\n\\[\nx_{k+1} = x_k - \\alpha_k \\nabla f(x_k).\n\\]"
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The span names gradient descent and shows that its update depends explicitly on the gradient, supporting the cross-lecture prerequisite edge."
+    }
+  ]
+}

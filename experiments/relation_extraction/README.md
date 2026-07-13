@@ -116,7 +116,22 @@ The harness has been added but was not executed as part of its creation.
 
 Initial Oracle-KO Relation Extraction baseline.
 
-Status: Runner implemented; not run.
+Status: Development baseline and error analysis completed.
+
+Formal run:
+
+- `experiments/relation_extraction/001_baseline/runs/development_v0_1/run_02/`
+
+Final result:
+
+- strict edge accuracy: `0.8421`;
+- Relation type accuracy ignoring direction: `0.8947`;
+- exact evidence-span rate: `1.0000`;
+- evidence adjudication: 12 supported, 1 not supported, 0 pending.
+
+See `experiments/relation_extraction/001_baseline/conclusion.md` for scope and
+limitations, and `experiments/relation_extraction/001_baseline/error_analysis.md`
+for pair-level diagnosis and Prompt 002 refinement targets.
 
 Purpose:
 
@@ -159,7 +174,7 @@ The default run-specific layout is:
 
 ```text
 experiments/relation_extraction/001_baseline/
-└── runs/development_v0_1/run_01/
+└── runs/development_v0_1/<run_id>/
     ├── rendered_inputs/
     ├── raw_responses/
     ├── output/
@@ -186,8 +201,7 @@ were not executed as part of the runner implementation.
 
 # Next Steps
 
-1. Execute the evaluator and runner regression harnesses.
-2. Run the Relation runner with `--dry-run` only.
-3. Inspect the rendered request and leakage-audit metadata before any API call.
-4. Run `001_baseline` on the development relation pairs.
-5. Evaluate the predictions and perform error analysis before creating a Relation holdout.
+1. Create Prompt 002 only from the completed baseline error-analysis targets.
+2. Re-evaluate on the development benchmark without changing the frozen benchmark.
+3. Compare baseline and refinement at both aggregate and pair levels.
+4. Freeze the selected Relation prompt and evaluation procedure before creating a Relation holdout.

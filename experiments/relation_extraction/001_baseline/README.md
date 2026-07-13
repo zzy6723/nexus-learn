@@ -2,7 +2,7 @@
 
 **Experiment:** `experiments/relation_extraction/001_baseline`  
 **Stage:** Experiment 002A: Oracle-KO Typed Relation Extraction  
-**Status:** Runner implemented; not run  
+**Status:** Development baseline and error analysis completed
 **Created:** 2026-07-12
 
 ---
@@ -51,7 +51,7 @@ experiments/relation_extraction/001_baseline/
 ├── prompt.md
 ├── runs/
 │   └── development_v0_1/
-│       └── run_01/
+│       └── run_02/
 │           ├── rendered_inputs/
 │           ├── raw_responses/
 │           ├── output/
@@ -64,7 +64,34 @@ experiments/relation_extraction/001_baseline/
 
 # Status
 
-This run has not been executed.
+The formal clean-state development baseline is complete under:
+
+- `runs/development_v0_1/run_02/`
+
+The final evaluation and adjudication artifacts are under:
+
+- `runs/development_v0_1/run_02/evaluation/`
+
+Evaluation status is `final`: 13 pending evidence cases were manually resolved,
+with 12 judged `supported`, 1 judged `not_supported`, and 0 remaining pending.
+The manual adjudication support rate among pending evidence cases is `12/13`; it
+is not an all-evidence semantic-support accuracy.
+
+Primary development results:
+
+- strict edge accuracy: `0.8421`;
+- Relation type accuracy ignoring direction: `0.8947`;
+- endpoint direction accuracy: `0.9286`;
+- `NO_RELATION` accuracy: `0.7000`;
+- exact evidence-span rate: `1.0000`.
+
+The full scoped conclusion is recorded in `conclusion.md`. Structured pair-level
+diagnosis and evidence-supported refinement targets are recorded in
+`error_analysis.md`.
+
+---
+
+# Implementation Notes
 
 The evaluator is implemented at `scripts/evaluate_relation_extraction.py` and its synthetic validation has passed.
 
@@ -81,20 +108,8 @@ formal run, `finish_reason`, result count, pair alignment, and
 must remain preserved under its original run ID; it must not be silently replaced
 using `--overwrite`.
 
-Runner regression tests are defined in `tests/test_relation_runner.py`. They use
-mocked API behavior and have not yet been executed.
+Runner regression tests are defined in `tests/test_relation_runner.py` and use
+mocked API behavior.
 
-The first runner invocation should be a dry run:
-
-```bash
-python3 scripts/run_relation_extraction.py \
-  --experiment 001_baseline \
-  --split development \
-  --ground-truth benchmark/ground_truth/relations_development_v0_1.json \
-  --run-id dry_run_01 \
-  --dry-run
-```
-
-After the rendered request and metadata have been inspected, a future API call
-should use a fresh run ID such as `run_01`. Existing artifacts are never replaced
-unless `--overwrite` is supplied explicitly.
+The baseline error analysis is complete. Prompt 002 has not yet been created; any
+refinement should be limited to the targets in `error_analysis.md`.
