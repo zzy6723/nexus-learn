@@ -145,7 +145,7 @@ Purpose:
 Minimal development prompt refinement derived from the completed baseline error
 analysis.
 
-Status: Development dry-run validated; formal run pending.
+Status: Selected for unseen holdout evaluation; freeze commit pending.
 
 The refinement preserves the benchmark, Relation schema, runner, evaluator, and
 I/O contract. It targets endpoint serialization, `FORMALIZES` precedence, direct
@@ -157,6 +157,21 @@ See:
 - `experiments/relation_extraction/002_prompt_refinement/README.md`;
 - `experiments/relation_extraction/002_prompt_refinement/prompt.md`;
 - `experiments/relation_extraction/002_prompt_refinement/conclusion.md`.
+
+Prompt 002 is the stronger current development candidate: strict-edge accuracy
+increased from `0.8421` to `0.9211`, and all three observed false-positive
+Relations were removed without positive-to-`NO_RELATION` false negatives. It also
+introduced one positive-pair regression and did not improve the known direction
+or self-contained-evidence errors. See
+`experiments/relation_extraction/development_comparison.md` for the complete
+multi-metric comparison.
+
+Selected prompt SHA-256:
+
+- `e3b0e53f3ceed60c60d082fa9c4a67f9497e64d50664118227cd9bea9fbc12af`
+
+The selected prompt content is locked. It is a holdout candidate, not yet the
+final Relation Extraction prompt.
 
 ---
 
@@ -219,7 +234,7 @@ were not executed as part of the runner implementation.
 
 # Next Steps
 
-1. Commit the validated Prompt 002 setup and begin from a clean working tree.
-2. Execute a clean-state formal refinement run without changing the frozen benchmark.
-3. Finalize evidence adjudication and compare baseline and refinement at aggregate and pair levels.
-4. Freeze the selected Relation prompt and evaluation procedure before creating a Relation holdout.
+1. Create and record the user-owned freeze commit for the selected Prompt 002 result.
+2. Construct and annotate the unseen Relation holdout under the frozen protocol.
+3. Run both baseline and Prompt 002 on the same holdout with identical settings.
+4. Blind and finalize evidence adjudication before comparing holdout results.

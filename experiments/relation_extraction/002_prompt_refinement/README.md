@@ -1,7 +1,7 @@
 # Relation Extraction 002 Prompt Refinement
 
 **Stage:** Experiment 002A: Oracle-KO Typed Relation Extraction  
-**Status:** Development dry-run validated; formal run pending  
+**Status:** Selected for unseen holdout evaluation; freeze commit pending  
 **Prompt version:** v0.2  
 **Created:** 2026-07-13
 
@@ -112,7 +112,8 @@ Over-conservatism guardrails:
    new formal API request without `--overwrite`.
 6. Evaluate predictions and resolve any evidence adjudication before comparison.
 
-The formal run has not been executed.
+The formal run is complete under `runs/development_v0_1/run_01/`. Its evaluation
+status is `final` after 13 independent semantic-support adjudications.
 
 ---
 
@@ -141,3 +142,56 @@ The dry run recorded `git_dirty_at_start = true` because the refinement setup wa
 not committed. This is acceptable for input validation but not for the future
 formal API run. The dry-run artifacts must not be represented as a clean-state
 experimental result.
+
+---
+
+# Final Development Result
+
+- strict edge accuracy: `0.9211`;
+- Relation type accuracy: `0.9737`;
+- endpoint direction accuracy: `0.8929`;
+- positive Relation accuracy: `0.8929`;
+- `NO_RELATION` accuracy: `1.0000`;
+- false-positive Relations: `0`;
+- positive-to-`NO_RELATION` false negatives: `0`;
+- exact evidence-span rate: `1.0000`;
+- pending-case evidence support: `12/13`;
+- remaining pending adjudications: `0`.
+
+Prompt 002 is the stronger current development candidate, with documented
+direction and evidence limitations. See:
+
+- `conclusion.md`;
+- `../development_comparison.md`;
+- `runs/development_v0_1/run_01/evaluation/adjudication_analysis.md`.
+
+---
+
+# Selection and Content Lock
+
+Selected development prompt:
+
+- experiment: `002_prompt_refinement`;
+- prompt version: `v0.2`;
+- prompt SHA-256: `e3b0e53f3ceed60c60d082fa9c4a67f9497e64d50664118227cd9bea9fbc12af`;
+- selected purpose: unseen Relation holdout evaluation.
+
+Selection basis:
+
+- strict-edge accuracy increased from `0.8421` to `0.9211`;
+- Relation type accuracy increased from `0.8947` to `0.9737`;
+- all three observed hard-negative false positives were eliminated;
+- `RELATED_TO` overuse decreased from 2 to 0;
+- positive Relation accuracy did not decrease;
+- no positive pair was changed to `NO_RELATION`;
+- exact grounding and pending-case semantic support did not decrease.
+
+This is a development selection, not a production-prompt decision. Direction
+errors at `rel_dev_010` and `rel_dev_020`, the new `rel_dev_017` type regression,
+and the `rel_dev_014` evidence self-containment error remain documented
+limitations.
+
+The prompt content is now locked at the SHA-256 above. `prompt.md` must not be
+changed during holdout construction or evaluation. The repository freeze commit
+must be created and recorded by the user before any unseen holdout lecture or gold
+label is authored.

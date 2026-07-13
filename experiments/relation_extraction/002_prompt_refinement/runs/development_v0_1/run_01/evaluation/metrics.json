@@ -1,0 +1,81 @@
+{
+  "evaluation_status": "final",
+  "total_pairs": 41,
+  "primary_scored_pairs": 38,
+  "positive_pairs": 28,
+  "hard_negative_pairs": 10,
+  "ambiguous_pairs": 2,
+  "schema_gap_pairs": 1,
+  "strict_edge_accuracy": 0.9210526315789473,
+  "strict_edge_correct_count": 35,
+  "relation_type_accuracy_ignoring_direction": 0.9736842105263158,
+  "relation_type_correct_count": 37,
+  "endpoint_direction_accuracy": 0.8928571428571429,
+  "endpoint_direction_correct_count": 25,
+  "endpoint_direction_scored_count": 28,
+  "direction_accuracy_when_type_correct": 0.9259259259259259,
+  "direction_when_type_correct_count": 25,
+  "direction_when_type_correct_scored_count": 27,
+  "direction_accuracy": 0.8928571428571429,
+  "direction_correct_count": 25,
+  "direction_scored_count": 28,
+  "positive_relation_accuracy": 0.8928571428571429,
+  "positive_relation_correct_count": 25,
+  "no_relation_accuracy": 1.0,
+  "no_relation_correct_count": 10,
+  "acceptable_accuracy_ambiguous": 1.0,
+  "ambiguous_acceptable_count": 2,
+  "macro_f1_supported_labels": 0.9640211640211641,
+  "macro_f1_included_labels": [
+    "REQUIRES",
+    "APPLIED_IN",
+    "EXTENDS",
+    "FORMALIZES",
+    "NO_RELATION"
+  ],
+  "related_to_prediction_rate": 0.0,
+  "related_to_overuse_count": 0,
+  "unsupported_relation_count": 0,
+  "exact_evidence_span_rate": 1.0,
+  "exact_evidence_span_count": 31,
+  "evidence_span_count": 31,
+  "invalid_evidence_span_count": 0,
+  "evidence_lecture_outside_candidate_count": 0,
+  "missing_evidence_count": 0,
+  "unexpected_no_relation_evidence_count": 0,
+  "missing_rationale_count": 0,
+  "manual_adjudication_count": 13,
+  "pending_adjudication_count": 0,
+  "schema_gap_predictions": [
+    {
+      "pair_id": "rel_dev_034",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "optimisation_001",
+          "ko_id": "line_search"
+        },
+        "target": {
+          "lecture_id": "optimisation_001",
+          "ko_id": "step_size"
+        },
+        "relation_type": "APPLIED_IN"
+      },
+      "evidence_spans": [
+        {
+          "lecture_id": "optimisation_001",
+          "span": "A line search is a method for choosing a step size that gives sufficient decrease in the objective function."
+        }
+      ],
+      "rationale": "Line search is a method used to choose the step size, so line search is applied in the context of step size selection."
+    }
+  ],
+  "relation_coverage": {
+    "REQUIRES": "covered",
+    "APPLIED_IN": "covered",
+    "FORMALIZES": "covered",
+    "EXTENDS": "exploratory_single_positive",
+    "CONTRASTS_WITH": "not_covered",
+    "RELATED_TO": "no_primary_positive_support_overuse_only",
+    "NO_RELATION": "covered_with_cross_and_within_lecture_negatives"
+  }
+}

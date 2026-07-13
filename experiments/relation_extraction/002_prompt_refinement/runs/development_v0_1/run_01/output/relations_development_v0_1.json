@@ -1,0 +1,733 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_001",
+      "source": {
+        "lecture_id": "calculus_001",
+        "ko_id": "gradient"
+      },
+      "target": {
+        "lecture_id": "calculus_001",
+        "ko_id": "partial_derivative"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "calculus_001",
+          "span": "The gradient \\(\\nabla f(x)\\) collects these partial derivatives into a vector."
+        }
+      ],
+      "rationale": "The gradient is defined as a collection of partial derivatives, so understanding partial derivatives is necessary to understand the gradient."
+    },
+    {
+      "pair_id": "rel_dev_002",
+      "source": {
+        "lecture_id": "calculus_001",
+        "ko_id": "directional_derivative"
+      },
+      "target": {
+        "lecture_id": "calculus_001",
+        "ko_id": "gradient"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "calculus_001",
+          "span": "For a unit direction \\(u\\), the directional derivative is \\(\\nabla f(x)\\cdot u\\), so the gradient points in the direction of steepest local increase."
+        }
+      ],
+      "rationale": "The directional derivative is defined using the gradient, so the gradient is a prerequisite for understanding the directional derivative."
+    },
+    {
+      "pair_id": "rel_dev_003",
+      "source": {
+        "lecture_id": "calculus_001",
+        "ko_id": "stationary_point"
+      },
+      "target": {
+        "lecture_id": "calculus_001",
+        "ko_id": "gradient"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "calculus_001",
+          "span": "A point where the gradient is the zero vector is called a stationary point."
+        }
+      ],
+      "rationale": "The definition of a stationary point depends on the gradient being zero, so the gradient is a prerequisite."
+    },
+    {
+      "pair_id": "rel_dev_004",
+      "source": {
+        "lecture_id": "calculus_001",
+        "ko_id": "first_order_taylor_formula"
+      },
+      "target": {
+        "lecture_id": "calculus_001",
+        "ko_id": "taylor_approximation"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "calculus_001",
+          "span": "The first-order Taylor approximation around \\(a\\) is\n\n\\[\nf(a+h) \\approx f(a) + \\nabla f(a)\\cdot h.\n\\]"
+        }
+      ],
+      "rationale": "The first-order Taylor formula is the mathematical expression that formalizes the concept of Taylor approximation."
+    },
+    {
+      "pair_id": "rel_dev_005",
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "basis"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "vector_space"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "linear_algebra_001",
+          "span": "A basis is a set of independent vectors that can represent every vector in the space through linear combinations."
+        }
+      ],
+      "rationale": "The concept of a basis is defined within a vector space, so understanding vector spaces is necessary."
+    },
+    {
+      "pair_id": "rel_dev_006",
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "dimension"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "basis"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "linear_algebra_001",
+          "span": "The number of vectors in a basis is the dimension of the vector space."
+        }
+      ],
+      "rationale": "Dimension is defined as the number of vectors in a basis, so basis is a prerequisite."
+    },
+    {
+      "pair_id": "rel_dev_007",
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "matrix"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "linear_transformation"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "linear_algebra_001",
+          "span": "A matrix is a rectangular array of numbers that can represent a linear transformation once bases have been chosen for the input and output spaces."
+        }
+      ],
+      "rationale": "Matrices are used to represent linear transformations, so matrices are applied in the context of linear transformations."
+    },
+    {
+      "pair_id": "rel_dev_008",
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "matrix_multiplication"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "linear_transformation"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "linear_algebra_001",
+          "span": "Matrix multiplication corresponds to composing linear transformations"
+        }
+      ],
+      "rationale": "Matrix multiplication is used to compose linear transformations, so it is applied in that context."
+    },
+    {
+      "pair_id": "rel_dev_009",
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "eigenvalue_equation"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "eigenvalue"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "linear_algebra_001",
+          "span": "The corresponding eigenvalue \\(\\lambda\\) satisfies\n\n\\[\nAv = \\lambda v.\n\\]"
+        }
+      ],
+      "rationale": "The eigenvalue equation is the formula that defines the concept of eigenvalue."
+    },
+    {
+      "pair_id": "rel_dev_010",
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "objective_function"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "optimisation_problem"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "optimisation_001",
+          "span": "An optimisation problem asks for an input that makes the objective function as small or as large as possible."
+        }
+      ],
+      "rationale": "An optimisation problem is defined in terms of an objective function, so the objective function is a prerequisite."
+    },
+    {
+      "pair_id": "rel_dev_011",
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "unconstrained_minimisation_problem"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "optimisation_problem"
+      },
+      "relation_type": "EXTENDS",
+      "evidence_spans": [
+        {
+          "lecture_id": "optimisation_001",
+          "span": "In an unconstrained minimisation problem, the feasible inputs are usually all points in a space such as \\(\\mathbb{R}^n\\), and the goal is to minimise a differentiable function \\(f(x)\\)."
+        }
+      ],
+      "rationale": "An unconstrained minimisation problem is a specific type of optimisation problem, extending the general concept."
+    },
+    {
+      "pair_id": "rel_dev_012",
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "gradient_descent"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "gradient"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "optimisation_001",
+          "span": "Gradient descent is a first-order iterative method that repeatedly moves in this direction:\n\n\\[\nx_{k+1} = x_k - \\alpha_k \\nabla f(x_k).\n\\]"
+        }
+      ],
+      "rationale": "Gradient descent uses the gradient to determine the descent direction, so the gradient is a prerequisite."
+    },
+    {
+      "pair_id": "rel_dev_013",
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "gradient_descent_update"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "gradient_descent"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "optimisation_001",
+          "span": "Gradient descent is a first-order iterative method that repeatedly moves in this direction:\n\n\\[\nx_{k+1} = x_k - \\alpha_k \\nabla f(x_k).\n\\]"
+        }
+      ],
+      "rationale": "The gradient descent update formula is the mathematical expression that formalizes the gradient descent method."
+    },
+    {
+      "pair_id": "rel_dev_014",
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "step_size"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "gradient_descent"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "optimisation_001",
+          "span": "The scalar \\(\\alpha_k\\) is the step size. It controls how far the method moves at iteration \\(k\\)."
+        }
+      ],
+      "rationale": "The step size is a parameter used within the gradient descent method."
+    },
+    {
+      "pair_id": "rel_dev_015",
+      "source": {
+        "lecture_id": "calculus_002",
+        "ko_id": "chain_rule"
+      },
+      "target": {
+        "lecture_id": "calculus_002",
+        "ko_id": "composite_function"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "calculus_002",
+          "span": "The chain rule describes how the derivative of the composite function depends on the derivatives of \\(f\\) and \\(g\\)."
+        }
+      ],
+      "rationale": "The chain rule is about differentiating composite functions, so understanding composite functions is necessary."
+    },
+    {
+      "pair_id": "rel_dev_016",
+      "source": {
+        "lecture_id": "calculus_002",
+        "ko_id": "multivariable_chain_rule_formula"
+      },
+      "target": {
+        "lecture_id": "calculus_002",
+        "ko_id": "chain_rule"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "calculus_002",
+          "span": "For the scalar-valued composite function \\(h(x)=f(g(x))\\), the multivariable chain rule can be written as\n\n\\[\n\\nabla h(x) = J_g(x)^\\top \\nabla f(g(x)).\n\\]"
+        }
+      ],
+      "rationale": "The multivariable chain rule formula is the mathematical expression that formalizes the chain rule concept."
+    },
+    {
+      "pair_id": "rel_dev_017",
+      "source": {
+        "lecture_id": "calculus_002",
+        "ko_id": "multivariable_chain_rule_formula"
+      },
+      "target": {
+        "lecture_id": "calculus_002",
+        "ko_id": "jacobian_matrix"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "calculus_002",
+          "span": "\\nabla h(x) = J_g(x)^\\top \\nabla f(g(x))."
+        }
+      ],
+      "rationale": "The multivariable chain rule formula uses the Jacobian matrix, so understanding the Jacobian is necessary."
+    },
+    {
+      "pair_id": "rel_dev_018",
+      "source": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "orthogonal_vectors"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "inner_product"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "linear_algebra_002",
+          "span": "Two vectors are orthogonal when their inner product is zero."
+        }
+      ],
+      "rationale": "Orthogonality is defined using the inner product, so the inner product is a prerequisite."
+    },
+    {
+      "pair_id": "rel_dev_019",
+      "source": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "projection_formula"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "orthogonal_projection"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "linear_algebra_002",
+          "span": "If \\(u\\) is a nonzero vector, the projection of \\(v\\) onto the one-dimensional subspace spanned by \\(u\\) is\n\n\\[\n\\operatorname{proj}_u(v) = \\frac{v \\cdot u}{u \\cdot u}u.\n\\]"
+        }
+      ],
+      "rationale": "The projection formula is the mathematical expression that formalizes the orthogonal projection method."
+    },
+    {
+      "pair_id": "rel_dev_020",
+      "source": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "least_squares_problem"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "orthogonal_projection"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "linear_algebra_002",
+          "span": "Least squares problems use projection ideas to solve inconsistent systems."
+        }
+      ],
+      "rationale": "Least squares problems apply projection ideas, so orthogonal projection is used in that context."
+    },
+    {
+      "pair_id": "rel_dev_021",
+      "source": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "normal_equations"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "least_squares_problem"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "linear_algebra_002",
+          "span": "When the columns of \\(A\\) are independent, the solution satisfies the normal equations\n\n\\[\nA^\\top A x = A^\\top b.\n\\]"
+        }
+      ],
+      "rationale": "The normal equations are the formula that provides the solution to the least squares problem."
+    },
+    {
+      "pair_id": "rel_dev_022",
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "probability_distribution"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "random_variable"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "probability_001",
+          "span": "The probability distribution of a random variable describes how probability is assigned to its possible values."
+        }
+      ],
+      "rationale": "A probability distribution is associated with a random variable, so understanding random variables is necessary."
+    },
+    {
+      "pair_id": "rel_dev_023",
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "expected_value"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "random_variable"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "probability_001",
+          "span": "The expected value of a random variable is a weighted average of its possible values."
+        }
+      ],
+      "rationale": "Expected value is defined for a random variable, so random variable is a prerequisite."
+    },
+    {
+      "pair_id": "rel_dev_024",
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "expected_value_formula"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "expected_value"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "probability_001",
+          "span": "For a discrete random variable \\(X\\), the expected value is\n\n\\[\n\\mathbb{E}[X] = \\sum_x x P(X=x).\n\\]"
+        }
+      ],
+      "rationale": "The expected value formula is the mathematical expression that formalizes the concept of expected value."
+    },
+    {
+      "pair_id": "rel_dev_025",
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "variance"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "expected_value"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "probability_001",
+          "span": "Variance measures how far a random variable typically is from its expected value."
+        }
+      ],
+      "rationale": "Variance is defined in terms of expected value, so expected value is a prerequisite."
+    },
+    {
+      "pair_id": "rel_dev_026",
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "variance_formula"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "variance"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "probability_001",
+          "span": "It can be defined as\n\n\\[\n\\operatorname{Var}(X) = \\mathbb{E}[(X-\\mathbb{E}[X])^2].\n\\]"
+        }
+      ],
+      "rationale": "The variance formula is the mathematical expression that formalizes the concept of variance."
+    },
+    {
+      "pair_id": "rel_dev_027",
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "conditional_probability_formula"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "conditional_probability"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "probability_001",
+          "span": "If \\(P(B)>0\\), then\n\n\\[\nP(A \\mid B) = \\frac{P(A \\cap B)}{P(B)}.\n\\]"
+        }
+      ],
+      "rationale": "The conditional probability formula is the mathematical expression that formalizes the concept of conditional probability."
+    },
+    {
+      "pair_id": "rel_dev_028",
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "bayes_rule"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "conditional_probability"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "probability_001",
+          "span": "Bayes' rule rewrites conditional probability in a form that is useful for updating beliefs:"
+        }
+      ],
+      "rationale": "Bayes' rule is derived from conditional probability, so conditional probability is a prerequisite."
+    },
+    {
+      "pair_id": "rel_dev_029",
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "bayes_rule_formula"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "bayes_rule"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "probability_001",
+          "span": "Bayes' rule rewrites conditional probability in a form that is useful for updating beliefs:\n\n\\[\nP(A \\mid B) = \\frac{P(B \\mid A)P(A)}{P(B)}.\n\\]"
+        }
+      ],
+      "rationale": "The Bayes' rule formula is the mathematical expression that formalizes the Bayes' rule concept."
+    },
+    {
+      "pair_id": "rel_dev_030",
+      "source": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "orthogonal_projection"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "variance"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "No evidence in the provided lectures connects orthogonal projection to variance."
+    },
+    {
+      "pair_id": "rel_dev_031",
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "basis"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "conditional_probability"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "No evidence in the provided lectures connects basis to conditional probability."
+    },
+    {
+      "pair_id": "rel_dev_032",
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "line_search"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "bayes_rule"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "No evidence in the provided lectures connects line search to Bayes' rule."
+    },
+    {
+      "pair_id": "rel_dev_033",
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "eigenvalue_equation"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "expected_value_formula"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "No evidence in the provided lectures connects the eigenvalue equation to the expected value formula."
+    },
+    {
+      "pair_id": "rel_dev_034",
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "line_search"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "step_size"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "optimisation_001",
+          "span": "A line search is a method for choosing a step size that gives sufficient decrease in the objective function."
+        }
+      ],
+      "rationale": "Line search is a method used to choose the step size, so line search is applied in the context of step size selection."
+    },
+    {
+      "pair_id": "rel_dev_035",
+      "source": {
+        "lecture_id": "calculus_001",
+        "ko_id": "hessian_matrix"
+      },
+      "target": {
+        "lecture_id": "calculus_001",
+        "ko_id": "stationary_point"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The lecture mentions the Hessian matrix in the context of second-order approximation and stationary points in the context of gradient zero, but does not directly relate them."
+    },
+    {
+      "pair_id": "rel_dev_036",
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "basis"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "eigenvalue_equation"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The lecture discusses basis and eigenvalue equation separately without establishing a direct relation."
+    },
+    {
+      "pair_id": "rel_dev_037",
+      "source": {
+        "lecture_id": "calculus_002",
+        "ko_id": "composite_function"
+      },
+      "target": {
+        "lecture_id": "calculus_002",
+        "ko_id": "local_linear_approximation"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The lecture mentions composite functions and local linear approximation separately; the Jacobian gives local linear approximation of g, but not directly of composite functions."
+    },
+    {
+      "pair_id": "rel_dev_038",
+      "source": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "dot_product"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "normal_equations"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The lecture does not directly connect dot product to normal equations; normal equations involve matrix multiplication, not dot product explicitly."
+    },
+    {
+      "pair_id": "rel_dev_039",
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "bayes_rule"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "expected_value_formula"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The lecture discusses Bayes' rule and expected value formula separately without establishing a direct relation."
+    },
+    {
+      "pair_id": "rel_dev_040",
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "convex_function"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "line_search"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The lecture mentions convex functions and line search separately without directly relating them."
+    },
+    {
+      "pair_id": "rel_dev_041",
+      "source": {
+        "lecture_id": "calculus_001",
+        "ko_id": "gradient"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "gradient_descent"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "optimisation_001",
+          "span": "Gradient descent is a first-order iterative method that repeatedly moves in this direction:\n\n\\[\nx_{k+1} = x_k - \\alpha_k \\nabla f(x_k).\n\\]"
+        }
+      ],
+      "rationale": "The gradient is used in the gradient descent update formula, so the gradient is applied in gradient descent."
+    }
+  ]
+}

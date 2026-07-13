@@ -1,0 +1,99 @@
+{
+  "provider": "deepseek",
+  "experiment": "002_prompt_refinement",
+  "run_id": "run_01",
+  "split": "development",
+  "benchmark_version": "v0.1",
+  "ground_truth": "benchmark/ground_truth/relations_development_v0_1.json",
+  "prompt_path": "experiments/relation_extraction/002_prompt_refinement/prompt.md",
+  "relation_schema_path": "docs/decisions/004-relation-schema.md",
+  "model_requested": "deepseek-v4-flash",
+  "model_returned": "deepseek-v4-flash",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "finish_reason": "stop",
+  "request_parameters": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 8192,
+    "stream": false,
+    "response_format": {
+      "type": "json_object"
+    },
+    "thinking": {
+      "type": "disabled"
+    }
+  },
+  "run_timestamp": "2026-07-13T04:27:09.455254+00:00",
+  "latency_ms": 35127,
+  "git_commit_at_start": "cbc0593b52f9676a22182e2a61e59c5b0ddf54fd",
+  "git_dirty_at_start": false,
+  "hashes": {
+    "ground_truth_sha256": "74b6573e688384e8f32207e9be17475bcbab55a31f0225791351afe3d94e59a5",
+    "prompt_sha256": "e3b0e53f3ceed60c60d082fa9c4a67f9497e64d50664118227cd9bea9fbc12af",
+    "relation_schema_sha256": "a50bbf3193fe03e6e407da6ced7f15f9f4bb819876140925bc87ac4419c50417",
+    "knowledge_object_ground_truth_sha256": {
+      "benchmark/ground_truth/development_v0_1.json": "d16141b6b8fb2b4854eaf9fcef32e534df30c9ba5689b46d8a26b9a35dd9e69d",
+      "benchmark/ground_truth/holdout_v0_1.json": "02407f9a24895aa62c8aa0caad8b93135bb49442a763c2749f1f540d161ecd24"
+    },
+    "lecture_sha256": {
+      "calculus_001": "c5ee7752c15f9b3bade8a053389ec971304c7d214a1142de7265b2fed980e046",
+      "calculus_002": "fe3b3c6bc59774dd45f9d4952145894ec0cad53e85a4c5d7d45cd9875e93abd5",
+      "linear_algebra_001": "8aa28a061d2e653b16466f76c5554f1b72026f4eeefdf2553773e41b98d8966a",
+      "linear_algebra_002": "33b242e8f00d2d8de54df08be7b726fba423dfa68a78514d1ab716016ea6716f",
+      "optimisation_001": "d47b0ddd6d0cac0c576efd820ddb641c1d18dc29e9046956509a0c590f27cd35",
+      "probability_001": "887c720a4f5a12fddf92d61c85af4b7610c15025b5fe3583f15edb9c812ef69d"
+    },
+    "model_input_sha256": "c793721b211b93cddb9604f6099913ab8c68be4fc4e9875a71a67dc52d3f5fc1",
+    "request_payload_sha256": "1a2ab6b4ac83e4165f852cba07e7798d9683c5e3f468c7d0f9726cba6cd1aec7"
+  },
+  "input_counts": {
+    "candidate_pairs": 41,
+    "knowledge_objects": 46,
+    "lectures": 6
+  },
+  "gold_leakage_audit": {
+    "passed": true,
+    "candidate_serialization": "sorted_fully_qualified_references",
+    "forbidden_keys_checked": [
+      "acceptable_alternatives",
+      "category",
+      "evidence_spans",
+      "primary_scored",
+      "primary_scoring_categories",
+      "rationale",
+      "relation_type",
+      "source",
+      "symmetric",
+      "target"
+    ],
+    "rendered_pair_count": 41,
+    "rendered_knowledge_object_count": 46,
+    "rendered_lecture_count": 6
+  },
+  "artifacts": {
+    "rendered_input": "experiments/relation_extraction/002_prompt_refinement/runs/development_v0_1/run_01/rendered_inputs/relations_development_v0_1.json",
+    "raw_response": "experiments/relation_extraction/002_prompt_refinement/runs/development_v0_1/run_01/raw_responses/relations_development_v0_1.json",
+    "prediction": "experiments/relation_extraction/002_prompt_refinement/runs/development_v0_1/run_01/output/relations_development_v0_1.json",
+    "unparsed_output": "experiments/relation_extraction/002_prompt_refinement/runs/development_v0_1/run_01/output/relations_development_v0_1.raw.txt",
+    "metadata": "experiments/relation_extraction/002_prompt_refinement/runs/development_v0_1/run_01/metadata/relations_development_v0_1.json"
+  },
+  "usage": {
+    "prompt_tokens": 9816,
+    "completion_tokens": 5821,
+    "total_tokens": 15637,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 9816
+  },
+  "request_success": true,
+  "api_error": null,
+  "json_parse_success": true,
+  "json_parse_error": null,
+  "prediction_schema_valid": true,
+  "prediction_schema_error": null,
+  "retry_count": 0,
+  "dry_run": false,
+  "run_status": "completed"
+}
