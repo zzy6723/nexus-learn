@@ -13,7 +13,15 @@ Relation Extraction is separate from Connection Discovery.
 
 Current stage:
 
-`Experiment 002A: Oracle-KO Typed Relation Extraction`
+`Experiment 002A: Oracle-KO Typed Relation Extraction - Completed`
+
+Selected method:
+
+- `002_prompt_refinement` v0.2;
+- engineering role: Relation Extraction prompt v0.1 for subsequent Technical
+  Validation;
+- selection record: `experiments/relation_extraction/holdout_comparison.md`;
+- holdout comparison: final for both baseline and Prompt 002.
 
 In 002A, the model receives human ground-truth Knowledge Objects and unordered candidate pairs. It predicts:
 
@@ -69,18 +77,24 @@ Benchmark-only label:
 
 # Benchmark
 
-Development ground truth:
+Ground truth:
 
 - `benchmark/ground_truth/relations_development_v0_1.json`
+- `benchmark/ground_truth/relations_holdout_v0_1.json`
 
 Guidelines:
 
 - `benchmark/relation_annotation_guidelines.md`
 - `benchmark/relation_evaluation_protocol.md`
 
-The current Relation development corpus uses all six existing mini lectures. A new Relation holdout should be created only after the Relation prompt and evaluation procedure are stable.
+The Relation development corpus uses six mini lectures. The frozen unseen
+holdout uses four newly authored lectures, 36 model-facing oracle Knowledge
+Objects, and 40 primary-scored candidate pairs.
 
-The current benchmark has partial schema coverage. Conclusions must be limited to relation labels with positive development support; uncovered labels are not treated as validated.
+The benchmark still has partial schema coverage. `RELATED_TO` has no positive
+holdout support, while `EXTENDS` and `CONTRASTS_WITH` have only 3 and 1 positive
+holdout examples. Uncovered or low-support labels are not treated as broadly
+validated.
 
 ---
 
@@ -110,17 +124,22 @@ The regression harness is:
 
 - `tests/test_relation_evaluator.py`
 
-The harness has been added but was not executed as part of its creation.
+The evaluator, runner, and ground-truth-checker regression suite contains 21
+tests and passed during holdout construction validation.
 
 ## `001_baseline`
 
 Initial Oracle-KO Relation Extraction baseline.
 
-Status: Development baseline and error analysis completed.
+Status: Completed control for development diagnosis and unseen holdout comparison.
 
-Formal run:
+Formal development run:
 
 - `experiments/relation_extraction/001_baseline/runs/development_v0_1/run_02/`
+
+Formal holdout run:
+
+- `experiments/relation_extraction/001_baseline/runs/holdout_v0_1/run_01/`
 
 Final result:
 
@@ -145,7 +164,7 @@ Purpose:
 Minimal development prompt refinement derived from the completed baseline error
 analysis.
 
-Status: Selected for unseen holdout evaluation; development method frozen.
+Status: Selected for subsequent Technical Validation; Experiment 002A complete.
 
 The refinement preserves the benchmark, Relation schema, runner, evaluator, and
 I/O contract. It targets endpoint serialization, `FORMALIZES` precedence, direct
@@ -170,8 +189,8 @@ Selected prompt SHA-256:
 
 - `e3b0e53f3ceed60c60d082fa9c4a67f9497e64d50664118227cd9bea9fbc12af`
 
-The selected prompt content is locked. It is a holdout candidate, not yet the
-final Relation Extraction prompt.
+The selected prompt content is locked. It is selected for subsequent Technical
+Validation, but is not a claim of production readiness.
 
 ---
 
@@ -190,10 +209,10 @@ candidate pairs and their referenced materials: 6 lectures and 46 Knowledge
 Objects. This single-request design is the v0.1 baseline; deterministic batching
 is deferred unless a preserved run demonstrates an output-length failure.
 
-The completed unseen holdout also uses one request. Its expected model-facing
+The completed unseen holdout also uses one request. Its model-facing
 input contains 40 candidate pairs, 4 lectures, and 36 referenced oracle Knowledge
-Objects. The holdout benchmark is constructed and validated but must receive its
-user-owned freeze commit before either prompt is run.
+Objects. Both prompts were run from the same clean holdout freeze commit, and
+both evaluations are now `final` after separate Evidence adjudication.
 
 Allowed model-facing candidate data:
 
@@ -242,9 +261,10 @@ suite contains 21 tests and passed during holdout construction validation.
 
 # Next Steps
 
-1. Create the user-owned freeze commit for the completed holdout benchmark.
-2. Without editing tracked files, run baseline and Prompt 002 from clean states
-   with identical settings and the same freeze commit.
-3. Confirm both metadata files captured that commit and
-   `git_dirty_at_start = false`, then backfill the plan's commit placeholder.
-4. Blind and finalize evidence adjudication before comparing holdout results.
+Experiment 002A is closed. Prompt 002 is the selected Relation Extraction
+prompt v0.1 for subsequent Technical Validation.
+
+The next experiment is Experiment 002B: evaluate Relation Extraction with
+predicted rather than oracle Knowledge Objects. The holdout comparison remains
+the final evidence for 002A; no further prompt tuning should be performed
+against the inspected holdout pairs.

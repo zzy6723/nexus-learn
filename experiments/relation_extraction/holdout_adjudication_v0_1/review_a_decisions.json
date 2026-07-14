@@ -1,0 +1,66 @@
+{
+  "review_id": "Review A",
+  "decision_scope": "Evidence semantic support for the complete predicted edge and evidence snapshot",
+  "decisions": [
+    {
+      "pair_id": "rel_holdout_003",
+      "decision": "supported",
+      "rationale": "The span names path cost and gives the sum of edge weights that formally expresses it."
+    },
+    {
+      "pair_id": "rel_holdout_007",
+      "decision": "not_supported",
+      "rationale": "The span names Dijkstra's algorithm but refers only to 'this problem'; no selected span resolves that phrase to the single-source shortest-path problem."
+    },
+    {
+      "pair_id": "rel_holdout_008",
+      "decision": "supported",
+      "rationale": "The displayed equation identifies the log-likelihood as the logarithm of likelihood and gives its explicit sum form."
+    },
+    {
+      "pair_id": "rel_holdout_011",
+      "decision": "supported",
+      "rationale": "The span names the root-finding problem and immediately gives its zero equation."
+    },
+    {
+      "pair_id": "rel_holdout_015",
+      "decision": "supported",
+      "rationale": "The displayed forward Euler update unambiguously expresses the method's one-step rule, despite the introductory possessive pronoun."
+    },
+    {
+      "pair_id": "rel_holdout_017",
+      "decision": "supported",
+      "rationale": "Defining the problem as finding a minimum-cost path directly establishes that the shortest-path objective depends on path cost."
+    },
+    {
+      "pair_id": "rel_holdout_019",
+      "decision": "supported",
+      "rationale": "The product of observation probabilities is the explicit likelihood formula and therefore formalizes likelihood."
+    },
+    {
+      "pair_id": "rel_holdout_023",
+      "decision": "supported",
+      "rationale": "The displayed Newton iteration is the distinctive update rule that formalizes Newton's method."
+    },
+    {
+      "pair_id": "rel_holdout_025",
+      "decision": "supported",
+      "rationale": "The span explicitly states that relaxation is formalized by the displayed minimum-distance update."
+    },
+    {
+      "pair_id": "rel_holdout_033",
+      "decision": "supported",
+      "rationale": "The MLE-labelled argmax equation directly formalizes maximum likelihood estimation."
+    },
+    {
+      "pair_id": "rel_holdout_037",
+      "decision": "supported",
+      "rationale": "The corrected predictor-corrector equation unambiguously gives the Heun update represented by the predicted Formula object."
+    },
+    {
+      "pair_id": "rel_holdout_039",
+      "decision": "not_supported",
+      "rationale": "The evidence uses the unresolved subject 'It' and a generic interval-midpoint formula; no selected span identifies the method as bisection."
+    }
+  ]
+}

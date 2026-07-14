@@ -125,9 +125,10 @@ Its construction and evaluation procedure is recorded in
 `relation_holdout_plan.md`. Construction began only after the development method
 was frozen at `18e687d5cd7909531918b51e2d6bef38cb64a053`.
 
-The completed holdout is waiting for its user-owned benchmark freeze commit.
-Neither baseline nor Prompt 002 should be run before that second freeze anchor
-is recorded.
+The completed holdout was frozen at
+`5fd7e2b9ea02fad6a15f2a1a703193bd7d606c7d`. Baseline and Prompt 002 were run
+from that same clean commit, and both evaluations reached `final` after separate
+Evidence adjudication. The aggregate holdout comparison is pending.
 
 ---
 

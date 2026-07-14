@@ -1,6 +1,6 @@
 # Relation Extraction Holdout Plan
 
-**Status:** Construction and validation completed; holdout benchmark freeze commit pending  
+**Status:** Completed; Prompt 002 selected for subsequent Technical Validation  
 **Created:** 2026-07-13  
 **Target split:** `holdout`  
 **Target version:** `v0.1`
@@ -52,7 +52,7 @@ freeze commit. Its ID will be captured authoritatively by both formal run
 metadata files and then backfilled here after the runs:
 
 ```text
-holdout_benchmark_freeze_commit: PENDING_USER_COMMIT
+holdout_benchmark_freeze_commit: 5fd7e2b9ea02fad6a15f2a1a703193bd7d606c7d
 ```
 
 The first commit proves that the method was fixed before unseen data was
@@ -60,9 +60,8 @@ authored. The second commit freezes the completed unseen benchmark before either
 prompt is run. Formal baseline and Prompt 002 runs must both start from the
 second commit.
 
-The placeholder must not be edited between the freeze commit and formal model
-runs, because doing so would make the working tree dirty and create a different
-execution state. Backfill it only after both metadata files confirm the same
+The placeholder was left unchanged between the freeze commit and formal model
+runs, then backfilled after both metadata files confirmed the same
 `git_commit_at_start` value.
 
 ---
@@ -179,9 +178,11 @@ This split-aware change does not alter annotation or scoring semantics. Both the
 existing development ground truth and the new holdout ground truth pass the
 checker, and regression tests cover both prefixes.
 
-Steps 1 through 6 and the pre-commit validation are complete without running
-either prompt. The files are marked `frozen_not_run`; step 7 awaits the
-user-owned holdout benchmark freeze commit.
+Steps 1 through 6 and the pre-commit validation were completed without running
+either prompt. The files were marked `frozen_not_run` when committed at the
+holdout benchmark freeze boundary. That value is preserved as part of the frozen
+benchmark snapshot; live execution status is recorded in run metadata and the
+comparison documents rather than by modifying the ground truth after execution.
 
 ---
 
@@ -212,6 +213,21 @@ Generated run artifacts are not currently ignored by repository rules. To keep
 simple local workflow is to run the baseline, temporarily move its complete
 `run_01` directory outside the repository, run Prompt 002, and then restore the
 baseline directory to its documented path. Do not edit either metadata file.
+
+Both formal runs satisfied this execution contract. Each recorded:
+
+- `git_commit_at_start = 5fd7e2b9ea02fad6a15f2a1a703193bd7d606c7d`;
+- `git_dirty_at_start = false`;
+- completed request, JSON parsing, and prediction-schema validation;
+- `finish_reason = stop`;
+- 40 candidate pairs, 36 referenced Knowledge Objects, and 4 lectures;
+- the same ground-truth, Knowledge Object, lecture, and model-input hashes;
+- the same model and request parameters;
+- different prompt and request-payload hashes.
+
+Both evaluations reached `final` after independent snapshot-bound Evidence
+adjudication. The completed comparison is recorded in
+`experiments/relation_extraction/holdout_comparison.md`.
 
 ---
 
@@ -254,3 +270,18 @@ The final comparison must report:
 Prompt 002 may be selected as the Relation Extraction prompt v0.1 only if the
 holdout comparison shows a healthy overall improvement or stable advantage that
 is not produced by suppressing supported positive Relations.
+
+## Outcome
+
+The comparison selected Prompt 002 as the Relation Extraction prompt v0.1 for
+subsequent Technical Validation. On the unseen holdout, it improved Relation type
+accuracy from `36/40` to `40/40` while strict edge accuracy remained `36/40` for
+both prompts. It preserved positive Relation accuracy, hard-negative rejection,
+endpoint direction accuracy, and exact evidence grounding, and it did not use
+`RELATED_TO` as an uncertainty fallback or suppress positive pairs into
+`NO_RELATION`.
+
+The selection does not claim production readiness or a strict-edge improvement.
+Endpoint direction and evidence self-containment remain known limitations, and
+the inspected holdout must not be reused as unseen evaluation data for a prompt
+refined from its errors.

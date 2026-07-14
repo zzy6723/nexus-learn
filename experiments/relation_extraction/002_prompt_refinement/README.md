@@ -1,7 +1,7 @@
 # Relation Extraction 002 Prompt Refinement
 
 **Stage:** Experiment 002A: Oracle-KO Typed Relation Extraction  
-**Status:** Selected for unseen holdout evaluation; development method frozen  
+**Status:** Selected for subsequent Technical Validation; Experiment 002A complete  
 **Prompt version:** v0.2  
 **Created:** 2026-07-13
 
@@ -14,9 +14,8 @@ This experiment tests a minimal prompt refinement derived from the finalized
 Relation schema, development benchmark, candidate pairs, runner, evaluator, and
 request parameters as the baseline.
 
-Development results can show whether the refinement addresses known errors on the
-data used to design it. They cannot establish generalization; that requires a
-later frozen holdout comparison.
+Development results were used for prompt diagnosis. The frozen holdout comparison
+completed the generalization check for this experiment.
 
 ---
 
@@ -112,6 +111,9 @@ Over-conservatism guardrails:
    new formal API request without `--overwrite`.
 6. Evaluate predictions and resolve any evidence adjudication before comparison.
 
+This plan is historical. The formal development and holdout runs are complete;
+the resulting comparison is recorded in `../holdout_comparison.md`.
+
 The formal run is complete under `runs/development_v0_1/run_01/`. Its evaluation
 status is `final` after 13 independent semantic-support adjudications.
 
@@ -169,14 +171,15 @@ direction and evidence limitations. See:
 
 # Selection and Content Lock
 
-Selected development prompt:
+Selected method:
 
 - experiment: `002_prompt_refinement`;
 - prompt version: `v0.2`;
 - prompt SHA-256: `e3b0e53f3ceed60c60d082fa9c4a67f9497e64d50664118227cd9bea9fbc12af`;
-- selected purpose: unseen Relation holdout evaluation.
+- engineering role: Relation Extraction prompt v0.1 for subsequent Technical
+  Validation.
 
-Selection basis:
+Development selection basis:
 
 - strict-edge accuracy increased from `0.8421` to `0.9211`;
 - Relation type accuracy increased from `0.8947` to `0.9737`;
@@ -186,13 +189,20 @@ Selection basis:
 - no positive pair was changed to `NO_RELATION`;
 - exact grounding and pending-case semantic support did not decrease.
 
-This is a development selection, not a production-prompt decision. Direction
-errors at `rel_dev_010` and `rel_dev_020`, the new `rel_dev_017` type regression,
-and the `rel_dev_014` evidence self-containment error remain documented
-limitations.
+The unseen holdout confirmed the selection because Prompt 002 improved Relation
+type accuracy from `36/40` to `40/40` while preserving strict edge accuracy,
+endpoint direction accuracy, positive Relation accuracy, hard-negative accuracy,
+and exact evidence grounding. It also improved pending-case evidence support from
+`10/12` to `11/12`. The full selection argument is recorded in
+`../holdout_comparison.md`.
 
-The prompt content is now locked at the SHA-256 above. `prompt.md` must not be
-changed during holdout construction or evaluation. The development method was
-frozen at commit `18e687d5cd7909531918b51e2d6bef38cb64a053` before any unseen
-holdout lecture or gold label was authored. The completed holdout now awaits its
-separate benchmark freeze commit before either prompt is run.
+This is an engineering default for subsequent Technical Validation, not a
+production-prompt decision. Endpoint direction and evidence self-containment
+remain documented cross-split limitations.
+
+The prompt content remains locked at the SHA-256 above. The development method
+was frozen at commit `18e687d5cd7909531918b51e2d6bef38cb64a053` before any unseen
+holdout lecture or gold label was authored. The completed holdout benchmark was
+then frozen at commit `5fd7e2b9ea02fad6a15f2a1a703193bd7d606c7d`; both formal
+holdout runs started clean from that commit. No Prompt 003 refinement may use the
+inspected holdout and then report performance on the same split as unseen.

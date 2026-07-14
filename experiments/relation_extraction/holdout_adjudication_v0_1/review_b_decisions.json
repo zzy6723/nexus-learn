@@ -1,0 +1,66 @@
+{
+  "review_id": "Review B",
+  "decision_scope": "Evidence semantic support for the complete predicted edge and evidence snapshot",
+  "decisions": [
+    {
+      "pair_id": "rel_holdout_003",
+      "decision": "supported",
+      "rationale": "The span names path cost and gives the sum of edge weights that formally expresses it."
+    },
+    {
+      "pair_id": "rel_holdout_007",
+      "decision": "not_supported",
+      "rationale": "The span names Dijkstra's algorithm but refers only to 'this problem'; no selected span resolves that phrase to the single-source shortest-path problem."
+    },
+    {
+      "pair_id": "rel_holdout_008",
+      "decision": "supported",
+      "rationale": "The span names log-likelihood and immediately gives the equation that expresses it."
+    },
+    {
+      "pair_id": "rel_holdout_011",
+      "decision": "supported",
+      "rationale": "The span names the root-finding problem and immediately gives its zero equation."
+    },
+    {
+      "pair_id": "rel_holdout_015",
+      "decision": "supported",
+      "rationale": "The span names the forward Euler method and directly connects it to the displayed update."
+    },
+    {
+      "pair_id": "rel_holdout_017",
+      "decision": "supported",
+      "rationale": "Defining the problem as finding a minimum-cost path directly establishes that the shortest-path objective depends on path cost."
+    },
+    {
+      "pair_id": "rel_holdout_019",
+      "decision": "supported",
+      "rationale": "The span names likelihood, describes its construction, and immediately supplies its product formula."
+    },
+    {
+      "pair_id": "rel_holdout_023",
+      "decision": "supported",
+      "rationale": "The span names Newton's method and immediately gives its update equation."
+    },
+    {
+      "pair_id": "rel_holdout_025",
+      "decision": "supported",
+      "rationale": "The span explicitly states that relaxation is formalized by the displayed minimum-distance update."
+    },
+    {
+      "pair_id": "rel_holdout_033",
+      "decision": "supported",
+      "rationale": "The span names maximum likelihood estimation and immediately supplies its argmax formula."
+    },
+    {
+      "pair_id": "rel_holdout_037",
+      "decision": "supported",
+      "rationale": "The span names Heun's method, explains its predictor-corrector construction, and gives the corrected update."
+    },
+    {
+      "pair_id": "rel_holdout_039",
+      "decision": "supported",
+      "rationale": "The span names the bisection method and includes the midpoint formula used in its interval update."
+    }
+  ]
+}
