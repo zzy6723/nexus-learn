@@ -6,12 +6,15 @@ from __future__ import annotations
 import argparse
 import json
 import math
-import re
 import sys
-import unicodedata
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
+
+try:
+    from .knowledge_object_matching import name_matching_key as normalize_label
+except ImportError:  # Direct execution: python3 scripts/evaluate_entity_extraction.py
+    from knowledge_object_matching import name_matching_key as normalize_label
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -29,23 +32,6 @@ GENERATED_EVALUATION_ARTIFACTS = [
     "summary.md",
     "adjudication_pending.json",
 ]
-
-DASH_TRANSLATION = str.maketrans({
-    "‐": "-",
-    "‑": "-",
-    "‒": "-",
-    "–": "-",
-    "—": "-",
-    "―": "-",
-})
-APOSTROPHE_TRANSLATION = str.maketrans({
-    "‘": "'",
-    "’": "'",
-    "‛": "'",
-    "`": "'",
-    "´": "'",
-})
-
 
 @dataclass
 class GroundTruthObject:
@@ -85,15 +71,6 @@ class EvaluationAbort(Exception):
     def __init__(self, message: str, error: dict[str, Any]) -> None:
         super().__init__(message)
         self.error = error
-
-
-def normalize_label(label: str) -> str:
-    normalized = unicodedata.normalize("NFKC", label)
-    normalized = normalized.translate(APOSTROPHE_TRANSLATION)
-    normalized = normalized.translate(DASH_TRANSLATION)
-    normalized = normalized.strip()
-    normalized = re.sub(r"\s+", " ", normalized)
-    return normalized.casefold()
 
 
 def parse_args() -> argparse.Namespace:
