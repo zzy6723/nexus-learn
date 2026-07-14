@@ -159,6 +159,10 @@ The KO manifest must contain exactly the distinct endpoints referenced by the
 recoverable pair manifest. Extra unmatched predicted KOs are prohibited from
 both matched model requests.
 
+The recoverable, unrecoverable, and diagnostic pair arrays are each ordered
+lexicographically by `pair_id`. KO slots are then derived from the sorted Oracle
+references of the recoverable pair manifest.
+
 Before execution, A-prime and B-prime must have identical:
 
 - pair-manifest hash;
@@ -317,6 +321,12 @@ pipeline strict success
 =
 pair recoverability * B-prime conditional strict accuracy
 ```
+
+If pair recoverability is zero, A-prime and B-prime are not sent to the Relation
+API. Deterministic final no-op evaluation artifacts record
+`not_run_no_recoverable_pairs`, provide real provenance hashes, and yield
+`0/0/null` conditional rates. Pipeline strict success remains zero over all
+primary pairs. A no-op evaluation is invalid if any recoverable pair exists.
 
 This is a controlled pipeline-completion metric, not graph accuracy. It does not
 measure edge precision or recall from automatic candidate generation.

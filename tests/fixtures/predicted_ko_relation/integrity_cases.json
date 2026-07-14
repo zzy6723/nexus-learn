@@ -102,6 +102,181 @@
       "case_id": "integrity_gold_leakage_in_model_input",
       "mutation": {"model_facing_pair_field": "relation_type", "value": "REQUIRES"},
       "expected": {"fatal_error_codes": ["gold_relation_leakage"]}
+    },
+    {
+      "case_id": "integrity_missing_pair_id",
+      "mutation": {"remove_pair_id": "rel_dev_004"},
+      "expected": {"fatal_error_codes": ["missing_pair_id"]}
+    },
+    {
+      "case_id": "integrity_unknown_pair_id",
+      "mutation": {"add_pair_id": "rel_dev_999"},
+      "expected": {"fatal_error_codes": ["unknown_pair_id"]}
+    },
+    {
+      "case_id": "integrity_unknown_slot_id",
+      "mutation": {"pair_id": "rel_dev_004", "ko_b_slot_id": "ko_slot_999"},
+      "expected": {"fatal_error_codes": ["unknown_slot_reference"]}
+    },
+    {
+      "case_id": "integrity_unknown_lecture_reference",
+      "mutation": {"condition": "B_prime", "lecture_id": "unknown_fixture_001"},
+      "expected": {"fatal_error_codes": ["unknown_lecture_reference"]}
+    },
+    {
+      "case_id": "integrity_incomplete_oracle_accounting",
+      "mutation": {"remove_oracle_record": "calculus_fixture_001::gradient"},
+      "expected": {"fatal_error_codes": ["incomplete_oracle_accounting"]}
+    },
+    {
+      "case_id": "integrity_incomplete_predicted_accounting",
+      "mutation": {"remove_predicted_record": "calculus_fixture_001::predicted_gradient"},
+      "expected": {"fatal_error_codes": ["incomplete_predicted_accounting"]}
+    },
+    {
+      "case_id": "integrity_duplicate_endpoint_projected",
+      "mutation": {"pair_id": "rel_dev_001", "endpoint_structural_status": "duplicate", "pair_status": "recoverable"},
+      "expected": {"fatal_error_codes": ["structural_endpoint_projected"]}
+    },
+    {
+      "case_id": "integrity_split_endpoint_projected",
+      "mutation": {"pair_id": "rel_dev_001", "endpoint_structural_status": "split", "pair_status": "recoverable"},
+      "expected": {"fatal_error_codes": ["structural_endpoint_projected"]}
+    },
+    {
+      "case_id": "integrity_merge_endpoint_projected",
+      "mutation": {"pair_id": "rel_dev_001", "endpoint_structural_status": "merge", "pair_status": "recoverable"},
+      "expected": {"fatal_error_codes": ["structural_endpoint_projected"]}
+    },
+    {
+      "case_id": "integrity_ko_manifest_not_deterministic",
+      "mutation": {"slot_id": "ko_slot_001", "referenced_by_pair_ids": ["rel_dev_001"]},
+      "expected": {"fatal_error_codes": ["ko_manifest_derivation_mismatch"]}
+    },
+    {
+      "case_id": "integrity_structural_normalization_version_mismatch",
+      "mutation": {"B_prime_structural_normalization_version": "predicted_ko_structural_normalization_v0_2"},
+      "expected": {"fatal_error_codes": ["normalization_version_mismatch"]}
+    },
+    {
+      "case_id": "integrity_name_matching_version_mismatch",
+      "mutation": {"alignment_name_matching_normalization_version": "predicted_ko_name_matching_v0_2"},
+      "expected": {"fatal_error_codes": ["normalization_version_mismatch"]}
+    },
+    {
+      "case_id": "integrity_alignment_hash_mismatch",
+      "mutation": {"pair_manifest_alignment_sha256": "4949494949494949494949494949494949494949494949494949494949494949"},
+      "expected": {"fatal_error_codes": ["stale_alignment_reference"]}
+    },
+    {
+      "case_id": "integrity_pair_manifest_hash_mismatch",
+      "mutation": {"ko_manifest_pair_sha256": "5050505050505050505050505050505050505050505050505050505050505050"},
+      "expected": {"fatal_error_codes": ["stale_pair_manifest_reference"]}
+    },
+    {
+      "case_id": "integrity_matched_ground_truth_extra_pair",
+      "mutation": {"matched_ground_truth_extra_pair_id": "rel_dev_005"},
+      "expected": {"fatal_error_codes": ["matched_ground_truth_pair_set_mismatch"]}
+    },
+    {
+      "case_id": "integrity_matched_ground_truth_missing_pair",
+      "mutation": {"matched_ground_truth_remove_pair_id": "rel_dev_004"},
+      "expected": {"fatal_error_codes": ["matched_ground_truth_pair_set_mismatch"]}
+    },
+    {
+      "case_id": "integrity_matched_ground_truth_order_mismatch",
+      "mutation": {"matched_ground_truth_pair_ids": ["rel_dev_002", "rel_dev_001", "rel_dev_003", "rel_dev_004"]},
+      "expected": {"fatal_error_codes": ["matched_ground_truth_pair_order_mismatch"]}
+    },
+    {
+      "case_id": "integrity_A_prime_missing_ko",
+      "mutation": {"condition": "A_prime", "remove_slot_id": "ko_slot_004"},
+      "expected": {"fatal_error_codes": ["matched_inventory_missing_ko"]}
+    },
+    {
+      "case_id": "integrity_B_prime_missing_ko",
+      "mutation": {"condition": "B_prime", "remove_slot_id": "ko_slot_004"},
+      "expected": {"fatal_error_codes": ["matched_inventory_missing_ko"]}
+    },
+    {
+      "case_id": "integrity_unused_adjudication",
+      "mutation": {"resolved_item_id": "align_pending_999", "pending_item_exists": false},
+      "expected": {"fatal_error_codes": ["unused_alignment_adjudication"]}
+    },
+    {
+      "case_id": "integrity_changed_adjudication_snapshot",
+      "mutation": {"item_id": "align_pending_001", "snapshot_content_changed": true},
+      "expected": {"fatal_error_codes": ["changed_alignment_adjudication_snapshot"]}
+    },
+    {
+      "case_id": "integrity_nonfinal_A_prime_evaluation",
+      "mutation": {"A_prime_evaluation_status": "draft_pending_adjudication"},
+      "expected": {"fatal_error_codes": ["base_relation_evaluation_not_final"]}
+    },
+    {
+      "case_id": "integrity_invalid_B_prime_evaluation",
+      "mutation": {"B_prime_evaluation_status": "invalid"},
+      "expected": {"fatal_error_codes": ["base_relation_evaluation_invalid"]}
+    },
+    {
+      "case_id": "integrity_model_mismatch",
+      "mutation": {"A_prime_model": "synthetic-relation-model", "B_prime_model": "different-model"},
+      "expected": {"fatal_error_codes": ["matched_model_mismatch"]}
+    },
+    {
+      "case_id": "integrity_provider_mismatch",
+      "mutation": {"A_prime_provider": "deepseek", "B_prime_provider": "other-provider"},
+      "expected": {"fatal_error_codes": ["matched_provider_mismatch"]}
+    },
+    {
+      "case_id": "integrity_temperature_mismatch",
+      "mutation": {"A_prime_temperature": 0.0, "B_prime_temperature": 0.2},
+      "expected": {"fatal_error_codes": ["matched_request_parameter_mismatch"]}
+    },
+    {
+      "case_id": "integrity_max_tokens_mismatch",
+      "mutation": {"A_prime_max_tokens": 8192, "B_prime_max_tokens": 4096},
+      "expected": {"fatal_error_codes": ["matched_request_parameter_mismatch"]}
+    },
+    {
+      "case_id": "integrity_response_format_mismatch",
+      "mutation": {"B_prime_response_format": {"type": "text"}},
+      "expected": {"fatal_error_codes": ["matched_request_parameter_mismatch"]}
+    },
+    {
+      "case_id": "integrity_metadata_input_hash_mismatch",
+      "mutation": {"condition": "B_prime", "input_artifact_sha256": "5151515151515151515151515151515151515151515151515151515151515151"},
+      "expected": {"fatal_error_codes": ["run_metadata_input_hash_mismatch"]}
+    },
+    {
+      "case_id": "integrity_evaluation_prediction_hash_mismatch",
+      "mutation": {"condition": "B_prime", "prediction_sha256": "5252525252525252525252525252525252525252525252525252525252525252"},
+      "expected": {"fatal_error_codes": ["evaluation_prediction_hash_mismatch"]}
+    },
+    {
+      "case_id": "integrity_git_commit_mismatch",
+      "mutation": {"A_prime_commit": "0123456789abcdef0123456789abcdef01234567", "B_prime_commit": "fedcba9876543210fedcba9876543210fedcba98"},
+      "expected": {"fatal_error_codes": ["matched_git_commit_mismatch"]}
+    },
+    {
+      "case_id": "integrity_dirty_formal_run",
+      "mutation": {"condition": "B_prime", "git_dirty_at_start": true},
+      "expected": {"fatal_error_codes": ["formal_run_started_dirty"]}
+    },
+    {
+      "case_id": "integrity_gold_direction_leakage",
+      "mutation": {"model_facing_pair_fields": ["pair_id", "source", "target"]},
+      "expected": {"fatal_error_codes": ["gold_relation_leakage"]}
+    },
+    {
+      "case_id": "integrity_noop_with_recoverable_pair",
+      "mutation": {"recoverable_pair_count": 1, "evaluation_artifact_type": "empty_matched_relation_evaluation"},
+      "expected": {"fatal_error_codes": ["invalid_noop_evaluation"]}
+    },
+    {
+      "case_id": "integrity_collapsed_pair_projected",
+      "mutation": {"pair_id": "rel_dev_001", "pair_status": "recoverable", "ko_a_slot_id": "ko_slot_001", "ko_b_slot_id": "ko_slot_001"},
+      "expected": {"fatal_error_codes": ["collapsed_endpoints_projected"]}
     }
   ]
 }

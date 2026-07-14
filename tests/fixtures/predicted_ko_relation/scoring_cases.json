@@ -38,7 +38,11 @@
         "pair_recoverability": {"numerator": 0, "denominator": 4, "value": 0.0},
         "conditional_B_prime_strict": {"numerator": 0, "denominator": 0, "value": null},
         "conditional_A_prime_strict": {"numerator": 0, "denominator": 0, "value": null},
-        "pipeline_strict_success": {"numerator": 0, "denominator": 4, "value": 0.0}
+        "pipeline_strict_success": {"numerator": 0, "denominator": 4, "value": 0.0},
+        "A_prime_execution_status": "not_run_no_recoverable_pairs",
+        "B_prime_execution_status": "not_run_no_recoverable_pairs",
+        "no_op_evaluation_artifacts_required": 2,
+        "relation_api_called": false
       }
     },
     {

@@ -264,8 +264,9 @@ suite contains 21 tests and passed during holdout construction validation.
 Experiment 002A is closed. Prompt 002 is the selected Relation Extraction
 prompt v0.1 for subsequent Technical Validation.
 
-Experiment 002B-1 protocol design and Step 3 fixture construction are complete.
-It evaluates Relation
+Experiment 002B-1 Step 3 contracts and fixture expectations are statically
+validated. Step 4.0 fixture infrastructure and Step 4.1 structural normalization
+are implemented. It evaluates Relation
 classification with predicted rather than Oracle Knowledge Objects while
 retaining human-authored candidate pairs:
 
@@ -276,7 +277,7 @@ retaining human-authored candidate pairs:
 - `benchmark/predicted_ko_relation_artifact_contract.md`;
 - `tests/fixtures/predicted_ko_relation/`.
 
-The next milestone is Step 4 implementation of normalization, alignment, pair
-projection, matched KO inventory, and pipeline aggregation against the frozen
-synthetic expectations. No further prompt tuning should be performed against
-the inspected 002A holdout pairs.
+The next milestone is Step 4.2 alignment against the predeclared synthetic
+expectations, followed by pair projection, matched KO inventory, and pipeline
+aggregation. No further prompt tuning should be performed against the inspected
+002A holdout pairs.

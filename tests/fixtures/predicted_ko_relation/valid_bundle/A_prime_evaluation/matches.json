@@ -1,0 +1,42 @@
+[
+  {
+    "pair_id": "rel_dev_001",
+    "category": "positive",
+    "primary_scored": true,
+    "predicted_edge": {"source": {"lecture_id": "calculus_fixture_001", "ko_id": "ko_slot_002"}, "target": {"lecture_id": "calculus_fixture_001", "ko_id": "ko_slot_001"}, "relation_type": "REQUIRES"},
+    "relation_type_correct": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  },
+  {
+    "pair_id": "rel_dev_002",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "predicted_edge": {"source": {"lecture_id": "calculus_fixture_001", "ko_id": "ko_slot_001"}, "target": {"lecture_id": "calculus_fixture_001", "ko_id": "ko_slot_003"}, "relation_type": "NO_RELATION"},
+    "relation_type_correct": true,
+    "direction_correct": null,
+    "strict_edge_correct": true,
+    "evidence_support_status": "not_applicable"
+  },
+  {
+    "pair_id": "rel_dev_003",
+    "category": "positive",
+    "primary_scored": true,
+    "predicted_edge": {"source": {"lecture_id": "calculus_fixture_001", "ko_id": "ko_slot_001"}, "target": {"lecture_id": "optimisation_fixture_001", "ko_id": "ko_slot_004"}, "relation_type": "APPLIED_IN"},
+    "relation_type_correct": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  },
+  {
+    "pair_id": "rel_dev_004",
+    "category": "positive",
+    "primary_scored": true,
+    "predicted_edge": {"source": {"lecture_id": "calculus_fixture_001", "ko_id": "ko_slot_002"}, "target": {"lecture_id": "optimisation_fixture_001", "ko_id": "ko_slot_004"}, "relation_type": "APPLIED_IN"},
+    "relation_type_correct": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  }
+]

@@ -2,7 +2,8 @@
   "artifact_type": "predicted_ko_alignment",
   "version": "v0.1",
   "split": "synthetic",
-  "normalization_version": "predicted_ko_name_normalization_v0_1",
+  "structural_normalization_version": "predicted_ko_structural_normalization_v0_1",
+  "name_matching_normalization_version": "predicted_ko_name_matching_v0_1",
   "oracle_inventory_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
   "predicted_inventory_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
   "lecture_sha256": {

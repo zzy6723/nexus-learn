@@ -1,7 +1,7 @@
 # Experiment 002B-1: Predicted-KO Relation Classification
 
-**Subtitle:** Controlled Error Propagation from Entity Extraction to Relation Classification  
-**Status:** Step 3 artifact contracts and synthetic fixtures completed  
+**Subtitle:** Controlled Error Propagation from Entity Extraction to Relation Classification
+**Status:** Step 3 contracts and fixture expectations statically validated; Step 4 implementation started
 **Created:** 2026-07-14
 
 ---
@@ -103,6 +103,10 @@ Predicted outputs undergo only field-level normalization:
 - the aligned Oracle and predicted objects receive the same neutral slot ID;
 - `source_span` becomes a one-item `source_spans` list;
 - `aliases` and `short_definition` are omitted.
+
+Predicted `name`, `type`, and `source_span` content is preserved exactly.
+Unicode NFKC, apostrophe/dash handling, whitespace collapse, and case folding
+are alignment-key operations only and never modify B-prime model-facing fields.
 
 Oracle values are never copied into the Predicted condition. See
 `input_contract_audit.md`.
@@ -258,10 +262,24 @@ Protocol extensions:
 
 Planned implementation components:
 
-- `scripts/normalize_predicted_kos.py`;
+- `scripts/normalize_predicted_kos.py` - implemented;
 - `scripts/align_predicted_kos.py`;
 - `scripts/project_recoverable_relation_pairs.py`;
 - `scripts/evaluate_predicted_ko_relation_pipeline.py`.
+
+Step 4 implementation status:
+
+- Step 4.0: executable fixture loader, independent golden-math check, and
+  runtime real-hash materializer completed;
+- Step 4.1: content-preserving predicted-KO structural normalization completed;
+- Step 4.2: alignment pending;
+- Step 4.3: projection and matched artifact generation pending;
+- Step 4.4: pipeline evaluator pending.
+
+The normalizer validates raw Entity prediction structure, preserves predicted
+educational content, records real input hashes and provenance, and writes a
+deterministically ordered inventory. It does not read Oracle ground truth or
+Relation pairs.
 
 The existing Relation evaluator remains authoritative for A-prime and B-prime
 Relation scoring.
@@ -280,11 +298,18 @@ Completed:
 - frozen v0.1 artifact schemas and fatal/nonfatal/pending boundaries;
 - canonical valid A-prime/B-prime synthetic bundle;
 - predeclared alignment, manifest, scoring, and control-integrity fixture
-  matrices under `tests/fixtures/predicted_ko_relation/`.
+  matrices under `tests/fixtures/predicted_ko_relation/`;
+- static JSON, provenance-shape, denominator, leakage, and existing Relation
+  ground-truth checks;
+- Step 4.0 fixture loader and runtime real-hash materializer;
+- Step 4.1 `normalize_predicted_kos.py` and its executable tests;
+- full regression suite: 36 tests passing, including the existing Relation
+  evaluator, runner, and ground-truth checker tests.
 
 Pending:
 
-- alignment, projection, and pipeline evaluator implementation;
+- executable behavior coverage for every predeclared fixture case;
+- Steps 4.2-4.4 alignment, projection, and pipeline evaluator implementation;
 - development Entity predictions;
 - alignment adjudication;
 - matched A-prime/B-prime development runs;

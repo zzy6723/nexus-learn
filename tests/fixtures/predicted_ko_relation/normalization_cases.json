@@ -1,0 +1,52 @@
+{
+  "artifact_type": "predicted_ko_normalization_fixture_matrix",
+  "version": "v0.1",
+  "base_predicted_inventory": "shared/synthetic_predicted_inventory.json",
+  "cases": [
+    {
+      "case_id": "normalization_aggregate_inventory",
+      "input": {"shape": "aggregate", "object_count": 5},
+      "expected": {"status": "final", "normalized_object_count": 5, "content_preserved": true}
+    },
+    {
+      "case_id": "normalization_enclosing_lecture_id",
+      "input": {"shape": "per_lecture", "lecture_id": "calculus_fixture_001"},
+      "expected": {"status": "final", "lecture_id_copied": true}
+    },
+    {
+      "case_id": "normalization_unicode_and_latex_preserved",
+      "input": {"name": "Bayes’ Rule", "source_span": "p(θ∣x) ∝ p(x∣θ)p(θ)"},
+      "expected": {"status": "final", "name": "Bayes’ Rule", "source_spans": ["p(θ∣x) ∝ p(x∣θ)p(θ)"]}
+    },
+    {
+      "case_id": "normalization_matching_key_not_model_content",
+      "input": {"name": "  Bayes’   Rule  "},
+      "expected": {"status": "final", "model_facing_name": "  Bayes’   Rule  ", "matching_key": "bayes' rule"}
+    },
+    {
+      "case_id": "normalization_drops_noncontract_fields",
+      "input": {"aliases": ["Bayes theorem"], "short_definition": "Posterior update."},
+      "expected": {"status": "final", "aliases_present": false, "short_definition_present": false}
+    },
+    {
+      "case_id": "normalization_duplicate_lecture_local_id",
+      "input": {"duplicate_refs": ["calculus_fixture_001::gradient", "calculus_fixture_001::gradient"]},
+      "expected": {"status": "invalid", "error_codes": ["duplicate_predicted_ko_id"]}
+    },
+    {
+      "case_id": "normalization_conflicting_lecture_provenance",
+      "input": {"enclosing_lecture_id": "calculus_fixture_001", "object_lecture_id": "optimisation_fixture_001"},
+      "expected": {"status": "invalid", "error_codes": ["conflicting_lecture_id"]}
+    },
+    {
+      "case_id": "normalization_invalid_ko_type",
+      "input": {"type": "Theorem"},
+      "expected": {"status": "invalid", "error_codes": ["invalid_ko_type"]}
+    },
+    {
+      "case_id": "normalization_deterministic_serialization",
+      "input": {"same_files_different_argument_order": true},
+      "expected": {"status": "final", "byte_identical_output": true, "real_input_hashes": true}
+    }
+  ]
+}

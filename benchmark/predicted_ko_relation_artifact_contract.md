@@ -34,11 +34,22 @@ Allowed evaluation statuses are:
 - `final`;
 - `invalid`.
 
-The normalization version for Step 3 is:
+The structural normalization version is:
 
 ```text
-predicted_ko_name_normalization_v0_1
+predicted_ko_structural_normalization_v0_1
 ```
+
+The separate name-matching key version is:
+
+```text
+predicted_ko_name_matching_v0_1
+```
+
+Structural normalization preserves predicted `name`, `type`, and `source_span`
+content exactly. Unicode NFKC, apostrophe/dash unification, whitespace collapse,
+and case folding are used only to construct an internal comparison key during
+alignment. They must never overwrite model-facing predicted content.
 
 The derivation version for pair, KO, and matched-ground-truth artifacts is:
 
@@ -73,6 +84,43 @@ request. Pair IDs remain the opaque IDs from frozen ground truth.
 
 ---
 
+# `normalized_predicted_knowledge_objects.json`
+
+Required top-level fields:
+
+```json
+{
+  "artifact_type": "predicted_ko_normalized_inventory",
+  "version": "v0.1",
+  "split": "development",
+  "structural_normalization_version": "predicted_ko_structural_normalization_v0_1",
+  "input_files": [],
+  "input_set_sha256": "...",
+  "normalized_content_sha256": "...",
+  "knowledge_objects": []
+}
+```
+
+Each normalized object contains exactly:
+
+- `lecture_id` copied from its enclosing prediction artifact or verified
+  object-level provenance;
+- `predicted_ko_id` copied from raw `id`;
+- original `name` and `type` without text normalization;
+- `source_spans`, a one-item list containing the original `source_span` as
+  decoded JSON text;
+- provenance containing the original prediction ID, source file, and source
+  object index.
+
+Objects are sorted lexicographically by `(lecture_id, predicted_ko_id)`. Duplicate
+lecture-local prediction IDs, conflicting enclosing/object lecture IDs, missing
+required fields, invalid KO types, and empty required strings are fatal.
+`aliases` and `short_definition` are intentionally omitted. This component does
+not read Oracle data, assign neutral slots, align identities, or inspect Relation
+pairs.
+
+---
+
 # `alignment.json`
 
 Required top-level fields:
@@ -82,7 +130,8 @@ Required top-level fields:
   "artifact_type": "predicted_ko_alignment",
   "version": "v0.1",
   "split": "development",
-  "normalization_version": "predicted_ko_name_normalization_v0_1",
+  "structural_normalization_version": "predicted_ko_structural_normalization_v0_1",
+  "name_matching_normalization_version": "predicted_ko_name_matching_v0_1",
   "oracle_inventory_sha256": "...",
   "predicted_inventory_sha256": "...",
   "lecture_sha256": {
@@ -161,7 +210,7 @@ Required fields:
   "artifact_type": "predicted_ko_alignment_pending",
   "version": "v0.1",
   "alignment_snapshot_sha256": "...",
-  "normalization_version": "predicted_ko_name_normalization_v0_1",
+  "name_matching_normalization_version": "predicted_ko_name_matching_v0_1",
   "items": []
 }
 ```
@@ -187,7 +236,7 @@ Required fields:
   "artifact_type": "predicted_ko_alignment_resolved",
   "version": "v0.1",
   "alignment_snapshot_sha256": "...",
-  "normalization_version": "predicted_ko_name_normalization_v0_1",
+  "name_matching_normalization_version": "predicted_ko_name_matching_v0_1",
   "decisions": []
 }
 ```
@@ -251,6 +300,9 @@ A-prime/B-prime request.
 The union of the three arrays must equal the frozen original pair set without
 duplicates or omissions.
 
+All three arrays are sorted lexicographically by `pair_id`. Source JSON order is
+not an experimental degree of freedom.
+
 ---
 
 # `recoverable_ko_manifest.json`
@@ -305,6 +357,9 @@ ground-truth structure:
   "status": "test_fixture",
   "derivation": {
     "version": "predicted_ko_projection_v0_1",
+    "original_ko_ground_truth_sha256": "...",
+    "alignment_sha256": "...",
+    "pair_manifest_sha256": "...",
     "ko_manifest_sha256": "..."
   },
   "lectures": []
@@ -334,7 +389,9 @@ the base Relation ground-truth schema and adds:
     "alignment_sha256": "...",
     "pair_manifest_sha256": "...",
     "ko_manifest_sha256": "...",
-    "normalization_version": "predicted_ko_name_normalization_v0_1"
+    "matched_knowledge_objects_sha256": "...",
+    "structural_normalization_version": "predicted_ko_structural_normalization_v0_1",
+    "name_matching_normalization_version": "predicted_ko_name_matching_v0_1"
   }
 }
 ```
@@ -358,7 +415,7 @@ Both artifacts use:
   "artifact_type": "matched_relation_input",
   "version": "v0.1",
   "condition": "A_prime",
-  "normalization_version": "predicted_ko_name_normalization_v0_1",
+  "structural_normalization_version": "predicted_ko_structural_normalization_v0_1",
   "pair_manifest_sha256": "...",
   "ko_manifest_sha256": "...",
   "matched_ground_truth_sha256": "...",
@@ -386,6 +443,67 @@ IDs, KO order, and pair-to-slot incidence. Only `name`, `type`, and
 `source_spans` may differ between matched KO slots. `ko_content_sha256` and
 `model_input_sha256` are condition-specific and may differ; a structural hash is
 not allowed to conceal a content difference.
+
+---
+
+# `batch_plan.json`
+
+The batch plan records `pair_manifest_sha256`, `ko_manifest_sha256`, and an
+ordered list of batches. Each batch contains its ID, one-based index, pair IDs,
+and KO slot IDs. Experiment 002B-1 v0.1 uses one deterministic batch unless a
+separately frozen method revision introduces batching. A-prime and B-prime use
+the same file and hash.
+
+---
+
+# Matched Run Metadata and Base Evaluation Snapshots
+
+Each A-prime/B-prime formal run retains the existing Relation runner metadata.
+The pipeline validator compares at least:
+
+- `provider` and `model_requested`;
+- `temperature`, `top_p`, `max_tokens`, `stream`, `response_format`, and
+  `thinking`;
+- `git_commit_at_start` and `git_dirty_at_start`;
+- `input_artifact_sha256` and `batch_plan_sha256`;
+- prediction artifact SHA-256.
+
+The two conditions must use the same provider, model, request parameters,
+commit, and batch plan. Their input and prediction hashes are
+condition-specific. Formal matched runs require a non-null equal commit and
+`git_dirty_at_start = false`.
+
+Each condition has an `evaluation_snapshot.json` binding the exact prediction,
+run metadata, `metrics.json`, `matches.json`, and `errors.json` hashes. Pipeline
+evaluation reads pair-level correctness from `matches.json`; it does not accept
+caller-supplied aggregate counts as a substitute.
+
+---
+
+# Zero-Recoverability No-Op Evaluation
+
+When no primary pair is recoverable, neither matched condition calls the
+Relation API. The pipeline deterministically writes one no-op evaluation per
+condition:
+
+```json
+{
+  "artifact_type": "empty_matched_relation_evaluation",
+  "version": "v0.1",
+  "condition": "A_prime",
+  "evaluation_status": "final",
+  "execution_status": "not_run_no_recoverable_pairs",
+  "pair_count": 0,
+  "aggregate_metrics": null,
+  "pair_manifest_sha256": "...",
+  "ko_manifest_sha256": "..."
+}
+```
+
+The no-op artifacts have real file hashes and satisfy the A-prime/B-prime
+evaluation provenance fields. Conditional rates are `0/0/null`, pipeline strict
+success is `0 / all primary pairs`, and every transition is upstream
+unrecoverable. A no-op artifact is invalid when any recoverable pair exists.
 
 ---
 
@@ -427,7 +545,11 @@ objects must be absent or explicitly null.
 - `matched_ground_truth_sha256`;
 - `A0_evaluation_sha256`;
 - `A_prime_evaluation_sha256`;
-- `B_prime_evaluation_sha256`.
+- `B_prime_evaluation_sha256`;
+- `A_prime_input_sha256` and `B_prime_input_sha256`;
+- `A_prime_run_metadata_sha256` and `B_prime_run_metadata_sha256`;
+- `A_prime_prediction_sha256` and `B_prime_prediction_sha256`;
+- `batch_plan_sha256`.
 
 A changed or missing provenance reference makes the aggregate artifact stale
 and invalid.
@@ -505,7 +627,8 @@ Fatal conditions make `evaluation_status = "invalid"` and
 - unresolved adjudication presented as final;
 - matched ground truth containing a pair outside the manifest or omitting a
   manifest pair;
-- neutral slot mismatch or two endpoints collapsed into one slot;
+- a pair marked recoverable, or a matched model request, assigns both distinct
+  Oracle endpoints to the same neutral slot;
 - gold Relation information leaked into model-facing input;
 - non-final or invalid base Relation evaluation.
 
@@ -522,6 +645,10 @@ These are preserved, counted, and propagated:
 - unmatched extra predicted KO;
 - manual one-to-one identity match;
 - missing or structural KO errors that make specific pairs unrecoverable.
+
+A correctly recorded `collapsed_endpoints` reason in
+`unrecoverable_primary_pairs` is nonfatal. It becomes fatal only if that pair is
+projected as recoverable or rendered with one slot for both endpoints.
 
 An unrecoverable pair is a pipeline failure, not a fatal artifact-integrity
 failure, when the alignment and manifests represent it correctly.

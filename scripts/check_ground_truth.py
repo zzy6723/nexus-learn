@@ -5,12 +5,15 @@ from __future__ import annotations
 
 import hashlib
 import json
-import re
 import sys
-import unicodedata
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
+
+try:
+    from .knowledge_object_matching import name_matching_key as normalize_label
+except ImportError:  # Direct execution: python3 scripts/check_ground_truth.py
+    from knowledge_object_matching import name_matching_key as normalize_label
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -37,23 +40,6 @@ REQUIRED_OBJECT_KEYS = {
     "aliases",
     "source_spans",
 }
-DASH_TRANSLATION = str.maketrans({
-    "‐": "-",
-    "‑": "-",
-    "‒": "-",
-    "–": "-",
-    "—": "-",
-    "―": "-",
-})
-APOSTROPHE_TRANSLATION = str.maketrans({
-    "‘": "'",
-    "’": "'",
-    "‛": "'",
-    "`": "'",
-    "´": "'",
-})
-
-
 @dataclass(frozen=True)
 class LectureRecord:
     ground_truth_file: str
@@ -61,15 +47,6 @@ class LectureRecord:
     lecture_id: str
     path: str
     content_hash: str
-
-
-def normalize_label(label: str) -> str:
-    normalized = unicodedata.normalize("NFKC", label)
-    normalized = normalized.translate(APOSTROPHE_TRANSLATION)
-    normalized = normalized.translate(DASH_TRANSLATION)
-    normalized = normalized.strip()
-    normalized = re.sub(r"\s+", " ", normalized)
-    return normalized.casefold()
 
 
 def load_json(path: Path) -> tuple[dict[str, Any] | None, list[str]]:

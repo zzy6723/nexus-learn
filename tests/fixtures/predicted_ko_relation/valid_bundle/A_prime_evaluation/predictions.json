@@ -1,0 +1,36 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_001",
+      "source": {"lecture_id": "calculus_fixture_001", "ko_id": "ko_slot_002"},
+      "target": {"lecture_id": "calculus_fixture_001", "ko_id": "ko_slot_001"},
+      "relation_type": "REQUIRES",
+      "evidence_spans": [{"lecture_id": "calculus_fixture_001", "span": "Gradient descent uses the gradient to update parameters."}],
+      "rationale": "Gradient descent uses the gradient."
+    },
+    {
+      "pair_id": "rel_dev_002",
+      "source": {"lecture_id": "calculus_fixture_001", "ko_id": "ko_slot_001"},
+      "target": {"lecture_id": "calculus_fixture_001", "ko_id": "ko_slot_003"},
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The fixture does not establish a direct v0.1 Relation."
+    },
+    {
+      "pair_id": "rel_dev_003",
+      "source": {"lecture_id": "calculus_fixture_001", "ko_id": "ko_slot_001"},
+      "target": {"lecture_id": "optimisation_fixture_001", "ko_id": "ko_slot_004"},
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [{"lecture_id": "optimisation_fixture_001", "span": "Gradients are applied in differentiable optimisation problems"}],
+      "rationale": "Gradients are applied in differentiable optimisation problems."
+    },
+    {
+      "pair_id": "rel_dev_004",
+      "source": {"lecture_id": "calculus_fixture_001", "ko_id": "ko_slot_002"},
+      "target": {"lecture_id": "optimisation_fixture_001", "ko_id": "ko_slot_004"},
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [{"lecture_id": "optimisation_fixture_001", "span": "gradient descent is a method applied to such problems"}],
+      "rationale": "Gradient descent is applied to optimisation problems."
+    }
+  ]
+}

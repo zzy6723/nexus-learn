@@ -1,0 +1,14 @@
+{
+  "artifact_type": "matched_relation_batch_plan",
+  "version": "v0.1",
+  "pair_manifest_sha256": "7777777777777777777777777777777777777777777777777777777777777777",
+  "ko_manifest_sha256": "8888888888888888888888888888888888888888888888888888888888888888",
+  "batches": [
+    {
+      "batch_id": "batch_001",
+      "batch_index": 1,
+      "pair_ids": ["rel_dev_001", "rel_dev_002", "rel_dev_003", "rel_dev_004"],
+      "ko_slot_ids": ["ko_slot_001", "ko_slot_002", "ko_slot_003", "ko_slot_004"]
+    }
+  ]
+}

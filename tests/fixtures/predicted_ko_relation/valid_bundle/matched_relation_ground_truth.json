@@ -45,7 +45,9 @@
     "alignment_sha256": "5555555555555555555555555555555555555555555555555555555555555555",
     "pair_manifest_sha256": "7777777777777777777777777777777777777777777777777777777777777777",
     "ko_manifest_sha256": "8888888888888888888888888888888888888888888888888888888888888888",
-    "normalization_version": "predicted_ko_name_normalization_v0_1"
+    "matched_knowledge_objects_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+    "structural_normalization_version": "predicted_ko_structural_normalization_v0_1",
+    "name_matching_normalization_version": "predicted_ko_name_matching_v0_1"
   },
   "pairs": [
     {

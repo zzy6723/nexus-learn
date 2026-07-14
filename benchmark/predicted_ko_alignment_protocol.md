@@ -86,8 +86,9 @@ Exact and alias matching reuse the conservative Entity Extraction label
 normalization defined in `benchmark/evaluation_protocol.md`:
 
 1. apply Unicode NFKC normalization;
-2. convert U+2018, U+2019, and U+02BC to ASCII apostrophe U+0027;
-3. convert U+2010, U+2011, U+2012, U+2013, U+2014, and U+2212 to ASCII
+2. convert U+2018, U+2019, U+201B, U+0060, and U+00B4 to ASCII
+   apostrophe U+0027;
+3. convert U+2010, U+2011, U+2012, U+2013, U+2014, and U+2015 to ASCII
    hyphen U+002D;
 4. trim leading and trailing whitespace;
 5. collapse consecutive internal whitespace;
@@ -97,6 +98,17 @@ Normalization must not perform stemming, lemmatization, singularization,
 punctuation deletion, mathematical-symbol expansion, or semantic similarity.
 It must not remove identity-bearing words such as `Formula`, `Method`, `Matrix`,
 or `Rule`. LaTeX receives no additional whitespace or notation normalization.
+
+These rules produce comparison keys only. They must never overwrite predicted
+`name`, `source_span`, capitalization, punctuation, Unicode, or LaTeX in the
+normalized inventory or B-prime model input. Structural normalization is a
+separate content-preserving operation identified by
+`predicted_ko_structural_normalization_v0_1`; this matching key is identified by
+`predicted_ko_name_matching_v0_1`.
+
+The executable implementation is the shared
+`scripts/knowledge_object_matching.py::name_matching_key` function used by the
+Entity evaluator, Entity ground-truth checker, normalizer tests, and alignment.
 
 ## Exact
 
@@ -189,7 +201,8 @@ Its top-level structure is:
 {
   "version": "v0.1",
   "split": "development",
-  "normalization_version": "predicted_ko_name_normalization_v0_1",
+  "structural_normalization_version": "predicted_ko_structural_normalization_v0_1",
+  "name_matching_normalization_version": "predicted_ko_name_matching_v0_1",
   "oracle_inventory_sha256": "...",
   "predicted_inventory_sha256": "...",
   "lecture_sha256": "...",

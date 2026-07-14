@@ -1,0 +1,10 @@
+{
+  "provider": "deepseek",
+  "model_requested": "synthetic-relation-model",
+  "request_parameters": {"temperature": 0.0, "top_p": 1.0, "max_tokens": 8192, "stream": false, "response_format": {"type": "json_object"}, "thinking": {"type": "disabled"}},
+  "git_commit_at_start": "0123456789abcdef0123456789abcdef01234567",
+  "git_dirty_at_start": false,
+  "input_artifact_sha256": "4242424242424242424242424242424242424242424242424242424242424242",
+  "batch_plan_sha256": "4343434343434343434343434343434343434343434343434343434343434343",
+  "prediction_sha256": "4444444444444444444444444444444444444444444444444444444444444444"
+}
