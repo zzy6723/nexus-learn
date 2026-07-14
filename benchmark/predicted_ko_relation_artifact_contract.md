@@ -162,6 +162,10 @@ Oracle record required fields:
 - `adjudication_required`;
 - `notes`.
 
+`predicted_source_span_supports_identity` is `true`, `false`, or `null`. `null`
+means semantic support has not been manually assessed; it does not change
+one-to-one recoverability.
+
 Allowed primary structural statuses:
 
 - `one_to_one`;
@@ -189,7 +193,7 @@ Predicted record required fields:
 - `linked_oracle_refs`;
 - `accounting_status` from the enum above;
 - `identity_match`;
-- `included_in_matched_inventory`;
+- `recoverable`;
 - `notes`.
 
 For a final one-to-one alignment, the Oracle and predicted records must point to
@@ -218,8 +222,10 @@ Required fields:
 Each pending item contains:
 
 - unique `item_id`;
-- complete `oracle_snapshot`;
+- one or more complete `oracle_snapshots`;
 - complete `candidate_predicted_snapshots`;
+- complete relevant `lecture_snapshot` and its SHA-256;
+- `item_snapshot_sha256`;
 - proposed alignment and structural status;
 - `status = "pending"`.
 
@@ -236,6 +242,9 @@ Required fields:
   "artifact_type": "predicted_ko_alignment_resolved",
   "version": "v0.1",
   "alignment_snapshot_sha256": "...",
+  "oracle_inventory_sha256": "...",
+  "predicted_inventory_sha256": "...",
+  "lecture_sha256": {},
   "name_matching_normalization_version": "predicted_ko_name_matching_v0_1",
   "decisions": []
 }
@@ -244,13 +253,21 @@ Required fields:
 Each decision contains:
 
 - `item_id`;
-- complete Oracle and predicted snapshots matching the pending item;
+- `item_snapshot_sha256`;
+- complete Oracle, predicted, and lecture snapshots matching the pending item;
 - `decision`: `matched`, `not_matched`, or `structural_error`;
 - resulting alignment level and primary structural status;
 - nullable `matched_predicted_ref`;
 - non-empty `rationale`.
 
 Unknown, duplicate, changed, or unused decisions are fatal stale adjudications.
+
+Relation-blind manual review scopes may be supplied to the aligner before the
+initial draft. Each scope contains only an `item_id`, Oracle references,
+candidate predicted references, a proposed identity/structural status, and an
+error reason code. Review scopes must be inventory-level, lecture-local,
+non-overlapping, and free of Relation fields. They are converted into complete
+snapshot-bound pending items by the aligner.
 
 ---
 

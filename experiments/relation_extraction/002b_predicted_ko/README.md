@@ -263,7 +263,8 @@ Protocol extensions:
 Planned implementation components:
 
 - `scripts/normalize_predicted_kos.py` - implemented;
-- `scripts/align_predicted_kos.py`;
+- `scripts/knowledge_object_matching.py` - shared Entity/alignment matcher implemented;
+- `scripts/align_predicted_kos.py` - implemented;
 - `scripts/project_recoverable_relation_pairs.py`;
 - `scripts/evaluate_predicted_ko_relation_pipeline.py`.
 
@@ -272,7 +273,8 @@ Step 4 implementation status:
 - Step 4.0: executable fixture loader, independent golden-math check, and
   runtime real-hash materializer completed;
 - Step 4.1: content-preserving predicted-KO structural normalization completed;
-- Step 4.2: alignment pending;
+- Step 4.2: conservative inventory-level alignment and snapshot-bound
+  adjudication completed against synthetic fixtures;
 - Step 4.3: projection and matched artifact generation pending;
 - Step 4.4: pipeline evaluator pending.
 
@@ -280,6 +282,14 @@ The normalizer validates raw Entity prediction structure, preserves predicted
 educational content, records real input hashes and provenance, and writes a
 deterministically ordered inventory. It does not read Oracle ground truth or
 Relation pairs.
+
+The aligner reuses the Entity evaluator's single shared name-matching function.
+It automatically finalizes only unique conflict-free exact or frozen-alias
+one-to-one components. Duplicate, semantic-variant, split, merge, ambiguous,
+granularity, and same-label contextual cases are preserved or sent through
+Relation-blind snapshot adjudication without greedy representative selection.
+Every Oracle and predicted KO receives exactly one accounting record. Relation
+pair membership is intentionally absent and is introduced only by Step 4.3.
 
 The existing Relation evaluator remains authoritative for A-prime and B-prime
 Relation scoring.
@@ -303,13 +313,17 @@ Completed:
   ground-truth checks;
 - Step 4.0 fixture loader and runtime real-hash materializer;
 - Step 4.1 `normalize_predicted_kos.py` and its executable tests;
-- full regression suite: 36 tests passing, including the existing Relation
+- Step 4.2 `align_predicted_kos.py`, all 14 predeclared alignment cases,
+  bidirectional accounting, deterministic ordering, Relation-leakage,
+  no-overwrite, and stale-adjudication tests;
+- full regression suite: 50 tests passing, including the existing Relation
   evaluator, runner, and ground-truth checker tests.
 
 Pending:
 
-- executable behavior coverage for every predeclared fixture case;
-- Steps 4.2-4.4 alignment, projection, and pipeline evaluator implementation;
+- executable behavior coverage for the Step 4.3 and Step 4.4 manifest,
+  scoring, and remaining integrity cases;
+- Steps 4.3-4.4 projection and pipeline evaluator implementation;
 - development Entity predictions;
 - alignment adjudication;
 - matched A-prime/B-prime development runs;

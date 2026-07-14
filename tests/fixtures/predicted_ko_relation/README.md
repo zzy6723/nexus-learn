@@ -2,7 +2,7 @@
 
 **Fixture version:** `synthetic_v0.1`  
 **Artifact contract:** `benchmark/predicted_ko_relation_artifact_contract.md`  
-**Status:** Contracts and expected outcomes defined and statically validated
+**Status:** Step 4.0-4.2 contracts and alignment behavior validated
 
 These fixtures define the expected behavior of Experiment 002B-1 alignment,
 projection, matched-control integrity, and pipeline scoring. They are not a
@@ -36,8 +36,8 @@ The current matrices contain 95 predeclared cases:
 - scoring: 8;
 - integrity: 54.
 
-Step 4.0/4.1 currently provides executable fixture/hash-chain checks and
-normalization behavior tests. Alignment, projection, and pipeline cases become
+Step 4.0-4.2 provides executable fixture/hash-chain checks, normalization
+behavior tests, and all 14 alignment cases. Projection and pipeline cases become
 executable only when their corresponding components are implemented.
 
 ## Pre-Implementation Contract Correction
@@ -52,6 +52,12 @@ Before Step 4 code was written, the v0.1 fixtures were corrected to:
   predictions, and evaluation snapshots;
 - freeze lexicographic pair ordering;
 - separate structural normalization from name-matching normalization;
+- replace three drifting name-normalization copies with the Entity evaluator's
+  shared implementation;
+- keep Relation-pair membership out of alignment accounting by recording only
+  inventory-level `recoverable` state there;
+- represent semantic and structural review scopes with complete snapshot-bound
+  pending/resolved artifacts rather than string heuristics;
 - expand previously uncovered fatal branches.
 
 These are recorded contract corrections, not changes made to fit implementation
@@ -109,6 +115,9 @@ Production validators must never accept symbolic fixture tokens.
 
 ## Executable Validation Status
 
-The Step 4.0/4.1 test support and normalizer currently pass alongside the full
-existing Relation regression suite. This does not yet mean all 95 predeclared
-behavior cases pass; most remain oracles for Steps 4.2-4.4.
+The Step 4.0-4.2 support, normalizer, and aligner pass alongside the full
+existing Relation regression suite: 50 tests total. All 14 predeclared
+alignment cases are executable and passing, with additional invariants for
+non-greedy conflict handling, bidirectional accounting, deterministic output,
+lecture-local identity, Relation leakage, and stale adjudication. Manifest,
+scoring, and remaining integrity cases remain oracles for Steps 4.3-4.4.

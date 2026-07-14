@@ -202,6 +202,10 @@ class PredictedKONormalizationTest(unittest.TestCase):
             normalizer.serialize_json(forward),
             normalizer.serialize_json(reverse),
         )
+        self.assertEqual(
+            forward["normalized_content_sha256"],
+            normalizer.sha256_json(forward["knowledge_objects"]),
+        )
         expected_hash = hashlib.sha256(first.read_bytes()).hexdigest()
         first_record = next(
             item for item in forward["input_files"] if item["path"].endswith("a.json")
@@ -240,6 +244,27 @@ class PredictedKONormalizationTest(unittest.TestCase):
         )
         self.assertFalse(output.exists())
         self.assertEqual(list(self.temporary_root.glob(".normalized.json.*.tmp")), [])
+
+    def test_non_substring_source_span_remains_nonfatal_at_normalization(self) -> None:
+        source = self.write_input(
+            "non_exact_span.json",
+            {
+                "lecture_id": "lecture_a",
+                "knowledge_objects": [
+                    {
+                        "id": "gradient",
+                        "name": "Gradient",
+                        "type": "Concept",
+                        "source_span": "This text is intentionally not checked here.",
+                    }
+                ],
+            },
+        )
+        result = normalizer.normalize_prediction_files([source])
+        self.assertEqual(
+            result["knowledge_objects"][0]["source_spans"],
+            ["This text is intentionally not checked here."],
+        )
 
 
 if __name__ == "__main__":

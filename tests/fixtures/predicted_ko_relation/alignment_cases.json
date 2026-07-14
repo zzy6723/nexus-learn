@@ -1,194 +1,321 @@
 {
   "artifact_type": "predicted_ko_alignment_fixture_matrix",
   "version": "v0.1",
-  "base_oracle_inventory": "shared/synthetic_oracle_inventory.json",
-  "base_predicted_inventory": "shared/synthetic_predicted_inventory.json",
+  "description": "Executable inventory-level alignment cases. Every case declares complete Relation-blind Oracle, predicted, lecture, review, and adjudication inputs.",
   "cases": [
     {
       "case_id": "alignment_exact_one_to_one",
-      "description": "Normalized labels are equal and one predicted object identifies one Oracle object.",
-      "input": {"oracle_label": "Gradient Descent", "predicted_label": "gradient descent"},
+      "description": "Normalized labels are equal and the component is uniquely one-to-one.",
+      "input": {
+        "lectures": {"lecture_a": "Gradient descent updates model parameters."},
+        "oracle_objects": [
+          {"lecture_id": "lecture_a", "ko_id": "gradient_descent", "name": "Gradient Descent", "type": "Method", "aliases": [], "source_spans": ["Gradient descent updates model parameters."]}
+        ],
+        "predicted_objects": [
+          {"lecture_id": "lecture_a", "ko_id": "predicted_gradient_descent", "name": "gradient descent", "type": "Method", "source_spans": ["Gradient descent updates model parameters."]}
+        ],
+        "review_items": []
+      },
       "expected": {
         "evaluation_status": "final",
-        "alignment_level": "exact",
-        "primary_structural_status": "one_to_one",
-        "identity_match": true,
-        "recoverable": true,
-        "adjudication_required": false,
-        "error_codes": []
+        "error_codes": [],
+        "oracle_records": {"lecture_a::gradient_descent": {"alignment_level": "exact", "primary_structural_status": "one_to_one", "identity_match": true, "recoverable": true}},
+        "predicted_records": {"lecture_a::predicted_gradient_descent": {"accounting_status": "one_to_one", "identity_match": true, "recoverable": true}}
       }
     },
     {
       "case_id": "alignment_frozen_alias_one_to_one",
       "description": "A predeclared alias establishes a unique identity match.",
-      "input": {"oracle_label": "Partial Derivative", "predicted_label": "Partial Differentiation", "frozen_alias": true},
+      "input": {
+        "lectures": {"lecture_a": "A partial derivative varies one coordinate while holding the others fixed."},
+        "oracle_objects": [
+          {"lecture_id": "lecture_a", "ko_id": "partial_derivative", "name": "Partial Derivative", "type": "Concept", "aliases": ["Partial Differentiation"], "source_spans": ["A partial derivative varies one coordinate while holding the others fixed."]}
+        ],
+        "predicted_objects": [
+          {"lecture_id": "lecture_a", "ko_id": "partial_differentiation", "name": "Partial Differentiation", "type": "Concept", "source_spans": ["A partial derivative varies one coordinate while holding the others fixed."]}
+        ],
+        "review_items": []
+      },
       "expected": {
         "evaluation_status": "final",
-        "alignment_level": "alias",
-        "primary_structural_status": "one_to_one",
-        "identity_match": true,
-        "recoverable": true,
-        "adjudication_required": false,
-        "error_codes": []
+        "error_codes": [],
+        "oracle_records": {"lecture_a::partial_derivative": {"alignment_level": "alias", "primary_structural_status": "one_to_one", "identity_match": true, "recoverable": true}},
+        "predicted_records": {"lecture_a::partial_differentiation": {"accounting_status": "one_to_one", "identity_match": true, "recoverable": true}}
       }
     },
     {
       "case_id": "alignment_manual_pending",
       "description": "A plausible semantic identity is not exact or covered by a frozen alias.",
-      "input": {"oracle_label": "First-Order Taylor Formula", "predicted_label": "Linear Taylor Approximation Formula"},
+      "input": {
+        "lectures": {"lecture_a": "The first-order Taylor formula gives a local linear approximation."},
+        "oracle_objects": [
+          {"lecture_id": "lecture_a", "ko_id": "first_order_taylor_formula", "name": "First-Order Taylor Formula", "type": "Formula", "aliases": [], "source_spans": ["The first-order Taylor formula gives a local linear approximation."]}
+        ],
+        "predicted_objects": [
+          {"lecture_id": "lecture_a", "ko_id": "linear_taylor_approximation", "name": "Linear Taylor Approximation Formula", "type": "Formula", "source_spans": ["The first-order Taylor formula gives a local linear approximation."]}
+        ],
+        "review_items": [
+          {"item_id": "review_manual_taylor", "oracle_refs": [{"lecture_id": "lecture_a", "ko_id": "first_order_taylor_formula"}], "candidate_predicted_refs": [{"lecture_id": "lecture_a", "ko_id": "linear_taylor_approximation"}], "proposed_alignment_level": "manual", "proposed_primary_structural_status": "ambiguous", "reason_code": "manual_identity_adjudication_pending"}
+        ]
+      },
       "expected": {
         "evaluation_status": "draft_pending_adjudication",
-        "alignment_level": "unresolved",
-        "primary_structural_status": "ambiguous",
-        "identity_match": false,
-        "recoverable": false,
-        "adjudication_required": true,
-        "final_manifests_allowed": false,
-        "error_codes": ["manual_identity_adjudication_pending"]
+        "pending_item_count": 1,
+        "error_codes": ["manual_identity_adjudication_pending"],
+        "oracle_records": {"lecture_a::first_order_taylor_formula": {"alignment_level": "unresolved", "primary_structural_status": "ambiguous", "identity_match": false, "recoverable": false, "adjudication_required": true}},
+        "predicted_records": {"lecture_a::linear_taylor_approximation": {"accounting_status": "unresolved", "identity_match": false, "recoverable": false}}
       }
     },
     {
       "case_id": "alignment_manual_resolved_match",
-      "description": "A snapshot-bound manual decision accepts the same semantic identity.",
-      "input": {"pending_case_id": "alignment_manual_pending", "decision": "matched", "snapshot_matches": true},
+      "description": "A snapshot-bound manual decision accepts semantic identity.",
+      "input": {
+        "lectures": {"lecture_a": "The first-order Taylor formula gives a local linear approximation."},
+        "oracle_objects": [
+          {"lecture_id": "lecture_a", "ko_id": "first_order_taylor_formula", "name": "First-Order Taylor Formula", "type": "Formula", "aliases": [], "source_spans": ["The first-order Taylor formula gives a local linear approximation."]}
+        ],
+        "predicted_objects": [
+          {"lecture_id": "lecture_a", "ko_id": "linear_taylor_approximation", "name": "Linear Taylor Approximation Formula", "type": "Formula", "source_spans": ["The first-order Taylor formula gives a local linear approximation."]}
+        ],
+        "review_items": [
+          {"item_id": "review_manual_taylor", "oracle_refs": [{"lecture_id": "lecture_a", "ko_id": "first_order_taylor_formula"}], "candidate_predicted_refs": [{"lecture_id": "lecture_a", "ko_id": "linear_taylor_approximation"}], "proposed_alignment_level": "manual", "proposed_primary_structural_status": "ambiguous", "reason_code": "manual_identity_adjudication_pending"}
+        ],
+        "adjudication": {
+          "decisions": [
+            {"item_id": "review_manual_taylor", "decision": "matched", "resulting_alignment_level": "manual", "resulting_primary_structural_status": "one_to_one", "matched_predicted_ref": {"lecture_id": "lecture_a", "ko_id": "linear_taylor_approximation"}, "rationale": "Both labels and the shared grounding denote the first-order Taylor approximation formula."}
+          ]
+        }
+      },
       "expected": {
         "evaluation_status": "final",
-        "alignment_level": "manual",
-        "primary_structural_status": "one_to_one",
-        "identity_match": true,
-        "recoverable": true,
-        "adjudication_required": false,
-        "error_codes": []
+        "pending_item_count": 0,
+        "error_codes": [],
+        "oracle_records": {"lecture_a::first_order_taylor_formula": {"alignment_level": "manual", "primary_structural_status": "one_to_one", "identity_match": true, "recoverable": true, "adjudication_required": false}},
+        "predicted_records": {"lecture_a::linear_taylor_approximation": {"accounting_status": "one_to_one", "identity_match": true, "recoverable": true}}
       }
     },
     {
       "case_id": "alignment_type_mismatch_recoverable",
       "description": "Identity is exact even though the predicted KO type is wrong.",
-      "input": {"oracle_label": "Gradient", "oracle_type": "Concept", "predicted_label": "Gradient", "predicted_type": "Method"},
+      "input": {
+        "lectures": {"lecture_a": "The gradient points in the direction of steepest increase."},
+        "oracle_objects": [
+          {"lecture_id": "lecture_a", "ko_id": "gradient", "name": "Gradient", "type": "Concept", "aliases": [], "source_spans": ["The gradient points in the direction of steepest increase."]}
+        ],
+        "predicted_objects": [
+          {"lecture_id": "lecture_a", "ko_id": "predicted_gradient", "name": "Gradient", "type": "Method", "source_spans": ["The gradient points in the direction of steepest increase."]}
+        ],
+        "review_items": []
+      },
       "expected": {
         "evaluation_status": "final",
-        "alignment_level": "exact",
-        "primary_structural_status": "one_to_one",
-        "identity_match": true,
-        "type_match": false,
-        "recoverable": true,
-        "error_codes": ["ko_type_mismatch"]
+        "error_codes": ["ko_type_mismatch"],
+        "oracle_records": {"lecture_a::gradient": {"alignment_level": "exact", "primary_structural_status": "one_to_one", "identity_match": true, "type_match": false, "recoverable": true}},
+        "predicted_records": {"lecture_a::predicted_gradient": {"accounting_status": "one_to_one", "identity_match": true, "recoverable": true}}
       }
     },
     {
       "case_id": "alignment_invalid_span_recoverable",
       "description": "Identity is unique but the predicted source span is not an exact lecture substring.",
-      "input": {"oracle_label": "Gradient", "predicted_label": "Gradient", "predicted_source_span_exact": false},
+      "input": {
+        "lectures": {"lecture_a": "The gradient points in the direction of steepest increase."},
+        "oracle_objects": [
+          {"lecture_id": "lecture_a", "ko_id": "gradient", "name": "Gradient", "type": "Concept", "aliases": [], "source_spans": ["The gradient points in the direction of steepest increase."]}
+        ],
+        "predicted_objects": [
+          {"lecture_id": "lecture_a", "ko_id": "predicted_gradient", "name": "Gradient", "type": "Concept", "source_spans": ["The gradient is the direction of steepest increase."]}
+        ],
+        "review_items": []
+      },
       "expected": {
         "evaluation_status": "final",
-        "alignment_level": "exact",
-        "primary_structural_status": "one_to_one",
-        "identity_match": true,
-        "predicted_source_span_exact": false,
-        "recoverable": true,
-        "error_codes": ["predicted_source_span_invalid"]
+        "error_codes": ["predicted_source_span_invalid"],
+        "oracle_records": {"lecture_a::gradient": {"alignment_level": "exact", "primary_structural_status": "one_to_one", "identity_match": true, "predicted_source_span_exact": false, "recoverable": true}},
+        "predicted_records": {"lecture_a::predicted_gradient": {"accounting_status": "one_to_one", "identity_match": true, "recoverable": true}}
       }
     },
     {
       "case_id": "alignment_unmatched_extra_prediction",
       "description": "A predicted KO has no corresponding Oracle educational object.",
-      "input": {"predicted_label": "Learning Rate", "oracle_candidates": []},
+      "input": {
+        "lectures": {"lecture_a": "The learning rate controls the update size."},
+        "oracle_objects": [],
+        "predicted_objects": [
+          {"lecture_id": "lecture_a", "ko_id": "learning_rate", "name": "Learning Rate", "type": "Concept", "source_spans": ["The learning rate controls the update size."]}
+        ],
+        "review_items": []
+      },
       "expected": {
         "evaluation_status": "final",
-        "predicted_accounting_status": "unmatched_extra",
-        "identity_match": false,
-        "included_in_matched_inventory": false,
-        "recoverability_denominators_changed": false,
-        "error_codes": ["unmatched_extra_predicted_ko"]
+        "error_codes": ["unmatched_extra_predicted_ko"],
+        "oracle_records": {},
+        "predicted_records": {"lecture_a::learning_rate": {"accounting_status": "unmatched_extra", "identity_match": false, "recoverable": false}}
       }
     },
     {
       "case_id": "alignment_missing_oracle_ko",
-      "description": "No predicted object plausibly identifies an Oracle endpoint.",
-      "input": {"oracle_label": "Taylor Remainder", "predicted_candidates": []},
+      "description": "No predicted object identifies an Oracle object.",
+      "input": {
+        "lectures": {"lecture_a": "The Taylor remainder is the truncation error."},
+        "oracle_objects": [
+          {"lecture_id": "lecture_a", "ko_id": "taylor_remainder", "name": "Taylor Remainder", "type": "Concept", "aliases": [], "source_spans": ["The Taylor remainder is the truncation error."]}
+        ],
+        "predicted_objects": [],
+        "review_items": []
+      },
       "expected": {
         "evaluation_status": "final",
-        "alignment_level": "unresolved",
-        "primary_structural_status": "missing",
-        "identity_match": false,
-        "recoverable": false,
-        "error_codes": ["missing_oracle_ko"]
+        "error_codes": ["missing_oracle_ko"],
+        "oracle_records": {"lecture_a::taylor_remainder": {"alignment_level": "unresolved", "primary_structural_status": "missing", "identity_match": false, "recoverable": false}},
+        "predicted_records": {}
       }
     },
     {
       "case_id": "alignment_duplicate_predictions",
-      "description": "Two predicted KOs each independently and completely identify one Oracle KO.",
-      "input": {"oracle_label": "Gradient", "predicted_labels": ["Gradient", "Gradient"]},
+      "description": "Two predictions independently identify one Oracle KO; no representative is selected.",
+      "input": {
+        "lectures": {"lecture_a": "The gradient points in the direction of steepest increase."},
+        "oracle_objects": [
+          {"lecture_id": "lecture_a", "ko_id": "gradient", "name": "Gradient", "type": "Concept", "aliases": [], "source_spans": ["The gradient points in the direction of steepest increase."]}
+        ],
+        "predicted_objects": [
+          {"lecture_id": "lecture_a", "ko_id": "gradient_one", "name": "Gradient", "type": "Concept", "source_spans": ["The gradient points in the direction of steepest increase."]},
+          {"lecture_id": "lecture_a", "ko_id": "gradient_two", "name": "Gradient", "type": "Concept", "source_spans": ["The gradient points in the direction of steepest increase."]}
+        ],
+        "review_items": []
+      },
       "expected": {
         "evaluation_status": "final",
-        "primary_structural_status": "duplicate",
-        "structural_flags": ["duplicate"],
-        "recoverable": false,
-        "error_codes": ["duplicate_predicted_identity"]
+        "error_codes": ["duplicate_predicted_identity"],
+        "oracle_records": {"lecture_a::gradient": {"primary_structural_status": "duplicate", "identity_match": false, "recoverable": false}},
+        "predicted_records": {"lecture_a::gradient_one": {"accounting_status": "duplicate", "recoverable": false}, "lecture_a::gradient_two": {"accounting_status": "duplicate", "recoverable": false}}
       }
     },
     {
       "case_id": "alignment_split_prediction",
-      "description": "Two incomplete predicted KOs collectively cover one Oracle KO.",
-      "input": {"oracle_label": "Gradient Descent Update", "predicted_labels": ["Negative Gradient Direction", "Step-Size Update"]},
+      "description": "Two incomplete predictions collectively cover one Oracle KO.",
+      "input": {
+        "lectures": {"lecture_a": "The update combines a negative gradient direction with a step size."},
+        "oracle_objects": [
+          {"lecture_id": "lecture_a", "ko_id": "gradient_descent_update", "name": "Gradient Descent Update", "type": "Formula", "aliases": [], "source_spans": ["The update combines a negative gradient direction with a step size."]}
+        ],
+        "predicted_objects": [
+          {"lecture_id": "lecture_a", "ko_id": "negative_gradient_direction", "name": "Negative Gradient Direction", "type": "Concept", "source_spans": ["negative gradient direction"]},
+          {"lecture_id": "lecture_a", "ko_id": "step_size_update", "name": "Step-Size Update", "type": "Formula", "source_spans": ["step size"]}
+        ],
+        "review_items": [
+          {"item_id": "review_split_update", "oracle_refs": [{"lecture_id": "lecture_a", "ko_id": "gradient_descent_update"}], "candidate_predicted_refs": [{"lecture_id": "lecture_a", "ko_id": "negative_gradient_direction"}, {"lecture_id": "lecture_a", "ko_id": "step_size_update"}], "proposed_alignment_level": "unresolved", "proposed_primary_structural_status": "split", "reason_code": "split_oracle_identity"}
+        ],
+        "adjudication": {
+          "decisions": [
+            {"item_id": "review_split_update", "decision": "structural_error", "resulting_alignment_level": "unresolved", "resulting_primary_structural_status": "split", "matched_predicted_ref": null, "rationale": "Neither predicted object is complete; together they divide the Oracle update formula."}
+          ]
+        }
+      },
       "expected": {
         "evaluation_status": "final",
-        "primary_structural_status": "split",
-        "structural_flags": ["split"],
-        "recoverable": false,
-        "error_codes": ["split_oracle_identity"]
+        "error_codes": ["split_oracle_identity"],
+        "oracle_records": {"lecture_a::gradient_descent_update": {"primary_structural_status": "split", "identity_match": false, "recoverable": false}},
+        "predicted_records": {"lecture_a::negative_gradient_direction": {"accounting_status": "split_component", "recoverable": false}, "lecture_a::step_size_update": {"accounting_status": "split_component", "recoverable": false}}
       }
     },
     {
       "case_id": "alignment_merged_prediction",
-      "description": "One predicted object explicitly combines two distinct Oracle KOs.",
-      "input": {"oracle_labels": ["Gradient", "Gradient Descent"], "predicted_label": "Gradient and Gradient Descent"},
+      "description": "One prediction combines two distinct Oracle KOs.",
+      "input": {
+        "lectures": {"lecture_a": "The gradient is used by gradient descent."},
+        "oracle_objects": [
+          {"lecture_id": "lecture_a", "ko_id": "gradient", "name": "Gradient", "type": "Concept", "aliases": [], "source_spans": ["The gradient"]},
+          {"lecture_id": "lecture_a", "ko_id": "gradient_descent", "name": "Gradient Descent", "type": "Method", "aliases": [], "source_spans": ["gradient descent"]}
+        ],
+        "predicted_objects": [
+          {"lecture_id": "lecture_a", "ko_id": "merged_gradient", "name": "Gradient and Gradient Descent", "type": "Concept", "source_spans": ["The gradient is used by gradient descent."]}
+        ],
+        "review_items": [
+          {"item_id": "review_merged_gradient", "oracle_refs": [{"lecture_id": "lecture_a", "ko_id": "gradient"}, {"lecture_id": "lecture_a", "ko_id": "gradient_descent"}], "candidate_predicted_refs": [{"lecture_id": "lecture_a", "ko_id": "merged_gradient"}], "proposed_alignment_level": "unresolved", "proposed_primary_structural_status": "merge", "reason_code": "merged_oracle_identities"}
+        ],
+        "adjudication": {
+          "decisions": [
+            {"item_id": "review_merged_gradient", "decision": "structural_error", "resulting_alignment_level": "unresolved", "resulting_primary_structural_status": "merge", "matched_predicted_ref": null, "rationale": "The single predicted object combines the Gradient concept and Gradient Descent method."}
+          ]
+        }
+      },
       "expected": {
         "evaluation_status": "final",
-        "primary_structural_status": "merge",
-        "structural_flags": ["merge"],
-        "recoverable_oracle_count": 0,
-        "error_codes": ["merged_oracle_identities"]
+        "error_codes": ["merged_oracle_identities"],
+        "oracle_records": {"lecture_a::gradient": {"primary_structural_status": "merge", "recoverable": false}, "lecture_a::gradient_descent": {"primary_structural_status": "merge", "recoverable": false}},
+        "predicted_records": {"lecture_a::merged_gradient": {"accounting_status": "merge", "recoverable": false}}
       }
     },
     {
       "case_id": "alignment_ambiguous_multiple_matches",
-      "description": "Several predicted objects remain plausible and no mapping can be selected without adjudication.",
-      "input": {"oracle_label": "Update Rule", "predicted_labels": ["Iteration Update", "Parameter Update"]},
+      "description": "Several predictions remain plausible and no mapping is selected without adjudication.",
+      "input": {
+        "lectures": {"lecture_a": "An update rule changes an iterative state."},
+        "oracle_objects": [
+          {"lecture_id": "lecture_a", "ko_id": "update_rule", "name": "Update Rule", "type": "Formula", "aliases": [], "source_spans": ["An update rule changes an iterative state."]}
+        ],
+        "predicted_objects": [
+          {"lecture_id": "lecture_a", "ko_id": "iteration_update", "name": "Iteration Update", "type": "Formula", "source_spans": ["An update rule changes an iterative state."]},
+          {"lecture_id": "lecture_a", "ko_id": "parameter_update", "name": "Parameter Update", "type": "Formula", "source_spans": ["An update rule changes an iterative state."]}
+        ],
+        "review_items": [
+          {"item_id": "review_ambiguous_update", "oracle_refs": [{"lecture_id": "lecture_a", "ko_id": "update_rule"}], "candidate_predicted_refs": [{"lecture_id": "lecture_a", "ko_id": "iteration_update"}, {"lecture_id": "lecture_a", "ko_id": "parameter_update"}], "proposed_alignment_level": "unresolved", "proposed_primary_structural_status": "ambiguous", "reason_code": "ambiguous_identity_match"}
+        ]
+      },
       "expected": {
         "evaluation_status": "draft_pending_adjudication",
-        "primary_structural_status": "ambiguous",
-        "recoverable": false,
-        "adjudication_required": true,
-        "final_manifests_allowed": false,
-        "error_codes": ["ambiguous_identity_match"]
+        "pending_item_count": 1,
+        "error_codes": ["ambiguous_identity_match"],
+        "oracle_records": {"lecture_a::update_rule": {"primary_structural_status": "ambiguous", "adjudication_required": true, "recoverable": false}},
+        "predicted_records": {"lecture_a::iteration_update": {"accounting_status": "unresolved", "recoverable": false}, "lecture_a::parameter_update": {"accounting_status": "unresolved", "recoverable": false}}
       }
     },
     {
       "case_id": "alignment_same_name_different_lecture",
-      "description": "Equal labels in different lectures do not cross lecture provenance automatically.",
-      "input": {"oracle_ref": {"lecture_id": "calculus_fixture_001", "ko_id": "gradient"}, "predicted_ref": {"lecture_id": "optimisation_fixture_001", "ko_id": "gradient"}},
+      "description": "Equal labels in different lectures do not cross provenance boundaries.",
+      "input": {
+        "lectures": {"lecture_a": "The calculus gradient is a derivative vector.", "lecture_b": "The optimisation gradient guides an update."},
+        "oracle_objects": [
+          {"lecture_id": "lecture_a", "ko_id": "gradient", "name": "Gradient", "type": "Concept", "aliases": [], "source_spans": ["The calculus gradient is a derivative vector."]}
+        ],
+        "predicted_objects": [
+          {"lecture_id": "lecture_b", "ko_id": "gradient", "name": "Gradient", "type": "Concept", "source_spans": ["The optimisation gradient guides an update."]}
+        ],
+        "review_items": []
+      },
       "expected": {
         "evaluation_status": "final",
-        "oracle_primary_structural_status": "missing",
-        "predicted_accounting_status": "unmatched_extra",
-        "identity_match": false,
-        "recoverable": false,
-        "error_codes": ["lecture_provenance_mismatch"]
+        "error_codes": ["lecture_provenance_mismatch"],
+        "oracle_records": {"lecture_a::gradient": {"primary_structural_status": "missing", "identity_match": false, "recoverable": false}},
+        "predicted_records": {"lecture_b::gradient": {"accounting_status": "unmatched_extra", "identity_match": false, "recoverable": false}}
       }
     },
     {
       "case_id": "alignment_same_name_different_entity",
-      "description": "Equal surface labels within one lecture are not sufficient when definitions identify different educational objects.",
-      "input": {"oracle_label": "Score", "oracle_definition": "derivative of log-likelihood", "predicted_label": "Score", "predicted_definition": "classification performance value"},
+      "description": "A reviewer rejects equal labels whose lecture grounding identifies different educational objects.",
+      "input": {
+        "lectures": {"lecture_a": "The statistical score is the derivative of log-likelihood. A classification score measures predictive performance."},
+        "oracle_objects": [
+          {"lecture_id": "lecture_a", "ko_id": "statistical_score", "name": "Score", "type": "Concept", "aliases": [], "source_spans": ["The statistical score is the derivative of log-likelihood."]}
+        ],
+        "predicted_objects": [
+          {"lecture_id": "lecture_a", "ko_id": "classification_score", "name": "Score", "type": "Concept", "source_spans": ["A classification score measures predictive performance."]}
+        ],
+        "review_items": [
+          {"item_id": "review_same_label_score", "oracle_refs": [{"lecture_id": "lecture_a", "ko_id": "statistical_score"}], "candidate_predicted_refs": [{"lecture_id": "lecture_a", "ko_id": "classification_score"}], "proposed_alignment_level": "unresolved", "proposed_primary_structural_status": "ambiguous", "reason_code": "same_label_different_entity"}
+        ],
+        "adjudication": {
+          "decisions": [
+            {"item_id": "review_same_label_score", "decision": "not_matched", "resulting_alignment_level": "unresolved", "resulting_primary_structural_status": "missing", "matched_predicted_ref": null, "rationale": "The Oracle denotes the likelihood score, while the prediction denotes a classification performance score."}
+          ]
+        }
+      },
       "expected": {
         "evaluation_status": "final",
-        "alignment_level": "unresolved",
-        "oracle_primary_structural_status": "missing",
-        "predicted_accounting_status": "unmatched_extra",
-        "identity_match": false,
-        "recoverable": false,
-        "error_codes": ["same_label_different_entity"]
+        "error_codes": ["same_label_different_entity"],
+        "oracle_records": {"lecture_a::statistical_score": {"alignment_level": "unresolved", "primary_structural_status": "missing", "identity_match": false, "recoverable": false}},
+        "predicted_records": {"lecture_a::classification_score": {"accounting_status": "unmatched_extra", "identity_match": false, "recoverable": false}}
       }
     }
   ]

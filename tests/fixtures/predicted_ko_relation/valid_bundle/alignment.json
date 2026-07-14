@@ -90,7 +90,7 @@
       ],
       "accounting_status": "one_to_one",
       "identity_match": true,
-      "included_in_matched_inventory": true,
+      "recoverable": true,
       "notes": "Wrong type is propagated rather than repaired."
     },
     {
@@ -101,7 +101,7 @@
       ],
       "accounting_status": "one_to_one",
       "identity_match": true,
-      "included_in_matched_inventory": true,
+      "recoverable": true,
       "notes": "Exact one-to-one identity match."
     },
     {
@@ -112,7 +112,7 @@
       ],
       "accounting_status": "one_to_one",
       "identity_match": true,
-      "included_in_matched_inventory": true,
+      "recoverable": true,
       "notes": "Exact one-to-one identity match."
     },
     {
@@ -123,7 +123,7 @@
       ],
       "accounting_status": "one_to_one",
       "identity_match": true,
-      "included_in_matched_inventory": true,
+      "recoverable": true,
       "notes": "Exact one-to-one identity match."
     },
     {
@@ -132,7 +132,7 @@
       "linked_oracle_refs": [],
       "accounting_status": "unmatched_extra",
       "identity_match": false,
-      "included_in_matched_inventory": false,
+      "recoverable": false,
       "notes": "Extra predicted KO is counted but excluded from A-prime and B-prime."
     }
   ]

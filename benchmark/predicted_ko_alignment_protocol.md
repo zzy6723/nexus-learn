@@ -272,15 +272,17 @@ represented without selecting a false primary match.
   ],
   "accounting_status": "one_to_one",
   "identity_match": true,
-  "included_in_matched_inventory": true,
+  "recoverable": true,
   "notes": ""
 }
 ```
 
 `matched_oracle_ref` is non-null only for a strict one-to-one identity match.
 `linked_oracle_refs` retains every Oracle object involved in a structural or
-unresolved case. `included_in_matched_inventory` is true only for final
-one-to-one matches that are referenced by at least one recoverable primary pair.
+unresolved case. `recoverable` is an inventory-level identity property and is
+true only for a final strict one-to-one match. Whether the object is referenced
+by a primary Relation pair is computed later by projection and must not appear
+in the Relation-blind alignment artifact.
 
 Allowed predicted accounting statuses are:
 
@@ -345,6 +347,20 @@ metrics.
 Resolved decisions must also bind to the Oracle-inventory, predicted-inventory,
 lecture, and normalization-version hashes. A decision from a previous Entity run
 must not be reused when any bound snapshot changes.
+
+## Relation-Blind Review Scopes
+
+Exact and alias matching are automatic only for unique, conflict-free
+one-to-one components. Semantic variants, same-label contextual conflicts,
+split, merge, ambiguous, and granularity cases require a reviewer to nominate a
+Relation-blind review scope containing only Oracle references, predicted
+references, KO snapshots, and lecture context. The review scope may not contain
+candidate-pair membership or any Relation label, direction, evidence, category,
+or result.
+
+Review scopes are not repair instructions. They only define which inventory
+objects require a snapshot-bound identity or structural decision. No object may
+occur in more than one review scope.
 
 ---
 
