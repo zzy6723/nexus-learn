@@ -1,0 +1,98 @@
+{
+  "artifact_type": "matched_relation_ground_truth",
+  "version": "v0.1",
+  "split": "development",
+  "status": "test_fixture",
+  "description": "Matched primary Relation ground truth using neutral KO slot IDs.",
+  "annotation_guidelines": "benchmark/relation_annotation_guidelines.md",
+  "evaluation_protocol": "benchmark/relation_evaluation_protocol.md",
+  "knowledge_object_ground_truths": [
+    "tests/fixtures/predicted_ko_relation/valid_bundle/matched_knowledge_objects.json"
+  ],
+  "notes": [
+    "This file is derived from the original synthetic ground truth and both frozen manifests.",
+    "It contains no ambiguous or schema-gap pairs."
+  ],
+  "allowed_relation_types": [
+    "REQUIRES",
+    "APPLIED_IN",
+    "EXTENDS",
+    "CONTRASTS_WITH",
+    "FORMALIZES",
+    "RELATED_TO",
+    "NO_RELATION"
+  ],
+  "primary_scoring_categories": [
+    "positive",
+    "hard_negative"
+  ],
+  "relation_coverage": {
+    "REQUIRES": "synthetic_matched_coverage",
+    "APPLIED_IN": "synthetic_matched_coverage",
+    "EXTENDS": "not_covered",
+    "CONTRASTS_WITH": "not_covered",
+    "FORMALIZES": "not_covered",
+    "RELATED_TO": "not_covered",
+    "NO_RELATION": "synthetic_matched_coverage"
+  },
+  "lectures": [
+    "calculus_fixture_001",
+    "optimisation_fixture_001"
+  ],
+  "derivation": {
+    "version": "predicted_ko_projection_v0_1",
+    "original_ground_truth_sha256": "6666666666666666666666666666666666666666666666666666666666666666",
+    "alignment_sha256": "5555555555555555555555555555555555555555555555555555555555555555",
+    "pair_manifest_sha256": "7777777777777777777777777777777777777777777777777777777777777777",
+    "ko_manifest_sha256": "8888888888888888888888888888888888888888888888888888888888888888",
+    "normalization_version": "predicted_ko_name_normalization_v0_1"
+  },
+  "pairs": [
+    {
+      "pair_id": "rel_dev_001",
+      "category": "positive",
+      "source": {"lecture_id": "calculus_fixture_001", "ko_id": "ko_slot_002"},
+      "target": {"lecture_id": "calculus_fixture_001", "ko_id": "ko_slot_001"},
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {"lecture_id": "calculus_fixture_001", "span": "Gradient descent uses the gradient to update parameters."}
+      ],
+      "rationale": "Gradient descent uses the gradient."
+    },
+    {
+      "pair_id": "rel_dev_002",
+      "category": "hard_negative",
+      "source": {"lecture_id": "calculus_fixture_001", "ko_id": "ko_slot_001"},
+      "target": {"lecture_id": "calculus_fixture_001", "ko_id": "ko_slot_003"},
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The fixture text does not establish a direct v0.1 relation."
+    },
+    {
+      "pair_id": "rel_dev_003",
+      "category": "positive",
+      "source": {"lecture_id": "calculus_fixture_001", "ko_id": "ko_slot_001"},
+      "target": {"lecture_id": "optimisation_fixture_001", "ko_id": "ko_slot_004"},
+      "relation_type": "APPLIED_IN",
+      "symmetric": false,
+      "evidence_spans": [
+        {"lecture_id": "optimisation_fixture_001", "span": "Gradients are applied in differentiable optimisation problems"}
+      ],
+      "rationale": "Gradients are applied in differentiable optimisation problems."
+    },
+    {
+      "pair_id": "rel_dev_004",
+      "category": "positive",
+      "source": {"lecture_id": "calculus_fixture_001", "ko_id": "ko_slot_002"},
+      "target": {"lecture_id": "optimisation_fixture_001", "ko_id": "ko_slot_004"},
+      "relation_type": "APPLIED_IN",
+      "symmetric": false,
+      "evidence_spans": [
+        {"lecture_id": "optimisation_fixture_001", "span": "gradient descent is a method applied to such problems"}
+      ],
+      "rationale": "Gradient descent is applied to optimisation problems."
+    }
+  ]
+}

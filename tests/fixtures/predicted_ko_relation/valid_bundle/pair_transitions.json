@@ -1,0 +1,65 @@
+{
+  "artifact_type": "predicted_ko_pair_transitions",
+  "version": "v0.1",
+  "evaluation_status": "final",
+  "provenance": {
+    "original_ground_truth_sha256": "6666666666666666666666666666666666666666666666666666666666666666",
+    "alignment_sha256": "5555555555555555555555555555555555555555555555555555555555555555",
+    "pair_manifest_sha256": "7777777777777777777777777777777777777777777777777777777777777777",
+    "ko_manifest_sha256": "8888888888888888888888888888888888888888888888888888888888888888",
+    "matched_ground_truth_sha256": "9999999999999999999999999999999999999999999999999999999999999999",
+    "A0_evaluation_sha256": "1919191919191919191919191919191919191919191919191919191919191919",
+    "A_prime_evaluation_sha256": "2020202020202020202020202020202020202020202020202020202020202020",
+    "B_prime_evaluation_sha256": "2121212121212121212121212121212121212121212121212121212121212121"
+  },
+  "transitions": [
+    {
+      "pair_id": "rel_dev_001",
+      "recoverability_status": "recoverable",
+      "unrecoverable_reasons": [],
+      "A0_outcome": {"strict_correct": true, "relation_type": "REQUIRES", "error": null},
+      "A_prime_outcome": {"strict_correct": true, "relation_type": "REQUIRES", "error": null},
+      "B_prime_outcome": {"strict_correct": true, "relation_type": "REQUIRES", "error": null},
+      "A0_to_B_prime_transition": "A0_correct_to_B_correct",
+      "A_prime_to_B_prime_transition": "A_prime_correct_to_B_correct",
+      "primary_failure_locus": "none",
+      "secondary_upstream_flags": ["type_mismatch"]
+    },
+    {
+      "pair_id": "rel_dev_002",
+      "recoverability_status": "recoverable",
+      "unrecoverable_reasons": [],
+      "A0_outcome": {"strict_correct": true, "relation_type": "NO_RELATION", "error": null},
+      "A_prime_outcome": {"strict_correct": true, "relation_type": "NO_RELATION", "error": null},
+      "B_prime_outcome": {"strict_correct": true, "relation_type": "NO_RELATION", "error": null},
+      "A0_to_B_prime_transition": "A0_correct_to_B_correct",
+      "A_prime_to_B_prime_transition": "A_prime_correct_to_B_correct",
+      "primary_failure_locus": "none",
+      "secondary_upstream_flags": ["type_mismatch"]
+    },
+    {
+      "pair_id": "rel_dev_003",
+      "recoverability_status": "recoverable",
+      "unrecoverable_reasons": [],
+      "A0_outcome": {"strict_correct": true, "relation_type": "APPLIED_IN", "error": null},
+      "A_prime_outcome": {"strict_correct": true, "relation_type": "APPLIED_IN", "error": null},
+      "B_prime_outcome": {"strict_correct": false, "relation_type": "RELATED_TO", "error": "wrong_relation_type"},
+      "A0_to_B_prime_transition": "A0_correct_to_B_wrong_type",
+      "A_prime_to_B_prime_transition": "A_prime_correct_to_B_wrong_type",
+      "primary_failure_locus": "matched_representation_wrong_relation_type",
+      "secondary_upstream_flags": ["type_mismatch"]
+    },
+    {
+      "pair_id": "rel_dev_004",
+      "recoverability_status": "recoverable",
+      "unrecoverable_reasons": [],
+      "A0_outcome": {"strict_correct": true, "relation_type": "APPLIED_IN", "error": null},
+      "A_prime_outcome": {"strict_correct": true, "relation_type": "APPLIED_IN", "error": null},
+      "B_prime_outcome": {"strict_correct": true, "relation_type": "APPLIED_IN", "error": null},
+      "A0_to_B_prime_transition": "A0_correct_to_B_correct",
+      "A_prime_to_B_prime_transition": "A_prime_correct_to_B_correct",
+      "primary_failure_locus": "none",
+      "secondary_upstream_flags": []
+    }
+  ]
+}

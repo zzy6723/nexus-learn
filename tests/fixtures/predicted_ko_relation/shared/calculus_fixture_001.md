@@ -1,0 +1,1 @@
+The gradient collects the partial derivatives of a scalar function. Gradient descent uses the gradient to update parameters. A Taylor remainder describes the error left after truncating a Taylor expansion. Taylor remainders can be compared with gradient descent when studying approximation error in iterative methods.

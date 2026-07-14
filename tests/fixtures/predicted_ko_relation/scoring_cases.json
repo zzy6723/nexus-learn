@@ -1,0 +1,108 @@
+{
+  "artifact_type": "predicted_ko_pipeline_scoring_fixture_matrix",
+  "version": "v0.1",
+  "base_primary_pair_count": 4,
+  "cases": [
+    {
+      "case_id": "scoring_positive_endpoint_missing",
+      "description": "One positive pair is unrecoverable because one endpoint is missing; all evaluated pairs are strict-correct.",
+      "input": {"unrecoverable_pair_ids": ["rel_dev_001"], "unrecoverable_reasons": {"rel_dev_001": ["missing_endpoint"]}, "B_prime_strict_correct": 3},
+      "expected": {
+        "evaluation_status": "final",
+        "pair_recoverability": {"numerator": 3, "denominator": 4, "value": 0.75},
+        "positive_pair_recoverability": {"numerator": 2, "denominator": 3, "value": 0.6666666666666666},
+        "conditional_B_prime_strict": {"numerator": 3, "denominator": 3, "value": 1.0},
+        "pipeline_strict_success": {"numerator": 3, "denominator": 4, "value": 0.75},
+        "primary_failure_locus": {"rel_dev_001": "upstream_unrecoverable"}
+      }
+    },
+    {
+      "case_id": "scoring_hard_negative_endpoint_missing",
+      "description": "The hard-negative pair is unrecoverable and must not count as a correct NO_RELATION decision.",
+      "input": {"unrecoverable_pair_ids": ["rel_dev_002"], "unrecoverable_reasons": {"rel_dev_002": ["missing_endpoint"]}, "B_prime_strict_correct": 3},
+      "expected": {
+        "evaluation_status": "final",
+        "pair_recoverability": {"numerator": 3, "denominator": 4, "value": 0.75},
+        "hard_negative_pair_recoverability": {"numerator": 0, "denominator": 1, "value": 0.0},
+        "conditional_B_prime_no_relation_accuracy": {"numerator": 0, "denominator": 0, "value": null},
+        "pipeline_hard_negative_strict_success": {"numerator": 0, "denominator": 1, "value": 0.0},
+        "unrecoverable_pair_counted_as_no_relation": false
+      }
+    },
+    {
+      "case_id": "scoring_zero_conditional_denominator",
+      "description": "No primary pair is recoverable, so conditional metrics are null rather than zero or one.",
+      "input": {"unrecoverable_pair_ids": ["rel_dev_001", "rel_dev_002", "rel_dev_003", "rel_dev_004"]},
+      "expected": {
+        "evaluation_status": "final",
+        "pair_recoverability": {"numerator": 0, "denominator": 4, "value": 0.0},
+        "conditional_B_prime_strict": {"numerator": 0, "denominator": 0, "value": null},
+        "conditional_A_prime_strict": {"numerator": 0, "denominator": 0, "value": null},
+        "pipeline_strict_success": {"numerator": 0, "denominator": 4, "value": 0.0}
+      }
+    },
+    {
+      "case_id": "scoring_all_recoverable_relation_wrong",
+      "description": "Coverage is perfect but every B-prime Relation decision is strict-wrong.",
+      "input": {"recoverable_pair_count": 4, "B_prime_strict_correct": 0},
+      "expected": {
+        "evaluation_status": "final",
+        "pair_recoverability": {"numerator": 4, "denominator": 4, "value": 1.0},
+        "conditional_B_prime_strict": {"numerator": 0, "denominator": 4, "value": 0.0},
+        "pipeline_strict_success": {"numerator": 0, "denominator": 4, "value": 0.0},
+        "upstream_unrecoverable_count": 0,
+        "matched_relation_failure_count": 4
+      }
+    },
+    {
+      "case_id": "scoring_low_recoverability_conditional_perfect",
+      "description": "The only recoverable pair is correct; pipeline success remains one of four.",
+      "input": {"recoverable_pair_ids": ["rel_dev_004"], "B_prime_strict_correct": 1},
+      "expected": {
+        "evaluation_status": "final",
+        "pair_recoverability": {"numerator": 1, "denominator": 4, "value": 0.25},
+        "conditional_B_prime_strict": {"numerator": 1, "denominator": 1, "value": 1.0},
+        "pipeline_strict_success": {"numerator": 1, "denominator": 4, "value": 0.25},
+        "claim": "Conditional perfection does not erase coverage loss."
+      }
+    },
+    {
+      "case_id": "scoring_pipeline_product_identity",
+      "description": "Three pairs are recoverable and two are strict-correct in B-prime.",
+      "input": {"recoverable_pair_count": 3, "B_prime_strict_correct": 2},
+      "expected": {
+        "evaluation_status": "final",
+        "pair_recoverability": {"numerator": 3, "denominator": 4, "value": 0.75},
+        "conditional_B_prime_strict": {"numerator": 2, "denominator": 3, "value": 0.6666666666666666},
+        "pipeline_strict_success": {"numerator": 2, "denominator": 4, "value": 0.5},
+        "recoverability_times_conditional_strict": 0.5
+      }
+    },
+    {
+      "case_id": "scoring_diagnostics_excluded",
+      "description": "Two diagnostic pairs are present in the source ground truth but absent from every primary denominator.",
+      "input": {"primary_pair_count": 4, "diagnostic_pair_count": 2, "all_pair_count": 6, "B_prime_strict_correct": 4},
+      "expected": {
+        "evaluation_status": "final",
+        "primary_pair_denominator": 4,
+        "conditional_pair_denominator": 4,
+        "pipeline_pair_denominator": 4,
+        "diagnostic_pairs_excluded": 2,
+        "pipeline_strict_success": {"numerator": 4, "denominator": 4, "value": 1.0}
+      }
+    },
+    {
+      "case_id": "scoring_nonfatal_quality_propagation",
+      "description": "Wrong type and invalid source span remain recoverable and enter B-prime unchanged.",
+      "input": {"type_mismatch_count": 1, "invalid_source_span_count": 1, "structural_error_count": 0},
+      "expected": {
+        "evaluation_status": "final",
+        "aggregate_metrics_valid": true,
+        "unique_endpoint_recovery_changed": false,
+        "pair_recoverability_changed": false,
+        "B_prime_representation_repaired": false,
+        "nonfatal_error_codes": ["ko_type_mismatch", "predicted_source_span_invalid"]
+      }
+    }
+  ]
+}

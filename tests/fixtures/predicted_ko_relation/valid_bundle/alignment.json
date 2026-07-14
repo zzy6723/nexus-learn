@@ -1,0 +1,138 @@
+{
+  "artifact_type": "predicted_ko_alignment",
+  "version": "v0.1",
+  "split": "synthetic",
+  "normalization_version": "predicted_ko_name_normalization_v0_1",
+  "oracle_inventory_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+  "predicted_inventory_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+  "lecture_sha256": {
+    "calculus_fixture_001": "3333333333333333333333333333333333333333333333333333333333333333",
+    "optimisation_fixture_001": "4444444444444444444444444444444444444444444444444444444444444444"
+  },
+  "evaluation_status": "final",
+  "oracle_records": [
+    {
+      "oracle_ref": {"lecture_id": "calculus_fixture_001", "ko_id": "gradient"},
+      "matched_predicted_ref": {"lecture_id": "calculus_fixture_001", "ko_id": "predicted_gradient"},
+      "linked_predicted_refs": [
+        {"lecture_id": "calculus_fixture_001", "ko_id": "predicted_gradient"}
+      ],
+      "alignment_level": "exact",
+      "identity_match": true,
+      "type_match": false,
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "structural_flags": [],
+      "recoverable": true,
+      "adjudication_required": false,
+      "notes": "Identity is exact; the predicted KO type is intentionally wrong."
+    },
+    {
+      "oracle_ref": {"lecture_id": "calculus_fixture_001", "ko_id": "gradient_descent"},
+      "matched_predicted_ref": {"lecture_id": "calculus_fixture_001", "ko_id": "predicted_gradient_descent"},
+      "linked_predicted_refs": [
+        {"lecture_id": "calculus_fixture_001", "ko_id": "predicted_gradient_descent"}
+      ],
+      "alignment_level": "exact",
+      "identity_match": true,
+      "type_match": true,
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "structural_flags": [],
+      "recoverable": true,
+      "adjudication_required": false,
+      "notes": "Exact one-to-one identity match."
+    },
+    {
+      "oracle_ref": {"lecture_id": "calculus_fixture_001", "ko_id": "taylor_remainder"},
+      "matched_predicted_ref": {"lecture_id": "calculus_fixture_001", "ko_id": "predicted_taylor_remainder"},
+      "linked_predicted_refs": [
+        {"lecture_id": "calculus_fixture_001", "ko_id": "predicted_taylor_remainder"}
+      ],
+      "alignment_level": "exact",
+      "identity_match": true,
+      "type_match": true,
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "structural_flags": [],
+      "recoverable": true,
+      "adjudication_required": false,
+      "notes": "Exact one-to-one identity match."
+    },
+    {
+      "oracle_ref": {"lecture_id": "optimisation_fixture_001", "ko_id": "optimisation_problem"},
+      "matched_predicted_ref": {"lecture_id": "optimisation_fixture_001", "ko_id": "predicted_optimisation_problem"},
+      "linked_predicted_refs": [
+        {"lecture_id": "optimisation_fixture_001", "ko_id": "predicted_optimisation_problem"}
+      ],
+      "alignment_level": "exact",
+      "identity_match": true,
+      "type_match": true,
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "structural_flags": [],
+      "recoverable": true,
+      "adjudication_required": false,
+      "notes": "Exact one-to-one identity match."
+    }
+  ],
+  "predicted_records": [
+    {
+      "predicted_ref": {"lecture_id": "calculus_fixture_001", "ko_id": "predicted_gradient"},
+      "matched_oracle_ref": {"lecture_id": "calculus_fixture_001", "ko_id": "gradient"},
+      "linked_oracle_refs": [
+        {"lecture_id": "calculus_fixture_001", "ko_id": "gradient"}
+      ],
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "included_in_matched_inventory": true,
+      "notes": "Wrong type is propagated rather than repaired."
+    },
+    {
+      "predicted_ref": {"lecture_id": "calculus_fixture_001", "ko_id": "predicted_gradient_descent"},
+      "matched_oracle_ref": {"lecture_id": "calculus_fixture_001", "ko_id": "gradient_descent"},
+      "linked_oracle_refs": [
+        {"lecture_id": "calculus_fixture_001", "ko_id": "gradient_descent"}
+      ],
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "included_in_matched_inventory": true,
+      "notes": "Exact one-to-one identity match."
+    },
+    {
+      "predicted_ref": {"lecture_id": "calculus_fixture_001", "ko_id": "predicted_taylor_remainder"},
+      "matched_oracle_ref": {"lecture_id": "calculus_fixture_001", "ko_id": "taylor_remainder"},
+      "linked_oracle_refs": [
+        {"lecture_id": "calculus_fixture_001", "ko_id": "taylor_remainder"}
+      ],
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "included_in_matched_inventory": true,
+      "notes": "Exact one-to-one identity match."
+    },
+    {
+      "predicted_ref": {"lecture_id": "optimisation_fixture_001", "ko_id": "predicted_optimisation_problem"},
+      "matched_oracle_ref": {"lecture_id": "optimisation_fixture_001", "ko_id": "optimisation_problem"},
+      "linked_oracle_refs": [
+        {"lecture_id": "optimisation_fixture_001", "ko_id": "optimisation_problem"}
+      ],
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "included_in_matched_inventory": true,
+      "notes": "Exact one-to-one identity match."
+    },
+    {
+      "predicted_ref": {"lecture_id": "optimisation_fixture_001", "ko_id": "unmatched_learning_rate"},
+      "matched_oracle_ref": null,
+      "linked_oracle_refs": [],
+      "accounting_status": "unmatched_extra",
+      "identity_match": false,
+      "included_in_matched_inventory": false,
+      "notes": "Extra predicted KO is counted but excluded from A-prime and B-prime."
+    }
+  ]
+}

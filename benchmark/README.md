@@ -15,6 +15,9 @@ benchmark/
 ├── relation_annotation_guidelines.md
 ├── relation_evaluation_protocol.md
 ├── relation_holdout_plan.md
+├── predicted_ko_alignment_protocol.md
+├── predicted_ko_relation_evaluation_protocol.md
+├── predicted_ko_relation_artifact_contract.md
 ├── lectures/
 │   ├── development/
 │   │   ├── calculus_001.md
@@ -115,9 +118,9 @@ Current development assets:
 - `ground_truth/relations_development_v0_1.json`.
 
 All six current mini lectures are Relation development data because they were
-inspected during Entity Extraction and Relation prompt refinement. Prompt 002 is
-the selected development prompt candidate and is content-locked by its recorded
-SHA-256, but it is not yet the final Relation Extraction prompt.
+inspected during Entity Extraction and Relation prompt refinement. Prompt 002
+was selected as Relation Extraction prompt v0.1 after the completed development
+and holdout comparisons. Its content remains locked by its recorded SHA-256.
 
 The unseen Relation holdout is now authored and validated. It contains four new
 lectures, 41 oracle Knowledge Objects, and 40 primary-scored candidate pairs.
@@ -128,7 +131,24 @@ was frozen at `18e687d5cd7909531918b51e2d6bef38cb64a053`.
 The completed holdout was frozen at
 `5fd7e2b9ea02fad6a15f2a1a703193bd7d606c7d`. Baseline and Prompt 002 were run
 from that same clean commit, and both evaluations reached `final` after separate
-Evidence adjudication. The aggregate holdout comparison is pending.
+Evidence adjudication. The completed aggregate comparison is recorded in
+`experiments/relation_extraction/holdout_comparison.md`.
+
+Experiment 002B-1 extends the base Relation protocol to measure controlled error
+propagation from predicted Knowledge Objects. Its development protocols and
+frozen Step 3 artifact contract are:
+
+- `predicted_ko_alignment_protocol.md`;
+- `predicted_ko_relation_evaluation_protocol.md`;
+- `predicted_ko_relation_artifact_contract.md`.
+
+Predeclared synthetic fixtures for alignment, projection, matched-control
+integrity, and pipeline scoring are stored under
+`tests/fixtures/predicted_ko_relation/`. They freeze expected outcomes before
+the Step 4 implementation is written.
+
+These protocols do not redefine the Experiment 002A Relation metrics and do not
+implement candidate discovery or product Entity Resolution.
 
 ---
 

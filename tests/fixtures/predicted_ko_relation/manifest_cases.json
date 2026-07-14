@@ -1,0 +1,124 @@
+{
+  "artifact_type": "predicted_ko_manifest_fixture_matrix",
+  "version": "v0.1",
+  "base_bundle": "valid_bundle",
+  "cases": [
+    {
+      "case_id": "manifest_reused_wrong_type_endpoint",
+      "description": "One wrong-type but identity-correct KO is reused by a positive, hard-negative, and cross-lecture pair.",
+      "input": {"oracle_ref": "calculus_fixture_001::gradient", "referenced_by_pair_ids": ["rel_dev_001", "rel_dev_002", "rel_dev_003"]},
+      "expected": {
+        "evaluation_status": "final",
+        "slot_id": "ko_slot_001",
+        "unique_type_mismatch_count": 1,
+        "pair_weighted_type_mismatch_exposure": 3,
+        "projected_pair_count": 3,
+        "A_prime_type": "Concept",
+        "B_prime_type": "Method",
+        "pair_and_slot_structure_equal": true
+      }
+    },
+    {
+      "case_id": "manifest_repeated_endpoint_one_slot",
+      "description": "A KO referenced by several pairs appears once in the KO inventory.",
+      "input": {"oracle_ref": "calculus_fixture_001::gradient", "reference_count": 3},
+      "expected": {
+        "evaluation_status": "final",
+        "generated_slot_count_for_oracle_ref": 1,
+        "referenced_by_pair_ids": ["rel_dev_001", "rel_dev_002", "rel_dev_003"],
+        "duplicate_slots": 0
+      }
+    },
+    {
+      "case_id": "manifest_pair_input_order_deterministic",
+      "description": "Changing source JSON pair order does not change frozen manifest order or slot assignment.",
+      "input": {"pair_orders": [["rel_dev_004", "rel_dev_002", "rel_dev_001", "rel_dev_003"], ["rel_dev_001", "rel_dev_002", "rel_dev_003", "rel_dev_004"]]},
+      "expected": {
+        "evaluation_status": "final",
+        "manifest_pair_order": ["rel_dev_001", "rel_dev_002", "rel_dev_003", "rel_dev_004"],
+        "slot_order": ["ko_slot_001", "ko_slot_002", "ko_slot_003", "ko_slot_004"],
+        "manifest_content_equal": true
+      }
+    },
+    {
+      "case_id": "manifest_unreferenced_prediction_excluded",
+      "description": "An unmatched predicted KO is not inserted into either matched inventory.",
+      "input": {"predicted_ref": "optimisation_fixture_001::unmatched_learning_rate", "referenced_by_recoverable_pair": false},
+      "expected": {
+        "evaluation_status": "final",
+        "included_in_ko_manifest": false,
+        "included_in_A_prime": false,
+        "included_in_B_prime": false,
+        "unmatched_extra_count": 1
+      }
+    },
+    {
+      "case_id": "manifest_stale_after_pair_change",
+      "description": "A KO manifest retains the old pair-manifest hash after the pair subset changes.",
+      "input": {"ko_manifest_pair_sha256": "7777777777777777777777777777777777777777777777777777777777777777", "current_pair_manifest_sha256": "1212121212121212121212121212121212121212121212121212121212121212"},
+      "expected": {
+        "evaluation_status": "invalid",
+        "aggregate_metrics_valid": false,
+        "fatal_error_codes": ["stale_ko_manifest"]
+      }
+    },
+    {
+      "case_id": "manifest_full_recoverability",
+      "description": "Every primary pair has two distinct one-to-one endpoints.",
+      "input": {"primary_pair_count": 4, "recoverable_pair_ids": ["rel_dev_001", "rel_dev_002", "rel_dev_003", "rel_dev_004"]},
+      "expected": {
+        "evaluation_status": "final",
+        "pair_recoverability": {"numerator": 4, "denominator": 4, "value": 1.0},
+        "recoverable_primary_pairs": 4,
+        "unrecoverable_primary_pairs": 0
+      }
+    },
+    {
+      "case_id": "manifest_zero_recoverability",
+      "description": "Every primary pair has at least one correctly recorded unrecoverable endpoint.",
+      "input": {"primary_pair_count": 4, "recoverable_pair_ids": []},
+      "expected": {
+        "evaluation_status": "final",
+        "pair_recoverability": {"numerator": 0, "denominator": 4, "value": 0.0},
+        "recoverable_primary_pairs": 0,
+        "unrecoverable_primary_pairs": 4,
+        "ko_slot_count": 0
+      }
+    },
+    {
+      "case_id": "manifest_partial_recoverability",
+      "description": "Only two of four primary pairs retain both endpoints.",
+      "input": {"primary_pair_count": 4, "recoverable_pair_ids": ["rel_dev_001", "rel_dev_004"]},
+      "expected": {
+        "evaluation_status": "final",
+        "pair_recoverability": {"numerator": 2, "denominator": 4, "value": 0.5},
+        "recoverable_primary_pairs": 2,
+        "unrecoverable_primary_pairs": 2
+      }
+    },
+    {
+      "case_id": "manifest_collapsed_endpoints",
+      "description": "Two distinct Oracle endpoints map to one predicted object.",
+      "input": {"pair_id": "rel_dev_001", "oracle_endpoint_count": 2, "distinct_predicted_endpoint_count": 1},
+      "expected": {
+        "evaluation_status": "final",
+        "pair_status": "unrecoverable",
+        "unrecoverable_reasons": ["collapsed_endpoints"],
+        "included_in_primary_pairs": false,
+        "pipeline_failure_count": 1
+      }
+    },
+    {
+      "case_id": "manifest_diagnostics_separate",
+      "description": "Ambiguous and schema-gap pairs remain visible but never enter the matched primary request.",
+      "input": {"all_pair_ids": ["rel_dev_001", "rel_dev_002", "rel_dev_003", "rel_dev_004", "rel_dev_005", "rel_dev_006"]},
+      "expected": {
+        "evaluation_status": "final",
+        "primary_pair_ids": ["rel_dev_001", "rel_dev_002", "rel_dev_003", "rel_dev_004"],
+        "diagnostic_pair_ids": ["rel_dev_005", "rel_dev_006"],
+        "primary_denominator": 4,
+        "matched_request_pair_count": 4
+      }
+    }
+  ]
+}

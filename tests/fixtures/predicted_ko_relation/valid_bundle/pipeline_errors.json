@@ -1,0 +1,43 @@
+{
+  "artifact_type": "predicted_ko_pipeline_errors",
+  "version": "v0.1",
+  "evaluation_status": "final",
+  "provenance": {
+    "original_ground_truth_sha256": "6666666666666666666666666666666666666666666666666666666666666666",
+    "alignment_sha256": "5555555555555555555555555555555555555555555555555555555555555555",
+    "pair_manifest_sha256": "7777777777777777777777777777777777777777777777777777777777777777",
+    "ko_manifest_sha256": "8888888888888888888888888888888888888888888888888888888888888888",
+    "matched_ground_truth_sha256": "9999999999999999999999999999999999999999999999999999999999999999",
+    "A0_evaluation_sha256": "1919191919191919191919191919191919191919191919191919191919191919",
+    "A_prime_evaluation_sha256": "2020202020202020202020202020202020202020202020202020202020202020",
+    "B_prime_evaluation_sha256": "2121212121212121212121212121212121212121212121212121212121212121"
+  },
+  "fatal_errors": [],
+  "nonfatal_errors": [
+    {
+      "error_code": "ko_type_mismatch",
+      "pair_id": null,
+      "oracle_ref": {"lecture_id": "calculus_fixture_001", "ko_id": "gradient"},
+      "predicted_ref": {"lecture_id": "calculus_fixture_001", "ko_id": "predicted_gradient"},
+      "affected_pair_ids": ["rel_dev_001", "rel_dev_002", "rel_dev_003"],
+      "message": "The uniquely aligned Gradient object is typed Concept in Oracle input and Method in predicted input."
+    },
+    {
+      "error_code": "unmatched_extra_predicted_ko",
+      "pair_id": null,
+      "oracle_ref": null,
+      "predicted_ref": {"lecture_id": "optimisation_fixture_001", "ko_id": "unmatched_learning_rate"},
+      "affected_pair_ids": [],
+      "message": "The extra prediction is counted but excluded from both matched inventories."
+    },
+    {
+      "error_code": "b_prime_wrong_relation_type",
+      "pair_id": "rel_dev_003",
+      "oracle_ref": null,
+      "predicted_ref": null,
+      "affected_pair_ids": ["rel_dev_003"],
+      "message": "B-prime predicts RELATED_TO instead of the gold APPLIED_IN relation."
+    }
+  ],
+  "pending_items": []
+}

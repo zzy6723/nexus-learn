@@ -1,0 +1,42 @@
+{
+  "artifact_type": "synthetic_predicted_ko_inventory",
+  "version": "v0.1",
+  "split": "synthetic",
+  "knowledge_objects": [
+    {
+      "lecture_id": "calculus_fixture_001",
+      "id": "predicted_gradient",
+      "name": "Gradient",
+      "type": "Method",
+      "source_span": "The gradient collects the partial derivatives of a scalar function."
+    },
+    {
+      "lecture_id": "calculus_fixture_001",
+      "id": "predicted_gradient_descent",
+      "name": "Gradient Descent",
+      "type": "Method",
+      "source_span": "Gradient descent uses the gradient to update parameters."
+    },
+    {
+      "lecture_id": "calculus_fixture_001",
+      "id": "predicted_taylor_remainder",
+      "name": "Taylor Remainder",
+      "type": "Concept",
+      "source_span": "A Taylor remainder describes the error left after truncating a Taylor expansion."
+    },
+    {
+      "lecture_id": "optimisation_fixture_001",
+      "id": "predicted_optimisation_problem",
+      "name": "Optimisation Problem",
+      "type": "Concept",
+      "source_span": "An optimisation problem asks for an input that minimizes an objective."
+    },
+    {
+      "lecture_id": "optimisation_fixture_001",
+      "id": "unmatched_learning_rate",
+      "name": "Learning Rate",
+      "type": "Concept",
+      "source_span": "gradient descent is a method applied to such problems"
+    }
+  ]
+}

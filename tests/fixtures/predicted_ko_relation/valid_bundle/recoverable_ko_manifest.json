@@ -1,0 +1,34 @@
+{
+  "artifact_type": "recoverable_ko_manifest",
+  "version": "v0.1",
+  "split": "synthetic",
+  "derivation_version": "predicted_ko_projection_v0_1",
+  "alignment_sha256": "5555555555555555555555555555555555555555555555555555555555555555",
+  "pair_manifest_sha256": "7777777777777777777777777777777777777777777777777777777777777777",
+  "slots": [
+    {
+      "slot_id": "ko_slot_001",
+      "oracle_ref": {"lecture_id": "calculus_fixture_001", "ko_id": "gradient"},
+      "predicted_ref": {"lecture_id": "calculus_fixture_001", "ko_id": "predicted_gradient"},
+      "referenced_by_pair_ids": ["rel_dev_001", "rel_dev_002", "rel_dev_003"]
+    },
+    {
+      "slot_id": "ko_slot_002",
+      "oracle_ref": {"lecture_id": "calculus_fixture_001", "ko_id": "gradient_descent"},
+      "predicted_ref": {"lecture_id": "calculus_fixture_001", "ko_id": "predicted_gradient_descent"},
+      "referenced_by_pair_ids": ["rel_dev_001", "rel_dev_004"]
+    },
+    {
+      "slot_id": "ko_slot_003",
+      "oracle_ref": {"lecture_id": "calculus_fixture_001", "ko_id": "taylor_remainder"},
+      "predicted_ref": {"lecture_id": "calculus_fixture_001", "ko_id": "predicted_taylor_remainder"},
+      "referenced_by_pair_ids": ["rel_dev_002"]
+    },
+    {
+      "slot_id": "ko_slot_004",
+      "oracle_ref": {"lecture_id": "optimisation_fixture_001", "ko_id": "optimisation_problem"},
+      "predicted_ref": {"lecture_id": "optimisation_fixture_001", "ko_id": "predicted_optimisation_problem"},
+      "referenced_by_pair_ids": ["rel_dev_003", "rel_dev_004"]
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "artifact_type": "predicted_ko_control_integrity_fixture_matrix",
+  "version": "v0.1",
+  "base_bundle": "valid_bundle",
+  "default_expected": {
+    "evaluation_status": "invalid",
+    "aggregate_metrics_valid": false,
+    "stale_aggregate_artifacts_allowed": false
+  },
+  "cases": [
+    {
+      "case_id": "integrity_pair_id_set_mismatch",
+      "mutation": {"B_prime_pair_ids": ["rel_dev_001", "rel_dev_002", "rel_dev_003"]},
+      "expected": {"fatal_error_codes": ["matched_pair_id_set_mismatch"]}
+    },
+    {
+      "case_id": "integrity_pair_order_mismatch",
+      "mutation": {"B_prime_pair_ids": ["rel_dev_002", "rel_dev_001", "rel_dev_003", "rel_dev_004"]},
+      "expected": {"fatal_error_codes": ["matched_pair_order_mismatch"]}
+    },
+    {
+      "case_id": "integrity_ko_inventory_order_mismatch",
+      "mutation": {"B_prime_slot_ids": ["ko_slot_002", "ko_slot_001", "ko_slot_003", "ko_slot_004"]},
+      "expected": {"fatal_error_codes": ["matched_ko_order_mismatch"]}
+    },
+    {
+      "case_id": "integrity_batching_mismatch",
+      "mutation": {"B_prime_batch_plan_sha256": "1313131313131313131313131313131313131313131313131313131313131313"},
+      "expected": {"fatal_error_codes": ["matched_batching_mismatch"]}
+    },
+    {
+      "case_id": "integrity_A_prime_extra_ko",
+      "mutation": {"condition": "A_prime", "extra_slot_id": "ko_slot_005"},
+      "expected": {"fatal_error_codes": ["matched_inventory_extra_ko"]}
+    },
+    {
+      "case_id": "integrity_B_prime_extra_ko",
+      "mutation": {"condition": "B_prime", "extra_slot_id": "ko_slot_005"},
+      "expected": {"fatal_error_codes": ["matched_inventory_extra_ko"]}
+    },
+    {
+      "case_id": "integrity_slot_id_mismatch",
+      "mutation": {"condition": "B_prime", "replace_slot_id": {"from": "ko_slot_003", "to": "ko_slot_030"}},
+      "expected": {"fatal_error_codes": ["matched_slot_id_mismatch"]}
+    },
+    {
+      "case_id": "integrity_pair_slot_incidence_mismatch",
+      "mutation": {"condition": "B_prime", "pair_id": "rel_dev_004", "ko_b_slot_id": "ko_slot_003"},
+      "expected": {"fatal_error_codes": ["matched_pair_slot_incidence_mismatch"]}
+    },
+    {
+      "case_id": "integrity_lecture_hash_mismatch",
+      "mutation": {"condition": "B_prime", "lecture_id": "calculus_fixture_001", "lecture_sha256": "1414141414141414141414141414141414141414141414141414141414141414"},
+      "expected": {"fatal_error_codes": ["matched_lecture_hash_mismatch"]}
+    },
+    {
+      "case_id": "integrity_relation_prompt_hash_mismatch",
+      "mutation": {"condition": "B_prime", "relation_prompt_sha256": "1515151515151515151515151515151515151515151515151515151515151515"},
+      "expected": {"fatal_error_codes": ["matched_relation_prompt_hash_mismatch"]}
+    },
+    {
+      "case_id": "integrity_relation_schema_hash_mismatch",
+      "mutation": {"condition": "B_prime", "relation_schema_sha256": "1616161616161616161616161616161616161616161616161616161616161616"},
+      "expected": {"fatal_error_codes": ["matched_relation_schema_hash_mismatch"]}
+    },
+    {
+      "case_id": "integrity_stale_alignment_adjudication",
+      "mutation": {"resolved_alignment_snapshot_sha256": "1717171717171717171717171717171717171717171717171717171717171717", "current_alignment_snapshot_sha256": "5555555555555555555555555555555555555555555555555555555555555555"},
+      "expected": {"fatal_error_codes": ["stale_alignment_adjudication"]}
+    },
+    {
+      "case_id": "integrity_unknown_ko_reference",
+      "mutation": {"pair_id": "rel_dev_003", "unknown_oracle_ref": "calculus_fixture_001::unknown_ko"},
+      "expected": {"fatal_error_codes": ["unknown_ko_reference"]}
+    },
+    {
+      "case_id": "integrity_duplicate_pair_id",
+      "mutation": {"duplicate_pair_id": "rel_dev_002"},
+      "expected": {"fatal_error_codes": ["duplicate_pair_id"]}
+    },
+    {
+      "case_id": "integrity_duplicate_oracle_identity",
+      "mutation": {"duplicate_oracle_ref": "calculus_fixture_001::gradient"},
+      "expected": {"fatal_error_codes": ["duplicate_oracle_ko_identity"]}
+    },
+    {
+      "case_id": "integrity_duplicate_predicted_identity",
+      "mutation": {"duplicate_predicted_ref": "calculus_fixture_001::predicted_gradient"},
+      "expected": {"fatal_error_codes": ["duplicate_predicted_ko_identity"]}
+    },
+    {
+      "case_id": "integrity_stale_matched_ground_truth",
+      "mutation": {"matched_ground_truth_pair_manifest_sha256": "1818181818181818181818181818181818181818181818181818181818181818"},
+      "expected": {"fatal_error_codes": ["stale_matched_ground_truth"]}
+    },
+    {
+      "case_id": "integrity_unresolved_alignment_projected",
+      "mutation": {"oracle_ref": "calculus_fixture_001::gradient", "alignment_status": "draft_pending_adjudication", "included_in_pair_manifest": true},
+      "expected": {"fatal_error_codes": ["unresolved_alignment_projected"]}
+    },
+    {
+      "case_id": "integrity_gold_leakage_in_model_input",
+      "mutation": {"model_facing_pair_field": "relation_type", "value": "REQUIRES"},
+      "expected": {"fatal_error_codes": ["gold_relation_leakage"]}
+    }
+  ]
+}

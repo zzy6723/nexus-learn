@@ -1,0 +1,195 @@
+{
+  "artifact_type": "predicted_ko_alignment_fixture_matrix",
+  "version": "v0.1",
+  "base_oracle_inventory": "shared/synthetic_oracle_inventory.json",
+  "base_predicted_inventory": "shared/synthetic_predicted_inventory.json",
+  "cases": [
+    {
+      "case_id": "alignment_exact_one_to_one",
+      "description": "Normalized labels are equal and one predicted object identifies one Oracle object.",
+      "input": {"oracle_label": "Gradient Descent", "predicted_label": "gradient descent"},
+      "expected": {
+        "evaluation_status": "final",
+        "alignment_level": "exact",
+        "primary_structural_status": "one_to_one",
+        "identity_match": true,
+        "recoverable": true,
+        "adjudication_required": false,
+        "error_codes": []
+      }
+    },
+    {
+      "case_id": "alignment_frozen_alias_one_to_one",
+      "description": "A predeclared alias establishes a unique identity match.",
+      "input": {"oracle_label": "Partial Derivative", "predicted_label": "Partial Differentiation", "frozen_alias": true},
+      "expected": {
+        "evaluation_status": "final",
+        "alignment_level": "alias",
+        "primary_structural_status": "one_to_one",
+        "identity_match": true,
+        "recoverable": true,
+        "adjudication_required": false,
+        "error_codes": []
+      }
+    },
+    {
+      "case_id": "alignment_manual_pending",
+      "description": "A plausible semantic identity is not exact or covered by a frozen alias.",
+      "input": {"oracle_label": "First-Order Taylor Formula", "predicted_label": "Linear Taylor Approximation Formula"},
+      "expected": {
+        "evaluation_status": "draft_pending_adjudication",
+        "alignment_level": "unresolved",
+        "primary_structural_status": "ambiguous",
+        "identity_match": false,
+        "recoverable": false,
+        "adjudication_required": true,
+        "final_manifests_allowed": false,
+        "error_codes": ["manual_identity_adjudication_pending"]
+      }
+    },
+    {
+      "case_id": "alignment_manual_resolved_match",
+      "description": "A snapshot-bound manual decision accepts the same semantic identity.",
+      "input": {"pending_case_id": "alignment_manual_pending", "decision": "matched", "snapshot_matches": true},
+      "expected": {
+        "evaluation_status": "final",
+        "alignment_level": "manual",
+        "primary_structural_status": "one_to_one",
+        "identity_match": true,
+        "recoverable": true,
+        "adjudication_required": false,
+        "error_codes": []
+      }
+    },
+    {
+      "case_id": "alignment_type_mismatch_recoverable",
+      "description": "Identity is exact even though the predicted KO type is wrong.",
+      "input": {"oracle_label": "Gradient", "oracle_type": "Concept", "predicted_label": "Gradient", "predicted_type": "Method"},
+      "expected": {
+        "evaluation_status": "final",
+        "alignment_level": "exact",
+        "primary_structural_status": "one_to_one",
+        "identity_match": true,
+        "type_match": false,
+        "recoverable": true,
+        "error_codes": ["ko_type_mismatch"]
+      }
+    },
+    {
+      "case_id": "alignment_invalid_span_recoverable",
+      "description": "Identity is unique but the predicted source span is not an exact lecture substring.",
+      "input": {"oracle_label": "Gradient", "predicted_label": "Gradient", "predicted_source_span_exact": false},
+      "expected": {
+        "evaluation_status": "final",
+        "alignment_level": "exact",
+        "primary_structural_status": "one_to_one",
+        "identity_match": true,
+        "predicted_source_span_exact": false,
+        "recoverable": true,
+        "error_codes": ["predicted_source_span_invalid"]
+      }
+    },
+    {
+      "case_id": "alignment_unmatched_extra_prediction",
+      "description": "A predicted KO has no corresponding Oracle educational object.",
+      "input": {"predicted_label": "Learning Rate", "oracle_candidates": []},
+      "expected": {
+        "evaluation_status": "final",
+        "predicted_accounting_status": "unmatched_extra",
+        "identity_match": false,
+        "included_in_matched_inventory": false,
+        "recoverability_denominators_changed": false,
+        "error_codes": ["unmatched_extra_predicted_ko"]
+      }
+    },
+    {
+      "case_id": "alignment_missing_oracle_ko",
+      "description": "No predicted object plausibly identifies an Oracle endpoint.",
+      "input": {"oracle_label": "Taylor Remainder", "predicted_candidates": []},
+      "expected": {
+        "evaluation_status": "final",
+        "alignment_level": "unresolved",
+        "primary_structural_status": "missing",
+        "identity_match": false,
+        "recoverable": false,
+        "error_codes": ["missing_oracle_ko"]
+      }
+    },
+    {
+      "case_id": "alignment_duplicate_predictions",
+      "description": "Two predicted KOs each independently and completely identify one Oracle KO.",
+      "input": {"oracle_label": "Gradient", "predicted_labels": ["Gradient", "Gradient"]},
+      "expected": {
+        "evaluation_status": "final",
+        "primary_structural_status": "duplicate",
+        "structural_flags": ["duplicate"],
+        "recoverable": false,
+        "error_codes": ["duplicate_predicted_identity"]
+      }
+    },
+    {
+      "case_id": "alignment_split_prediction",
+      "description": "Two incomplete predicted KOs collectively cover one Oracle KO.",
+      "input": {"oracle_label": "Gradient Descent Update", "predicted_labels": ["Negative Gradient Direction", "Step-Size Update"]},
+      "expected": {
+        "evaluation_status": "final",
+        "primary_structural_status": "split",
+        "structural_flags": ["split"],
+        "recoverable": false,
+        "error_codes": ["split_oracle_identity"]
+      }
+    },
+    {
+      "case_id": "alignment_merged_prediction",
+      "description": "One predicted object explicitly combines two distinct Oracle KOs.",
+      "input": {"oracle_labels": ["Gradient", "Gradient Descent"], "predicted_label": "Gradient and Gradient Descent"},
+      "expected": {
+        "evaluation_status": "final",
+        "primary_structural_status": "merge",
+        "structural_flags": ["merge"],
+        "recoverable_oracle_count": 0,
+        "error_codes": ["merged_oracle_identities"]
+      }
+    },
+    {
+      "case_id": "alignment_ambiguous_multiple_matches",
+      "description": "Several predicted objects remain plausible and no mapping can be selected without adjudication.",
+      "input": {"oracle_label": "Update Rule", "predicted_labels": ["Iteration Update", "Parameter Update"]},
+      "expected": {
+        "evaluation_status": "draft_pending_adjudication",
+        "primary_structural_status": "ambiguous",
+        "recoverable": false,
+        "adjudication_required": true,
+        "final_manifests_allowed": false,
+        "error_codes": ["ambiguous_identity_match"]
+      }
+    },
+    {
+      "case_id": "alignment_same_name_different_lecture",
+      "description": "Equal labels in different lectures do not cross lecture provenance automatically.",
+      "input": {"oracle_ref": {"lecture_id": "calculus_fixture_001", "ko_id": "gradient"}, "predicted_ref": {"lecture_id": "optimisation_fixture_001", "ko_id": "gradient"}},
+      "expected": {
+        "evaluation_status": "final",
+        "oracle_primary_structural_status": "missing",
+        "predicted_accounting_status": "unmatched_extra",
+        "identity_match": false,
+        "recoverable": false,
+        "error_codes": ["lecture_provenance_mismatch"]
+      }
+    },
+    {
+      "case_id": "alignment_same_name_different_entity",
+      "description": "Equal surface labels within one lecture are not sufficient when definitions identify different educational objects.",
+      "input": {"oracle_label": "Score", "oracle_definition": "derivative of log-likelihood", "predicted_label": "Score", "predicted_definition": "classification performance value"},
+      "expected": {
+        "evaluation_status": "final",
+        "alignment_level": "unresolved",
+        "oracle_primary_structural_status": "missing",
+        "predicted_accounting_status": "unmatched_extra",
+        "identity_match": false,
+        "recoverable": false,
+        "error_codes": ["same_label_different_entity"]
+      }
+    }
+  ]
+}

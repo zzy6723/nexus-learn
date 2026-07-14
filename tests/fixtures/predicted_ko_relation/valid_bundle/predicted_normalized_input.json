@@ -1,0 +1,72 @@
+{
+  "artifact_type": "matched_relation_input",
+  "version": "v0.1",
+  "condition": "B_prime",
+  "normalization_version": "predicted_ko_name_normalization_v0_1",
+  "pair_manifest_sha256": "7777777777777777777777777777777777777777777777777777777777777777",
+  "ko_manifest_sha256": "8888888888888888888888888888888888888888888888888888888888888888",
+  "matched_ground_truth_sha256": "9999999999999999999999999999999999999999999999999999999999999999",
+  "relation_prompt_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "relation_schema_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "batch_plan_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "ko_content_sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+  "model_input_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "lecture_sha256": {
+    "calculus_fixture_001": "3333333333333333333333333333333333333333333333333333333333333333",
+    "optimisation_fixture_001": "4444444444444444444444444444444444444444444444444444444444444444"
+  },
+  "batch_id": "batch_001",
+  "batch_index": 1,
+  "batch_count": 1,
+  "model_input": {
+    "relation_schema": {
+      "allowed_relation_types": ["REQUIRES", "APPLIED_IN", "EXTENDS", "CONTRASTS_WITH", "FORMALIZES", "RELATED_TO", "NO_RELATION"]
+    },
+    "lectures": [
+      {
+        "lecture_id": "calculus_fixture_001",
+        "text": "The gradient collects the partial derivatives of a scalar function. Gradient descent uses the gradient to update parameters. A Taylor remainder describes the error left after truncating a Taylor expansion. Taylor remainders can be compared with gradient descent when studying approximation error in iterative methods."
+      },
+      {
+        "lecture_id": "optimisation_fixture_001",
+        "text": "An optimisation problem asks for an input that minimizes an objective. Gradients are applied in differentiable optimisation problems, and gradient descent is a method applied to such problems. Approximation remainders can bound errors in optimisation calculations."
+      }
+    ],
+    "knowledge_objects": [
+      {
+        "lecture_id": "calculus_fixture_001",
+        "ko_id": "ko_slot_001",
+        "name": "Gradient",
+        "type": "Method",
+        "source_spans": ["The gradient collects the partial derivatives of a scalar function."]
+      },
+      {
+        "lecture_id": "calculus_fixture_001",
+        "ko_id": "ko_slot_002",
+        "name": "Gradient Descent",
+        "type": "Method",
+        "source_spans": ["Gradient descent uses the gradient to update parameters."]
+      },
+      {
+        "lecture_id": "calculus_fixture_001",
+        "ko_id": "ko_slot_003",
+        "name": "Taylor Remainder",
+        "type": "Concept",
+        "source_spans": ["A Taylor remainder describes the error left after truncating a Taylor expansion."]
+      },
+      {
+        "lecture_id": "optimisation_fixture_001",
+        "ko_id": "ko_slot_004",
+        "name": "Optimisation Problem",
+        "type": "Concept",
+        "source_spans": ["An optimisation problem asks for an input that minimizes an objective."]
+      }
+    ],
+    "candidate_pairs": [
+      {"pair_id": "rel_dev_001", "ko_a": {"lecture_id": "calculus_fixture_001", "ko_id": "ko_slot_001"}, "ko_b": {"lecture_id": "calculus_fixture_001", "ko_id": "ko_slot_002"}},
+      {"pair_id": "rel_dev_002", "ko_a": {"lecture_id": "calculus_fixture_001", "ko_id": "ko_slot_001"}, "ko_b": {"lecture_id": "calculus_fixture_001", "ko_id": "ko_slot_003"}},
+      {"pair_id": "rel_dev_003", "ko_a": {"lecture_id": "calculus_fixture_001", "ko_id": "ko_slot_001"}, "ko_b": {"lecture_id": "optimisation_fixture_001", "ko_id": "ko_slot_004"}},
+      {"pair_id": "rel_dev_004", "ko_a": {"lecture_id": "calculus_fixture_001", "ko_id": "ko_slot_002"}, "ko_b": {"lecture_id": "optimisation_fixture_001", "ko_id": "ko_slot_004"}}
+    ]
+  }
+}

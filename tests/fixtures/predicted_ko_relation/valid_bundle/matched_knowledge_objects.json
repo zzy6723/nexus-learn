@@ -1,0 +1,70 @@
+{
+  "artifact_type": "matched_knowledge_object_ground_truth",
+  "version": "v0.1",
+  "split": "development",
+  "status": "test_fixture",
+  "created": "2026-07-14",
+  "description": "Evaluator-facing neutral-slot Oracle KO inventory derived from the canonical fixture manifest.",
+  "scope": "Supports the existing Relation checker and evaluator for the matched primary pair subset.",
+  "annotation_guidelines": "benchmark/annotation_guidelines.md",
+  "evaluation_protocol": "benchmark/evaluation_protocol.md",
+  "notes": [
+    "This artifact contains only slots referenced by recoverable primary pairs.",
+    "It is evaluator-facing and does not repair B-prime model input."
+  ],
+  "allowed_object_types": [
+    "Concept",
+    "Method",
+    "Formula"
+  ],
+  "derivation": {
+    "version": "predicted_ko_projection_v0_1",
+    "ko_manifest_sha256": "8888888888888888888888888888888888888888888888888888888888888888"
+  },
+  "lectures": [
+    {
+      "lecture_id": "calculus_fixture_001",
+      "path": "tests/fixtures/predicted_ko_relation/shared/calculus_fixture_001.md",
+      "objects": [
+        {
+          "id": "ko_slot_001",
+          "name": "Gradient",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": ["The gradient collects the partial derivatives of a scalar function."]
+        },
+        {
+          "id": "ko_slot_002",
+          "name": "Gradient Descent",
+          "type": "Method",
+          "category": "required",
+          "aliases": [],
+          "source_spans": ["Gradient descent uses the gradient to update parameters."]
+        },
+        {
+          "id": "ko_slot_003",
+          "name": "Taylor Remainder",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": ["A Taylor remainder describes the error left after truncating a Taylor expansion."]
+        }
+      ]
+    },
+    {
+      "lecture_id": "optimisation_fixture_001",
+      "path": "tests/fixtures/predicted_ko_relation/shared/optimisation_fixture_001.md",
+      "objects": [
+        {
+          "id": "ko_slot_004",
+          "name": "Optimisation Problem",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": ["An optimisation problem asks for an input that minimizes an objective."]
+        }
+      ]
+    }
+  ]
+}

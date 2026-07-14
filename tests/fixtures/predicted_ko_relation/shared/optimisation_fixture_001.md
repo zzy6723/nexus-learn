@@ -1,0 +1,1 @@
+An optimisation problem asks for an input that minimizes an objective. Gradients are applied in differentiable optimisation problems, and gradient descent is a method applied to such problems. Approximation remainders can bound errors in optimisation calculations.

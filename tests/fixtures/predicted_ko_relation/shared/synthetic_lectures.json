@@ -1,0 +1,15 @@
+{
+  "artifact_type": "synthetic_lecture_inventory",
+  "version": "v0.1",
+  "split": "synthetic",
+  "lectures": [
+    {
+      "lecture_id": "calculus_fixture_001",
+      "text": "The gradient collects the partial derivatives of a scalar function. Gradient descent uses the gradient to update parameters. A Taylor remainder describes the error left after truncating a Taylor expansion. Taylor remainders can be compared with gradient descent when studying approximation error in iterative methods."
+    },
+    {
+      "lecture_id": "optimisation_fixture_001",
+      "text": "An optimisation problem asks for an input that minimizes an objective. Gradients are applied in differentiable optimisation problems, and gradient descent is a method applied to such problems. Approximation remainders can bound errors in optimisation calculations."
+    }
+  ]
+}

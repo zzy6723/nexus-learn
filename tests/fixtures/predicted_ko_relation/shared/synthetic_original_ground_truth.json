@@ -1,0 +1,114 @@
+{
+  "artifact_type": "synthetic_original_relation_ground_truth",
+  "version": "v0.1",
+  "split": "development",
+  "status": "test_fixture",
+  "description": "Synthetic Relation ground truth for Experiment 002B-1 pipeline fixtures.",
+  "annotation_guidelines": "benchmark/relation_annotation_guidelines.md",
+  "evaluation_protocol": "benchmark/relation_evaluation_protocol.md",
+  "knowledge_object_ground_truths": [
+    "tests/fixtures/predicted_ko_relation/shared/synthetic_oracle_inventory.json"
+  ],
+  "notes": [
+    "This file tests pipeline mechanics and is not a benchmark result.",
+    "Only positive and hard_negative categories enter primary 002B-1 denominators."
+  ],
+  "allowed_relation_types": [
+    "REQUIRES",
+    "APPLIED_IN",
+    "EXTENDS",
+    "CONTRASTS_WITH",
+    "FORMALIZES",
+    "RELATED_TO",
+    "NO_RELATION"
+  ],
+  "primary_scoring_categories": [
+    "positive",
+    "hard_negative"
+  ],
+  "relation_coverage": {
+    "REQUIRES": "synthetic_primary_coverage",
+    "APPLIED_IN": "synthetic_primary_coverage",
+    "EXTENDS": "not_covered",
+    "CONTRASTS_WITH": "not_covered",
+    "FORMALIZES": "not_covered",
+    "RELATED_TO": "diagnostic_only",
+    "NO_RELATION": "synthetic_primary_coverage"
+  },
+  "lectures": [
+    "calculus_fixture_001",
+    "optimisation_fixture_001"
+  ],
+  "pairs": [
+    {
+      "pair_id": "rel_dev_001",
+      "category": "positive",
+      "source": {"lecture_id": "calculus_fixture_001", "ko_id": "gradient_descent"},
+      "target": {"lecture_id": "calculus_fixture_001", "ko_id": "gradient"},
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {"lecture_id": "calculus_fixture_001", "span": "Gradient descent uses the gradient to update parameters."}
+      ],
+      "rationale": "Gradient descent uses the gradient."
+    },
+    {
+      "pair_id": "rel_dev_002",
+      "category": "hard_negative",
+      "source": {"lecture_id": "calculus_fixture_001", "ko_id": "gradient"},
+      "target": {"lecture_id": "calculus_fixture_001", "ko_id": "taylor_remainder"},
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The fixture text does not establish a direct v0.1 relation."
+    },
+    {
+      "pair_id": "rel_dev_003",
+      "category": "positive",
+      "source": {"lecture_id": "calculus_fixture_001", "ko_id": "gradient"},
+      "target": {"lecture_id": "optimisation_fixture_001", "ko_id": "optimisation_problem"},
+      "relation_type": "APPLIED_IN",
+      "symmetric": false,
+      "evidence_spans": [
+        {"lecture_id": "optimisation_fixture_001", "span": "Gradients are applied in differentiable optimisation problems"}
+      ],
+      "rationale": "Gradients are applied in differentiable optimisation problems."
+    },
+    {
+      "pair_id": "rel_dev_004",
+      "category": "positive",
+      "source": {"lecture_id": "calculus_fixture_001", "ko_id": "gradient_descent"},
+      "target": {"lecture_id": "optimisation_fixture_001", "ko_id": "optimisation_problem"},
+      "relation_type": "APPLIED_IN",
+      "symmetric": false,
+      "evidence_spans": [
+        {"lecture_id": "optimisation_fixture_001", "span": "gradient descent is a method applied to such problems"}
+      ],
+      "rationale": "Gradient descent is applied to optimisation problems."
+    },
+    {
+      "pair_id": "rel_dev_005",
+      "category": "ambiguous",
+      "source": {"lecture_id": "calculus_fixture_001", "ko_id": "gradient_descent"},
+      "target": {"lecture_id": "calculus_fixture_001", "ko_id": "taylor_remainder"},
+      "relation_type": "RELATED_TO",
+      "symmetric": false,
+      "evidence_spans": [
+        {"lecture_id": "calculus_fixture_001", "span": "Taylor remainders can be compared with gradient descent when studying approximation error in iterative methods."}
+      ],
+      "rationale": "Diagnostic-only synthetic ambiguity."
+    },
+    {
+      "pair_id": "rel_dev_006",
+      "category": "schema_gap",
+      "source": {"lecture_id": "calculus_fixture_001", "ko_id": "taylor_remainder"},
+      "target": {"lecture_id": "optimisation_fixture_001", "ko_id": "optimisation_problem"},
+      "relation_type": "RELATED_TO",
+      "symmetric": false,
+      "evidence_spans": [
+        {"lecture_id": "optimisation_fixture_001", "span": "Approximation remainders can bound errors in optimisation calculations."}
+      ],
+      "rationale": "Diagnostic-only synthetic schema gap."
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "artifact_type": "recoverable_pair_manifest",
+  "version": "v0.1",
+  "split": "synthetic",
+  "derivation_version": "predicted_ko_projection_v0_1",
+  "original_ground_truth_sha256": "6666666666666666666666666666666666666666666666666666666666666666",
+  "alignment_sha256": "5555555555555555555555555555555555555555555555555555555555555555",
+  "primary_scoring_categories": [
+    "positive",
+    "hard_negative"
+  ],
+  "original_primary_pair_count": 4,
+  "primary_pairs": [
+    {
+      "pair_id": "rel_dev_001",
+      "category": "positive",
+      "ko_a_slot_id": "ko_slot_001",
+      "ko_b_slot_id": "ko_slot_002",
+      "ko_a_mapping": {
+        "oracle_ref": {"lecture_id": "calculus_fixture_001", "ko_id": "gradient"},
+        "predicted_ref": {"lecture_id": "calculus_fixture_001", "ko_id": "predicted_gradient"}
+      },
+      "ko_b_mapping": {
+        "oracle_ref": {"lecture_id": "calculus_fixture_001", "ko_id": "gradient_descent"},
+        "predicted_ref": {"lecture_id": "calculus_fixture_001", "ko_id": "predicted_gradient_descent"}
+      },
+      "pair_status": "recoverable"
+    },
+    {
+      "pair_id": "rel_dev_002",
+      "category": "hard_negative",
+      "ko_a_slot_id": "ko_slot_001",
+      "ko_b_slot_id": "ko_slot_003",
+      "ko_a_mapping": {
+        "oracle_ref": {"lecture_id": "calculus_fixture_001", "ko_id": "gradient"},
+        "predicted_ref": {"lecture_id": "calculus_fixture_001", "ko_id": "predicted_gradient"}
+      },
+      "ko_b_mapping": {
+        "oracle_ref": {"lecture_id": "calculus_fixture_001", "ko_id": "taylor_remainder"},
+        "predicted_ref": {"lecture_id": "calculus_fixture_001", "ko_id": "predicted_taylor_remainder"}
+      },
+      "pair_status": "recoverable"
+    },
+    {
+      "pair_id": "rel_dev_003",
+      "category": "positive",
+      "ko_a_slot_id": "ko_slot_001",
+      "ko_b_slot_id": "ko_slot_004",
+      "ko_a_mapping": {
+        "oracle_ref": {"lecture_id": "calculus_fixture_001", "ko_id": "gradient"},
+        "predicted_ref": {"lecture_id": "calculus_fixture_001", "ko_id": "predicted_gradient"}
+      },
+      "ko_b_mapping": {
+        "oracle_ref": {"lecture_id": "optimisation_fixture_001", "ko_id": "optimisation_problem"},
+        "predicted_ref": {"lecture_id": "optimisation_fixture_001", "ko_id": "predicted_optimisation_problem"}
+      },
+      "pair_status": "recoverable"
+    },
+    {
+      "pair_id": "rel_dev_004",
+      "category": "positive",
+      "ko_a_slot_id": "ko_slot_002",
+      "ko_b_slot_id": "ko_slot_004",
+      "ko_a_mapping": {
+        "oracle_ref": {"lecture_id": "calculus_fixture_001", "ko_id": "gradient_descent"},
+        "predicted_ref": {"lecture_id": "calculus_fixture_001", "ko_id": "predicted_gradient_descent"}
+      },
+      "ko_b_mapping": {
+        "oracle_ref": {"lecture_id": "optimisation_fixture_001", "ko_id": "optimisation_problem"},
+        "predicted_ref": {"lecture_id": "optimisation_fixture_001", "ko_id": "predicted_optimisation_problem"}
+      },
+      "pair_status": "recoverable"
+    }
+  ],
+  "unrecoverable_primary_pairs": [],
+  "diagnostic_pairs": [
+    {
+      "pair_id": "rel_dev_005",
+      "category": "ambiguous",
+      "excluded_from_primary": true
+    },
+    {
+      "pair_id": "rel_dev_006",
+      "category": "schema_gap",
+      "excluded_from_primary": true
+    }
+  ]
+}

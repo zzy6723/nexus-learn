@@ -1,0 +1,73 @@
+{
+  "version": "v0.1",
+  "split": "development",
+  "status": "test_fixture",
+  "created": "2026-07-14",
+  "description": "Synthetic Oracle Knowledge Object inventory for Experiment 002B-1 fixtures.",
+  "scope": "Tests predicted-KO alignment, projection, and pipeline evaluation without model execution.",
+  "annotation_guidelines": "benchmark/annotation_guidelines.md",
+  "evaluation_protocol": "benchmark/evaluation_protocol.md",
+  "notes": [
+    "This fixture is not a development or holdout benchmark.",
+    "The Gradient type mismatch appears only in the predicted inventory."
+  ],
+  "allowed_object_types": [
+    "Concept",
+    "Method",
+    "Formula"
+  ],
+  "lectures": [
+    {
+      "lecture_id": "calculus_fixture_001",
+      "path": "tests/fixtures/predicted_ko_relation/shared/calculus_fixture_001.md",
+      "objects": [
+        {
+          "id": "gradient",
+          "name": "Gradient",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "The gradient collects the partial derivatives of a scalar function."
+          ]
+        },
+        {
+          "id": "gradient_descent",
+          "name": "Gradient Descent",
+          "type": "Method",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "Gradient descent uses the gradient to update parameters."
+          ]
+        },
+        {
+          "id": "taylor_remainder",
+          "name": "Taylor Remainder",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "A Taylor remainder describes the error left after truncating a Taylor expansion."
+          ]
+        }
+      ]
+    },
+    {
+      "lecture_id": "optimisation_fixture_001",
+      "path": "tests/fixtures/predicted_ko_relation/shared/optimisation_fixture_001.md",
+      "objects": [
+        {
+          "id": "optimisation_problem",
+          "name": "Optimisation Problem",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "An optimisation problem asks for an input that minimizes an objective."
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "artifact_type": "predicted_ko_pipeline_metrics",
+  "version": "v0.1",
+  "evaluation_status": "final",
+  "aggregate_metrics_valid": true,
+  "provenance": {
+    "original_ground_truth_sha256": "6666666666666666666666666666666666666666666666666666666666666666",
+    "alignment_sha256": "5555555555555555555555555555555555555555555555555555555555555555",
+    "pair_manifest_sha256": "7777777777777777777777777777777777777777777777777777777777777777",
+    "ko_manifest_sha256": "8888888888888888888888888888888888888888888888888888888888888888",
+    "matched_ground_truth_sha256": "9999999999999999999999999999999999999999999999999999999999999999",
+    "A0_evaluation_sha256": "1919191919191919191919191919191919191919191919191919191919191919",
+    "A_prime_evaluation_sha256": "2020202020202020202020202020202020202020202020202020202020202020",
+    "B_prime_evaluation_sha256": "2121212121212121212121212121212121212121212121212121212121212121"
+  },
+  "denominators": {
+    "all_primary_pairs": 4,
+    "positive_primary_pairs": 3,
+    "hard_negative_primary_pairs": 1,
+    "unique_primary_endpoint_kos": 4,
+    "primary_pair_endpoint_positions": 8,
+    "diagnostic_pairs": 2
+  },
+  "alignment_metrics": {
+    "unique_endpoint_recovery": {"numerator": 4, "denominator": 4, "value": 1.0},
+    "pair_weighted_endpoint_recovery": {"numerator": 8, "denominator": 8, "value": 1.0},
+    "unique_endpoint_type_match": {"numerator": 3, "denominator": 4, "value": 0.75}
+  },
+  "pair_recoverability": {
+    "overall": {"numerator": 4, "denominator": 4, "value": 1.0},
+    "positive": {"numerator": 3, "denominator": 3, "value": 1.0},
+    "hard_negative": {"numerator": 1, "denominator": 1, "value": 1.0},
+    "within_lecture": {"numerator": 2, "denominator": 2, "value": 1.0},
+    "cross_lecture": {"numerator": 2, "denominator": 2, "value": 1.0}
+  },
+  "conditional_A_prime": {
+    "strict_edge_accuracy": {"numerator": 4, "denominator": 4, "value": 1.0},
+    "relation_type_accuracy": {"numerator": 4, "denominator": 4, "value": 1.0},
+    "positive_relation_accuracy": {"numerator": 3, "denominator": 3, "value": 1.0},
+    "no_relation_accuracy": {"numerator": 1, "denominator": 1, "value": 1.0},
+    "endpoint_direction_accuracy": {"numerator": 3, "denominator": 3, "value": 1.0},
+    "direction_accuracy_when_type_correct": {"numerator": 3, "denominator": 3, "value": 1.0},
+    "exact_evidence_span_rate": {"numerator": 3, "denominator": 3, "value": 1.0},
+    "semantic_evidence_support_rate": {"numerator": 3, "denominator": 3, "value": 1.0}
+  },
+  "conditional_B_prime": {
+    "strict_edge_accuracy": {"numerator": 3, "denominator": 4, "value": 0.75},
+    "relation_type_accuracy": {"numerator": 3, "denominator": 4, "value": 0.75},
+    "positive_relation_accuracy": {"numerator": 2, "denominator": 3, "value": 0.6666666666666666},
+    "no_relation_accuracy": {"numerator": 1, "denominator": 1, "value": 1.0},
+    "endpoint_direction_accuracy": {"numerator": 3, "denominator": 3, "value": 1.0},
+    "direction_accuracy_when_type_correct": {"numerator": 2, "denominator": 2, "value": 1.0},
+    "exact_evidence_span_rate": {"numerator": 3, "denominator": 3, "value": 1.0},
+    "semantic_evidence_support_rate": {"numerator": 3, "denominator": 3, "value": 1.0}
+  },
+  "pipeline_metrics": {
+    "strict_success": {"numerator": 3, "denominator": 4, "value": 0.75},
+    "positive_strict_success": {"numerator": 2, "denominator": 3, "value": 0.6666666666666666},
+    "hard_negative_strict_success": {"numerator": 1, "denominator": 1, "value": 1.0},
+    "recoverability_times_conditional_strict": 0.75
+  },
+  "counts": {
+    "unique_type_mismatches": 1,
+    "pair_weighted_type_mismatch_exposure": 3,
+    "unmatched_extra_predictions": 1,
+    "unrecoverable_primary_pairs": 0,
+    "diagnostic_pairs_excluded": 2,
+    "fatal_errors": 0,
+    "pending_items": 0
+  }
+}
