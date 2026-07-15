@@ -1,0 +1,85 @@
+{
+  "lecture_id": "linear_algebra_001",
+  "knowledge_objects": [
+    {
+      "id": "vector_space",
+      "name": "Vector Space",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "A set of objects called vectors that can be added together and multiplied by scalars while satisfying the vector space axioms.",
+      "source_span": "A vector space is a set of objects called vectors that can be added together and multiplied by scalars while satisfying the vector space axioms."
+    },
+    {
+      "id": "basis",
+      "name": "Basis",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "A set of independent vectors that can represent every vector in the space through linear combinations.",
+      "source_span": "A basis is a set of independent vectors that can represent every vector in the space through linear combinations."
+    },
+    {
+      "id": "dimension",
+      "name": "Dimension",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "The number of vectors in a basis of a vector space.",
+      "source_span": "The number of vectors in a basis is the dimension of the vector space."
+    },
+    {
+      "id": "matrix",
+      "name": "Matrix",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "A rectangular array of numbers that can represent a linear transformation once bases have been chosen for the input and output spaces.",
+      "source_span": "A matrix is a rectangular array of numbers that can represent a linear transformation once bases have been chosen for the input and output spaces."
+    },
+    {
+      "id": "linear_transformation",
+      "name": "Linear Transformation",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "A mapping between vector spaces that can be represented by a matrix once bases are chosen.",
+      "source_span": "a linear transformation"
+    },
+    {
+      "id": "matrix_multiplication",
+      "name": "Matrix Multiplication",
+      "type": "Method",
+      "aliases": [],
+      "short_definition": "The operation that corresponds to composing linear transformations.",
+      "source_span": "Matrix multiplication corresponds to composing linear transformations"
+    },
+    {
+      "id": "eigenvector",
+      "name": "Eigenvector",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "A nonzero vector whose direction is preserved by the transformation represented by a square matrix.",
+      "source_span": "an eigenvector is a nonzero vector v whose direction is preserved by the transformation represented by A"
+    },
+    {
+      "id": "eigenvalue",
+      "name": "Eigenvalue",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "The scalar factor by which an eigenvector is scaled under a linear transformation.",
+      "source_span": "The corresponding eigenvalue λ satisfies Av = λ v."
+    },
+    {
+      "id": "characteristic_polynomial",
+      "name": "Characteristic Polynomial",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "The polynomial det(λI - A) whose roots are the eigenvalues of a square matrix.",
+      "source_span": "the characteristic polynomial det(λI - A)"
+    },
+    {
+      "id": "eigenvalue_equation",
+      "name": "Eigenvalue Equation",
+      "type": "Formula",
+      "aliases": [],
+      "short_definition": "The equation Av = λ v relating a matrix, its eigenvector, and eigenvalue.",
+      "source_span": "Av = λ v"
+    }
+  ]
+}

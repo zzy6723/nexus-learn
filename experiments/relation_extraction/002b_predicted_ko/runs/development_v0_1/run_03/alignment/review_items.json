@@ -1,0 +1,24 @@
+{
+  "artifact_type": "predicted_ko_alignment_review_items",
+  "version": "v0.1",
+  "items": [
+    {
+      "item_id": "review_calculus_001_first_order_taylor_formula",
+      "oracle_refs": [
+        {
+          "lecture_id": "calculus_001",
+          "ko_id": "first_order_taylor_formula"
+        }
+      ],
+      "candidate_predicted_refs": [
+        {
+          "lecture_id": "calculus_001",
+          "ko_id": "first_order_taylor_approximation"
+        }
+      ],
+      "proposed_alignment_level": "manual",
+      "proposed_primary_structural_status": "ambiguous",
+      "reason_code": "manual_identity_adjudication_pending"
+    }
+  ]
+}

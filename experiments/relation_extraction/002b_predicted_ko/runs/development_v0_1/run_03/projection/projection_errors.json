@@ -1,0 +1,231 @@
+{
+  "artifact_type": "predicted_ko_projection_diagnostics",
+  "diagnostic_pairs": [
+    {
+      "category": "ambiguous",
+      "excluded_from_primary": true,
+      "pair_id": "rel_dev_008"
+    },
+    {
+      "category": "schema_gap",
+      "excluded_from_primary": true,
+      "pair_id": "rel_dev_034"
+    },
+    {
+      "category": "ambiguous",
+      "excluded_from_primary": true,
+      "pair_id": "rel_dev_041"
+    }
+  ],
+  "evaluation_status": "final",
+  "pair_recoverability": {
+    "denominator": 38,
+    "numerator": 36,
+    "value": 0.9473684210526315
+  },
+  "recoverable_slot_quality_flags": [
+    {
+      "flags": [
+        "predicted_source_span_invalid"
+      ],
+      "oracle_ref": {
+        "ko_id": "directional_derivative",
+        "lecture_id": "calculus_001"
+      },
+      "predicted_ref": {
+        "ko_id": "directional_derivative",
+        "lecture_id": "calculus_001"
+      },
+      "slot_id": "ko_slot_001"
+    },
+    {
+      "flags": [
+        "predicted_source_span_invalid"
+      ],
+      "oracle_ref": {
+        "ko_id": "first_order_taylor_formula",
+        "lecture_id": "calculus_001"
+      },
+      "predicted_ref": {
+        "ko_id": "first_order_taylor_approximation",
+        "lecture_id": "calculus_001"
+      },
+      "slot_id": "ko_slot_002"
+    },
+    {
+      "flags": [
+        "predicted_source_span_invalid"
+      ],
+      "oracle_ref": {
+        "ko_id": "gradient",
+        "lecture_id": "calculus_001"
+      },
+      "predicted_ref": {
+        "ko_id": "gradient",
+        "lecture_id": "calculus_001"
+      },
+      "slot_id": "ko_slot_003"
+    },
+    {
+      "flags": [
+        "predicted_source_span_invalid"
+      ],
+      "oracle_ref": {
+        "ko_id": "partial_derivative",
+        "lecture_id": "calculus_001"
+      },
+      "predicted_ref": {
+        "ko_id": "partial_derivative",
+        "lecture_id": "calculus_001"
+      },
+      "slot_id": "ko_slot_005"
+    },
+    {
+      "flags": [
+        "ko_type_mismatch"
+      ],
+      "oracle_ref": {
+        "ko_id": "taylor_approximation",
+        "lecture_id": "calculus_001"
+      },
+      "predicted_ref": {
+        "ko_id": "taylor_approximation",
+        "lecture_id": "calculus_001"
+      },
+      "slot_id": "ko_slot_007"
+    },
+    {
+      "flags": [
+        "ko_type_mismatch",
+        "predicted_source_span_invalid"
+      ],
+      "oracle_ref": {
+        "ko_id": "chain_rule",
+        "lecture_id": "calculus_002"
+      },
+      "predicted_ref": {
+        "ko_id": "chain_rule",
+        "lecture_id": "calculus_002"
+      },
+      "slot_id": "ko_slot_008"
+    },
+    {
+      "flags": [
+        "predicted_source_span_invalid"
+      ],
+      "oracle_ref": {
+        "ko_id": "composite_function",
+        "lecture_id": "calculus_002"
+      },
+      "predicted_ref": {
+        "ko_id": "composite_function",
+        "lecture_id": "calculus_002"
+      },
+      "slot_id": "ko_slot_009"
+    },
+    {
+      "flags": [
+        "predicted_source_span_invalid"
+      ],
+      "oracle_ref": {
+        "ko_id": "jacobian_matrix",
+        "lecture_id": "calculus_002"
+      },
+      "predicted_ref": {
+        "ko_id": "jacobian_matrix",
+        "lecture_id": "calculus_002"
+      },
+      "slot_id": "ko_slot_010"
+    },
+    {
+      "flags": [
+        "predicted_source_span_invalid"
+      ],
+      "oracle_ref": {
+        "ko_id": "multivariable_chain_rule_formula",
+        "lecture_id": "calculus_002"
+      },
+      "predicted_ref": {
+        "ko_id": "multivariable_chain_rule_formula",
+        "lecture_id": "calculus_002"
+      },
+      "slot_id": "ko_slot_011"
+    },
+    {
+      "flags": [
+        "predicted_source_span_invalid"
+      ],
+      "oracle_ref": {
+        "ko_id": "eigenvalue",
+        "lecture_id": "linear_algebra_001"
+      },
+      "predicted_ref": {
+        "ko_id": "eigenvalue",
+        "lecture_id": "linear_algebra_001"
+      },
+      "slot_id": "ko_slot_014"
+    },
+    {
+      "flags": [
+        "predicted_source_span_invalid"
+      ],
+      "oracle_ref": {
+        "ko_id": "eigenvalue_equation",
+        "lecture_id": "linear_algebra_001"
+      },
+      "predicted_ref": {
+        "ko_id": "eigenvalue_equation",
+        "lecture_id": "linear_algebra_001"
+      },
+      "slot_id": "ko_slot_015"
+    },
+    {
+      "flags": [
+        "predicted_source_span_invalid"
+      ],
+      "oracle_ref": {
+        "ko_id": "gradient_descent_update",
+        "lecture_id": "optimisation_001"
+      },
+      "predicted_ref": {
+        "ko_id": "gradient_descent_update",
+        "lecture_id": "optimisation_001"
+      },
+      "slot_id": "ko_slot_029"
+    },
+    {
+      "flags": [
+        "ko_type_mismatch"
+      ],
+      "oracle_ref": {
+        "ko_id": "bayes_rule",
+        "lecture_id": "probability_001"
+      },
+      "predicted_ref": {
+        "ko_id": "bayes_rule",
+        "lecture_id": "probability_001"
+      },
+      "slot_id": "ko_slot_035"
+    }
+  ],
+  "unmatched_extra_predicted_kos": [],
+  "unrecoverable_primary_pairs": [
+    {
+      "category": "positive",
+      "pair_id": "rel_dev_029",
+      "pair_status": "unrecoverable",
+      "unrecoverable_reasons": [
+        "missing_endpoint"
+      ]
+    },
+    {
+      "category": "hard_negative",
+      "pair_id": "rel_dev_037",
+      "pair_status": "unrecoverable",
+      "unrecoverable_reasons": [
+        "missing_endpoint"
+      ]
+    }
+  ],
+  "version": "v0.1"
+}

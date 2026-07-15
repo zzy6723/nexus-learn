@@ -1,0 +1,28 @@
+{
+  "id": "2b8ea076-0308-4021-9d24-af9c7add3334",
+  "object": "chat.completion",
+  "created": 1784124754,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"lecture_id\": \"linear_algebra_001\",\n  \"knowledge_objects\": [\n    {\n      \"id\": \"vector_space\",\n      \"name\": \"Vector Space\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"A set of objects called vectors that can be added together and multiplied by scalars while satisfying the vector space axioms.\",\n      \"source_span\": \"A vector space is a set of objects called vectors that can be added together and multiplied by scalars while satisfying the vector space axioms.\"\n    },\n    {\n      \"id\": \"basis\",\n      \"name\": \"Basis\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"A set of independent vectors that can represent every vector in the space through linear combinations.\",\n      \"source_span\": \"A basis is a set of independent vectors that can represent every vector in the space through linear combinations.\"\n    },\n    {\n      \"id\": \"dimension\",\n      \"name\": \"Dimension\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"The number of vectors in a basis of a vector space.\",\n      \"source_span\": \"The number of vectors in a basis is the dimension of the vector space.\"\n    },\n    {\n      \"id\": \"matrix\",\n      \"name\": \"Matrix\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"A rectangular array of numbers that can represent a linear transformation once bases have been chosen for the input and output spaces.\",\n      \"source_span\": \"A matrix is a rectangular array of numbers that can represent a linear transformation once bases have been chosen for the input and output spaces.\"\n    },\n    {\n      \"id\": \"linear_transformation\",\n      \"name\": \"Linear Transformation\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"A mapping between vector spaces that can be represented by a matrix once bases are chosen.\",\n      \"source_span\": \"a linear transformation\"\n    },\n    {\n      \"id\": \"matrix_multiplication\",\n      \"name\": \"Matrix Multiplication\",\n      \"type\": \"Method\",\n      \"aliases\": [],\n      \"short_definition\": \"The operation that corresponds to composing linear transformations.\",\n      \"source_span\": \"Matrix multiplication corresponds to composing linear transformations\"\n    },\n    {\n      \"id\": \"eigenvector\",\n      \"name\": \"Eigenvector\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"A nonzero vector whose direction is preserved by the transformation represented by a square matrix.\",\n      \"source_span\": \"an eigenvector is a nonzero vector v whose direction is preserved by the transformation represented by A\"\n    },\n    {\n      \"id\": \"eigenvalue\",\n      \"name\": \"Eigenvalue\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"The scalar factor by which an eigenvector is scaled under a linear transformation.\",\n      \"source_span\": \"The corresponding eigenvalue λ satisfies Av = λ v.\"\n    },\n    {\n      \"id\": \"characteristic_polynomial\",\n      \"name\": \"Characteristic Polynomial\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"The polynomial det(λI - A) whose roots are the eigenvalues of a square matrix.\",\n      \"source_span\": \"the characteristic polynomial det(λI - A)\"\n    },\n    {\n      \"id\": \"eigenvalue_equation\",\n      \"name\": \"Eigenvalue Equation\",\n      \"type\": \"Formula\",\n      \"aliases\": [],\n      \"short_definition\": \"The equation Av = λ v relating a matrix, its eigenvector, and eigenvalue.\",\n      \"source_span\": \"Av = λ v\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 691,
+    "completion_tokens": 818,
+    "total_tokens": 1509,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 691
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

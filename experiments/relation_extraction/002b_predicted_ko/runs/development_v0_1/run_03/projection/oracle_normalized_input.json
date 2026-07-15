@@ -1,0 +1,853 @@
+{
+  "artifact_type": "matched_relation_input",
+  "batch_count": 1,
+  "batch_id": "batch_001",
+  "batch_index": 1,
+  "batch_plan_sha256": "d45095b117bd35cf77b44f2d110e52f73e8eefdd1b0bfae376eaa1f376796ff2",
+  "condition": "A_prime",
+  "ko_content_sha256": "155e03ccab8630957a585cd5859518245c926d9a732b9f22ac9e5527e36cb32f",
+  "ko_manifest_sha256": "d5013426d2fe6b0a86ffafc1c368df61549bcb8ba90ac7478427d03b8cc544f4",
+  "lecture_sha256": {
+    "calculus_001": "00d884e75bd5f6357ddda700b9c75dd671beac85b70cec8c0809b72107fdc2e5",
+    "calculus_002": "72a6f9272c0cc04008aa6f321f8c65b0dc77dd524bee9f0bc90ffca1e339502c",
+    "linear_algebra_001": "7b0837306f0c58c4bd631f40b1e7eb0a099ee29500fe831ca48258b403e3a521",
+    "linear_algebra_002": "3dc3988a5349037895e62f9385f190702cfed5f76d78ee49d736e9cf45f09f84",
+    "optimisation_001": "693903178d836b5b66fd47e32a7c5554c5716667aafcb0a140729ccf4be1a299",
+    "probability_001": "0e31a3e291c7581b4f5466b472fbdd285616577e38f1f49ebe18bbf4d1a27161"
+  },
+  "matched_ground_truth_sha256": "b03869da9ad9ef1e4349502bd713f015fd404a7de109dbc6a12b69d6b6f2e2a9",
+  "model_input": {
+    "candidate_pairs": [
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_003",
+          "lecture_id": "calculus_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_005",
+          "lecture_id": "calculus_001"
+        },
+        "pair_id": "rel_dev_001"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_001",
+          "lecture_id": "calculus_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_003",
+          "lecture_id": "calculus_001"
+        },
+        "pair_id": "rel_dev_002"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_003",
+          "lecture_id": "calculus_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_006",
+          "lecture_id": "calculus_001"
+        },
+        "pair_id": "rel_dev_003"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_002",
+          "lecture_id": "calculus_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_007",
+          "lecture_id": "calculus_001"
+        },
+        "pair_id": "rel_dev_004"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_012",
+          "lecture_id": "linear_algebra_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_018",
+          "lecture_id": "linear_algebra_001"
+        },
+        "pair_id": "rel_dev_005"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_012",
+          "lecture_id": "linear_algebra_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_013",
+          "lecture_id": "linear_algebra_001"
+        },
+        "pair_id": "rel_dev_006"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_016",
+          "lecture_id": "linear_algebra_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_017",
+          "lecture_id": "linear_algebra_001"
+        },
+        "pair_id": "rel_dev_007"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_014",
+          "lecture_id": "linear_algebra_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_015",
+          "lecture_id": "linear_algebra_001"
+        },
+        "pair_id": "rel_dev_009"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_031",
+          "lecture_id": "optimisation_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_032",
+          "lecture_id": "optimisation_001"
+        },
+        "pair_id": "rel_dev_010"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_032",
+          "lecture_id": "optimisation_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_034",
+          "lecture_id": "optimisation_001"
+        },
+        "pair_id": "rel_dev_011"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_027",
+          "lecture_id": "optimisation_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_028",
+          "lecture_id": "optimisation_001"
+        },
+        "pair_id": "rel_dev_012"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_028",
+          "lecture_id": "optimisation_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_029",
+          "lecture_id": "optimisation_001"
+        },
+        "pair_id": "rel_dev_013"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_028",
+          "lecture_id": "optimisation_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_033",
+          "lecture_id": "optimisation_001"
+        },
+        "pair_id": "rel_dev_014"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_008",
+          "lecture_id": "calculus_002"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_009",
+          "lecture_id": "calculus_002"
+        },
+        "pair_id": "rel_dev_015"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_008",
+          "lecture_id": "calculus_002"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_011",
+          "lecture_id": "calculus_002"
+        },
+        "pair_id": "rel_dev_016"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_010",
+          "lecture_id": "calculus_002"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_011",
+          "lecture_id": "calculus_002"
+        },
+        "pair_id": "rel_dev_017"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_020",
+          "lecture_id": "linear_algebra_002"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_024",
+          "lecture_id": "linear_algebra_002"
+        },
+        "pair_id": "rel_dev_018"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_023",
+          "lecture_id": "linear_algebra_002"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_025",
+          "lecture_id": "linear_algebra_002"
+        },
+        "pair_id": "rel_dev_019"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_021",
+          "lecture_id": "linear_algebra_002"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_023",
+          "lecture_id": "linear_algebra_002"
+        },
+        "pair_id": "rel_dev_020"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_021",
+          "lecture_id": "linear_algebra_002"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_022",
+          "lecture_id": "linear_algebra_002"
+        },
+        "pair_id": "rel_dev_021"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_040",
+          "lecture_id": "probability_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_041",
+          "lecture_id": "probability_001"
+        },
+        "pair_id": "rel_dev_022"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_038",
+          "lecture_id": "probability_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_041",
+          "lecture_id": "probability_001"
+        },
+        "pair_id": "rel_dev_023"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_038",
+          "lecture_id": "probability_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_039",
+          "lecture_id": "probability_001"
+        },
+        "pair_id": "rel_dev_024"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_038",
+          "lecture_id": "probability_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_042",
+          "lecture_id": "probability_001"
+        },
+        "pair_id": "rel_dev_025"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_042",
+          "lecture_id": "probability_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_043",
+          "lecture_id": "probability_001"
+        },
+        "pair_id": "rel_dev_026"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_036",
+          "lecture_id": "probability_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_037",
+          "lecture_id": "probability_001"
+        },
+        "pair_id": "rel_dev_027"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_035",
+          "lecture_id": "probability_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_036",
+          "lecture_id": "probability_001"
+        },
+        "pair_id": "rel_dev_028"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_023",
+          "lecture_id": "linear_algebra_002"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_042",
+          "lecture_id": "probability_001"
+        },
+        "pair_id": "rel_dev_030"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_012",
+          "lecture_id": "linear_algebra_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_036",
+          "lecture_id": "probability_001"
+        },
+        "pair_id": "rel_dev_031"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_030",
+          "lecture_id": "optimisation_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_035",
+          "lecture_id": "probability_001"
+        },
+        "pair_id": "rel_dev_032"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_015",
+          "lecture_id": "linear_algebra_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_039",
+          "lecture_id": "probability_001"
+        },
+        "pair_id": "rel_dev_033"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_004",
+          "lecture_id": "calculus_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_006",
+          "lecture_id": "calculus_001"
+        },
+        "pair_id": "rel_dev_035"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_012",
+          "lecture_id": "linear_algebra_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_015",
+          "lecture_id": "linear_algebra_001"
+        },
+        "pair_id": "rel_dev_036"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_019",
+          "lecture_id": "linear_algebra_002"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_022",
+          "lecture_id": "linear_algebra_002"
+        },
+        "pair_id": "rel_dev_038"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_035",
+          "lecture_id": "probability_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_039",
+          "lecture_id": "probability_001"
+        },
+        "pair_id": "rel_dev_039"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_026",
+          "lecture_id": "optimisation_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_030",
+          "lecture_id": "optimisation_001"
+        },
+        "pair_id": "rel_dev_040"
+      }
+    ],
+    "knowledge_objects": [
+      {
+        "ko_id": "ko_slot_001",
+        "lecture_id": "calculus_001",
+        "name": "Directional Derivative",
+        "source_spans": [
+          "For a unit direction \\(u\\), the directional derivative is \\(\\nabla f(x)\\cdot u\\), so the gradient points in the direction of steepest local increase."
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_002",
+        "lecture_id": "calculus_001",
+        "name": "First-order Taylor Approximation Formula",
+        "source_spans": [
+          "f(a+h) \\approx f(a) + \\nabla f(a)\\cdot h."
+        ],
+        "type": "Formula"
+      },
+      {
+        "ko_id": "ko_slot_003",
+        "lecture_id": "calculus_001",
+        "name": "Gradient",
+        "source_spans": [
+          "The gradient \\(\\nabla f(x)\\) collects these partial derivatives into a vector."
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_004",
+        "lecture_id": "calculus_001",
+        "name": "Hessian Matrix",
+        "source_spans": [
+          "For twice differentiable functions, a second-order approximation also includes the Hessian matrix, which describes local curvature."
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_005",
+        "lecture_id": "calculus_001",
+        "name": "Partial Derivative",
+        "source_spans": [
+          "A partial derivative measures how \\(f\\) changes when one coordinate changes while the other coordinates are held fixed."
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_006",
+        "lecture_id": "calculus_001",
+        "name": "Stationary Point",
+        "source_spans": [
+          "A point where the gradient is the zero vector is called a stationary point."
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_007",
+        "lecture_id": "calculus_001",
+        "name": "Taylor Approximation",
+        "source_spans": [
+          "Taylor approximation describes the local behavior of a differentiable function near a point."
+        ],
+        "type": "Method"
+      },
+      {
+        "ko_id": "ko_slot_008",
+        "lecture_id": "calculus_002",
+        "name": "Chain Rule",
+        "source_spans": [
+          "The chain rule describes how the derivative of the composite function depends on the derivatives of \\(f\\) and \\(g\\)."
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_009",
+        "lecture_id": "calculus_002",
+        "name": "Composite Function",
+        "source_spans": [
+          "The composite function \\(h = f \\circ g\\) maps an input \\(x \\in \\mathbb{R}^m\\) to \\(f(g(x))\\)."
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_010",
+        "lecture_id": "calculus_002",
+        "name": "Jacobian Matrix",
+        "source_spans": [
+          "the Jacobian matrix \\(J_g(x)\\) collects all first-order partial derivatives of the output components of \\(g\\)"
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_011",
+        "lecture_id": "calculus_002",
+        "name": "Multivariable Chain Rule Formula",
+        "source_spans": [
+          "\\nabla h(x) = J_g(x)^\\top \\nabla f(g(x))."
+        ],
+        "type": "Formula"
+      },
+      {
+        "ko_id": "ko_slot_012",
+        "lecture_id": "linear_algebra_001",
+        "name": "Basis",
+        "source_spans": [
+          "A basis is a set of independent vectors that can represent every vector in the space through linear combinations."
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_013",
+        "lecture_id": "linear_algebra_001",
+        "name": "Dimension",
+        "source_spans": [
+          "The number of vectors in a basis is the dimension of the vector space."
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_014",
+        "lecture_id": "linear_algebra_001",
+        "name": "Eigenvalue",
+        "source_spans": [
+          "The corresponding eigenvalue \\(\\lambda\\) satisfies"
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_015",
+        "lecture_id": "linear_algebra_001",
+        "name": "Eigenvalue Equation",
+        "source_spans": [
+          "Av = \\lambda v."
+        ],
+        "type": "Formula"
+      },
+      {
+        "ko_id": "ko_slot_016",
+        "lecture_id": "linear_algebra_001",
+        "name": "Linear Transformation",
+        "source_spans": [
+          "Matrix multiplication corresponds to composing linear transformations, and changing a basis changes the matrix representation without changing the underlying transformation."
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_017",
+        "lecture_id": "linear_algebra_001",
+        "name": "Matrix",
+        "source_spans": [
+          "A matrix is a rectangular array of numbers that can represent a linear transformation once bases have been chosen for the input and output spaces."
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_018",
+        "lecture_id": "linear_algebra_001",
+        "name": "Vector Space",
+        "source_spans": [
+          "A vector space is a set of objects called vectors that can be added together and multiplied by scalars while satisfying the vector space axioms."
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_019",
+        "lecture_id": "linear_algebra_002",
+        "name": "Dot Product",
+        "source_spans": [
+          "In Euclidean space, the standard inner product is the dot product."
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_020",
+        "lecture_id": "linear_algebra_002",
+        "name": "Inner Product",
+        "source_spans": [
+          "An inner product is an operation that takes two vectors and returns a scalar."
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_021",
+        "lecture_id": "linear_algebra_002",
+        "name": "Least Squares Problem",
+        "source_spans": [
+          "the least squares problem asks for a vector \\(x\\) that minimizes \\(\\|Ax-b\\|^2\\)."
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_022",
+        "lecture_id": "linear_algebra_002",
+        "name": "Normal Equations",
+        "source_spans": [
+          "A^\\top A x = A^\\top b."
+        ],
+        "type": "Formula"
+      },
+      {
+        "ko_id": "ko_slot_023",
+        "lecture_id": "linear_algebra_002",
+        "name": "Orthogonal Projection",
+        "source_spans": [
+          "Orthogonal projection is a method for finding the closest point in a subspace to a given vector."
+        ],
+        "type": "Method"
+      },
+      {
+        "ko_id": "ko_slot_024",
+        "lecture_id": "linear_algebra_002",
+        "name": "Orthogonal Vectors",
+        "source_spans": [
+          "Two vectors are orthogonal when their inner product is zero."
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_025",
+        "lecture_id": "linear_algebra_002",
+        "name": "Projection Formula",
+        "source_spans": [
+          "\\operatorname{proj}_u(v) = \\frac{v \\cdot u}{u \\cdot u}u."
+        ],
+        "type": "Formula"
+      },
+      {
+        "ko_id": "ko_slot_026",
+        "lecture_id": "optimisation_001",
+        "name": "Convex Function",
+        "source_spans": [
+          "For convex functions, every local minimum is also a global minimum."
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_027",
+        "lecture_id": "optimisation_001",
+        "name": "Gradient",
+        "source_spans": [
+          "the gradient \\(\\nabla f(x)\\) describes local change"
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_028",
+        "lecture_id": "optimisation_001",
+        "name": "Gradient Descent",
+        "source_spans": [
+          "Gradient descent is a first-order iterative method that repeatedly moves in this direction:"
+        ],
+        "type": "Method"
+      },
+      {
+        "ko_id": "ko_slot_029",
+        "lecture_id": "optimisation_001",
+        "name": "Gradient Descent Update",
+        "source_spans": [
+          "x_{k+1} = x_k - \\alpha_k \\nabla f(x_k)."
+        ],
+        "type": "Formula"
+      },
+      {
+        "ko_id": "ko_slot_030",
+        "lecture_id": "optimisation_001",
+        "name": "Line Search",
+        "source_spans": [
+          "A line search is a method for choosing a step size that gives sufficient decrease in the objective function."
+        ],
+        "type": "Method"
+      },
+      {
+        "ko_id": "ko_slot_031",
+        "lecture_id": "optimisation_001",
+        "name": "Objective Function",
+        "source_spans": [
+          "In mathematical optimisation, an objective function assigns a real value to each feasible input."
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_032",
+        "lecture_id": "optimisation_001",
+        "name": "Optimisation Problem",
+        "source_spans": [
+          "An optimisation problem asks for an input that makes the objective function as small or as large as possible."
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_033",
+        "lecture_id": "optimisation_001",
+        "name": "Step Size",
+        "source_spans": [
+          "The scalar \\(\\alpha_k\\) is the step size."
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_034",
+        "lecture_id": "optimisation_001",
+        "name": "Unconstrained Minimisation Problem",
+        "source_spans": [
+          "In an unconstrained minimisation problem, the feasible inputs are usually all points in a space such as \\(\\mathbb{R}^n\\), and the goal is to minimise a differentiable function \\(f(x)\\)."
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_035",
+        "lecture_id": "probability_001",
+        "name": "Bayes' Rule",
+        "source_spans": [
+          "Bayes' rule rewrites conditional probability in a form that is useful for updating beliefs:"
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_036",
+        "lecture_id": "probability_001",
+        "name": "Conditional Probability",
+        "source_spans": [
+          "Conditional probability measures the probability of an event given that another event has occurred."
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_037",
+        "lecture_id": "probability_001",
+        "name": "Conditional Probability Formula",
+        "source_spans": [
+          "P(A \\mid B) = \\frac{P(A \\cap B)}{P(B)}."
+        ],
+        "type": "Formula"
+      },
+      {
+        "ko_id": "ko_slot_038",
+        "lecture_id": "probability_001",
+        "name": "Expected Value",
+        "source_spans": [
+          "The expected value of a random variable is a weighted average of its possible values."
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_039",
+        "lecture_id": "probability_001",
+        "name": "Expected Value Formula",
+        "source_spans": [
+          "\\mathbb{E}[X] = \\sum_x x P(X=x)."
+        ],
+        "type": "Formula"
+      },
+      {
+        "ko_id": "ko_slot_040",
+        "lecture_id": "probability_001",
+        "name": "Probability Distribution",
+        "source_spans": [
+          "The probability distribution of a random variable describes how probability is assigned to its possible values."
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_041",
+        "lecture_id": "probability_001",
+        "name": "Random Variable",
+        "source_spans": [
+          "A random variable is a function that assigns a numerical value to each outcome of a random experiment."
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_042",
+        "lecture_id": "probability_001",
+        "name": "Variance",
+        "source_spans": [
+          "Variance measures how far a random variable typically is from its expected value."
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_043",
+        "lecture_id": "probability_001",
+        "name": "Variance Formula",
+        "source_spans": [
+          "\\operatorname{Var}(X) = \\mathbb{E}[(X-\\mathbb{E}[X])^2]."
+        ],
+        "type": "Formula"
+      }
+    ],
+    "lectures": [
+      {
+        "lecture_id": "calculus_001",
+        "text": "Let \\(f:\\mathbb{R}^n \\to \\mathbb{R}\\) be a differentiable scalar-valued function. A partial derivative measures how \\(f\\) changes when one coordinate changes while the other coordinates are held fixed. The gradient \\(\\nabla f(x)\\) collects these partial derivatives into a vector. For a unit direction \\(u\\), the directional derivative is \\(\\nabla f(x)\\cdot u\\), so the gradient points in the direction of steepest local increase. A point where the gradient is the zero vector is called a stationary point.\n\nTaylor approximation describes the local behavior of a differentiable function near a point. The first-order Taylor approximation around \\(a\\) is\n\n\\[\nf(a+h) \\approx f(a) + \\nabla f(a)\\cdot h.\n\\]\n\nFor twice differentiable functions, a second-order approximation also includes the Hessian matrix, which describes local curvature. These approximations are useful because they turn a complicated function into a local linear or quadratic model. In optimization, this local model helps explain why the gradient gives a useful direction for changing the input.\n"
+      },
+      {
+        "lecture_id": "calculus_002",
+        "text": "Let \\(g:\\mathbb{R}^m \\to \\mathbb{R}^n\\) and \\(f:\\mathbb{R}^n \\to \\mathbb{R}\\) be differentiable functions. The composite function \\(h = f \\circ g\\) maps an input \\(x \\in \\mathbb{R}^m\\) to \\(f(g(x))\\). The chain rule describes how the derivative of the composite function depends on the derivatives of \\(f\\) and \\(g\\).\n\nFor a differentiable vector-valued function \\(g\\), the Jacobian matrix \\(J_g(x)\\) collects all first-order partial derivatives of the output components of \\(g\\). It gives the best local linear approximation to \\(g\\) near \\(x\\).\n\nFor the scalar-valued composite function \\(h(x)=f(g(x))\\), the multivariable chain rule can be written as\n\n\\[\n\\nabla h(x) = J_g(x)^\\top \\nabla f(g(x)).\n\\]\n\nThis formula shows how gradients and Jacobian matrices work together. The Jacobian transfers local changes in the input space of \\(g\\) into local changes in the input space of \\(f\\).\n"
+      },
+      {
+        "lecture_id": "linear_algebra_001",
+        "text": "A vector space is a set of objects called vectors that can be added together and multiplied by scalars while satisfying the vector space axioms. A basis is a set of independent vectors that can represent every vector in the space through linear combinations. The number of vectors in a basis is the dimension of the vector space.\n\nA matrix is a rectangular array of numbers that can represent a linear transformation once bases have been chosen for the input and output spaces. Matrix multiplication corresponds to composing linear transformations, and changing a basis changes the matrix representation without changing the underlying transformation.\n\nFor a square matrix \\(A\\), an eigenvector is a nonzero vector \\(v\\) whose direction is preserved by the transformation represented by \\(A\\). The corresponding eigenvalue \\(\\lambda\\) satisfies\n\n\\[\nAv = \\lambda v.\n\\]\n\nEigenvalues are connected to the characteristic polynomial \\(\\det(\\lambda I - A)\\). They are important because they reveal directions in which a linear transformation acts by simple scaling.\n"
+      },
+      {
+        "lecture_id": "linear_algebra_002",
+        "text": "An inner product is an operation that takes two vectors and returns a scalar. In Euclidean space, the standard inner product is the dot product. Two vectors are orthogonal when their inner product is zero.\n\nOrthogonal projection is a method for finding the closest point in a subspace to a given vector. If \\(u\\) is a nonzero vector, the projection of \\(v\\) onto the one-dimensional subspace spanned by \\(u\\) is\n\n\\[\n\\operatorname{proj}_u(v) = \\frac{v \\cdot u}{u \\cdot u}u.\n\\]\n\nLeast squares problems use projection ideas to solve inconsistent systems. Given a matrix \\(A\\) and a vector \\(b\\), the least squares problem asks for a vector \\(x\\) that minimizes \\(\\|Ax-b\\|^2\\). When the columns of \\(A\\) are independent, the solution satisfies the normal equations\n\n\\[\nA^\\top A x = A^\\top b.\n\\]\n"
+      },
+      {
+        "lecture_id": "optimisation_001",
+        "text": "In mathematical optimisation, an objective function assigns a real value to each feasible input. An optimisation problem asks for an input that makes the objective function as small or as large as possible. In an unconstrained minimisation problem, the feasible inputs are usually all points in a space such as \\(\\mathbb{R}^n\\), and the goal is to minimise a differentiable function \\(f(x)\\).\n\nIf \\(f\\) is differentiable, the gradient \\(\\nabla f(x)\\) describes local change. The negative gradient \\(-\\nabla f(x)\\) is a descent direction because it points toward the direction of steepest local decrease. Gradient descent is a first-order iterative method that repeatedly moves in this direction:\n\n\\[\nx_{k+1} = x_k - \\alpha_k \\nabla f(x_k).\n\\]\n\nThe scalar \\(\\alpha_k\\) is the step size. It controls how far the method moves at iteration \\(k\\). A line search is a method for choosing a step size that gives sufficient decrease in the objective function.\n\nFor convex functions, every local minimum is also a global minimum. A stationary point is a point where the gradient is zero. In smooth optimisation, stationary points are important because they describe candidates for local optima.\n"
+      },
+      {
+        "lecture_id": "probability_001",
+        "text": "A random variable is a function that assigns a numerical value to each outcome of a random experiment. The probability distribution of a random variable describes how probability is assigned to its possible values.\n\nThe expected value of a random variable is a weighted average of its possible values. For a discrete random variable \\(X\\), the expected value is\n\n\\[\n\\mathbb{E}[X] = \\sum_x x P(X=x).\n\\]\n\nVariance measures how far a random variable typically is from its expected value. It can be defined as\n\n\\[\n\\operatorname{Var}(X) = \\mathbb{E}[(X-\\mathbb{E}[X])^2].\n\\]\n\nConditional probability measures the probability of an event given that another event has occurred. If \\(P(B)>0\\), then\n\n\\[\nP(A \\mid B) = \\frac{P(A \\cap B)}{P(B)}.\n\\]\n\nBayes' rule rewrites conditional probability in a form that is useful for updating beliefs:\n\n\\[\nP(A \\mid B) = \\frac{P(B \\mid A)P(A)}{P(B)}.\n\\]\n"
+      }
+    ],
+    "relation_schema": {
+      "benchmark_only_relation_types": [
+        "NO_RELATION"
+      ],
+      "graph_relation_types": [
+        "REQUIRES",
+        "APPLIED_IN",
+        "EXTENDS",
+        "CONTRASTS_WITH",
+        "FORMALIZES",
+        "RELATED_TO"
+      ]
+    }
+  },
+  "model_input_sha256": "384fb0e4e32d0b4f449898c6f58abfc10a23c87f187ca1ebddd98fdcbf63d113",
+  "pair_manifest_sha256": "85370b44573760f6b37aeed7b7abd571fb2e16a11cca08b61178fd3673d127ed",
+  "relation_prompt_sha256": "e3b0e53f3ceed60c60d082fa9c4a67f9497e64d50664118227cd9bea9fbc12af",
+  "relation_schema_sha256": "a50bbf3193fe03e6e407da6ced7f15f9f4bb819876140925bc87ac4419c50417",
+  "structural_normalization_version": "predicted_ko_structural_normalization_v0_1",
+  "version": "v0.1"
+}

@@ -1,0 +1,294 @@
+{
+  "decisions": [
+    {
+      "pair_id": "rel_dev_001",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "calculus_001",
+          "ko_id": "ko_slot_003"
+        },
+        "target": {
+          "lecture_id": "calculus_001",
+          "ko_id": "ko_slot_005"
+        },
+        "relation_type": "REQUIRES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "calculus_001",
+          "span": "The gradient ∇f(x) collects these partial derivatives into a vector."
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The span explicitly states that the Gradient collects Partial Derivatives."
+    },
+    {
+      "pair_id": "rel_dev_002",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "calculus_001",
+          "ko_id": "ko_slot_001"
+        },
+        "target": {
+          "lecture_id": "calculus_001",
+          "ko_id": "ko_slot_003"
+        },
+        "relation_type": "REQUIRES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "calculus_001",
+          "span": "For a unit direction u, the directional derivative is ∇f(x)·u, so the gradient points in the direction of steepest local increase."
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The Directional Derivative is explicitly expressed using the Gradient."
+    },
+    {
+      "pair_id": "rel_dev_004",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "calculus_001",
+          "ko_id": "ko_slot_002"
+        },
+        "target": {
+          "lecture_id": "calculus_001",
+          "ko_id": "ko_slot_007"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "calculus_001",
+          "span": "The first-order Taylor approximation around a is f(a+h) ≈ f(a) + ∇f(a)·h."
+        },
+        {
+          "lecture_id": "calculus_001",
+          "span": "Taylor approximation describes the local behavior of a differentiable function near a point."
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The two spans identify Taylor Approximation and give its first-order formula."
+    },
+    {
+      "pair_id": "rel_dev_009",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "linear_algebra_001",
+          "ko_id": "ko_slot_015"
+        },
+        "target": {
+          "lecture_id": "linear_algebra_001",
+          "ko_id": "ko_slot_014"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "linear_algebra_001",
+          "span": "The corresponding eigenvalue λ satisfies Av = λ v."
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The span names the Eigenvalue and gives the equation it satisfies."
+    },
+    {
+      "pair_id": "rel_dev_011",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "optimisation_001",
+          "ko_id": "ko_slot_034"
+        },
+        "target": {
+          "lecture_id": "optimisation_001",
+          "ko_id": "ko_slot_032"
+        },
+        "relation_type": "EXTENDS"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "optimisation_001",
+          "span": "In an unconstrained minimisation problem, the feasible inputs are usually all points in a space such as ℝ^n, and the goal is to minimise a differentiable function f(x)."
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The span describes unconstrained minimisation as the specialised optimisation problem with unrestricted feasible inputs and a minimisation objective."
+    },
+    {
+      "pair_id": "rel_dev_013",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "optimisation_001",
+          "ko_id": "ko_slot_029"
+        },
+        "target": {
+          "lecture_id": "optimisation_001",
+          "ko_id": "ko_slot_028"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "optimisation_001",
+          "span": "x_{k+1} = x_k - α_k ∇f(x_k)."
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The displayed equation is the canonical Gradient Descent update and therefore formalizes the method."
+    },
+    {
+      "pair_id": "rel_dev_015",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "calculus_002",
+          "ko_id": "ko_slot_008"
+        },
+        "target": {
+          "lecture_id": "calculus_002",
+          "ko_id": "ko_slot_009"
+        },
+        "relation_type": "REQUIRES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "calculus_002",
+          "span": "The chain rule describes how the derivative of the composite function depends on the derivatives of f and g."
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The span states that the Chain Rule operates on the derivative of a Composite Function."
+    },
+    {
+      "pair_id": "rel_dev_016",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "calculus_002",
+          "ko_id": "ko_slot_011"
+        },
+        "target": {
+          "lecture_id": "calculus_002",
+          "ko_id": "ko_slot_008"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "calculus_002",
+          "span": "∇h(x) = J_g(x)^⊤ ∇f(g(x))."
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The displayed identity is the multivariable Chain Rule formula and directly formalizes that rule."
+    },
+    {
+      "pair_id": "rel_dev_019",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "linear_algebra_002",
+          "ko_id": "ko_slot_025"
+        },
+        "target": {
+          "lecture_id": "linear_algebra_002",
+          "ko_id": "ko_slot_023"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "linear_algebra_002",
+          "span": "proj_u(v) = (v·u)/(u·u) u."
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The projection equation directly formalizes Orthogonal Projection."
+    },
+    {
+      "pair_id": "rel_dev_021",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "linear_algebra_002",
+          "ko_id": "ko_slot_022"
+        },
+        "target": {
+          "lecture_id": "linear_algebra_002",
+          "ko_id": "ko_slot_021"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "linear_algebra_002",
+          "span": "A^⊤ A x = A^⊤ b."
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The displayed normal equations are the formal solution condition for the Least Squares Problem."
+    },
+    {
+      "pair_id": "rel_dev_024",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "probability_001",
+          "ko_id": "ko_slot_039"
+        },
+        "target": {
+          "lecture_id": "probability_001",
+          "ko_id": "ko_slot_038"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "probability_001",
+          "span": "E[X] = ∑_x x P(X=x)."
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The equation explicitly defines Expected Value through E[X]."
+    },
+    {
+      "pair_id": "rel_dev_026",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "probability_001",
+          "ko_id": "ko_slot_043"
+        },
+        "target": {
+          "lecture_id": "probability_001",
+          "ko_id": "ko_slot_042"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "probability_001",
+          "span": "Var(X) = E[(X-E[X])^2]."
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The equation explicitly defines Variance through Var(X)."
+    },
+    {
+      "pair_id": "rel_dev_027",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "probability_001",
+          "ko_id": "ko_slot_037"
+        },
+        "target": {
+          "lecture_id": "probability_001",
+          "ko_id": "ko_slot_036"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "probability_001",
+          "span": "P(A|B) = P(A∩B)/P(B)."
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The equation explicitly defines Conditional Probability."
+    }
+  ]
+}

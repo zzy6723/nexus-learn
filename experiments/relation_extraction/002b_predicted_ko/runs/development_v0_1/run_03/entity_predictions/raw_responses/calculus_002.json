@@ -1,0 +1,28 @@
+{
+  "id": "9994e73a-b619-4d1e-b788-d3c7788b3b11",
+  "object": "chat.completion",
+  "created": 1783792754,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"lecture_id\": \"calculus_002\",\n  \"knowledge_objects\": [\n    {\n      \"id\": \"composite_function\",\n      \"name\": \"Composite Function\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"A function formed by applying one function to the result of another.\",\n      \"source_span\": \"The composite function h = f ∘ g maps an input x ∈ ℝ^m to f(g(x)).\"\n    },\n    {\n      \"id\": \"chain_rule\",\n      \"name\": \"Chain Rule\",\n      \"type\": \"Method\",\n      \"aliases\": [\"multivariable chain rule\"],\n      \"short_definition\": \"A rule describing how the derivative of a composite function depends on the derivatives of its constituent functions.\",\n      \"source_span\": \"The chain rule describes how the derivative of the composite function depends on the derivatives of f and g.\"\n    },\n    {\n      \"id\": \"jacobian_matrix\",\n      \"name\": \"Jacobian Matrix\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"A matrix of all first-order partial derivatives of a vector-valued function, giving the best local linear approximation.\",\n      \"source_span\": \"the Jacobian matrix J_g(x) collects all first-order partial derivatives of the output components of g.\"\n    },\n    {\n      \"id\": \"gradient\",\n      \"name\": \"Gradient\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"A vector of partial derivatives of a scalar-valued function.\",\n      \"source_span\": \"∇h(x) = J_g(x)^⊤ ∇f(g(x)).\"\n    },\n    {\n      \"id\": \"multivariable_chain_rule_formula\",\n      \"name\": \"Multivariable Chain Rule Formula\",\n      \"type\": \"Formula\",\n      \"aliases\": [],\n      \"short_definition\": \"The formula ∇h(x) = J_g(x)^⊤ ∇f(g(x)) relating the gradient of the composite to the Jacobian and gradient of the outer function.\",\n      \"source_span\": \"∇h(x) = J_g(x)^⊤ ∇f(g(x)).\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 719,
+    "completion_tokens": 477,
+    "total_tokens": 1196,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 719
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

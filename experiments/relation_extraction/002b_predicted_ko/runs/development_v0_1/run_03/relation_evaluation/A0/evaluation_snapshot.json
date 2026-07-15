@@ -1,0 +1,20 @@
+{
+  "artifact_type": "relation_evaluation_snapshot",
+  "version": "v0.1",
+  "condition": "A0",
+  "evaluation_status": "final",
+  "base_evaluation_dir": "experiments/relation_extraction/002_prompt_refinement/runs/development_v0_1/run_01/evaluation",
+  "prediction_sha256": "7e4bc957d902e2c42a6dbad8800e3dfcfb6b97129a71cc323b32d7f6c289f031",
+  "run_metadata_sha256": "3a7d79aa2563c4f8a65d00e4984cafe13596f706261e203793dc73edc36642d6",
+  "metrics_sha256": "e5567f46722b09884f163f66f27a2d54733f16388790af06dd038cab6c63c170",
+  "matches_sha256": "3c389ebdeefefcc13851a4bf3bb1d9c754e0101042744bd80045a95827dbc2df",
+  "errors_sha256": "13211833a6baf502fdfbcfe0983a5cceace5b9eb7992f1e86868ac6104f62e84",
+  "source": {
+    "base_metrics_sha256": "e5567f46722b09884f163f66f27a2d54733f16388790af06dd038cab6c63c170",
+    "base_matches_sha256": "3c389ebdeefefcc13851a4bf3bb1d9c754e0101042744bd80045a95827dbc2df",
+    "base_errors_sha256": "13211833a6baf502fdfbcfe0983a5cceace5b9eb7992f1e86868ac6104f62e84",
+    "base_pending_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "predictions_path": "experiments/relation_extraction/002_prompt_refinement/runs/development_v0_1/run_01/output/relations_development_v0_1.json",
+    "run_metadata_path": "experiments/relation_extraction/002_prompt_refinement/runs/development_v0_1/run_01/metadata/relations_development_v0_1.json"
+  }
+}

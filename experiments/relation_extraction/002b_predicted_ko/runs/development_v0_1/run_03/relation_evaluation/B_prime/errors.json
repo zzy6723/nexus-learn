@@ -1,0 +1,202 @@
+[
+  {
+    "pair_id": "rel_dev_001",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "calculus_001",
+    "span": "The gradient ∇f(x) collects these partial derivatives into a vector.",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_002",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "calculus_001",
+    "span": "For a unit direction u, the directional derivative is ∇f(x)·u, so the gradient points in the direction of steepest local increase.",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_004",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "calculus_001",
+    "span": "The first-order Taylor approximation around a is f(a+h) ≈ f(a) + ∇f(a)·h.",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_007",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "APPLIED_IN",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_009",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "linear_algebra_001",
+    "span": "The corresponding eigenvalue λ satisfies Av = λ v.",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_011",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "optimisation_001",
+    "span": "In an unconstrained minimisation problem, the feasible inputs are usually all points in a space such as ℝ^n, and the goal is to minimise a differentiable function f(x).",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_012",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "REQUIRES",
+    "predicted_relation_type": "APPLIED_IN"
+  },
+  {
+    "pair_id": "rel_dev_013",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "optimisation_001",
+    "span": "x_{k+1} = x_k - α_k ∇f(x_k).",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_014",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "optimisation_001",
+    "span": "x_{k+1} = x_k - α_k ∇f(x_k). The scalar α_k is the step size.",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_014",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "APPLIED_IN",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_015",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "calculus_002",
+    "span": "The chain rule describes how the derivative of the composite function depends on the derivatives of f and g.",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_016",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "calculus_002",
+    "span": "∇h(x) = J_g(x)^⊤ ∇f(g(x)).",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_017",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "calculus_002",
+    "span": "∇h(x) = J_g(x)^⊤ ∇f(g(x)).",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_017",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "APPLIED_IN",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_018",
+    "error_type": "wrong_direction",
+    "gold_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "ko_slot_024"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "ko_slot_020"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "ko_slot_020"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "ko_slot_024"
+      },
+      "relation_type": "REQUIRES"
+    }
+  },
+  {
+    "pair_id": "rel_dev_019",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "linear_algebra_002",
+    "span": "proj_u(v) = (v·u)/(u·u) u.",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_021",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "linear_algebra_002",
+    "span": "A^⊤ A x = A^⊤ b.",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_024",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "probability_001",
+    "span": "E[X] = ∑_x x P(X=x).",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_026",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "probability_001",
+    "span": "Var(X) = E[(X-E[X])^2].",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_027",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "probability_001",
+    "span": "P(A|B) = P(A∩B)/P(B).",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_028",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "probability_001",
+    "span": "P(A|B) = P(B|A)P(A)/P(B).",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_028",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "REQUIRES",
+    "predicted_relation_type": "FORMALIZES"
+  }
+]

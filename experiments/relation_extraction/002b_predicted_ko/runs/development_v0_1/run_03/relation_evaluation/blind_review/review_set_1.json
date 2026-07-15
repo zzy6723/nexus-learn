@@ -1,0 +1,918 @@
+{
+  "artifact_type": "blinded_relation_evidence_review",
+  "version": "v0.1",
+  "review_set": "review_set_1",
+  "pending_item_count": 13,
+  "instructions": [
+    "Judge only whether the predicted evidence spans semantically support the predicted edge.",
+    "Exact substring validity has already been evaluated separately.",
+    "Do not infer support merely because one endpoint is mentioned.",
+    "Use supported or not_supported and provide a short rationale."
+  ],
+  "items": [
+    {
+      "review_id": "R1-01",
+      "pair_id": "rel_dev_001",
+      "candidate_pair": {
+        "ko_a": {
+          "lecture_id": "calculus_001",
+          "ko_id": "ko_slot_003",
+          "name": "Gradient",
+          "type": "Concept",
+          "source_spans": [
+            "The gradient ∇f(x) collects these partial derivatives into a vector."
+          ]
+        },
+        "ko_b": {
+          "lecture_id": "calculus_001",
+          "ko_id": "ko_slot_005",
+          "name": "Partial Derivative",
+          "type": "Concept",
+          "source_spans": [
+            "A partial derivative measures how f changes when one coordinate changes while the other coordinates are held fixed."
+          ]
+        }
+      },
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "calculus_001",
+          "ko_id": "ko_slot_003",
+          "name": "Gradient",
+          "type": "Concept",
+          "source_spans": [
+            "The gradient ∇f(x) collects these partial derivatives into a vector."
+          ]
+        },
+        "relation_type": "REQUIRES",
+        "target": {
+          "lecture_id": "calculus_001",
+          "ko_id": "ko_slot_005",
+          "name": "Partial Derivative",
+          "type": "Concept",
+          "source_spans": [
+            "A partial derivative measures how f changes when one coordinate changes while the other coordinates are held fixed."
+          ]
+        }
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "calculus_001",
+          "span": "The gradient ∇f(x) collects these partial derivatives into a vector."
+        }
+      ],
+      "gold_evidence_spans": [
+        {
+          "lecture_id": "calculus_001",
+          "span": "The gradient \\(\\nabla f(x)\\) collects these partial derivatives into a vector."
+        }
+      ],
+      "lecture_contexts": [
+        {
+          "lecture_id": "calculus_001",
+          "text": "Let \\(f:\\mathbb{R}^n \\to \\mathbb{R}\\) be a differentiable scalar-valued function. A partial derivative measures how \\(f\\) changes when one coordinate changes while the other coordinates are held fixed. The gradient \\(\\nabla f(x)\\) collects these partial derivatives into a vector. For a unit direction \\(u\\), the directional derivative is \\(\\nabla f(x)\\cdot u\\), so the gradient points in the direction of steepest local increase. A point where the gradient is the zero vector is called a stationary point.\n\nTaylor approximation describes the local behavior of a differentiable function near a point. The first-order Taylor approximation around \\(a\\) is\n\n\\[\nf(a+h) \\approx f(a) + \\nabla f(a)\\cdot h.\n\\]\n\nFor twice differentiable functions, a second-order approximation also includes the Hessian matrix, which describes local curvature. These approximations are useful because they turn a complicated function into a local linear or quadratic model. In optimization, this local model helps explain why the gradient gives a useful direction for changing the input.\n"
+        }
+      ],
+      "question": "Do the predicted evidence spans, read together, semantically support the predicted edge?",
+      "allowed_decisions": [
+        "supported",
+        "not_supported"
+      ]
+    },
+    {
+      "review_id": "R1-02",
+      "pair_id": "rel_dev_002",
+      "candidate_pair": {
+        "ko_a": {
+          "lecture_id": "calculus_001",
+          "ko_id": "ko_slot_001",
+          "name": "Directional Derivative",
+          "type": "Concept",
+          "source_spans": [
+            "For a unit direction u, the directional derivative is ∇f(x)·u, so the gradient points in the direction of steepest local increase."
+          ]
+        },
+        "ko_b": {
+          "lecture_id": "calculus_001",
+          "ko_id": "ko_slot_003",
+          "name": "Gradient",
+          "type": "Concept",
+          "source_spans": [
+            "The gradient ∇f(x) collects these partial derivatives into a vector."
+          ]
+        }
+      },
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "calculus_001",
+          "ko_id": "ko_slot_001",
+          "name": "Directional Derivative",
+          "type": "Concept",
+          "source_spans": [
+            "For a unit direction u, the directional derivative is ∇f(x)·u, so the gradient points in the direction of steepest local increase."
+          ]
+        },
+        "relation_type": "REQUIRES",
+        "target": {
+          "lecture_id": "calculus_001",
+          "ko_id": "ko_slot_003",
+          "name": "Gradient",
+          "type": "Concept",
+          "source_spans": [
+            "The gradient ∇f(x) collects these partial derivatives into a vector."
+          ]
+        }
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "calculus_001",
+          "span": "For a unit direction u, the directional derivative is ∇f(x)·u, so the gradient points in the direction of steepest local increase."
+        }
+      ],
+      "gold_evidence_spans": [
+        {
+          "lecture_id": "calculus_001",
+          "span": "For a unit direction \\(u\\), the directional derivative is \\(\\nabla f(x)\\cdot u\\), so the gradient points in the direction of steepest local increase."
+        }
+      ],
+      "lecture_contexts": [
+        {
+          "lecture_id": "calculus_001",
+          "text": "Let \\(f:\\mathbb{R}^n \\to \\mathbb{R}\\) be a differentiable scalar-valued function. A partial derivative measures how \\(f\\) changes when one coordinate changes while the other coordinates are held fixed. The gradient \\(\\nabla f(x)\\) collects these partial derivatives into a vector. For a unit direction \\(u\\), the directional derivative is \\(\\nabla f(x)\\cdot u\\), so the gradient points in the direction of steepest local increase. A point where the gradient is the zero vector is called a stationary point.\n\nTaylor approximation describes the local behavior of a differentiable function near a point. The first-order Taylor approximation around \\(a\\) is\n\n\\[\nf(a+h) \\approx f(a) + \\nabla f(a)\\cdot h.\n\\]\n\nFor twice differentiable functions, a second-order approximation also includes the Hessian matrix, which describes local curvature. These approximations are useful because they turn a complicated function into a local linear or quadratic model. In optimization, this local model helps explain why the gradient gives a useful direction for changing the input.\n"
+        }
+      ],
+      "question": "Do the predicted evidence spans, read together, semantically support the predicted edge?",
+      "allowed_decisions": [
+        "supported",
+        "not_supported"
+      ]
+    },
+    {
+      "review_id": "R1-03",
+      "pair_id": "rel_dev_004",
+      "candidate_pair": {
+        "ko_a": {
+          "lecture_id": "calculus_001",
+          "ko_id": "ko_slot_002",
+          "name": "First-Order Taylor Approximation",
+          "type": "Formula",
+          "source_spans": [
+            "f(a+h) ≈ f(a) + ∇f(a)·h."
+          ]
+        },
+        "ko_b": {
+          "lecture_id": "calculus_001",
+          "ko_id": "ko_slot_007",
+          "name": "Taylor Approximation",
+          "type": "Concept",
+          "source_spans": [
+            "Taylor approximation describes the local behavior of a differentiable function near a point."
+          ]
+        }
+      },
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "calculus_001",
+          "ko_id": "ko_slot_002",
+          "name": "First-Order Taylor Approximation",
+          "type": "Formula",
+          "source_spans": [
+            "f(a+h) ≈ f(a) + ∇f(a)·h."
+          ]
+        },
+        "relation_type": "FORMALIZES",
+        "target": {
+          "lecture_id": "calculus_001",
+          "ko_id": "ko_slot_007",
+          "name": "Taylor Approximation",
+          "type": "Concept",
+          "source_spans": [
+            "Taylor approximation describes the local behavior of a differentiable function near a point."
+          ]
+        }
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "calculus_001",
+          "span": "The first-order Taylor approximation around a is f(a+h) ≈ f(a) + ∇f(a)·h."
+        },
+        {
+          "lecture_id": "calculus_001",
+          "span": "Taylor approximation describes the local behavior of a differentiable function near a point."
+        }
+      ],
+      "gold_evidence_spans": [
+        {
+          "lecture_id": "calculus_001",
+          "span": "The first-order Taylor approximation around \\(a\\) is"
+        },
+        {
+          "lecture_id": "calculus_001",
+          "span": "f(a+h) \\approx f(a) + \\nabla f(a)\\cdot h."
+        }
+      ],
+      "lecture_contexts": [
+        {
+          "lecture_id": "calculus_001",
+          "text": "Let \\(f:\\mathbb{R}^n \\to \\mathbb{R}\\) be a differentiable scalar-valued function. A partial derivative measures how \\(f\\) changes when one coordinate changes while the other coordinates are held fixed. The gradient \\(\\nabla f(x)\\) collects these partial derivatives into a vector. For a unit direction \\(u\\), the directional derivative is \\(\\nabla f(x)\\cdot u\\), so the gradient points in the direction of steepest local increase. A point where the gradient is the zero vector is called a stationary point.\n\nTaylor approximation describes the local behavior of a differentiable function near a point. The first-order Taylor approximation around \\(a\\) is\n\n\\[\nf(a+h) \\approx f(a) + \\nabla f(a)\\cdot h.\n\\]\n\nFor twice differentiable functions, a second-order approximation also includes the Hessian matrix, which describes local curvature. These approximations are useful because they turn a complicated function into a local linear or quadratic model. In optimization, this local model helps explain why the gradient gives a useful direction for changing the input.\n"
+        }
+      ],
+      "question": "Do the predicted evidence spans, read together, semantically support the predicted edge?",
+      "allowed_decisions": [
+        "supported",
+        "not_supported"
+      ]
+    },
+    {
+      "review_id": "R1-04",
+      "pair_id": "rel_dev_009",
+      "candidate_pair": {
+        "ko_a": {
+          "lecture_id": "linear_algebra_001",
+          "ko_id": "ko_slot_014",
+          "name": "Eigenvalue",
+          "type": "Concept",
+          "source_spans": [
+            "The corresponding eigenvalue λ satisfies Av = λ v."
+          ]
+        },
+        "ko_b": {
+          "lecture_id": "linear_algebra_001",
+          "ko_id": "ko_slot_015",
+          "name": "Eigenvalue Equation",
+          "type": "Formula",
+          "source_spans": [
+            "Av = λ v"
+          ]
+        }
+      },
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "linear_algebra_001",
+          "ko_id": "ko_slot_015",
+          "name": "Eigenvalue Equation",
+          "type": "Formula",
+          "source_spans": [
+            "Av = λ v"
+          ]
+        },
+        "relation_type": "FORMALIZES",
+        "target": {
+          "lecture_id": "linear_algebra_001",
+          "ko_id": "ko_slot_014",
+          "name": "Eigenvalue",
+          "type": "Concept",
+          "source_spans": [
+            "The corresponding eigenvalue λ satisfies Av = λ v."
+          ]
+        }
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "linear_algebra_001",
+          "span": "The corresponding eigenvalue λ satisfies Av = λ v."
+        }
+      ],
+      "gold_evidence_spans": [
+        {
+          "lecture_id": "linear_algebra_001",
+          "span": "The corresponding eigenvalue \\(\\lambda\\) satisfies"
+        },
+        {
+          "lecture_id": "linear_algebra_001",
+          "span": "Av = \\lambda v."
+        }
+      ],
+      "lecture_contexts": [
+        {
+          "lecture_id": "linear_algebra_001",
+          "text": "A vector space is a set of objects called vectors that can be added together and multiplied by scalars while satisfying the vector space axioms. A basis is a set of independent vectors that can represent every vector in the space through linear combinations. The number of vectors in a basis is the dimension of the vector space.\n\nA matrix is a rectangular array of numbers that can represent a linear transformation once bases have been chosen for the input and output spaces. Matrix multiplication corresponds to composing linear transformations, and changing a basis changes the matrix representation without changing the underlying transformation.\n\nFor a square matrix \\(A\\), an eigenvector is a nonzero vector \\(v\\) whose direction is preserved by the transformation represented by \\(A\\). The corresponding eigenvalue \\(\\lambda\\) satisfies\n\n\\[\nAv = \\lambda v.\n\\]\n\nEigenvalues are connected to the characteristic polynomial \\(\\det(\\lambda I - A)\\). They are important because they reveal directions in which a linear transformation acts by simple scaling.\n"
+        }
+      ],
+      "question": "Do the predicted evidence spans, read together, semantically support the predicted edge?",
+      "allowed_decisions": [
+        "supported",
+        "not_supported"
+      ]
+    },
+    {
+      "review_id": "R1-05",
+      "pair_id": "rel_dev_011",
+      "candidate_pair": {
+        "ko_a": {
+          "lecture_id": "optimisation_001",
+          "ko_id": "ko_slot_032",
+          "name": "Optimisation Problem",
+          "type": "Concept",
+          "source_spans": [
+            "An optimisation problem asks for an input that makes the objective function as small or as large as possible"
+          ]
+        },
+        "ko_b": {
+          "lecture_id": "optimisation_001",
+          "ko_id": "ko_slot_034",
+          "name": "Unconstrained Minimisation Problem",
+          "type": "Concept",
+          "source_spans": [
+            "unconstrained minimisation problem"
+          ]
+        }
+      },
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "optimisation_001",
+          "ko_id": "ko_slot_034",
+          "name": "Unconstrained Minimisation Problem",
+          "type": "Concept",
+          "source_spans": [
+            "unconstrained minimisation problem"
+          ]
+        },
+        "relation_type": "EXTENDS",
+        "target": {
+          "lecture_id": "optimisation_001",
+          "ko_id": "ko_slot_032",
+          "name": "Optimisation Problem",
+          "type": "Concept",
+          "source_spans": [
+            "An optimisation problem asks for an input that makes the objective function as small or as large as possible"
+          ]
+        }
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "optimisation_001",
+          "span": "In an unconstrained minimisation problem, the feasible inputs are usually all points in a space such as ℝ^n, and the goal is to minimise a differentiable function f(x)."
+        }
+      ],
+      "gold_evidence_spans": [
+        {
+          "lecture_id": "optimisation_001",
+          "span": "In an unconstrained minimisation problem, the feasible inputs are usually all points in a space such as \\(\\mathbb{R}^n\\), and the goal is to minimise a differentiable function \\(f(x)\\)."
+        }
+      ],
+      "lecture_contexts": [
+        {
+          "lecture_id": "optimisation_001",
+          "text": "In mathematical optimisation, an objective function assigns a real value to each feasible input. An optimisation problem asks for an input that makes the objective function as small or as large as possible. In an unconstrained minimisation problem, the feasible inputs are usually all points in a space such as \\(\\mathbb{R}^n\\), and the goal is to minimise a differentiable function \\(f(x)\\).\n\nIf \\(f\\) is differentiable, the gradient \\(\\nabla f(x)\\) describes local change. The negative gradient \\(-\\nabla f(x)\\) is a descent direction because it points toward the direction of steepest local decrease. Gradient descent is a first-order iterative method that repeatedly moves in this direction:\n\n\\[\nx_{k+1} = x_k - \\alpha_k \\nabla f(x_k).\n\\]\n\nThe scalar \\(\\alpha_k\\) is the step size. It controls how far the method moves at iteration \\(k\\). A line search is a method for choosing a step size that gives sufficient decrease in the objective function.\n\nFor convex functions, every local minimum is also a global minimum. A stationary point is a point where the gradient is zero. In smooth optimisation, stationary points are important because they describe candidates for local optima.\n"
+        }
+      ],
+      "question": "Do the predicted evidence spans, read together, semantically support the predicted edge?",
+      "allowed_decisions": [
+        "supported",
+        "not_supported"
+      ]
+    },
+    {
+      "review_id": "R1-06",
+      "pair_id": "rel_dev_013",
+      "candidate_pair": {
+        "ko_a": {
+          "lecture_id": "optimisation_001",
+          "ko_id": "ko_slot_028",
+          "name": "Gradient Descent",
+          "type": "Method",
+          "source_spans": [
+            "Gradient descent is a first-order iterative method that repeatedly moves in this direction"
+          ]
+        },
+        "ko_b": {
+          "lecture_id": "optimisation_001",
+          "ko_id": "ko_slot_029",
+          "name": "Gradient Descent Update",
+          "type": "Formula",
+          "source_spans": [
+            "\\[ x_{k+1} = x_k - \\alpha_k \\nabla f(x_k). \\]"
+          ]
+        }
+      },
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "optimisation_001",
+          "ko_id": "ko_slot_029",
+          "name": "Gradient Descent Update",
+          "type": "Formula",
+          "source_spans": [
+            "\\[ x_{k+1} = x_k - \\alpha_k \\nabla f(x_k). \\]"
+          ]
+        },
+        "relation_type": "FORMALIZES",
+        "target": {
+          "lecture_id": "optimisation_001",
+          "ko_id": "ko_slot_028",
+          "name": "Gradient Descent",
+          "type": "Method",
+          "source_spans": [
+            "Gradient descent is a first-order iterative method that repeatedly moves in this direction"
+          ]
+        }
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "optimisation_001",
+          "span": "x_{k+1} = x_k - α_k ∇f(x_k)."
+        }
+      ],
+      "gold_evidence_spans": [
+        {
+          "lecture_id": "optimisation_001",
+          "span": "x_{k+1} = x_k - \\alpha_k \\nabla f(x_k)."
+        }
+      ],
+      "lecture_contexts": [
+        {
+          "lecture_id": "optimisation_001",
+          "text": "In mathematical optimisation, an objective function assigns a real value to each feasible input. An optimisation problem asks for an input that makes the objective function as small or as large as possible. In an unconstrained minimisation problem, the feasible inputs are usually all points in a space such as \\(\\mathbb{R}^n\\), and the goal is to minimise a differentiable function \\(f(x)\\).\n\nIf \\(f\\) is differentiable, the gradient \\(\\nabla f(x)\\) describes local change. The negative gradient \\(-\\nabla f(x)\\) is a descent direction because it points toward the direction of steepest local decrease. Gradient descent is a first-order iterative method that repeatedly moves in this direction:\n\n\\[\nx_{k+1} = x_k - \\alpha_k \\nabla f(x_k).\n\\]\n\nThe scalar \\(\\alpha_k\\) is the step size. It controls how far the method moves at iteration \\(k\\). A line search is a method for choosing a step size that gives sufficient decrease in the objective function.\n\nFor convex functions, every local minimum is also a global minimum. A stationary point is a point where the gradient is zero. In smooth optimisation, stationary points are important because they describe candidates for local optima.\n"
+        }
+      ],
+      "question": "Do the predicted evidence spans, read together, semantically support the predicted edge?",
+      "allowed_decisions": [
+        "supported",
+        "not_supported"
+      ]
+    },
+    {
+      "review_id": "R1-07",
+      "pair_id": "rel_dev_015",
+      "candidate_pair": {
+        "ko_a": {
+          "lecture_id": "calculus_002",
+          "ko_id": "ko_slot_008",
+          "name": "Chain Rule",
+          "type": "Method",
+          "source_spans": [
+            "The chain rule describes how the derivative of the composite function depends on the derivatives of f and g."
+          ]
+        },
+        "ko_b": {
+          "lecture_id": "calculus_002",
+          "ko_id": "ko_slot_009",
+          "name": "Composite Function",
+          "type": "Concept",
+          "source_spans": [
+            "The composite function h = f ∘ g maps an input x ∈ ℝ^m to f(g(x))."
+          ]
+        }
+      },
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "calculus_002",
+          "ko_id": "ko_slot_008",
+          "name": "Chain Rule",
+          "type": "Method",
+          "source_spans": [
+            "The chain rule describes how the derivative of the composite function depends on the derivatives of f and g."
+          ]
+        },
+        "relation_type": "REQUIRES",
+        "target": {
+          "lecture_id": "calculus_002",
+          "ko_id": "ko_slot_009",
+          "name": "Composite Function",
+          "type": "Concept",
+          "source_spans": [
+            "The composite function h = f ∘ g maps an input x ∈ ℝ^m to f(g(x))."
+          ]
+        }
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "calculus_002",
+          "span": "The chain rule describes how the derivative of the composite function depends on the derivatives of f and g."
+        }
+      ],
+      "gold_evidence_spans": [
+        {
+          "lecture_id": "calculus_002",
+          "span": "The chain rule describes how the derivative of the composite function depends on the derivatives of \\(f\\) and \\(g\\)."
+        }
+      ],
+      "lecture_contexts": [
+        {
+          "lecture_id": "calculus_002",
+          "text": "Let \\(g:\\mathbb{R}^m \\to \\mathbb{R}^n\\) and \\(f:\\mathbb{R}^n \\to \\mathbb{R}\\) be differentiable functions. The composite function \\(h = f \\circ g\\) maps an input \\(x \\in \\mathbb{R}^m\\) to \\(f(g(x))\\). The chain rule describes how the derivative of the composite function depends on the derivatives of \\(f\\) and \\(g\\).\n\nFor a differentiable vector-valued function \\(g\\), the Jacobian matrix \\(J_g(x)\\) collects all first-order partial derivatives of the output components of \\(g\\). It gives the best local linear approximation to \\(g\\) near \\(x\\).\n\nFor the scalar-valued composite function \\(h(x)=f(g(x))\\), the multivariable chain rule can be written as\n\n\\[\n\\nabla h(x) = J_g(x)^\\top \\nabla f(g(x)).\n\\]\n\nThis formula shows how gradients and Jacobian matrices work together. The Jacobian transfers local changes in the input space of \\(g\\) into local changes in the input space of \\(f\\).\n"
+        }
+      ],
+      "question": "Do the predicted evidence spans, read together, semantically support the predicted edge?",
+      "allowed_decisions": [
+        "supported",
+        "not_supported"
+      ]
+    },
+    {
+      "review_id": "R1-08",
+      "pair_id": "rel_dev_016",
+      "candidate_pair": {
+        "ko_a": {
+          "lecture_id": "calculus_002",
+          "ko_id": "ko_slot_008",
+          "name": "Chain Rule",
+          "type": "Method",
+          "source_spans": [
+            "The chain rule describes how the derivative of the composite function depends on the derivatives of f and g."
+          ]
+        },
+        "ko_b": {
+          "lecture_id": "calculus_002",
+          "ko_id": "ko_slot_011",
+          "name": "Multivariable Chain Rule Formula",
+          "type": "Formula",
+          "source_spans": [
+            "∇h(x) = J_g(x)^⊤ ∇f(g(x))."
+          ]
+        }
+      },
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "calculus_002",
+          "ko_id": "ko_slot_011",
+          "name": "Multivariable Chain Rule Formula",
+          "type": "Formula",
+          "source_spans": [
+            "∇h(x) = J_g(x)^⊤ ∇f(g(x))."
+          ]
+        },
+        "relation_type": "FORMALIZES",
+        "target": {
+          "lecture_id": "calculus_002",
+          "ko_id": "ko_slot_008",
+          "name": "Chain Rule",
+          "type": "Method",
+          "source_spans": [
+            "The chain rule describes how the derivative of the composite function depends on the derivatives of f and g."
+          ]
+        }
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "calculus_002",
+          "span": "∇h(x) = J_g(x)^⊤ ∇f(g(x))."
+        }
+      ],
+      "gold_evidence_spans": [
+        {
+          "lecture_id": "calculus_002",
+          "span": "the multivariable chain rule can be written as"
+        },
+        {
+          "lecture_id": "calculus_002",
+          "span": "\\nabla h(x) = J_g(x)^\\top \\nabla f(g(x))."
+        }
+      ],
+      "lecture_contexts": [
+        {
+          "lecture_id": "calculus_002",
+          "text": "Let \\(g:\\mathbb{R}^m \\to \\mathbb{R}^n\\) and \\(f:\\mathbb{R}^n \\to \\mathbb{R}\\) be differentiable functions. The composite function \\(h = f \\circ g\\) maps an input \\(x \\in \\mathbb{R}^m\\) to \\(f(g(x))\\). The chain rule describes how the derivative of the composite function depends on the derivatives of \\(f\\) and \\(g\\).\n\nFor a differentiable vector-valued function \\(g\\), the Jacobian matrix \\(J_g(x)\\) collects all first-order partial derivatives of the output components of \\(g\\). It gives the best local linear approximation to \\(g\\) near \\(x\\).\n\nFor the scalar-valued composite function \\(h(x)=f(g(x))\\), the multivariable chain rule can be written as\n\n\\[\n\\nabla h(x) = J_g(x)^\\top \\nabla f(g(x)).\n\\]\n\nThis formula shows how gradients and Jacobian matrices work together. The Jacobian transfers local changes in the input space of \\(g\\) into local changes in the input space of \\(f\\).\n"
+        }
+      ],
+      "question": "Do the predicted evidence spans, read together, semantically support the predicted edge?",
+      "allowed_decisions": [
+        "supported",
+        "not_supported"
+      ]
+    },
+    {
+      "review_id": "R1-09",
+      "pair_id": "rel_dev_019",
+      "candidate_pair": {
+        "ko_a": {
+          "lecture_id": "linear_algebra_002",
+          "ko_id": "ko_slot_023",
+          "name": "Orthogonal Projection",
+          "type": "Method",
+          "source_spans": [
+            "Orthogonal projection is a method for finding the closest point in a subspace to a given vector."
+          ]
+        },
+        "ko_b": {
+          "lecture_id": "linear_algebra_002",
+          "ko_id": "ko_slot_025",
+          "name": "Projection Formula",
+          "type": "Formula",
+          "source_spans": [
+            "\\operatorname{proj}_u(v) = \\frac{v \\cdot u}{u \\cdot u}u."
+          ]
+        }
+      },
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "linear_algebra_002",
+          "ko_id": "ko_slot_025",
+          "name": "Projection Formula",
+          "type": "Formula",
+          "source_spans": [
+            "\\operatorname{proj}_u(v) = \\frac{v \\cdot u}{u \\cdot u}u."
+          ]
+        },
+        "relation_type": "FORMALIZES",
+        "target": {
+          "lecture_id": "linear_algebra_002",
+          "ko_id": "ko_slot_023",
+          "name": "Orthogonal Projection",
+          "type": "Method",
+          "source_spans": [
+            "Orthogonal projection is a method for finding the closest point in a subspace to a given vector."
+          ]
+        }
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "linear_algebra_002",
+          "span": "proj_u(v) = (v·u)/(u·u) u."
+        }
+      ],
+      "gold_evidence_spans": [
+        {
+          "lecture_id": "linear_algebra_002",
+          "span": "\\operatorname{proj}_u(v) = \\frac{v \\cdot u}{u \\cdot u}u."
+        }
+      ],
+      "lecture_contexts": [
+        {
+          "lecture_id": "linear_algebra_002",
+          "text": "An inner product is an operation that takes two vectors and returns a scalar. In Euclidean space, the standard inner product is the dot product. Two vectors are orthogonal when their inner product is zero.\n\nOrthogonal projection is a method for finding the closest point in a subspace to a given vector. If \\(u\\) is a nonzero vector, the projection of \\(v\\) onto the one-dimensional subspace spanned by \\(u\\) is\n\n\\[\n\\operatorname{proj}_u(v) = \\frac{v \\cdot u}{u \\cdot u}u.\n\\]\n\nLeast squares problems use projection ideas to solve inconsistent systems. Given a matrix \\(A\\) and a vector \\(b\\), the least squares problem asks for a vector \\(x\\) that minimizes \\(\\|Ax-b\\|^2\\). When the columns of \\(A\\) are independent, the solution satisfies the normal equations\n\n\\[\nA^\\top A x = A^\\top b.\n\\]\n"
+        }
+      ],
+      "question": "Do the predicted evidence spans, read together, semantically support the predicted edge?",
+      "allowed_decisions": [
+        "supported",
+        "not_supported"
+      ]
+    },
+    {
+      "review_id": "R1-10",
+      "pair_id": "rel_dev_021",
+      "candidate_pair": {
+        "ko_a": {
+          "lecture_id": "linear_algebra_002",
+          "ko_id": "ko_slot_021",
+          "name": "Least Squares Problem",
+          "type": "Concept",
+          "source_spans": [
+            "Least squares problems use projection ideas to solve inconsistent systems."
+          ]
+        },
+        "ko_b": {
+          "lecture_id": "linear_algebra_002",
+          "ko_id": "ko_slot_022",
+          "name": "Normal Equations",
+          "type": "Formula",
+          "source_spans": [
+            "A^\\top A x = A^\\top b."
+          ]
+        }
+      },
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "linear_algebra_002",
+          "ko_id": "ko_slot_022",
+          "name": "Normal Equations",
+          "type": "Formula",
+          "source_spans": [
+            "A^\\top A x = A^\\top b."
+          ]
+        },
+        "relation_type": "FORMALIZES",
+        "target": {
+          "lecture_id": "linear_algebra_002",
+          "ko_id": "ko_slot_021",
+          "name": "Least Squares Problem",
+          "type": "Concept",
+          "source_spans": [
+            "Least squares problems use projection ideas to solve inconsistent systems."
+          ]
+        }
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "linear_algebra_002",
+          "span": "A^⊤ A x = A^⊤ b."
+        }
+      ],
+      "gold_evidence_spans": [
+        {
+          "lecture_id": "linear_algebra_002",
+          "span": "the solution satisfies the normal equations"
+        },
+        {
+          "lecture_id": "linear_algebra_002",
+          "span": "A^\\top A x = A^\\top b."
+        }
+      ],
+      "lecture_contexts": [
+        {
+          "lecture_id": "linear_algebra_002",
+          "text": "An inner product is an operation that takes two vectors and returns a scalar. In Euclidean space, the standard inner product is the dot product. Two vectors are orthogonal when their inner product is zero.\n\nOrthogonal projection is a method for finding the closest point in a subspace to a given vector. If \\(u\\) is a nonzero vector, the projection of \\(v\\) onto the one-dimensional subspace spanned by \\(u\\) is\n\n\\[\n\\operatorname{proj}_u(v) = \\frac{v \\cdot u}{u \\cdot u}u.\n\\]\n\nLeast squares problems use projection ideas to solve inconsistent systems. Given a matrix \\(A\\) and a vector \\(b\\), the least squares problem asks for a vector \\(x\\) that minimizes \\(\\|Ax-b\\|^2\\). When the columns of \\(A\\) are independent, the solution satisfies the normal equations\n\n\\[\nA^\\top A x = A^\\top b.\n\\]\n"
+        }
+      ],
+      "question": "Do the predicted evidence spans, read together, semantically support the predicted edge?",
+      "allowed_decisions": [
+        "supported",
+        "not_supported"
+      ]
+    },
+    {
+      "review_id": "R1-11",
+      "pair_id": "rel_dev_024",
+      "candidate_pair": {
+        "ko_a": {
+          "lecture_id": "probability_001",
+          "ko_id": "ko_slot_038",
+          "name": "Expected Value",
+          "type": "Concept",
+          "source_spans": [
+            "The expected value of a random variable is a weighted average of its possible values."
+          ]
+        },
+        "ko_b": {
+          "lecture_id": "probability_001",
+          "ko_id": "ko_slot_039",
+          "name": "Expected Value Formula",
+          "type": "Formula",
+          "source_spans": [
+            "\\mathbb{E}[X] = \\sum_x x P(X=x)."
+          ]
+        }
+      },
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "probability_001",
+          "ko_id": "ko_slot_039",
+          "name": "Expected Value Formula",
+          "type": "Formula",
+          "source_spans": [
+            "\\mathbb{E}[X] = \\sum_x x P(X=x)."
+          ]
+        },
+        "relation_type": "FORMALIZES",
+        "target": {
+          "lecture_id": "probability_001",
+          "ko_id": "ko_slot_038",
+          "name": "Expected Value",
+          "type": "Concept",
+          "source_spans": [
+            "The expected value of a random variable is a weighted average of its possible values."
+          ]
+        }
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "probability_001",
+          "span": "E[X] = ∑_x x P(X=x)."
+        }
+      ],
+      "gold_evidence_spans": [
+        {
+          "lecture_id": "probability_001",
+          "span": "\\mathbb{E}[X] = \\sum_x x P(X=x)."
+        }
+      ],
+      "lecture_contexts": [
+        {
+          "lecture_id": "probability_001",
+          "text": "A random variable is a function that assigns a numerical value to each outcome of a random experiment. The probability distribution of a random variable describes how probability is assigned to its possible values.\n\nThe expected value of a random variable is a weighted average of its possible values. For a discrete random variable \\(X\\), the expected value is\n\n\\[\n\\mathbb{E}[X] = \\sum_x x P(X=x).\n\\]\n\nVariance measures how far a random variable typically is from its expected value. It can be defined as\n\n\\[\n\\operatorname{Var}(X) = \\mathbb{E}[(X-\\mathbb{E}[X])^2].\n\\]\n\nConditional probability measures the probability of an event given that another event has occurred. If \\(P(B)>0\\), then\n\n\\[\nP(A \\mid B) = \\frac{P(A \\cap B)}{P(B)}.\n\\]\n\nBayes' rule rewrites conditional probability in a form that is useful for updating beliefs:\n\n\\[\nP(A \\mid B) = \\frac{P(B \\mid A)P(A)}{P(B)}.\n\\]\n"
+        }
+      ],
+      "question": "Do the predicted evidence spans, read together, semantically support the predicted edge?",
+      "allowed_decisions": [
+        "supported",
+        "not_supported"
+      ]
+    },
+    {
+      "review_id": "R1-12",
+      "pair_id": "rel_dev_026",
+      "candidate_pair": {
+        "ko_a": {
+          "lecture_id": "probability_001",
+          "ko_id": "ko_slot_042",
+          "name": "Variance",
+          "type": "Concept",
+          "source_spans": [
+            "Variance measures how far a random variable typically is from its expected value."
+          ]
+        },
+        "ko_b": {
+          "lecture_id": "probability_001",
+          "ko_id": "ko_slot_043",
+          "name": "Variance Formula",
+          "type": "Formula",
+          "source_spans": [
+            "\\operatorname{Var}(X) = \\mathbb{E}[(X-\\mathbb{E}[X])^2]."
+          ]
+        }
+      },
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "probability_001",
+          "ko_id": "ko_slot_043",
+          "name": "Variance Formula",
+          "type": "Formula",
+          "source_spans": [
+            "\\operatorname{Var}(X) = \\mathbb{E}[(X-\\mathbb{E}[X])^2]."
+          ]
+        },
+        "relation_type": "FORMALIZES",
+        "target": {
+          "lecture_id": "probability_001",
+          "ko_id": "ko_slot_042",
+          "name": "Variance",
+          "type": "Concept",
+          "source_spans": [
+            "Variance measures how far a random variable typically is from its expected value."
+          ]
+        }
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "probability_001",
+          "span": "Var(X) = E[(X-E[X])^2]."
+        }
+      ],
+      "gold_evidence_spans": [
+        {
+          "lecture_id": "probability_001",
+          "span": "\\operatorname{Var}(X) = \\mathbb{E}[(X-\\mathbb{E}[X])^2]."
+        }
+      ],
+      "lecture_contexts": [
+        {
+          "lecture_id": "probability_001",
+          "text": "A random variable is a function that assigns a numerical value to each outcome of a random experiment. The probability distribution of a random variable describes how probability is assigned to its possible values.\n\nThe expected value of a random variable is a weighted average of its possible values. For a discrete random variable \\(X\\), the expected value is\n\n\\[\n\\mathbb{E}[X] = \\sum_x x P(X=x).\n\\]\n\nVariance measures how far a random variable typically is from its expected value. It can be defined as\n\n\\[\n\\operatorname{Var}(X) = \\mathbb{E}[(X-\\mathbb{E}[X])^2].\n\\]\n\nConditional probability measures the probability of an event given that another event has occurred. If \\(P(B)>0\\), then\n\n\\[\nP(A \\mid B) = \\frac{P(A \\cap B)}{P(B)}.\n\\]\n\nBayes' rule rewrites conditional probability in a form that is useful for updating beliefs:\n\n\\[\nP(A \\mid B) = \\frac{P(B \\mid A)P(A)}{P(B)}.\n\\]\n"
+        }
+      ],
+      "question": "Do the predicted evidence spans, read together, semantically support the predicted edge?",
+      "allowed_decisions": [
+        "supported",
+        "not_supported"
+      ]
+    },
+    {
+      "review_id": "R1-13",
+      "pair_id": "rel_dev_027",
+      "candidate_pair": {
+        "ko_a": {
+          "lecture_id": "probability_001",
+          "ko_id": "ko_slot_036",
+          "name": "Conditional Probability",
+          "type": "Concept",
+          "source_spans": [
+            "Conditional probability measures the probability of an event given that another event has occurred."
+          ]
+        },
+        "ko_b": {
+          "lecture_id": "probability_001",
+          "ko_id": "ko_slot_037",
+          "name": "Conditional Probability Formula",
+          "type": "Formula",
+          "source_spans": [
+            "P(A \\mid B) = \\frac{P(A \\cap B)}{P(B)}."
+          ]
+        }
+      },
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "probability_001",
+          "ko_id": "ko_slot_037",
+          "name": "Conditional Probability Formula",
+          "type": "Formula",
+          "source_spans": [
+            "P(A \\mid B) = \\frac{P(A \\cap B)}{P(B)}."
+          ]
+        },
+        "relation_type": "FORMALIZES",
+        "target": {
+          "lecture_id": "probability_001",
+          "ko_id": "ko_slot_036",
+          "name": "Conditional Probability",
+          "type": "Concept",
+          "source_spans": [
+            "Conditional probability measures the probability of an event given that another event has occurred."
+          ]
+        }
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "probability_001",
+          "span": "P(A|B) = P(A∩B)/P(B)."
+        }
+      ],
+      "gold_evidence_spans": [
+        {
+          "lecture_id": "probability_001",
+          "span": "P(A \\mid B) = \\frac{P(A \\cap B)}{P(B)}."
+        }
+      ],
+      "lecture_contexts": [
+        {
+          "lecture_id": "probability_001",
+          "text": "A random variable is a function that assigns a numerical value to each outcome of a random experiment. The probability distribution of a random variable describes how probability is assigned to its possible values.\n\nThe expected value of a random variable is a weighted average of its possible values. For a discrete random variable \\(X\\), the expected value is\n\n\\[\n\\mathbb{E}[X] = \\sum_x x P(X=x).\n\\]\n\nVariance measures how far a random variable typically is from its expected value. It can be defined as\n\n\\[\n\\operatorname{Var}(X) = \\mathbb{E}[(X-\\mathbb{E}[X])^2].\n\\]\n\nConditional probability measures the probability of an event given that another event has occurred. If \\(P(B)>0\\), then\n\n\\[\nP(A \\mid B) = \\frac{P(A \\cap B)}{P(B)}.\n\\]\n\nBayes' rule rewrites conditional probability in a form that is useful for updating beliefs:\n\n\\[\nP(A \\mid B) = \\frac{P(B \\mid A)P(A)}{P(B)}.\n\\]\n"
+        }
+      ],
+      "question": "Do the predicted evidence spans, read together, semantically support the predicted edge?",
+      "allowed_decisions": [
+        "supported",
+        "not_supported"
+      ]
+    }
+  ]
+}

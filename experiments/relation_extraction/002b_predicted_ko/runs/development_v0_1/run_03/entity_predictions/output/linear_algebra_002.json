@@ -1,0 +1,63 @@
+{
+  "lecture_id": "linear_algebra_002",
+  "knowledge_objects": [
+    {
+      "id": "inner_product",
+      "name": "Inner Product",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "An operation that takes two vectors and returns a scalar.",
+      "source_span": "An inner product is an operation that takes two vectors and returns a scalar."
+    },
+    {
+      "id": "dot_product",
+      "name": "Dot Product",
+      "type": "Concept",
+      "aliases": [
+        "standard inner product"
+      ],
+      "short_definition": "The standard inner product in Euclidean space.",
+      "source_span": "the standard inner product is the dot product"
+    },
+    {
+      "id": "orthogonal_vectors",
+      "name": "Orthogonal Vectors",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "Two vectors are orthogonal when their inner product is zero.",
+      "source_span": "Two vectors are orthogonal when their inner product is zero."
+    },
+    {
+      "id": "orthogonal_projection",
+      "name": "Orthogonal Projection",
+      "type": "Method",
+      "aliases": [],
+      "short_definition": "A method for finding the closest point in a subspace to a given vector.",
+      "source_span": "Orthogonal projection is a method for finding the closest point in a subspace to a given vector."
+    },
+    {
+      "id": "projection_formula",
+      "name": "Projection Formula",
+      "type": "Formula",
+      "aliases": [],
+      "short_definition": "The formula for the projection of v onto the subspace spanned by u.",
+      "source_span": "\\operatorname{proj}_u(v) = \\frac{v \\cdot u}{u \\cdot u}u."
+    },
+    {
+      "id": "least_squares_problem",
+      "name": "Least Squares Problem",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "A problem that uses projection ideas to solve inconsistent systems.",
+      "source_span": "Least squares problems use projection ideas to solve inconsistent systems."
+    },
+    {
+      "id": "normal_equations",
+      "name": "Normal Equations",
+      "type": "Formula",
+      "aliases": [],
+      "short_definition": "The equations that give the solution to the least squares problem when columns of A are independent.",
+      "source_span": "A^\\top A x = A^\\top b."
+    }
+  ]
+}

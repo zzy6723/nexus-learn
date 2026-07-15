@@ -1,0 +1,1593 @@
+[
+  {
+    "pair_id": "rel_dev_001",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "calculus_001",
+        "ko_id": "ko_slot_003"
+      },
+      "target": {
+        "lecture_id": "calculus_001",
+        "ko_id": "ko_slot_005"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "calculus_001",
+        "ko_id": "ko_slot_003"
+      },
+      "target": {
+        "lecture_id": "calculus_001",
+        "ko_id": "ko_slot_005"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "calculus_001",
+        "span": "The gradient ∇f(x) collects these partial derivatives into a vector.",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_002",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "calculus_001",
+        "ko_id": "ko_slot_001"
+      },
+      "target": {
+        "lecture_id": "calculus_001",
+        "ko_id": "ko_slot_003"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "calculus_001",
+        "ko_id": "ko_slot_001"
+      },
+      "target": {
+        "lecture_id": "calculus_001",
+        "ko_id": "ko_slot_003"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "calculus_001",
+        "span": "For a unit direction u, the directional derivative is ∇f(x)·u, so the gradient points in the direction of steepest local increase.",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_003",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "calculus_001",
+        "ko_id": "ko_slot_006"
+      },
+      "target": {
+        "lecture_id": "calculus_001",
+        "ko_id": "ko_slot_003"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "calculus_001",
+        "ko_id": "ko_slot_006"
+      },
+      "target": {
+        "lecture_id": "calculus_001",
+        "ko_id": "ko_slot_003"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "calculus_001",
+        "span": "A point where the gradient is the zero vector is called a stationary point.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  },
+  {
+    "pair_id": "rel_dev_004",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "calculus_001",
+        "ko_id": "ko_slot_002"
+      },
+      "target": {
+        "lecture_id": "calculus_001",
+        "ko_id": "ko_slot_007"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "calculus_001",
+        "ko_id": "ko_slot_002"
+      },
+      "target": {
+        "lecture_id": "calculus_001",
+        "ko_id": "ko_slot_007"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "calculus_001",
+        "span": "The first-order Taylor approximation around a is f(a+h) ≈ f(a) + ∇f(a)·h.",
+        "lecture_allowed": true,
+        "exact_substring": false
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "calculus_001",
+        "span": "Taylor approximation describes the local behavior of a differentiable function near a point.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_005",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "ko_slot_012"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "ko_slot_018"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "ko_slot_012"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "ko_slot_018"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "linear_algebra_001",
+        "span": "A basis is a set of independent vectors that can represent every vector in the space through linear combinations.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  },
+  {
+    "pair_id": "rel_dev_006",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "ko_slot_013"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "ko_slot_012"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "ko_slot_013"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "ko_slot_012"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "linear_algebra_001",
+        "span": "The number of vectors in a basis is the dimension of the vector space.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  },
+  {
+    "pair_id": "rel_dev_007",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "ko_slot_017"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "ko_slot_016"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "ko_slot_017"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "ko_slot_016"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": true,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "linear_algebra_001",
+        "span": "A matrix is a rectangular array of numbers that can represent a linear transformation once bases have been chosen for the input and output spaces.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_009",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "ko_slot_015"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "ko_slot_014"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "ko_slot_015"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "ko_slot_014"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "linear_algebra_001",
+        "span": "The corresponding eigenvalue λ satisfies Av = λ v.",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_010",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "ko_slot_032"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "ko_slot_031"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "ko_slot_032"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "ko_slot_031"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "optimisation_001",
+        "span": "An optimisation problem asks for an input that makes the objective function as small or as large as possible.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  },
+  {
+    "pair_id": "rel_dev_011",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "ko_slot_034"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "ko_slot_032"
+      },
+      "relation_type": "EXTENDS"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "ko_slot_034"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "ko_slot_032"
+      },
+      "relation_type": "EXTENDS"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "optimisation_001",
+        "span": "In an unconstrained minimisation problem, the feasible inputs are usually all points in a space such as ℝ^n, and the goal is to minimise a differentiable function f(x).",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_012",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "ko_slot_028"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "ko_slot_027"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "ko_slot_028"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "ko_slot_027"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": true,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "optimisation_001",
+        "span": "Gradient descent is a first-order iterative method that repeatedly moves in this direction",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_013",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "ko_slot_029"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "ko_slot_028"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "ko_slot_029"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "ko_slot_028"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "optimisation_001",
+        "span": "x_{k+1} = x_k - α_k ∇f(x_k).",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_014",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "ko_slot_033"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "ko_slot_028"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "ko_slot_028"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "ko_slot_033"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": false,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "optimisation_001",
+        "span": "x_{k+1} = x_k - α_k ∇f(x_k). The scalar α_k is the step size.",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_015",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "calculus_002",
+        "ko_id": "ko_slot_008"
+      },
+      "target": {
+        "lecture_id": "calculus_002",
+        "ko_id": "ko_slot_009"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "calculus_002",
+        "ko_id": "ko_slot_008"
+      },
+      "target": {
+        "lecture_id": "calculus_002",
+        "ko_id": "ko_slot_009"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "calculus_002",
+        "span": "The chain rule describes how the derivative of the composite function depends on the derivatives of f and g.",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_016",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "calculus_002",
+        "ko_id": "ko_slot_011"
+      },
+      "target": {
+        "lecture_id": "calculus_002",
+        "ko_id": "ko_slot_008"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "calculus_002",
+        "ko_id": "ko_slot_011"
+      },
+      "target": {
+        "lecture_id": "calculus_002",
+        "ko_id": "ko_slot_008"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "calculus_002",
+        "span": "∇h(x) = J_g(x)^⊤ ∇f(g(x)).",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_017",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "calculus_002",
+        "ko_id": "ko_slot_010"
+      },
+      "target": {
+        "lecture_id": "calculus_002",
+        "ko_id": "ko_slot_011"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "calculus_002",
+        "ko_id": "ko_slot_011"
+      },
+      "target": {
+        "lecture_id": "calculus_002",
+        "ko_id": "ko_slot_010"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": false,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "calculus_002",
+        "span": "∇h(x) = J_g(x)^⊤ ∇f(g(x)).",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_018",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "ko_slot_024"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "ko_slot_020"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "ko_slot_020"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "ko_slot_024"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": false,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "linear_algebra_002",
+        "span": "Two vectors are orthogonal when their inner product is zero.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_019",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "ko_slot_025"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "ko_slot_023"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "ko_slot_025"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "ko_slot_023"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "linear_algebra_002",
+        "span": "proj_u(v) = (v·u)/(u·u) u.",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_020",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "ko_slot_023"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "ko_slot_021"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "ko_slot_023"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "ko_slot_021"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "linear_algebra_002",
+        "span": "Least squares problems use projection ideas to solve inconsistent systems.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  },
+  {
+    "pair_id": "rel_dev_021",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "ko_slot_022"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "ko_slot_021"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "ko_slot_022"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "ko_slot_021"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "linear_algebra_002",
+        "span": "A^⊤ A x = A^⊤ b.",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_022",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_040"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_041"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_040"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_041"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "probability_001",
+        "span": "The probability distribution of a random variable describes how probability is assigned to its possible values.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  },
+  {
+    "pair_id": "rel_dev_023",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_038"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_041"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_038"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_041"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "probability_001",
+        "span": "The expected value of a random variable is a weighted average of its possible values.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  },
+  {
+    "pair_id": "rel_dev_024",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_039"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_038"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_039"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_038"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "probability_001",
+        "span": "E[X] = ∑_x x P(X=x).",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_025",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_042"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_038"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_042"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_038"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "probability_001",
+        "span": "Variance measures how far a random variable typically is from its expected value.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  },
+  {
+    "pair_id": "rel_dev_026",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_043"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_042"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_043"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_042"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "probability_001",
+        "span": "Var(X) = E[(X-E[X])^2].",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_027",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_037"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_036"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_037"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_036"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "probability_001",
+        "span": "P(A|B) = P(A∩B)/P(B).",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_028",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_035"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_036"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_035"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_036"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": true,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "probability_001",
+        "span": "P(A|B) = P(B|A)P(A)/P(B).",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_030",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_042"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "ko_slot_023"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "ko_slot_023"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_042"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_031",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "ko_slot_012"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_036"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "ko_slot_012"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_036"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_032",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "ko_slot_030"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_035"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "ko_slot_030"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_035"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_033",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "ko_slot_015"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_039"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "ko_slot_015"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_039"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_035",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "calculus_001",
+        "ko_id": "ko_slot_004"
+      },
+      "target": {
+        "lecture_id": "calculus_001",
+        "ko_id": "ko_slot_006"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "calculus_001",
+        "ko_id": "ko_slot_004"
+      },
+      "target": {
+        "lecture_id": "calculus_001",
+        "ko_id": "ko_slot_006"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_036",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "ko_slot_012"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "ko_slot_015"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "ko_slot_012"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "ko_slot_015"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_038",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "ko_slot_019"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "ko_slot_022"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "ko_slot_019"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "ko_slot_022"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_039",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_039"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_035"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_035"
+      },
+      "target": {
+        "lecture_id": "probability_001",
+        "ko_id": "ko_slot_039"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_040",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "ko_slot_026"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "ko_slot_030"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "ko_slot_026"
+      },
+      "target": {
+        "lecture_id": "optimisation_001",
+        "ko_id": "ko_slot_030"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [],
+    "evidence_support_status": null
+  }
+]

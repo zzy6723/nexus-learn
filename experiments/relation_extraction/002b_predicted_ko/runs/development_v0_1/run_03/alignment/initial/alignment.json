@@ -1,0 +1,2563 @@
+{
+  "artifact_type": "predicted_ko_alignment",
+  "errors": [
+    {
+      "error_code": "ko_type_mismatch",
+      "oracle_ref": {
+        "ko_id": "bayes_rule",
+        "lecture_id": "probability_001"
+      },
+      "predicted_ref": {
+        "ko_id": "bayes_rule",
+        "lecture_id": "probability_001"
+      }
+    },
+    {
+      "error_code": "ko_type_mismatch",
+      "oracle_ref": {
+        "ko_id": "chain_rule",
+        "lecture_id": "calculus_002"
+      },
+      "predicted_ref": {
+        "ko_id": "chain_rule",
+        "lecture_id": "calculus_002"
+      }
+    },
+    {
+      "error_code": "ko_type_mismatch",
+      "oracle_ref": {
+        "ko_id": "matrix_multiplication",
+        "lecture_id": "linear_algebra_001"
+      },
+      "predicted_ref": {
+        "ko_id": "matrix_multiplication",
+        "lecture_id": "linear_algebra_001"
+      }
+    },
+    {
+      "error_code": "ko_type_mismatch",
+      "oracle_ref": {
+        "ko_id": "taylor_approximation",
+        "lecture_id": "calculus_001"
+      },
+      "predicted_ref": {
+        "ko_id": "taylor_approximation",
+        "lecture_id": "calculus_001"
+      }
+    },
+    {
+      "error_code": "missing_oracle_ko",
+      "oracle_ref": {
+        "ko_id": "bayes_rule_formula",
+        "lecture_id": "probability_001"
+      }
+    },
+    {
+      "error_code": "missing_oracle_ko",
+      "oracle_ref": {
+        "ko_id": "event",
+        "lecture_id": "probability_001"
+      }
+    },
+    {
+      "error_code": "missing_oracle_ko",
+      "oracle_ref": {
+        "ko_id": "first_order_taylor_formula",
+        "lecture_id": "calculus_001"
+      }
+    },
+    {
+      "error_code": "missing_oracle_ko",
+      "oracle_ref": {
+        "ko_id": "local_linear_approximation",
+        "lecture_id": "calculus_002"
+      }
+    },
+    {
+      "error_code": "missing_oracle_ko",
+      "oracle_ref": {
+        "ko_id": "subspace",
+        "lecture_id": "linear_algebra_002"
+      }
+    },
+    {
+      "error_code": "predicted_source_span_invalid",
+      "oracle_ref": {
+        "ko_id": "chain_rule",
+        "lecture_id": "calculus_002"
+      },
+      "predicted_ref": {
+        "ko_id": "chain_rule",
+        "lecture_id": "calculus_002"
+      }
+    },
+    {
+      "error_code": "predicted_source_span_invalid",
+      "oracle_ref": {
+        "ko_id": "characteristic_polynomial",
+        "lecture_id": "linear_algebra_001"
+      },
+      "predicted_ref": {
+        "ko_id": "characteristic_polynomial",
+        "lecture_id": "linear_algebra_001"
+      }
+    },
+    {
+      "error_code": "predicted_source_span_invalid",
+      "oracle_ref": {
+        "ko_id": "composite_function",
+        "lecture_id": "calculus_002"
+      },
+      "predicted_ref": {
+        "ko_id": "composite_function",
+        "lecture_id": "calculus_002"
+      }
+    },
+    {
+      "error_code": "predicted_source_span_invalid",
+      "oracle_ref": {
+        "ko_id": "directional_derivative",
+        "lecture_id": "calculus_001"
+      },
+      "predicted_ref": {
+        "ko_id": "directional_derivative",
+        "lecture_id": "calculus_001"
+      }
+    },
+    {
+      "error_code": "predicted_source_span_invalid",
+      "oracle_ref": {
+        "ko_id": "eigenvalue",
+        "lecture_id": "linear_algebra_001"
+      },
+      "predicted_ref": {
+        "ko_id": "eigenvalue",
+        "lecture_id": "linear_algebra_001"
+      }
+    },
+    {
+      "error_code": "predicted_source_span_invalid",
+      "oracle_ref": {
+        "ko_id": "eigenvalue_equation",
+        "lecture_id": "linear_algebra_001"
+      },
+      "predicted_ref": {
+        "ko_id": "eigenvalue_equation",
+        "lecture_id": "linear_algebra_001"
+      }
+    },
+    {
+      "error_code": "predicted_source_span_invalid",
+      "oracle_ref": {
+        "ko_id": "eigenvector",
+        "lecture_id": "linear_algebra_001"
+      },
+      "predicted_ref": {
+        "ko_id": "eigenvector",
+        "lecture_id": "linear_algebra_001"
+      }
+    },
+    {
+      "error_code": "predicted_source_span_invalid",
+      "oracle_ref": {
+        "ko_id": "gradient",
+        "lecture_id": "calculus_001"
+      },
+      "predicted_ref": {
+        "ko_id": "gradient",
+        "lecture_id": "calculus_001"
+      }
+    },
+    {
+      "error_code": "predicted_source_span_invalid",
+      "oracle_ref": {
+        "ko_id": "gradient",
+        "lecture_id": "calculus_002"
+      },
+      "predicted_ref": {
+        "ko_id": "gradient",
+        "lecture_id": "calculus_002"
+      }
+    },
+    {
+      "error_code": "predicted_source_span_invalid",
+      "oracle_ref": {
+        "ko_id": "gradient_descent_update",
+        "lecture_id": "optimisation_001"
+      },
+      "predicted_ref": {
+        "ko_id": "gradient_descent_update",
+        "lecture_id": "optimisation_001"
+      }
+    },
+    {
+      "error_code": "predicted_source_span_invalid",
+      "oracle_ref": {
+        "ko_id": "jacobian_matrix",
+        "lecture_id": "calculus_002"
+      },
+      "predicted_ref": {
+        "ko_id": "jacobian_matrix",
+        "lecture_id": "calculus_002"
+      }
+    },
+    {
+      "error_code": "predicted_source_span_invalid",
+      "oracle_ref": {
+        "ko_id": "multivariable_chain_rule_formula",
+        "lecture_id": "calculus_002"
+      },
+      "predicted_ref": {
+        "ko_id": "multivariable_chain_rule_formula",
+        "lecture_id": "calculus_002"
+      }
+    },
+    {
+      "error_code": "predicted_source_span_invalid",
+      "oracle_ref": {
+        "ko_id": "partial_derivative",
+        "lecture_id": "calculus_001"
+      },
+      "predicted_ref": {
+        "ko_id": "partial_derivative",
+        "lecture_id": "calculus_001"
+      }
+    },
+    {
+      "error_code": "unmatched_extra_predicted_ko",
+      "predicted_ref": {
+        "ko_id": "first_order_taylor_approximation",
+        "lecture_id": "calculus_001"
+      }
+    }
+  ],
+  "evaluation_status": "final",
+  "lecture_sha256": {
+    "calculus_001": "00d884e75bd5f6357ddda700b9c75dd671beac85b70cec8c0809b72107fdc2e5",
+    "calculus_002": "72a6f9272c0cc04008aa6f321f8c65b0dc77dd524bee9f0bc90ffca1e339502c",
+    "linear_algebra_001": "7b0837306f0c58c4bd631f40b1e7eb0a099ee29500fe831ca48258b403e3a521",
+    "linear_algebra_002": "3dc3988a5349037895e62f9385f190702cfed5f76d78ee49d736e9cf45f09f84",
+    "optimisation_001": "693903178d836b5b66fd47e32a7c5554c5716667aafcb0a140729ccf4be1a299",
+    "probability_001": "0e31a3e291c7581b4f5466b472fbdd285616577e38f1f49ebe18bbf4d1a27161"
+  },
+  "name_matching_normalization_version": "predicted_ko_name_matching_v0_1",
+  "oracle_inventory_sha256": "c527a8e914d886dd27483c1bca154c58b7617fc54c04b92c8482b9fbb4e0ceb2",
+  "oracle_records": [
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "directional_derivative",
+          "lecture_id": "calculus_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "directional_derivative",
+        "lecture_id": "calculus_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "directional_derivative",
+        "lecture_id": "calculus_001"
+      },
+      "predicted_source_span_exact": false,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "unresolved",
+      "identity_match": false,
+      "linked_predicted_refs": [],
+      "matched_predicted_ref": null,
+      "notes": "",
+      "oracle_ref": {
+        "ko_id": "first_order_taylor_formula",
+        "lecture_id": "calculus_001"
+      },
+      "predicted_source_span_exact": null,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "missing",
+      "recoverable": false,
+      "structural_flags": [],
+      "type_match": null
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "gradient",
+          "lecture_id": "calculus_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "gradient",
+        "lecture_id": "calculus_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "gradient",
+        "lecture_id": "calculus_001"
+      },
+      "predicted_source_span_exact": false,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "hessian_matrix",
+          "lecture_id": "calculus_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "hessian_matrix",
+        "lecture_id": "calculus_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "hessian_matrix",
+        "lecture_id": "calculus_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "partial_derivative",
+          "lecture_id": "calculus_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "partial_derivative",
+        "lecture_id": "calculus_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "partial_derivative",
+        "lecture_id": "calculus_001"
+      },
+      "predicted_source_span_exact": false,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "stationary_point",
+          "lecture_id": "calculus_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "stationary_point",
+        "lecture_id": "calculus_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "stationary_point",
+        "lecture_id": "calculus_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "taylor_approximation",
+          "lecture_id": "calculus_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "taylor_approximation",
+        "lecture_id": "calculus_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "taylor_approximation",
+        "lecture_id": "calculus_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": false
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "chain_rule",
+          "lecture_id": "calculus_002"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "chain_rule",
+        "lecture_id": "calculus_002"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "chain_rule",
+        "lecture_id": "calculus_002"
+      },
+      "predicted_source_span_exact": false,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": false
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "composite_function",
+          "lecture_id": "calculus_002"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "composite_function",
+        "lecture_id": "calculus_002"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "composite_function",
+        "lecture_id": "calculus_002"
+      },
+      "predicted_source_span_exact": false,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "gradient",
+          "lecture_id": "calculus_002"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "gradient",
+        "lecture_id": "calculus_002"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "gradient",
+        "lecture_id": "calculus_002"
+      },
+      "predicted_source_span_exact": false,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "jacobian_matrix",
+          "lecture_id": "calculus_002"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "jacobian_matrix",
+        "lecture_id": "calculus_002"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "jacobian_matrix",
+        "lecture_id": "calculus_002"
+      },
+      "predicted_source_span_exact": false,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "unresolved",
+      "identity_match": false,
+      "linked_predicted_refs": [],
+      "matched_predicted_ref": null,
+      "notes": "",
+      "oracle_ref": {
+        "ko_id": "local_linear_approximation",
+        "lecture_id": "calculus_002"
+      },
+      "predicted_source_span_exact": null,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "missing",
+      "recoverable": false,
+      "structural_flags": [],
+      "type_match": null
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "multivariable_chain_rule_formula",
+          "lecture_id": "calculus_002"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "multivariable_chain_rule_formula",
+        "lecture_id": "calculus_002"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "multivariable_chain_rule_formula",
+        "lecture_id": "calculus_002"
+      },
+      "predicted_source_span_exact": false,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "basis",
+          "lecture_id": "linear_algebra_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "basis",
+        "lecture_id": "linear_algebra_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "basis",
+        "lecture_id": "linear_algebra_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "characteristic_polynomial",
+          "lecture_id": "linear_algebra_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "characteristic_polynomial",
+        "lecture_id": "linear_algebra_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "characteristic_polynomial",
+        "lecture_id": "linear_algebra_001"
+      },
+      "predicted_source_span_exact": false,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "dimension",
+          "lecture_id": "linear_algebra_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "dimension",
+        "lecture_id": "linear_algebra_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "dimension",
+        "lecture_id": "linear_algebra_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "eigenvalue",
+          "lecture_id": "linear_algebra_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "eigenvalue",
+        "lecture_id": "linear_algebra_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "eigenvalue",
+        "lecture_id": "linear_algebra_001"
+      },
+      "predicted_source_span_exact": false,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "eigenvalue_equation",
+          "lecture_id": "linear_algebra_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "eigenvalue_equation",
+        "lecture_id": "linear_algebra_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "eigenvalue_equation",
+        "lecture_id": "linear_algebra_001"
+      },
+      "predicted_source_span_exact": false,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "eigenvector",
+          "lecture_id": "linear_algebra_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "eigenvector",
+        "lecture_id": "linear_algebra_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "eigenvector",
+        "lecture_id": "linear_algebra_001"
+      },
+      "predicted_source_span_exact": false,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "linear_transformation",
+          "lecture_id": "linear_algebra_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "linear_transformation",
+        "lecture_id": "linear_algebra_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "linear_transformation",
+        "lecture_id": "linear_algebra_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "matrix",
+          "lecture_id": "linear_algebra_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "matrix",
+        "lecture_id": "linear_algebra_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "matrix",
+        "lecture_id": "linear_algebra_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "matrix_multiplication",
+          "lecture_id": "linear_algebra_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "matrix_multiplication",
+        "lecture_id": "linear_algebra_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "matrix_multiplication",
+        "lecture_id": "linear_algebra_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": false
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "vector_space",
+          "lecture_id": "linear_algebra_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "vector_space",
+        "lecture_id": "linear_algebra_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "vector_space",
+        "lecture_id": "linear_algebra_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "dot_product",
+          "lecture_id": "linear_algebra_002"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "dot_product",
+        "lecture_id": "linear_algebra_002"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "dot_product",
+        "lecture_id": "linear_algebra_002"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "inner_product",
+          "lecture_id": "linear_algebra_002"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "inner_product",
+        "lecture_id": "linear_algebra_002"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "inner_product",
+        "lecture_id": "linear_algebra_002"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "least_squares_problem",
+          "lecture_id": "linear_algebra_002"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "least_squares_problem",
+        "lecture_id": "linear_algebra_002"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "least_squares_problem",
+        "lecture_id": "linear_algebra_002"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "normal_equations",
+          "lecture_id": "linear_algebra_002"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "normal_equations",
+        "lecture_id": "linear_algebra_002"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "normal_equations",
+        "lecture_id": "linear_algebra_002"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "orthogonal_projection",
+          "lecture_id": "linear_algebra_002"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "orthogonal_projection",
+        "lecture_id": "linear_algebra_002"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "orthogonal_projection",
+        "lecture_id": "linear_algebra_002"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "orthogonal_vectors",
+          "lecture_id": "linear_algebra_002"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "orthogonal_vectors",
+        "lecture_id": "linear_algebra_002"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "orthogonal_vectors",
+        "lecture_id": "linear_algebra_002"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "projection_formula",
+          "lecture_id": "linear_algebra_002"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "projection_formula",
+        "lecture_id": "linear_algebra_002"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "projection_formula",
+        "lecture_id": "linear_algebra_002"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "unresolved",
+      "identity_match": false,
+      "linked_predicted_refs": [],
+      "matched_predicted_ref": null,
+      "notes": "",
+      "oracle_ref": {
+        "ko_id": "subspace",
+        "lecture_id": "linear_algebra_002"
+      },
+      "predicted_source_span_exact": null,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "missing",
+      "recoverable": false,
+      "structural_flags": [],
+      "type_match": null
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "convex_function",
+          "lecture_id": "optimisation_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "convex_function",
+        "lecture_id": "optimisation_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "convex_function",
+        "lecture_id": "optimisation_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "descent_direction",
+          "lecture_id": "optimisation_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "descent_direction",
+        "lecture_id": "optimisation_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "descent_direction",
+        "lecture_id": "optimisation_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "gradient",
+          "lecture_id": "optimisation_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "gradient",
+        "lecture_id": "optimisation_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "gradient",
+        "lecture_id": "optimisation_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "gradient_descent",
+          "lecture_id": "optimisation_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "gradient_descent",
+        "lecture_id": "optimisation_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "gradient_descent",
+        "lecture_id": "optimisation_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "gradient_descent_update",
+          "lecture_id": "optimisation_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "gradient_descent_update",
+        "lecture_id": "optimisation_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "gradient_descent_update",
+        "lecture_id": "optimisation_001"
+      },
+      "predicted_source_span_exact": false,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "line_search",
+          "lecture_id": "optimisation_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "line_search",
+        "lecture_id": "optimisation_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "line_search",
+        "lecture_id": "optimisation_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "objective_function",
+          "lecture_id": "optimisation_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "objective_function",
+        "lecture_id": "optimisation_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "objective_function",
+        "lecture_id": "optimisation_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "optimisation_problem",
+          "lecture_id": "optimisation_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "optimisation_problem",
+        "lecture_id": "optimisation_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "optimisation_problem",
+        "lecture_id": "optimisation_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "stationary_point",
+          "lecture_id": "optimisation_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "stationary_point",
+        "lecture_id": "optimisation_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "stationary_point",
+        "lecture_id": "optimisation_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "step_size",
+          "lecture_id": "optimisation_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "step_size",
+        "lecture_id": "optimisation_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "step_size",
+        "lecture_id": "optimisation_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "unconstrained_minimisation_problem",
+          "lecture_id": "optimisation_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "unconstrained_minimisation_problem",
+        "lecture_id": "optimisation_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "unconstrained_minimisation_problem",
+        "lecture_id": "optimisation_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "bayes_rule",
+          "lecture_id": "probability_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "bayes_rule",
+        "lecture_id": "probability_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "bayes_rule",
+        "lecture_id": "probability_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": false
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "unresolved",
+      "identity_match": false,
+      "linked_predicted_refs": [],
+      "matched_predicted_ref": null,
+      "notes": "",
+      "oracle_ref": {
+        "ko_id": "bayes_rule_formula",
+        "lecture_id": "probability_001"
+      },
+      "predicted_source_span_exact": null,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "missing",
+      "recoverable": false,
+      "structural_flags": [],
+      "type_match": null
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "conditional_probability",
+          "lecture_id": "probability_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "conditional_probability",
+        "lecture_id": "probability_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "conditional_probability",
+        "lecture_id": "probability_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "conditional_probability_formula",
+          "lecture_id": "probability_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "conditional_probability_formula",
+        "lecture_id": "probability_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "conditional_probability_formula",
+        "lecture_id": "probability_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "unresolved",
+      "identity_match": false,
+      "linked_predicted_refs": [],
+      "matched_predicted_ref": null,
+      "notes": "",
+      "oracle_ref": {
+        "ko_id": "event",
+        "lecture_id": "probability_001"
+      },
+      "predicted_source_span_exact": null,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "missing",
+      "recoverable": false,
+      "structural_flags": [],
+      "type_match": null
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "expected_value",
+          "lecture_id": "probability_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "expected_value",
+        "lecture_id": "probability_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "expected_value",
+        "lecture_id": "probability_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "expected_value_formula",
+          "lecture_id": "probability_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "expected_value_formula",
+        "lecture_id": "probability_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "expected_value_formula",
+        "lecture_id": "probability_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "probability_distribution",
+          "lecture_id": "probability_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "probability_distribution",
+        "lecture_id": "probability_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "probability_distribution",
+        "lecture_id": "probability_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "random_variable",
+          "lecture_id": "probability_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "random_variable",
+        "lecture_id": "probability_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "random_variable",
+        "lecture_id": "probability_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "variance",
+          "lecture_id": "probability_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "variance",
+        "lecture_id": "probability_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "variance",
+        "lecture_id": "probability_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "variance_formula",
+          "lecture_id": "probability_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "variance_formula",
+        "lecture_id": "probability_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "variance_formula",
+        "lecture_id": "probability_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    }
+  ],
+  "predicted_inventory_sha256": "a82fc1b083920860532384994f8836bf13999d4d54e7ab449acb64cc2a5c390e",
+  "predicted_records": [
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "directional_derivative",
+          "lecture_id": "calculus_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "directional_derivative",
+        "lecture_id": "calculus_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "directional_derivative",
+        "lecture_id": "calculus_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "unmatched_extra",
+      "identity_match": false,
+      "linked_oracle_refs": [],
+      "matched_oracle_ref": null,
+      "notes": "",
+      "predicted_ref": {
+        "ko_id": "first_order_taylor_approximation",
+        "lecture_id": "calculus_001"
+      },
+      "recoverable": false
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "gradient",
+          "lecture_id": "calculus_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "gradient",
+        "lecture_id": "calculus_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "gradient",
+        "lecture_id": "calculus_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "hessian_matrix",
+          "lecture_id": "calculus_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "hessian_matrix",
+        "lecture_id": "calculus_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "hessian_matrix",
+        "lecture_id": "calculus_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "partial_derivative",
+          "lecture_id": "calculus_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "partial_derivative",
+        "lecture_id": "calculus_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "partial_derivative",
+        "lecture_id": "calculus_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "stationary_point",
+          "lecture_id": "calculus_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "stationary_point",
+        "lecture_id": "calculus_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "stationary_point",
+        "lecture_id": "calculus_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "taylor_approximation",
+          "lecture_id": "calculus_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "taylor_approximation",
+        "lecture_id": "calculus_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "taylor_approximation",
+        "lecture_id": "calculus_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "chain_rule",
+          "lecture_id": "calculus_002"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "chain_rule",
+        "lecture_id": "calculus_002"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "chain_rule",
+        "lecture_id": "calculus_002"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "composite_function",
+          "lecture_id": "calculus_002"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "composite_function",
+        "lecture_id": "calculus_002"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "composite_function",
+        "lecture_id": "calculus_002"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "gradient",
+          "lecture_id": "calculus_002"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "gradient",
+        "lecture_id": "calculus_002"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "gradient",
+        "lecture_id": "calculus_002"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "jacobian_matrix",
+          "lecture_id": "calculus_002"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "jacobian_matrix",
+        "lecture_id": "calculus_002"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "jacobian_matrix",
+        "lecture_id": "calculus_002"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "multivariable_chain_rule_formula",
+          "lecture_id": "calculus_002"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "multivariable_chain_rule_formula",
+        "lecture_id": "calculus_002"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "multivariable_chain_rule_formula",
+        "lecture_id": "calculus_002"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "basis",
+          "lecture_id": "linear_algebra_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "basis",
+        "lecture_id": "linear_algebra_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "basis",
+        "lecture_id": "linear_algebra_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "characteristic_polynomial",
+          "lecture_id": "linear_algebra_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "characteristic_polynomial",
+        "lecture_id": "linear_algebra_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "characteristic_polynomial",
+        "lecture_id": "linear_algebra_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "dimension",
+          "lecture_id": "linear_algebra_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "dimension",
+        "lecture_id": "linear_algebra_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "dimension",
+        "lecture_id": "linear_algebra_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "eigenvalue",
+          "lecture_id": "linear_algebra_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "eigenvalue",
+        "lecture_id": "linear_algebra_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "eigenvalue",
+        "lecture_id": "linear_algebra_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "eigenvalue_equation",
+          "lecture_id": "linear_algebra_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "eigenvalue_equation",
+        "lecture_id": "linear_algebra_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "eigenvalue_equation",
+        "lecture_id": "linear_algebra_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "eigenvector",
+          "lecture_id": "linear_algebra_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "eigenvector",
+        "lecture_id": "linear_algebra_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "eigenvector",
+        "lecture_id": "linear_algebra_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "linear_transformation",
+          "lecture_id": "linear_algebra_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "linear_transformation",
+        "lecture_id": "linear_algebra_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "linear_transformation",
+        "lecture_id": "linear_algebra_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "matrix",
+          "lecture_id": "linear_algebra_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "matrix",
+        "lecture_id": "linear_algebra_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "matrix",
+        "lecture_id": "linear_algebra_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "matrix_multiplication",
+          "lecture_id": "linear_algebra_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "matrix_multiplication",
+        "lecture_id": "linear_algebra_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "matrix_multiplication",
+        "lecture_id": "linear_algebra_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "vector_space",
+          "lecture_id": "linear_algebra_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "vector_space",
+        "lecture_id": "linear_algebra_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "vector_space",
+        "lecture_id": "linear_algebra_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "dot_product",
+          "lecture_id": "linear_algebra_002"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "dot_product",
+        "lecture_id": "linear_algebra_002"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "dot_product",
+        "lecture_id": "linear_algebra_002"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "inner_product",
+          "lecture_id": "linear_algebra_002"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "inner_product",
+        "lecture_id": "linear_algebra_002"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "inner_product",
+        "lecture_id": "linear_algebra_002"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "least_squares_problem",
+          "lecture_id": "linear_algebra_002"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "least_squares_problem",
+        "lecture_id": "linear_algebra_002"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "least_squares_problem",
+        "lecture_id": "linear_algebra_002"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "normal_equations",
+          "lecture_id": "linear_algebra_002"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "normal_equations",
+        "lecture_id": "linear_algebra_002"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "normal_equations",
+        "lecture_id": "linear_algebra_002"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "orthogonal_projection",
+          "lecture_id": "linear_algebra_002"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "orthogonal_projection",
+        "lecture_id": "linear_algebra_002"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "orthogonal_projection",
+        "lecture_id": "linear_algebra_002"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "orthogonal_vectors",
+          "lecture_id": "linear_algebra_002"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "orthogonal_vectors",
+        "lecture_id": "linear_algebra_002"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "orthogonal_vectors",
+        "lecture_id": "linear_algebra_002"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "projection_formula",
+          "lecture_id": "linear_algebra_002"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "projection_formula",
+        "lecture_id": "linear_algebra_002"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "projection_formula",
+        "lecture_id": "linear_algebra_002"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "convex_function",
+          "lecture_id": "optimisation_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "convex_function",
+        "lecture_id": "optimisation_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "convex_function",
+        "lecture_id": "optimisation_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "descent_direction",
+          "lecture_id": "optimisation_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "descent_direction",
+        "lecture_id": "optimisation_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "descent_direction",
+        "lecture_id": "optimisation_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "gradient",
+          "lecture_id": "optimisation_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "gradient",
+        "lecture_id": "optimisation_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "gradient",
+        "lecture_id": "optimisation_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "gradient_descent",
+          "lecture_id": "optimisation_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "gradient_descent",
+        "lecture_id": "optimisation_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "gradient_descent",
+        "lecture_id": "optimisation_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "gradient_descent_update",
+          "lecture_id": "optimisation_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "gradient_descent_update",
+        "lecture_id": "optimisation_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "gradient_descent_update",
+        "lecture_id": "optimisation_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "line_search",
+          "lecture_id": "optimisation_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "line_search",
+        "lecture_id": "optimisation_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "line_search",
+        "lecture_id": "optimisation_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "objective_function",
+          "lecture_id": "optimisation_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "objective_function",
+        "lecture_id": "optimisation_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "objective_function",
+        "lecture_id": "optimisation_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "optimisation_problem",
+          "lecture_id": "optimisation_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "optimisation_problem",
+        "lecture_id": "optimisation_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "optimisation_problem",
+        "lecture_id": "optimisation_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "stationary_point",
+          "lecture_id": "optimisation_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "stationary_point",
+        "lecture_id": "optimisation_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "stationary_point",
+        "lecture_id": "optimisation_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "step_size",
+          "lecture_id": "optimisation_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "step_size",
+        "lecture_id": "optimisation_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "step_size",
+        "lecture_id": "optimisation_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "unconstrained_minimisation_problem",
+          "lecture_id": "optimisation_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "unconstrained_minimisation_problem",
+        "lecture_id": "optimisation_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "unconstrained_minimisation_problem",
+        "lecture_id": "optimisation_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "bayes_rule",
+          "lecture_id": "probability_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "bayes_rule",
+        "lecture_id": "probability_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "bayes_rule",
+        "lecture_id": "probability_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "conditional_probability",
+          "lecture_id": "probability_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "conditional_probability",
+        "lecture_id": "probability_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "conditional_probability",
+        "lecture_id": "probability_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "conditional_probability_formula",
+          "lecture_id": "probability_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "conditional_probability_formula",
+        "lecture_id": "probability_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "conditional_probability_formula",
+        "lecture_id": "probability_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "expected_value",
+          "lecture_id": "probability_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "expected_value",
+        "lecture_id": "probability_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "expected_value",
+        "lecture_id": "probability_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "expected_value_formula",
+          "lecture_id": "probability_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "expected_value_formula",
+        "lecture_id": "probability_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "expected_value_formula",
+        "lecture_id": "probability_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "probability_distribution",
+          "lecture_id": "probability_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "probability_distribution",
+        "lecture_id": "probability_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "probability_distribution",
+        "lecture_id": "probability_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "random_variable",
+          "lecture_id": "probability_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "random_variable",
+        "lecture_id": "probability_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "random_variable",
+        "lecture_id": "probability_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "variance",
+          "lecture_id": "probability_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "variance",
+        "lecture_id": "probability_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "variance",
+        "lecture_id": "probability_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "variance_formula",
+          "lecture_id": "probability_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "variance_formula",
+        "lecture_id": "probability_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "variance_formula",
+        "lecture_id": "probability_001"
+      },
+      "recoverable": true
+    }
+  ],
+  "split": "development",
+  "structural_normalization_version": "predicted_ko_structural_normalization_v0_1",
+  "version": "v0.1"
+}

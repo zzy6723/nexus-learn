@@ -1,0 +1,28 @@
+{
+  "id": "0d819893-1898-4e44-aacf-8f0091986551",
+  "object": "chat.completion",
+  "created": 1783792759,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"lecture_id\": \"linear_algebra_002\",\n  \"knowledge_objects\": [\n    {\n      \"id\": \"inner_product\",\n      \"name\": \"Inner Product\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"An operation that takes two vectors and returns a scalar.\",\n      \"source_span\": \"An inner product is an operation that takes two vectors and returns a scalar.\"\n    },\n    {\n      \"id\": \"dot_product\",\n      \"name\": \"Dot Product\",\n      \"type\": \"Concept\",\n      \"aliases\": [\"standard inner product\"],\n      \"short_definition\": \"The standard inner product in Euclidean space.\",\n      \"source_span\": \"the standard inner product is the dot product\"\n    },\n    {\n      \"id\": \"orthogonal_vectors\",\n      \"name\": \"Orthogonal Vectors\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"Two vectors are orthogonal when their inner product is zero.\",\n      \"source_span\": \"Two vectors are orthogonal when their inner product is zero.\"\n    },\n    {\n      \"id\": \"orthogonal_projection\",\n      \"name\": \"Orthogonal Projection\",\n      \"type\": \"Method\",\n      \"aliases\": [],\n      \"short_definition\": \"A method for finding the closest point in a subspace to a given vector.\",\n      \"source_span\": \"Orthogonal projection is a method for finding the closest point in a subspace to a given vector.\"\n    },\n    {\n      \"id\": \"projection_formula\",\n      \"name\": \"Projection Formula\",\n      \"type\": \"Formula\",\n      \"aliases\": [],\n      \"short_definition\": \"The formula for the projection of v onto the subspace spanned by u.\",\n      \"source_span\": \"\\\\operatorname{proj}_u(v) = \\\\frac{v \\\\cdot u}{u \\\\cdot u}u.\"\n    },\n    {\n      \"id\": \"least_squares_problem\",\n      \"name\": \"Least Squares Problem\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"A problem that uses projection ideas to solve inconsistent systems.\",\n      \"source_span\": \"Least squares problems use projection ideas to solve inconsistent systems.\"\n    },\n    {\n      \"id\": \"normal_equations\",\n      \"name\": \"Normal Equations\",\n      \"type\": \"Formula\",\n      \"aliases\": [],\n      \"short_definition\": \"The equations that give the solution to the least squares problem when columns of A are independent.\",\n      \"source_span\": \"A^\\\\top A x = A^\\\\top b.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 687,
+    "completion_tokens": 563,
+    "total_tokens": 1250,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 687
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

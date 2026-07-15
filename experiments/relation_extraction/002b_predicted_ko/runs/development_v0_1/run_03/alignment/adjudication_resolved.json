@@ -1,0 +1,63 @@
+{
+  "artifact_type": "predicted_ko_alignment_resolved",
+  "version": "v0.1",
+  "alignment_snapshot_sha256": "c0f24eea074a0ceb8560df97bf00c1951979dcba4cf7a244ce8bd8f302f564a7",
+  "oracle_inventory_sha256": "c527a8e914d886dd27483c1bca154c58b7617fc54c04b92c8482b9fbb4e0ceb2",
+  "predicted_inventory_sha256": "a82fc1b083920860532384994f8836bf13999d4d54e7ab449acb64cc2a5c390e",
+  "lecture_sha256": {
+    "calculus_001": "00d884e75bd5f6357ddda700b9c75dd671beac85b70cec8c0809b72107fdc2e5",
+    "calculus_002": "72a6f9272c0cc04008aa6f321f8c65b0dc77dd524bee9f0bc90ffca1e339502c",
+    "linear_algebra_001": "7b0837306f0c58c4bd631f40b1e7eb0a099ee29500fe831ca48258b403e3a521",
+    "linear_algebra_002": "3dc3988a5349037895e62f9385f190702cfed5f76d78ee49d736e9cf45f09f84",
+    "optimisation_001": "693903178d836b5b66fd47e32a7c5554c5716667aafcb0a140729ccf4be1a299",
+    "probability_001": "0e31a3e291c7581b4f5466b472fbdd285616577e38f1f49ebe18bbf4d1a27161"
+  },
+  "name_matching_normalization_version": "predicted_ko_name_matching_v0_1",
+  "decisions": [
+    {
+      "item_id": "review_calculus_001_first_order_taylor_formula",
+      "decision": "matched",
+      "resulting_alignment_level": "manual",
+      "resulting_primary_structural_status": "one_to_one",
+      "matched_predicted_ref": {
+        "lecture_id": "calculus_001",
+        "ko_id": "first_order_taylor_approximation"
+      },
+      "rationale": "Both objects denote the same first-order Taylor approximation formula. Their labels differ only by an omitted generic word, and their source spans encode the same equation using LaTeX and Unicode notation.",
+      "item_snapshot_sha256": "b9dfbb38fa1a4181273bee3af84d00e22fa0d2388bea8907d005d60c44d1d17c",
+      "oracle_snapshots": [
+        {
+          "aliases": [],
+          "ko_id": "first_order_taylor_formula",
+          "lecture_id": "calculus_001",
+          "name": "First-order Taylor Approximation Formula",
+          "source_spans": [
+            "f(a+h) \\approx f(a) + \\nabla f(a)\\cdot h."
+          ],
+          "type": "Formula"
+        }
+      ],
+      "candidate_predicted_snapshots": [
+        {
+          "ko_id": "first_order_taylor_approximation",
+          "lecture_id": "calculus_001",
+          "name": "First-Order Taylor Approximation",
+          "provenance": {
+            "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/calculus_001.json",
+            "source_object_index": 5,
+            "source_prediction_id": "first_order_taylor_approximation"
+          },
+          "source_spans": [
+            "f(a+h) ≈ f(a) + ∇f(a)·h."
+          ],
+          "type": "Formula"
+        }
+      ],
+      "lecture_snapshot": {
+        "lecture_id": "calculus_001",
+        "sha256": "00d884e75bd5f6357ddda700b9c75dd671beac85b70cec8c0809b72107fdc2e5",
+        "text": "Let \\(f:\\mathbb{R}^n \\to \\mathbb{R}\\) be a differentiable scalar-valued function. A partial derivative measures how \\(f\\) changes when one coordinate changes while the other coordinates are held fixed. The gradient \\(\\nabla f(x)\\) collects these partial derivatives into a vector. For a unit direction \\(u\\), the directional derivative is \\(\\nabla f(x)\\cdot u\\), so the gradient points in the direction of steepest local increase. A point where the gradient is the zero vector is called a stationary point.\n\nTaylor approximation describes the local behavior of a differentiable function near a point. The first-order Taylor approximation around \\(a\\) is\n\n\\[\nf(a+h) \\approx f(a) + \\nabla f(a)\\cdot h.\n\\]\n\nFor twice differentiable functions, a second-order approximation also includes the Hessian matrix, which describes local curvature. These approximations are useful because they turn a complicated function into a local linear or quadratic model. In optimization, this local model helps explain why the gradient gives a useful direction for changing the input.\n"
+      }
+    }
+  ]
+}

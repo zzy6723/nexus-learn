@@ -1,0 +1,73 @@
+{
+  "artifact_type": "predicted_ko_relation_lecture_inventory",
+  "version": "v0.1",
+  "split": "development",
+  "relation_ground_truth": {
+    "path": "benchmark/ground_truth/relations_development_v0_1.json",
+    "sha256": "74b6573e688384e8f32207e9be17475bcbab55a31f0225791351afe3d94e59a5"
+  },
+  "sources": [
+    {
+      "lecture_id": "calculus_001",
+      "path": "benchmark/lectures/development/calculus_001.md",
+      "markdown_sha256": "c5ee7752c15f9b3bade8a053389ec971304c7d214a1142de7265b2fed980e046",
+      "model_text_sha256": "00d884e75bd5f6357ddda700b9c75dd671beac85b70cec8c0809b72107fdc2e5"
+    },
+    {
+      "lecture_id": "linear_algebra_001",
+      "path": "benchmark/lectures/development/linear_algebra_001.md",
+      "markdown_sha256": "8aa28a061d2e653b16466f76c5554f1b72026f4eeefdf2553773e41b98d8966a",
+      "model_text_sha256": "7b0837306f0c58c4bd631f40b1e7eb0a099ee29500fe831ca48258b403e3a521"
+    },
+    {
+      "lecture_id": "optimisation_001",
+      "path": "benchmark/lectures/development/optimisation_001.md",
+      "markdown_sha256": "d47b0ddd6d0cac0c576efd820ddb641c1d18dc29e9046956509a0c590f27cd35",
+      "model_text_sha256": "693903178d836b5b66fd47e32a7c5554c5716667aafcb0a140729ccf4be1a299"
+    },
+    {
+      "lecture_id": "calculus_002",
+      "path": "benchmark/lectures/holdout/calculus_002.md",
+      "markdown_sha256": "fe3b3c6bc59774dd45f9d4952145894ec0cad53e85a4c5d7d45cd9875e93abd5",
+      "model_text_sha256": "72a6f9272c0cc04008aa6f321f8c65b0dc77dd524bee9f0bc90ffca1e339502c"
+    },
+    {
+      "lecture_id": "linear_algebra_002",
+      "path": "benchmark/lectures/holdout/linear_algebra_002.md",
+      "markdown_sha256": "33b242e8f00d2d8de54df08be7b726fba423dfa68a78514d1ab716016ea6716f",
+      "model_text_sha256": "3dc3988a5349037895e62f9385f190702cfed5f76d78ee49d736e9cf45f09f84"
+    },
+    {
+      "lecture_id": "probability_001",
+      "path": "benchmark/lectures/holdout/probability_001.md",
+      "markdown_sha256": "887c720a4f5a12fddf92d61c85af4b7610c15025b5fe3583f15edb9c812ef69d",
+      "model_text_sha256": "0e31a3e291c7581b4f5466b472fbdd285616577e38f1f49ebe18bbf4d1a27161"
+    }
+  ],
+  "lectures": [
+    {
+      "lecture_id": "calculus_001",
+      "text": "Let \\(f:\\mathbb{R}^n \\to \\mathbb{R}\\) be a differentiable scalar-valued function. A partial derivative measures how \\(f\\) changes when one coordinate changes while the other coordinates are held fixed. The gradient \\(\\nabla f(x)\\) collects these partial derivatives into a vector. For a unit direction \\(u\\), the directional derivative is \\(\\nabla f(x)\\cdot u\\), so the gradient points in the direction of steepest local increase. A point where the gradient is the zero vector is called a stationary point.\n\nTaylor approximation describes the local behavior of a differentiable function near a point. The first-order Taylor approximation around \\(a\\) is\n\n\\[\nf(a+h) \\approx f(a) + \\nabla f(a)\\cdot h.\n\\]\n\nFor twice differentiable functions, a second-order approximation also includes the Hessian matrix, which describes local curvature. These approximations are useful because they turn a complicated function into a local linear or quadratic model. In optimization, this local model helps explain why the gradient gives a useful direction for changing the input.\n"
+    },
+    {
+      "lecture_id": "linear_algebra_001",
+      "text": "A vector space is a set of objects called vectors that can be added together and multiplied by scalars while satisfying the vector space axioms. A basis is a set of independent vectors that can represent every vector in the space through linear combinations. The number of vectors in a basis is the dimension of the vector space.\n\nA matrix is a rectangular array of numbers that can represent a linear transformation once bases have been chosen for the input and output spaces. Matrix multiplication corresponds to composing linear transformations, and changing a basis changes the matrix representation without changing the underlying transformation.\n\nFor a square matrix \\(A\\), an eigenvector is a nonzero vector \\(v\\) whose direction is preserved by the transformation represented by \\(A\\). The corresponding eigenvalue \\(\\lambda\\) satisfies\n\n\\[\nAv = \\lambda v.\n\\]\n\nEigenvalues are connected to the characteristic polynomial \\(\\det(\\lambda I - A)\\). They are important because they reveal directions in which a linear transformation acts by simple scaling.\n"
+    },
+    {
+      "lecture_id": "optimisation_001",
+      "text": "In mathematical optimisation, an objective function assigns a real value to each feasible input. An optimisation problem asks for an input that makes the objective function as small or as large as possible. In an unconstrained minimisation problem, the feasible inputs are usually all points in a space such as \\(\\mathbb{R}^n\\), and the goal is to minimise a differentiable function \\(f(x)\\).\n\nIf \\(f\\) is differentiable, the gradient \\(\\nabla f(x)\\) describes local change. The negative gradient \\(-\\nabla f(x)\\) is a descent direction because it points toward the direction of steepest local decrease. Gradient descent is a first-order iterative method that repeatedly moves in this direction:\n\n\\[\nx_{k+1} = x_k - \\alpha_k \\nabla f(x_k).\n\\]\n\nThe scalar \\(\\alpha_k\\) is the step size. It controls how far the method moves at iteration \\(k\\). A line search is a method for choosing a step size that gives sufficient decrease in the objective function.\n\nFor convex functions, every local minimum is also a global minimum. A stationary point is a point where the gradient is zero. In smooth optimisation, stationary points are important because they describe candidates for local optima.\n"
+    },
+    {
+      "lecture_id": "calculus_002",
+      "text": "Let \\(g:\\mathbb{R}^m \\to \\mathbb{R}^n\\) and \\(f:\\mathbb{R}^n \\to \\mathbb{R}\\) be differentiable functions. The composite function \\(h = f \\circ g\\) maps an input \\(x \\in \\mathbb{R}^m\\) to \\(f(g(x))\\). The chain rule describes how the derivative of the composite function depends on the derivatives of \\(f\\) and \\(g\\).\n\nFor a differentiable vector-valued function \\(g\\), the Jacobian matrix \\(J_g(x)\\) collects all first-order partial derivatives of the output components of \\(g\\). It gives the best local linear approximation to \\(g\\) near \\(x\\).\n\nFor the scalar-valued composite function \\(h(x)=f(g(x))\\), the multivariable chain rule can be written as\n\n\\[\n\\nabla h(x) = J_g(x)^\\top \\nabla f(g(x)).\n\\]\n\nThis formula shows how gradients and Jacobian matrices work together. The Jacobian transfers local changes in the input space of \\(g\\) into local changes in the input space of \\(f\\).\n"
+    },
+    {
+      "lecture_id": "linear_algebra_002",
+      "text": "An inner product is an operation that takes two vectors and returns a scalar. In Euclidean space, the standard inner product is the dot product. Two vectors are orthogonal when their inner product is zero.\n\nOrthogonal projection is a method for finding the closest point in a subspace to a given vector. If \\(u\\) is a nonzero vector, the projection of \\(v\\) onto the one-dimensional subspace spanned by \\(u\\) is\n\n\\[\n\\operatorname{proj}_u(v) = \\frac{v \\cdot u}{u \\cdot u}u.\n\\]\n\nLeast squares problems use projection ideas to solve inconsistent systems. Given a matrix \\(A\\) and a vector \\(b\\), the least squares problem asks for a vector \\(x\\) that minimizes \\(\\|Ax-b\\|^2\\). When the columns of \\(A\\) are independent, the solution satisfies the normal equations\n\n\\[\nA^\\top A x = A^\\top b.\n\\]\n"
+    },
+    {
+      "lecture_id": "probability_001",
+      "text": "A random variable is a function that assigns a numerical value to each outcome of a random experiment. The probability distribution of a random variable describes how probability is assigned to its possible values.\n\nThe expected value of a random variable is a weighted average of its possible values. For a discrete random variable \\(X\\), the expected value is\n\n\\[\n\\mathbb{E}[X] = \\sum_x x P(X=x).\n\\]\n\nVariance measures how far a random variable typically is from its expected value. It can be defined as\n\n\\[\n\\operatorname{Var}(X) = \\mathbb{E}[(X-\\mathbb{E}[X])^2].\n\\]\n\nConditional probability measures the probability of an event given that another event has occurred. If \\(P(B)>0\\), then\n\n\\[\nP(A \\mid B) = \\frac{P(A \\cap B)}{P(B)}.\n\\]\n\nBayes' rule rewrites conditional probability in a form that is useful for updating beliefs:\n\n\\[\nP(A \\mid B) = \\frac{P(B \\mid A)P(A)}{P(B)}.\n\\]\n"
+    }
+  ]
+}

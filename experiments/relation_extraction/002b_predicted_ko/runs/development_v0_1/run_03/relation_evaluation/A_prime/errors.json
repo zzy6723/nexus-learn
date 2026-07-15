@@ -1,0 +1,83 @@
+[
+  {
+    "pair_id": "rel_dev_005",
+    "error_type": "wrong_direction",
+    "gold_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "ko_slot_012"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "ko_slot_018"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "ko_slot_018"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_001",
+        "ko_id": "ko_slot_012"
+      },
+      "relation_type": "REQUIRES"
+    }
+  },
+  {
+    "pair_id": "rel_dev_007",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "APPLIED_IN",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_012",
+    "error_type": "evidence_does_not_support_relation",
+    "adjudication_rationale": "The selected span says Gradient Descent moves in \"this direction\" but does not include the sentence resolving that direction as the negative Gradient, nor an update containing the Gradient."
+  },
+  {
+    "pair_id": "rel_dev_014",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "APPLIED_IN",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_017",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "APPLIED_IN",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_018",
+    "error_type": "wrong_direction",
+    "gold_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "ko_slot_024"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "ko_slot_020"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "ko_slot_020"
+      },
+      "target": {
+        "lecture_id": "linear_algebra_002",
+        "ko_id": "ko_slot_024"
+      },
+      "relation_type": "REQUIRES"
+    }
+  },
+  {
+    "pair_id": "rel_dev_028",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "REQUIRES",
+    "predicted_relation_type": "EXTENDS"
+  }
+]

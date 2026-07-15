@@ -1,0 +1,451 @@
+{
+  "artifact_type": "predicted_ko_pipeline_errors",
+  "evaluation_status": "final",
+  "fatal_errors": [],
+  "nonfatal_errors": [
+    {
+      "affected_pair_ids": [
+        "rel_dev_029"
+      ],
+      "error_code": "missing_endpoint",
+      "message": "The primary pair is correctly recorded as upstream unrecoverable.",
+      "pair_id": "rel_dev_029"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_037"
+      ],
+      "error_code": "missing_endpoint",
+      "message": "The primary pair is correctly recorded as upstream unrecoverable.",
+      "pair_id": "rel_dev_037"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_002"
+      ],
+      "error_code": "predicted_source_span_invalid",
+      "message": "A nonfatal predicted-KO quality observation is propagated descriptively.",
+      "oracle_ref": {
+        "ko_id": "directional_derivative",
+        "lecture_id": "calculus_001"
+      },
+      "pair_id": null,
+      "predicted_ref": {
+        "ko_id": "directional_derivative",
+        "lecture_id": "calculus_001"
+      }
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_004"
+      ],
+      "error_code": "predicted_source_span_invalid",
+      "message": "A nonfatal predicted-KO quality observation is propagated descriptively.",
+      "oracle_ref": {
+        "ko_id": "first_order_taylor_formula",
+        "lecture_id": "calculus_001"
+      },
+      "pair_id": null,
+      "predicted_ref": {
+        "ko_id": "first_order_taylor_approximation",
+        "lecture_id": "calculus_001"
+      }
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_001",
+        "rel_dev_002",
+        "rel_dev_003"
+      ],
+      "error_code": "predicted_source_span_invalid",
+      "message": "A nonfatal predicted-KO quality observation is propagated descriptively.",
+      "oracle_ref": {
+        "ko_id": "gradient",
+        "lecture_id": "calculus_001"
+      },
+      "pair_id": null,
+      "predicted_ref": {
+        "ko_id": "gradient",
+        "lecture_id": "calculus_001"
+      }
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_001"
+      ],
+      "error_code": "predicted_source_span_invalid",
+      "message": "A nonfatal predicted-KO quality observation is propagated descriptively.",
+      "oracle_ref": {
+        "ko_id": "partial_derivative",
+        "lecture_id": "calculus_001"
+      },
+      "pair_id": null,
+      "predicted_ref": {
+        "ko_id": "partial_derivative",
+        "lecture_id": "calculus_001"
+      }
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_004"
+      ],
+      "error_code": "ko_type_mismatch",
+      "message": "A nonfatal predicted-KO quality observation is propagated descriptively.",
+      "oracle_ref": {
+        "ko_id": "taylor_approximation",
+        "lecture_id": "calculus_001"
+      },
+      "pair_id": null,
+      "predicted_ref": {
+        "ko_id": "taylor_approximation",
+        "lecture_id": "calculus_001"
+      }
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_015",
+        "rel_dev_016"
+      ],
+      "error_code": "ko_type_mismatch",
+      "message": "A nonfatal predicted-KO quality observation is propagated descriptively.",
+      "oracle_ref": {
+        "ko_id": "chain_rule",
+        "lecture_id": "calculus_002"
+      },
+      "pair_id": null,
+      "predicted_ref": {
+        "ko_id": "chain_rule",
+        "lecture_id": "calculus_002"
+      }
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_015",
+        "rel_dev_016"
+      ],
+      "error_code": "predicted_source_span_invalid",
+      "message": "A nonfatal predicted-KO quality observation is propagated descriptively.",
+      "oracle_ref": {
+        "ko_id": "chain_rule",
+        "lecture_id": "calculus_002"
+      },
+      "pair_id": null,
+      "predicted_ref": {
+        "ko_id": "chain_rule",
+        "lecture_id": "calculus_002"
+      }
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_015"
+      ],
+      "error_code": "predicted_source_span_invalid",
+      "message": "A nonfatal predicted-KO quality observation is propagated descriptively.",
+      "oracle_ref": {
+        "ko_id": "composite_function",
+        "lecture_id": "calculus_002"
+      },
+      "pair_id": null,
+      "predicted_ref": {
+        "ko_id": "composite_function",
+        "lecture_id": "calculus_002"
+      }
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_017"
+      ],
+      "error_code": "predicted_source_span_invalid",
+      "message": "A nonfatal predicted-KO quality observation is propagated descriptively.",
+      "oracle_ref": {
+        "ko_id": "jacobian_matrix",
+        "lecture_id": "calculus_002"
+      },
+      "pair_id": null,
+      "predicted_ref": {
+        "ko_id": "jacobian_matrix",
+        "lecture_id": "calculus_002"
+      }
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_016",
+        "rel_dev_017"
+      ],
+      "error_code": "predicted_source_span_invalid",
+      "message": "A nonfatal predicted-KO quality observation is propagated descriptively.",
+      "oracle_ref": {
+        "ko_id": "multivariable_chain_rule_formula",
+        "lecture_id": "calculus_002"
+      },
+      "pair_id": null,
+      "predicted_ref": {
+        "ko_id": "multivariable_chain_rule_formula",
+        "lecture_id": "calculus_002"
+      }
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_009"
+      ],
+      "error_code": "predicted_source_span_invalid",
+      "message": "A nonfatal predicted-KO quality observation is propagated descriptively.",
+      "oracle_ref": {
+        "ko_id": "eigenvalue",
+        "lecture_id": "linear_algebra_001"
+      },
+      "pair_id": null,
+      "predicted_ref": {
+        "ko_id": "eigenvalue",
+        "lecture_id": "linear_algebra_001"
+      }
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_009",
+        "rel_dev_033",
+        "rel_dev_036"
+      ],
+      "error_code": "predicted_source_span_invalid",
+      "message": "A nonfatal predicted-KO quality observation is propagated descriptively.",
+      "oracle_ref": {
+        "ko_id": "eigenvalue_equation",
+        "lecture_id": "linear_algebra_001"
+      },
+      "pair_id": null,
+      "predicted_ref": {
+        "ko_id": "eigenvalue_equation",
+        "lecture_id": "linear_algebra_001"
+      }
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_013"
+      ],
+      "error_code": "predicted_source_span_invalid",
+      "message": "A nonfatal predicted-KO quality observation is propagated descriptively.",
+      "oracle_ref": {
+        "ko_id": "gradient_descent_update",
+        "lecture_id": "optimisation_001"
+      },
+      "pair_id": null,
+      "predicted_ref": {
+        "ko_id": "gradient_descent_update",
+        "lecture_id": "optimisation_001"
+      }
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_028",
+        "rel_dev_032",
+        "rel_dev_039"
+      ],
+      "error_code": "ko_type_mismatch",
+      "message": "A nonfatal predicted-KO quality observation is propagated descriptively.",
+      "oracle_ref": {
+        "ko_id": "bayes_rule",
+        "lecture_id": "probability_001"
+      },
+      "pair_id": null,
+      "predicted_ref": {
+        "ko_id": "bayes_rule",
+        "lecture_id": "probability_001"
+      }
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_001"
+      ],
+      "error_code": "b_prime_invalid_evidence_span",
+      "message": "This Relation-evaluator observation occurred under B-prime.",
+      "pair_id": "rel_dev_001"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_002"
+      ],
+      "error_code": "b_prime_invalid_evidence_span",
+      "message": "This Relation-evaluator observation occurred under B-prime.",
+      "pair_id": "rel_dev_002"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_004"
+      ],
+      "error_code": "b_prime_invalid_evidence_span",
+      "message": "This Relation-evaluator observation occurred under B-prime.",
+      "pair_id": "rel_dev_004"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_007"
+      ],
+      "error_code": "b_prime_wrong_relation_type",
+      "message": "This Relation-evaluator observation occurred under B-prime.",
+      "pair_id": "rel_dev_007"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_009"
+      ],
+      "error_code": "b_prime_invalid_evidence_span",
+      "message": "This Relation-evaluator observation occurred under B-prime.",
+      "pair_id": "rel_dev_009"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_011"
+      ],
+      "error_code": "b_prime_invalid_evidence_span",
+      "message": "This Relation-evaluator observation occurred under B-prime.",
+      "pair_id": "rel_dev_011"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_012"
+      ],
+      "error_code": "b_prime_wrong_relation_type",
+      "message": "This Relation-evaluator observation occurred under B-prime.",
+      "pair_id": "rel_dev_012"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_013"
+      ],
+      "error_code": "b_prime_invalid_evidence_span",
+      "message": "This Relation-evaluator observation occurred under B-prime.",
+      "pair_id": "rel_dev_013"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_014"
+      ],
+      "error_code": "b_prime_invalid_evidence_span",
+      "message": "This Relation-evaluator observation occurred under B-prime.",
+      "pair_id": "rel_dev_014"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_014"
+      ],
+      "error_code": "b_prime_wrong_relation_type",
+      "message": "This Relation-evaluator observation occurred under B-prime.",
+      "pair_id": "rel_dev_014"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_015"
+      ],
+      "error_code": "b_prime_invalid_evidence_span",
+      "message": "This Relation-evaluator observation occurred under B-prime.",
+      "pair_id": "rel_dev_015"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_016"
+      ],
+      "error_code": "b_prime_invalid_evidence_span",
+      "message": "This Relation-evaluator observation occurred under B-prime.",
+      "pair_id": "rel_dev_016"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_017"
+      ],
+      "error_code": "b_prime_invalid_evidence_span",
+      "message": "This Relation-evaluator observation occurred under B-prime.",
+      "pair_id": "rel_dev_017"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_017"
+      ],
+      "error_code": "b_prime_wrong_relation_type",
+      "message": "This Relation-evaluator observation occurred under B-prime.",
+      "pair_id": "rel_dev_017"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_018"
+      ],
+      "error_code": "b_prime_wrong_direction",
+      "message": "This Relation-evaluator observation occurred under B-prime.",
+      "pair_id": "rel_dev_018"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_019"
+      ],
+      "error_code": "b_prime_invalid_evidence_span",
+      "message": "This Relation-evaluator observation occurred under B-prime.",
+      "pair_id": "rel_dev_019"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_021"
+      ],
+      "error_code": "b_prime_invalid_evidence_span",
+      "message": "This Relation-evaluator observation occurred under B-prime.",
+      "pair_id": "rel_dev_021"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_024"
+      ],
+      "error_code": "b_prime_invalid_evidence_span",
+      "message": "This Relation-evaluator observation occurred under B-prime.",
+      "pair_id": "rel_dev_024"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_026"
+      ],
+      "error_code": "b_prime_invalid_evidence_span",
+      "message": "This Relation-evaluator observation occurred under B-prime.",
+      "pair_id": "rel_dev_026"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_027"
+      ],
+      "error_code": "b_prime_invalid_evidence_span",
+      "message": "This Relation-evaluator observation occurred under B-prime.",
+      "pair_id": "rel_dev_027"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_028"
+      ],
+      "error_code": "b_prime_invalid_evidence_span",
+      "message": "This Relation-evaluator observation occurred under B-prime.",
+      "pair_id": "rel_dev_028"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_dev_028"
+      ],
+      "error_code": "b_prime_wrong_relation_type",
+      "message": "This Relation-evaluator observation occurred under B-prime.",
+      "pair_id": "rel_dev_028"
+    }
+  ],
+  "pending_items": [],
+  "provenance": {
+    "A0_evaluation_sha256": "1f2e3236f490f8e878eeb85a3dee3a8de53ca0394fe8571f3c272adbaa86efc9",
+    "A_prime_evaluation_sha256": "7c3cf042b10c87b87d01ac9e915604df6100b497aceca279ca52623ac2c9ac11",
+    "A_prime_input_sha256": "7a3e9a76dea28dce1670bbf3b9a8b27590fa7f68481775c0bce84c4d58359ef2",
+    "A_prime_prediction_sha256": "283d2c1e074646125f76137f78138212976c5570ac239b6f038e55652d2c3291",
+    "A_prime_run_metadata_sha256": "d338fe70fa21c80aa4c28049034298d4b033a816ceb37158051c260733caa5bf",
+    "B_prime_evaluation_sha256": "e9c6cf36bae5f99bdec8b8dd855130e78417ced6fbaca6e59e8d643182190ce4",
+    "B_prime_input_sha256": "b6a31bbf011f073787fdfa090399bf2c8368bdbe031bb2d4e032700b95643317",
+    "B_prime_prediction_sha256": "d2d9cf070aed66890225a07ab65844595d789c9222026e97cd3d8bbb57a0cb58",
+    "B_prime_run_metadata_sha256": "0e33a3c6b75b845c409b00ac0bfa3ecd9bf6a65003d016c7e12384916b396126",
+    "alignment_sha256": "6d6a587c4e9b96510367d024f96dee3408c4b74433f8db4695abe41cf1fb2681",
+    "batch_plan_sha256": "d45095b117bd35cf77b44f2d110e52f73e8eefdd1b0bfae376eaa1f376796ff2",
+    "ko_manifest_sha256": "d5013426d2fe6b0a86ffafc1c368df61549bcb8ba90ac7478427d03b8cc544f4",
+    "matched_ground_truth_sha256": "b03869da9ad9ef1e4349502bd713f015fd404a7de109dbc6a12b69d6b6f2e2a9",
+    "original_ground_truth_sha256": "74b6573e688384e8f32207e9be17475bcbab55a31f0225791351afe3d94e59a5",
+    "pair_manifest_sha256": "85370b44573760f6b37aeed7b7abd571fb2e16a11cca08b61178fd3673d127ed"
+  },
+  "version": "v0.1"
+}

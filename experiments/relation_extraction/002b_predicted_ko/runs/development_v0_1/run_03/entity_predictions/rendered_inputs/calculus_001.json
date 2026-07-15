@@ -1,0 +1,23 @@
+{
+  "model": "deepseek-v4-flash",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You extract structured Knowledge Objects from STEM learning materials.\n\nA Knowledge Object is a meaningful educational entity, such as a concept, method, or formula, that may later participate in typed learning relations.\n\nReturn only valid JSON. Do not include markdown fences, commentary, or explanations.\n"
+    },
+    {
+      "role": "user",
+      "content": "Extract Knowledge Objects from the following lecture snippet.\n\nAllowed object types:\n\n- `Concept`\n- `Method`\n- `Formula`\n\nReturn only valid JSON with this schema:\n\n```json\n{\n  \"lecture_id\": \"calculus_001\",\n  \"knowledge_objects\": [\n    {\n      \"id\": \"lower_snake_case_stable_identifier\",\n      \"name\": \"Canonical Name\",\n      \"type\": \"Concept | Method | Formula\",\n      \"aliases\": [\"optional alias\"],\n      \"short_definition\": \"One sentence definition based only on the input.\",\n      \"source_span\": \"Exact text span copied from the input.\"\n    }\n  ]\n}\n```\n\nObject inclusion rules:\n\n1. Extract named or clearly defined educational entities that could later participate in typed learning relations.\n2. Include central objects and useful supporting objects if they are explicitly named or explained in the text.\n3. Do not extract broad domains, section headings, historical people, isolated variables, or ordinary words.\n4. Merge duplicates into one canonical object.\n\nType rules:\n\n1. Use `Concept` for mathematical objects, properties, structures, and named constructs.\n2. Use `Method` for procedures, algorithms, or techniques.\n3. Use `Formula` only for symbolic equations, update rules, or displayed mathematical expressions.\n4. If a named mathematical construct is mentioned together with a formula, the named construct is usually a `Concept`; the equation itself may be a separate `Formula` only if it defines or updates something important.\n5. Displayed equations should usually be extracted as `Formula` objects when they define, characterize, or update a concept or method.\n\nGrounding rules:\n\n1. `source_span` must be an exact substring copied from the lecture snippet.\n2. Do not normalize LaTeX into Unicode inside `source_span`.\n3. Keep `source_span` short but sufficient.\n4. If no exact grounding span exists, do not extract the object.\n\nLecture ID:\n\n```text\ncalculus_001\n```\n\nLecture snippet:\n\n```text\nLet \\(f:\\mathbb{R}^n \\to \\mathbb{R}\\) be a differentiable scalar-valued function. A partial derivative measures how \\(f\\) changes when one coordinate changes while the other coordinates are held fixed. The gradient \\(\\nabla f(x)\\) collects these partial derivatives into a vector. For a unit direction \\(u\\), the directional derivative is \\(\\nabla f(x)\\cdot u\\), so the gradient points in the direction of steepest local increase. A point where the gradient is the zero vector is called a stationary point.\n\nTaylor approximation describes the local behavior of a differentiable function near a point. The first-order Taylor approximation around \\(a\\) is\n\n\\[\nf(a+h) \\approx f(a) + \\nabla f(a)\\cdot h.\n\\]\n\nFor twice differentiable functions, a second-order approximation also includes the Hessian matrix, which describes local curvature. These approximations are useful because they turn a complicated function into a local linear or quadratic model. In optimization, this local model helps explain why the gradient gives a useful direction for changing the input.\n```\n"
+    }
+  ],
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "max_tokens": 4096,
+  "stream": false,
+  "response_format": {
+    "type": "json_object"
+  },
+  "thinking": {
+    "type": "disabled"
+  }
+}

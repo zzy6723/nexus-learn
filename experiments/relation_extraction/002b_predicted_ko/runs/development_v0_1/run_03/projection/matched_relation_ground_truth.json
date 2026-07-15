@@ -1,0 +1,801 @@
+{
+  "allowed_relation_types": [
+    "REQUIRES",
+    "APPLIED_IN",
+    "EXTENDS",
+    "CONTRASTS_WITH",
+    "FORMALIZES",
+    "RELATED_TO",
+    "NO_RELATION"
+  ],
+  "annotation_guidelines": "benchmark/relation_annotation_guidelines.md",
+  "artifact_type": "matched_relation_ground_truth",
+  "created": "2026-07-12",
+  "derivation": {
+    "alignment_sha256": "6d6a587c4e9b96510367d024f96dee3408c4b74433f8db4695abe41cf1fb2681",
+    "ko_manifest_sha256": "d5013426d2fe6b0a86ffafc1c368df61549bcb8ba90ac7478427d03b8cc544f4",
+    "matched_knowledge_objects_sha256": "3af45399da0414ca03003e4bc0a1b9a3bc44b694abff4170d164d6a12b247531",
+    "name_matching_normalization_version": "predicted_ko_name_matching_v0_1",
+    "original_ground_truth_sha256": "74b6573e688384e8f32207e9be17475bcbab55a31f0225791351afe3d94e59a5",
+    "pair_manifest_sha256": "85370b44573760f6b37aeed7b7abd571fb2e16a11cca08b61178fd3673d127ed",
+    "structural_normalization_version": "predicted_ko_structural_normalization_v0_1",
+    "version": "predicted_ko_projection_v0_1"
+  },
+  "description": "Matched primary Relation ground truth using neutral KO slots.",
+  "evaluation_protocol": "benchmark/relation_evaluation_protocol.md",
+  "knowledge_object_ground_truths": [
+    "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/projection/matched_knowledge_objects.json"
+  ],
+  "lectures": [
+    "calculus_001",
+    "calculus_002",
+    "linear_algebra_001",
+    "linear_algebra_002",
+    "optimisation_001",
+    "probability_001"
+  ],
+  "notes": [
+    "All six current mini lectures are treated as Relation development material because they have already been inspected during Entity Extraction work.",
+    "NO_RELATION is a benchmark-only label and should not be written to the product graph.",
+    "Model-facing candidates must use opaque pair IDs and unordered ko_a/ko_b references derived from each gold pair; source and target are evaluator-only fields.",
+    "This file is a seed benchmark for prompt and evaluator development, not a frozen holdout.",
+    "This artifact is deterministically derived; it is never model-facing."
+  ],
+  "pairs": [
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "calculus_001",
+          "span": "The gradient \\(\\nabla f(x)\\) collects these partial derivatives into a vector."
+        }
+      ],
+      "pair_id": "rel_dev_001",
+      "rationale": "Understanding the gradient requires understanding partial derivatives because the gradient is built from them.",
+      "relation_type": "REQUIRES",
+      "source": {
+        "ko_id": "ko_slot_003",
+        "lecture_id": "calculus_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_005",
+        "lecture_id": "calculus_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "calculus_001",
+          "span": "For a unit direction \\(u\\), the directional derivative is \\(\\nabla f(x)\\cdot u\\), so the gradient points in the direction of steepest local increase."
+        }
+      ],
+      "pair_id": "rel_dev_002",
+      "rationale": "The directional derivative is expressed using the gradient.",
+      "relation_type": "REQUIRES",
+      "source": {
+        "ko_id": "ko_slot_001",
+        "lecture_id": "calculus_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_003",
+        "lecture_id": "calculus_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "calculus_001",
+          "span": "A point where the gradient is the zero vector is called a stationary point."
+        }
+      ],
+      "pair_id": "rel_dev_003",
+      "rationale": "The definition of stationary point depends on the gradient.",
+      "relation_type": "REQUIRES",
+      "source": {
+        "ko_id": "ko_slot_006",
+        "lecture_id": "calculus_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_003",
+        "lecture_id": "calculus_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "calculus_001",
+          "span": "The first-order Taylor approximation around \\(a\\) is"
+        },
+        {
+          "lecture_id": "calculus_001",
+          "span": "f(a+h) \\approx f(a) + \\nabla f(a)\\cdot h."
+        }
+      ],
+      "pair_id": "rel_dev_004",
+      "rationale": "The formula is the symbolic form of first-order Taylor approximation.",
+      "relation_type": "FORMALIZES",
+      "source": {
+        "ko_id": "ko_slot_002",
+        "lecture_id": "calculus_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_007",
+        "lecture_id": "calculus_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "linear_algebra_001",
+          "span": "A basis is a set of independent vectors that can represent every vector in the space through linear combinations."
+        }
+      ],
+      "pair_id": "rel_dev_005",
+      "rationale": "A basis is defined relative to a vector space.",
+      "relation_type": "REQUIRES",
+      "source": {
+        "ko_id": "ko_slot_012",
+        "lecture_id": "linear_algebra_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_018",
+        "lecture_id": "linear_algebra_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "linear_algebra_001",
+          "span": "The number of vectors in a basis is the dimension of the vector space."
+        }
+      ],
+      "pair_id": "rel_dev_006",
+      "rationale": "The lecture defines dimension using a basis.",
+      "relation_type": "REQUIRES",
+      "source": {
+        "ko_id": "ko_slot_013",
+        "lecture_id": "linear_algebra_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_012",
+        "lecture_id": "linear_algebra_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "linear_algebra_001",
+          "span": "A matrix is a rectangular array of numbers that can represent a linear transformation once bases have been chosen for the input and output spaces."
+        }
+      ],
+      "pair_id": "rel_dev_007",
+      "rationale": "Matrices are used to represent linear transformations.",
+      "relation_type": "APPLIED_IN",
+      "source": {
+        "ko_id": "ko_slot_017",
+        "lecture_id": "linear_algebra_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_016",
+        "lecture_id": "linear_algebra_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "linear_algebra_001",
+          "span": "The corresponding eigenvalue \\(\\lambda\\) satisfies"
+        },
+        {
+          "lecture_id": "linear_algebra_001",
+          "span": "Av = \\lambda v."
+        }
+      ],
+      "pair_id": "rel_dev_009",
+      "rationale": "The eigenvalue equation formalizes the condition defining the eigenvalue.",
+      "relation_type": "FORMALIZES",
+      "source": {
+        "ko_id": "ko_slot_015",
+        "lecture_id": "linear_algebra_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_014",
+        "lecture_id": "linear_algebra_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "optimisation_001",
+          "span": "An optimisation problem asks for an input that makes the objective function as small or as large as possible."
+        }
+      ],
+      "pair_id": "rel_dev_010",
+      "rationale": "An optimisation problem is defined in terms of an objective function.",
+      "relation_type": "REQUIRES",
+      "source": {
+        "ko_id": "ko_slot_032",
+        "lecture_id": "optimisation_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_031",
+        "lecture_id": "optimisation_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "optimisation_001",
+          "span": "In an unconstrained minimisation problem, the feasible inputs are usually all points in a space such as \\(\\mathbb{R}^n\\), and the goal is to minimise a differentiable function \\(f(x)\\)."
+        }
+      ],
+      "pair_id": "rel_dev_011",
+      "rationale": "An unconstrained minimisation problem is a specialized form of optimisation problem.",
+      "relation_type": "EXTENDS",
+      "source": {
+        "ko_id": "ko_slot_034",
+        "lecture_id": "optimisation_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_032",
+        "lecture_id": "optimisation_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "optimisation_001",
+          "span": "The negative gradient \\(-\\nabla f(x)\\) is a descent direction because it points toward the direction of steepest local decrease."
+        },
+        {
+          "lecture_id": "optimisation_001",
+          "span": "Gradient descent is a first-order iterative method that repeatedly moves in this direction:"
+        }
+      ],
+      "pair_id": "rel_dev_012",
+      "rationale": "Gradient descent depends on the gradient and the negative gradient direction.",
+      "relation_type": "REQUIRES",
+      "source": {
+        "ko_id": "ko_slot_028",
+        "lecture_id": "optimisation_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_027",
+        "lecture_id": "optimisation_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "optimisation_001",
+          "span": "x_{k+1} = x_k - \\alpha_k \\nabla f(x_k)."
+        }
+      ],
+      "pair_id": "rel_dev_013",
+      "rationale": "The update equation formalizes gradient descent.",
+      "relation_type": "FORMALIZES",
+      "source": {
+        "ko_id": "ko_slot_029",
+        "lecture_id": "optimisation_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_028",
+        "lecture_id": "optimisation_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "optimisation_001",
+          "span": "x_{k+1} = x_k - \\alpha_k \\nabla f(x_k)."
+        },
+        {
+          "lecture_id": "optimisation_001",
+          "span": "The scalar \\(\\alpha_k\\) is the step size. It controls how far the method moves at iteration \\(k\\)."
+        }
+      ],
+      "pair_id": "rel_dev_014",
+      "rationale": "The step size is used in the gradient descent update to control how far the method moves.",
+      "relation_type": "APPLIED_IN",
+      "source": {
+        "ko_id": "ko_slot_033",
+        "lecture_id": "optimisation_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_028",
+        "lecture_id": "optimisation_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "calculus_002",
+          "span": "The chain rule describes how the derivative of the composite function depends on the derivatives of \\(f\\) and \\(g\\)."
+        }
+      ],
+      "pair_id": "rel_dev_015",
+      "rationale": "The chain rule is about derivatives of composite functions.",
+      "relation_type": "REQUIRES",
+      "source": {
+        "ko_id": "ko_slot_008",
+        "lecture_id": "calculus_002"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_009",
+        "lecture_id": "calculus_002"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "calculus_002",
+          "span": "the multivariable chain rule can be written as"
+        },
+        {
+          "lecture_id": "calculus_002",
+          "span": "\\nabla h(x) = J_g(x)^\\top \\nabla f(g(x))."
+        }
+      ],
+      "pair_id": "rel_dev_016",
+      "rationale": "The displayed formula is the formal expression of the multivariable chain rule.",
+      "relation_type": "FORMALIZES",
+      "source": {
+        "ko_id": "ko_slot_011",
+        "lecture_id": "calculus_002"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_008",
+        "lecture_id": "calculus_002"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "calculus_002",
+          "span": "\\nabla h(x) = J_g(x)^\\top \\nabla f(g(x))."
+        },
+        {
+          "lecture_id": "calculus_002",
+          "span": "This formula shows how gradients and Jacobian matrices work together."
+        }
+      ],
+      "pair_id": "rel_dev_017",
+      "rationale": "The Jacobian matrix is used in the multivariable chain rule formula.",
+      "relation_type": "APPLIED_IN",
+      "source": {
+        "ko_id": "ko_slot_010",
+        "lecture_id": "calculus_002"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_011",
+        "lecture_id": "calculus_002"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "linear_algebra_002",
+          "span": "Two vectors are orthogonal when their inner product is zero."
+        }
+      ],
+      "pair_id": "rel_dev_018",
+      "rationale": "Orthogonality is defined using the inner product.",
+      "relation_type": "REQUIRES",
+      "source": {
+        "ko_id": "ko_slot_024",
+        "lecture_id": "linear_algebra_002"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_020",
+        "lecture_id": "linear_algebra_002"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "linear_algebra_002",
+          "span": "\\operatorname{proj}_u(v) = \\frac{v \\cdot u}{u \\cdot u}u."
+        }
+      ],
+      "pair_id": "rel_dev_019",
+      "rationale": "The projection formula formalizes orthogonal projection onto a one-dimensional subspace.",
+      "relation_type": "FORMALIZES",
+      "source": {
+        "ko_id": "ko_slot_025",
+        "lecture_id": "linear_algebra_002"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_023",
+        "lecture_id": "linear_algebra_002"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "linear_algebra_002",
+          "span": "Least squares problems use projection ideas to solve inconsistent systems."
+        }
+      ],
+      "pair_id": "rel_dev_020",
+      "rationale": "Projection ideas are applied in least squares problems.",
+      "relation_type": "APPLIED_IN",
+      "source": {
+        "ko_id": "ko_slot_023",
+        "lecture_id": "linear_algebra_002"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_021",
+        "lecture_id": "linear_algebra_002"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "linear_algebra_002",
+          "span": "the solution satisfies the normal equations"
+        },
+        {
+          "lecture_id": "linear_algebra_002",
+          "span": "A^\\top A x = A^\\top b."
+        }
+      ],
+      "pair_id": "rel_dev_021",
+      "rationale": "The normal equations provide a formal solution condition for the least squares problem.",
+      "relation_type": "FORMALIZES",
+      "source": {
+        "ko_id": "ko_slot_022",
+        "lecture_id": "linear_algebra_002"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_021",
+        "lecture_id": "linear_algebra_002"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "probability_001",
+          "span": "The probability distribution of a random variable describes how probability is assigned to its possible values."
+        }
+      ],
+      "pair_id": "rel_dev_022",
+      "rationale": "A probability distribution is defined for a random variable.",
+      "relation_type": "REQUIRES",
+      "source": {
+        "ko_id": "ko_slot_040",
+        "lecture_id": "probability_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_041",
+        "lecture_id": "probability_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "probability_001",
+          "span": "The expected value of a random variable is a weighted average of its possible values."
+        }
+      ],
+      "pair_id": "rel_dev_023",
+      "rationale": "Expected value is defined for a random variable.",
+      "relation_type": "REQUIRES",
+      "source": {
+        "ko_id": "ko_slot_038",
+        "lecture_id": "probability_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_041",
+        "lecture_id": "probability_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "probability_001",
+          "span": "\\mathbb{E}[X] = \\sum_x x P(X=x)."
+        }
+      ],
+      "pair_id": "rel_dev_024",
+      "rationale": "The formula formalizes expected value for a discrete random variable.",
+      "relation_type": "FORMALIZES",
+      "source": {
+        "ko_id": "ko_slot_039",
+        "lecture_id": "probability_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_038",
+        "lecture_id": "probability_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "probability_001",
+          "span": "Variance measures how far a random variable typically is from its expected value."
+        }
+      ],
+      "pair_id": "rel_dev_025",
+      "rationale": "Variance is defined using expected value.",
+      "relation_type": "REQUIRES",
+      "source": {
+        "ko_id": "ko_slot_042",
+        "lecture_id": "probability_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_038",
+        "lecture_id": "probability_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "probability_001",
+          "span": "\\operatorname{Var}(X) = \\mathbb{E}[(X-\\mathbb{E}[X])^2]."
+        }
+      ],
+      "pair_id": "rel_dev_026",
+      "rationale": "The formula formalizes variance.",
+      "relation_type": "FORMALIZES",
+      "source": {
+        "ko_id": "ko_slot_043",
+        "lecture_id": "probability_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_042",
+        "lecture_id": "probability_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "probability_001",
+          "span": "P(A \\mid B) = \\frac{P(A \\cap B)}{P(B)}."
+        }
+      ],
+      "pair_id": "rel_dev_027",
+      "rationale": "The formula formalizes conditional probability.",
+      "relation_type": "FORMALIZES",
+      "source": {
+        "ko_id": "ko_slot_037",
+        "lecture_id": "probability_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_036",
+        "lecture_id": "probability_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "probability_001",
+          "span": "Bayes' rule rewrites conditional probability in a form that is useful for updating beliefs:"
+        }
+      ],
+      "pair_id": "rel_dev_028",
+      "rationale": "Bayes' rule builds on conditional probability.",
+      "relation_type": "REQUIRES",
+      "source": {
+        "ko_id": "ko_slot_035",
+        "lecture_id": "probability_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_036",
+        "lecture_id": "probability_001"
+      }
+    },
+    {
+      "category": "hard_negative",
+      "evidence_spans": [],
+      "pair_id": "rel_dev_030",
+      "rationale": "Both are mathematical objects, but the current snippets do not support a typed educational relation between them.",
+      "relation_type": "NO_RELATION",
+      "source": {
+        "ko_id": "ko_slot_042",
+        "lecture_id": "probability_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_023",
+        "lecture_id": "linear_algebra_002"
+      }
+    },
+    {
+      "category": "hard_negative",
+      "evidence_spans": [],
+      "pair_id": "rel_dev_031",
+      "rationale": "The pair is cross-disciplinary but unsupported by the current materials.",
+      "relation_type": "NO_RELATION",
+      "source": {
+        "ko_id": "ko_slot_012",
+        "lecture_id": "linear_algebra_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_036",
+        "lecture_id": "probability_001"
+      }
+    },
+    {
+      "category": "hard_negative",
+      "evidence_spans": [],
+      "pair_id": "rel_dev_032",
+      "rationale": "The current snippets do not support a relation between line search and Bayes' rule.",
+      "relation_type": "NO_RELATION",
+      "source": {
+        "ko_id": "ko_slot_030",
+        "lecture_id": "optimisation_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_035",
+        "lecture_id": "probability_001"
+      }
+    },
+    {
+      "category": "hard_negative",
+      "evidence_spans": [],
+      "pair_id": "rel_dev_033",
+      "rationale": "Both are formulas, but the current snippets do not support a typed learning relation between them.",
+      "relation_type": "NO_RELATION",
+      "source": {
+        "ko_id": "ko_slot_015",
+        "lecture_id": "linear_algebra_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_039",
+        "lecture_id": "probability_001"
+      }
+    },
+    {
+      "category": "hard_negative",
+      "evidence_spans": [],
+      "pair_id": "rel_dev_035",
+      "rationale": "The objects occur in the same lecture, but the snippet does not support a direct v0.1 Relation between them.",
+      "relation_type": "NO_RELATION",
+      "source": {
+        "ko_id": "ko_slot_004",
+        "lecture_id": "calculus_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_006",
+        "lecture_id": "calculus_001"
+      }
+    },
+    {
+      "category": "hard_negative",
+      "evidence_spans": [],
+      "pair_id": "rel_dev_036",
+      "rationale": "The objects share a lecture, but the text does not establish a direct typed relation between a basis and the eigenvalue equation.",
+      "relation_type": "NO_RELATION",
+      "source": {
+        "ko_id": "ko_slot_012",
+        "lecture_id": "linear_algebra_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_015",
+        "lecture_id": "linear_algebra_001"
+      }
+    },
+    {
+      "category": "hard_negative",
+      "evidence_spans": [],
+      "pair_id": "rel_dev_038",
+      "rationale": "The objects occur in the same lecture but no direct v0.1 Relation between them is supported by the text.",
+      "relation_type": "NO_RELATION",
+      "source": {
+        "ko_id": "ko_slot_019",
+        "lecture_id": "linear_algebra_002"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_022",
+        "lecture_id": "linear_algebra_002"
+      }
+    },
+    {
+      "category": "hard_negative",
+      "evidence_spans": [],
+      "pair_id": "rel_dev_039",
+      "rationale": "The objects share a probability lecture, but the material supplies no direct typed educational relation between them.",
+      "relation_type": "NO_RELATION",
+      "source": {
+        "ko_id": "ko_slot_039",
+        "lecture_id": "probability_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_035",
+        "lecture_id": "probability_001"
+      }
+    },
+    {
+      "category": "hard_negative",
+      "evidence_spans": [],
+      "pair_id": "rel_dev_040",
+      "rationale": "Both objects are optimisation concepts, but the snippet does not establish a direct v0.1 Relation between convexity and line search.",
+      "relation_type": "NO_RELATION",
+      "source": {
+        "ko_id": "ko_slot_026",
+        "lecture_id": "optimisation_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_030",
+        "lecture_id": "optimisation_001"
+      }
+    }
+  ],
+  "primary_scoring_categories": [
+    "positive",
+    "hard_negative"
+  ],
+  "relation_coverage": {
+    "APPLIED_IN": "covered",
+    "CONTRASTS_WITH": "not_covered",
+    "EXTENDS": "exploratory_single_positive",
+    "FORMALIZES": "covered",
+    "NO_RELATION": "covered_with_cross_and_within_lecture_negatives",
+    "RELATED_TO": "no_primary_positive_support_overuse_only",
+    "REQUIRES": "covered"
+  },
+  "split": "development",
+  "status": "derived",
+  "version": "v0.1"
+}

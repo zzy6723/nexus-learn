@@ -1,0 +1,94 @@
+{
+  "provider": "deepseek",
+  "experiment": "002_prompt_refinement",
+  "run_id": "run_01",
+  "split": "development",
+  "benchmark_version": "v0.1",
+  "ground_truth": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/projection/matched_relation_ground_truth.json",
+  "prompt_path": "experiments/relation_extraction/002_prompt_refinement/prompt.md",
+  "relation_schema_path": "docs/decisions/004-relation-schema.md",
+  "model_requested": "deepseek-v4-flash",
+  "model_returned": null,
+  "system_fingerprint": null,
+  "finish_reason": null,
+  "request_parameters": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 8192,
+    "stream": false,
+    "response_format": {
+      "type": "json_object"
+    },
+    "thinking": {
+      "type": "disabled"
+    }
+  },
+  "run_timestamp": "2026-07-15T14:26:17.089439+00:00",
+  "latency_ms": null,
+  "git_commit_at_start": "6295652ceee8c30a84808363b0c85e87322e1b36",
+  "git_dirty_at_start": false,
+  "hashes": {
+    "ground_truth_sha256": "b03869da9ad9ef1e4349502bd713f015fd404a7de109dbc6a12b69d6b6f2e2a9",
+    "prompt_sha256": "e3b0e53f3ceed60c60d082fa9c4a67f9497e64d50664118227cd9bea9fbc12af",
+    "relation_schema_sha256": "a50bbf3193fe03e6e407da6ced7f15f9f4bb819876140925bc87ac4419c50417",
+    "knowledge_object_ground_truth_sha256": {
+      "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/projection/matched_knowledge_objects.json": "3af45399da0414ca03003e4bc0a1b9a3bc44b694abff4170d164d6a12b247531"
+    },
+    "lecture_sha256": {
+      "calculus_001": "00d884e75bd5f6357ddda700b9c75dd671beac85b70cec8c0809b72107fdc2e5",
+      "calculus_002": "72a6f9272c0cc04008aa6f321f8c65b0dc77dd524bee9f0bc90ffca1e339502c",
+      "linear_algebra_001": "7b0837306f0c58c4bd631f40b1e7eb0a099ee29500fe831ca48258b403e3a521",
+      "linear_algebra_002": "3dc3988a5349037895e62f9385f190702cfed5f76d78ee49d736e9cf45f09f84",
+      "optimisation_001": "693903178d836b5b66fd47e32a7c5554c5716667aafcb0a140729ccf4be1a299",
+      "probability_001": "0e31a3e291c7581b4f5466b472fbdd285616577e38f1f49ebe18bbf4d1a27161"
+    },
+    "model_input_sha256": "7bc6dcf3676db63a990dfd8a6f3cfc477dc574e9f947329fb384817cb7c24540",
+    "request_payload_sha256": "1dc2494b8bf7bb752fa90ea547dbb1f576dfe164568d3dee2eef49ba7c375600"
+  },
+  "input_counts": {
+    "candidate_pairs": 36,
+    "knowledge_objects": 43,
+    "lectures": 6
+  },
+  "gold_leakage_audit": {
+    "passed": true,
+    "candidate_serialization": "sorted_fully_qualified_references",
+    "forbidden_keys_checked": [
+      "acceptable_alternatives",
+      "category",
+      "evidence_spans",
+      "primary_scored",
+      "primary_scoring_categories",
+      "rationale",
+      "relation_type",
+      "source",
+      "symmetric",
+      "target"
+    ],
+    "rendered_pair_count": 36,
+    "rendered_knowledge_object_count": 43,
+    "rendered_lecture_count": 6
+  },
+  "artifacts": {
+    "rendered_input": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/dry_runs/B_prime/rendered_inputs/matched_relation_ground_truth.json",
+    "raw_response": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/dry_runs/B_prime/raw_responses/matched_relation_ground_truth.json",
+    "prediction": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/dry_runs/B_prime/output/matched_relation_ground_truth.json",
+    "unparsed_output": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/dry_runs/B_prime/output/matched_relation_ground_truth.raw.txt",
+    "metadata": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/dry_runs/B_prime/metadata/matched_relation_ground_truth.json"
+  },
+  "usage": null,
+  "request_success": null,
+  "api_error": null,
+  "json_parse_success": null,
+  "json_parse_error": null,
+  "prediction_schema_valid": null,
+  "prediction_schema_error": null,
+  "retry_count": 0,
+  "dry_run": true,
+  "run_status": "dry_run_complete",
+  "condition": "B_prime",
+  "input_artifact": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/projection/predicted_normalized_input.json",
+  "input_artifact_sha256": "b6a31bbf011f073787fdfa090399bf2c8368bdbe031bb2d4e032700b95643317",
+  "batch_plan": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/projection/batch_plan.json",
+  "batch_plan_sha256": "d45095b117bd35cf77b44f2d110e52f73e8eefdd1b0bfae376eaa1f376796ff2"
+}

@@ -1,0 +1,209 @@
+{
+  "artifact_type": "entity_prediction_source_bundle",
+  "version": "v0.1",
+  "status": "final",
+  "experiment": "002B-1",
+  "split": "development_v0_1",
+  "method_commit": "6295652ceee8c30a84808363b0c85e87322e1b36",
+  "execution_manifest": {
+    "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/execution_manifest.json",
+    "sha256": "73e927357e7e7466e4ca2dd7d98e0405e3c46a8aeee61c04ff49d4f8504608ae"
+  },
+  "source_plan": {
+    "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/source_manifest.json",
+    "sha256": "2c43f078534ce995a03bf7c05d494e892673aa3c7af0f83d9b8746e45946781d"
+  },
+  "entity_prompt": {
+    "path": "experiments/entity_extraction/002_prompt_refinement/prompt.md",
+    "sha256": "12d85ea9b3ed66b751b637d7ce2e459c69368b9685bbc39c4713c24ff69feeeb"
+  },
+  "entity_execution": {
+    "provider": "deepseek",
+    "model": "deepseek-v4-flash",
+    "request_parameters": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "max_tokens": 4096,
+      "stream": false,
+      "response_format": {
+        "type": "json_object"
+      },
+      "thinking": {
+        "type": "disabled"
+      }
+    }
+  },
+  "counts": {
+    "lectures": 6,
+    "reused": 3,
+    "new_reruns": 3,
+    "missing": 0,
+    "invalid": 0,
+    "plan_violations": 0
+  },
+  "artifact_set_sha256": "ae2a6f7fcece0f6aa02bc9cbb31246e8437f6abe8614c45d29716ced037936de",
+  "lectures": [
+    {
+      "lecture_id": "calculus_001",
+      "provenance": "new_rerun",
+      "source_run": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03",
+      "artifacts": {
+        "output": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/calculus_001.json",
+          "sha256": "84b6a0150d23c4078e2df772eec4f6a8bb54db51d223816ca29c6775f5ab4c3f"
+        },
+        "metadata": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/metadata/calculus_001.json",
+          "sha256": "1249f7e6de33a814347fab4479c2d9510d14edd2f23ad83b003ded2c1832b7b5"
+        },
+        "raw_response": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/raw_responses/calculus_001.json",
+          "sha256": "07753edf52a77b439e85bf30dacd7fe68c2bfbaf15b27e9dd5ddea6993fad8d7"
+        },
+        "rendered_input": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/rendered_inputs/calculus_001.json",
+          "sha256": "7b395a86e4c3d7e5168842e481b7eef504acd70cfbe06322c813a3a8092b3d97"
+        }
+      },
+      "request_id": "ca6e2225-2f8f-45f7-b52c-6ae03fce30bc",
+      "run_timestamp": "2026-07-15T14:06:58.011188+00:00",
+      "model_returned": "deepseek-v4-flash",
+      "finish_reason": "stop"
+    },
+    {
+      "lecture_id": "linear_algebra_001",
+      "provenance": "new_rerun",
+      "source_run": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03",
+      "artifacts": {
+        "output": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/linear_algebra_001.json",
+          "sha256": "320f9825356a3b1d5cb804c95dcadfe5b2b2397db38914680ab1ce69f452be9d"
+        },
+        "metadata": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/metadata/linear_algebra_001.json",
+          "sha256": "178bfaa354bbfe294dea4b38bad6ebdb4d2c8323e2f6622cb284360790692baa"
+        },
+        "raw_response": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/raw_responses/linear_algebra_001.json",
+          "sha256": "1395d58b0b59f1500d722bde759535f446a6e62060aa06543baf6df3be747bf4"
+        },
+        "rendered_input": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/rendered_inputs/linear_algebra_001.json",
+          "sha256": "01b17c0c70526cfffb8e14f95b1245a8881757aded7982225b2b5b1b6e8ed5d4"
+        }
+      },
+      "request_id": "2b8ea076-0308-4021-9d24-af9c7add3334",
+      "run_timestamp": "2026-07-15T14:12:33.562860+00:00",
+      "model_returned": "deepseek-v4-flash",
+      "finish_reason": "stop"
+    },
+    {
+      "lecture_id": "optimisation_001",
+      "provenance": "new_rerun",
+      "source_run": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03",
+      "artifacts": {
+        "output": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/optimisation_001.json",
+          "sha256": "658486dc7088d077441414e0aae928c8a68e9557bb2df1fec329bde1c7955cfa"
+        },
+        "metadata": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/metadata/optimisation_001.json",
+          "sha256": "c1304d6ab4ebeee5d29df4a053a80bcda5dcd8ed4d8311e03f24e6e77514fc1a"
+        },
+        "raw_response": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/raw_responses/optimisation_001.json",
+          "sha256": "7938f6da48691358cfb2afce773954e0799a912c60ccbb9999cb62368944d860"
+        },
+        "rendered_input": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/rendered_inputs/optimisation_001.json",
+          "sha256": "8d6a98e73fe89ef808554dcfbd2358730142e5a5c671f6d3845885aec6b408da"
+        }
+      },
+      "request_id": "884fd7e4-074d-4909-b1e4-426a973b961e",
+      "run_timestamp": "2026-07-15T14:12:41.487668+00:00",
+      "model_returned": "deepseek-v4-flash",
+      "finish_reason": "stop"
+    },
+    {
+      "lecture_id": "calculus_002",
+      "provenance": "reused",
+      "source_run": "experiments/entity_extraction/002_prompt_refinement/runs/holdout_v0_1/run_01",
+      "artifacts": {
+        "output": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/calculus_002.json",
+          "sha256": "8410ae22acc165bb77035f4d65ce2e2b95e9fae98a0d9a6ccf403ab1ca462a82"
+        },
+        "metadata": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/metadata/calculus_002.json",
+          "sha256": "384299a1b5dc2531ef8dc66466836c375b3410163f3d9a33732174b957702649"
+        },
+        "raw_response": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/raw_responses/calculus_002.json",
+          "sha256": "0acacecfac3a69250cf16ab5f56426354ded96c4182a91f2b814c44418f3bd6b"
+        },
+        "rendered_input": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/rendered_inputs/calculus_002.json",
+          "sha256": "8bce9185aed13a9faf50b468324fe0cac66a5cff1d522eebc7be5c1445aef206"
+        }
+      },
+      "request_id": null,
+      "run_timestamp": "2026-07-11T17:59:13.450760+00:00",
+      "model_returned": "deepseek-v4-flash",
+      "finish_reason": "stop"
+    },
+    {
+      "lecture_id": "linear_algebra_002",
+      "provenance": "reused",
+      "source_run": "experiments/entity_extraction/002_prompt_refinement/runs/holdout_v0_1/run_01",
+      "artifacts": {
+        "output": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/linear_algebra_002.json",
+          "sha256": "291045bab2199dfb9016e2addcbf9a299bffac3ad527df55ec4d1ed23731124b"
+        },
+        "metadata": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/metadata/linear_algebra_002.json",
+          "sha256": "b3865b423a9903d1cba5cce67b81f83a2b4feeff6e7fcfa3cf3faa2c77502a70"
+        },
+        "raw_response": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/raw_responses/linear_algebra_002.json",
+          "sha256": "9e69ed724f3bd7b9a6a3421525b83e1ab5c6f936099ac609b3981a2b4908f96d"
+        },
+        "rendered_input": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/rendered_inputs/linear_algebra_002.json",
+          "sha256": "bf280f80191eaabfa854eefa6ba9c379ac22a3a9b2a354edf23b2ef5f2f0c9c5"
+        }
+      },
+      "request_id": null,
+      "run_timestamp": "2026-07-11T17:59:18.012421+00:00",
+      "model_returned": "deepseek-v4-flash",
+      "finish_reason": "stop"
+    },
+    {
+      "lecture_id": "probability_001",
+      "provenance": "reused",
+      "source_run": "experiments/entity_extraction/002_prompt_refinement/runs/holdout_v0_1/run_01",
+      "artifacts": {
+        "output": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/probability_001.json",
+          "sha256": "cfd4f18c782c2abfc67f6162a9481d50e9fe804eaea55e7fe34549b4659e71f7"
+        },
+        "metadata": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/metadata/probability_001.json",
+          "sha256": "32c8c9e6782592616b1242335ac308a0bb4100f219a51972a67ea9be9efec528"
+        },
+        "raw_response": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/raw_responses/probability_001.json",
+          "sha256": "f37cb0c77bcd9c7f4a78ff8c5766acda0a43f5cce4bab3a9a5e9a6a7835a540d"
+        },
+        "rendered_input": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/rendered_inputs/probability_001.json",
+          "sha256": "5a61aa6c28afaf9bccc9aba210697d69a5814d59047bb7817dc21edc1712f975"
+        }
+      },
+      "request_id": null,
+      "run_timestamp": "2026-07-11T17:59:22.831104+00:00",
+      "model_returned": "deepseek-v4-flash",
+      "finish_reason": "stop"
+    }
+  ]
+}

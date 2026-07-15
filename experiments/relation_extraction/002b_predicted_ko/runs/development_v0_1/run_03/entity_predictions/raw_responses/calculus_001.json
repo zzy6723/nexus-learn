@@ -1,0 +1,28 @@
+{
+  "id": "ca6e2225-2f8f-45f7-b52c-6ae03fce30bc",
+  "object": "chat.completion",
+  "created": 1784124419,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"lecture_id\": \"calculus_001\",\n  \"knowledge_objects\": [\n    {\n      \"id\": \"partial_derivative\",\n      \"name\": \"Partial Derivative\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"A partial derivative measures how a function changes when one coordinate changes while the other coordinates are held fixed.\",\n      \"source_span\": \"A partial derivative measures how f changes when one coordinate changes while the other coordinates are held fixed.\"\n    },\n    {\n      \"id\": \"gradient\",\n      \"name\": \"Gradient\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"The gradient collects partial derivatives into a vector.\",\n      \"source_span\": \"The gradient ∇f(x) collects these partial derivatives into a vector.\"\n    },\n    {\n      \"id\": \"directional_derivative\",\n      \"name\": \"Directional Derivative\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"For a unit direction u, the directional derivative is ∇f(x)·u, so the gradient points in the direction of steepest local increase.\",\n      \"source_span\": \"For a unit direction u, the directional derivative is ∇f(x)·u, so the gradient points in the direction of steepest local increase.\"\n    },\n    {\n      \"id\": \"stationary_point\",\n      \"name\": \"Stationary Point\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"A point where the gradient is the zero vector is called a stationary point.\",\n      \"source_span\": \"A point where the gradient is the zero vector is called a stationary point.\"\n    },\n    {\n      \"id\": \"taylor_approximation\",\n      \"name\": \"Taylor Approximation\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"Taylor approximation describes the local behavior of a differentiable function near a point.\",\n      \"source_span\": \"Taylor approximation describes the local behavior of a differentiable function near a point.\"\n    },\n    {\n      \"id\": \"first_order_taylor_approximation\",\n      \"name\": \"First-Order Taylor Approximation\",\n      \"type\": \"Formula\",\n      \"aliases\": [],\n      \"short_definition\": \"The first-order Taylor approximation around a is f(a+h) ≈ f(a) + ∇f(a)·h.\",\n      \"source_span\": \"f(a+h) ≈ f(a) + ∇f(a)·h.\"\n    },\n    {\n      \"id\": \"hessian_matrix\",\n      \"name\": \"Hessian Matrix\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"The Hessian matrix describes local curvature for twice differentiable functions.\",\n      \"source_span\": \"the Hessian matrix, which describes local curvature.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 708,
+    "completion_tokens": 615,
+    "total_tokens": 1323,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 708
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

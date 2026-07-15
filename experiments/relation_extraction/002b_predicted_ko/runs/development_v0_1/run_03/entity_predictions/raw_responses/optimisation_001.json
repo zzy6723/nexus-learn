@@ -1,0 +1,28 @@
+{
+  "id": "884fd7e4-074d-4909-b1e4-426a973b961e",
+  "object": "chat.completion",
+  "created": 1784124762,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"lecture_id\": \"optimisation_001\",\n  \"knowledge_objects\": [\n    {\n      \"id\": \"objective_function\",\n      \"name\": \"Objective Function\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"A function that assigns a real value to each feasible input in an optimisation problem.\",\n      \"source_span\": \"an objective function assigns a real value to each feasible input\"\n    },\n    {\n      \"id\": \"optimisation_problem\",\n      \"name\": \"Optimisation Problem\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"A problem that asks for an input that makes the objective function as small or as large as possible.\",\n      \"source_span\": \"An optimisation problem asks for an input that makes the objective function as small or as large as possible\"\n    },\n    {\n      \"id\": \"unconstrained_minimisation_problem\",\n      \"name\": \"Unconstrained Minimisation Problem\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"An optimisation problem where the feasible inputs are all points in a space and the goal is to minimise a differentiable function.\",\n      \"source_span\": \"unconstrained minimisation problem\"\n    },\n    {\n      \"id\": \"gradient\",\n      \"name\": \"Gradient\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"A vector that describes local change of a differentiable function.\",\n      \"source_span\": \"gradient \\\\(\\\\nabla f(x)\\\\) describes local change\"\n    },\n    {\n      \"id\": \"descent_direction\",\n      \"name\": \"Descent Direction\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"A direction that points toward the direction of steepest local decrease, given by the negative gradient.\",\n      \"source_span\": \"negative gradient \\\\(-\\\\nabla f(x)\\\\) is a descent direction\"\n    },\n    {\n      \"id\": \"gradient_descent\",\n      \"name\": \"Gradient Descent\",\n      \"type\": \"Method\",\n      \"aliases\": [],\n      \"short_definition\": \"A first-order iterative method that repeatedly moves in the descent direction to minimise a function.\",\n      \"source_span\": \"Gradient descent is a first-order iterative method that repeatedly moves in this direction\"\n    },\n    {\n      \"id\": \"step_size\",\n      \"name\": \"Step Size\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"A scalar that controls how far the method moves at each iteration.\",\n      \"source_span\": \"scalar \\\\(\\\\alpha_k\\\\) is the step size\"\n    },\n    {\n      \"id\": \"line_search\",\n      \"name\": \"Line Search\",\n      \"type\": \"Method\",\n      \"aliases\": [],\n      \"short_definition\": \"A method for choosing a step size that gives sufficient decrease in the objective function.\",\n      \"source_span\": \"A line search is a method for choosing a step size that gives sufficient decrease in the objective function\"\n    },\n    {\n      \"id\": \"convex_function\",\n      \"name\": \"Convex Function\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"A function for which every local minimum is also a global minimum.\",\n      \"source_span\": \"convex functions\"\n    },\n    {\n      \"id\": \"stationary_point\",\n      \"name\": \"Stationary Point\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"A point where the gradient is zero, describing candidates for local optima.\",\n      \"source_span\": \"stationary point is a point where the gradient is zero\"\n    },\n    {\n      \"id\": \"gradient_descent_update\",\n      \"name\": \"Gradient Descent Update\",\n      \"type\": \"Formula\",\n      \"aliases\": [],\n      \"short_definition\": \"The update rule for gradient descent: x_{k+1} = x_k - alpha_k * gradient f(x_k).\",\n      \"source_span\": \"\\\\[ x_{k+1} = x_k - \\\\alpha_k \\\\nabla f(x_k). \\\\]\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 739,
+    "completion_tokens": 915,
+    "total_tokens": 1654,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 739
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

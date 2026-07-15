@@ -1,0 +1,275 @@
+{
+  "artifact_type": "predicted_ko_relation_execution_manifest",
+  "version": "v0.1",
+  "status": "prepared_pending_entity_reruns",
+  "experiment": "002B-1",
+  "split": "development_v0_1",
+  "prepared_at": "2026-07-15T14:06:50.931111+00:00",
+  "method_commit": "6295652ceee8c30a84808363b0c85e87322e1b36",
+  "repository_state": {
+    "repository_root": ".",
+    "head_commit": "6295652ceee8c30a84808363b0c85e87322e1b36",
+    "branch": "main",
+    "worktree_clean": true,
+    "status_scope": "tracked_and_non_ignored_untracked",
+    "verified_artifacts": [
+      {
+        "path": "benchmark/ground_truth/development_v0_1.json",
+        "sha256": "d16141b6b8fb2b4854eaf9fcef32e534df30c9ba5689b46d8a26b9a35dd9e69d"
+      },
+      {
+        "path": "benchmark/ground_truth/holdout_v0_1.json",
+        "sha256": "02407f9a24895aa62c8aa0caad8b93135bb49442a763c2749f1f540d161ecd24"
+      },
+      {
+        "path": "benchmark/ground_truth/relations_development_v0_1.json",
+        "sha256": "74b6573e688384e8f32207e9be17475bcbab55a31f0225791351afe3d94e59a5"
+      },
+      {
+        "path": "benchmark/lectures/development/calculus_001.md",
+        "sha256": "c5ee7752c15f9b3bade8a053389ec971304c7d214a1142de7265b2fed980e046"
+      },
+      {
+        "path": "benchmark/lectures/development/linear_algebra_001.md",
+        "sha256": "8aa28a061d2e653b16466f76c5554f1b72026f4eeefdf2553773e41b98d8966a"
+      },
+      {
+        "path": "benchmark/lectures/development/optimisation_001.md",
+        "sha256": "d47b0ddd6d0cac0c576efd820ddb641c1d18dc29e9046956509a0c590f27cd35"
+      },
+      {
+        "path": "benchmark/lectures/holdout/calculus_002.md",
+        "sha256": "fe3b3c6bc59774dd45f9d4952145894ec0cad53e85a4c5d7d45cd9875e93abd5"
+      },
+      {
+        "path": "benchmark/lectures/holdout/linear_algebra_002.md",
+        "sha256": "33b242e8f00d2d8de54df08be7b726fba423dfa68a78514d1ab716016ea6716f"
+      },
+      {
+        "path": "benchmark/lectures/holdout/probability_001.md",
+        "sha256": "887c720a4f5a12fddf92d61c85af4b7610c15025b5fe3583f15edb9c812ef69d"
+      },
+      {
+        "path": "docs/decisions/004-relation-schema.md",
+        "sha256": "a50bbf3193fe03e6e407da6ced7f15f9f4bb819876140925bc87ac4419c50417"
+      },
+      {
+        "path": "experiments/entity_extraction/002_prompt_refinement/prompt.md",
+        "sha256": "12d85ea9b3ed66b751b637d7ce2e459c69368b9685bbc39c4713c24ff69feeeb"
+      },
+      {
+        "path": "experiments/relation_extraction/002_prompt_refinement/prompt.md",
+        "sha256": "e3b0e53f3ceed60c60d082fa9c4a67f9497e64d50664118227cd9bea9fbc12af"
+      },
+      {
+        "path": "scripts/align_predicted_kos.py",
+        "sha256": "3d8ff9c5f3639a756d059607817a28ca8c0d325dd2eae03f9fab94c0cd93ebf5"
+      },
+      {
+        "path": "scripts/evaluate_predicted_ko_relation_pipeline.py",
+        "sha256": "7f3b26932bb5fa3982ee9ffbb8252bad1e5b7eb65f067289a550297da0fe83c8"
+      },
+      {
+        "path": "scripts/evaluate_relation_extraction.py",
+        "sha256": "efe45e3100ee16a4851de88461441270ed00e9ae520731dbdc7a084f546d10c4"
+      },
+      {
+        "path": "scripts/finalize_entity_prediction_bundle.py",
+        "sha256": "c729aa9204f26855179e85398b9e9a71fce4564fab1dd15791fd0f4ae1359c82"
+      },
+      {
+        "path": "scripts/finalize_relation_evaluation_bundle.py",
+        "sha256": "405f73698c882e3ae51490f56eba20c08cbc4e84241e32d8194f04d36c6ea14f"
+      },
+      {
+        "path": "scripts/knowledge_object_matching.py",
+        "sha256": "a5d1083d4e3f7447012eb8019bcabb0f33fd46f70950696cc46e5b9865b9e705"
+      },
+      {
+        "path": "scripts/normalize_predicted_kos.py",
+        "sha256": "baaaf4ee578c4f84b16f60580c43ac51317d567d5f41ba31a14929eaf77dd883"
+      },
+      {
+        "path": "scripts/prepare_predicted_ko_relation_run.py",
+        "sha256": "d1ac9f4699b9206315324688d5a7a397f1b55adef45f3c5704b6fe0dcebab743"
+      },
+      {
+        "path": "scripts/project_recoverable_relation_pairs.py",
+        "sha256": "698ab1170b709fcad67fee817111ae2537db98ce5874e0776c0061a5e277880b"
+      },
+      {
+        "path": "scripts/run_entity_extraction.py",
+        "sha256": "18ff852284c1763cbdf9a9bfc57cb8d675e301f1986a725925f6fc5cc9502379"
+      },
+      {
+        "path": "scripts/run_relation_extraction.py",
+        "sha256": "307c81e6c416e5c9d99d47d359f44d53d667d7001a40e612a559515373cb4855"
+      }
+    ]
+  },
+  "claim_boundary": "single-run controlled paired diagnostic",
+  "frozen_methods": {
+    "entity_prompt": {
+      "path": "experiments/entity_extraction/002_prompt_refinement/prompt.md",
+      "sha256": "12d85ea9b3ed66b751b637d7ce2e459c69368b9685bbc39c4713c24ff69feeeb"
+    },
+    "relation_prompt": {
+      "path": "experiments/relation_extraction/002_prompt_refinement/prompt.md",
+      "sha256": "e3b0e53f3ceed60c60d082fa9c4a67f9497e64d50664118227cd9bea9fbc12af"
+    },
+    "relation_schema": {
+      "path": "docs/decisions/004-relation-schema.md",
+      "sha256": "a50bbf3193fe03e6e407da6ced7f15f9f4bb819876140925bc87ac4419c50417"
+    },
+    "implementation": [
+      {
+        "path": "scripts/prepare_predicted_ko_relation_run.py",
+        "sha256": "d1ac9f4699b9206315324688d5a7a397f1b55adef45f3c5704b6fe0dcebab743"
+      },
+      {
+        "path": "scripts/run_entity_extraction.py",
+        "sha256": "18ff852284c1763cbdf9a9bfc57cb8d675e301f1986a725925f6fc5cc9502379"
+      },
+      {
+        "path": "scripts/finalize_entity_prediction_bundle.py",
+        "sha256": "c729aa9204f26855179e85398b9e9a71fce4564fab1dd15791fd0f4ae1359c82"
+      },
+      {
+        "path": "scripts/knowledge_object_matching.py",
+        "sha256": "a5d1083d4e3f7447012eb8019bcabb0f33fd46f70950696cc46e5b9865b9e705"
+      },
+      {
+        "path": "scripts/normalize_predicted_kos.py",
+        "sha256": "baaaf4ee578c4f84b16f60580c43ac51317d567d5f41ba31a14929eaf77dd883"
+      },
+      {
+        "path": "scripts/align_predicted_kos.py",
+        "sha256": "3d8ff9c5f3639a756d059607817a28ca8c0d325dd2eae03f9fab94c0cd93ebf5"
+      },
+      {
+        "path": "scripts/project_recoverable_relation_pairs.py",
+        "sha256": "698ab1170b709fcad67fee817111ae2537db98ce5874e0776c0061a5e277880b"
+      },
+      {
+        "path": "scripts/run_relation_extraction.py",
+        "sha256": "307c81e6c416e5c9d99d47d359f44d53d667d7001a40e612a559515373cb4855"
+      },
+      {
+        "path": "scripts/evaluate_relation_extraction.py",
+        "sha256": "efe45e3100ee16a4851de88461441270ed00e9ae520731dbdc7a084f546d10c4"
+      },
+      {
+        "path": "scripts/finalize_relation_evaluation_bundle.py",
+        "sha256": "405f73698c882e3ae51490f56eba20c08cbc4e84241e32d8194f04d36c6ea14f"
+      },
+      {
+        "path": "scripts/evaluate_predicted_ko_relation_pipeline.py",
+        "sha256": "7f3b26932bb5fa3982ee9ffbb8252bad1e5b7eb65f067289a550297da0fe83c8"
+      }
+    ]
+  },
+  "entity_execution": {
+    "provider": "deepseek",
+    "model": "deepseek-v4-flash",
+    "request_parameters": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "max_tokens": 4096,
+      "stream": false,
+      "response_format": {
+        "type": "json_object"
+      },
+      "thinking": {
+        "type": "disabled"
+      }
+    },
+    "source_manifest": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/source_manifest.json",
+    "source_manifest_sha256": "2c43f078534ce995a03bf7c05d494e892673aa3c7af0f83d9b8746e45946781d",
+    "rerun_required_lecture_ids": [
+      "calculus_001",
+      "linear_algebra_001",
+      "optimisation_001"
+    ]
+  },
+  "relation_execution": {
+    "provider": "deepseek",
+    "model": "deepseek-v4-flash",
+    "request_parameters": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "max_tokens": 8192,
+      "stream": false,
+      "response_format": {
+        "type": "json_object"
+      },
+      "thinking": {
+        "type": "disabled"
+      }
+    },
+    "matched_execution_order": [
+      "A_prime",
+      "B_prime"
+    ]
+  },
+  "benchmark": {
+    "original_relation_ground_truth": {
+      "path": "benchmark/ground_truth/relations_development_v0_1.json",
+      "sha256": "74b6573e688384e8f32207e9be17475bcbab55a31f0225791351afe3d94e59a5"
+    },
+    "source_ko_inventories": [
+      {
+        "path": "benchmark/ground_truth/development_v0_1.json",
+        "sha256": "d16141b6b8fb2b4854eaf9fcef32e534df30c9ba5689b46d8a26b9a35dd9e69d"
+      },
+      {
+        "path": "benchmark/ground_truth/holdout_v0_1.json",
+        "sha256": "02407f9a24895aa62c8aa0caad8b93135bb49442a763c2749f1f540d161ecd24"
+      }
+    ],
+    "oracle_inventory": {
+      "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/oracle_knowledge_objects.json",
+      "sha256": "c527a8e914d886dd27483c1bca154c58b7617fc54c04b92c8482b9fbb4e0ceb2"
+    },
+    "lecture_inventory": {
+      "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/lecture_inventory.json",
+      "sha256": "195b8523b00652d98d79866f4807993e1359f857577210c9b62ab970f5f41422"
+    },
+    "lecture_ids": [
+      "calculus_001",
+      "linear_algebra_001",
+      "optimisation_001",
+      "calculus_002",
+      "linear_algebra_002",
+      "probability_001"
+    ],
+    "lecture_markdown_sha256": {
+      "calculus_001": "c5ee7752c15f9b3bade8a053389ec971304c7d214a1142de7265b2fed980e046",
+      "linear_algebra_001": "8aa28a061d2e653b16466f76c5554f1b72026f4eeefdf2553773e41b98d8966a",
+      "optimisation_001": "d47b0ddd6d0cac0c576efd820ddb641c1d18dc29e9046956509a0c590f27cd35",
+      "calculus_002": "fe3b3c6bc59774dd45f9d4952145894ec0cad53e85a4c5d7d45cd9875e93abd5",
+      "linear_algebra_002": "33b242e8f00d2d8de54df08be7b726fba423dfa68a78514d1ab716016ea6716f",
+      "probability_001": "887c720a4f5a12fddf92d61c85af4b7610c15025b5fe3583f15edb9c812ef69d"
+    },
+    "lecture_model_text_sha256": {
+      "calculus_001": "00d884e75bd5f6357ddda700b9c75dd671beac85b70cec8c0809b72107fdc2e5",
+      "linear_algebra_001": "7b0837306f0c58c4bd631f40b1e7eb0a099ee29500fe831ca48258b403e3a521",
+      "optimisation_001": "693903178d836b5b66fd47e32a7c5554c5716667aafcb0a140729ccf4be1a299",
+      "calculus_002": "72a6f9272c0cc04008aa6f321f8c65b0dc77dd524bee9f0bc90ffca1e339502c",
+      "linear_algebra_002": "3dc3988a5349037895e62f9385f190702cfed5f76d78ee49d736e9cf45f09f84",
+      "probability_001": "0e31a3e291c7581b4f5466b472fbdd285616577e38f1f49ebe18bbf4d1a27161"
+    }
+  },
+  "downstream_gate_order": [
+    "entity_predictions_complete",
+    "normalization_complete",
+    "alignment_final",
+    "projection_complete",
+    "A_prime_dry_run",
+    "B_prime_dry_run",
+    "A_prime_formal_run",
+    "B_prime_formal_run",
+    "A_prime_relation_evaluation_final",
+    "B_prime_relation_evaluation_final",
+    "pipeline_evaluation_final"
+  ]
+}

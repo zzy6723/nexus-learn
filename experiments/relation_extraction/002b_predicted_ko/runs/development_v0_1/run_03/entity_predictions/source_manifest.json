@@ -1,0 +1,321 @@
+{
+  "artifact_type": "entity_prediction_source_manifest",
+  "version": "v0.1",
+  "status": "prepared_pending_entity_reruns",
+  "method_commit": "6295652ceee8c30a84808363b0c85e87322e1b36",
+  "entity_prompt": {
+    "path": "experiments/entity_extraction/002_prompt_refinement/prompt.md",
+    "sha256": "12d85ea9b3ed66b751b637d7ce2e459c69368b9685bbc39c4713c24ff69feeeb"
+  },
+  "reuse_policy": {
+    "requires_exact_lecture_and_prompt_hashes": true,
+    "requires_identical_model_and_request_parameters": true,
+    "requires_traceable_raw_rendered_parsed_artifacts": true,
+    "requires_raw_parsed_content_equivalence": true,
+    "does_not_require_historical_git_dirty_false": true
+  },
+  "source_runs_audited": [
+    "experiments/entity_extraction/002_prompt_refinement",
+    "experiments/entity_extraction/002_prompt_refinement/runs/holdout_v0_1/run_01"
+  ],
+  "counts": {
+    "lectures": 6,
+    "reused": 3,
+    "rerun_required": 3
+  },
+  "rerun_required_lecture_ids": [
+    "calculus_001",
+    "linear_algebra_001",
+    "optimisation_001"
+  ],
+  "lectures": [
+    {
+      "lecture_id": "calculus_001",
+      "decision": "rerun_required",
+      "source_run": "experiments/entity_extraction/002_prompt_refinement",
+      "checks": {
+        "output_present": true,
+        "output_valid_json": true,
+        "metadata_present": true,
+        "metadata_valid_json": true,
+        "raw_response_present": false,
+        "rendered_input_present": false,
+        "output_schema_valid": true,
+        "metadata_lecture_id_match": true,
+        "metadata_prompt_hash_match": false,
+        "metadata_input_hash_match": false,
+        "metadata_provider_match": false,
+        "metadata_model_match": true,
+        "metadata_temperature_match": true,
+        "metadata_top_p_match": false,
+        "metadata_max_tokens_match": true,
+        "metadata_request_success": false,
+        "metadata_json_parse_success": false,
+        "metadata_finish_reason_stop": false,
+        "rendered_payload_exact_match": false,
+        "parsed_output_matches_raw_response": false
+      },
+      "reasons": [
+        "finish_reason_stop",
+        "input_hash_match",
+        "json_parse_success",
+        "parsed_output_not_traceable_to_raw_response",
+        "prompt_hash_match",
+        "provider_match",
+        "raw_response_missing",
+        "rendered_input_missing",
+        "rendered_payload_mismatch",
+        "request_success",
+        "top_p_match"
+      ],
+      "source_paths": {
+        "output": "experiments/entity_extraction/002_prompt_refinement/output/calculus_001.json",
+        "metadata": "experiments/entity_extraction/002_prompt_refinement/metadata/calculus_001.json",
+        "raw_response": null,
+        "rendered_input": null
+      },
+      "source_sha256": {
+        "output": "ce9b1f9be434b263204d61c182138b851d28b52e197b872d15d94e9868e9af39",
+        "metadata": "83ad1b0868c3a989c758749c4b892f4bd8f00e4fc39453ff7fe1a4c59ffe6ae3",
+        "raw_response": null,
+        "rendered_input": null
+      },
+      "audit_note": "git_dirty_at_start is recorded but is not a reuse criterion; content and request traceability are checked directly."
+    },
+    {
+      "lecture_id": "linear_algebra_001",
+      "decision": "rerun_required",
+      "source_run": "experiments/entity_extraction/002_prompt_refinement",
+      "checks": {
+        "output_present": true,
+        "output_valid_json": true,
+        "metadata_present": true,
+        "metadata_valid_json": true,
+        "raw_response_present": false,
+        "rendered_input_present": false,
+        "output_schema_valid": true,
+        "metadata_lecture_id_match": true,
+        "metadata_prompt_hash_match": false,
+        "metadata_input_hash_match": false,
+        "metadata_provider_match": false,
+        "metadata_model_match": true,
+        "metadata_temperature_match": true,
+        "metadata_top_p_match": false,
+        "metadata_max_tokens_match": true,
+        "metadata_request_success": false,
+        "metadata_json_parse_success": false,
+        "metadata_finish_reason_stop": false,
+        "rendered_payload_exact_match": false,
+        "parsed_output_matches_raw_response": false
+      },
+      "reasons": [
+        "finish_reason_stop",
+        "input_hash_match",
+        "json_parse_success",
+        "parsed_output_not_traceable_to_raw_response",
+        "prompt_hash_match",
+        "provider_match",
+        "raw_response_missing",
+        "rendered_input_missing",
+        "rendered_payload_mismatch",
+        "request_success",
+        "top_p_match"
+      ],
+      "source_paths": {
+        "output": "experiments/entity_extraction/002_prompt_refinement/output/linear_algebra_001.json",
+        "metadata": "experiments/entity_extraction/002_prompt_refinement/metadata/linear_algebra_001.json",
+        "raw_response": null,
+        "rendered_input": null
+      },
+      "source_sha256": {
+        "output": "a2a804964c408b5c0b1f4ed36336095761338ab1e183e86c28132dbc5cff9aee",
+        "metadata": "f2fb3a02c2ac12c8cd33000992512cbf39fcb40edaad5242be3863452b4dd108",
+        "raw_response": null,
+        "rendered_input": null
+      },
+      "audit_note": "git_dirty_at_start is recorded but is not a reuse criterion; content and request traceability are checked directly."
+    },
+    {
+      "lecture_id": "optimisation_001",
+      "decision": "rerun_required",
+      "source_run": "experiments/entity_extraction/002_prompt_refinement",
+      "checks": {
+        "output_present": true,
+        "output_valid_json": true,
+        "metadata_present": true,
+        "metadata_valid_json": true,
+        "raw_response_present": false,
+        "rendered_input_present": false,
+        "output_schema_valid": true,
+        "metadata_lecture_id_match": true,
+        "metadata_prompt_hash_match": false,
+        "metadata_input_hash_match": false,
+        "metadata_provider_match": false,
+        "metadata_model_match": true,
+        "metadata_temperature_match": true,
+        "metadata_top_p_match": false,
+        "metadata_max_tokens_match": true,
+        "metadata_request_success": false,
+        "metadata_json_parse_success": false,
+        "metadata_finish_reason_stop": false,
+        "rendered_payload_exact_match": false,
+        "parsed_output_matches_raw_response": false
+      },
+      "reasons": [
+        "finish_reason_stop",
+        "input_hash_match",
+        "json_parse_success",
+        "parsed_output_not_traceable_to_raw_response",
+        "prompt_hash_match",
+        "provider_match",
+        "raw_response_missing",
+        "rendered_input_missing",
+        "rendered_payload_mismatch",
+        "request_success",
+        "top_p_match"
+      ],
+      "source_paths": {
+        "output": "experiments/entity_extraction/002_prompt_refinement/output/optimisation_001.json",
+        "metadata": "experiments/entity_extraction/002_prompt_refinement/metadata/optimisation_001.json",
+        "raw_response": null,
+        "rendered_input": null
+      },
+      "source_sha256": {
+        "output": "2253adf81cfecc1a34b08d81c000f2fcf46872a068ad51d7441d94ab8b85bb24",
+        "metadata": "0a469b2646fc2dde17a137262c01310047bf78362f03f62fa29a1f1a9536b3c0",
+        "raw_response": null,
+        "rendered_input": null
+      },
+      "audit_note": "git_dirty_at_start is recorded but is not a reuse criterion; content and request traceability are checked directly."
+    },
+    {
+      "lecture_id": "calculus_002",
+      "decision": "reuse",
+      "source_run": "experiments/entity_extraction/002_prompt_refinement/runs/holdout_v0_1/run_01",
+      "checks": {
+        "output_present": true,
+        "output_valid_json": true,
+        "metadata_present": true,
+        "metadata_valid_json": true,
+        "raw_response_present": true,
+        "raw_response_valid_json": true,
+        "rendered_input_present": true,
+        "rendered_input_valid_json": true,
+        "output_schema_valid": true,
+        "metadata_lecture_id_match": true,
+        "metadata_prompt_hash_match": true,
+        "metadata_input_hash_match": true,
+        "metadata_provider_match": true,
+        "metadata_model_match": true,
+        "metadata_temperature_match": true,
+        "metadata_top_p_match": true,
+        "metadata_max_tokens_match": true,
+        "metadata_request_success": true,
+        "metadata_json_parse_success": true,
+        "metadata_finish_reason_stop": true,
+        "rendered_payload_exact_match": true,
+        "parsed_output_matches_raw_response": true
+      },
+      "reasons": [],
+      "source_paths": {
+        "output": "experiments/entity_extraction/002_prompt_refinement/runs/holdout_v0_1/run_01/output/calculus_002.json",
+        "metadata": "experiments/entity_extraction/002_prompt_refinement/runs/holdout_v0_1/run_01/metadata/calculus_002.json",
+        "raw_response": "experiments/entity_extraction/002_prompt_refinement/runs/holdout_v0_1/run_01/raw_responses/calculus_002.json",
+        "rendered_input": "experiments/entity_extraction/002_prompt_refinement/runs/holdout_v0_1/run_01/rendered_inputs/calculus_002.json"
+      },
+      "source_sha256": {
+        "output": "8410ae22acc165bb77035f4d65ce2e2b95e9fae98a0d9a6ccf403ab1ca462a82",
+        "metadata": "384299a1b5dc2531ef8dc66466836c375b3410163f3d9a33732174b957702649",
+        "raw_response": "0acacecfac3a69250cf16ab5f56426354ded96c4182a91f2b814c44418f3bd6b",
+        "rendered_input": "8bce9185aed13a9faf50b468324fe0cac66a5cff1d522eebc7be5c1445aef206"
+      },
+      "audit_note": "git_dirty_at_start is recorded but is not a reuse criterion; content and request traceability are checked directly."
+    },
+    {
+      "lecture_id": "linear_algebra_002",
+      "decision": "reuse",
+      "source_run": "experiments/entity_extraction/002_prompt_refinement/runs/holdout_v0_1/run_01",
+      "checks": {
+        "output_present": true,
+        "output_valid_json": true,
+        "metadata_present": true,
+        "metadata_valid_json": true,
+        "raw_response_present": true,
+        "raw_response_valid_json": true,
+        "rendered_input_present": true,
+        "rendered_input_valid_json": true,
+        "output_schema_valid": true,
+        "metadata_lecture_id_match": true,
+        "metadata_prompt_hash_match": true,
+        "metadata_input_hash_match": true,
+        "metadata_provider_match": true,
+        "metadata_model_match": true,
+        "metadata_temperature_match": true,
+        "metadata_top_p_match": true,
+        "metadata_max_tokens_match": true,
+        "metadata_request_success": true,
+        "metadata_json_parse_success": true,
+        "metadata_finish_reason_stop": true,
+        "rendered_payload_exact_match": true,
+        "parsed_output_matches_raw_response": true
+      },
+      "reasons": [],
+      "source_paths": {
+        "output": "experiments/entity_extraction/002_prompt_refinement/runs/holdout_v0_1/run_01/output/linear_algebra_002.json",
+        "metadata": "experiments/entity_extraction/002_prompt_refinement/runs/holdout_v0_1/run_01/metadata/linear_algebra_002.json",
+        "raw_response": "experiments/entity_extraction/002_prompt_refinement/runs/holdout_v0_1/run_01/raw_responses/linear_algebra_002.json",
+        "rendered_input": "experiments/entity_extraction/002_prompt_refinement/runs/holdout_v0_1/run_01/rendered_inputs/linear_algebra_002.json"
+      },
+      "source_sha256": {
+        "output": "291045bab2199dfb9016e2addcbf9a299bffac3ad527df55ec4d1ed23731124b",
+        "metadata": "b3865b423a9903d1cba5cce67b81f83a2b4feeff6e7fcfa3cf3faa2c77502a70",
+        "raw_response": "9e69ed724f3bd7b9a6a3421525b83e1ab5c6f936099ac609b3981a2b4908f96d",
+        "rendered_input": "bf280f80191eaabfa854eefa6ba9c379ac22a3a9b2a354edf23b2ef5f2f0c9c5"
+      },
+      "audit_note": "git_dirty_at_start is recorded but is not a reuse criterion; content and request traceability are checked directly."
+    },
+    {
+      "lecture_id": "probability_001",
+      "decision": "reuse",
+      "source_run": "experiments/entity_extraction/002_prompt_refinement/runs/holdout_v0_1/run_01",
+      "checks": {
+        "output_present": true,
+        "output_valid_json": true,
+        "metadata_present": true,
+        "metadata_valid_json": true,
+        "raw_response_present": true,
+        "raw_response_valid_json": true,
+        "rendered_input_present": true,
+        "rendered_input_valid_json": true,
+        "output_schema_valid": true,
+        "metadata_lecture_id_match": true,
+        "metadata_prompt_hash_match": true,
+        "metadata_input_hash_match": true,
+        "metadata_provider_match": true,
+        "metadata_model_match": true,
+        "metadata_temperature_match": true,
+        "metadata_top_p_match": true,
+        "metadata_max_tokens_match": true,
+        "metadata_request_success": true,
+        "metadata_json_parse_success": true,
+        "metadata_finish_reason_stop": true,
+        "rendered_payload_exact_match": true,
+        "parsed_output_matches_raw_response": true
+      },
+      "reasons": [],
+      "source_paths": {
+        "output": "experiments/entity_extraction/002_prompt_refinement/runs/holdout_v0_1/run_01/output/probability_001.json",
+        "metadata": "experiments/entity_extraction/002_prompt_refinement/runs/holdout_v0_1/run_01/metadata/probability_001.json",
+        "raw_response": "experiments/entity_extraction/002_prompt_refinement/runs/holdout_v0_1/run_01/raw_responses/probability_001.json",
+        "rendered_input": "experiments/entity_extraction/002_prompt_refinement/runs/holdout_v0_1/run_01/rendered_inputs/probability_001.json"
+      },
+      "source_sha256": {
+        "output": "cfd4f18c782c2abfc67f6162a9481d50e9fe804eaea55e7fe34549b4659e71f7",
+        "metadata": "32c8c9e6782592616b1242335ac308a0bb4100f219a51972a67ea9be9efec528",
+        "raw_response": "f37cb0c77bcd9c7f4a78ff8c5766acda0a43f5cce4bab3a9a5e9a6a7835a540d",
+        "rendered_input": "5a61aa6c28afaf9bccc9aba210697d69a5814d59047bb7817dc21edc1712f975"
+      },
+      "audit_note": "git_dirty_at_start is recorded but is not a reuse criterion; content and request traceability are checked directly."
+    }
+  ]
+}

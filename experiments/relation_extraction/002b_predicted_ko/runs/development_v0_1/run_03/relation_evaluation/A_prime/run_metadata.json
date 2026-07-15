@@ -1,0 +1,108 @@
+{
+  "provider": "deepseek",
+  "experiment": "002_prompt_refinement",
+  "run_id": "run_01",
+  "split": "development",
+  "benchmark_version": "v0.1",
+  "ground_truth": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/projection/matched_relation_ground_truth.json",
+  "prompt_path": "experiments/relation_extraction/002_prompt_refinement/prompt.md",
+  "relation_schema_path": "docs/decisions/004-relation-schema.md",
+  "model_requested": "deepseek-v4-flash",
+  "model_returned": "deepseek-v4-flash",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "finish_reason": "stop",
+  "request_parameters": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 8192,
+    "stream": false,
+    "response_format": {
+      "type": "json_object"
+    },
+    "thinking": {
+      "type": "disabled"
+    }
+  },
+  "run_timestamp": "2026-07-15T15:29:47.275693+00:00",
+  "latency_ms": 33508,
+  "git_commit_at_start": "6295652ceee8c30a84808363b0c85e87322e1b36",
+  "git_dirty_at_start": false,
+  "hashes": {
+    "ground_truth_sha256": "b03869da9ad9ef1e4349502bd713f015fd404a7de109dbc6a12b69d6b6f2e2a9",
+    "prompt_sha256": "e3b0e53f3ceed60c60d082fa9c4a67f9497e64d50664118227cd9bea9fbc12af",
+    "relation_schema_sha256": "a50bbf3193fe03e6e407da6ced7f15f9f4bb819876140925bc87ac4419c50417",
+    "knowledge_object_ground_truth_sha256": {
+      "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/projection/matched_knowledge_objects.json": "3af45399da0414ca03003e4bc0a1b9a3bc44b694abff4170d164d6a12b247531"
+    },
+    "lecture_sha256": {
+      "calculus_001": "00d884e75bd5f6357ddda700b9c75dd671beac85b70cec8c0809b72107fdc2e5",
+      "calculus_002": "72a6f9272c0cc04008aa6f321f8c65b0dc77dd524bee9f0bc90ffca1e339502c",
+      "linear_algebra_001": "7b0837306f0c58c4bd631f40b1e7eb0a099ee29500fe831ca48258b403e3a521",
+      "linear_algebra_002": "3dc3988a5349037895e62f9385f190702cfed5f76d78ee49d736e9cf45f09f84",
+      "optimisation_001": "693903178d836b5b66fd47e32a7c5554c5716667aafcb0a140729ccf4be1a299",
+      "probability_001": "0e31a3e291c7581b4f5466b472fbdd285616577e38f1f49ebe18bbf4d1a27161"
+    },
+    "model_input_sha256": "384fb0e4e32d0b4f449898c6f58abfc10a23c87f187ca1ebddd98fdcbf63d113",
+    "request_payload_sha256": "7aa172af983fab5d1556a97c957e3bb6de01444ebf500bc4b92ee8006e9b8391"
+  },
+  "input_counts": {
+    "candidate_pairs": 36,
+    "knowledge_objects": 43,
+    "lectures": 6
+  },
+  "gold_leakage_audit": {
+    "passed": true,
+    "candidate_serialization": "sorted_fully_qualified_references",
+    "forbidden_keys_checked": [
+      "acceptable_alternatives",
+      "category",
+      "evidence_spans",
+      "primary_scored",
+      "primary_scoring_categories",
+      "rationale",
+      "relation_type",
+      "source",
+      "symmetric",
+      "target"
+    ],
+    "rendered_pair_count": 36,
+    "rendered_knowledge_object_count": 43,
+    "rendered_lecture_count": 6
+  },
+  "artifacts": {
+    "rendered_input": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/A_prime/rendered_inputs/matched_relation_ground_truth.json",
+    "raw_response": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/A_prime/raw_responses/matched_relation_ground_truth.json",
+    "prediction": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/A_prime/output/matched_relation_ground_truth.json",
+    "unparsed_output": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/A_prime/output/matched_relation_ground_truth.raw.txt",
+    "metadata": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/A_prime/metadata/matched_relation_ground_truth.json"
+  },
+  "usage": {
+    "prompt_tokens": 9396,
+    "completion_tokens": 5216,
+    "total_tokens": 14612,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 9396
+  },
+  "request_success": true,
+  "api_error": null,
+  "json_parse_success": true,
+  "json_parse_error": null,
+  "prediction_schema_valid": true,
+  "prediction_schema_error": null,
+  "retry_count": 0,
+  "dry_run": false,
+  "run_status": "completed",
+  "condition": "A_prime",
+  "input_artifact": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/projection/oracle_normalized_input.json",
+  "input_artifact_sha256": "7a3e9a76dea28dce1670bbf3b9a8b27590fa7f68481775c0bce84c4d58359ef2",
+  "batch_plan": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/projection/batch_plan.json",
+  "batch_plan_sha256": "d45095b117bd35cf77b44f2d110e52f73e8eefdd1b0bfae376eaa1f376796ff2",
+  "request_id": "67425087-23c9-4f99-a82a-a903df692e47",
+  "raw_response_sha256": "15d0af6fc35050889ac2b105e398604d328706760f0ddaba87f45db85ea33574",
+  "prediction_sha256": "283d2c1e074646125f76137f78138212976c5570ac239b6f038e55652d2c3291",
+  "source_run_metadata": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/A_prime/metadata/matched_relation_ground_truth.json",
+  "source_run_metadata_sha256": "3bb04fce2c6d9c3f0606d2bd81a01d8739bb19a82a1694874c68fac221d26f1d"
+}

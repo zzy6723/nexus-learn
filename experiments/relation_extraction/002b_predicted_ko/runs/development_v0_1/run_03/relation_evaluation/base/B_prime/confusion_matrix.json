@@ -1,0 +1,149 @@
+{
+  "labels": [
+    "REQUIRES",
+    "APPLIED_IN",
+    "EXTENDS",
+    "CONTRASTS_WITH",
+    "FORMALIZES",
+    "RELATED_TO",
+    "NO_RELATION"
+  ],
+  "matrix": {
+    "REQUIRES": {
+      "REQUIRES": 11,
+      "APPLIED_IN": 1,
+      "EXTENDS": 0,
+      "CONTRASTS_WITH": 0,
+      "FORMALIZES": 1,
+      "RELATED_TO": 0,
+      "NO_RELATION": 0
+    },
+    "APPLIED_IN": {
+      "REQUIRES": 3,
+      "APPLIED_IN": 1,
+      "EXTENDS": 0,
+      "CONTRASTS_WITH": 0,
+      "FORMALIZES": 0,
+      "RELATED_TO": 0,
+      "NO_RELATION": 0
+    },
+    "EXTENDS": {
+      "REQUIRES": 0,
+      "APPLIED_IN": 0,
+      "EXTENDS": 1,
+      "CONTRASTS_WITH": 0,
+      "FORMALIZES": 0,
+      "RELATED_TO": 0,
+      "NO_RELATION": 0
+    },
+    "CONTRASTS_WITH": {
+      "REQUIRES": 0,
+      "APPLIED_IN": 0,
+      "EXTENDS": 0,
+      "CONTRASTS_WITH": 0,
+      "FORMALIZES": 0,
+      "RELATED_TO": 0,
+      "NO_RELATION": 0
+    },
+    "FORMALIZES": {
+      "REQUIRES": 0,
+      "APPLIED_IN": 0,
+      "EXTENDS": 0,
+      "CONTRASTS_WITH": 0,
+      "FORMALIZES": 9,
+      "RELATED_TO": 0,
+      "NO_RELATION": 0
+    },
+    "RELATED_TO": {
+      "REQUIRES": 0,
+      "APPLIED_IN": 0,
+      "EXTENDS": 0,
+      "CONTRASTS_WITH": 0,
+      "FORMALIZES": 0,
+      "RELATED_TO": 0,
+      "NO_RELATION": 0
+    },
+    "NO_RELATION": {
+      "REQUIRES": 0,
+      "APPLIED_IN": 0,
+      "EXTENDS": 0,
+      "CONTRASTS_WITH": 0,
+      "FORMALIZES": 0,
+      "RELATED_TO": 0,
+      "NO_RELATION": 9
+    }
+  },
+  "per_type": {
+    "REQUIRES": {
+      "support": 13,
+      "true_positive": 11,
+      "false_positive": 3,
+      "false_negative": 2,
+      "precision": 0.7857142857142857,
+      "recall": 0.8461538461538461,
+      "f1": 0.8148148148148148
+    },
+    "APPLIED_IN": {
+      "support": 4,
+      "true_positive": 1,
+      "false_positive": 1,
+      "false_negative": 3,
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333333333333333
+    },
+    "EXTENDS": {
+      "support": 1,
+      "true_positive": 1,
+      "false_positive": 0,
+      "false_negative": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "CONTRASTS_WITH": {
+      "support": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0,
+      "precision": null,
+      "recall": null,
+      "f1": null
+    },
+    "FORMALIZES": {
+      "support": 9,
+      "true_positive": 9,
+      "false_positive": 1,
+      "false_negative": 0,
+      "precision": 0.9,
+      "recall": 1.0,
+      "f1": 0.9473684210526316
+    },
+    "RELATED_TO": {
+      "support": 0,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0,
+      "precision": null,
+      "recall": null,
+      "f1": null
+    },
+    "NO_RELATION": {
+      "support": 9,
+      "true_positive": 9,
+      "false_positive": 0,
+      "false_negative": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  },
+  "macro_f1_supported_labels": 0.819103313840156,
+  "macro_f1_included_labels": [
+    "REQUIRES",
+    "APPLIED_IN",
+    "EXTENDS",
+    "FORMALIZES",
+    "NO_RELATION"
+  ]
+}

@@ -1,0 +1,629 @@
+{
+  "artifact_type": "composed_oracle_ko_inventory",
+  "version": "v0.1",
+  "split": "development",
+  "status": "derived",
+  "description": "Relation-development Oracle KO inventory composed without changing source Knowledge Object annotations.",
+  "allowed_object_types": [
+    "Concept",
+    "Formula",
+    "Method"
+  ],
+  "derivation": {
+    "relation_ground_truth": {
+      "path": "benchmark/ground_truth/relations_development_v0_1.json",
+      "sha256": "74b6573e688384e8f32207e9be17475bcbab55a31f0225791351afe3d94e59a5"
+    },
+    "source_inventories": [
+      {
+        "path": "benchmark/ground_truth/development_v0_1.json",
+        "sha256": "d16141b6b8fb2b4854eaf9fcef32e534df30c9ba5689b46d8a26b9a35dd9e69d"
+      },
+      {
+        "path": "benchmark/ground_truth/holdout_v0_1.json",
+        "sha256": "02407f9a24895aa62c8aa0caad8b93135bb49442a763c2749f1f540d161ecd24"
+      }
+    ],
+    "lecture_order": [
+      "calculus_001",
+      "linear_algebra_001",
+      "optimisation_001",
+      "calculus_002",
+      "linear_algebra_002",
+      "probability_001"
+    ]
+  },
+  "lectures": [
+    {
+      "lecture_id": "calculus_001",
+      "path": "benchmark/lectures/development/calculus_001.md",
+      "objects": [
+        {
+          "id": "partial_derivative",
+          "name": "Partial Derivative",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [
+            "partial derivatives"
+          ],
+          "source_spans": [
+            "A partial derivative measures how \\(f\\) changes when one coordinate changes while the other coordinates are held fixed."
+          ]
+        },
+        {
+          "id": "gradient",
+          "name": "Gradient",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "The gradient \\(\\nabla f(x)\\) collects these partial derivatives into a vector."
+          ]
+        },
+        {
+          "id": "directional_derivative",
+          "name": "Directional Derivative",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "For a unit direction \\(u\\), the directional derivative is \\(\\nabla f(x)\\cdot u\\), so the gradient points in the direction of steepest local increase."
+          ]
+        },
+        {
+          "id": "stationary_point",
+          "name": "Stationary Point",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "A point where the gradient is the zero vector is called a stationary point."
+          ]
+        },
+        {
+          "id": "taylor_approximation",
+          "name": "Taylor Approximation",
+          "type": "Method",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "Taylor approximation describes the local behavior of a differentiable function near a point."
+          ]
+        },
+        {
+          "id": "first_order_taylor_formula",
+          "name": "First-order Taylor Approximation Formula",
+          "type": "Formula",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "f(a+h) \\approx f(a) + \\nabla f(a)\\cdot h."
+          ]
+        },
+        {
+          "id": "hessian_matrix",
+          "name": "Hessian Matrix",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [
+            "Hessian"
+          ],
+          "source_spans": [
+            "For twice differentiable functions, a second-order approximation also includes the Hessian matrix, which describes local curvature."
+          ]
+        }
+      ]
+    },
+    {
+      "lecture_id": "linear_algebra_001",
+      "path": "benchmark/lectures/development/linear_algebra_001.md",
+      "objects": [
+        {
+          "id": "vector_space",
+          "name": "Vector Space",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "A vector space is a set of objects called vectors that can be added together and multiplied by scalars while satisfying the vector space axioms."
+          ]
+        },
+        {
+          "id": "basis",
+          "name": "Basis",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "A basis is a set of independent vectors that can represent every vector in the space through linear combinations."
+          ]
+        },
+        {
+          "id": "dimension",
+          "name": "Dimension",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "The number of vectors in a basis is the dimension of the vector space."
+          ]
+        },
+        {
+          "id": "matrix",
+          "name": "Matrix",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [
+            "matrices"
+          ],
+          "source_spans": [
+            "A matrix is a rectangular array of numbers that can represent a linear transformation once bases have been chosen for the input and output spaces."
+          ]
+        },
+        {
+          "id": "linear_transformation",
+          "name": "Linear Transformation",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "Matrix multiplication corresponds to composing linear transformations, and changing a basis changes the matrix representation without changing the underlying transformation."
+          ]
+        },
+        {
+          "id": "matrix_multiplication",
+          "name": "Matrix Multiplication",
+          "type": "Concept",
+          "category": "optional",
+          "aliases": [],
+          "source_spans": [
+            "Matrix multiplication corresponds to composing linear transformations"
+          ]
+        },
+        {
+          "id": "eigenvector",
+          "name": "Eigenvector",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "For a square matrix \\(A\\), an eigenvector is a nonzero vector \\(v\\) whose direction is preserved by the transformation represented by \\(A\\)."
+          ]
+        },
+        {
+          "id": "eigenvalue",
+          "name": "Eigenvalue",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "The corresponding eigenvalue \\(\\lambda\\) satisfies"
+          ]
+        },
+        {
+          "id": "eigenvalue_equation",
+          "name": "Eigenvalue Equation",
+          "type": "Formula",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "Av = \\lambda v."
+          ]
+        },
+        {
+          "id": "characteristic_polynomial",
+          "name": "Characteristic Polynomial",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "Eigenvalues are connected to the characteristic polynomial \\(\\det(\\lambda I - A)\\)."
+          ]
+        }
+      ]
+    },
+    {
+      "lecture_id": "optimisation_001",
+      "path": "benchmark/lectures/development/optimisation_001.md",
+      "objects": [
+        {
+          "id": "objective_function",
+          "name": "Objective Function",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "In mathematical optimisation, an objective function assigns a real value to each feasible input."
+          ]
+        },
+        {
+          "id": "optimisation_problem",
+          "name": "Optimisation Problem",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "An optimisation problem asks for an input that makes the objective function as small or as large as possible."
+          ]
+        },
+        {
+          "id": "unconstrained_minimisation_problem",
+          "name": "Unconstrained Minimisation Problem",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "In an unconstrained minimisation problem, the feasible inputs are usually all points in a space such as \\(\\mathbb{R}^n\\), and the goal is to minimise a differentiable function \\(f(x)\\)."
+          ]
+        },
+        {
+          "id": "gradient",
+          "name": "Gradient",
+          "type": "Concept",
+          "category": "optional",
+          "aliases": [],
+          "source_spans": [
+            "the gradient \\(\\nabla f(x)\\) describes local change"
+          ]
+        },
+        {
+          "id": "descent_direction",
+          "name": "Descent Direction",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "The negative gradient \\(-\\nabla f(x)\\) is a descent direction because it points toward the direction of steepest local decrease."
+          ]
+        },
+        {
+          "id": "gradient_descent",
+          "name": "Gradient Descent",
+          "type": "Method",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "Gradient descent is a first-order iterative method that repeatedly moves in this direction:"
+          ]
+        },
+        {
+          "id": "gradient_descent_update",
+          "name": "Gradient Descent Update",
+          "type": "Formula",
+          "category": "required",
+          "aliases": [
+            "Gradient Descent Update Formula"
+          ],
+          "source_spans": [
+            "x_{k+1} = x_k - \\alpha_k \\nabla f(x_k)."
+          ]
+        },
+        {
+          "id": "step_size",
+          "name": "Step Size",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "The scalar \\(\\alpha_k\\) is the step size."
+          ]
+        },
+        {
+          "id": "line_search",
+          "name": "Line Search",
+          "type": "Method",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "A line search is a method for choosing a step size that gives sufficient decrease in the objective function."
+          ]
+        },
+        {
+          "id": "convex_function",
+          "name": "Convex Function",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [
+            "convex functions"
+          ],
+          "source_spans": [
+            "For convex functions, every local minimum is also a global minimum."
+          ]
+        },
+        {
+          "id": "stationary_point",
+          "name": "Stationary Point",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "A stationary point is a point where the gradient is zero."
+          ]
+        }
+      ]
+    },
+    {
+      "lecture_id": "calculus_002",
+      "path": "benchmark/lectures/holdout/calculus_002.md",
+      "objects": [
+        {
+          "id": "composite_function",
+          "name": "Composite Function",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "The composite function \\(h = f \\circ g\\) maps an input \\(x \\in \\mathbb{R}^m\\) to \\(f(g(x))\\)."
+          ]
+        },
+        {
+          "id": "chain_rule",
+          "name": "Chain Rule",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [
+            "multivariable chain rule"
+          ],
+          "source_spans": [
+            "The chain rule describes how the derivative of the composite function depends on the derivatives of \\(f\\) and \\(g\\)."
+          ]
+        },
+        {
+          "id": "jacobian_matrix",
+          "name": "Jacobian Matrix",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [
+            "Jacobian"
+          ],
+          "source_spans": [
+            "the Jacobian matrix \\(J_g(x)\\) collects all first-order partial derivatives of the output components of \\(g\\)"
+          ]
+        },
+        {
+          "id": "local_linear_approximation",
+          "name": "Local Linear Approximation",
+          "type": "Concept",
+          "category": "optional",
+          "aliases": [],
+          "source_spans": [
+            "It gives the best local linear approximation to \\(g\\) near \\(x\\)."
+          ]
+        },
+        {
+          "id": "multivariable_chain_rule_formula",
+          "name": "Multivariable Chain Rule Formula",
+          "type": "Formula",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "\\nabla h(x) = J_g(x)^\\top \\nabla f(g(x))."
+          ]
+        },
+        {
+          "id": "gradient",
+          "name": "Gradient",
+          "type": "Concept",
+          "category": "optional",
+          "aliases": [
+            "gradients"
+          ],
+          "source_spans": [
+            "This formula shows how gradients and Jacobian matrices work together."
+          ]
+        }
+      ]
+    },
+    {
+      "lecture_id": "linear_algebra_002",
+      "path": "benchmark/lectures/holdout/linear_algebra_002.md",
+      "objects": [
+        {
+          "id": "inner_product",
+          "name": "Inner Product",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "An inner product is an operation that takes two vectors and returns a scalar."
+          ]
+        },
+        {
+          "id": "dot_product",
+          "name": "Dot Product",
+          "type": "Concept",
+          "category": "optional",
+          "aliases": [],
+          "source_spans": [
+            "In Euclidean space, the standard inner product is the dot product."
+          ]
+        },
+        {
+          "id": "orthogonal_vectors",
+          "name": "Orthogonal Vectors",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "Two vectors are orthogonal when their inner product is zero."
+          ]
+        },
+        {
+          "id": "orthogonal_projection",
+          "name": "Orthogonal Projection",
+          "type": "Method",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "Orthogonal projection is a method for finding the closest point in a subspace to a given vector."
+          ]
+        },
+        {
+          "id": "projection_formula",
+          "name": "Projection Formula",
+          "type": "Formula",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "\\operatorname{proj}_u(v) = \\frac{v \\cdot u}{u \\cdot u}u."
+          ]
+        },
+        {
+          "id": "least_squares_problem",
+          "name": "Least Squares Problem",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [
+            "least squares problems"
+          ],
+          "source_spans": [
+            "the least squares problem asks for a vector \\(x\\) that minimizes \\(\\|Ax-b\\|^2\\)."
+          ]
+        },
+        {
+          "id": "normal_equations",
+          "name": "Normal Equations",
+          "type": "Formula",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "A^\\top A x = A^\\top b."
+          ]
+        },
+        {
+          "id": "subspace",
+          "name": "Subspace",
+          "type": "Concept",
+          "category": "optional",
+          "aliases": [],
+          "source_spans": [
+            "the closest point in a subspace to a given vector"
+          ]
+        }
+      ]
+    },
+    {
+      "lecture_id": "probability_001",
+      "path": "benchmark/lectures/holdout/probability_001.md",
+      "objects": [
+        {
+          "id": "random_variable",
+          "name": "Random Variable",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "A random variable is a function that assigns a numerical value to each outcome of a random experiment."
+          ]
+        },
+        {
+          "id": "probability_distribution",
+          "name": "Probability Distribution",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "The probability distribution of a random variable describes how probability is assigned to its possible values."
+          ]
+        },
+        {
+          "id": "expected_value",
+          "name": "Expected Value",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [
+            "expectation"
+          ],
+          "source_spans": [
+            "The expected value of a random variable is a weighted average of its possible values."
+          ]
+        },
+        {
+          "id": "expected_value_formula",
+          "name": "Expected Value Formula",
+          "type": "Formula",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "\\mathbb{E}[X] = \\sum_x x P(X=x)."
+          ]
+        },
+        {
+          "id": "variance",
+          "name": "Variance",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "Variance measures how far a random variable typically is from its expected value."
+          ]
+        },
+        {
+          "id": "variance_formula",
+          "name": "Variance Formula",
+          "type": "Formula",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "\\operatorname{Var}(X) = \\mathbb{E}[(X-\\mathbb{E}[X])^2]."
+          ]
+        },
+        {
+          "id": "conditional_probability",
+          "name": "Conditional Probability",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "Conditional probability measures the probability of an event given that another event has occurred."
+          ]
+        },
+        {
+          "id": "conditional_probability_formula",
+          "name": "Conditional Probability Formula",
+          "type": "Formula",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "P(A \\mid B) = \\frac{P(A \\cap B)}{P(B)}."
+          ]
+        },
+        {
+          "id": "bayes_rule",
+          "name": "Bayes' Rule",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [
+            "Bayes rule",
+            "Bayes' theorem"
+          ],
+          "source_spans": [
+            "Bayes' rule rewrites conditional probability in a form that is useful for updating beliefs:"
+          ]
+        },
+        {
+          "id": "bayes_rule_formula",
+          "name": "Bayes' Rule Formula",
+          "type": "Formula",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "P(A \\mid B) = \\frac{P(B \\mid A)P(A)}{P(B)}."
+          ]
+        },
+        {
+          "id": "event",
+          "name": "Event",
+          "type": "Concept",
+          "category": "optional",
+          "aliases": [
+            "events"
+          ],
+          "source_spans": [
+            "the probability of an event given that another event has occurred"
+          ]
+        }
+      ]
+    }
+  ]
+}

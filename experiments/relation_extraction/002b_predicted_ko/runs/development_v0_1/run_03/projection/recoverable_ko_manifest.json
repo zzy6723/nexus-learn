@@ -1,0 +1,641 @@
+{
+  "alignment_sha256": "6d6a587c4e9b96510367d024f96dee3408c4b74433f8db4695abe41cf1fb2681",
+  "artifact_type": "recoverable_ko_manifest",
+  "derivation_version": "predicted_ko_projection_v0_1",
+  "pair_manifest_sha256": "85370b44573760f6b37aeed7b7abd571fb2e16a11cca08b61178fd3673d127ed",
+  "slots": [
+    {
+      "oracle_ref": {
+        "ko_id": "directional_derivative",
+        "lecture_id": "calculus_001"
+      },
+      "predicted_ref": {
+        "ko_id": "directional_derivative",
+        "lecture_id": "calculus_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_002"
+      ],
+      "slot_id": "ko_slot_001"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "first_order_taylor_formula",
+        "lecture_id": "calculus_001"
+      },
+      "predicted_ref": {
+        "ko_id": "first_order_taylor_approximation",
+        "lecture_id": "calculus_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_004"
+      ],
+      "slot_id": "ko_slot_002"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "gradient",
+        "lecture_id": "calculus_001"
+      },
+      "predicted_ref": {
+        "ko_id": "gradient",
+        "lecture_id": "calculus_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_001",
+        "rel_dev_002",
+        "rel_dev_003"
+      ],
+      "slot_id": "ko_slot_003"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "hessian_matrix",
+        "lecture_id": "calculus_001"
+      },
+      "predicted_ref": {
+        "ko_id": "hessian_matrix",
+        "lecture_id": "calculus_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_035"
+      ],
+      "slot_id": "ko_slot_004"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "partial_derivative",
+        "lecture_id": "calculus_001"
+      },
+      "predicted_ref": {
+        "ko_id": "partial_derivative",
+        "lecture_id": "calculus_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_001"
+      ],
+      "slot_id": "ko_slot_005"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "stationary_point",
+        "lecture_id": "calculus_001"
+      },
+      "predicted_ref": {
+        "ko_id": "stationary_point",
+        "lecture_id": "calculus_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_003",
+        "rel_dev_035"
+      ],
+      "slot_id": "ko_slot_006"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "taylor_approximation",
+        "lecture_id": "calculus_001"
+      },
+      "predicted_ref": {
+        "ko_id": "taylor_approximation",
+        "lecture_id": "calculus_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_004"
+      ],
+      "slot_id": "ko_slot_007"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "chain_rule",
+        "lecture_id": "calculus_002"
+      },
+      "predicted_ref": {
+        "ko_id": "chain_rule",
+        "lecture_id": "calculus_002"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_015",
+        "rel_dev_016"
+      ],
+      "slot_id": "ko_slot_008"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "composite_function",
+        "lecture_id": "calculus_002"
+      },
+      "predicted_ref": {
+        "ko_id": "composite_function",
+        "lecture_id": "calculus_002"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_015"
+      ],
+      "slot_id": "ko_slot_009"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "jacobian_matrix",
+        "lecture_id": "calculus_002"
+      },
+      "predicted_ref": {
+        "ko_id": "jacobian_matrix",
+        "lecture_id": "calculus_002"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_017"
+      ],
+      "slot_id": "ko_slot_010"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "multivariable_chain_rule_formula",
+        "lecture_id": "calculus_002"
+      },
+      "predicted_ref": {
+        "ko_id": "multivariable_chain_rule_formula",
+        "lecture_id": "calculus_002"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_016",
+        "rel_dev_017"
+      ],
+      "slot_id": "ko_slot_011"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "basis",
+        "lecture_id": "linear_algebra_001"
+      },
+      "predicted_ref": {
+        "ko_id": "basis",
+        "lecture_id": "linear_algebra_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_005",
+        "rel_dev_006",
+        "rel_dev_031",
+        "rel_dev_036"
+      ],
+      "slot_id": "ko_slot_012"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "dimension",
+        "lecture_id": "linear_algebra_001"
+      },
+      "predicted_ref": {
+        "ko_id": "dimension",
+        "lecture_id": "linear_algebra_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_006"
+      ],
+      "slot_id": "ko_slot_013"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "eigenvalue",
+        "lecture_id": "linear_algebra_001"
+      },
+      "predicted_ref": {
+        "ko_id": "eigenvalue",
+        "lecture_id": "linear_algebra_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_009"
+      ],
+      "slot_id": "ko_slot_014"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "eigenvalue_equation",
+        "lecture_id": "linear_algebra_001"
+      },
+      "predicted_ref": {
+        "ko_id": "eigenvalue_equation",
+        "lecture_id": "linear_algebra_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_009",
+        "rel_dev_033",
+        "rel_dev_036"
+      ],
+      "slot_id": "ko_slot_015"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "linear_transformation",
+        "lecture_id": "linear_algebra_001"
+      },
+      "predicted_ref": {
+        "ko_id": "linear_transformation",
+        "lecture_id": "linear_algebra_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_007"
+      ],
+      "slot_id": "ko_slot_016"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "matrix",
+        "lecture_id": "linear_algebra_001"
+      },
+      "predicted_ref": {
+        "ko_id": "matrix",
+        "lecture_id": "linear_algebra_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_007"
+      ],
+      "slot_id": "ko_slot_017"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "vector_space",
+        "lecture_id": "linear_algebra_001"
+      },
+      "predicted_ref": {
+        "ko_id": "vector_space",
+        "lecture_id": "linear_algebra_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_005"
+      ],
+      "slot_id": "ko_slot_018"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "dot_product",
+        "lecture_id": "linear_algebra_002"
+      },
+      "predicted_ref": {
+        "ko_id": "dot_product",
+        "lecture_id": "linear_algebra_002"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_038"
+      ],
+      "slot_id": "ko_slot_019"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "inner_product",
+        "lecture_id": "linear_algebra_002"
+      },
+      "predicted_ref": {
+        "ko_id": "inner_product",
+        "lecture_id": "linear_algebra_002"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_018"
+      ],
+      "slot_id": "ko_slot_020"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "least_squares_problem",
+        "lecture_id": "linear_algebra_002"
+      },
+      "predicted_ref": {
+        "ko_id": "least_squares_problem",
+        "lecture_id": "linear_algebra_002"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_020",
+        "rel_dev_021"
+      ],
+      "slot_id": "ko_slot_021"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "normal_equations",
+        "lecture_id": "linear_algebra_002"
+      },
+      "predicted_ref": {
+        "ko_id": "normal_equations",
+        "lecture_id": "linear_algebra_002"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_021",
+        "rel_dev_038"
+      ],
+      "slot_id": "ko_slot_022"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "orthogonal_projection",
+        "lecture_id": "linear_algebra_002"
+      },
+      "predicted_ref": {
+        "ko_id": "orthogonal_projection",
+        "lecture_id": "linear_algebra_002"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_019",
+        "rel_dev_020",
+        "rel_dev_030"
+      ],
+      "slot_id": "ko_slot_023"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "orthogonal_vectors",
+        "lecture_id": "linear_algebra_002"
+      },
+      "predicted_ref": {
+        "ko_id": "orthogonal_vectors",
+        "lecture_id": "linear_algebra_002"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_018"
+      ],
+      "slot_id": "ko_slot_024"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "projection_formula",
+        "lecture_id": "linear_algebra_002"
+      },
+      "predicted_ref": {
+        "ko_id": "projection_formula",
+        "lecture_id": "linear_algebra_002"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_019"
+      ],
+      "slot_id": "ko_slot_025"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "convex_function",
+        "lecture_id": "optimisation_001"
+      },
+      "predicted_ref": {
+        "ko_id": "convex_function",
+        "lecture_id": "optimisation_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_040"
+      ],
+      "slot_id": "ko_slot_026"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "gradient",
+        "lecture_id": "optimisation_001"
+      },
+      "predicted_ref": {
+        "ko_id": "gradient",
+        "lecture_id": "optimisation_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_012"
+      ],
+      "slot_id": "ko_slot_027"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "gradient_descent",
+        "lecture_id": "optimisation_001"
+      },
+      "predicted_ref": {
+        "ko_id": "gradient_descent",
+        "lecture_id": "optimisation_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_012",
+        "rel_dev_013",
+        "rel_dev_014"
+      ],
+      "slot_id": "ko_slot_028"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "gradient_descent_update",
+        "lecture_id": "optimisation_001"
+      },
+      "predicted_ref": {
+        "ko_id": "gradient_descent_update",
+        "lecture_id": "optimisation_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_013"
+      ],
+      "slot_id": "ko_slot_029"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "line_search",
+        "lecture_id": "optimisation_001"
+      },
+      "predicted_ref": {
+        "ko_id": "line_search",
+        "lecture_id": "optimisation_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_032",
+        "rel_dev_040"
+      ],
+      "slot_id": "ko_slot_030"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "objective_function",
+        "lecture_id": "optimisation_001"
+      },
+      "predicted_ref": {
+        "ko_id": "objective_function",
+        "lecture_id": "optimisation_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_010"
+      ],
+      "slot_id": "ko_slot_031"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "optimisation_problem",
+        "lecture_id": "optimisation_001"
+      },
+      "predicted_ref": {
+        "ko_id": "optimisation_problem",
+        "lecture_id": "optimisation_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_010",
+        "rel_dev_011"
+      ],
+      "slot_id": "ko_slot_032"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "step_size",
+        "lecture_id": "optimisation_001"
+      },
+      "predicted_ref": {
+        "ko_id": "step_size",
+        "lecture_id": "optimisation_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_014"
+      ],
+      "slot_id": "ko_slot_033"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "unconstrained_minimisation_problem",
+        "lecture_id": "optimisation_001"
+      },
+      "predicted_ref": {
+        "ko_id": "unconstrained_minimisation_problem",
+        "lecture_id": "optimisation_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_011"
+      ],
+      "slot_id": "ko_slot_034"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "bayes_rule",
+        "lecture_id": "probability_001"
+      },
+      "predicted_ref": {
+        "ko_id": "bayes_rule",
+        "lecture_id": "probability_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_028",
+        "rel_dev_032",
+        "rel_dev_039"
+      ],
+      "slot_id": "ko_slot_035"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "conditional_probability",
+        "lecture_id": "probability_001"
+      },
+      "predicted_ref": {
+        "ko_id": "conditional_probability",
+        "lecture_id": "probability_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_027",
+        "rel_dev_028",
+        "rel_dev_031"
+      ],
+      "slot_id": "ko_slot_036"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "conditional_probability_formula",
+        "lecture_id": "probability_001"
+      },
+      "predicted_ref": {
+        "ko_id": "conditional_probability_formula",
+        "lecture_id": "probability_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_027"
+      ],
+      "slot_id": "ko_slot_037"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "expected_value",
+        "lecture_id": "probability_001"
+      },
+      "predicted_ref": {
+        "ko_id": "expected_value",
+        "lecture_id": "probability_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_023",
+        "rel_dev_024",
+        "rel_dev_025"
+      ],
+      "slot_id": "ko_slot_038"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "expected_value_formula",
+        "lecture_id": "probability_001"
+      },
+      "predicted_ref": {
+        "ko_id": "expected_value_formula",
+        "lecture_id": "probability_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_024",
+        "rel_dev_033",
+        "rel_dev_039"
+      ],
+      "slot_id": "ko_slot_039"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "probability_distribution",
+        "lecture_id": "probability_001"
+      },
+      "predicted_ref": {
+        "ko_id": "probability_distribution",
+        "lecture_id": "probability_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_022"
+      ],
+      "slot_id": "ko_slot_040"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "random_variable",
+        "lecture_id": "probability_001"
+      },
+      "predicted_ref": {
+        "ko_id": "random_variable",
+        "lecture_id": "probability_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_022",
+        "rel_dev_023"
+      ],
+      "slot_id": "ko_slot_041"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "variance",
+        "lecture_id": "probability_001"
+      },
+      "predicted_ref": {
+        "ko_id": "variance",
+        "lecture_id": "probability_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_025",
+        "rel_dev_026",
+        "rel_dev_030"
+      ],
+      "slot_id": "ko_slot_042"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "variance_formula",
+        "lecture_id": "probability_001"
+      },
+      "predicted_ref": {
+        "ko_id": "variance_formula",
+        "lecture_id": "probability_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_dev_026"
+      ],
+      "slot_id": "ko_slot_043"
+    }
+  ],
+  "split": "development",
+  "version": "v0.1"
+}
