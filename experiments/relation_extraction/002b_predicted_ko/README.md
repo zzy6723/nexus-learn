@@ -1,7 +1,7 @@
 # Experiment 002B-1: Predicted-KO Relation Classification
 
 **Subtitle:** Controlled Error Propagation from Entity Extraction to Relation Classification
-**Status:** Synthetic Steps 4.0-4.4 complete; real-development execution bridges implemented; formal run pending
+**Status:** Development feasibility gate passed; repository-level locked-reuse freeze pending
 **Created:** 2026-07-14
 
 ---
@@ -232,6 +232,7 @@ Locked reuse evaluation:
 experiments/relation_extraction/002b_predicted_ko/
 ├── README.md
 ├── input_contract_audit.md
+├── development_results.md
 ├── conclusion.md
 └── runs/
     ├── development_v0_1/
@@ -418,11 +419,11 @@ three manifest-bound reruns without modifying `source_manifest.json`:
 
 ```bash
 python3 scripts/finalize_entity_prediction_bundle.py \
-  --execution-manifest experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_02/execution_manifest.json
+  --execution-manifest experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/execution_manifest.json
 ```
 
 Success writes `entity_source_bundle.json` followed by the validity marker
-`entity_predictions_complete.json` under `run_02/entity_predictions/`. Both are
+`entity_predictions_complete.json` under `run_03/entity_predictions/`. Both are
 no-overwrite artifacts. Normalization must not begin until the marker status is
 `final` with six lectures, three reused artifacts, and three new reruns.
 
@@ -496,17 +497,21 @@ Completed:
   stale-manifest, and fixed-artifact-directory checks;
 - immutable six-lecture Entity source-bundle finalization with direct
   raw/rendered/parsed/metadata revalidation and a hash-bound completion marker;
+- final real-development `run_03`, including Entity execution, Relation-blind
+  alignment adjudication, 36-pair A-prime/B-prime matched runs, final Relation
+  evaluation snapshots, and final pipeline composition;
 - full regression suite: 91 tests passing across the synthetic pipeline and
   real-execution bridges. The frozen development Relation
   ground truth remains 41 total pairs, 38 primary pairs, and 3 diagnostic pairs.
 
 Pending:
 
-- real-development preflight execution and three required Entity reruns;
-- alignment adjudication;
-- matched A-prime/B-prime development runs;
-- development error analysis and method freeze;
+- user-managed repository-level method freeze;
+- locked reuse preflight and execution;
 - locked reuse evaluation.
 
-No API run has been performed for Experiment 002B-1. Step 4.4 validation used
-only synthetic fixtures and mocked or predeclared evaluator artifacts.
+Real development execution completed under `development_v0_1/run_03`.
+Entity extraction, alignment adjudication, matched A-prime/B-prime API runs,
+Relation evaluation, and final pipeline evaluation are complete. The
+development feasibility gate passed with an Evidence exact-span compliance
+caveat. See `development_results.md` and `conclusion.md`.
