@@ -241,6 +241,8 @@ experiments/relation_extraction/002b_predicted_ko/
     │       ├── lecture_inventory.json
     │       ├── entity_predictions/
     │       │   ├── source_manifest.json
+    │       │   ├── entity_source_bundle.json
+    │       │   ├── entity_predictions_complete.json
     │       │   ├── rendered_inputs/
     │       │   ├── raw_responses/
     │       │   ├── output/
@@ -272,6 +274,7 @@ Planned implementation components:
 - `scripts/project_recoverable_relation_pairs.py` - implemented;
 - `scripts/evaluate_predicted_ko_relation_pipeline.py` - implemented;
 - `scripts/prepare_predicted_ko_relation_run.py` - implemented;
+- `scripts/finalize_entity_prediction_bundle.py` - implemented;
 - `scripts/finalize_relation_evaluation_bundle.py` - implemented;
 - matched-input support in `scripts/run_relation_extraction.py` - implemented.
 
@@ -385,6 +388,44 @@ dry-runs in the formal directory, and records the execution-manifest and
 source-manifest hashes in each lecture metadata file. Validate one lecture's
 output, raw response, rendered input, and metadata before starting the next.
 
+The actual success fields are:
+
+```text
+run_status = completed
+request_success = true
+json_parse_success = true
+prediction_schema_valid = true
+finish_reason = stop
+git_commit_at_start = execution_binding.method_commit
+git_dirty_at_start = false
+retry_count = 0
+repair_status = not_attempted
+```
+
+There is no request `stop` parameter, `git_dirty_at_end`, `execution_status`, or
+`parse_status` field in the current Entity metadata contract.
+
+If a formal request fails, preserve that run unchanged. The current runner does
+not implement mutable attempt slots inside one run, so do not delete its failure
+artifacts or retry with `--overwrite`. Prepare a new run ID and, when useful,
+pass the previous run's `entity_predictions/` as an audited
+`--entity-source-run`; compatible successful artifacts can then be reused while
+failed or incomplete lectures remain in the new rerun plan.
+
+After all three reruns pass, finalize the six-lecture source bundle before
+normalization. This validates both the three copied historical artifacts and the
+three manifest-bound reruns without modifying `source_manifest.json`:
+
+```bash
+python3 scripts/finalize_entity_prediction_bundle.py \
+  --execution-manifest experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_02/execution_manifest.json
+```
+
+Success writes `entity_source_bundle.json` followed by the validity marker
+`entity_predictions_complete.json` under `run_02/entity_predictions/`. Both are
+no-overwrite artifacts. Normalization must not begin until the marker status is
+`final` with six lectures, three reused artifacts, and three new reruns.
+
 After final alignment and projection, the Relation runner must consume the
 frozen input artifact directly. It must not reconstruct B-prime KO content from
 the evaluator-facing matched ground truth:
@@ -453,7 +494,9 @@ Completed:
 - repository-verified preflight and manifest-bound Entity rerun guards,
   including exact-HEAD, clean-state, tracked-content, frozen-configuration,
   stale-manifest, and fixed-artifact-directory checks;
-- full regression suite: 88 tests passing across the synthetic pipeline and
+- immutable six-lecture Entity source-bundle finalization with direct
+  raw/rendered/parsed/metadata revalidation and a hash-bound completion marker;
+- full regression suite: 91 tests passing across the synthetic pipeline and
   real-execution bridges. The frozen development Relation
   ground truth remains 41 total pairs, 38 primary pairs, and 3 diagnostic pairs.
 

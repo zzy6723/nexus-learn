@@ -88,6 +88,23 @@ undeclared lecture, prompt or runner hash drift, request-parameter drift, and
 artifact-directory overrides. Its metadata binds the exact execution and source
 manifest snapshots used at request time.
 
+The preflight source manifest is an immutable plan and is never rewritten after
+the reruns. Once all planned Entity artifacts exist, the frozen finalizer writes:
+
+```text
+entity_predictions/entity_source_bundle.json
+entity_predictions/entity_predictions_complete.json
+```
+
+The finalizer directly revalidates all six parsed outputs, raw responses,
+rendered requests, metadata records, lecture and prompt hashes, and the raw-to-
+parsed content equivalence. Reused items must retain the exact artifact hashes
+recorded by the source plan. New reruns must additionally have a completed
+schema-valid status, clean matching commit, zero retry/repair state, and an exact
+execution/source-manifest binding. The completion marker is written last and
+binds the immutable plan, final source bundle, per-lecture artifact set, counts,
+and method commit. Both outputs are no-overwrite artifacts.
+
 ---
 
 # Reference Types

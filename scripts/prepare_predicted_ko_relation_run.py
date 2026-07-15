@@ -49,6 +49,7 @@ DEFAULT_ENTITY_SOURCE_RUNS = [
 DEFAULT_IMPLEMENTATION_FILES = [
     ROOT / "scripts" / "prepare_predicted_ko_relation_run.py",
     ROOT / "scripts" / "run_entity_extraction.py",
+    ROOT / "scripts" / "finalize_entity_prediction_bundle.py",
     ROOT / "scripts" / "knowledge_object_matching.py",
     ROOT / "scripts" / "normalize_predicted_kos.py",
     ROOT / "scripts" / "align_predicted_kos.py",
