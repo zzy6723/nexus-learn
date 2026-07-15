@@ -1,7 +1,7 @@
 # Experiment 002B-1: Predicted-KO Relation Classification
 
 **Subtitle:** Controlled Error Propagation from Entity Extraction to Relation Classification
-**Status:** Development feasibility gate passed; repository-level locked-reuse freeze pending
+**Status:** Development gate passed; locked-reuse v0.1 stopped on repeated schema failure; v0.2 candidate-scoped revision implemented
 **Created:** 2026-07-14
 
 ---
@@ -227,6 +227,20 @@ Locked reuse evaluation:
 The executable preflight gate, scope binding, expected reruns, and refreeze
 requirement are recorded in `locked_reuse_preflight.md`.
 
+Locked reuse execution revision:
+
+- `locked_reuse_v0_1` remains an immutable record of two schema-invalid
+  A-prime attempts; B-prime was not run;
+- `locked_reuse_v0_2` reuses the same previously evaluated lectures and upstream
+  extraction method but partitions Relation requests one candidate pair at a
+  time;
+- v0.2 is a method-revision diagnostic, not a restored unseen-holdout claim;
+- the Relation prompt, Relation schema, endpoint validator, pair set, pair
+  order, and evaluator remain unchanged.
+
+See `locked_reuse_v0_1_failure.md` and
+`candidate_scoped_execution_v0_2.md`.
+
 ---
 
 # Planned Artifacts
@@ -261,7 +275,8 @@ experiments/relation_extraction/002b_predicted_ko/
     │       │   ├── A_prime/
     │       │   └── B_prime/
     │       └── pipeline_evaluation/
-    └── locked_reuse_v0_1/
+    ├── locked_reuse_v0_1/
+    └── locked_reuse_v0_2/
 ```
 
 Protocol extensions:
@@ -281,6 +296,8 @@ Planned implementation components:
 - `scripts/finalize_entity_prediction_bundle.py` - implemented;
 - `scripts/finalize_relation_evaluation_bundle.py` - implemented;
 - matched-input support in `scripts/run_relation_extraction.py` - implemented.
+- candidate-scoped request partitioning with atomic aggregate output in
+  `scripts/run_relation_extraction.py` - implemented.
 
 Step 4 implementation status:
 
@@ -380,6 +397,29 @@ and Relation input split `holdout`. The four Relation holdout lectures have no
 traceable prior Entity artifacts under the selected prompt, so the expected
 source plan is four reruns and zero reuses. See `locked_reuse_preflight.md` before
 creating the formal directory.
+
+The original `locked_reuse_v0_1` Relation stage did not complete. Both the
+formal A-prime request and one bounded retry changed the same endpoint for
+`rel_holdout_016`; B-prime was correctly blocked by the declared execution
+order. Do not create another v0.1 retry or score either failed bundle.
+
+The execution revision uses a new repository-frozen scope:
+
+```bash
+python3 scripts/prepare_predicted_ko_relation_run.py \
+  --method-commit <FROZEN_V0_2_METHOD_COMMIT> \
+  --execution-scope locked_reuse_v0_2 \
+  --relation-ground-truth benchmark/ground_truth/relations_holdout_v0_1.json \
+  --entity-source-run <locked_reuse_v0_1/run_01/entity_predictions> \
+  --run-dir experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01
+```
+
+The copied Entity artifacts must all pass the existing exact-content reuse
+audit. No Entity API request is expected. After deterministic normalization,
+alignment, adjudication, and projection are finalized, both Relation conditions
+must pass the same `execution_manifest.json` to the runner. That manifest fixes
+`one_candidate_pair_per_request_v0_1`; the runner rejects a dirty or different
+commit, stale completion markers, parameter drift, and `--overwrite`.
 
 The current historical artifacts are expected to resolve as follows:
 
@@ -520,16 +560,17 @@ Completed:
 - final real-development `run_03`, including Entity execution, Relation-blind
   alignment adjudication, 36-pair A-prime/B-prime matched runs, final Relation
   evaluation snapshots, and final pipeline composition;
-- full regression suite: 95 tests passing across the synthetic pipeline and
-  real-execution bridges. The frozen development Relation
+- full regression suite passing across the synthetic pipeline and
+  real-execution bridges, including candidate-scoped transport, all-reused
+  Entity finalization, atomic aggregate failure, and paired-plan integrity. The
+  frozen development Relation
   ground truth remains 41 total pairs, 38 primary pairs, and 3 diagnostic pairs.
 
 Pending:
 
-- user-managed repository-level refreeze containing the locked-reuse execution
-  bridge;
-- locked reuse preflight and execution;
-- locked reuse evaluation.
+- user-managed repository-level freeze for the candidate-scoped v0.2 method;
+- `locked_reuse_v0_2` preflight and deterministic upstream reconstruction;
+- candidate-scoped A-prime/B-prime execution and locked-reuse evaluation.
 
 Real development execution completed under `development_v0_1/run_03`.
 Entity extraction, alignment adjudication, matched A-prime/B-prime API runs,

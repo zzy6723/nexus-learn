@@ -104,6 +104,126 @@ class RelationRunnerTest(unittest.TestCase):
             )
         return projection_dir
 
+    def build_candidate_scoped_manifest(self, projection_dir: Path) -> Path:
+        projection_marker = {
+            "artifact_type": "predicted_ko_projection_bundle_complete",
+            "version": "v0.1",
+            "evaluation_status": "final",
+            "artifacts": {
+                path.name: runner.sha256_file(path)
+                for path in projection_dir.iterdir()
+                if path.is_file()
+            },
+        }
+        (projection_dir / "projection_bundle_complete.json").write_text(
+            json.dumps(projection_marker, indent=2) + "\n", encoding="utf-8"
+        )
+
+        manifest_dir = projection_dir.parent
+        entity_marker = {
+            "artifact_type": "entity_predictions_completion_marker",
+            "version": "v0.1",
+            "status": "final",
+            "method_commit": FREEZE_COMMIT,
+        }
+        entity_marker_path = (
+            manifest_dir
+            / "entity_predictions"
+            / "entity_predictions_complete.json"
+        )
+        entity_marker_path.parent.mkdir(parents=True)
+        entity_marker_path.write_text(
+            json.dumps(entity_marker, indent=2) + "\n", encoding="utf-8"
+        )
+
+        prompt_path = (
+            ROOT
+            / "experiments"
+            / "relation_extraction"
+            / "002_prompt_refinement"
+            / "prompt.md"
+        )
+        schema_path = ROOT / "docs" / "decisions" / "004-relation-schema.md"
+        runner_path = Path(runner.__file__).resolve()
+        manifest = {
+            "artifact_type": "predicted_ko_relation_execution_manifest",
+            "version": "v0.1",
+            "status": "prepared_entity_sources_complete",
+            "experiment": "002B-1",
+            "split": "locked_reuse_v0_2",
+            "method_commit": FREEZE_COMMIT,
+            "repository_state": {
+                "head_commit": FREEZE_COMMIT,
+                "worktree_clean": True,
+            },
+            "frozen_methods": {
+                "relation_prompt": {
+                    "path": runner.display_path(prompt_path),
+                    "sha256": runner.sha256_file(prompt_path),
+                },
+                "relation_schema": {
+                    "path": runner.display_path(schema_path),
+                    "sha256": runner.sha256_file(schema_path),
+                },
+                "implementation": [{
+                    "path": runner.display_path(runner_path),
+                    "sha256": runner.sha256_file(runner_path),
+                }],
+            },
+            "relation_execution": {
+                "provider": "deepseek",
+                "model": "deepseek-v4-flash",
+                "request_partitioning": (
+                    runner.CANDIDATE_SCOPED_PARTITIONING
+                ),
+                "request_parameters": {
+                    "temperature": 0.0,
+                    "top_p": 1.0,
+                    "max_tokens": 8192,
+                    "stream": False,
+                    "response_format": {"type": "json_object"},
+                    "thinking": {"type": "disabled"},
+                },
+                "matched_execution_order": ["A_prime", "B_prime"],
+            },
+            "benchmark": {"relation_split": "development"},
+        }
+        manifest_path = manifest_dir / "execution_manifest.json"
+        manifest_path.parent.mkdir(parents=True, exist_ok=True)
+        manifest_path.write_text(
+            json.dumps(manifest, indent=2) + "\n", encoding="utf-8"
+        )
+        entity_marker["execution_manifest_sha256"] = runner.sha256_file(
+            manifest_path
+        )
+        entity_marker_path.write_text(
+            json.dumps(entity_marker, indent=2) + "\n", encoding="utf-8"
+        )
+        return manifest_path
+
+    def candidate_scoped_args(
+        self,
+        projection_dir: Path,
+        manifest_path: Path,
+        run_name: str,
+        *extra: str,
+    ) -> list[str]:
+        return [
+            "--experiment",
+            "002_prompt_refinement",
+            "--ground-truth",
+            str(projection_dir / "matched_relation_ground_truth.json"),
+            "--input-artifact",
+            str(projection_dir / "oracle_normalized_input.json"),
+            "--batch-plan",
+            str(projection_dir / "batch_plan.json"),
+            "--execution-manifest",
+            str(manifest_path),
+            "--run-dir",
+            str(self.temporary_root / run_name),
+            *extra,
+        ]
+
     @staticmethod
     def artifact_path(run_dir: Path, artifact_type: str, suffix: str = ".json") -> Path:
         return run_dir / artifact_type / f"{ARTIFACT_NAME}{suffix}"
@@ -263,6 +383,271 @@ class RelationRunnerTest(unittest.TestCase):
 
         self.assertEqual(return_code, 2)
         api_mock.assert_not_called()
+
+    def test_candidate_scoped_dry_run_renders_one_pair_per_request(self) -> None:
+        projection_dir = self.build_matched_projection()
+        manifest_path = self.build_candidate_scoped_manifest(projection_dir)
+        run_dir = self.temporary_root / "candidate_scoped_dry_run"
+
+        return_code, api_mock = self.invoke(
+            self.candidate_scoped_args(
+                projection_dir,
+                manifest_path,
+                "candidate_scoped_dry_run",
+                "--dry-run",
+            )
+        )
+
+        self.assertEqual(return_code, 0)
+        api_mock.assert_not_called()
+        plan = self.read_json(run_dir / "execution_batch_plan.json")
+        self.assertEqual(
+            plan["request_partitioning"],
+            runner.CANDIDATE_SCOPED_PARTITIONING,
+        )
+        self.assertGreater(plan["batch_count"], 1)
+        rendered_paths = sorted((run_dir / "rendered_inputs" / "pairs").glob("*.json"))
+        self.assertEqual(len(rendered_paths), plan["batch_count"])
+        for path in rendered_paths:
+            payload = self.read_json(path)
+            scoped_input = json.loads(payload["messages"][1]["content"])
+            self.assertEqual(len(scoped_input["candidate_pairs"]), 1)
+            self.assertEqual(len(scoped_input["knowledge_objects"]), 2)
+            pair = scoped_input["candidate_pairs"][0]
+            endpoint_lectures = {
+                pair["ko_a"]["lecture_id"],
+                pair["ko_b"]["lecture_id"],
+            }
+            self.assertEqual(
+                {lecture["lecture_id"] for lecture in scoped_input["lectures"]},
+                endpoint_lectures,
+            )
+        aggregate_metadata = self.read_json(
+            run_dir / "metadata" / "matched_relation_ground_truth.json"
+        )
+        self.assertEqual(aggregate_metadata["run_status"], "dry_run_complete")
+        self.assertEqual(
+            aggregate_metadata["input_counts"]["request_batches"],
+            plan["batch_count"],
+        )
+        self.assertFalse(
+            (run_dir / "output" / "matched_relation_ground_truth.json").exists()
+        )
+
+    def test_candidate_scoped_plan_is_identical_across_matched_conditions(self) -> None:
+        projection_dir = self.build_matched_projection()
+        ground_truth = runner.load_relation_ground_truth(
+            projection_dir / "matched_relation_ground_truth.json"
+        )
+        registry, lecture_paths, _ = runner.load_knowledge_object_registry(
+            ground_truth["knowledge_object_ground_truths"]
+        )
+        _, candidate_members, _ = runner.build_model_input(
+            ground_truth, registry, lecture_paths
+        )
+        oracle = self.read_json(
+            projection_dir / "oracle_normalized_input.json"
+        )["model_input"]
+        predicted = self.read_json(
+            projection_dir / "predicted_normalized_input.json"
+        )["model_input"]
+
+        oracle_plan, _ = runner.build_candidate_scoped_batches(
+            oracle, candidate_members
+        )
+        predicted_plan, _ = runner.build_candidate_scoped_batches(
+            predicted, candidate_members
+        )
+
+        self.assertEqual(oracle_plan, predicted_plan)
+
+    def test_candidate_scoped_dry_run_is_no_overwrite(self) -> None:
+        projection_dir = self.build_matched_projection()
+        manifest_path = self.build_candidate_scoped_manifest(projection_dir)
+        args = self.candidate_scoped_args(
+            projection_dir,
+            manifest_path,
+            "candidate_scoped_no_overwrite",
+            "--dry-run",
+        )
+
+        first_code, _ = self.invoke(args)
+        second_code, second_api_mock = self.invoke(args)
+
+        self.assertEqual(first_code, 0)
+        self.assertEqual(second_code, 2)
+        second_api_mock.assert_not_called()
+
+    def test_candidate_scoped_rejects_projection_outside_manifest_run(self) -> None:
+        projection_dir = self.build_matched_projection()
+        manifest_path = self.build_candidate_scoped_manifest(projection_dir)
+        external_dir = self.temporary_root / "external_projection"
+        external_dir.mkdir()
+        external_input = external_dir / "oracle_normalized_input.json"
+        external_input.write_bytes(
+            (projection_dir / "oracle_normalized_input.json").read_bytes()
+        )
+        args = self.candidate_scoped_args(
+            projection_dir,
+            manifest_path,
+            "candidate_scoped_external_projection",
+            "--dry-run",
+        )
+        args[args.index("--input-artifact") + 1] = str(external_input)
+
+        return_code, api_mock = self.invoke(args)
+
+        self.assertEqual(return_code, 2)
+        api_mock.assert_not_called()
+
+    def test_candidate_scoped_rejects_stale_entity_manifest_binding(self) -> None:
+        projection_dir = self.build_matched_projection()
+        manifest_path = self.build_candidate_scoped_manifest(projection_dir)
+        entity_marker_path = (
+            manifest_path.parent
+            / "entity_predictions"
+            / "entity_predictions_complete.json"
+        )
+        entity_marker = self.read_json(entity_marker_path)
+        entity_marker["execution_manifest_sha256"] = "0" * 64
+        entity_marker_path.write_text(
+            json.dumps(entity_marker, indent=2) + "\n", encoding="utf-8"
+        )
+
+        return_code, api_mock = self.invoke(
+            self.candidate_scoped_args(
+                projection_dir,
+                manifest_path,
+                "candidate_scoped_stale_entity_marker",
+                "--dry-run",
+            )
+        )
+
+        self.assertEqual(return_code, 2)
+        api_mock.assert_not_called()
+
+    def test_candidate_scoped_success_writes_atomic_aggregate(self) -> None:
+        projection_dir = self.build_matched_projection()
+        manifest_path = self.build_candidate_scoped_manifest(projection_dir)
+        run_dir = self.temporary_root / "candidate_scoped_success"
+
+        def fake_response(*, api_key: str, payload: dict[str, Any]) -> dict[str, Any]:
+            self.assertEqual(api_key, "test-key")
+            scoped_input = json.loads(payload["messages"][1]["content"])
+            self.assertEqual(len(scoped_input["candidate_pairs"]), 1)
+            pair = scoped_input["candidate_pairs"][0]
+            prediction = {
+                "pair_id": pair["pair_id"],
+                "source": pair["ko_a"],
+                "target": pair["ko_b"],
+                "relation_type": "NO_RELATION",
+                "evidence_spans": [],
+                "rationale": "Synthetic candidate-scoped prediction.",
+            }
+            return {
+                "id": f"request-{pair['pair_id']}",
+                "model": "synthetic-model",
+                "system_fingerprint": "synthetic-fingerprint",
+                "choices": [{
+                    "finish_reason": "stop",
+                    "message": {"content": json.dumps({"results": [prediction]})},
+                }],
+                "usage": {
+                    "prompt_tokens": 2,
+                    "completion_tokens": 1,
+                    "total_tokens": 3,
+                },
+            }
+
+        with (
+            mock.patch.dict(os.environ, {"DEEPSEEK_API_KEY": "test-key"}),
+            mock.patch.object(runner, "git_commit", return_value=FREEZE_COMMIT),
+            mock.patch.object(runner, "git_dirty", return_value=False),
+            mock.patch.object(runner, "call_deepseek", side_effect=fake_response) as api_mock,
+        ):
+            return_code = runner.main(
+                self.candidate_scoped_args(
+                    projection_dir,
+                    manifest_path,
+                    "candidate_scoped_success",
+                )
+            )
+
+        self.assertEqual(return_code, 0)
+        plan = self.read_json(run_dir / "execution_batch_plan.json")
+        self.assertEqual(api_mock.call_count, plan["batch_count"])
+        prediction = self.read_json(
+            run_dir / "output" / "matched_relation_ground_truth.json"
+        )
+        self.assertEqual(len(prediction["results"]), plan["batch_count"])
+        self.assertEqual(
+            [item["pair_id"] for item in prediction["results"]],
+            plan["pair_ids"],
+        )
+        metadata = self.read_json(
+            run_dir / "metadata" / "matched_relation_ground_truth.json"
+        )
+        self.assertEqual(metadata["run_status"], "completed")
+        self.assertTrue(metadata["prediction_schema_valid"])
+        self.assertEqual(metadata["batch_count"], metadata["completed_batch_count"])
+        self.assertEqual(len(metadata["batch_results"]), plan["batch_count"])
+        self.assertEqual(metadata["usage"]["request_count"], plan["batch_count"])
+
+    def test_candidate_scoped_endpoint_substitution_blocks_aggregate(self) -> None:
+        projection_dir = self.build_matched_projection()
+        manifest_path = self.build_candidate_scoped_manifest(projection_dir)
+        run_dir = self.temporary_root / "candidate_scoped_endpoint_failure"
+
+        def invalid_response(*, api_key: str, payload: dict[str, Any]) -> dict[str, Any]:
+            scoped_input = json.loads(payload["messages"][1]["content"])
+            pair = scoped_input["candidate_pairs"][0]
+            prediction = {
+                "pair_id": pair["pair_id"],
+                "source": {
+                    "lecture_id": pair["ko_a"]["lecture_id"],
+                    "ko_id": "ko_slot_999",
+                },
+                "target": pair["ko_b"],
+                "relation_type": "NO_RELATION",
+                "evidence_spans": [],
+                "rationale": "Synthetic endpoint substitution.",
+            }
+            return {
+                "id": "invalid-endpoint-request",
+                "model": "synthetic-model",
+                "choices": [{
+                    "finish_reason": "stop",
+                    "message": {"content": json.dumps({"results": [prediction]})},
+                }],
+                "usage": {"prompt_tokens": 1, "completion_tokens": 1},
+            }
+
+        with (
+            mock.patch.dict(os.environ, {"DEEPSEEK_API_KEY": "test-key"}),
+            mock.patch.object(runner, "git_commit", return_value=FREEZE_COMMIT),
+            mock.patch.object(runner, "git_dirty", return_value=False),
+            mock.patch.object(runner, "call_deepseek", side_effect=invalid_response),
+        ):
+            return_code = runner.main(
+                self.candidate_scoped_args(
+                    projection_dir,
+                    manifest_path,
+                    "candidate_scoped_endpoint_failure",
+                )
+            )
+
+        self.assertEqual(return_code, 1)
+        metadata = self.read_json(
+            run_dir / "metadata" / "matched_relation_ground_truth.json"
+        )
+        self.assertEqual(
+            metadata["run_status"], "candidate_prediction_schema_failed"
+        )
+        self.assertFalse(metadata["prediction_schema_valid"])
+        self.assertEqual(metadata["completed_batch_count"], 0)
+        self.assertFalse(
+            (run_dir / "output" / "matched_relation_ground_truth.json").exists()
+        )
 
     def test_no_overwrite_rejects_existing_artifacts(self) -> None:
         args = self.runner_args("no_overwrite", "--dry-run")

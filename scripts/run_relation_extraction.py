@@ -51,6 +51,12 @@ PAIR_ID_PATTERN = re.compile(r"rel_[a-z0-9]+_\d{3}")
 SAFE_COMPONENT_PATTERN = re.compile(r"[A-Za-z0-9._-]+")
 SLOT_ID_PATTERN = re.compile(r"ko_slot_\d{3}")
 MATCHED_CONDITIONS = {"A_prime", "B_prime"}
+SINGLE_REQUEST_PARTITIONING = "single_deterministic_batch_v0_1"
+CANDIDATE_SCOPED_PARTITIONING = "one_candidate_pair_per_request_v0_1"
+EXECUTION_PARTITIONINGS = {
+    SINGLE_REQUEST_PARTITIONING,
+    CANDIDATE_SCOPED_PARTITIONING,
+}
 MATCHED_INPUT_REQUIRED_KEYS = {
     "artifact_type",
     "version",
@@ -125,6 +131,13 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument(
         "--batch-plan",
         help="Frozen matched Relation batch plan; required with --input-artifact.",
+    )
+    parser.add_argument(
+        "--execution-manifest",
+        help=(
+            "Repository-frozen 002B-1 execution manifest. The locked_reuse_v0_2 "
+            "manifest activates candidate-scoped request partitioning."
+        ),
     )
     parser.add_argument(
         "--run-id",
@@ -598,6 +611,167 @@ def load_json_object(path: Path, *, label: str) -> dict[str, Any]:
     return value
 
 
+def validate_execution_manifest(
+    *,
+    manifest_path: Path,
+    relation_split: str,
+    prompt_path: Path,
+    schema_path: Path,
+    input_artifact_path: Path,
+    batch_plan_path: Path,
+    ground_truth_path: Path,
+    model: str,
+    temperature: float,
+    top_p: float,
+    max_tokens: int,
+    git_commit_at_start: str | None,
+    git_dirty_at_start: bool | None,
+) -> dict[str, Any]:
+    manifest = load_json_object(manifest_path, label="002B-1 execution manifest")
+    if (
+        manifest.get("artifact_type")
+        != "predicted_ko_relation_execution_manifest"
+        or manifest.get("version") != "v0.1"
+        or manifest.get("experiment") != "002B-1"
+    ):
+        raise RuntimeError("Unexpected 002B-1 execution manifest contract.")
+    if manifest.get("split") != "locked_reuse_v0_2":
+        raise RuntimeError(
+            "Candidate-scoped execution requires split locked_reuse_v0_2."
+        )
+
+    method_commit = manifest.get("method_commit")
+    repository_state = manifest.get("repository_state")
+    if (
+        not isinstance(method_commit, str)
+        or not isinstance(repository_state, dict)
+        or repository_state.get("head_commit") != method_commit
+        or repository_state.get("worktree_clean") is not True
+    ):
+        raise RuntimeError("Execution manifest repository state is not frozen.")
+    if git_commit_at_start != method_commit or git_dirty_at_start is not False:
+        raise RuntimeError(
+            "Candidate-scoped execution must start clean at the frozen method commit."
+        )
+
+    benchmark = manifest.get("benchmark")
+    if (
+        not isinstance(benchmark, dict)
+        or benchmark.get("relation_split") != relation_split
+    ):
+        raise RuntimeError("Execution manifest Relation split does not match the run.")
+
+    frozen_methods = manifest.get("frozen_methods")
+    if not isinstance(frozen_methods, dict):
+        raise RuntimeError("Execution manifest is missing frozen methods.")
+    expected_method_hashes = {
+        "relation_prompt": (prompt_path, sha256_file(prompt_path)),
+        "relation_schema": (schema_path, sha256_file(schema_path)),
+    }
+    for field, (path, expected_hash) in expected_method_hashes.items():
+        record = frozen_methods.get(field)
+        if (
+            not isinstance(record, dict)
+            or record.get("path") != display_path(path)
+            or record.get("sha256") != expected_hash
+        ):
+            raise RuntimeError(f"Execution manifest has stale {field}.")
+
+    implementation = frozen_methods.get("implementation")
+    runner_path = Path(__file__).resolve()
+    runner_records = [
+        record
+        for record in implementation
+        if isinstance(record, dict)
+        and isinstance(record.get("path"), str)
+        and resolve_path(record["path"], ROOT).resolve() == runner_path
+    ] if isinstance(implementation, list) else []
+    if (
+        len(runner_records) != 1
+        or runner_records[0].get("sha256") != sha256_file(runner_path)
+    ):
+        raise RuntimeError("Relation runner differs from the frozen method.")
+
+    execution = manifest.get("relation_execution")
+    expected_parameters = {
+        "temperature": temperature,
+        "top_p": top_p,
+        "max_tokens": max_tokens,
+        "stream": False,
+        "response_format": {"type": "json_object"},
+        "thinking": {"type": "disabled"},
+    }
+    if (
+        not isinstance(execution, dict)
+        or execution.get("provider") != PROVIDER
+        or execution.get("model") != model
+        or execution.get("request_parameters") != expected_parameters
+        or execution.get("request_partitioning")
+        != CANDIDATE_SCOPED_PARTITIONING
+        or execution.get("matched_execution_order") != ["A_prime", "B_prime"]
+    ):
+        raise RuntimeError("Relation execution differs from the frozen manifest.")
+
+    run_root = manifest_path.parent.resolve()
+    projection_dir = input_artifact_path.parent.resolve()
+    if (
+        projection_dir.parent != run_root
+        or batch_plan_path.parent.resolve() != projection_dir
+        or ground_truth_path.parent.resolve() != projection_dir
+    ):
+        raise RuntimeError(
+            "Candidate-scoped execution inputs must come from the manifest's "
+            "run-local projection directory."
+        )
+    projection_marker_path = input_artifact_path.parent / "projection_bundle_complete.json"
+    projection_marker = load_json_object(
+        projection_marker_path, label="projection completion marker"
+    )
+    projection_hashes = projection_marker.get("artifacts")
+    required_projection_hashes = {
+        input_artifact_path.name: sha256_file(input_artifact_path),
+        batch_plan_path.name: sha256_file(batch_plan_path),
+        ground_truth_path.name: sha256_file(ground_truth_path),
+    }
+    if (
+        projection_marker.get("artifact_type")
+        != "predicted_ko_projection_bundle_complete"
+        or projection_marker.get("evaluation_status") != "final"
+        or not isinstance(projection_hashes, dict)
+        or any(
+            projection_hashes.get(filename) != digest
+            for filename, digest in required_projection_hashes.items()
+        )
+    ):
+        raise RuntimeError("Projection bundle is missing, stale, or incomplete.")
+
+    entity_marker_path = manifest_path.parent / "entity_predictions" / (
+        "entity_predictions_complete.json"
+    )
+    entity_marker = load_json_object(
+        entity_marker_path, label="Entity completion marker"
+    )
+    if (
+        entity_marker.get("artifact_type") != "entity_predictions_completion_marker"
+        or entity_marker.get("status") != "final"
+        or entity_marker.get("method_commit") != method_commit
+        or entity_marker.get("execution_manifest_sha256")
+        != sha256_file(manifest_path)
+    ):
+        raise RuntimeError("Entity source bundle is not final for this method.")
+
+    return {
+        "execution_manifest": display_path(manifest_path),
+        "execution_manifest_sha256": sha256_file(manifest_path),
+        "method_commit": method_commit,
+        "request_partitioning": CANDIDATE_SCOPED_PARTITIONING,
+        "projection_completion_marker": display_path(projection_marker_path),
+        "projection_completion_marker_sha256": sha256_file(projection_marker_path),
+        "entity_completion_marker": display_path(entity_marker_path),
+        "entity_completion_marker_sha256": sha256_file(entity_marker_path),
+    }
+
+
 def matched_object_refs(model_input: dict[str, Any]) -> list[Ref]:
     return [
         (obj["lecture_id"], obj["ko_id"])
@@ -972,6 +1146,569 @@ def build_metadata(
     return metadata
 
 
+def build_candidate_scoped_batches(
+    model_input: dict[str, Any],
+    candidate_members: dict[str, set[Ref]],
+) -> tuple[dict[str, Any], list[dict[str, Any]]]:
+    object_by_ref = {
+        (obj["lecture_id"], obj["ko_id"]): obj
+        for obj in model_input["knowledge_objects"]
+    }
+    lecture_by_id = {
+        lecture["lecture_id"]: lecture for lecture in model_input["lectures"]
+    }
+    batches: list[dict[str, Any]] = []
+    plan_batches: list[dict[str, Any]] = []
+    for index, pair in enumerate(model_input["candidate_pairs"], start=1):
+        pair_id = pair["pair_id"]
+        refs = [
+            parse_ref(pair["ko_a"], f"{pair_id}.ko_a"),
+            parse_ref(pair["ko_b"], f"{pair_id}.ko_b"),
+        ]
+        if set(refs) != candidate_members[pair_id]:
+            raise RuntimeError(f"{pair_id} candidate-scoped endpoints are stale.")
+        missing_refs = [ref for ref in refs if ref not in object_by_ref]
+        if missing_refs:
+            raise RuntimeError(
+                f"{pair_id} candidate-scoped KOs are missing: {missing_refs}."
+            )
+        lecture_ids = sorted({ref[0] for ref in refs})
+        missing_lectures = [
+            lecture_id
+            for lecture_id in lecture_ids
+            if lecture_id not in lecture_by_id
+        ]
+        if missing_lectures:
+            raise RuntimeError(
+                f"{pair_id} candidate-scoped lectures are missing: "
+                f"{missing_lectures}."
+            )
+        scoped_input = {
+            "relation_schema": model_input["relation_schema"],
+            "lectures": [lecture_by_id[lecture_id] for lecture_id in lecture_ids],
+            "knowledge_objects": [object_by_ref[ref] for ref in refs],
+            "candidate_pairs": [pair],
+        }
+        scoped_members = {pair_id: set(refs)}
+        leakage_audit = validate_model_input(scoped_input, scoped_members)
+        batch_id = f"candidate_{index:03d}"
+        artifact_name = f"{index:03d}_{pair_id}"
+        plan_batches.append({
+            "batch_id": batch_id,
+            "batch_index": index,
+            "pair_id": pair_id,
+            "endpoint_refs": [
+                {"lecture_id": ref[0], "ko_id": ref[1]} for ref in refs
+            ],
+            "lecture_ids": lecture_ids,
+        })
+        batches.append({
+            "batch_id": batch_id,
+            "batch_index": index,
+            "pair_id": pair_id,
+            "artifact_name": artifact_name,
+            "model_input": scoped_input,
+            "candidate_members": scoped_members,
+            "lecture_hashes": {
+                lecture_id: sha256_text(lecture_by_id[lecture_id]["text"])
+                for lecture_id in lecture_ids
+            },
+            "leakage_audit": leakage_audit,
+        })
+    execution_plan = {
+        "artifact_type": "candidate_scoped_relation_execution_plan",
+        "version": "v0.1",
+        "request_partitioning": CANDIDATE_SCOPED_PARTITIONING,
+        "batch_count": len(plan_batches),
+        "pair_ids": [batch["pair_id"] for batch in plan_batches],
+        "batches": plan_batches,
+    }
+    return execution_plan, batches
+
+
+def aggregate_usage(usages: list[dict[str, Any]]) -> dict[str, Any]:
+    integer_fields = sorted({
+        key
+        for usage in usages
+        for key, value in usage.items()
+        if isinstance(value, int) and not isinstance(value, bool)
+    })
+    return {
+        "request_count": len(usages),
+        **{
+            field: sum(
+                usage.get(field, 0)
+                for usage in usages
+                if isinstance(usage.get(field, 0), int)
+            )
+            for field in integer_fields
+        },
+    }
+
+
+def candidate_scoped_aggregate_metadata(
+    *,
+    args: argparse.Namespace,
+    relation_ground_truth: dict[str, Any],
+    ground_truth_path: Path,
+    prompt_path: Path,
+    schema_path: Path,
+    model_input: dict[str, Any],
+    leakage_audit: dict[str, Any],
+    ko_ground_truth_hashes: dict[str, str],
+    lecture_hashes: dict[str, str],
+    matched_context: dict[str, Any],
+    execution_context: dict[str, Any],
+    execution_plan_path: Path,
+    execution_plan_sha256: str,
+    prediction_path: Path,
+    metadata_path: Path,
+    payload_hashes: list[str],
+    git_commit_at_start: str | None,
+    git_dirty_at_start: bool | None,
+    started_at: str,
+) -> dict[str, Any]:
+    return {
+        "provider": PROVIDER,
+        "experiment": args.experiment,
+        "run_id": args.run_id,
+        "split": relation_ground_truth["split"],
+        "benchmark_version": relation_ground_truth["version"],
+        "ground_truth": display_path(ground_truth_path),
+        "prompt_path": display_path(prompt_path),
+        "relation_schema_path": display_path(schema_path),
+        "model_requested": args.model,
+        "model_returned": None,
+        "system_fingerprint": None,
+        "finish_reason": None,
+        "request_partitioning": CANDIDATE_SCOPED_PARTITIONING,
+        "request_parameters": {
+            "temperature": args.temperature,
+            "top_p": args.top_p,
+            "max_tokens": args.max_tokens,
+            "stream": False,
+            "response_format": {"type": "json_object"},
+            "thinking": {"type": "disabled"},
+        },
+        "run_timestamp": started_at,
+        "latency_ms": None,
+        "git_commit_at_start": git_commit_at_start,
+        "git_dirty_at_start": git_dirty_at_start,
+        "hashes": {
+            "ground_truth_sha256": sha256_file(ground_truth_path),
+            "prompt_sha256": sha256_file(prompt_path),
+            "relation_schema_sha256": sha256_file(schema_path),
+            "knowledge_object_ground_truth_sha256": ko_ground_truth_hashes,
+            "lecture_sha256": lecture_hashes,
+            "model_input_sha256": sha256_json(model_input),
+            "request_payload_set_sha256": sha256_json(payload_hashes),
+        },
+        "input_counts": {
+            "candidate_pairs": len(model_input["candidate_pairs"]),
+            "knowledge_objects": len(model_input["knowledge_objects"]),
+            "lectures": len(model_input["lectures"]),
+            "request_batches": len(payload_hashes),
+        },
+        "gold_leakage_audit": leakage_audit,
+        "artifacts": {
+            "execution_batch_plan": display_path(execution_plan_path),
+            "prediction": display_path(prediction_path),
+            "metadata": display_path(metadata_path),
+        },
+        "condition": matched_context["condition"],
+        "input_artifact": matched_context["input_artifact"],
+        "input_artifact_sha256": matched_context["input_artifact_sha256"],
+        "batch_plan": matched_context["batch_plan"],
+        "batch_plan_sha256": matched_context["batch_plan_sha256"],
+        "execution_batch_plan": display_path(execution_plan_path),
+        "execution_batch_plan_sha256": execution_plan_sha256,
+        **execution_context,
+        "batch_count": len(payload_hashes),
+        "completed_batch_count": 0,
+        "batch_results": [],
+        "usage": None,
+        "request_success": None,
+        "api_error": None,
+        "json_parse_success": None,
+        "json_parse_error": None,
+        "prediction_schema_valid": None,
+        "prediction_schema_error": None,
+        "retry_count": 0,
+        "dry_run": args.dry_run,
+        "run_status": "prepared",
+    }
+
+
+def run_candidate_scoped_execution(
+    *,
+    args: argparse.Namespace,
+    relation_ground_truth: dict[str, Any],
+    ground_truth_path: Path,
+    prompt_path: Path,
+    schema_path: Path,
+    prompt_text: str,
+    run_dir: Path,
+    output_dir: Path,
+    rendered_inputs_dir: Path,
+    raw_responses_dir: Path,
+    metadata_dir: Path,
+    model_input: dict[str, Any],
+    candidate_members: dict[str, set[Ref]],
+    leakage_audit: dict[str, Any],
+    ko_ground_truth_hashes: dict[str, str],
+    lecture_hashes: dict[str, str],
+    matched_context: dict[str, Any],
+    execution_context: dict[str, Any],
+    git_commit_at_start: str | None,
+    git_dirty_at_start: bool | None,
+) -> int:
+    if args.overwrite:
+        raise RuntimeError(
+            "Candidate-scoped frozen execution does not permit --overwrite."
+        )
+    execution_plan, batches = build_candidate_scoped_batches(
+        model_input, candidate_members
+    )
+    if not batches:
+        raise RuntimeError("Candidate-scoped execution requires at least one pair.")
+    input_artifact = load_json_object(
+        resolve_path(args.input_artifact, ROOT), label="matched input artifact"
+    )
+    execution_plan.update({
+        "source_batch_plan_sha256": matched_context["batch_plan_sha256"],
+        "pair_manifest_sha256": input_artifact["pair_manifest_sha256"],
+        "ko_manifest_sha256": input_artifact["ko_manifest_sha256"],
+        "matched_ground_truth_sha256": input_artifact[
+            "matched_ground_truth_sha256"
+        ],
+        "relation_prompt_sha256": input_artifact["relation_prompt_sha256"],
+        "relation_schema_sha256": input_artifact["relation_schema_sha256"],
+    })
+    execution_plan_path = run_dir / "execution_batch_plan.json"
+    artifact_name = ground_truth_path.stem
+    aggregate_prediction_path = output_dir / f"{artifact_name}.json"
+    aggregate_metadata_path = metadata_dir / f"{artifact_name}.json"
+
+    prompt_payloads: list[dict[str, Any]] = []
+    batch_targets: list[dict[str, Path]] = []
+    all_target_paths: dict[str, Path] = {
+        "execution_plan": execution_plan_path,
+        "aggregate_prediction": aggregate_prediction_path,
+        "aggregate_metadata": aggregate_metadata_path,
+    }
+    for batch in batches:
+        payload = build_request_payload(
+            model=args.model,
+            system_prompt=prompt_text,
+            model_input=batch["model_input"],
+            temperature=args.temperature,
+            top_p=args.top_p,
+            max_tokens=args.max_tokens,
+        )
+        targets = artifact_paths(
+            artifact_name=batch["artifact_name"],
+            output_dir=output_dir / "pairs",
+            rendered_inputs_dir=rendered_inputs_dir / "pairs",
+            raw_responses_dir=raw_responses_dir / "pairs",
+            metadata_dir=metadata_dir / "pairs",
+        )
+        prompt_payloads.append(payload)
+        batch_targets.append(targets)
+        for name, path in targets.items():
+            all_target_paths[f"{batch['batch_id']}.{name}"] = path
+    prepare_artifacts(all_target_paths, overwrite=False)
+    for directory in [
+        run_dir,
+        output_dir,
+        rendered_inputs_dir,
+        raw_responses_dir,
+        metadata_dir,
+        output_dir / "pairs",
+        rendered_inputs_dir / "pairs",
+        raw_responses_dir / "pairs",
+        metadata_dir / "pairs",
+    ]:
+        directory.mkdir(parents=True, exist_ok=True)
+
+    write_json(execution_plan_path, execution_plan)
+    execution_plan_sha256 = sha256_file(execution_plan_path)
+    started_at = datetime.now(timezone.utc).isoformat()
+    payload_hashes = [sha256_json(payload) for payload in prompt_payloads]
+    aggregate_metadata = candidate_scoped_aggregate_metadata(
+        args=args,
+        relation_ground_truth=relation_ground_truth,
+        ground_truth_path=ground_truth_path,
+        prompt_path=prompt_path,
+        schema_path=schema_path,
+        model_input=model_input,
+        leakage_audit=leakage_audit,
+        ko_ground_truth_hashes=ko_ground_truth_hashes,
+        lecture_hashes=lecture_hashes,
+        matched_context=matched_context,
+        execution_context=execution_context,
+        execution_plan_path=execution_plan_path,
+        execution_plan_sha256=execution_plan_sha256,
+        prediction_path=aggregate_prediction_path,
+        metadata_path=aggregate_metadata_path,
+        payload_hashes=payload_hashes,
+        git_commit_at_start=git_commit_at_start,
+        git_dirty_at_start=git_dirty_at_start,
+        started_at=started_at,
+    )
+
+    for batch, payload, targets in zip(
+        batches, prompt_payloads, batch_targets, strict=True
+    ):
+        batch_context = {
+            **matched_context,
+            "execution_batch_id": batch["batch_id"],
+            "execution_batch_index": batch["batch_index"],
+            "execution_batch_count": len(batches),
+        }
+        metadata = build_metadata(
+            experiment=args.experiment,
+            run_id=args.run_id,
+            split=relation_ground_truth["split"],
+            version=relation_ground_truth["version"],
+            ground_truth_path=ground_truth_path,
+            prompt_path=prompt_path,
+            schema_path=schema_path,
+            request_payload=payload,
+            model_input=batch["model_input"],
+            leakage_audit=batch["leakage_audit"],
+            ko_ground_truth_hashes=ko_ground_truth_hashes,
+            lecture_hashes=batch["lecture_hashes"],
+            artifact_map=targets,
+            git_commit_at_start=git_commit_at_start,
+            git_dirty_at_start=git_dirty_at_start,
+            started_at=started_at,
+            dry_run=args.dry_run,
+            matched_context=batch_context,
+        )
+        metadata.update({
+            "request_partitioning": CANDIDATE_SCOPED_PARTITIONING,
+            "execution_batch_plan": display_path(execution_plan_path),
+            "execution_batch_plan_sha256": execution_plan_sha256,
+            "execution_batch_id": batch["batch_id"],
+            "execution_batch_index": batch["batch_index"],
+            "execution_batch_count": len(batches),
+            "pair_id": batch["pair_id"],
+            **execution_context,
+        })
+        write_json(targets["rendered_input"], payload)
+        if args.dry_run:
+            metadata["run_status"] = "dry_run_complete"
+            write_json(targets["metadata"], metadata)
+        batch["metadata"] = metadata
+
+    if args.dry_run:
+        aggregate_metadata["run_status"] = "dry_run_complete"
+        write_json(aggregate_metadata_path, aggregate_metadata)
+        print(
+            f"Rendered {len(batches)} candidate-scoped requests under "
+            f"{display_path(rendered_inputs_dir / 'pairs')}"
+        )
+        print(f"Metadata {display_path(aggregate_metadata_path)}")
+        return 0
+
+    api_key = os.environ.get("DEEPSEEK_API_KEY")
+    if not api_key:
+        aggregate_metadata["run_status"] = "configuration_failed"
+        aggregate_metadata["api_error"] = "DEEPSEEK_API_KEY is not set."
+        write_json(aggregate_metadata_path, aggregate_metadata)
+        print(aggregate_metadata["api_error"], file=sys.stderr)
+        return 2
+
+    allowed_relation_types = set(relation_ground_truth["allowed_relation_types"])
+    results: list[dict[str, Any]] = []
+    usages: list[dict[str, Any]] = []
+    request_ids: list[str] = []
+    model_returned_values: list[str] = []
+    fingerprints: list[str] = []
+    total_latency_ms = 0
+    for batch, payload, targets in zip(
+        batches, prompt_payloads, batch_targets, strict=True
+    ):
+        metadata = batch["metadata"]
+        api_response: dict[str, Any] | None = None
+        request_started = time.perf_counter()
+        try:
+            api_response = call_deepseek(api_key=api_key, payload=payload)
+            latency_ms = int((time.perf_counter() - request_started) * 1000)
+            total_latency_ms += latency_ms
+            metadata["latency_ms"] = latency_ms
+            metadata["request_success"] = True
+            metadata["model_returned"] = api_response.get("model")
+            metadata["system_fingerprint"] = api_response.get("system_fingerprint")
+            metadata["request_id"] = api_response.get("id")
+            metadata["finish_reason"] = extract_finish_reason(api_response)
+            metadata["usage"] = api_response.get("usage")
+            write_json(targets["raw_response"], api_response)
+            metadata["raw_response_sha256"] = sha256_file(targets["raw_response"])
+        except RuntimeError as exc:
+            metadata["latency_ms"] = int(
+                (time.perf_counter() - request_started) * 1000
+            )
+            metadata["request_success"] = False
+            metadata["api_error"] = str(exc)
+            metadata["run_status"] = "request_failed"
+            write_json(targets["metadata"], metadata)
+            aggregate_metadata.update({
+                "latency_ms": total_latency_ms + metadata["latency_ms"],
+                "request_success": False,
+                "api_error": str(exc),
+                "failed_batch_id": batch["batch_id"],
+                "failed_pair_id": batch["pair_id"],
+                "completed_batch_count": len(results),
+                "run_status": "candidate_request_failed",
+            })
+            write_json(aggregate_metadata_path, aggregate_metadata)
+            print(
+                f"Relation candidate request failed for {batch['pair_id']}: {exc}",
+                file=sys.stderr,
+            )
+            return 1
+
+        if metadata["finish_reason"] != "stop":
+            metadata["run_status"] = "finish_reason_failed"
+            write_json(targets["metadata"], metadata)
+            aggregate_metadata.update({
+                "latency_ms": total_latency_ms,
+                "request_success": True,
+                "finish_reason": metadata["finish_reason"],
+                "failed_batch_id": batch["batch_id"],
+                "failed_pair_id": batch["pair_id"],
+                "completed_batch_count": len(results),
+                "run_status": "candidate_finish_reason_failed",
+            })
+            write_json(aggregate_metadata_path, aggregate_metadata)
+            print(
+                f"Relation candidate request did not stop cleanly for "
+                f"{batch['pair_id']}.",
+                file=sys.stderr,
+            )
+            return 1
+
+        try:
+            content = extract_content(api_response)
+            parsed = parse_model_content(content)
+            metadata["json_parse_success"] = True
+            write_json(targets["prediction"], parsed)
+            metadata["prediction_sha256"] = sha256_file(targets["prediction"])
+        except RuntimeError as exc:
+            metadata["json_parse_success"] = False
+            metadata["json_parse_error"] = str(exc)
+            metadata["run_status"] = "parse_failed"
+            content = ""
+            try:
+                content = extract_content(api_response)
+            except RuntimeError:
+                pass
+            targets["unparsed_output"].write_text(content, encoding="utf-8")
+            write_json(targets["metadata"], metadata)
+            aggregate_metadata.update({
+                "latency_ms": total_latency_ms,
+                "request_success": True,
+                "json_parse_success": False,
+                "json_parse_error": str(exc),
+                "failed_batch_id": batch["batch_id"],
+                "failed_pair_id": batch["pair_id"],
+                "completed_batch_count": len(results),
+                "run_status": "candidate_parse_failed",
+            })
+            write_json(aggregate_metadata_path, aggregate_metadata)
+            print(
+                f"Relation candidate output parsing failed for "
+                f"{batch['pair_id']}: {exc}",
+                file=sys.stderr,
+            )
+            return 1
+
+        try:
+            validate_prediction_envelope(
+                parsed, batch["candidate_members"], allowed_relation_types
+            )
+            metadata["prediction_schema_valid"] = True
+        except RuntimeError as exc:
+            metadata["prediction_schema_valid"] = False
+            metadata["prediction_schema_error"] = str(exc)
+            metadata["run_status"] = "prediction_schema_failed"
+            write_json(targets["metadata"], metadata)
+            aggregate_metadata.update({
+                "latency_ms": total_latency_ms,
+                "request_success": True,
+                "json_parse_success": True,
+                "prediction_schema_valid": False,
+                "prediction_schema_error": str(exc),
+                "failed_batch_id": batch["batch_id"],
+                "failed_pair_id": batch["pair_id"],
+                "completed_batch_count": len(results),
+                "run_status": "candidate_prediction_schema_failed",
+            })
+            write_json(aggregate_metadata_path, aggregate_metadata)
+            print(
+                f"Relation candidate schema failed for {batch['pair_id']}: {exc}",
+                file=sys.stderr,
+            )
+            return 1
+
+        metadata["run_status"] = "completed"
+        write_json(targets["metadata"], metadata)
+        results.append(parsed["results"][0])
+        usage = api_response.get("usage")
+        if isinstance(usage, dict):
+            usages.append(usage)
+        for value, collection in [
+            (api_response.get("id"), request_ids),
+            (api_response.get("model"), model_returned_values),
+            (api_response.get("system_fingerprint"), fingerprints),
+        ]:
+            if isinstance(value, str):
+                collection.append(value)
+        aggregate_metadata["batch_results"].append({
+            "batch_id": batch["batch_id"],
+            "pair_id": batch["pair_id"],
+            "request_id": api_response.get("id"),
+            "prediction_sha256": metadata["prediction_sha256"],
+            "metadata": display_path(targets["metadata"]),
+            "metadata_sha256": sha256_file(targets["metadata"]),
+        })
+
+    aggregate_prediction = {"results": results}
+    validate_prediction_envelope(
+        aggregate_prediction, candidate_members, allowed_relation_types
+    )
+    write_json(aggregate_prediction_path, aggregate_prediction)
+    aggregate_metadata.update({
+        "model_returned": (
+            model_returned_values[0]
+            if len(set(model_returned_values)) == 1
+            else sorted(set(model_returned_values))
+        ),
+        "system_fingerprint": (
+            fingerprints[0]
+            if len(set(fingerprints)) == 1
+            else sorted(set(fingerprints))
+        ),
+        "finish_reason": "stop",
+        "latency_ms": total_latency_ms,
+        "request_ids": request_ids,
+        "usage": aggregate_usage(usages),
+        "request_success": True,
+        "json_parse_success": True,
+        "prediction_schema_valid": True,
+        "completed_batch_count": len(results),
+        "prediction_sha256": sha256_file(aggregate_prediction_path),
+        "run_status": "completed",
+    })
+    write_json(aggregate_metadata_path, aggregate_metadata)
+    print(
+        f"Saved {len(results)} candidate-scoped predictions to "
+        f"{display_path(aggregate_prediction_path)}"
+    )
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     load_dotenv()
     args = parse_args(argv)
@@ -996,6 +1733,10 @@ def main(argv: list[str] | None = None) -> int:
         if bool(args.input_artifact) != bool(args.batch_plan):
             raise RuntimeError(
                 "--input-artifact and --batch-plan must be supplied together."
+            )
+        if args.execution_manifest and not args.input_artifact:
+            raise RuntimeError(
+                "--execution-manifest requires --input-artifact and --batch-plan."
             )
 
         for required_path in [prompt_path, schema_path, ground_truth_path]:
@@ -1039,6 +1780,7 @@ def main(argv: list[str] | None = None) -> int:
             lecture_paths,
         )
         matched_context: dict[str, Any] | None = None
+        execution_context: dict[str, Any] | None = None
         if args.input_artifact:
             input_artifact_path = resolve_path(args.input_artifact, ROOT)
             batch_plan_path = resolve_path(args.batch_plan, ROOT)
@@ -1056,11 +1798,59 @@ def main(argv: list[str] | None = None) -> int:
             )
             lecture_hashes = matched_context["lecture_sha256"]
             leakage_audit = matched_context["leakage_audit"]
+            if args.execution_manifest:
+                execution_manifest_path = resolve_path(
+                    args.execution_manifest, ROOT
+                )
+                if not execution_manifest_path.is_file():
+                    raise RuntimeError(
+                        f"Missing required file: {execution_manifest_path}"
+                    )
+                execution_context = validate_execution_manifest(
+                    manifest_path=execution_manifest_path,
+                    relation_split=relation_ground_truth["split"],
+                    prompt_path=prompt_path,
+                    schema_path=schema_path,
+                    input_artifact_path=input_artifact_path,
+                    batch_plan_path=batch_plan_path,
+                    ground_truth_path=ground_truth_path,
+                    model=args.model,
+                    temperature=args.temperature,
+                    top_p=args.top_p,
+                    max_tokens=args.max_tokens,
+                    git_commit_at_start=git_commit_at_start,
+                    git_dirty_at_start=git_dirty_at_start,
+                )
         else:
             model_input = expected_model_input
             leakage_audit = validate_model_input(model_input, candidate_members)
 
         prompt_text = prompt_path.read_text(encoding="utf-8")
+        if execution_context is not None:
+            if matched_context is None:
+                raise RuntimeError("Candidate-scoped execution requires matched input.")
+            return run_candidate_scoped_execution(
+                args=args,
+                relation_ground_truth=relation_ground_truth,
+                ground_truth_path=ground_truth_path,
+                prompt_path=prompt_path,
+                schema_path=schema_path,
+                prompt_text=prompt_text,
+                run_dir=run_dir,
+                output_dir=output_dir,
+                rendered_inputs_dir=rendered_inputs_dir,
+                raw_responses_dir=raw_responses_dir,
+                metadata_dir=metadata_dir,
+                model_input=model_input,
+                candidate_members=candidate_members,
+                leakage_audit=leakage_audit,
+                ko_ground_truth_hashes=ko_ground_truth_hashes,
+                lecture_hashes=lecture_hashes,
+                matched_context=matched_context,
+                execution_context=execution_context,
+                git_commit_at_start=git_commit_at_start,
+                git_dirty_at_start=git_dirty_at_start,
+            )
         request_payload = build_request_payload(
             model=args.model,
             system_prompt=prompt_text,

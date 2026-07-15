@@ -1,12 +1,19 @@
 # Locked Reuse Preflight
 
-**Status:** `blocked_pending_repository_refreeze`  
-**Scope:** `locked_reuse_v0_1`  
+**Status:** `closed_execution_incomplete`
+**Scope:** `locked_reuse_v0_1`
 **Relation benchmark:** `benchmark/ground_truth/relations_holdout_v0_1.json`
 
-## Gate Finding
+The repository bridge was subsequently frozen and all upstream gates completed.
+The Relation stage then closed after the original A-prime request and one
+bounded retry both substituted the same third endpoint. B-prime was not run.
+See `locked_reuse_v0_1_failure.md`. Do not create another v0.1 retry; the
+versioned transport revision is `candidate_scoped_execution_v0_2.md`.
 
-No locked-reuse API request has been made.
+## Original Gate Finding
+
+At the time this preflight note was first written, no locked-reuse API request
+had been made.
 
 The first repository freeze preserved a development-only execution bridge:
 
@@ -35,14 +42,14 @@ alignment decisions, recoverability, projection, Relation scoring, Evidence
 adjudication, pipeline metrics, or failure-locus precedence. It is execution
 plumbing required to apply those frozen rules to the predeclared locked reuse.
 
-The complete regression suite passes with 95 tests.
+At that milestone, the complete regression suite passed with 95 tests.
 
-## Refreeze Requirement
+## Original Refreeze Requirement (Completed)
 
 The existing development freeze tag must remain an immutable record of the
-development result. The locked reuse must use a new method freeze containing the
-execution-bridge fix. Until that commit and tag are created by the user, formal
-preflight remains blocked.
+development result. The locked reuse used a new method freeze containing the
+execution-bridge fix. That repository gate was subsequently completed; the
+commands below are retained as the historical v0.1 procedure.
 
 After the repository is clean and the new method commit is frozen, set:
 

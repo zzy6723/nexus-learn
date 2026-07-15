@@ -449,6 +449,51 @@ def validate_matched_execution(
             "matched_request_parameter_mismatch",
             "A-prime/B-prime request parameters differ.",
         )
+    a_partitioning = a_metadata.get(
+        "request_partitioning", "single_deterministic_batch_v0_1"
+    )
+    b_partitioning = b_metadata.get(
+        "request_partitioning", "single_deterministic_batch_v0_1"
+    )
+    if a_partitioning != b_partitioning:
+        raise PipelineError(
+            "matched_request_partitioning_mismatch",
+            "A-prime/B-prime request partitioning differs.",
+        )
+    if a_partitioning == "one_candidate_pair_per_request_v0_1":
+        a_plan_hash = a_metadata.get("execution_batch_plan_sha256")
+        b_plan_hash = b_metadata.get("execution_batch_plan_sha256")
+        if (
+            not isinstance(a_plan_hash, str)
+            or len(a_plan_hash) != 64
+            or a_plan_hash != b_plan_hash
+        ):
+            raise PipelineError(
+                "matched_execution_batch_plan_mismatch",
+                "Candidate-scoped A-prime/B-prime execution plans differ.",
+            )
+        if (
+            a_metadata.get("execution_manifest_sha256")
+            != b_metadata.get("execution_manifest_sha256")
+        ):
+            raise PipelineError(
+                "matched_execution_manifest_mismatch",
+                "Candidate-scoped A-prime/B-prime manifests differ.",
+            )
+        for condition, metadata in [
+            ("A_prime", a_metadata),
+            ("B_prime", b_metadata),
+        ]:
+            if (
+                metadata.get("batch_count") != metadata.get("completed_batch_count")
+                or metadata.get("batch_count") != len(
+                    metadata.get("batch_results", [])
+                )
+            ):
+                raise PipelineError(
+                    "incomplete_candidate_scoped_execution",
+                    f"{condition} candidate-scoped execution is incomplete.",
+                )
     if a_metadata.get("git_commit_at_start") != b_metadata.get("git_commit_at_start"):
         raise PipelineError("matched_git_commit_mismatch", "Matched run commits differ.")
     if not a_metadata.get("git_commit_at_start"):

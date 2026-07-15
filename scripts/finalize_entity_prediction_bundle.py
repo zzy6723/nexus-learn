@@ -293,15 +293,19 @@ def finalize_entity_bundle(execution_manifest_path: Path) -> dict[str, Any]:
     execution = read_object(
         execution_manifest_path, label="002B-1 execution manifest"
     )
+    allowed_execution_statuses = {
+        "prepared_pending_entity_reruns",
+        "prepared_entity_sources_complete",
+    }
     if (
         execution.get("artifact_type")
         != "predicted_ko_relation_execution_manifest"
         or execution.get("version") != "v0.1"
-        or execution.get("status") != "prepared_pending_entity_reruns"
+        or execution.get("status") not in allowed_execution_statuses
     ):
         raise EntityBundleError(
             "invalid_execution_manifest",
-            "Execution manifest is not a prepared 002B-1 Entity-rerun plan.",
+            "Execution manifest is not a prepared 002B-1 Entity source plan.",
         )
 
     entity_dir = execution_manifest_path.parent / "entity_predictions"
@@ -375,13 +379,17 @@ def finalize_entity_bundle(execution_manifest_path: Path) -> dict[str, Any]:
     ):
         raise EntityBundleError("stale_source_manifest", "Source manifest hash is stale.")
     source_manifest = read_object(source_manifest_path, label="Entity source manifest")
+    allowed_source_statuses = {
+        "prepared_pending_entity_reruns",
+        "prepared_all_reused",
+    }
     if (
         source_manifest.get("artifact_type") != "entity_prediction_source_manifest"
-        or source_manifest.get("status") != "prepared_pending_entity_reruns"
+        or source_manifest.get("status") not in allowed_source_statuses
         or source_manifest.get("method_commit") != method_commit
     ):
         raise EntityBundleError(
-            "invalid_source_manifest", "Source manifest is not the frozen rerun plan."
+            "invalid_source_manifest", "Source manifest is not the frozen source plan."
         )
 
     benchmark = required_object(execution.get("benchmark"), label="benchmark")

@@ -31,6 +31,12 @@ DEFAULT_EXECUTION_SCOPE = "development_v0_1"
 RELATION_SPLIT_BY_EXECUTION_SCOPE = {
     "development_v0_1": "development",
     "locked_reuse_v0_1": "holdout",
+    "locked_reuse_v0_2": "holdout",
+}
+RELATION_REQUEST_PARTITIONING_BY_EXECUTION_SCOPE = {
+    "development_v0_1": "single_deterministic_batch_v0_1",
+    "locked_reuse_v0_1": "single_deterministic_batch_v0_1",
+    "locked_reuse_v0_2": "one_candidate_pair_per_request_v0_1",
 }
 DEFAULT_RUN_DIR_BY_EXECUTION_SCOPE = {
     scope: DEFAULT_RUN_ROOT / scope / "run_01"
@@ -98,8 +104,9 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         default=DEFAULT_EXECUTION_SCOPE,
         help=(
             "Claim-preserving run scope. development_v0_1 consumes the Relation "
-            "development split; locked_reuse_v0_1 consumes the previously used "
-            "002A holdout split."
+            "development split; locked_reuse_v0_1 preserves the original "
+            "single-request holdout execution; locked_reuse_v0_2 consumes the "
+            "same holdout with the candidate-scoped transport revision."
         ),
     )
     parser.add_argument(
@@ -822,11 +829,16 @@ def prepare_run(args: argparse.Namespace) -> dict[str, Any]:
         "prepared_at": datetime.now(timezone.utc).isoformat(),
         "method_commit": args.method_commit,
         "repository_state": repository_state,
-        "claim_boundary": (
-            "single-run controlled paired diagnostic"
-            if args.execution_scope == "development_v0_1"
-            else "locked reuse of the previously evaluated 002A holdout"
-        ),
+        "claim_boundary": {
+            "development_v0_1": "single-run controlled paired diagnostic",
+            "locked_reuse_v0_1": (
+                "locked reuse of the previously evaluated 002A holdout"
+            ),
+            "locked_reuse_v0_2": (
+                "execution-method revision on the previously evaluated 002A "
+                "holdout; not an unseen-holdout claim"
+            ),
+        }[args.execution_scope],
         "frozen_methods": {
             "entity_prompt": {
                 "path": display_path(entity_prompt_path),
@@ -867,6 +879,11 @@ def prepare_run(args: argparse.Namespace) -> dict[str, Any]:
         "relation_execution": {
             "provider": "deepseek",
             "model": args.relation_model,
+            "request_partitioning": (
+                RELATION_REQUEST_PARTITIONING_BY_EXECUTION_SCOPE[
+                    args.execution_scope
+                ]
+            ),
             "request_parameters": {
                 "temperature": args.relation_temperature,
                 "top_p": args.relation_top_p,

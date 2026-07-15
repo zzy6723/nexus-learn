@@ -72,6 +72,10 @@ class PredictedKORunPreflightTest(unittest.TestCase):
             manifest["entity_execution"]["rerun_required_lecture_ids"],
             ["calculus_001", "linear_algebra_001", "optimisation_001"],
         )
+        self.assertEqual(
+            manifest["relation_execution"]["request_partitioning"],
+            "single_deterministic_batch_v0_1",
+        )
         oracle = read_json(run_dir / "oracle_knowledge_objects.json")
         lectures = read_json(run_dir / "lecture_inventory.json")
         source_manifest = read_json(
@@ -144,6 +148,35 @@ class PredictedKORunPreflightTest(unittest.TestCase):
         self.assertEqual(source_manifest["execution_scope"], "locked_reuse_v0_1")
         self.assertEqual(source_manifest["input_split"], "holdout")
 
+    def test_preflight_freezes_candidate_scoped_locked_reuse_revision(self) -> None:
+        run_dir = self.temporary_root / "locked_reuse_v0_2_run_01"
+        args = preflight.parse_args([
+            "--method-commit",
+            FREEZE_COMMIT,
+            "--execution-scope",
+            "locked_reuse_v0_2",
+            "--run-dir",
+            str(run_dir),
+            "--relation-ground-truth",
+            "benchmark/ground_truth/relations_holdout_v0_1.json",
+        ])
+
+        manifest = self.prepare(args)
+
+        self.assertEqual(manifest["split"], "locked_reuse_v0_2")
+        self.assertEqual(manifest["benchmark"]["relation_split"], "holdout")
+        self.assertEqual(
+            manifest["relation_execution"]["request_partitioning"],
+            "one_candidate_pair_per_request_v0_1",
+        )
+        self.assertIn("not an unseen-holdout claim", manifest["claim_boundary"])
+        self.assertEqual(
+            read_json(run_dir / "entity_predictions" / "source_manifest.json")[
+                "execution_scope"
+            ],
+            "locked_reuse_v0_2",
+        )
+
     def test_preflight_rejects_scope_and_relation_split_mismatch(self) -> None:
         args = preflight.parse_args([
             "--method-commit",
@@ -172,6 +205,19 @@ class PredictedKORunPreflightTest(unittest.TestCase):
         self.assertEqual(
             preflight.DEFAULT_RUN_DIR_BY_EXECUTION_SCOPE[args.execution_scope],
             preflight.DEFAULT_RUN_ROOT / "locked_reuse_v0_1" / "run_01",
+        )
+
+        revision_args = preflight.parse_args([
+            "--method-commit",
+            FREEZE_COMMIT,
+            "--execution-scope",
+            "locked_reuse_v0_2",
+        ])
+        self.assertEqual(
+            preflight.DEFAULT_RUN_DIR_BY_EXECUTION_SCOPE[
+                revision_args.execution_scope
+            ],
+            preflight.DEFAULT_RUN_ROOT / "locked_reuse_v0_2" / "run_01",
         )
 
     def test_preflight_rejects_non_commit_placeholder(self) -> None:

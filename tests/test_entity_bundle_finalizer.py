@@ -267,6 +267,45 @@ class EntityBundleFinalizerTest(unittest.TestCase):
             preflight.sha256_file(bundle_path),
         )
 
+    def test_finalizer_accepts_an_all_reused_source_plan(self) -> None:
+        execution_path, _ = self.make_fixture()
+        entity_dir = execution_path.parent / "entity_predictions"
+        source_manifest_path = entity_dir / "source_manifest.json"
+        source_manifest = read_json(source_manifest_path)
+        source_manifest["status"] = "prepared_all_reused"
+        source_manifest["counts"] = {
+            "lectures": 2,
+            "reused": 2,
+            "rerun_required": 0,
+        }
+        source_manifest["rerun_required_lecture_ids"] = []
+        for record in source_manifest["lectures"]:
+            if record["lecture_id"] != "lecture_rerun":
+                continue
+            record["decision"] = "reuse"
+            record["source_run"] = "synthetic_prior_run"
+            record["source_sha256"] = {
+                name: preflight.sha256_file(
+                    entity_dir / directory / "lecture_rerun.json"
+                )
+                for name, directory in finalizer.MANAGED_DIRECTORIES.items()
+            }
+        write_json(source_manifest_path, source_manifest)
+
+        execution = read_json(execution_path)
+        execution["status"] = "prepared_entity_sources_complete"
+        execution["entity_execution"]["rerun_required_lecture_ids"] = []
+        execution["entity_execution"]["source_manifest_sha256"] = (
+            preflight.sha256_file(source_manifest_path)
+        )
+        write_json(execution_path, execution)
+
+        marker = finalizer.finalize_entity_bundle(execution_path)
+
+        self.assertEqual(marker["status"], "final")
+        self.assertEqual(marker["counts"]["reused"], 2)
+        self.assertEqual(marker["counts"]["new_reruns"], 0)
+
     def test_finalizer_rejects_stale_rerun_binding(self) -> None:
         execution_path, metadata_path = self.make_fixture()
         metadata = read_json(metadata_path)

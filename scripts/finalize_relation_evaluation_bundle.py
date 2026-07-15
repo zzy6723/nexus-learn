@@ -130,6 +130,27 @@ def validate_source_bundle(
             value = metadata.get(field)
             if not isinstance(value, str) or len(value) != 64:
                 raise BundleError(f"Matched Relation metadata is missing {field}.")
+        if metadata.get("request_partitioning") == (
+            "one_candidate_pair_per_request_v0_1"
+        ):
+            for field in [
+                "execution_manifest_sha256",
+                "execution_batch_plan_sha256",
+            ]:
+                value = metadata.get(field)
+                if not isinstance(value, str) or len(value) != 64:
+                    raise BundleError(
+                        f"Candidate-scoped Relation metadata is missing {field}."
+                    )
+            if (
+                metadata.get("batch_count")
+                != metadata.get("completed_batch_count")
+                or metadata.get("batch_count")
+                != len(metadata.get("batch_results", []))
+            ):
+                raise BundleError(
+                    "Candidate-scoped Relation execution is incomplete."
+                )
 
     prediction_ids = [
         item.get("pair_id") for item in predictions["results"] if isinstance(item, dict)

@@ -3,9 +3,11 @@
 **Decision:** Pass the development feasibility gate with an Evidence exact-span
 compliance caveat.
 
-**Next step:** Complete a repository-level method freeze, then proceed to the
-predeclared locked reuse evaluation. This conclusion is not itself the freeze
-commit.
+**Execution update:** The original `locked_reuse_v0_1` Relation stage closed
+after two repeated schema-invalid A-prime responses. The next step is a separate
+repository freeze for `locked_reuse_v0_2`, which changes only request
+partitioning to one candidate pair per request. It is a method-revision
+diagnostic, not the untouched locked-reuse claim authorized below.
 
 ---
 

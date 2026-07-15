@@ -344,6 +344,14 @@ class PredictedKORelationPipelineTest(unittest.TestCase):
                 ),
             ),
             (
+                "request_partitioning",
+                "matched_request_partitioning_mismatch",
+                lambda value: value.__setitem__(
+                    "request_partitioning",
+                    "one_candidate_pair_per_request_v0_1",
+                ),
+            ),
+            (
                 "commit",
                 "matched_git_commit_mismatch",
                 lambda value: value.__setitem__(
@@ -373,6 +381,36 @@ class PredictedKORelationPipelineTest(unittest.TestCase):
                 self.assertEqual(pipeline.main(self.cli_args(output_dir)), 1)
                 self.assert_invalid(output_dir, expected_code)
                 self.bundle = original_bundle
+
+    def test_candidate_scoped_execution_plan_must_match(self) -> None:
+        case_root = self.temporary_root / "candidate_plan_mismatch"
+        bundle, _ = materialize_runtime_bundle(case_root)
+        original_bundle = self.bundle
+        self.bundle = bundle
+
+        for condition, plan_hash in [
+            ("A_prime", "a" * 64),
+            ("B_prime", "b" * 64),
+        ]:
+            def mutate(value, digest=plan_hash):
+                pair_count = len(value.get("batch_results", [])) or 4
+                value.update({
+                    "request_partitioning": (
+                        "one_candidate_pair_per_request_v0_1"
+                    ),
+                    "execution_batch_plan_sha256": digest,
+                    "execution_manifest_sha256": "c" * 64,
+                    "batch_count": pair_count,
+                    "completed_batch_count": pair_count,
+                    "batch_results": [{} for _ in range(pair_count)],
+                })
+
+            self.mutate_snapshot_dependency(condition, "run_metadata", mutate)
+
+        output_dir = case_root / "pipeline"
+        self.assertEqual(pipeline.main(self.cli_args(output_dir)), 1)
+        self.assert_invalid(output_dir, "matched_execution_batch_plan_mismatch")
+        self.bundle = original_bundle
 
     def test_evaluation_integrity_failures(self) -> None:
         cases = [

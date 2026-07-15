@@ -1,8 +1,8 @@
 # Predicted-KO Relation Artifact Contract
 
-**Status:** Frozen for Step 4 implementation against predeclared fixtures  
-**Version:** v0.1  
-**Created:** 2026-07-14  
+**Status:** Frozen for Step 4 implementation against predeclared fixtures
+**Version:** v0.1
+**Created:** 2026-07-14
 **Owner:** Project
 
 This contract defines the machine-readable artifacts used by Experiment 002B-1.
@@ -61,6 +61,14 @@ Real development execution is run-specific. The plan and source audit live under
 `runs/development_v0_1/<run_id>/`; a revised method uses a new run ID and does not
 overwrite an earlier execution.
 
+The first locked-reuse Relation execution used
+`single_deterministic_batch_v0_1`. After two independent A-prime responses
+replaced the same candidate endpoint with an endpoint from another pair, that
+execution scope was closed as incomplete. The separately frozen
+`locked_reuse_v0_2` scope changes only request partitioning to
+`one_candidate_pair_per_request_v0_1`. It is an execution-method revision on
+previously evaluated material, not a new unseen-holdout claim.
+
 `execution_manifest.json` is written before any new API request and records the
 frozen method commit, prompt/schema hashes, provider/model/parameters, six-lecture
 inventory and hashes, Relation ground-truth hash, A-prime/B-prime execution
@@ -104,6 +112,12 @@ schema-valid status, clean matching commit, zero retry/repair state, and an exac
 execution/source-manifest binding. The completion marker is written last and
 binds the immutable plan, final source bundle, per-lecture artifact set, counts,
 and method commit. Both outputs are no-overwrite artifacts.
+
+An all-reused source plan is valid. In that case the execution manifest status
+is `prepared_entity_sources_complete`, the source-manifest status is
+`prepared_all_reused`, and the finalizer must revalidate every copied artifact
+and write the same final bundle and marker without requiring an unnecessary API
+rerun.
 
 ---
 
@@ -553,6 +567,52 @@ Experiment 002B-1 v0.1 uses one deterministic batch unless a separately frozen
 method revision introduces batching. A-prime and B-prime use the same file and
 hash. With zero recoverability, `executable_batch_count = 0` and `batches = []`.
 
+The projection `batch_plan.json` remains the frozen structural source plan in
+`locked_reuse_v0_2`. Candidate-scoped request partitioning is a transport-layer
+revision derived from that plan; it does not alter pair recoverability, pair
+order, KO slots, or the matched ground truth.
+
+---
+
+# `execution_batch_plan.json`
+
+Candidate-scoped Relation execution writes a condition-independent structural
+plan before rendering requests:
+
+```json
+{
+  "artifact_type": "candidate_scoped_relation_execution_plan",
+  "version": "v0.1",
+  "request_partitioning": "one_candidate_pair_per_request_v0_1",
+  "source_batch_plan_sha256": "...",
+  "pair_manifest_sha256": "...",
+  "batch_count": 33,
+  "pair_ids": [],
+  "batches": []
+}
+```
+
+Each batch contains exactly one opaque pair ID, its two neutral endpoint
+references, and the endpoint lecture IDs. It contains no KO names, types,
+source spans, Relation labels, gold evidence, or condition marker. Therefore
+A-prime and B-prime must produce byte-identical execution plans and equal plan
+hashes even though their request payload hashes differ.
+
+Each request contains only:
+
+- the frozen Relation schema and prompt;
+- one candidate pair;
+- exactly its two KO records;
+- the lecture text belonging to one or both endpoints.
+
+Per-pair rendered inputs, raw responses, parsed predictions, and metadata live
+under `*/pairs/`. The runner writes the evaluator-facing aggregate prediction
+only after every pair request has `finish_reason = stop`, parses successfully,
+and passes the unchanged endpoint/schema validator. Any failed pair leaves the
+condition incomplete and no aggregate prediction is written. The runner never
+repairs or substitutes endpoint IDs, and candidate-scoped frozen execution does
+not permit `--overwrite`.
+
 ---
 
 # `projection_errors.json`
@@ -596,6 +656,18 @@ The two conditions must use the same provider, model, request parameters,
 commit, and batch plan. Their input and prediction hashes are
 condition-specific. Formal matched runs require a non-null equal commit and
 `git_dirty_at_start = false`.
+
+Candidate-scoped runs additionally record and compare:
+
+- `request_partitioning`;
+- `execution_manifest_sha256`;
+- `execution_batch_plan_sha256`;
+- `batch_count`, `completed_batch_count`, and `batch_results`;
+- the hash of the complete set of rendered request payloads.
+
+The finalizer and pipeline evaluator reject a candidate-scoped run unless all
+batches completed and A-prime/B-prime used the same execution manifest and
+structural execution plan.
 
 Each condition has an `evaluation_snapshot.json` binding the exact prediction,
 run metadata, `metrics.json`, `matches.json`, and `errors.json` hashes. Pipeline
