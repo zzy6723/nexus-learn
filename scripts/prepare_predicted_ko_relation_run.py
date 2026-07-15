@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prepare a real 002B-1 development run without invoking Git or an API."""
+"""Prepare a repository-verified 002B-1 run without invoking an API."""
 
 from __future__ import annotations
 
@@ -9,6 +9,7 @@ import hashlib
 import json
 import re
 import shutil
+import subprocess
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -44,6 +45,18 @@ DEFAULT_ENTITY_SOURCE_RUNS = [
     / "runs"
     / "holdout_v0_1"
     / "run_01",
+]
+DEFAULT_IMPLEMENTATION_FILES = [
+    ROOT / "scripts" / "prepare_predicted_ko_relation_run.py",
+    ROOT / "scripts" / "run_entity_extraction.py",
+    ROOT / "scripts" / "knowledge_object_matching.py",
+    ROOT / "scripts" / "normalize_predicted_kos.py",
+    ROOT / "scripts" / "align_predicted_kos.py",
+    ROOT / "scripts" / "project_recoverable_relation_pairs.py",
+    ROOT / "scripts" / "run_relation_extraction.py",
+    ROOT / "scripts" / "evaluate_relation_extraction.py",
+    ROOT / "scripts" / "finalize_relation_evaluation_bundle.py",
+    ROOT / "scripts" / "evaluate_predicted_ko_relation_pipeline.py",
 ]
 COMMIT_PATTERN = re.compile(r"[0-9a-f]{40}")
 ALLOWED_KO_TYPES = {"Concept", "Method", "Formula"}
@@ -129,6 +142,94 @@ def sha256_file(path: Path) -> str:
 
 def sha256_json(value: Any) -> str:
     return sha256_text(canonical_json(value))
+
+
+def run_git(args: list[str]) -> bytes:
+    try:
+        result = subprocess.run(
+            ["git", *args],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+        )
+    except OSError as exc:
+        raise PreflightError(f"Unable to execute Git: {exc}") from exc
+    if result.returncode != 0:
+        detail = result.stderr.decode("utf-8", errors="replace").strip()
+        raise PreflightError(
+            f"Git command failed ({' '.join(args)}): {detail or 'no error output'}"
+        )
+    return result.stdout
+
+
+def git_text(args: list[str]) -> str:
+    return run_git(args).decode("utf-8", errors="strict").strip()
+
+
+def verify_repository_state(
+    *,
+    method_commit: str,
+    required_paths: list[Path],
+) -> dict[str, Any]:
+    repository_root = Path(git_text(["rev-parse", "--show-toplevel"])).resolve()
+    if repository_root != ROOT.resolve():
+        raise PreflightError(
+            f"Git root mismatch: expected {ROOT.resolve()}, got {repository_root}."
+        )
+
+    head_commit = git_text(["rev-parse", "--verify", "HEAD"])
+    if head_commit != method_commit:
+        raise PreflightError(
+            "--method-commit does not match the current HEAD: "
+            f"provided {method_commit}, current {head_commit}."
+        )
+
+    branch = git_text(["rev-parse", "--abbrev-ref", "HEAD"])
+    status = git_text(["status", "--porcelain=v1", "--untracked-files=all"])
+    if status:
+        entries = status.splitlines()
+        preview = "; ".join(entries[:10])
+        suffix = " ..." if len(entries) > 10 else ""
+        raise PreflightError(
+            "Formal preflight requires a clean tracked and non-ignored-untracked "
+            f"working tree: {preview}{suffix}"
+        )
+
+    verified_artifacts: list[dict[str, str]] = []
+    unique_paths = sorted(
+        {path.resolve() for path in required_paths},
+        key=lambda path: display_path(path),
+    )
+    for path in unique_paths:
+        if not path.is_file():
+            raise PreflightError(f"Required frozen artifact is missing: {path}")
+        try:
+            relative = path.relative_to(ROOT.resolve()).as_posix()
+        except ValueError as exc:
+            raise PreflightError(
+                f"Required frozen artifact is outside the repository: {path}"
+            ) from exc
+
+        run_git(["ls-files", "--error-unmatch", "--", relative])
+        committed_bytes = run_git(["show", f"{head_commit}:{relative}"])
+        working_bytes = path.read_bytes()
+        if committed_bytes != working_bytes:
+            raise PreflightError(
+                f"Frozen artifact does not match {head_commit}: {relative}"
+            )
+        verified_artifacts.append({
+            "path": relative,
+            "sha256": sha256_bytes(working_bytes),
+        })
+
+    return {
+        "repository_root": ".",
+        "head_commit": head_commit,
+        "branch": branch,
+        "worktree_clean": True,
+        "status_scope": "tracked_and_non_ignored_untracked",
+        "verified_artifacts": verified_artifacts,
+    }
 
 
 def read_json(path: Path, *, label: str) -> dict[str, Any]:
@@ -584,6 +685,21 @@ def prepare_run(args: argparse.Namespace) -> dict[str, Any]:
     oracle_inventory, lecture_inventory, ko_sources = compose_inventories(
         relation_path
     )
+    repository_state = verify_repository_state(
+        method_commit=args.method_commit,
+        required_paths=[
+            relation_path,
+            entity_prompt_path,
+            relation_prompt_path,
+            relation_schema_path,
+            *DEFAULT_IMPLEMENTATION_FILES,
+            *[resolve_path(item["path"]) for item in ko_sources],
+            *[
+                resolve_path(item["path"])
+                for item in lecture_inventory["sources"]
+            ],
+        ],
+    )
     run_dir.mkdir(parents=True, exist_ok=True)
     oracle_path = run_dir / "oracle_knowledge_objects.json"
     lectures_path = run_dir / "lecture_inventory.json"
@@ -668,6 +784,7 @@ def prepare_run(args: argparse.Namespace) -> dict[str, Any]:
         "split": "development_v0_1",
         "prepared_at": datetime.now(timezone.utc).isoformat(),
         "method_commit": args.method_commit,
+        "repository_state": repository_state,
         "claim_boundary": "single-run controlled paired diagnostic",
         "frozen_methods": {
             "entity_prompt": {
@@ -682,6 +799,13 @@ def prepare_run(args: argparse.Namespace) -> dict[str, Any]:
                 "path": display_path(relation_schema_path),
                 "sha256": sha256_file(relation_schema_path),
             },
+            "implementation": [
+                {
+                    "path": display_path(path),
+                    "sha256": sha256_file(path),
+                }
+                for path in DEFAULT_IMPLEMENTATION_FILES
+            ],
         },
         "entity_execution": {
             "provider": "deepseek",

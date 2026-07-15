@@ -62,6 +62,95 @@ class EntityRunnerTest(unittest.TestCase):
             )
         )
 
+    def make_execution_manifest(self) -> Path:
+        run_dir = self.run_root / "bound_run"
+        entity_dir = run_dir / "entity_predictions"
+        source_manifest_path = entity_dir / "source_manifest.json"
+        source_manifest = {
+            "artifact_type": "entity_prediction_source_manifest",
+            "version": "v0.1",
+            "status": "prepared_pending_entity_reruns",
+            "method_commit": FREEZE_COMMIT,
+            "rerun_required_lecture_ids": ["calculus_001"],
+        }
+        source_manifest_path.parent.mkdir(parents=True, exist_ok=True)
+        source_manifest_path.write_text(
+            json.dumps(source_manifest, indent=2) + "\n", encoding="utf-8"
+        )
+
+        prompt_path = (
+            ROOT
+            / "experiments"
+            / "entity_extraction"
+            / "002_prompt_refinement"
+            / "prompt.md"
+        )
+        lecture_path = ROOT / "benchmark" / "lectures" / "development" / "calculus_001.md"
+        lecture_text = runner.extract_lecture_body(
+            lecture_path.read_text(encoding="utf-8")
+        )
+        manifest = {
+            "artifact_type": "predicted_ko_relation_execution_manifest",
+            "version": "v0.1",
+            "status": "prepared_pending_entity_reruns",
+            "experiment": "002B-1",
+            "method_commit": FREEZE_COMMIT,
+            "repository_state": {
+                "head_commit": FREEZE_COMMIT,
+                "worktree_clean": True,
+            },
+            "frozen_methods": {
+                "entity_prompt": {
+                    "path": runner.display_path(prompt_path),
+                    "sha256": runner.sha256_file(prompt_path),
+                },
+                "implementation": [{
+                    "path": runner.display_path(Path(runner.__file__).resolve()),
+                    "sha256": runner.sha256_file(Path(runner.__file__).resolve()),
+                }],
+            },
+            "entity_execution": {
+                "provider": runner.PROVIDER,
+                "model": runner.DEFAULT_MODEL,
+                "request_parameters": {
+                    "temperature": 0.0,
+                    "top_p": 1.0,
+                    "max_tokens": 4096,
+                    "stream": False,
+                    "response_format": {"type": "json_object"},
+                    "thinking": {"type": "disabled"},
+                },
+                "source_manifest": str(source_manifest_path),
+                "source_manifest_sha256": runner.sha256_file(source_manifest_path),
+                "rerun_required_lecture_ids": ["calculus_001"],
+            },
+            "benchmark": {
+                "lecture_model_text_sha256": {
+                    "calculus_001": runner.sha256_text(lecture_text),
+                }
+            },
+        }
+        manifest_path = run_dir / "execution_manifest.json"
+        manifest_path.write_text(
+            json.dumps(manifest, indent=2) + "\n", encoding="utf-8"
+        )
+        return manifest_path
+
+    def bound_args(self, manifest_path: Path, *extra: str) -> list[str]:
+        return [
+            "--experiment",
+            "002_prompt_refinement",
+            "--split",
+            "development",
+            "--ground-truth",
+            "benchmark/ground_truth/development_v0_1.json",
+            "--only",
+            "calculus_001",
+            "--execution-manifest",
+            str(manifest_path),
+            *extra,
+        ]
+
     @staticmethod
     def response(prediction: dict) -> dict:
         return {
@@ -137,6 +226,46 @@ class EntityRunnerTest(unittest.TestCase):
         self.assertTrue(metadata["prediction_schema_error"])
         self.assertTrue((self.run_root / "raw_responses" / "calculus_001.json").is_file())
         self.assertTrue((self.run_root / "output" / "calculus_001.json").is_file())
+
+    def test_manifest_bound_success_uses_frozen_run_directories(self) -> None:
+        manifest_path = self.make_execution_manifest()
+        with mock.patch.dict(os.environ, {"DEEPSEEK_API_KEY": "test-key"}):
+            code, api_mock = self.invoke(
+                self.bound_args(manifest_path),
+                response=self.response(self.valid_prediction()),
+            )
+
+        self.assertEqual(code, 0)
+        api_mock.assert_called_once()
+        entity_dir = manifest_path.parent / "entity_predictions"
+        metadata = json.loads(
+            (entity_dir / "metadata" / "calculus_001.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        self.assertEqual(metadata["run_status"], "completed")
+        self.assertEqual(
+            metadata["execution_binding"]["execution_manifest_sha256"],
+            runner.sha256_file(manifest_path),
+        )
+        self.assertEqual(
+            metadata["execution_binding"]["method_commit"], FREEZE_COMMIT
+        )
+        self.assertTrue(
+            (entity_dir / "output" / "calculus_001.json").is_file()
+        )
+
+    def test_manifest_bound_run_rejects_stale_source_manifest(self) -> None:
+        manifest_path = self.make_execution_manifest()
+        source_manifest_path = (
+            manifest_path.parent / "entity_predictions" / "source_manifest.json"
+        )
+        source_manifest_path.write_text("{}\n", encoding="utf-8")
+        with mock.patch.dict(os.environ, {"DEEPSEEK_API_KEY": "test-key"}):
+            code, api_mock = self.invoke(self.bound_args(manifest_path))
+
+        self.assertEqual(code, 2)
+        api_mock.assert_not_called()
 
 
 if __name__ == "__main__":

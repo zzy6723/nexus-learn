@@ -66,6 +66,14 @@ frozen method commit, prompt/schema hashes, provider/model/parameters, six-lectu
 inventory and hashes, Relation ground-truth hash, A-prime/B-prime execution
 order, and the `single-run controlled paired diagnostic` claim boundary.
 
+Before writing the manifest, the preflight must verify that the supplied method
+commit is the current repository `HEAD`, that the tracked and non-ignored
+untracked working tree is clean, and that every declared prompt, schema,
+benchmark input, lecture, and implementation script is tracked with bytes equal
+to that commit. The resulting `repository_state` and implementation SHA-256
+records are part of the execution manifest. A caller-supplied commit string is
+never accepted on trust alone.
+
 `entity_predictions/source_manifest.json` records one decision per lecture:
 `reuse` or `rerun_required`. Reuse requires exact lecture and Entity-prompt
 hashes, identical model/request parameters, successful parse metadata, the raw
@@ -73,6 +81,12 @@ response and rendered request, and equality between the raw response content and
 the parsed output. Historical `git_dirty_at_start` is retained as audit data but
 does not override direct content traceability. Mixed reuse/rerun inventories are
 permitted only when every lecture has explicit provenance and file hashes.
+
+Every required rerun consumes `execution_manifest.json` directly. The Entity
+runner rejects a different commit, dirty start, stale source-manifest hash,
+undeclared lecture, prompt or runner hash drift, request-parameter drift, and
+artifact-directory overrides. Its metadata binds the exact execution and source
+manifest snapshots used at request time.
 
 ---
 

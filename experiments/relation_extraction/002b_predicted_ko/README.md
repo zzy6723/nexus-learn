@@ -350,6 +350,13 @@ per lecture. Reuse requires exact request reconstruction plus raw-response,
 rendered-input, parsed-output, and metadata traceability. A mixed source inventory
 is allowed only when every lecture records its source and artifact hashes.
 
+The preflight also verifies the repository rather than trusting the supplied
+commit string. It requires `--method-commit` to equal the current `HEAD`, rejects
+tracked or non-ignored untracked changes, verifies required files against their
+committed bytes, and records repository state plus implementation hashes in the
+execution manifest. Runtime output may be locally excluded only under the
+declared 002B run directory; the check does not use `--untracked-files=no`.
+
 The current historical artifacts are expected to resolve as follows:
 
 - reusable: `calculus_002`, `linear_algebra_002`, `probability_001`;
@@ -358,6 +365,25 @@ The current historical artifacts are expected to resolve as follows:
 The three older development outputs remain valid Experiment 001 results, but
 they lack raw responses, rendered request payloads, and the complete hash/status
 metadata required for propagation into 002B-1.
+
+Run each required Entity request separately from the machine-readable plan. The
+manifest fixes all four artifact directories, so they must not be repeated on
+the command line:
+
+```bash
+python3 scripts/run_entity_extraction.py \
+  --experiment 002_prompt_refinement \
+  --split development \
+  --ground-truth benchmark/ground_truth/development_v0_1.json \
+  --execution-manifest experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_01/execution_manifest.json \
+  --only calculus_001
+```
+
+Repeat only by changing `--only` to `linear_algebra_001` and then
+`optimisation_001`. Manifest-bound execution prohibits `--overwrite`, rejects
+dry-runs in the formal directory, and records the execution-manifest and
+source-manifest hashes in each lecture metadata file. Validate one lecture's
+output, raw response, rendered input, and metadata before starting the next.
 
 After final alignment and projection, the Relation runner must consume the
 frozen input artifact directly. It must not reconstruct B-prime KO content from
@@ -424,7 +450,10 @@ Completed:
   scoring cases, matched metadata and evaluation-snapshot integrity failures,
   zero recoverability, failure-locus precedence, grounding-quality separation,
   no-overwrite, stale-output cleanup, and final/invalid completion markers;
-- full regression suite: 83 tests passing across the synthetic pipeline and
+- repository-verified preflight and manifest-bound Entity rerun guards,
+  including exact-HEAD, clean-state, tracked-content, frozen-configuration,
+  stale-manifest, and fixed-artifact-directory checks;
+- full regression suite: 88 tests passing across the synthetic pipeline and
   real-execution bridges. The frozen development Relation
   ground truth remains 41 total pairs, 38 primary pairs, and 3 diagnostic pairs.
 

@@ -4,6 +4,7 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
 from scripts import finalize_relation_evaluation_bundle as finalizer
 from scripts import prepare_predicted_ko_relation_run as preflight
@@ -38,11 +39,32 @@ class PredictedKORunPreflightTest(unittest.TestCase):
             str(self.temporary_root / run_name),
         ])
 
+    @staticmethod
+    def repository_state():
+        return {
+            "repository_root": ".",
+            "head_commit": FREEZE_COMMIT,
+            "branch": "main",
+            "worktree_clean": True,
+            "status_scope": "tracked_and_non_ignored_untracked",
+            "verified_artifacts": [],
+        }
+
+    def prepare(self, args):
+        with mock.patch.object(
+            preflight,
+            "verify_repository_state",
+            return_value=self.repository_state(),
+        ):
+            return preflight.prepare_run(args)
+
     def test_preflight_composes_inputs_and_audits_historical_sources(self) -> None:
         run_dir = self.temporary_root / "run_01"
-        manifest = preflight.prepare_run(self.args())
+        manifest = self.prepare(self.args())
 
         self.assertEqual(manifest["method_commit"], FREEZE_COMMIT)
+        self.assertEqual(manifest["repository_state"], self.repository_state())
+        self.assertGreater(len(manifest["frozen_methods"]["implementation"]), 0)
         self.assertEqual(
             manifest["status"], "prepared_pending_entity_reruns"
         )
@@ -81,15 +103,83 @@ class PredictedKORunPreflightTest(unittest.TestCase):
 
     def test_preflight_is_no_overwrite(self) -> None:
         args = self.args()
-        preflight.prepare_run(args)
+        self.prepare(args)
         with self.assertRaises(preflight.PreflightError):
-            preflight.prepare_run(args)
+            self.prepare(args)
 
     def test_preflight_rejects_non_commit_placeholder(self) -> None:
         args = self.args("invalid_commit")
         args.method_commit = "CURRENT_HEAD"
         with self.assertRaises(preflight.PreflightError):
-            preflight.prepare_run(args)
+            self.prepare(args)
+
+    def test_repository_verification_accepts_exact_clean_commit(self) -> None:
+        artifact = preflight.DEFAULT_ENTITY_PROMPT
+
+        def fake_git(args):
+            if args == ["rev-parse", "--show-toplevel"]:
+                return str(preflight.ROOT).encode("utf-8") + b"\n"
+            if args == ["rev-parse", "--verify", "HEAD"]:
+                return FREEZE_COMMIT.encode("ascii") + b"\n"
+            if args == ["rev-parse", "--abbrev-ref", "HEAD"]:
+                return b"main\n"
+            if args == ["status", "--porcelain=v1", "--untracked-files=all"]:
+                return b""
+            if args[:3] == ["ls-files", "--error-unmatch", "--"]:
+                return args[3].encode("utf-8") + b"\n"
+            if args[0] == "show":
+                return artifact.read_bytes()
+            raise AssertionError(f"Unexpected Git command: {args}")
+
+        with mock.patch.object(preflight, "run_git", side_effect=fake_git):
+            state = preflight.verify_repository_state(
+                method_commit=FREEZE_COMMIT,
+                required_paths=[artifact],
+            )
+
+        self.assertTrue(state["worktree_clean"])
+        self.assertEqual(state["head_commit"], FREEZE_COMMIT)
+        self.assertEqual(
+            state["verified_artifacts"][0]["sha256"],
+            preflight.sha256_file(artifact),
+        )
+
+    def test_repository_verification_rejects_head_mismatch(self) -> None:
+        other_commit = "f" * 40
+        with mock.patch.object(
+            preflight,
+            "run_git",
+            side_effect=[
+                str(preflight.ROOT).encode("utf-8") + b"\n",
+                other_commit.encode("ascii") + b"\n",
+            ],
+        ):
+            with self.assertRaisesRegex(
+                preflight.PreflightError, "does not match the current HEAD"
+            ):
+                preflight.verify_repository_state(
+                    method_commit=FREEZE_COMMIT,
+                    required_paths=[preflight.DEFAULT_ENTITY_PROMPT],
+                )
+
+    def test_repository_verification_rejects_dirty_worktree(self) -> None:
+        with mock.patch.object(
+            preflight,
+            "run_git",
+            side_effect=[
+                str(preflight.ROOT).encode("utf-8") + b"\n",
+                FREEZE_COMMIT.encode("ascii") + b"\n",
+                b"main\n",
+                b"?? notes.txt\n",
+            ],
+        ):
+            with self.assertRaisesRegex(
+                preflight.PreflightError, "requires a clean"
+            ):
+                preflight.verify_repository_state(
+                    method_commit=FREEZE_COMMIT,
+                    required_paths=[preflight.DEFAULT_ENTITY_PROMPT],
+                )
 
 
 class RelationEvaluationFinalizerTest(unittest.TestCase):

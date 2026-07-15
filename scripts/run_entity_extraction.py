@@ -88,6 +88,14 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         help="Run only one lecture_id from the selected ground truth.",
     )
     parser.add_argument(
+        "--execution-manifest",
+        help=(
+            "Optional 002B-1 execution manifest. When supplied, --only is "
+            "required, the lecture/configuration must match the frozen rerun "
+            "plan, and artifact directories are fixed by the manifest run."
+        ),
+    )
+    parser.add_argument(
         "--output-dir",
         help=(
             "Directory for parsed prediction JSON. Default: <experiment>/output "
@@ -167,6 +175,164 @@ def sha256_text(text: str) -> str:
 
 def sha256_file(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def read_json_object(path: Path, *, label: str) -> dict[str, Any]:
+    try:
+        value = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise RuntimeError(f"Unable to read {label} {path}: {exc}") from exc
+    if not isinstance(value, dict):
+        raise RuntimeError(f"{label} must be a JSON object: {path}")
+    return value
+
+
+def manifest_artifact_dirs(manifest_path: Path) -> dict[str, Path]:
+    entity_dir = manifest_path.parent / "entity_predictions"
+    return {
+        "output": entity_dir / "output",
+        "rendered_inputs": entity_dir / "rendered_inputs",
+        "raw_responses": entity_dir / "raw_responses",
+        "metadata": entity_dir / "metadata",
+    }
+
+
+def validate_execution_manifest_binding(
+    *,
+    manifest_path: Path,
+    args: argparse.Namespace,
+    prompt_path: Path,
+    git_commit_at_start: str | None,
+    git_dirty_at_start: bool | None,
+) -> dict[str, Any]:
+    manifest = read_json_object(manifest_path, label="002B-1 execution manifest")
+    if manifest.get("artifact_type") != "predicted_ko_relation_execution_manifest":
+        raise RuntimeError("Execution manifest has an invalid artifact_type.")
+    if manifest.get("version") != "v0.1" or manifest.get("experiment") != "002B-1":
+        raise RuntimeError("Execution manifest is not a 002B-1 v0.1 manifest.")
+    if manifest.get("status") != "prepared_pending_entity_reruns":
+        raise RuntimeError(
+            "Execution manifest is not awaiting Entity reruns: "
+            f"{manifest.get('status')!r}."
+        )
+    if args.split != "development":
+        raise RuntimeError("002B-1 manifest-bound Entity reruns require --split development.")
+    if not args.only:
+        raise RuntimeError("--only is required with --execution-manifest.")
+    if args.overwrite:
+        raise RuntimeError("--overwrite is prohibited for a manifest-bound formal run.")
+    if args.dry_run:
+        raise RuntimeError(
+            "Use an unbound directory for Entity dry-runs; a manifest-bound run "
+            "is reserved for formal artifacts."
+        )
+
+    method_commit = manifest.get("method_commit")
+    repository_state = manifest.get("repository_state")
+    if not isinstance(method_commit, str):
+        raise RuntimeError("Execution manifest has no method_commit.")
+    if not isinstance(repository_state, dict):
+        raise RuntimeError("Execution manifest has no verified repository_state.")
+    if (
+        repository_state.get("head_commit") != method_commit
+        or repository_state.get("worktree_clean") is not True
+    ):
+        raise RuntimeError("Execution manifest repository verification is invalid.")
+    if git_commit_at_start != method_commit:
+        raise RuntimeError(
+            "Current Entity run commit does not match the execution manifest: "
+            f"{git_commit_at_start!r} != {method_commit!r}."
+        )
+    if git_dirty_at_start is not False:
+        raise RuntimeError("Manifest-bound Entity run must start from a clean worktree.")
+
+    frozen_methods = manifest.get("frozen_methods")
+    if not isinstance(frozen_methods, dict):
+        raise RuntimeError("Execution manifest has no frozen_methods object.")
+    prompt_record = frozen_methods.get("entity_prompt")
+    if not isinstance(prompt_record, dict):
+        raise RuntimeError("Execution manifest has no frozen Entity prompt.")
+    expected_prompt_path = resolve_path(prompt_record.get("path"), prompt_path)
+    if expected_prompt_path.resolve() != prompt_path.resolve():
+        raise RuntimeError("Entity experiment prompt path differs from the manifest.")
+    if prompt_record.get("sha256") != sha256_file(prompt_path):
+        raise RuntimeError("Entity prompt hash differs from the execution manifest.")
+
+    implementation = frozen_methods.get("implementation")
+    if not isinstance(implementation, list):
+        raise RuntimeError("Execution manifest has no frozen implementation hashes.")
+    runner_path = Path(__file__).resolve()
+    runner_records = [
+        item
+        for item in implementation
+        if isinstance(item, dict)
+        and isinstance(item.get("path"), str)
+        and resolve_path(item["path"], runner_path).resolve() == runner_path
+    ]
+    if len(runner_records) != 1 or runner_records[0].get("sha256") != sha256_file(
+        runner_path
+    ):
+        raise RuntimeError("Entity runner hash differs from the execution manifest.")
+
+    entity_execution = manifest.get("entity_execution")
+    if not isinstance(entity_execution, dict):
+        raise RuntimeError("Execution manifest has no entity_execution object.")
+    rerun_ids = entity_execution.get("rerun_required_lecture_ids")
+    if not isinstance(rerun_ids, list) or args.only not in rerun_ids:
+        raise RuntimeError(
+            f"Lecture {args.only!r} is not declared as an Entity rerun."
+        )
+    expected_parameters = {
+        "temperature": args.temperature,
+        "top_p": args.top_p,
+        "max_tokens": args.max_tokens,
+        "stream": False,
+        "response_format": {"type": "json_object"},
+        "thinking": {"type": "disabled"},
+    }
+    if entity_execution.get("provider") != PROVIDER:
+        raise RuntimeError("Entity provider differs from the execution manifest.")
+    if entity_execution.get("model") != args.model:
+        raise RuntimeError("Entity model differs from the execution manifest.")
+    if entity_execution.get("request_parameters") != expected_parameters:
+        raise RuntimeError("Entity request parameters differ from the execution manifest.")
+
+    source_manifest_text = entity_execution.get("source_manifest")
+    if not isinstance(source_manifest_text, str):
+        raise RuntimeError("Execution manifest has no Entity source manifest path.")
+    source_manifest_path = resolve_path(source_manifest_text, manifest_path.parent)
+    if not source_manifest_path.is_file():
+        raise RuntimeError(f"Missing Entity source manifest: {source_manifest_path}")
+    source_manifest_hash = sha256_file(source_manifest_path)
+    if entity_execution.get("source_manifest_sha256") != source_manifest_hash:
+        raise RuntimeError("Entity source manifest hash is stale.")
+    source_manifest = read_json_object(
+        source_manifest_path, label="Entity source manifest"
+    )
+    if (
+        source_manifest.get("status") != "prepared_pending_entity_reruns"
+        or source_manifest.get("method_commit") != method_commit
+        or source_manifest.get("rerun_required_lecture_ids") != rerun_ids
+    ):
+        raise RuntimeError("Entity source manifest does not match the execution plan.")
+
+    benchmark = manifest.get("benchmark")
+    lecture_hashes = (
+        benchmark.get("lecture_model_text_sha256")
+        if isinstance(benchmark, dict)
+        else None
+    )
+    if not isinstance(lecture_hashes, dict) or args.only not in lecture_hashes:
+        raise RuntimeError("Execution manifest has no frozen input hash for the lecture.")
+
+    return {
+        "execution_manifest": display_path(manifest_path),
+        "execution_manifest_sha256": sha256_file(manifest_path),
+        "method_commit": method_commit,
+        "source_manifest": display_path(source_manifest_path),
+        "source_manifest_sha256": source_manifest_hash,
+        "expected_input_sha256": lecture_hashes[args.only],
+    }
 
 
 def git_commit() -> str | None:
@@ -437,8 +603,9 @@ def build_metadata(
     json_parse_error: str | None,
     dry_run: bool,
     retry_count: int,
+    execution_binding: dict[str, Any] | None,
 ) -> dict[str, Any]:
-    return {
+    metadata = {
         "provider": PROVIDER,
         "lecture_id": lecture_id,
         "split": split,
@@ -479,6 +646,9 @@ def build_metadata(
         "dry_run": dry_run,
         "run_status": "prepared",
     }
+    if execution_binding is not None:
+        metadata["execution_binding"] = execution_binding
+    return metadata
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -488,7 +658,16 @@ def main(argv: list[str] | None = None) -> int:
     experiment_dir = ENTITY_EXTRACTION_DIR / args.experiment
     prompt_path = experiment_dir / "prompt.md"
     ground_truth_default = ROOT / "benchmark" / "ground_truth" / f"{args.split}_v0_1.json"
-    artifact_defaults = default_artifact_dirs(experiment_dir, args.split)
+    execution_manifest_path = (
+        resolve_path(args.execution_manifest, ROOT)
+        if args.execution_manifest
+        else None
+    )
+    artifact_defaults = (
+        manifest_artifact_dirs(execution_manifest_path)
+        if execution_manifest_path is not None
+        else default_artifact_dirs(experiment_dir, args.split)
+    )
     ground_truth_path = resolve_path(args.ground_truth, ground_truth_default)
     output_dir = resolve_path(args.output_dir, artifact_defaults["output"])
     rendered_inputs_dir = resolve_path(args.rendered_inputs_dir, artifact_defaults["rendered_inputs"])
@@ -503,6 +682,45 @@ def main(argv: list[str] | None = None) -> int:
     if not ground_truth_path.is_file():
         print(f"Missing ground-truth file: {ground_truth_path}", file=sys.stderr)
         return 2
+    if execution_manifest_path is not None:
+        if not execution_manifest_path.is_file():
+            print(
+                f"Missing execution manifest: {execution_manifest_path}",
+                file=sys.stderr,
+            )
+            return 2
+        actual_dirs = {
+            "output": output_dir,
+            "rendered_inputs": rendered_inputs_dir,
+            "raw_responses": raw_responses_dir,
+            "metadata": metadata_dir,
+        }
+        mismatched_dirs = [
+            name
+            for name, expected in artifact_defaults.items()
+            if actual_dirs[name].resolve() != expected.resolve()
+        ]
+        if mismatched_dirs:
+            print(
+                "Manifest-bound artifact directories cannot be overridden: "
+                + ", ".join(mismatched_dirs),
+                file=sys.stderr,
+            )
+            return 2
+
+    execution_binding: dict[str, Any] | None = None
+    if execution_manifest_path is not None:
+        try:
+            execution_binding = validate_execution_manifest_binding(
+                manifest_path=execution_manifest_path,
+                args=args,
+                prompt_path=prompt_path,
+                git_commit_at_start=git_commit_at_start,
+                git_dirty_at_start=git_dirty_at_start,
+            )
+        except RuntimeError as exc:
+            print(f"Execution manifest validation failed: {exc}", file=sys.stderr)
+            return 2
 
     api_key = os.environ.get("DEEPSEEK_API_KEY")
     if not api_key and not args.dry_run:
@@ -555,6 +773,16 @@ def main(argv: list[str] | None = None) -> int:
 
         lecture_markdown = lecture_path.read_text(encoding="utf-8")
         lecture_text = extract_lecture_body(lecture_markdown)
+        if (
+            execution_binding is not None
+            and sha256_text(lecture_text)
+            != execution_binding["expected_input_sha256"]
+        ):
+            print(
+                f"Frozen lecture input hash mismatch for {lecture_id}.",
+                file=sys.stderr,
+            )
+            return 2
         user_prompt = render_user_prompt(user_template, lecture_id, lecture_text)
         request_payload = build_request_payload(
             model=args.model,
@@ -623,6 +851,7 @@ def main(argv: list[str] | None = None) -> int:
                     json_parse_error=json_parse_error,
                     dry_run=args.dry_run,
                     retry_count=retry_count,
+                    execution_binding=execution_binding,
                 )
                 metadata["run_status"] = (
                     "request_failed" if api_response is None else "parse_failed"
@@ -659,6 +888,7 @@ def main(argv: list[str] | None = None) -> int:
                     json_parse_error=json_parse_error,
                     dry_run=args.dry_run,
                     retry_count=retry_count,
+                    execution_binding=execution_binding,
                 )
                 metadata["request_id"] = api_response.get("id")
                 metadata["prediction_schema_valid"] = False
@@ -694,6 +924,7 @@ def main(argv: list[str] | None = None) -> int:
             json_parse_error=json_parse_error,
             dry_run=args.dry_run,
             retry_count=retry_count,
+            execution_binding=execution_binding,
         )
         if args.dry_run:
             metadata["run_status"] = "dry_run_complete"
