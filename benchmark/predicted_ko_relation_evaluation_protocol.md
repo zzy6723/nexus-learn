@@ -179,6 +179,10 @@ Before execution, A-prime and B-prime must have identical:
 
 KO content hashes and request-payload hashes should differ.
 
+The matched Relation runner consumes the frozen A-prime or B-prime input
+artifact directly. Reconstructing B-prime from the Oracle matched-KO inventory is
+an integrity failure even when pair IDs and counts remain unchanged.
+
 ---
 
 # Matched Relation Ground Truth
@@ -283,6 +287,12 @@ Relation classifier did not evaluate that pair.
 
 Run the existing Relation evaluator independently on A-prime and B-prime for the
 same recoverable pair set.
+
+After all Evidence adjudication is resolved, package each final base evaluation
+with the exact predictions and run metadata into a snapshot-bound condition
+bundle. This packaging step does not calculate or modify Relation scores. The
+pipeline evaluator accepts only final bundles whose hashes still match every
+copied artifact.
 
 Report:
 

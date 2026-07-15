@@ -57,6 +57,23 @@ The derivation version for pair, KO, and matched-ground-truth artifacts is:
 predicted_ko_projection_v0_1
 ```
 
+Real development execution is run-specific. The plan and source audit live under
+`runs/development_v0_1/<run_id>/`; a revised method uses a new run ID and does not
+overwrite an earlier execution.
+
+`execution_manifest.json` is written before any new API request and records the
+frozen method commit, prompt/schema hashes, provider/model/parameters, six-lecture
+inventory and hashes, Relation ground-truth hash, A-prime/B-prime execution
+order, and the `single-run controlled paired diagnostic` claim boundary.
+
+`entity_predictions/source_manifest.json` records one decision per lecture:
+`reuse` or `rerun_required`. Reuse requires exact lecture and Entity-prompt
+hashes, identical model/request parameters, successful parse metadata, the raw
+response and rendered request, and equality between the raw response content and
+the parsed output. Historical `git_dirty_at_start` is retained as audit data but
+does not override direct content traceability. Mixed reuse/rerun inventories are
+permitted only when every lecture has explicit provenance and file hashes.
+
 ---
 
 # Reference Types
@@ -469,6 +486,14 @@ IDs, KO order, and pair-to-slot incidence. Only `name`, `type`, and
 `model_input_sha256` are condition-specific and may differ; a structural hash is
 not allowed to conceal a content difference.
 
+The Relation runner must use `model_input` from this artifact verbatim after
+validation. For both conditions it checks the matched-ground-truth, prompt,
+schema, batch-plan, lecture, model-input, and KO-content hashes. It also checks
+neutral slot identity/order and candidate-pair incidence. For A-prime, KO content
+must equal the Oracle content derived from matched ground truth; for B-prime,
+only the content fields may differ. The evaluator-facing
+`matched_knowledge_objects.json` must never replace B-prime model content.
+
 For zero recoverability, `batch_id` and `batch_index` are `null`, `batch_count`
 is `0`, and all four model-input arrays are empty except the frozen Relation
 schema object. `lecture_sha256` binds the exact model-facing lecture text, not an
@@ -545,6 +570,13 @@ Each condition has an `evaluation_snapshot.json` binding the exact prediction,
 run metadata, `metrics.json`, `matches.json`, and `errors.json` hashes. Pipeline
 evaluation reads pair-level correctness from `matches.json`; it does not accept
 caller-supplied aggregate counts as a substitute.
+
+`scripts/finalize_relation_evaluation_bundle.py` creates this snapshot from a
+final authoritative base evaluation. It requires zero pending adjudications and
+a completed, parse-successful, schema-valid run. It copies `metrics.json`,
+`matches.json`, `errors.json`, predictions, and run metadata without rescoring,
+adds the exact prediction hash to the packaged metadata, removes any old marker
+before overwrite, and writes `evaluation_snapshot.json` last.
 
 ---
 

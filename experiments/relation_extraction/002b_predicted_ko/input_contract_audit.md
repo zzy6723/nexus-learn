@@ -124,8 +124,11 @@ and source grounding; raw predicted-ID quality remains an upstream diagnostic.
 
 # Inventory Behavior
 
-The existing Relation runner derives its KO inventory from the candidate pairs.
-Therefore Experiment 002B-1 must freeze two linked manifests:
+The historical Oracle path in the Relation runner derives its KO inventory from
+the candidate pairs. The 002B-1 matched path instead consumes the projection's
+frozen `matched_relation_input` artifact directly, while validating it against
+the evaluator-facing matched ground truth. Therefore Experiment 002B-1 must
+freeze two linked manifests:
 
 - `recoverable_pair_manifest.json` defines the candidate-pair subset and order;
 - `recoverable_ko_manifest.json` is deterministically derived from the pair
@@ -148,6 +151,11 @@ Matched Oracle and Predicted requests must have:
 - the same lecture inventory and lecture order.
 
 Only the KO content placed in each slot differs between conditions.
+
+The runner's `--input-artifact` and `--batch-plan` arguments are mandatory for
+matched execution. Rebuilding both requests from
+`matched_relation_ground_truth.json` would silently turn B-prime back into an
+Oracle-content request and is prohibited.
 
 Slot IDs are assigned deterministically by sorting the recoverable Oracle fully
 qualified references, independently of gold Relation type and direction. The

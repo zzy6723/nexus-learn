@@ -1,7 +1,7 @@
 # Experiment 002B-1: Predicted-KO Relation Classification
 
 **Subtitle:** Controlled Error Propagation from Entity Extraction to Relation Classification
-**Status:** Step 3 contracts and fixture expectations statically validated; Step 4 implementation started
+**Status:** Synthetic Steps 4.0-4.4 complete; real-development execution bridges implemented; formal run pending
 **Created:** 2026-07-14
 
 ---
@@ -236,20 +236,24 @@ experiments/relation_extraction/002b_predicted_ko/
 └── runs/
     ├── development_v0_1/
     │   └── <run_id>/
+    │       ├── execution_manifest.json
+    │       ├── oracle_knowledge_objects.json
+    │       ├── lecture_inventory.json
     │       ├── entity_predictions/
+    │       │   ├── source_manifest.json
+    │       │   ├── rendered_inputs/
+    │       │   ├── raw_responses/
+    │       │   ├── output/
+    │       │   └── metadata/
     │       ├── normalization/
     │       ├── alignment/
-    │       │   ├── alignment.json
-    │       │   ├── alignment_pending.json
-    │       │   └── alignment_resolved.json
-    │       ├── manifests/
-    │       │   ├── recoverable_pair_manifest.json
-    │       │   └── recoverable_ko_manifest.json
-    │       ├── matched_ground_truth/
-    │       │   ├── matched_knowledge_objects.json
-    │       │   └── matched_relation_ground_truth.json
-    │       ├── oracle_control/
-    │       ├── predicted_condition/
+    │       ├── projection/
+    │       ├── A_prime/
+    │       ├── B_prime/
+    │       ├── relation_evaluation/
+    │       │   ├── A0/
+    │       │   ├── A_prime/
+    │       │   └── B_prime/
     │       └── pipeline_evaluation/
     └── locked_reuse_v0_1/
 ```
@@ -266,7 +270,10 @@ Planned implementation components:
 - `scripts/knowledge_object_matching.py` - shared Entity/alignment matcher implemented;
 - `scripts/align_predicted_kos.py` - implemented;
 - `scripts/project_recoverable_relation_pairs.py` - implemented;
-- `scripts/evaluate_predicted_ko_relation_pipeline.py` - implemented.
+- `scripts/evaluate_predicted_ko_relation_pipeline.py` - implemented;
+- `scripts/prepare_predicted_ko_relation_run.py` - implemented;
+- `scripts/finalize_relation_evaluation_bundle.py` - implemented;
+- matched-input support in `scripts/run_relation_extraction.py` - implemented.
 
 Step 4 implementation status:
 
@@ -323,6 +330,72 @@ The evaluator writes two final no-op artifacts and makes no API call.
 
 ---
 
+# Real Development Execution Gates
+
+The real run remains run-specific under `development_v0_1/<run_id>/`. This is
+intentional: a later method correction must create a new run rather than replace
+the first development execution.
+
+After the method code is committed, prepare the run without invoking an API:
+
+```bash
+python3 scripts/prepare_predicted_ko_relation_run.py \
+  --method-commit <FROZEN_METHOD_COMMIT> \
+  --run-dir experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_01
+```
+
+The preflight composes the six-lecture Oracle and lecture inventories, freezes
+both model configurations, and audits historical selected-prompt Entity outputs
+per lecture. Reuse requires exact request reconstruction plus raw-response,
+rendered-input, parsed-output, and metadata traceability. A mixed source inventory
+is allowed only when every lecture records its source and artifact hashes.
+
+The current historical artifacts are expected to resolve as follows:
+
+- reusable: `calculus_002`, `linear_algebra_002`, `probability_001`;
+- rerun required: `calculus_001`, `linear_algebra_001`, `optimisation_001`.
+
+The three older development outputs remain valid Experiment 001 results, but
+they lack raw responses, rendered request payloads, and the complete hash/status
+metadata required for propagation into 002B-1.
+
+After final alignment and projection, the Relation runner must consume the
+frozen input artifact directly. It must not reconstruct B-prime KO content from
+the evaluator-facing matched ground truth:
+
+```bash
+python3 scripts/run_relation_extraction.py \
+  --experiment 002_prompt_refinement \
+  --split development \
+  --ground-truth <projection/matched_relation_ground_truth.json> \
+  --input-artifact <projection/oracle_normalized_input.json> \
+  --batch-plan <projection/batch_plan.json> \
+  --run-dir <run/A_prime> \
+  --dry-run
+```
+
+Use `predicted_normalized_input.json` and the B-prime run directory for the
+paired condition. The runner validates all frozen hashes, neutral slots, pair
+order, lecture text, prompt, schema, and batch contents before rendering.
+
+Once the authoritative base evaluator is final, bind its outputs to the exact
+prediction and run metadata before Step 4.4 composition:
+
+```bash
+python3 scripts/finalize_relation_evaluation_bundle.py \
+  --condition A_prime \
+  --base-evaluation-dir <base_evaluation> \
+  --predictions <A_prime_prediction.json> \
+  --run-metadata <A_prime_metadata.json> \
+  --output-dir <relation_evaluation/A_prime>
+```
+
+The same process applies to A0 and B-prime. The finalizer does not rescore any
+edge; it copies the authoritative final artifacts and writes the hash-bound
+`evaluation_snapshot.json` last.
+
+---
+
 # Execution Status
 
 Completed:
@@ -351,12 +424,13 @@ Completed:
   scoring cases, matched metadata and evaluation-snapshot integrity failures,
   zero recoverability, failure-locus precedence, grounding-quality separation,
   no-overwrite, stale-output cleanup, and final/invalid completion markers;
-- full regression suite: 73 tests passing. The frozen development Relation
+- full regression suite: 83 tests passing across the synthetic pipeline and
+  real-execution bridges. The frozen development Relation
   ground truth remains 41 total pairs, 38 primary pairs, and 3 diagnostic pairs.
 
 Pending:
 
-- development Entity predictions;
+- real-development preflight execution and three required Entity reruns;
 - alignment adjudication;
 - matched A-prime/B-prime development runs;
 - development error analysis and method freeze;

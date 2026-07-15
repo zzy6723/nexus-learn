@@ -8,13 +8,18 @@ from pathlib import Path
 from typing import Any
 from unittest import mock
 
+from scripts import align_predicted_kos as aligner
+from scripts import normalize_predicted_kos as normalizer
+from scripts import project_recoverable_relation_pairs as projector
 from scripts import run_relation_extraction as runner
+from tests.predicted_ko_fixture_support import FIXTURES, read_json
 
 
 ROOT = Path(__file__).resolve().parents[1]
 GROUND_TRUTH = ROOT / "benchmark" / "ground_truth" / "relations_development_v0_1.json"
 ARTIFACT_NAME = "relations_development_v0_1"
 FREEZE_COMMIT = "0123456789abcdef0123456789abcdef01234567"
+PREDICTED_KO_SHARED = FIXTURES / "shared"
 
 
 class RelationRunnerTest(unittest.TestCase):
@@ -56,6 +61,48 @@ class RelationRunnerTest(unittest.TestCase):
         ):
             return_code = runner.main(args)
         return return_code, api_mock
+
+    def build_matched_projection(self) -> Path:
+        oracle = read_json(PREDICTED_KO_SHARED / "synthetic_oracle_inventory.json")
+        predicted = normalizer.normalize_prediction_files(
+            [PREDICTED_KO_SHARED / "synthetic_predicted_inventory.json"]
+        )
+        lectures = read_json(PREDICTED_KO_SHARED / "synthetic_lectures.json")
+        for lecture in lectures["lectures"]:
+            lecture["text"] = lecture["text"].strip() + "\n"
+        relation = read_json(PREDICTED_KO_SHARED / "synthetic_original_ground_truth.json")
+        alignment = aligner.align_inventories(
+            oracle,
+            predicted,
+            lectures,
+            oracle_inventory_sha256=projector.artifact_sha256(oracle),
+            predicted_inventory_sha256=projector.artifact_sha256(predicted),
+        )["alignment"]
+        projection_dir = self.temporary_root / "projection"
+        artifacts = projector.project_artifacts(
+            relation,
+            oracle,
+            predicted,
+            alignment,
+            lectures,
+            matched_ko_path=str(projection_dir / "matched_knowledge_objects.json"),
+            relation_prompt_sha256=runner.sha256_file(
+                ROOT
+                / "experiments"
+                / "relation_extraction"
+                / "002_prompt_refinement"
+                / "prompt.md"
+            ),
+            relation_schema_sha256=runner.sha256_file(
+                ROOT / "docs" / "decisions" / "004-relation-schema.md"
+            ),
+        )
+        projection_dir.mkdir(parents=True)
+        for filename, value in artifacts.items():
+            (projection_dir / filename).write_text(
+                projector.serialize_json(value), encoding="utf-8"
+            )
+        return projection_dir
 
     @staticmethod
     def artifact_path(run_dir: Path, artifact_type: str, suffix: str = ".json") -> Path:
@@ -144,6 +191,78 @@ class RelationRunnerTest(unittest.TestCase):
         self.assertEqual(metadata["input_counts"]["candidate_pairs"], 41)
         self.assertEqual(metadata["request_parameters"]["temperature"], 0.0)
         self.assertIn("request_payload_sha256", metadata["hashes"])
+
+    def test_matched_input_dry_run_uses_frozen_b_prime_content(self) -> None:
+        projection_dir = self.build_matched_projection()
+        run_dir = self.temporary_root / "matched_dry_run"
+        ground_truth = projection_dir / "matched_relation_ground_truth.json"
+        input_artifact = projection_dir / "predicted_normalized_input.json"
+        batch_plan = projection_dir / "batch_plan.json"
+        args = [
+            "--experiment",
+            "002_prompt_refinement",
+            "--ground-truth",
+            str(ground_truth),
+            "--input-artifact",
+            str(input_artifact),
+            "--batch-plan",
+            str(batch_plan),
+            "--run-dir",
+            str(run_dir),
+            "--dry-run",
+        ]
+
+        return_code, api_mock = self.invoke(args)
+
+        self.assertEqual(return_code, 0)
+        api_mock.assert_not_called()
+        artifact_name = ground_truth.stem
+        rendered = self.read_json(
+            run_dir / "rendered_inputs" / f"{artifact_name}.json"
+        )
+        rendered_model_input = json.loads(rendered["messages"][1]["content"])
+        frozen_input = self.read_json(input_artifact)["model_input"]
+        self.assertEqual(rendered_model_input, frozen_input)
+        gradient = next(
+            item
+            for item in rendered_model_input["knowledge_objects"]
+            if item["ko_id"] == "ko_slot_001"
+        )
+        self.assertEqual(gradient["type"], "Method")
+        metadata = self.read_json(
+            run_dir / "metadata" / f"{artifact_name}.json"
+        )
+        self.assertEqual(metadata["condition"], "B_prime")
+        self.assertEqual(
+            metadata["input_artifact_sha256"], runner.sha256_file(input_artifact)
+        )
+        self.assertEqual(
+            metadata["batch_plan_sha256"], runner.sha256_file(batch_plan)
+        )
+
+    def test_matched_input_rejects_stale_model_input_hash(self) -> None:
+        projection_dir = self.build_matched_projection()
+        input_artifact = projection_dir / "predicted_normalized_input.json"
+        value = self.read_json(input_artifact)
+        value["model_input"]["knowledge_objects"][0]["name"] = "Tampered"
+        input_artifact.write_text(json.dumps(value), encoding="utf-8")
+
+        return_code, api_mock = self.invoke([
+            "--experiment",
+            "002_prompt_refinement",
+            "--ground-truth",
+            str(projection_dir / "matched_relation_ground_truth.json"),
+            "--input-artifact",
+            str(input_artifact),
+            "--batch-plan",
+            str(projection_dir / "batch_plan.json"),
+            "--run-dir",
+            str(self.temporary_root / "stale_matched_input"),
+            "--dry-run",
+        ])
+
+        self.assertEqual(return_code, 2)
+        api_mock.assert_not_called()
 
     def test_no_overwrite_rejects_existing_artifacts(self) -> None:
         args = self.runner_args("no_overwrite", "--dry-run")

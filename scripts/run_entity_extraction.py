@@ -41,7 +41,7 @@ def load_dotenv() -> None:
         os.environ.setdefault(key, value)
 
 
-def parse_args() -> argparse.Namespace:
+def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Run Knowledge Object extraction using DeepSeek."
     )
@@ -125,7 +125,7 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Overwrite existing per-lecture artifacts after deleting stale files first.",
     )
-    return parser.parse_args()
+    return parser.parse_args(argv)
 
 
 def resolve_path(path_text: str | None, default: Path) -> Path:
@@ -163,6 +163,10 @@ def display_path(path: Path) -> str:
 
 def sha256_text(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+
+def sha256_file(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
 def git_commit() -> str | None:
@@ -325,6 +329,54 @@ def parse_model_content(content: str) -> dict[str, Any]:
     return parsed
 
 
+def validate_prediction_envelope(
+    prediction: dict[str, Any],
+    *,
+    lecture_id: str,
+) -> None:
+    if set(prediction) != {"lecture_id", "knowledge_objects"}:
+        raise RuntimeError("Entity prediction has unexpected top-level fields.")
+    if prediction.get("lecture_id") != lecture_id:
+        raise RuntimeError("Entity prediction changed the lecture_id.")
+    objects = prediction.get("knowledge_objects")
+    if not isinstance(objects, list):
+        raise RuntimeError("Entity prediction knowledge_objects must be a list.")
+    required_keys = {
+        "id",
+        "name",
+        "type",
+        "aliases",
+        "short_definition",
+        "source_span",
+    }
+    seen_ids: set[str] = set()
+    for index, obj in enumerate(objects):
+        if not isinstance(obj, dict) or set(obj) != required_keys:
+            raise RuntimeError(
+                f"Entity prediction object {index} has unexpected fields."
+            )
+        ko_id = obj.get("id")
+        if not isinstance(ko_id, str) or not ko_id.strip():
+            raise RuntimeError(f"Entity prediction object {index} has invalid id.")
+        if ko_id in seen_ids:
+            raise RuntimeError(f"Entity prediction repeats id {ko_id!r}.")
+        seen_ids.add(ko_id)
+        if obj.get("type") not in {"Concept", "Method", "Formula"}:
+            raise RuntimeError(f"Entity prediction object {index} has invalid type.")
+        aliases = obj.get("aliases")
+        if not isinstance(aliases, list) or not all(
+            isinstance(alias, str) for alias in aliases
+        ):
+            raise RuntimeError(
+                f"Entity prediction object {index} has invalid aliases."
+            )
+        for field in ["name", "short_definition", "source_span"]:
+            if not isinstance(obj.get(field), str) or not obj[field].strip():
+                raise RuntimeError(
+                    f"Entity prediction object {index} has invalid {field}."
+                )
+
+
 def write_json(path: Path, data: Any) -> None:
     os.makedirs(path.parent, exist_ok=True)
     path.write_text(
@@ -405,6 +457,14 @@ def build_metadata(
         "prompt_sha256": sha256_text(prompt_path.read_text(encoding="utf-8")),
         "input_sha256": sha256_text(lecture_text),
         "rendered_input_sha256": sha256_text(user_prompt),
+        "request_payload_sha256": sha256_text(
+            json.dumps(
+                request_payload,
+                ensure_ascii=False,
+                sort_keys=True,
+                separators=(",", ":"),
+            )
+        ),
         "git_commit_at_start": git_commit_at_start,
         "git_dirty_at_start": git_dirty_at_start,
         "usage": api_response.get("usage") if api_response else None,
@@ -413,15 +473,17 @@ def build_metadata(
         "json_parse_success": json_parse_success,
         "json_parse_error": json_parse_error,
         "prediction_schema_valid": None,
+        "prediction_schema_error": None,
         "repair_status": "not_attempted",
         "retry_count": retry_count,
         "dry_run": dry_run,
+        "run_status": "prepared",
     }
 
 
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
     load_dotenv()
-    args = parse_args()
+    args = parse_args(argv)
 
     experiment_dir = ENTITY_EXTRACTION_DIR / args.experiment
     prompt_path = experiment_dir / "prompt.md"
@@ -562,8 +624,54 @@ def main() -> int:
                     dry_run=args.dry_run,
                     retry_count=retry_count,
                 )
+                metadata["run_status"] = (
+                    "request_failed" if api_response is None else "parse_failed"
+                )
+                if api_response is not None:
+                    metadata["request_id"] = api_response.get("id")
+                    raw_path = raw_responses_dir / f"{lecture_id}.json"
+                    if raw_path.is_file():
+                        metadata["raw_response_sha256"] = sha256_file(raw_path)
                 write_json(metadata_dir / f"{lecture_id}.json", metadata)
                 print(f"Run failed for {lecture_id}: {exc}", file=sys.stderr)
+                return 1
+
+            try:
+                validate_prediction_envelope(parsed, lecture_id=lecture_id)
+            except RuntimeError as exc:
+                metadata = build_metadata(
+                    lecture_id=lecture_id,
+                    split=args.split,
+                    ground_truth_path=ground_truth_path,
+                    lecture_path=lecture_path,
+                    prompt_path=prompt_path,
+                    request_payload=request_payload,
+                    lecture_text=lecture_text,
+                    user_prompt=user_prompt,
+                    git_commit_at_start=git_commit_at_start,
+                    git_dirty_at_start=git_dirty_at_start,
+                    started_at=started_at,
+                    latency_ms=latency_ms,
+                    api_response=api_response,
+                    request_success=request_success,
+                    api_error=api_error,
+                    json_parse_success=json_parse_success,
+                    json_parse_error=json_parse_error,
+                    dry_run=args.dry_run,
+                    retry_count=retry_count,
+                )
+                metadata["request_id"] = api_response.get("id")
+                metadata["prediction_schema_valid"] = False
+                metadata["prediction_schema_error"] = str(exc)
+                metadata["run_status"] = "prediction_schema_failed"
+                metadata["raw_response_sha256"] = sha256_file(
+                    raw_responses_dir / f"{lecture_id}.json"
+                )
+                metadata["prediction_sha256"] = sha256_file(
+                    output_dir / f"{lecture_id}.json"
+                )
+                write_json(metadata_dir / f"{lecture_id}.json", metadata)
+                print(f"Entity prediction schema failed: {exc}", file=sys.stderr)
                 return 1
 
         metadata = build_metadata(
@@ -587,6 +695,18 @@ def main() -> int:
             dry_run=args.dry_run,
             retry_count=retry_count,
         )
+        if args.dry_run:
+            metadata["run_status"] = "dry_run_complete"
+        else:
+            metadata["request_id"] = api_response.get("id") if api_response else None
+            metadata["prediction_schema_valid"] = True
+            metadata["run_status"] = "completed"
+            metadata["raw_response_sha256"] = sha256_file(
+                raw_responses_dir / f"{lecture_id}.json"
+            )
+            metadata["prediction_sha256"] = sha256_file(
+                output_dir / f"{lecture_id}.json"
+            )
         write_json(metadata_dir / f"{lecture_id}.json", metadata)
 
         if args.dry_run:

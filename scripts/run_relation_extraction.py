@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render and run Oracle-KO Typed Relation Extraction experiments."""
+"""Render and run Oracle or frozen matched Typed Relation experiments."""
 
 from __future__ import annotations
 
@@ -49,6 +49,27 @@ FORBIDDEN_MODEL_INPUT_KEYS = {
 }
 PAIR_ID_PATTERN = re.compile(r"rel_[a-z0-9]+_\d{3}")
 SAFE_COMPONENT_PATTERN = re.compile(r"[A-Za-z0-9._-]+")
+SLOT_ID_PATTERN = re.compile(r"ko_slot_\d{3}")
+MATCHED_CONDITIONS = {"A_prime", "B_prime"}
+MATCHED_INPUT_REQUIRED_KEYS = {
+    "artifact_type",
+    "version",
+    "condition",
+    "structural_normalization_version",
+    "pair_manifest_sha256",
+    "ko_manifest_sha256",
+    "matched_ground_truth_sha256",
+    "relation_prompt_sha256",
+    "relation_schema_sha256",
+    "batch_plan_sha256",
+    "ko_content_sha256",
+    "model_input_sha256",
+    "lecture_sha256",
+    "batch_id",
+    "batch_index",
+    "batch_count",
+    "model_input",
+}
 
 Ref = tuple[str, str]
 
@@ -92,6 +113,18 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
             "Relation ground-truth JSON. Default: "
             "benchmark/ground_truth/relations_<split>_v0_1.json"
         ),
+    )
+    parser.add_argument(
+        "--input-artifact",
+        help=(
+            "Frozen matched_relation_input artifact produced by the 002B-1 "
+            "projection step. When supplied, its model_input is rendered "
+            "instead of rebuilding KO content from ground truth."
+        ),
+    )
+    parser.add_argument(
+        "--batch-plan",
+        help="Frozen matched Relation batch plan; required with --input-artifact.",
     )
     parser.add_argument(
         "--run-id",
@@ -170,6 +203,14 @@ def require_safe_component(value: str, field: str) -> None:
 
 def sha256_text(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+
+def sha256_bytes(value: bytes) -> str:
+    return hashlib.sha256(value).hexdigest()
+
+
+def sha256_file(path: Path) -> str:
+    return sha256_bytes(path.read_bytes())
 
 
 def canonical_json(data: Any) -> str:
@@ -467,7 +508,18 @@ def validate_model_input(
     for lecture in model_input["lectures"]:
         if not isinstance(lecture, dict) or set(lecture) != {"lecture_id", "text"}:
             raise RuntimeError("Model-facing lecture has unexpected fields.")
-        lecture_ids.add(lecture["lecture_id"])
+        lecture_id = lecture.get("lecture_id")
+        text = lecture.get("text")
+        if (
+            not isinstance(lecture_id, str)
+            or not lecture_id.strip()
+            or not isinstance(text, str)
+            or not text.strip()
+        ):
+            raise RuntimeError("Model-facing lecture has invalid values.")
+        if lecture_id in lecture_ids:
+            raise RuntimeError("Model input contains duplicate lecture IDs.")
+        lecture_ids.add(lecture_id)
 
     object_refs: set[Ref] = set()
     for obj in model_input["knowledge_objects"]:
@@ -479,7 +531,28 @@ def validate_model_input(
             "source_spans",
         }:
             raise RuntimeError("Model-facing Knowledge Object has unexpected fields.")
-        object_refs.add((obj["lecture_id"], obj["ko_id"]))
+        lecture_id = obj.get("lecture_id")
+        ko_id = obj.get("ko_id")
+        name = obj.get("name")
+        ko_type = obj.get("type")
+        source_spans = obj.get("source_spans")
+        if (
+            not isinstance(lecture_id, str)
+            or not lecture_id.strip()
+            or not isinstance(ko_id, str)
+            or not ko_id.strip()
+            or not isinstance(name, str)
+            or not name.strip()
+            or ko_type not in {"Concept", "Method", "Formula"}
+            or not isinstance(source_spans, list)
+            or not source_spans
+            or not all(isinstance(span, str) and span.strip() for span in source_spans)
+        ):
+            raise RuntimeError("Model-facing Knowledge Object has invalid values.")
+        ref = (lecture_id, ko_id)
+        if ref in object_refs:
+            raise RuntimeError("Model input contains duplicate Knowledge Object references.")
+        object_refs.add(ref)
 
     rendered_pair_ids: set[str] = set()
     rendered_refs: set[Ref] = set()
@@ -493,6 +566,8 @@ def validate_model_input(
             raise RuntimeError(f"{pair_id} candidate order is not deterministic.")
         if {ko_a, ko_b} != candidate_members.get(pair_id):
             raise RuntimeError(f"{pair_id} model-facing members do not match candidate.")
+        if pair_id in rendered_pair_ids:
+            raise RuntimeError(f"Model input repeats candidate pair {pair_id}.")
         rendered_pair_ids.add(pair_id)
         rendered_refs.update({ko_a, ko_b})
 
@@ -510,6 +585,134 @@ def validate_model_input(
         "rendered_pair_count": len(rendered_pair_ids),
         "rendered_knowledge_object_count": len(object_refs),
         "rendered_lecture_count": len(lecture_ids),
+    }
+
+
+def load_json_object(path: Path, *, label: str) -> dict[str, Any]:
+    try:
+        value = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise RuntimeError(f"Unable to read {label} {path}: {exc}") from exc
+    if not isinstance(value, dict):
+        raise RuntimeError(f"{label} must be a JSON object.")
+    return value
+
+
+def matched_object_refs(model_input: dict[str, Any]) -> list[Ref]:
+    return [
+        (obj["lecture_id"], obj["ko_id"])
+        for obj in model_input["knowledge_objects"]
+    ]
+
+
+def validate_matched_input_artifact(
+    *,
+    input_artifact_path: Path,
+    batch_plan_path: Path,
+    ground_truth_path: Path,
+    prompt_path: Path,
+    schema_path: Path,
+    expected_model_input: dict[str, Any],
+    candidate_members: dict[str, set[Ref]],
+) -> tuple[dict[str, Any], dict[str, Any]]:
+    artifact = load_json_object(input_artifact_path, label="matched input artifact")
+    missing = MATCHED_INPUT_REQUIRED_KEYS - set(artifact)
+    unknown = set(artifact) - MATCHED_INPUT_REQUIRED_KEYS
+    if missing or unknown:
+        raise RuntimeError(
+            "Matched input artifact fields differ from the frozen contract: "
+            f"missing={sorted(missing)}, unknown={sorted(unknown)}."
+        )
+    if artifact.get("artifact_type") != "matched_relation_input":
+        raise RuntimeError("Unexpected matched input artifact_type.")
+    if artifact.get("version") != "v0.1":
+        raise RuntimeError("Unexpected matched input version.")
+    condition = artifact.get("condition")
+    if condition not in MATCHED_CONDITIONS:
+        raise RuntimeError("Matched input condition must be A_prime or B_prime.")
+
+    expected_hashes = {
+        "matched_ground_truth_sha256": sha256_file(ground_truth_path),
+        "relation_prompt_sha256": sha256_file(prompt_path),
+        "relation_schema_sha256": sha256_file(schema_path),
+        "batch_plan_sha256": sha256_file(batch_plan_path),
+    }
+    for field, expected in expected_hashes.items():
+        if artifact.get(field) != expected:
+            raise RuntimeError(f"Matched input has stale {field}.")
+
+    model_input = artifact.get("model_input")
+    if not isinstance(model_input, dict):
+        raise RuntimeError("Matched input model_input must be an object.")
+    leakage_audit = validate_model_input(model_input, candidate_members)
+    if artifact.get("model_input_sha256") != sha256_json(model_input):
+        raise RuntimeError("Matched input has stale model_input_sha256.")
+    if artifact.get("ko_content_sha256") != sha256_json(
+        model_input["knowledge_objects"]
+    ):
+        raise RuntimeError("Matched input has stale ko_content_sha256.")
+    lecture_hashes = {
+        lecture["lecture_id"]: sha256_text(lecture["text"])
+        for lecture in model_input["lectures"]
+    }
+    if artifact.get("lecture_sha256") != lecture_hashes:
+        raise RuntimeError("Matched input has stale lecture_sha256.")
+
+    for field in ["relation_schema", "lectures", "candidate_pairs"]:
+        if model_input[field] != expected_model_input[field]:
+            raise RuntimeError(
+                f"Matched input {field} differs from matched ground truth rendering."
+            )
+    expected_refs = matched_object_refs(expected_model_input)
+    actual_refs = matched_object_refs(model_input)
+    if actual_refs != expected_refs:
+        raise RuntimeError("Matched input KO slot identities or order changed.")
+    if not all(SLOT_ID_PATTERN.fullmatch(ref[1]) for ref in actual_refs):
+        raise RuntimeError("Matched input contains a non-neutral KO slot ID.")
+    if condition == "A_prime" and (
+        model_input["knowledge_objects"] != expected_model_input["knowledge_objects"]
+    ):
+        raise RuntimeError("A_prime input does not preserve Oracle KO content.")
+
+    batch_plan = load_json_object(batch_plan_path, label="matched batch plan")
+    if batch_plan.get("artifact_type") != "matched_relation_batch_plan":
+        raise RuntimeError("Unexpected matched batch-plan artifact_type.")
+    if batch_plan.get("version") != "v0.1":
+        raise RuntimeError("Unexpected matched batch-plan version.")
+    if batch_plan.get("pair_manifest_sha256") != artifact.get(
+        "pair_manifest_sha256"
+    ) or batch_plan.get("ko_manifest_sha256") != artifact.get(
+        "ko_manifest_sha256"
+    ):
+        raise RuntimeError("Matched input and batch plan reference different manifests.")
+    batches = batch_plan.get("batches")
+    if (
+        batch_plan.get("executable_batch_count") != 1
+        or not isinstance(batches, list)
+        or len(batches) != 1
+        or not isinstance(batches[0], dict)
+    ):
+        raise RuntimeError("v0.1 matched execution requires one deterministic batch.")
+    batch = batches[0]
+    pair_ids = [pair["pair_id"] for pair in model_input["candidate_pairs"]]
+    slot_ids = [ref[1] for ref in actual_refs]
+    if batch.get("pair_ids") != pair_ids or batch.get("ko_slot_ids") != slot_ids:
+        raise RuntimeError("Matched input differs from the frozen batch contents.")
+    if (
+        artifact.get("batch_id") != batch.get("batch_id")
+        or artifact.get("batch_index") != batch.get("batch_index")
+        or artifact.get("batch_count") != batch_plan.get("executable_batch_count")
+    ):
+        raise RuntimeError("Matched input batch identity differs from the batch plan.")
+
+    return model_input, {
+        "condition": condition,
+        "input_artifact": display_path(input_artifact_path),
+        "input_artifact_sha256": sha256_file(input_artifact_path),
+        "batch_plan": display_path(batch_plan_path),
+        "batch_plan_sha256": sha256_file(batch_plan_path),
+        "lecture_sha256": lecture_hashes,
+        "leakage_audit": leakage_audit,
     }
 
 
@@ -698,8 +901,9 @@ def build_metadata(
     git_dirty_at_start: bool | None,
     started_at: str,
     dry_run: bool,
+    matched_context: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
-    return {
+    metadata = {
         "provider": PROVIDER,
         "experiment": experiment,
         "run_id": run_id,
@@ -757,6 +961,15 @@ def build_metadata(
         "dry_run": dry_run,
         "run_status": "prepared",
     }
+    if matched_context is not None:
+        metadata.update({
+            "condition": matched_context["condition"],
+            "input_artifact": matched_context["input_artifact"],
+            "input_artifact_sha256": matched_context["input_artifact_sha256"],
+            "batch_plan": matched_context["batch_plan"],
+            "batch_plan_sha256": matched_context["batch_plan_sha256"],
+        })
+    return metadata
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -779,6 +992,11 @@ def main(argv: list[str] | None = None) -> int:
             / f"relations_{args.split}_v0_1.json"
         )
         ground_truth_path = resolve_path(args.ground_truth, default_ground_truth)
+
+        if bool(args.input_artifact) != bool(args.batch_plan):
+            raise RuntimeError(
+                "--input-artifact and --batch-plan must be supplied together."
+            )
 
         for required_path in [prompt_path, schema_path, ground_truth_path]:
             if not required_path.is_file():
@@ -815,12 +1033,32 @@ def main(argv: list[str] | None = None) -> int:
                 relation_ground_truth["knowledge_object_ground_truths"]
             )
         )
-        model_input, candidate_members, lecture_hashes = build_model_input(
+        expected_model_input, candidate_members, lecture_hashes = build_model_input(
             relation_ground_truth,
             ko_registry,
             lecture_paths,
         )
-        leakage_audit = validate_model_input(model_input, candidate_members)
+        matched_context: dict[str, Any] | None = None
+        if args.input_artifact:
+            input_artifact_path = resolve_path(args.input_artifact, ROOT)
+            batch_plan_path = resolve_path(args.batch_plan, ROOT)
+            for required_path in [input_artifact_path, batch_plan_path]:
+                if not required_path.is_file():
+                    raise RuntimeError(f"Missing required file: {required_path}")
+            model_input, matched_context = validate_matched_input_artifact(
+                input_artifact_path=input_artifact_path,
+                batch_plan_path=batch_plan_path,
+                ground_truth_path=ground_truth_path,
+                prompt_path=prompt_path,
+                schema_path=schema_path,
+                expected_model_input=expected_model_input,
+                candidate_members=candidate_members,
+            )
+            lecture_hashes = matched_context["lecture_sha256"]
+            leakage_audit = matched_context["leakage_audit"]
+        else:
+            model_input = expected_model_input
+            leakage_audit = validate_model_input(model_input, candidate_members)
 
         prompt_text = prompt_path.read_text(encoding="utf-8")
         request_payload = build_request_payload(
@@ -868,6 +1106,7 @@ def main(argv: list[str] | None = None) -> int:
             git_dirty_at_start=git_dirty_at_start,
             started_at=started_at,
             dry_run=args.dry_run,
+            matched_context=matched_context,
         )
         write_json(targets["rendered_input"], request_payload)
 
@@ -896,9 +1135,11 @@ def main(argv: list[str] | None = None) -> int:
             metadata["request_success"] = True
             metadata["model_returned"] = api_response.get("model")
             metadata["system_fingerprint"] = api_response.get("system_fingerprint")
+            metadata["request_id"] = api_response.get("id")
             metadata["finish_reason"] = extract_finish_reason(api_response)
             metadata["usage"] = api_response.get("usage")
             write_json(targets["raw_response"], api_response)
+            metadata["raw_response_sha256"] = sha256_file(targets["raw_response"])
         except RuntimeError as exc:
             metadata["latency_ms"] = int(
                 (time.perf_counter() - request_started) * 1000
@@ -915,6 +1156,7 @@ def main(argv: list[str] | None = None) -> int:
             parsed = parse_model_content(content)
             metadata["json_parse_success"] = True
             write_json(targets["prediction"], parsed)
+            metadata["prediction_sha256"] = sha256_file(targets["prediction"])
         except RuntimeError as exc:
             metadata["json_parse_success"] = False
             metadata["json_parse_error"] = str(exc)
