@@ -67,11 +67,10 @@ def materialize_runtime_bundle(destination: Path) -> tuple[Path, dict[str, str]]
     original_ground_truth_hash = sha256_file(
         shared / "synthetic_original_ground_truth.json"
     )
+    lecture_inventory = read_json(shared / "synthetic_lectures.json")
     lecture_hashes = {
-        "calculus_fixture_001": sha256_file(shared / "calculus_fixture_001.md"),
-        "optimisation_fixture_001": sha256_file(
-            shared / "optimisation_fixture_001.md"
-        ),
+        lecture["lecture_id"]: sha256_bytes(lecture["text"].encode("utf-8"))
+        for lecture in lecture_inventory["lectures"]
     }
 
     alignment_path = bundle / "alignment.json"
@@ -84,13 +83,32 @@ def materialize_runtime_bundle(destination: Path) -> tuple[Path, dict[str, str]]
     update_json(alignment_path, update_alignment)
     alignment_hash = sha256_file(alignment_path)
 
-    for filename in ["alignment_pending.json", "alignment_resolved.json"]:
-        update_json(
-            bundle / filename,
-            lambda value, digest=alignment_hash: value.__setitem__(
-                "alignment_snapshot_sha256", digest
-            ),
-        )
+    update_json(
+        bundle / "alignment_pending.json",
+        lambda value: value.__setitem__("alignment_snapshot_sha256", alignment_hash),
+    )
+
+    def update_alignment_resolved(value: dict[str, Any]) -> None:
+        value["alignment_snapshot_sha256"] = alignment_hash
+        value["oracle_inventory_sha256"] = oracle_inventory_hash
+        value["predicted_inventory_sha256"] = predicted_inventory_hash
+        value["lecture_sha256"] = lecture_hashes
+
+    update_json(bundle / "alignment_resolved.json", update_alignment_resolved)
+    update_json(
+        bundle / "alignment_bundle_complete.json",
+        lambda value: value.__setitem__(
+            "artifacts",
+            {
+                filename: sha256_file(bundle / filename)
+                for filename in [
+                    "alignment.json",
+                    "alignment_pending.json",
+                    "alignment_resolved.json",
+                ]
+            },
+        ),
+    )
 
     pair_manifest_path = bundle / "recoverable_pair_manifest.json"
 
@@ -175,6 +193,30 @@ def materialize_runtime_bundle(destination: Path) -> tuple[Path, dict[str, str]]
         update_json(input_path, update_input)
         input_hashes[condition] = sha256_file(input_path)
 
+    update_json(
+        bundle / "projection_bundle_complete.json",
+        lambda value: value.update({
+            "upstream": {
+                "alignment_bundle_complete_sha256": sha256_file(
+                    bundle / "alignment_bundle_complete.json"
+                )
+            },
+            "artifacts": {
+                filename: sha256_file(bundle / filename)
+                for filename in [
+                    "recoverable_pair_manifest.json",
+                    "recoverable_ko_manifest.json",
+                    "matched_knowledge_objects.json",
+                    "matched_relation_ground_truth.json",
+                    "oracle_normalized_input.json",
+                    "predicted_normalized_input.json",
+                    "batch_plan.json",
+                    "projection_errors.json",
+                ]
+            },
+        }),
+    )
+
     evaluation_hashes: dict[str, str] = {}
     metadata_hashes: dict[str, str] = {}
     prediction_hashes: dict[str, str] = {}
@@ -238,5 +280,28 @@ def materialize_runtime_bundle(destination: Path) -> tuple[Path, dict[str, str]]
                 "provenance", current
             ),
         )
+
+    update_json(
+        bundle / "pipeline_evaluation_complete.json",
+        lambda value: value.update({
+            "upstream": {
+                **provenance,
+                "alignment_bundle_complete_sha256": sha256_file(
+                    bundle / "alignment_bundle_complete.json"
+                ),
+                "projection_bundle_complete_sha256": sha256_file(
+                    bundle / "projection_bundle_complete.json"
+                ),
+            },
+            "artifacts": {
+                filename: sha256_file(bundle / filename)
+                for filename in [
+                    "pipeline_metrics.json",
+                    "pipeline_errors.json",
+                    "pair_transitions.json",
+                ]
+            },
+        }),
+    )
 
     return bundle, provenance

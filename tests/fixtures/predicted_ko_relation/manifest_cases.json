@@ -87,8 +87,8 @@
     },
     {
       "case_id": "manifest_partial_recoverability",
-      "description": "Only two of four primary pairs retain both endpoints.",
-      "input": {"primary_pair_count": 4, "recoverable_pair_ids": ["rel_dev_001", "rel_dev_004"]},
+      "description": "Only two of four primary pairs retain both endpoints after the shared optimisation endpoint becomes unrecoverable.",
+      "input": {"primary_pair_count": 4, "recoverable_pair_ids": ["rel_dev_001", "rel_dev_002"]},
       "expected": {
         "evaluation_status": "final",
         "pair_recoverability": {"numerator": 2, "denominator": 4, "value": 0.5},

@@ -269,6 +269,12 @@ error reason code. Review scopes must be inventory-level, lecture-local,
 non-overlapping, and free of Relation fields. They are converted into complete
 snapshot-bound pending items by the aligner.
 
+The alignment CLI writes `alignment_bundle_complete.json` last. The marker
+contains the evaluation status and SHA-256 of every artifact in the current
+bundle. A directory without a valid marker is incomplete and must not be used
+by projection. During overwrite, the old marker is removed before any artifact
+is replaced; a stale resolved file is removed when the new bundle is draft.
+
 ---
 
 # `recoverable_pair_manifest.json`
@@ -371,7 +377,7 @@ ground-truth structure:
   "artifact_type": "matched_knowledge_object_ground_truth",
   "version": "v0.1",
   "split": "development",
-  "status": "test_fixture",
+  "status": "derived",
   "derivation": {
     "version": "predicted_ko_projection_v0_1",
     "original_ko_ground_truth_sha256": "...",
@@ -416,6 +422,8 @@ the base Relation ground-truth schema and adds:
 Its pair list contains exactly `primary_pairs` from the pair manifest in manifest
 order. Gold source and target references are translated to neutral slot IDs. All
 other Relation annotation fields are preserved. Manual editing is prohibited.
+Because this is a filtered subset of frozen ground truth, its original opaque
+pair IDs may be non-contiguous. They remain unique and lexicographically ordered.
 
 Its `knowledge_object_ground_truths` field points to the deterministic
 `matched_knowledge_objects.json` artifact. This evaluator-facing file is never
@@ -461,15 +469,58 @@ IDs, KO order, and pair-to-slot incidence. Only `name`, `type`, and
 `model_input_sha256` are condition-specific and may differ; a structural hash is
 not allowed to conceal a content difference.
 
+For zero recoverability, `batch_id` and `batch_index` are `null`, `batch_count`
+is `0`, and all four model-input arrays are empty except the frozen Relation
+schema object. `lecture_sha256` binds the exact model-facing lecture text, not an
+unrelated file serialization.
+
 ---
 
 # `batch_plan.json`
 
-The batch plan records `pair_manifest_sha256`, `ko_manifest_sha256`, and an
-ordered list of batches. Each batch contains its ID, one-based index, pair IDs,
-and KO slot IDs. Experiment 002B-1 v0.1 uses one deterministic batch unless a
-separately frozen method revision introduces batching. A-prime and B-prime use
-the same file and hash.
+Required fields include:
+
+```json
+{
+  "artifact_type": "matched_relation_batch_plan",
+  "version": "v0.1",
+  "batching_strategy": "single_deterministic_batch_v0_1",
+  "pair_manifest_sha256": "...",
+  "ko_manifest_sha256": "...",
+  "executable_batch_count": 1,
+  "batches": []
+}
+```
+
+Each batch contains its ID, one-based index, pair IDs, and KO slot IDs.
+Experiment 002B-1 v0.1 uses one deterministic batch unless a separately frozen
+method revision introduces batching. A-prime and B-prime use the same file and
+hash. With zero recoverability, `executable_batch_count = 0` and `batches = []`.
+
+---
+
+# `projection_errors.json`
+
+This non-model-facing diagnostic artifact records:
+
+- the recoverable-primary-pair numerator, denominator, and nullable rate;
+- all unrecoverable primary pairs and their deterministic reason lists;
+- all excluded diagnostic pairs;
+- unmatched extra predicted KOs;
+- nonfatal quality flags on recoverable slots.
+
+Its pair arrays must equal the corresponding pair-manifest arrays exactly. It is
+`final` when projection completed, including the zero-recoverability case. It
+does not contain Relation predictions or scores.
+
+The projection CLI writes `projection_bundle_complete.json` last. The marker
+binds the SHA-256 of the two manifests, both matched ground-truth artifacts,
+both matched inputs, the batch plan, and projection diagnostics. A missing or
+stale marker means the directory is incomplete and must not be consumed by a
+runner or Step 4.4 evaluator. On overwrite, the old marker is removed before
+any managed artifact is replaced. Its `upstream` block also binds the real
+SHA-256 of `alignment_bundle_complete.json`, so projection cannot silently move
+to a different alignment bundle while retaining the same directory shape.
 
 ---
 
@@ -615,10 +666,22 @@ Every original primary pair appears exactly once. Each transition contains:
 - nullable A-prime and B-prime outcomes;
 - recoverability status and reasons;
 - one `primary_failure_locus`;
-- zero or more secondary upstream flags.
+- zero or more secondary quality flags.
 
 Allowed failure loci and precedence are defined in the predicted-KO Relation
 evaluation protocol.
+
+Grounding quality is not a strict failure locus. A strict-correct edge with
+nonexact or unsupported grounding remains a strict pipeline success and carries
+the corresponding secondary quality flag.
+
+The Step 4.4 CLI writes `pipeline_evaluation_complete.json` last. For a final
+evaluation it binds `pipeline_metrics.json`, `pipeline_errors.json`, and
+`pair_transitions.json`, plus any generated zero-recoverability no-op artifacts.
+Its `upstream` block binds the current alignment and projection completion-marker
+hashes and all consumed Relation evaluation snapshots. An invalid evaluation
+removes stale aggregate artifacts and writes only an invalid
+`pipeline_errors.json` before writing an invalid completion marker.
 
 ---
 

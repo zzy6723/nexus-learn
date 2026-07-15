@@ -350,6 +350,13 @@ For every primary `pair_id`, report one primary transition:
 
 For recoverable pairs, also report the matched A-prime to B-prime transition so
 that batch/run variation is not conflated with the representation comparison.
+The matched transition enum is:
+
+- `A_prime_correct_to_B_prime_correct`;
+- `A_prime_correct_to_B_prime_wrong`;
+- `A_prime_wrong_to_B_prime_correct`;
+- `A_prime_wrong_to_B_prime_same_error`;
+- `A_prime_wrong_to_B_prime_different_error`.
 
 The experiment does not causally attribute a B-prime error to one predicted KO
 field. Name, type, and grounding may change together, and a single paired run
@@ -360,39 +367,49 @@ precedence:
 
 ```text
 upstream_unrecoverable
-relation_output_contract_failure
-pre_existing_relation_error
-matched_representation_wrong_relation_type
-matched_representation_wrong_direction
-matched_representation_grounding_failure
+pre_existing_A_prime_strict_error
+B_prime_relation_false_positive
+B_prime_relation_false_negative
+B_prime_relation_type_error
+B_prime_relation_direction_error
+B_prime_other_strict_error
 none
 ```
 
 Definitions:
 
 - `upstream_unrecoverable`: the pair never reaches the matched Relation model;
-- `relation_output_contract_failure`: B-prime output cannot be scored reliably;
-- `pre_existing_relation_error`: A-prime already has an incorrect strict-edge
+- `pre_existing_A_prime_strict_error`: A-prime already has an incorrect strict-edge
   decision and B-prime also remains strict-edge incorrect on the matched pair;
-- `matched_representation_wrong_relation_type`: A-prime is strict-edge correct
-  and B-prime predicts the wrong Relation type;
-- `matched_representation_wrong_direction`: A-prime is strict-edge correct,
-  B-prime has the correct type, and its endpoint direction is wrong;
-- `matched_representation_grounding_failure`: the B-prime edge decision is
-  correct but its Relation grounding is invalid or semantically unsupported;
-- `none`: no observed pipeline decision or grounding failure under this taxonomy.
+- `B_prime_relation_false_positive`: B-prime predicts a graph Relation for a
+  gold hard negative;
+- `B_prime_relation_false_negative`: B-prime predicts `NO_RELATION` for a gold
+  positive;
+- `B_prime_relation_type_error`: B-prime predicts another wrong Relation type;
+- `B_prime_relation_direction_error`: B-prime has the correct type but wrong
+  endpoint direction;
+- `B_prime_other_strict_error`: another scored edge error remains;
+- `none`: B-prime is strict-edge correct.
 
-An `A-prime wrong -> B-prime correct` transition receives `none` unless B-prime
-has a separate grounding-quality failure. The transition remains visible in the
-paired transition report.
+Fatal Relation output-contract failures invalidate the whole pipeline
+evaluation; they are not converted into a pair-level primary locus.
 
-Secondary upstream flags are reported independently:
+An `A-prime wrong -> B-prime correct` transition receives `none`. Grounding
+quality never changes strict edge success and is reported through secondary
+flags instead.
 
-- `name_changed`;
-- `type_mismatch`;
-- `source_span_invalid`;
-- `source_span_insufficient`;
-- `manual_alignment`.
+Secondary quality flags are reported independently:
+
+- `ko_name_changed`;
+- `ko_type_mismatch`;
+- `predicted_source_span_invalid`;
+- `predicted_source_span_insufficient`;
+- `manual_identity_alignment`.
+
+Relation-level secondary flags are:
+
+- `relation_grounding_nonexact`;
+- `relation_grounding_unsupported`.
 
 These flags describe co-occurring input changes and must not be presented as
 causal explanations. Primary-locus counts are mutually exclusive; secondary

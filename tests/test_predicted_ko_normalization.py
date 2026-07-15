@@ -40,7 +40,7 @@ class PredictedKONormalizationTest(unittest.TestCase):
         result = normalizer.normalize_prediction_files([FIXTURE_INPUT])
 
         self.assertEqual(result["artifact_type"], "predicted_ko_normalized_inventory")
-        self.assertEqual(result["split"], "synthetic")
+        self.assertEqual(result["split"], "development")
         self.assertEqual(
             result["structural_normalization_version"],
             normalizer.STRUCTURAL_NORMALIZATION_VERSION,

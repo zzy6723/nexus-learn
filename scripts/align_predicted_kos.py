@@ -784,16 +784,6 @@ def build_alignment_records(
                 predicted_records=predicted_records,
                 errors=errors,
             )
-        elif len(oracle_refs) == 1:
-            assign_structural(
-                oracle_refs,
-                predicted_refs,
-                status="duplicate",
-                note="Multiple predictions independently match one Oracle identity.",
-                oracle_records=oracle_records,
-                predicted_records=predicted_records,
-                errors=errors,
-            )
         else:
             automatic_review_scopes.append({
                 "item_id": f"automatic_alignment_review_{component_index:03d}",
@@ -1075,8 +1065,19 @@ def write_artifacts(output_dir: Path, result: dict[str, Any], *, overwrite: bool
     }
     if result["resolved"] is not None:
         artifacts["alignment_resolved.json"] = result["resolved"]
+    completion_name = "alignment_bundle_complete.json"
+    managed_names = {
+        "alignment.json",
+        "alignment_pending.json",
+        "alignment_resolved.json",
+        completion_name,
+    }
     targets = {name: output_dir / name for name in artifacts}
-    existing = [str(path) for path in targets.values() if path.exists()]
+    existing = [
+        str(output_dir / name)
+        for name in sorted(managed_names)
+        if (output_dir / name).exists()
+    ]
     if existing and not overwrite:
         raise AlignmentError(
             "output_exists",
@@ -1098,8 +1099,39 @@ def write_artifacts(output_dir: Path, result: dict[str, Any], *, overwrite: bool
                 temporary_file.flush()
                 os.fsync(temporary_file.fileno())
                 temporary_paths[name] = Path(temporary_file.name)
+        completion = {
+            "artifact_type": "predicted_ko_alignment_bundle_complete",
+            "version": ALIGNMENT_VERSION,
+            "evaluation_status": result["alignment"]["evaluation_status"],
+            "artifacts": {
+                name: sha256_text(serialize_json(value))
+                for name, value in sorted(artifacts.items())
+            },
+        }
+        with tempfile.NamedTemporaryFile(
+            mode="w",
+            encoding="utf-8",
+            dir=output_dir,
+            prefix=f".{completion_name}.",
+            suffix=".tmp",
+            delete=False,
+        ) as temporary_file:
+            temporary_file.write(serialize_json(completion))
+            temporary_file.flush()
+            os.fsync(temporary_file.fileno())
+            temporary_paths[completion_name] = Path(temporary_file.name)
+
+        # The marker is the validity boundary. Remove it before replacing any
+        # managed artifact so an interrupted overwrite cannot look complete.
+        completion_target = output_dir / completion_name
+        if completion_target.exists():
+            completion_target.unlink()
+        stale_resolved = output_dir / "alignment_resolved.json"
+        if "alignment_resolved.json" not in artifacts and stale_resolved.exists():
+            stale_resolved.unlink()
         for name in sorted(artifacts):
             temporary_paths[name].replace(targets[name])
+        temporary_paths[completion_name].replace(completion_target)
     finally:
         for temporary_path in temporary_paths.values():
             if temporary_path.exists():

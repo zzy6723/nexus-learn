@@ -10,6 +10,14 @@ from scripts.check_relation_ground_truth import validate_ground_truth
 
 ROOT = Path(__file__).resolve().parents[1]
 GROUND_TRUTH_DIR = ROOT / "benchmark" / "ground_truth"
+MATCHED_FIXTURE = (
+    ROOT
+    / "tests"
+    / "fixtures"
+    / "predicted_ko_relation"
+    / "valid_bundle"
+    / "matched_relation_ground_truth.json"
+)
 
 
 def load_ground_truth(name: str) -> dict:
@@ -47,6 +55,18 @@ class RelationGroundTruthCheckerTests(unittest.TestCase):
                 for error in errors
             )
         )
+
+    def test_matched_subset_exception_requires_complete_derivation(self) -> None:
+        data = json.loads(MATCHED_FIXTURE.read_text(encoding="utf-8"))
+        data["pairs"].pop(1)
+        data["derivation"].pop("pair_manifest_sha256")
+
+        errors, _ = validate_ground_truth(data)
+
+        self.assertTrue(
+            any("invalid derivation hashes" in error for error in errors)
+        )
+        self.assertTrue(any("pair IDs must be contiguous" in error for error in errors))
 
 
 if __name__ == "__main__":

@@ -354,6 +354,35 @@ class PredictedKOAlignmentTest(unittest.TestCase):
             )
         )
 
+    def test_one_to_many_name_component_does_not_infer_duplicate(self) -> None:
+        case_input = {
+            "lectures": {"lecture_a": "The gradient is discussed once."},
+            "oracle_objects": [
+                {"lecture_id": "lecture_a", "ko_id": "gradient", "name": "Gradient", "type": "Concept", "aliases": [], "source_spans": ["The gradient is discussed once."]}
+            ],
+            "predicted_objects": [
+                {"lecture_id": "lecture_a", "ko_id": "gradient_a", "name": "Gradient", "type": "Concept", "source_spans": ["The gradient is discussed once."]},
+                {"lecture_id": "lecture_a", "ko_id": "gradient_b", "name": "Gradient", "type": "Concept", "source_spans": ["The gradient is discussed once."]},
+            ],
+            "review_items": [],
+        }
+        oracle, predicted, lectures, review = build_protocol_inputs(case_input)
+        result = aligner.align_inventories(
+            oracle, predicted, lectures, review_data=review
+        )
+        self.assertEqual(
+            result["alignment"]["evaluation_status"],
+            "draft_pending_adjudication",
+        )
+        self.assertEqual(
+            result["alignment"]["oracle_records"][0]["primary_structural_status"],
+            "ambiguous",
+        )
+        self.assertNotIn(
+            "duplicate_predicted_identity",
+            {error["error_code"] for error in result["alignment"]["errors"]},
+        )
+
     def test_repeated_execution_is_byte_deterministic(self) -> None:
         case = self.matrix["cases"][0]
         first = run_case(case)
@@ -414,6 +443,16 @@ class PredictedKOAlignmentTest(unittest.TestCase):
         ]
         self.assertEqual(aligner.main(arguments), 0)
         original = (output_dir / "alignment.json").read_bytes()
+        completion = json.loads(
+            (output_dir / "alignment_bundle_complete.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        self.assertEqual(completion["evaluation_status"], "final")
+        self.assertEqual(
+            completion["artifacts"]["alignment.json"],
+            aligner.sha256_bytes(original),
+        )
         self.assertEqual(aligner.main(arguments), 2)
         self.assertEqual((output_dir / "alignment.json").read_bytes(), original)
 

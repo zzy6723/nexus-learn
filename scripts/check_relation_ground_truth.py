@@ -55,6 +55,15 @@ PAIR_ID_PREFIX_BY_SPLIT = {
     "development": "rel_dev",
     "holdout": "rel_holdout",
 }
+SHA256_PATTERN = re.compile(r"[0-9a-f]{64}")
+MATCHED_DERIVATION_VERSION = "predicted_ko_projection_v0_1"
+MATCHED_DERIVATION_HASH_FIELDS = {
+    "original_ground_truth_sha256",
+    "alignment_sha256",
+    "pair_manifest_sha256",
+    "ko_manifest_sha256",
+    "matched_knowledge_objects_sha256",
+}
 
 
 def parse_args() -> argparse.Namespace:
@@ -403,13 +412,46 @@ def validate_ground_truth(data: Any) -> tuple[list[str], dict[str, Any]]:
                 errors=errors,
             )
 
-    expected_ids = {
-        f"{pair_id_prefix}_{index:03d}" for index in range(1, len(pairs) + 1)
-    }
-    if seen_ids != expected_ids:
-        missing_ids = sorted(expected_ids - seen_ids)
-        extra_ids = sorted(seen_ids - expected_ids)
-        errors.append(f"pair IDs must be contiguous; missing={missing_ids}, extra={extra_ids}")
+    derivation = data.get("derivation")
+    is_matched_artifact = data.get("artifact_type") == "matched_relation_ground_truth"
+    is_derived_matched_subset = False
+    if is_matched_artifact:
+        if data.get("status") not in {"derived", "test_fixture"}:
+            errors.append("matched Relation ground truth requires derived status")
+        elif not isinstance(derivation, dict):
+            errors.append("matched Relation ground truth requires derivation metadata")
+        elif derivation.get("version") != MATCHED_DERIVATION_VERSION:
+            errors.append("matched Relation ground truth has invalid derivation version")
+        else:
+            invalid_hash_fields = sorted(
+                field
+                for field in MATCHED_DERIVATION_HASH_FIELDS
+                if not isinstance(derivation.get(field), str)
+                or not SHA256_PATTERN.fullmatch(derivation[field])
+            )
+            if invalid_hash_fields:
+                errors.append(
+                    "matched Relation ground truth has invalid derivation hashes: "
+                    + str(invalid_hash_fields)
+                )
+            else:
+                is_derived_matched_subset = True
+    if is_derived_matched_subset:
+        ordered_ids = [
+            pair.get("pair_id") for pair in pairs if isinstance(pair, dict)
+        ]
+        if ordered_ids != sorted(ordered_ids):
+            errors.append("derived matched pair IDs must be lexicographically ordered")
+    else:
+        expected_ids = {
+            f"{pair_id_prefix}_{index:03d}" for index in range(1, len(pairs) + 1)
+        }
+        if seen_ids != expected_ids:
+            missing_ids = sorted(expected_ids - seen_ids)
+            extra_ids = sorted(seen_ids - expected_ids)
+            errors.append(
+                f"pair IDs must be contiguous; missing={missing_ids}, extra={extra_ids}"
+            )
 
     referenced_lectures = {
         lecture_id for candidate in seen_unordered_pairs for lecture_id, _ in candidate

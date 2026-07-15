@@ -5,6 +5,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
+from scripts import project_recoverable_relation_pairs as projector
 from scripts.check_relation_ground_truth import validate_ground_truth
 from tests.predicted_ko_fixture_support import (
     FIXTURES,
@@ -41,7 +42,14 @@ class PredictedKOFixtureContractTest(unittest.TestCase):
 
     def test_canonical_template_contains_lower_level_inputs(self) -> None:
         bundle = FIXTURES / "valid_bundle"
-        self.assertTrue((bundle / "batch_plan.json").is_file())
+        for filename in [
+            "batch_plan.json",
+            "projection_errors.json",
+            "alignment_bundle_complete.json",
+            "projection_bundle_complete.json",
+            "pipeline_evaluation_complete.json",
+        ]:
+            self.assertTrue((bundle / filename).is_file())
         for condition in ["A0", "A_prime", "B_prime"]:
             evaluation_dir = bundle / f"{condition}_evaluation"
             for filename in [
@@ -96,6 +104,45 @@ class PredictedKOFixtureContractTest(unittest.TestCase):
             "pair_transitions.json",
         ]:
             self.assertEqual(read_json(bundle / filename)["provenance"], provenance)
+
+        for marker_name in [
+            "alignment_bundle_complete.json",
+            "projection_bundle_complete.json",
+        ]:
+            marker = read_json(bundle / marker_name)
+            self.assertEqual(marker["evaluation_status"], "final")
+            for filename, digest in marker["artifacts"].items():
+                self.assertEqual(digest, sha256_file(bundle / filename))
+        projection_marker = read_json(bundle / "projection_bundle_complete.json")
+        self.assertEqual(
+            projection_marker["upstream"][
+                "alignment_bundle_complete_sha256"
+            ],
+            sha256_file(bundle / "alignment_bundle_complete.json"),
+        )
+        pipeline_marker = read_json(bundle / "pipeline_evaluation_complete.json")
+        self.assertEqual(pipeline_marker["evaluation_status"], "final")
+        self.assertEqual(
+            pipeline_marker["upstream"]["projection_bundle_complete_sha256"],
+            sha256_file(bundle / "projection_bundle_complete.json"),
+        )
+        for filename, digest in pipeline_marker["artifacts"].items():
+            self.assertEqual(digest, sha256_file(bundle / filename))
+
+        artifacts = {
+            filename: read_json(bundle / filename)
+            for filename in projector.MANAGED_FILENAMES
+        }
+        original_ground_truth = read_json(
+            FIXTURES / "shared" / "synthetic_original_ground_truth.json"
+        )
+        projector.validate_projection_artifacts(
+            artifacts,
+            original_pair_ids={
+                pair["pair_id"] for pair in original_ground_truth["pairs"]
+            },
+            alignment_sha256=sha256_file(bundle / "alignment.json"),
+        )
 
     def test_matched_run_metadata_freezes_execution_conditions(self) -> None:
         bundle, _ = materialize_runtime_bundle(self.temporary_root)

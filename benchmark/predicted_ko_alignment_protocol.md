@@ -362,6 +362,22 @@ Review scopes are not repair instructions. They only define which inventory
 objects require a snapshot-bound identity or structural decision. No object may
 occur in more than one review scope.
 
+A one-to-many or many-to-one name-candidate component is automatically marked
+`ambiguous` and sent to review. Graph shape alone never finalizes `duplicate`,
+`split`, `merge`, or `granularity_mismatch`; those semantic statuses require a
+snapshot-bound structural adjudication.
+
+## Conservative Staleness Policy
+
+Each decision is checked against its item-level canonical snapshot. Experiment
+002B-1 additionally binds decisions to the complete Oracle inventory,
+predicted inventory, lecture hash map, and draft alignment snapshot. Therefore
+any upstream byte-level inventory change invalidates prior adjudication even if
+the affected item appears semantically unchanged. This is an intentionally
+strict policy: it may require repeated review after irrelevant formatting or
+ordering changes, but it prevents a decision from surviving an unnoticed
+change to the complete inventory context or candidate graph.
+
 ---
 
 # Development and Locked Reuse

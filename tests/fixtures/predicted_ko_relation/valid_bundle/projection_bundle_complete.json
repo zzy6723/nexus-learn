@@ -1,0 +1,18 @@
+{
+  "artifact_type": "predicted_ko_projection_bundle_complete",
+  "version": "v0.1",
+  "evaluation_status": "final",
+  "upstream": {
+    "alignment_bundle_complete_sha256": "5959595959595959595959595959595959595959595959595959595959595959"
+  },
+  "artifacts": {
+    "recoverable_pair_manifest.json": "7777777777777777777777777777777777777777777777777777777777777777",
+    "recoverable_ko_manifest.json": "8888888888888888888888888888888888888888888888888888888888888888",
+    "matched_knowledge_objects.json": "2222222222222222222222222222222222222222222222222222222222222222",
+    "matched_relation_ground_truth.json": "9999999999999999999999999999999999999999999999999999999999999999",
+    "oracle_normalized_input.json": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+    "predicted_normalized_input.json": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+    "batch_plan.json": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+    "projection_errors.json": "5858585858585858585858585858585858585858585858585858585858585858"
+  }
+}

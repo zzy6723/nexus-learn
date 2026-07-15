@@ -20,7 +20,8 @@
   "batch_count": 1,
   "model_input": {
     "relation_schema": {
-      "allowed_relation_types": ["REQUIRES", "APPLIED_IN", "EXTENDS", "CONTRASTS_WITH", "FORMALIZES", "RELATED_TO", "NO_RELATION"]
+      "graph_relation_types": ["REQUIRES", "APPLIED_IN", "EXTENDS", "CONTRASTS_WITH", "FORMALIZES", "RELATED_TO"],
+      "benchmark_only_relation_types": ["NO_RELATION"]
     },
     "lectures": [
       {

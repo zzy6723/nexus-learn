@@ -182,7 +182,14 @@
           {"lecture_id": "lecture_a", "ko_id": "gradient_one", "name": "Gradient", "type": "Concept", "source_spans": ["The gradient points in the direction of steepest increase."]},
           {"lecture_id": "lecture_a", "ko_id": "gradient_two", "name": "Gradient", "type": "Concept", "source_spans": ["The gradient points in the direction of steepest increase."]}
         ],
-        "review_items": []
+        "review_items": [
+          {"item_id": "review_duplicate_gradient", "oracle_refs": [{"lecture_id": "lecture_a", "ko_id": "gradient"}], "candidate_predicted_refs": [{"lecture_id": "lecture_a", "ko_id": "gradient_one"}, {"lecture_id": "lecture_a", "ko_id": "gradient_two"}], "proposed_alignment_level": "unresolved", "proposed_primary_structural_status": "duplicate", "reason_code": "duplicate_predicted_identity"}
+        ],
+        "adjudication": {
+          "decisions": [
+            {"item_id": "review_duplicate_gradient", "decision": "structural_error", "resulting_alignment_level": "unresolved", "resulting_primary_structural_status": "duplicate", "matched_predicted_ref": null, "rationale": "Both predicted objects independently and completely identify the same Gradient concept."}
+          ]
+        }
       },
       "expected": {
         "evaluation_status": "final",

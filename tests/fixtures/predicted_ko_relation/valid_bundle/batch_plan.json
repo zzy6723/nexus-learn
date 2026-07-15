@@ -1,8 +1,10 @@
 {
   "artifact_type": "matched_relation_batch_plan",
   "version": "v0.1",
+  "batching_strategy": "single_deterministic_batch_v0_1",
   "pair_manifest_sha256": "7777777777777777777777777777777777777777777777777777777777777777",
   "ko_manifest_sha256": "8888888888888888888888888888888888888888888888888888888888888888",
+  "executable_batch_count": 1,
   "batches": [
     {
       "batch_id": "batch_001",

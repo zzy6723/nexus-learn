@@ -2,7 +2,7 @@
 
 **Fixture version:** `synthetic_v0.1`  
 **Artifact contract:** `benchmark/predicted_ko_relation_artifact_contract.md`  
-**Status:** Step 4.0-4.2 contracts and alignment behavior validated
+**Status:** Step 4.0-4.4 synthetic pipeline behavior validated
 
 These fixtures define the expected behavior of Experiment 002B-1 alignment,
 projection, matched-control integrity, and pipeline scoring. They are not a
@@ -36,9 +36,11 @@ The current matrices contain 95 predeclared cases:
 - scoring: 8;
 - integrity: 54.
 
-Step 4.0-4.2 provides executable fixture/hash-chain checks, normalization
-behavior tests, and all 14 alignment cases. Projection and pipeline cases become
-executable only when their corresponding components are implemented.
+Step 4.0-4.4 provides executable fixture/hash-chain checks, normalization and
+alignment behavior tests, all 14 alignment cases, all 10 manifest cases, and all
+8 scoring cases. Pipeline-integrity tests exercise the branches owned by the
+Step 4.4 evaluator; earlier-stage integrity cases remain covered by their owning
+normalizer, aligner, projector, checker, or Relation evaluator tests.
 
 ## Pre-Implementation Contract Correction
 
@@ -58,6 +60,9 @@ Before Step 4 code was written, the v0.1 fixtures were corrected to:
   inventory-level `recoverable` state there;
 - represent semantic and structural review scopes with complete snapshot-bound
   pending/resolved artifacts rather than string heuristics;
+- require one-to-many and many-to-one name components to remain ambiguous until
+  structural adjudication, including semantic duplicate decisions;
+- treat the alignment completion marker as the multi-artifact validity boundary;
 - expand previously uncovered fatal branches.
 
 These are recorded contract corrections, not changes made to fit implementation
@@ -90,6 +95,7 @@ The template also includes:
 - final lower-level `metrics.json`, `matches.json`, and `errors.json` snapshots;
 - matched run metadata and evaluation snapshot manifests;
 - the deterministic single-batch plan;
+- projection diagnostics plus alignment/projection completion markers;
 - manually precomputed golden pipeline outputs.
 
 The pipeline golden files were written from the declared pair outcomes and
@@ -115,9 +121,15 @@ Production validators must never accept symbolic fixture tokens.
 
 ## Executable Validation Status
 
-The Step 4.0-4.2 support, normalizer, and aligner pass alongside the full
-existing Relation regression suite: 50 tests total. All 14 predeclared
-alignment cases are executable and passing, with additional invariants for
-non-greedy conflict handling, bidirectional accounting, deterministic output,
-lecture-local identity, Relation leakage, and stale adjudication. Manifest,
-scoring, and remaining integrity cases remain oracles for Steps 4.3-4.4.
+Step 4.3 adds 12 projection tests. All 10 predeclared manifest cases are
+executable, together with strict matched-ground-truth checking, zero and partial
+recoverability, A-prime/B-prime structural equality, neutral endpoint IDs,
+byte-deterministic output, projection CLI completion-marker consumption,
+no-overwrite behavior, and relevant control-integrity mutations.
+
+Step 4.4 makes all 8 scoring cases executable and validates the canonical
+runtime bundle, full snapshot provenance, pair coverage, matched execution
+metadata, product identity, zero-recoverability no-ops, descriptive failure
+locus precedence, grounding as a secondary quality dimension, no-overwrite,
+invalid-output cleanup, and the final pipeline completion marker. The full
+repository regression suite passes with 73 tests.

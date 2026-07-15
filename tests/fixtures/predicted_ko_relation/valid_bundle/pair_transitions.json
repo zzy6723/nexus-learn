@@ -22,51 +22,59 @@
   "transitions": [
     {
       "pair_id": "rel_dev_001",
+      "category": "positive",
+      "gold_relation_type": "REQUIRES",
       "recoverability_status": "recoverable",
       "unrecoverable_reasons": [],
       "A0_outcome": {"strict_correct": true, "relation_type": "REQUIRES", "error": null},
       "A_prime_outcome": {"strict_correct": true, "relation_type": "REQUIRES", "error": null},
       "B_prime_outcome": {"strict_correct": true, "relation_type": "REQUIRES", "error": null},
       "A0_to_B_prime_transition": "A0_correct_to_B_correct",
-      "A_prime_to_B_prime_transition": "A_prime_correct_to_B_correct",
+      "A_prime_to_B_prime_transition": "A_prime_correct_to_B_prime_correct",
       "primary_failure_locus": "none",
-      "secondary_upstream_flags": ["type_mismatch"]
+      "secondary_quality_flags": ["ko_type_mismatch"]
     },
     {
       "pair_id": "rel_dev_002",
+      "category": "hard_negative",
+      "gold_relation_type": "NO_RELATION",
       "recoverability_status": "recoverable",
       "unrecoverable_reasons": [],
       "A0_outcome": {"strict_correct": true, "relation_type": "NO_RELATION", "error": null},
       "A_prime_outcome": {"strict_correct": true, "relation_type": "NO_RELATION", "error": null},
       "B_prime_outcome": {"strict_correct": true, "relation_type": "NO_RELATION", "error": null},
       "A0_to_B_prime_transition": "A0_correct_to_B_correct",
-      "A_prime_to_B_prime_transition": "A_prime_correct_to_B_correct",
+      "A_prime_to_B_prime_transition": "A_prime_correct_to_B_prime_correct",
       "primary_failure_locus": "none",
-      "secondary_upstream_flags": ["type_mismatch"]
+      "secondary_quality_flags": ["ko_type_mismatch"]
     },
     {
       "pair_id": "rel_dev_003",
+      "category": "positive",
+      "gold_relation_type": "APPLIED_IN",
       "recoverability_status": "recoverable",
       "unrecoverable_reasons": [],
       "A0_outcome": {"strict_correct": true, "relation_type": "APPLIED_IN", "error": null},
       "A_prime_outcome": {"strict_correct": true, "relation_type": "APPLIED_IN", "error": null},
       "B_prime_outcome": {"strict_correct": false, "relation_type": "RELATED_TO", "error": "wrong_relation_type"},
       "A0_to_B_prime_transition": "A0_correct_to_B_wrong_type",
-      "A_prime_to_B_prime_transition": "A_prime_correct_to_B_wrong_type",
-      "primary_failure_locus": "matched_representation_wrong_relation_type",
-      "secondary_upstream_flags": ["type_mismatch"]
+      "A_prime_to_B_prime_transition": "A_prime_correct_to_B_prime_wrong",
+      "primary_failure_locus": "B_prime_relation_type_error",
+      "secondary_quality_flags": ["ko_type_mismatch"]
     },
     {
       "pair_id": "rel_dev_004",
+      "category": "positive",
+      "gold_relation_type": "APPLIED_IN",
       "recoverability_status": "recoverable",
       "unrecoverable_reasons": [],
       "A0_outcome": {"strict_correct": true, "relation_type": "APPLIED_IN", "error": null},
       "A_prime_outcome": {"strict_correct": true, "relation_type": "APPLIED_IN", "error": null},
       "B_prime_outcome": {"strict_correct": true, "relation_type": "APPLIED_IN", "error": null},
       "A0_to_B_prime_transition": "A0_correct_to_B_correct",
-      "A_prime_to_B_prime_transition": "A_prime_correct_to_B_correct",
+      "A_prime_to_B_prime_transition": "A_prime_correct_to_B_prime_correct",
       "primary_failure_locus": "none",
-      "secondary_upstream_flags": []
+      "secondary_quality_flags": []
     }
   ]
 }

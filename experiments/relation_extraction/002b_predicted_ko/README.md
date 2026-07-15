@@ -265,8 +265,8 @@ Planned implementation components:
 - `scripts/normalize_predicted_kos.py` - implemented;
 - `scripts/knowledge_object_matching.py` - shared Entity/alignment matcher implemented;
 - `scripts/align_predicted_kos.py` - implemented;
-- `scripts/project_recoverable_relation_pairs.py`;
-- `scripts/evaluate_predicted_ko_relation_pipeline.py`.
+- `scripts/project_recoverable_relation_pairs.py` - implemented;
+- `scripts/evaluate_predicted_ko_relation_pipeline.py` - implemented.
 
 Step 4 implementation status:
 
@@ -275,8 +275,13 @@ Step 4 implementation status:
 - Step 4.1: content-preserving predicted-KO structural normalization completed;
 - Step 4.2: conservative inventory-level alignment and snapshot-bound
   adjudication completed against synthetic fixtures;
-- Step 4.3: projection and matched artifact generation pending;
-- Step 4.4: pipeline evaluator pending.
+- Step 4.3: deterministic pair/KO projection, neutral slots, matched A-prime/
+  B-prime inputs, diagnostics, hash-chain validation, and completion marker
+  completed against synthetic fixtures;
+- Step 4.4: snapshot-bound pipeline evaluator, recovery/conditional/pipeline
+  metrics, pair transitions, descriptive failure loci, zero-recovery no-op
+  handling, stale-output cleanup, and final completion marker completed against
+  synthetic fixtures.
 
 The normalizer validates raw Entity prediction structure, preserves predicted
 educational content, records real input hashes and provenance, and writes a
@@ -293,6 +298,28 @@ pair membership is intentionally absent and is introduced only by Step 4.3.
 
 The existing Relation evaluator remains authoritative for A-prime and B-prime
 Relation scoring.
+
+The pipeline evaluator does not inspect raw model responses or rescore Relation
+predictions. It consumes final pair-level Relation evaluator artifacts, validates
+their snapshots and matched execution metadata, and composes them with frozen
+alignment and projection outputs. Grounding failures remain secondary quality
+flags and do not change strict edge success.
+
+The Step 4.4 CLI is:
+
+```bash
+python3 scripts/evaluate_predicted_ko_relation_pipeline.py \
+  --original-ground-truth <original_relation_ground_truth.json> \
+  --alignment <alignment_bundle/alignment.json> \
+  --projection-dir <projection_bundle> \
+  --a0-evaluation-dir <A0_evaluation> \
+  --a-prime-evaluation-dir <A_prime_evaluation> \
+  --b-prime-evaluation-dir <B_prime_evaluation> \
+  --output-dir <pipeline_evaluation>
+```
+
+When pair recoverability is zero, omit both matched evaluation-directory flags.
+The evaluator writes two final no-op artifacts and makes no API call.
 
 ---
 
@@ -316,18 +343,24 @@ Completed:
 - Step 4.2 `align_predicted_kos.py`, all 14 predeclared alignment cases,
   bidirectional accounting, deterministic ordering, Relation-leakage,
   no-overwrite, and stale-adjudication tests;
-- full regression suite: 50 tests passing, including the existing Relation
-  evaluator, runner, and ground-truth checker tests.
+- Step 4.3 `project_recoverable_relation_pairs.py`, all 10 predeclared manifest
+  cases, strict matched-ground-truth checks, zero recoverability, matched-input
+  structural controls, projection diagnostics, no-overwrite, and atomic
+  completion-marker tests;
+- Step 4.4 `evaluate_predicted_ko_relation_pipeline.py`, all 8 predeclared
+  scoring cases, matched metadata and evaluation-snapshot integrity failures,
+  zero recoverability, failure-locus precedence, grounding-quality separation,
+  no-overwrite, stale-output cleanup, and final/invalid completion markers;
+- full regression suite: 73 tests passing. The frozen development Relation
+  ground truth remains 41 total pairs, 38 primary pairs, and 3 diagnostic pairs.
 
 Pending:
 
-- executable behavior coverage for the Step 4.3 and Step 4.4 manifest,
-  scoring, and remaining integrity cases;
-- Steps 4.3-4.4 projection and pipeline evaluator implementation;
 - development Entity predictions;
 - alignment adjudication;
 - matched A-prime/B-prime development runs;
 - development error analysis and method freeze;
 - locked reuse evaluation.
 
-No API run has been performed for Experiment 002B-1.
+No API run has been performed for Experiment 002B-1. Step 4.4 validation used
+only synthetic fixtures and mocked or predeclared evaluator artifacts.
