@@ -94,6 +94,7 @@ class EntityRunnerTest(unittest.TestCase):
             "version": "v0.1",
             "status": "prepared_pending_entity_reruns",
             "experiment": "002B-1",
+            "split": "development_v0_1",
             "method_commit": FREEZE_COMMIT,
             "repository_state": {
                 "head_commit": FREEZE_COMMIT,
@@ -112,6 +113,7 @@ class EntityRunnerTest(unittest.TestCase):
             "entity_execution": {
                 "provider": runner.PROVIDER,
                 "model": runner.DEFAULT_MODEL,
+                "input_split": "development",
                 "request_parameters": {
                     "temperature": 0.0,
                     "top_p": 1.0,
@@ -266,6 +268,49 @@ class EntityRunnerTest(unittest.TestCase):
 
         self.assertEqual(code, 2)
         api_mock.assert_not_called()
+
+    def test_manifest_bound_holdout_run_uses_frozen_input_split(self) -> None:
+        manifest_path = self.make_execution_manifest()
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        manifest["split"] = "locked_reuse_v0_1"
+        manifest["entity_execution"]["input_split"] = "holdout"
+        manifest_path.write_text(
+            json.dumps(manifest, indent=2) + "\n", encoding="utf-8"
+        )
+
+        ground_truth_path = self.run_root / "locked_reuse_oracle.json"
+        ground_truth_path.write_text(
+            json.dumps({
+                "split": "holdout",
+                "lectures": [{
+                    "lecture_id": "calculus_001",
+                    "path": "benchmark/lectures/development/calculus_001.md",
+                }],
+            }, indent=2) + "\n",
+            encoding="utf-8",
+        )
+        args = self.bound_args(manifest_path)
+        args[args.index("development")] = "holdout"
+        args[args.index("benchmark/ground_truth/development_v0_1.json")] = str(
+            ground_truth_path
+        )
+
+        with mock.patch.dict(os.environ, {"DEEPSEEK_API_KEY": "test-key"}):
+            code, api_mock = self.invoke(
+                args,
+                response=self.response(self.valid_prediction()),
+            )
+
+        self.assertEqual(code, 0)
+        api_mock.assert_called_once()
+        metadata_path = (
+            manifest_path.parent
+            / "entity_predictions"
+            / "metadata"
+            / "calculus_001.json"
+        )
+        metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+        self.assertEqual(metadata["split"], "holdout")
 
 
 if __name__ == "__main__":

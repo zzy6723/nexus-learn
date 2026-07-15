@@ -224,6 +224,9 @@ Locked reuse evaluation:
 - apply the same protocol without changing it;
 - describe the result as locked reuse, not a fresh unseen 002B holdout.
 
+The executable preflight gate, scope binding, expected reruns, and refreeze
+requirement are recorded in `locked_reuse_preflight.md`.
+
 ---
 
 # Planned Artifacts
@@ -360,6 +363,23 @@ tracked or non-ignored untracked changes, verifies required files against their
 committed bytes, and records repository state plus implementation hashes in the
 execution manifest. Runtime output may be locally excluded only under the
 declared 002B run directory; the check does not use `--untracked-files=no`.
+
+For locked reuse, use the same preflight with an explicit execution scope and
+the frozen 002A Relation holdout:
+
+```bash
+python3 scripts/prepare_predicted_ko_relation_run.py \
+  --method-commit <FROZEN_LOCKED_REUSE_METHOD_COMMIT> \
+  --execution-scope locked_reuse_v0_1 \
+  --relation-ground-truth benchmark/ground_truth/relations_holdout_v0_1.json \
+  --run-dir experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01
+```
+
+This path records execution scope `locked_reuse_v0_1` separately from Entity
+and Relation input split `holdout`. The four Relation holdout lectures have no
+traceable prior Entity artifacts under the selected prompt, so the expected
+source plan is four reruns and zero reuses. See `locked_reuse_preflight.md` before
+creating the formal directory.
 
 The current historical artifacts are expected to resolve as follows:
 
@@ -500,13 +520,14 @@ Completed:
 - final real-development `run_03`, including Entity execution, Relation-blind
   alignment adjudication, 36-pair A-prime/B-prime matched runs, final Relation
   evaluation snapshots, and final pipeline composition;
-- full regression suite: 91 tests passing across the synthetic pipeline and
+- full regression suite: 95 tests passing across the synthetic pipeline and
   real-execution bridges. The frozen development Relation
   ground truth remains 41 total pairs, 38 primary pairs, and 3 diagnostic pairs.
 
 Pending:
 
-- user-managed repository-level method freeze;
+- user-managed repository-level refreeze containing the locked-reuse execution
+  bridge;
 - locked reuse preflight and execution;
 - locked reuse evaluation.
 

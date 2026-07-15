@@ -215,8 +215,22 @@ def validate_execution_manifest_binding(
             "Execution manifest is not awaiting Entity reruns: "
             f"{manifest.get('status')!r}."
         )
-    if args.split != "development":
-        raise RuntimeError("002B-1 manifest-bound Entity reruns require --split development.")
+    entity_execution = manifest.get("entity_execution")
+    if not isinstance(entity_execution, dict):
+        raise RuntimeError("Execution manifest has no entity_execution object.")
+    expected_input_split = entity_execution.get("input_split")
+    if expected_input_split is None and manifest.get("split") in {
+        None,
+        "development_v0_1",
+    }:
+        expected_input_split = "development"
+    if expected_input_split not in {"development", "holdout"}:
+        raise RuntimeError("Execution manifest has no valid Entity input split.")
+    if args.split != expected_input_split:
+        raise RuntimeError(
+            "Manifest-bound Entity split differs from the execution plan: "
+            f"{args.split!r} != {expected_input_split!r}."
+        )
     if not args.only:
         raise RuntimeError("--only is required with --execution-manifest.")
     if args.overwrite:
@@ -274,9 +288,6 @@ def validate_execution_manifest_binding(
     ):
         raise RuntimeError("Entity runner hash differs from the execution manifest.")
 
-    entity_execution = manifest.get("entity_execution")
-    if not isinstance(entity_execution, dict):
-        raise RuntimeError("Execution manifest has no entity_execution object.")
     rerun_ids = entity_execution.get("rerun_required_lecture_ids")
     if not isinstance(rerun_ids, list) or args.only not in rerun_ids:
         raise RuntimeError(
@@ -315,8 +326,20 @@ def validate_execution_manifest_binding(
         or source_manifest.get("rerun_required_lecture_ids") != rerun_ids
     ):
         raise RuntimeError("Entity source manifest does not match the execution plan.")
+    source_scope = source_manifest.get("execution_scope")
+    if source_scope is not None and source_scope != manifest.get("split"):
+        raise RuntimeError("Entity source manifest has a different execution scope.")
+    source_input_split = source_manifest.get("input_split")
+    if source_input_split is not None and source_input_split != expected_input_split:
+        raise RuntimeError("Entity source manifest has a different input split.")
 
     benchmark = manifest.get("benchmark")
+    if (
+        isinstance(benchmark, dict)
+        and benchmark.get("relation_split") is not None
+        and benchmark.get("relation_split") != expected_input_split
+    ):
+        raise RuntimeError("Execution manifest benchmark split is inconsistent.")
     lecture_hashes = (
         benchmark.get("lecture_model_text_sha256")
         if isinstance(benchmark, dict)

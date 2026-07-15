@@ -17,18 +17,25 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_RUN_DIR = (
+DEFAULT_RUN_ROOT = (
     ROOT
     / "experiments"
     / "relation_extraction"
     / "002b_predicted_ko"
     / "runs"
-    / "development_v0_1"
-    / "run_01"
 )
 DEFAULT_RELATION_GROUND_TRUTH = (
     ROOT / "benchmark" / "ground_truth" / "relations_development_v0_1.json"
 )
+DEFAULT_EXECUTION_SCOPE = "development_v0_1"
+RELATION_SPLIT_BY_EXECUTION_SCOPE = {
+    "development_v0_1": "development",
+    "locked_reuse_v0_1": "holdout",
+}
+DEFAULT_RUN_DIR_BY_EXECUTION_SCOPE = {
+    scope: DEFAULT_RUN_ROOT / scope / "run_01"
+    for scope in RELATION_SPLIT_BY_EXECUTION_SCOPE
+}
 DEFAULT_ENTITY_PROMPT = (
     ROOT / "experiments" / "entity_extraction" / "002_prompt_refinement" / "prompt.md"
 )
@@ -64,13 +71,13 @@ ALLOWED_KO_TYPES = {"Concept", "Method", "Formula"}
 
 
 class PreflightError(RuntimeError):
-    """A fatal real-development preflight error."""
+    """A fatal 002B-1 preflight error."""
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description=(
-            "Freeze the 002B-1 development execution plan, compose its Oracle "
+            "Freeze a 002B-1 execution plan, compose its Oracle "
             "and lecture inventories, and audit reusable Entity predictions."
         )
     )
@@ -79,7 +86,22 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         required=True,
         help="Forty-character commit hash for the frozen 002B-1 method.",
     )
-    parser.add_argument("--run-dir", default=str(DEFAULT_RUN_DIR))
+    parser.add_argument(
+        "--run-dir",
+        help=(
+            "Run-specific output directory. Defaults to runs/<execution-scope>/run_01."
+        ),
+    )
+    parser.add_argument(
+        "--execution-scope",
+        choices=sorted(RELATION_SPLIT_BY_EXECUTION_SCOPE),
+        default=DEFAULT_EXECUTION_SCOPE,
+        help=(
+            "Claim-preserving run scope. development_v0_1 consumes the Relation "
+            "development split; locked_reuse_v0_1 consumes the previously used "
+            "002A holdout split."
+        ),
+    )
     parser.add_argument(
         "--relation-ground-truth",
         default=str(DEFAULT_RELATION_GROUND_TRUTH),
@@ -416,7 +438,7 @@ def compose_inventories(
         "split": split,
         "status": "derived",
         "description": (
-            "Relation-development Oracle KO inventory composed without changing "
+            "Relation Oracle KO inventory composed without changing "
             "source Knowledge Object annotations."
         ),
         "allowed_object_types": sorted(allowed_types or ALLOWED_KO_TYPES),
@@ -665,7 +687,9 @@ def prepare_run(args: argparse.Namespace) -> dict[str, Any]:
     if args.entity_max_tokens <= 0 or args.relation_max_tokens <= 0:
         raise PreflightError("Token limits must be positive.")
 
-    run_dir = resolve_path(args.run_dir)
+    run_dir = resolve_path(
+        args.run_dir or DEFAULT_RUN_DIR_BY_EXECUTION_SCOPE[args.execution_scope]
+    )
     if run_dir.exists() and any(run_dir.iterdir()):
         raise PreflightError(
             f"Run directory is not empty: {run_dir}. Use a new run ID."
@@ -686,6 +710,16 @@ def prepare_run(args: argparse.Namespace) -> dict[str, Any]:
     oracle_inventory, lecture_inventory, ko_sources = compose_inventories(
         relation_path
     )
+    relation_split = oracle_inventory["split"]
+    expected_relation_split = RELATION_SPLIT_BY_EXECUTION_SCOPE[
+        args.execution_scope
+    ]
+    if relation_split != expected_relation_split:
+        raise PreflightError(
+            "Execution scope and Relation benchmark split disagree: "
+            f"{args.execution_scope!r} requires {expected_relation_split!r}, "
+            f"but {display_path(relation_path)} declares {relation_split!r}."
+        )
     repository_state = verify_repository_state(
         method_commit=args.method_commit,
         required_paths=[
@@ -750,6 +784,8 @@ def prepare_run(args: argparse.Namespace) -> dict[str, Any]:
         "version": "v0.1",
         "status": "prepared_pending_entity_reruns" if rerun_ids else "prepared_all_reused",
         "method_commit": args.method_commit,
+        "execution_scope": args.execution_scope,
+        "input_split": relation_split,
         "entity_prompt": {
             "path": display_path(entity_prompt_path),
             "sha256": sha256_file(entity_prompt_path),
@@ -782,11 +818,15 @@ def prepare_run(args: argparse.Namespace) -> dict[str, Any]:
         "version": "v0.1",
         "status": execution_status,
         "experiment": "002B-1",
-        "split": "development_v0_1",
+        "split": args.execution_scope,
         "prepared_at": datetime.now(timezone.utc).isoformat(),
         "method_commit": args.method_commit,
         "repository_state": repository_state,
-        "claim_boundary": "single-run controlled paired diagnostic",
+        "claim_boundary": (
+            "single-run controlled paired diagnostic"
+            if args.execution_scope == "development_v0_1"
+            else "locked reuse of the previously evaluated 002A holdout"
+        ),
         "frozen_methods": {
             "entity_prompt": {
                 "path": display_path(entity_prompt_path),
@@ -811,6 +851,7 @@ def prepare_run(args: argparse.Namespace) -> dict[str, Any]:
         "entity_execution": {
             "provider": "deepseek",
             "model": args.entity_model,
+            "input_split": relation_split,
             "request_parameters": {
                 "temperature": args.entity_temperature,
                 "top_p": args.entity_top_p,
@@ -837,6 +878,7 @@ def prepare_run(args: argparse.Namespace) -> dict[str, Any]:
             "matched_execution_order": ["A_prime", "B_prime"],
         },
         "benchmark": {
+            "relation_split": relation_split,
             "original_relation_ground_truth": {
                 "path": display_path(relation_path),
                 "sha256": sha256_file(relation_path),
@@ -896,9 +938,14 @@ def main(argv: list[str] | None = None) -> int:
     except PreflightError as exc:
         print(f"002B-1 preflight failed: {exc}", file=sys.stderr)
         return 1
-    run_dir = resolve_path(args.run_dir)
+    run_dir = resolve_path(
+        args.run_dir or DEFAULT_RUN_DIR_BY_EXECUTION_SCOPE[args.execution_scope]
+    )
     reruns = manifest["entity_execution"]["rerun_required_lecture_ids"]
-    print(f"Wrote 002B-1 development preflight to {display_path(run_dir)}")
+    print(
+        f"Wrote 002B-1 {manifest['split']} preflight to "
+        f"{display_path(run_dir)}"
+    )
     print(f"Entity reruns required: {len(reruns)} ({', '.join(reruns) or 'none'})")
     return 0
 

@@ -107,6 +107,73 @@ class PredictedKORunPreflightTest(unittest.TestCase):
         with self.assertRaises(preflight.PreflightError):
             self.prepare(args)
 
+    def test_preflight_supports_locked_reuse_scope(self) -> None:
+        run_dir = self.temporary_root / "locked_reuse_run_01"
+        args = preflight.parse_args([
+            "--method-commit",
+            FREEZE_COMMIT,
+            "--execution-scope",
+            "locked_reuse_v0_1",
+            "--run-dir",
+            str(run_dir),
+            "--relation-ground-truth",
+            "benchmark/ground_truth/relations_holdout_v0_1.json",
+        ])
+
+        manifest = self.prepare(args)
+
+        self.assertEqual(manifest["split"], "locked_reuse_v0_1")
+        self.assertEqual(manifest["benchmark"]["relation_split"], "holdout")
+        self.assertEqual(manifest["entity_execution"]["input_split"], "holdout")
+        self.assertEqual(
+            manifest["claim_boundary"],
+            "locked reuse of the previously evaluated 002A holdout",
+        )
+        self.assertEqual(
+            manifest["entity_execution"]["rerun_required_lecture_ids"],
+            [
+                "statistics_estimation_001",
+                "numerical_root_finding_001",
+                "differential_equations_001",
+                "graph_algorithms_001",
+            ],
+        )
+        source_manifest = read_json(
+            run_dir / "entity_predictions" / "source_manifest.json"
+        )
+        self.assertEqual(source_manifest["execution_scope"], "locked_reuse_v0_1")
+        self.assertEqual(source_manifest["input_split"], "holdout")
+
+    def test_preflight_rejects_scope_and_relation_split_mismatch(self) -> None:
+        args = preflight.parse_args([
+            "--method-commit",
+            FREEZE_COMMIT,
+            "--run-dir",
+            str(self.temporary_root / "split_mismatch"),
+            "--relation-ground-truth",
+            "benchmark/ground_truth/relations_holdout_v0_1.json",
+        ])
+
+        with self.assertRaisesRegex(
+            preflight.PreflightError,
+            "Execution scope and Relation benchmark split disagree",
+        ):
+            self.prepare(args)
+
+    def test_locked_reuse_default_run_dir_uses_locked_scope(self) -> None:
+        args = preflight.parse_args([
+            "--method-commit",
+            FREEZE_COMMIT,
+            "--execution-scope",
+            "locked_reuse_v0_1",
+        ])
+
+        self.assertIsNone(args.run_dir)
+        self.assertEqual(
+            preflight.DEFAULT_RUN_DIR_BY_EXECUTION_SCOPE[args.execution_scope],
+            preflight.DEFAULT_RUN_ROOT / "locked_reuse_v0_1" / "run_01",
+        )
+
     def test_preflight_rejects_non_commit_placeholder(self) -> None:
         args = self.args("invalid_commit")
         args.method_commit = "CURRENT_HEAD"
