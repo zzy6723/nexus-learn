@@ -1,0 +1,165 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "candidate_pair_universe.schema.json",
+  "title": "Candidate Pair Universe",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_type",
+    "version",
+    "benchmark_split",
+    "scope",
+    "endpoint_order",
+    "pair_order",
+    "source_inventory",
+    "lectures",
+    "total_ko_count",
+    "total_pair_count",
+    "pairs"
+  ],
+  "properties": {
+    "artifact_type": {
+      "const": "candidate_pair_universe"
+    },
+    "version": {
+      "const": "v0.1"
+    },
+    "benchmark_split": {
+      "enum": [
+        "development",
+        "holdout"
+      ]
+    },
+    "scope": {
+      "const": "lecture_local_unordered_nonself"
+    },
+    "endpoint_order": {
+      "const": "ascending_fully_qualified_ko_reference"
+    },
+    "pair_order": {
+      "const": "ascending_lecture_then_endpoint_references"
+    },
+    "source_inventory": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256",
+        "normalized_content_sha256",
+        "source_split",
+        "structural_normalization_version"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "normalized_content_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "source_split": {
+          "type": "string",
+          "minLength": 1
+        },
+        "structural_normalization_version": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "lectures": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "lecture_id",
+          "ko_count",
+          "pair_count"
+        ],
+        "properties": {
+          "lecture_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "ko_count": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "pair_count": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "total_ko_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "total_pair_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "pairs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/pair"
+      }
+    }
+  },
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "ko_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "lecture_id",
+        "ko_id"
+      ],
+      "properties": {
+        "lecture_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "ko_id": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "pair": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "pair_id",
+        "lecture_id",
+        "ko_a",
+        "ko_b"
+      ],
+      "properties": {
+        "pair_id": {
+          "type": "string",
+          "pattern": "^cand_(dev|holdout)_[0-9]{3,}$"
+        },
+        "lecture_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "ko_a": {
+          "$ref": "#/$defs/ko_ref"
+        },
+        "ko_b": {
+          "$ref": "#/$defs/ko_ref"
+        }
+      }
+    }
+  }
+}

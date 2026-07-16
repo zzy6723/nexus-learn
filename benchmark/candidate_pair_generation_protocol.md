@@ -51,27 +51,29 @@ compare sets, not trust a declared count.
 
 ## Annotation States
 
-Each exhaustive pair receives exactly one state:
+Each exhaustive pair receives exactly one candidate label:
 
-- `positive`: one frozen graph Relation applies;
-- `no_relation`: no graph Relation is supported by the material;
-- `ambiguous`: the frozen guide permits more than one acceptable outcome;
-- `schema_gap`: a meaningful relation exists but the frozen Relation schema
-  cannot represent it.
+- `IN_SCHEMA_RELATION`: one or more frozen graph Relations apply;
+- `NO_IN_SCHEMA_RELATION`: no frozen graph Relation is supported by the
+  material;
+- `AMBIGUOUS`: the frozen guide does not permit a unique defensible outcome;
+- `OUT_OF_SCHEMA_RELATION`: a meaningful relation exists but the frozen
+  Relation schema cannot represent it.
 
 Two predicted mentions that appear to denote the same educational object are
 not silently removed. Until Experiment 002C provides canonical identity, their
-pair remains in the exhaustive universe and is annotated as `schema_gap` with
-an identity-or-duplicate reason. It is excluded from primary candidate scoring
-and reported separately.
+pair remains in the exhaustive universe and is annotated as
+`OUT_OF_SCHEMA_RELATION` with an identity-or-duplicate reason. It is excluded
+from primary candidate scoring and reported separately.
 
-Primary candidate precision and recall use only `positive` and `no_relation`
-pairs. `ambiguous` and `schema_gap` pairs are reported separately and never
-silently converted to negatives.
+Primary candidate precision and recall use only `IN_SCHEMA_RELATION` and
+`NO_IN_SCHEMA_RELATION` pairs. `AMBIGUOUS` and `OUT_OF_SCHEMA_RELATION` pairs
+are reported separately and never silently converted to negatives.
 
 Positive annotations must include Relation type, direction when applicable,
 exact Evidence spans, and rationale under the existing Relation annotation
-guide. Negative annotations must record a concise reason for `no_relation`.
+guide. `NO_IN_SCHEMA_RELATION` annotations must record a concise negative
+rationale.
 
 ## Existing Benchmark Limitation
 
@@ -133,14 +135,24 @@ candidate_recall = |C intersect P_pred| / |P_pred|
 candidate_precision = |C intersect P_pred| / |C_primary|
 retention_rate_primary = |C_primary| / |U_primary|
 reduction_ratio_primary = 1 - retention_rate_primary
+workload_retained_total = |C| / |U_all|
+workload_reduction_total = 1 - workload_retained_total
+actionable_yield_total = |C intersect P_pred| / |C|
 ```
+
+`U_all` is the complete exhaustive universe, including finalized `AMBIGUOUS`
+and `OUT_OF_SCHEMA_RELATION` diagnostic pairs. Primary precision does not treat
+diagnostics as ordinary false positives, while total workload metrics still
+count every pair that would be sent to the Relation classifier.
+`actionable_yield_total` is reported as an operational diagnostic, not as
+primary candidate precision.
 
 If `P_pred` is empty, candidate recall is `null`, not zero. If `C_primary` is
 empty, candidate precision is `null`. If the benchmark is not exhaustive,
 candidate precision and primary retention/reduction metrics are invalid and
-must not be emitted as final values. Retention of `ambiguous` and `schema_gap`
-pairs is reported as separate counts and must not alter the primary
-denominator.
+must not be emitted as final values. Retention of `AMBIGUOUS` and
+`OUT_OF_SCHEMA_RELATION` pairs is reported as separate counts and must not alter
+the primary denominator.
 
 ## Upstream and End-to-End Metrics
 
@@ -170,6 +182,51 @@ After Relation Classification, also report:
 - `NO_RELATION` workload;
 - exact and semantically supported Evidence rates;
 - request count, token usage, latency, and estimated cost.
+
+Candidate recall must also be broken down by lecture and by primary Relation
+type. Labels with zero positive support are reported as unsupported rather than
+assigned a misleading score.
+
+## Error Taxonomy
+
+Candidate-generation evaluation records at least:
+
+- `missed_positive`: an in-schema positive pair was not retained;
+- `retained_negative`: a primary `NO_IN_SCHEMA_RELATION` pair was retained;
+- `retained_ambiguous`: a finalized `AMBIGUOUS` pair was retained;
+- `retained_out_of_schema`: an `OUT_OF_SCHEMA_RELATION` or identity pair was
+  retained;
+- `unknown_pair`: output references a pair outside the frozen universe;
+- `duplicate_pair`: output repeats an unordered pair;
+- `endpoint_mismatch`: pair ID and endpoints do not match the universe;
+- `inventory_hash_mismatch`: generator and benchmark inventories differ;
+- `method_mismatch`: compared outputs do not use the frozen generator method.
+
+Structural and hash errors invalidate evaluation. Retrieval errors remain valid
+measured outcomes.
+
+## Success Criteria
+
+The machine-readable criteria are stored in:
+
+`benchmark/candidate_pair_generation_success_criteria_v0_1.json`
+
+Selection priority is:
+
+1. candidate recall and missed-positive count;
+2. downstream typed-edge recall;
+3. total pair reduction;
+4. precision, token use, and cost.
+
+On development, a Rule-Filtered method is selectable only if it retains every
+primary positive pair in every lecture and reduces the total pair workload by
+at least 20 percent. On lecture-disjoint holdout, it must retain at least 95
+percent of primary positives, miss no more than one positive pair, reduce total
+pair workload by at least 20 percent, and keep downstream typed-edge recall
+within 0.05 absolute of All Pairs.
+
+If no Rule-Filtered method passes the relevant gate, All Pairs remains the
+selected method. Precision or cost improvements never override the recall gate.
 
 ## Baseline Comparability
 
@@ -217,5 +274,9 @@ final result.
 
 ## Current Status
 
-This protocol defines the benchmark and metric boundary. No 002B-2 benchmark,
-generator, evaluator result, or holdout claim has yet been completed.
+The 002B-2 development pair universe has been generated and hash-bound: 39
+predicted KOs across four inspected lectures produce 176 lecture-local unordered
+pairs. A separate ground-truth scaffold contains 176 draft annotations.
+
+Exhaustive semantic annotation, the strict checker, generator implementations,
+evaluation results, and holdout claims remain incomplete.

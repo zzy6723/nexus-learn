@@ -19,6 +19,15 @@ benchmark/
 ├── predicted_ko_relation_evaluation_protocol.md
 ├── predicted_ko_relation_artifact_contract.md
 ├── candidate_pair_generation_protocol.md
+├── candidate_pair_generation_success_criteria_v0_1.json
+├── candidate_pair_annotation_guidelines.md
+├── schema/
+│   ├── candidate_pair_universe.schema.json
+│   └── candidate_pair_ground_truth.schema.json
+├── candidate_pairs/
+│   └── development_v0_1/
+│       ├── pair_universe.json
+│       └── pair_universe_complete.json
 ├── lectures/
 │   ├── development/
 │   │   ├── calculus_001.md
@@ -38,7 +47,8 @@ benchmark/
 │   ├── holdout_v0_1.json
 │   ├── relation_holdout_knowledge_objects_v0_1.json
 │   ├── relations_development_v0_1.json
-│   └── relations_holdout_v0_1.json
+│   ├── relations_holdout_v0_1.json
+│   └── candidate_pairs_development_v0_1.json
 └── results/
 ```
 
@@ -158,11 +168,25 @@ Experiment 002B-2 introduces candidate pair generation. Its protocol is:
 
 - `candidate_pair_generation_protocol.md`.
 
+Its development pair universe is now generated from the inspected 002B-1
+predicted-KO inventory:
+
+- 4 lecture-local inventories;
+- 39 predicted Knowledge Objects;
+- 176 exhaustive unordered non-self pairs.
+
+`candidate_pairs/development_v0_1/pair_universe.json` is deterministic and
+hash-bound. `ground_truth/candidate_pairs_development_v0_1.json` is a separate
+draft scaffold with 176 unlabelled annotations. It is not frozen ground truth
+and cannot yet support Candidate Generator evaluation.
+
 The existing 40-pair Relation holdout is not an exhaustive annotation of all
 possible pairs among its Knowledge Objects. Unlisted pairs must not be treated
 as `NO_RELATION`, and candidate precision, reduction, or all-pairs edge recall
 must not be calculated from that selected benchmark. Experiment 002B-2 requires
-a separately versioned complete pair universe.
+a separately versioned complete pair universe. That universe now exists for
+development; exhaustive semantic annotation and strict validation remain
+pending.
 
 ---
 

@@ -1,0 +1,41 @@
+{
+  "artifact_type": "candidate_pair_generation_success_criteria",
+  "version": "v0.1",
+  "status": "ready_to_freeze_before_generator_implementation",
+  "selection_priority": [
+    "candidate_recall",
+    "downstream_typed_edge_recall",
+    "workload_reduction_total",
+    "candidate_precision_and_cost"
+  ],
+  "development": {
+    "candidate_recall_min": 1.0,
+    "missed_positive_count_max": 0,
+    "per_lecture_candidate_recall_min": 1.0,
+    "workload_reduction_total_min": 0.2,
+    "downstream_typed_edge_recall_drop_vs_all_pairs_max": 0.0
+  },
+  "holdout": {
+    "candidate_recall_min": 0.95,
+    "missed_positive_count_max": 1,
+    "workload_reduction_total_min": 0.2,
+    "downstream_typed_edge_recall_drop_vs_all_pairs_max": 0.05,
+    "minimum_positive_support_for_no_complete_lecture_failure": 2
+  },
+  "selection_rule": "Select Rule-Filtered only when every gate for the evaluated split passes; otherwise retain All Pairs.",
+  "non_override_rule": "Candidate precision, token, latency, or cost improvements cannot compensate for failing a recall gate.",
+  "reporting": {
+    "required_integer_counts": [
+      "positive_pairs",
+      "retrieved_positive_pairs",
+      "missed_positive_pairs",
+      "retrieved_pairs",
+      "total_pairs"
+    ],
+    "required_breakdowns": [
+      "per_lecture_candidate_recall",
+      "per_relation_candidate_recall"
+    ],
+    "unsupported_relation_labels": "Report null with support count zero."
+  }
+}

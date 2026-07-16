@@ -1,0 +1,23 @@
+{
+  "artifact_type": "candidate_pair_universe_complete",
+  "version": "v0.1",
+  "status": "final",
+  "pair_universe": {
+    "path": "benchmark/candidate_pairs/development_v0_1/pair_universe.json",
+    "sha256": "bb5e53f06159e422791f90a02d192d1417a2066b7f0fd651291a43c4cd026e0d"
+  },
+  "source_inventory": {
+    "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/normalization/normalized_predicted_kos.json",
+    "sha256": "fe37cf7d77dd7304a090b21b206b6dd61621cdfedf75507f45edd09a2d8feda3"
+  },
+  "generator": {
+    "path": "scripts/generate_candidate_pair_universe.py",
+    "sha256": "e27393dcee20bcb4ad6cc1ae4d86f65b413cb7574efd92cddeb29d5fa17fe29c",
+    "version": "candidate_pair_universe_v0.1"
+  },
+  "counts": {
+    "lectures": 4,
+    "knowledge_objects": 39,
+    "pairs": 176
+  }
+}

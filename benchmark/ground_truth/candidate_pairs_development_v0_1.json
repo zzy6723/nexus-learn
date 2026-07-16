@@ -1,0 +1,1817 @@
+{
+  "artifact_type": "candidate_pair_ground_truth",
+  "version": "v0.1",
+  "benchmark_split": "development",
+  "status": "draft_annotation_required",
+  "pair_universe": {
+    "path": "benchmark/candidate_pairs/development_v0_1/pair_universe.json",
+    "sha256": "bb5e53f06159e422791f90a02d192d1417a2066b7f0fd651291a43c4cd026e0d"
+  },
+  "source_inventory": {
+    "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/normalization/normalized_predicted_kos.json",
+    "sha256": "fe37cf7d77dd7304a090b21b206b6dd61621cdfedf75507f45edd09a2d8feda3",
+    "normalized_content_sha256": "a4429ce68193033ba78dbd46015ed02918e01b611c8d83d65e9afbc3dede3d5b",
+    "source_split": "holdout",
+    "structural_normalization_version": "predicted_ko_structural_normalization_v0_1"
+  },
+  "annotation_guidelines": {
+    "path": "benchmark/candidate_pair_annotation_guidelines.md",
+    "version": "candidate_pair_annotation_v0.1",
+    "sha256": "0a002984b5cb3c0ff950fcad21c763d4ea2d39995be80be910b12f191cf35e74"
+  },
+  "relation_annotation_guidelines": {
+    "path": "benchmark/relation_annotation_guidelines.md",
+    "version": "relation_annotation_v0.1",
+    "sha256": "532435693120aedb3041385783cf8598c72d6c247acf06895657150eb38338c7"
+  },
+  "evaluation_protocol": {
+    "path": "benchmark/candidate_pair_generation_protocol.md",
+    "version": "candidate_pair_evaluation_v0.1-draft",
+    "sha256": "fc3d0583a61f40371fb68944c84fc4926d96b82ce4e38e6d7661a68c77b0be6e"
+  },
+  "success_criteria": {
+    "path": "benchmark/candidate_pair_generation_success_criteria_v0_1.json",
+    "version": "candidate_pair_success_criteria_v0.1",
+    "sha256": "d177429de5d8c71f65e1a1f401d9300fbaf9ce9ee78d8c196e7f380dbb1fc28f"
+  },
+  "allowed_candidate_labels": [
+    "IN_SCHEMA_RELATION",
+    "NO_IN_SCHEMA_RELATION",
+    "OUT_OF_SCHEMA_RELATION",
+    "AMBIGUOUS"
+  ],
+  "allowed_relation_types": [
+    "REQUIRES",
+    "APPLIED_IN",
+    "EXTENDS",
+    "CONTRASTS_WITH",
+    "FORMALIZES",
+    "RELATED_TO"
+  ],
+  "primary_scoring_labels": [
+    "IN_SCHEMA_RELATION",
+    "NO_IN_SCHEMA_RELATION"
+  ],
+  "annotations": [
+    {
+      "pair_id": "cand_dev_001",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_002",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_003",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_004",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_005",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_006",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_007",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_008",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_009",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_010",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_011",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_012",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_013",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_014",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_015",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_016",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_017",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_018",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_019",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_020",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_021",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_022",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_023",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_024",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_025",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_026",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_027",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_028",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_029",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_030",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_031",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_032",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_033",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_034",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_035",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_036",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_037",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_038",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_039",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_040",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_041",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_042",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_043",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_044",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_045",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_046",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_047",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_048",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_049",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_050",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_051",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_052",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_053",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_054",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_055",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_056",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_057",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_058",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_059",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_060",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_061",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_062",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_063",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_064",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_065",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_066",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_067",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_068",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_069",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_070",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_071",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_072",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_073",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_074",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_075",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_076",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_077",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_078",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_079",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_080",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_081",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_082",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_083",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_084",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_085",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_086",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_087",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_088",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_089",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_090",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_091",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_092",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_093",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_094",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_095",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_096",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_097",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_098",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_099",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_100",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_101",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_102",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_103",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_104",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_105",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_106",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_107",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_108",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_109",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_110",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_111",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_112",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_113",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_114",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_115",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_116",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_117",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_118",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_119",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_120",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_121",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_122",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_123",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_124",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_125",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_126",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_127",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_128",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_129",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_130",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_131",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_132",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_133",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_134",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_135",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_136",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_137",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_138",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_139",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_140",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_141",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_142",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_143",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_144",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_145",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_146",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_147",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_148",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_149",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_150",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_151",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_152",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_153",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_154",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_155",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_156",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_157",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_158",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_159",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_160",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_161",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_162",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_163",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_164",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_165",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_166",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_167",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_168",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_169",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_170",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_171",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_172",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_173",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_174",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_175",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    },
+    {
+      "pair_id": "cand_dev_176",
+      "candidate_label": null,
+      "annotation_status": "draft",
+      "gold_relations": [],
+      "out_of_schema_relation": null,
+      "negative_rationale": null,
+      "annotation_source": null,
+      "notes": null
+    }
+  ]
+}

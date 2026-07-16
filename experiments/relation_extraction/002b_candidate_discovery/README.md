@@ -1,6 +1,6 @@
 # Experiment 002B-2: Candidate Pair Generation under Predicted KOs
 
-**Status:** Definition complete; benchmark construction pending
+**Status:** Pair universe generated; exhaustive annotation pending
 **Stage:** Technical Validation
 **Predecessor:** Experiment 002B-1 completed
 
@@ -65,6 +65,36 @@ unreviewed case. It cannot automatically be counted as `NO_RELATION`.
 
 Therefore 002B-2 must create a new versioned benchmark before implementing or
 scoring a generator.
+
+## Development Benchmark Status
+
+The current development source is the inspected 002B-1 locked-reuse predicted
+KO inventory. Although its source artifact records `split = holdout`, it is no
+longer unseen and is intentionally assigned the 002B-2 development role.
+
+Current deterministic universe:
+
+| Lecture | Predicted KOs | Unordered pairs |
+| --- | ---: | ---: |
+| `differential_equations_001` | 11 | 55 |
+| `graph_algorithms_001` | 10 | 45 |
+| `numerical_root_finding_001` | 7 | 21 |
+| `statistics_estimation_001` | 11 | 55 |
+| **Total** | **39** | **176** |
+
+Artifacts:
+
+- `benchmark/candidate_pairs/development_v0_1/pair_universe.json`;
+- `benchmark/candidate_pairs/development_v0_1/pair_universe_complete.json`;
+- `benchmark/ground_truth/candidate_pairs_development_v0_1.json`;
+- `benchmark/candidate_pair_annotation_guidelines.md`;
+- `benchmark/schema/candidate_pair_universe.schema.json`;
+- `benchmark/schema/candidate_pair_ground_truth.schema.json`;
+- `benchmark/candidate_pair_generation_success_criteria_v0_1.json`.
+
+The pair universe is structurally complete and hash-bound. The ground-truth
+artifact is intentionally still a draft: all 176 labels require manual review.
+No Candidate Generator has been implemented or scored.
 
 ## Inputs
 
@@ -205,8 +235,8 @@ candidate metric denominator.
 1. Select a deliberately small development lecture set.
 2. Freeze the predicted KO inventory used as generator input.
 3. Enumerate every lecture-local unordered KO pair.
-4. Annotate every pair as a typed Relation, `NO_RELATION`, ambiguous, or schema
-   gap under a frozen guide.
+4. Annotate every pair as `IN_SCHEMA_RELATION`, `NO_IN_SCHEMA_RELATION`,
+   `AMBIGUOUS`, or `OUT_OF_SCHEMA_RELATION` under a frozen guide.
 5. Validate pair-universe completeness and endpoint integrity.
 6. Implement the All-Pairs generator and evaluator fixtures.
 7. Implement one deterministic Rule-Filtered generator.
@@ -218,6 +248,7 @@ candidate metric denominator.
 
 ## Immediate Next Gate
 
-Do not implement generator scoring against the current 40-pair Relation
-holdout. The next artifact is an exhaustive development pair-universe manifest
-and its annotation guide, followed by strict structural fixtures and a checker.
+Complete the 176 manual annotations without inspecting Candidate Generator
+outputs. Then implement the strict ground-truth checker and synthetic fixtures.
+Do not implement or score a Candidate Generator until the checker passes and
+the exhaustive ground truth is frozen.
