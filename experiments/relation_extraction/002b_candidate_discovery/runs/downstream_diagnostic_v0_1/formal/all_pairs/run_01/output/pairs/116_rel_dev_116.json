@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_116",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newton_update_formula"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newtons_method"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "Newton's method uses the derivative to replace the function locally by its tangent line. Provided \\(f'(x_k)\\neq 0\\), its update is\n\n\\[\nx_{k+1} = x_k - \\frac{f(x_k)}{f'(x_k)}.\n\\]"
+        }
+      ],
+      "rationale": "The Newton update formula is the explicit mathematical expression that defines the update step of Newton's method, thus it formalizes the method."
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_013",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "It first forms the Euler predictor y_{n+1} = y_n + hF(t_n,y_n)"
+        }
+      ],
+      "rationale": "The Euler Predictor is a concept that is formalized by the Forward Euler Update formula, as the evidence directly presents the formula as the expression of the predictor."
+    }
+  ]
+}

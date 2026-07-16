@@ -104,10 +104,22 @@ This supports conditional predicted-KO representation viability for the current
 single paired run, while rejecting any production-readiness, stability, or
 generalization claim. Full results are in `locked_reuse_v0_2_results.md`.
 
-## Programme Boundary
+## Programme Closure Update
 
-This closes Experiment 002B-1 only. It does not close the full Experiment 002B
-programme because candidate pairs were projected from the existing gold pair
-universe. Experiment 002B-2 must still validate candidate pair generation from
-predicted KOs. The Oracle-based alignment used here also does not implement the
-canonical KO resolution layer planned for Experiment 002C.
+This document closes Experiment 002B-1. Experiment 002B-2 has since completed
+the previously missing candidate-discovery evaluation over an exhaustive
+176-pair predicted-KO development universe.
+
+The full Experiment 002B programme is now complete with partial feasibility:
+
+- predicted-KO Relation coupling was feasible on recoverable supplied pairs;
+- missing KOs caused irrecoverable Relation pairs;
+- Rule-Filtered candidate generation reduced workload but missed 10/80 positive
+  pairs and failed its frozen recall gate;
+- All-Pairs v0.1 remains the lecture-local safety fallback;
+- production readiness and broad generalization are not established.
+
+The 002B-2 decision is recorded in
+`../002b_candidate_discovery/conclusion.md`. The Oracle-based alignment used in
+002B-1 still does not implement the canonical KO resolution layer planned for
+Experiment 002C.

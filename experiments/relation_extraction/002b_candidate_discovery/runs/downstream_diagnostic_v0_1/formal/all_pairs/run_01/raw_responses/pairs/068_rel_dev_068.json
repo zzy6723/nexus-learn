@@ -1,0 +1,28 @@
+{
+  "id": "b66a84cc-8470-4bf6-9fd8-1c84c14da658",
+  "object": "chat.completion",
+  "created": 1784226911,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_068\",\n      \"source\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"dijkstras_algorithm\"\n      },\n      \"target\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"path_cost\"\n      },\n      \"relation_type\": \"REQUIRES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"graph_algorithms_001\",\n          \"span\": \"Dijkstra's algorithm is applied to this problem when all edge weights are nonnegative.\"\n        },\n        {\n          \"lecture_id\": \"graph_algorithms_001\",\n          \"span\": \"Its path cost is the sum of their edge weights\"\n        }\n      ],\n      \"rationale\": \"Dijkstra's algorithm computes minimum path costs, so understanding path cost is necessary to understand the algorithm's goal and operation.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2262,
+    "completion_tokens": 210,
+    "total_tokens": 2472,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 214
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

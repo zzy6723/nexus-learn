@@ -1,0 +1,28 @@
+{
+  "id": "114c4926-32c1-475d-9f1f-df8352b74361",
+  "object": "chat.completion",
+  "created": 1784226995,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_096\",\n      \"source\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"path_cost_formula\"\n      },\n      \"target\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"single_source_shortest_path_problem\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"graph_algorithms_001\",\n          \"span\": \"C(v_0,\\\\ldots,v_k) = \\\\sum_{i=0}^{k-1} w(v_i,v_{i+1})\"\n        },\n        {\n          \"lecture_id\": \"graph_algorithms_001\",\n          \"span\": \"The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex.\"\n        }\n      ],\n      \"rationale\": \"The Path Cost Formula defines the cost of a path, which is the objective to be minimized in the Single-Source Shortest-Path Problem. The lecture states the problem and then provides the formula as the definition of path cost, establishing a formalization relation.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2300,
+    "completion_tokens": 267,
+    "total_tokens": 2567,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 252
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

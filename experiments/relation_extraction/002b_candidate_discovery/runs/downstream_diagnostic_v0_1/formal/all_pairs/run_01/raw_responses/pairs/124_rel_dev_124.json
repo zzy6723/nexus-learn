@@ -1,0 +1,28 @@
+{
+  "id": "8fcb818e-404c-41e9-99e9-6db56aa1d034",
+  "object": "chat.completion",
+  "created": 1784227082,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_124\",\n      \"source\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"log_likelihood_function\"\n      },\n      \"target\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"likelihood\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"The log-likelihood is obtained by taking the logarithm of the likelihood. Independence turns the product into a sum:\\n\\n\\\\[\\n\\\\ell(\\\\theta) = \\\\log L(\\\\theta; x_{1:n}) = \\\\sum_{i=1}^{n} \\\\log p(x_i \\\\mid \\\\theta).\\n\\\\]\"\n        }\n      ],\n      \"rationale\": \"The Log-Likelihood Function is a formula that explicitly defines the Likelihood in logarithmic form, thus formalizing it.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2360,
+    "completion_tokens": 235,
+    "total_tokens": 2595,
+    "prompt_tokens_details": {
+      "cached_tokens": 2176
+    },
+    "prompt_cache_hit_tokens": 2176,
+    "prompt_cache_miss_tokens": 184
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

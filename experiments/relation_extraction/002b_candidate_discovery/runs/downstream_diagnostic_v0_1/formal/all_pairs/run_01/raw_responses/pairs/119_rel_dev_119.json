@@ -1,0 +1,28 @@
+{
+  "id": "0a68e437-cbf1-4d0a-8e45-b2e836d7b7d9",
+  "object": "chat.completion",
+  "created": 1784227067,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_119\",\n      \"source\": {\n        \"lecture_id\": \"numerical_root_finding_001\",\n        \"ko_id\": \"newtons_method\"\n      },\n      \"target\": {\n        \"lecture_id\": \"numerical_root_finding_001\",\n        \"ko_id\": \"root_finding_problem\"\n      },\n      \"relation_type\": \"APPLIED_IN\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"numerical_root_finding_001\",\n          \"span\": \"Newton's method uses the derivative to replace the function locally by its tangent line.\"\n        },\n        {\n          \"lecture_id\": \"numerical_root_finding_001\",\n          \"span\": \"A root-finding problem asks for a value \\\\(x^*\\\\) at which a scalar function is zero\"\n        }\n      ],\n      \"rationale\": \"Newton's method is a method applied to solve root-finding problems, as the lecture introduces Newton's method in the context of root-finding.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2275,
+    "completion_tokens": 231,
+    "total_tokens": 2506,
+    "prompt_tokens_details": {
+      "cached_tokens": 1920
+    },
+    "prompt_cache_hit_tokens": 1920,
+    "prompt_cache_miss_tokens": 355
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

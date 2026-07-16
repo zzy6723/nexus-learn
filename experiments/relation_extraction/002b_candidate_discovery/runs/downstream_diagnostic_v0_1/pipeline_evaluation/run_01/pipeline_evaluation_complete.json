@@ -1,0 +1,55 @@
+{
+  "artifact_type": "candidate_relation_pipeline_evaluation_complete",
+  "version": "v0.1",
+  "evaluation_status": "final",
+  "method_commit": "78e47b8dc792dd970e72c0040f045c8d1cc1035c",
+  "contract": {
+    "path": "benchmark/candidate_relation_downstream_diagnostic_v0_1.json",
+    "sha256": "f4b46dc888b1600f1635a1deabc6a126467fac896c1938b7608d6bfd682352f7"
+  },
+  "projection_completion": {
+    "path": "benchmark/ground_truth/candidate_relation_projection_development_v0_1_complete.json",
+    "sha256": "747c4a2e803c828089af6f41a3a41078bc306bd7f3f426a5790d957d0fe8e56e"
+  },
+  "implementation": {
+    "path": "scripts/evaluate_candidate_relation_pipeline.py",
+    "sha256": "0d2f7dab41d395d2037e6b6235fce855263cc0f11110b3e3b04deda5505f8f6d"
+  },
+  "evaluation_snapshots": {
+    "all_pairs": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/downstream_diagnostic_v0_1/formal/all_pairs/run_01/relation_evaluation/evaluation_snapshot.json",
+      "sha256": "ebcf3b53e503e5bf536ae506739d834c467f8c1d766028996905aeaa780a6304"
+    },
+    "rule_filtered_v0_1": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/downstream_diagnostic_v0_1/formal/rule_filtered_v0_1/run_01/relation_evaluation/evaluation_snapshot.json",
+      "sha256": "666f00ef2b4b61834a3a498be7b65528558c11bb8131015e4332c7467d690ef4"
+    }
+  },
+  "artifacts": {
+    "pipeline_metrics.json": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/downstream_diagnostic_v0_1/pipeline_evaluation/run_01/pipeline_metrics.json",
+      "sha256": "9078378bd08fba88307a1cb32477fc010096de11b1d3080f6f4f65e2c55b3974"
+    },
+    "pipeline_errors.json": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/downstream_diagnostic_v0_1/pipeline_evaluation/run_01/pipeline_errors.json",
+      "sha256": "d80775b52b95f13367e37e0c730b83caa8eb7e1cd347653d1eeef5a4958224d1"
+    },
+    "pair_transitions.json": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/downstream_diagnostic_v0_1/pipeline_evaluation/run_01/pair_transitions.json",
+      "sha256": "0d4058ac5971e6eb35b3338adee7fa833e3ccea134c56e569c2ebb6dedc37294"
+    },
+    "summary.md": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/downstream_diagnostic_v0_1/pipeline_evaluation/run_01/summary.md",
+      "sha256": "d92f384c1e7c4045edf0e9b9d497f7c658fa383349897089f5f11a6ed8a2bc57"
+    }
+  },
+  "integrity": {
+    "primary_denominator": 171,
+    "diagnostic_denominator": 5,
+    "all_pairs_selected": 176,
+    "rule_filtered_selected": 127,
+    "rule_filtered_candidate_misses": 10,
+    "pending_adjudications": 0,
+    "candidate_gate_overridden": false
+  }
+}

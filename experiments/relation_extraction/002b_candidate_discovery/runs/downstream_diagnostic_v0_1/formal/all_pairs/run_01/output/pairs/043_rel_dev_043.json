@@ -1,0 +1,27 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_043",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "An ordinary differential equation relates an unknown function of one variable to its derivatives."
+        }
+      ],
+      "rationale": "Heun's method is a numerical method applied to solve ordinary differential equations, as indicated by its use of the ODE's vector field F in its update formulas."
+    }
+  ]
+}

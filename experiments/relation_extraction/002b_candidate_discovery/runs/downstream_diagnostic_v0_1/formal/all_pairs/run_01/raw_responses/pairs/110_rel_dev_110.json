@@ -1,0 +1,28 @@
+{
+  "id": "6628a080-1926-47f4-aea2-387bfbfe49a5",
+  "object": "chat.completion",
+  "created": 1784227038,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_110\",\n      \"source\": {\n        \"lecture_id\": \"numerical_root_finding_001\",\n        \"ko_id\": \"damped_newton_method\"\n      },\n      \"target\": {\n        \"lecture_id\": \"numerical_root_finding_001\",\n        \"ko_id\": \"root_finding_problem\"\n      },\n      \"relation_type\": \"APPLIED_IN\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"numerical_root_finding_001\",\n          \"span\": \"A root-finding problem asks for a value \\\\(x^*\\\\) at which a scalar function is zero\"\n        },\n        {\n          \"lecture_id\": \"numerical_root_finding_001\",\n          \"span\": \"The damped Newton method extends Newton's method by scaling the Newton correction with a factor between zero and one.\"\n        }\n      ],\n      \"rationale\": \"The damped Newton method is a method used to solve root-finding problems, as it is an extension of Newton's method which is a root-finding algorithm. The lecture presents the damped Newton method in the context of root-finding, establishing that it is applied to root-finding problems.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2286,
+    "completion_tokens": 270,
+    "total_tokens": 2556,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 238
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

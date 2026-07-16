@@ -1,0 +1,28 @@
+{
+  "id": "b39d1352-c69a-4e0b-be88-ed0fd4dbab4d",
+  "object": "chat.completion",
+  "created": 1784228366,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_054\",\n      \"source\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"ordinary_differential_equation\"\n      },\n      \"target\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"vector_field\"\n      },\n      \"relation_type\": \"REQUIRES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"An ordinary differential equation relates an unknown function of one variable to its derivatives.\"\n        },\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"The vector field F specifies the slope that the solution should follow at each state.\"\n        }\n      ],\n      \"rationale\": \"The concept of an ordinary differential equation requires the concept of a vector field because the vector field specifies the slope that the solution must follow, which is essential to defining the differential equation.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2306,
+    "completion_tokens": 230,
+    "total_tokens": 2536,
+    "prompt_tokens_details": {
+      "cached_tokens": 2304
+    },
+    "prompt_cache_hit_tokens": 2304,
+    "prompt_cache_miss_tokens": 2
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

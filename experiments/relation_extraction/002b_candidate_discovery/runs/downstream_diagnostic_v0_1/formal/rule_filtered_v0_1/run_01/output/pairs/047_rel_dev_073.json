@@ -1,0 +1,18 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_073",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The lecture text does not establish a direct relation between edge relaxation and heuristic function. Edge relaxation is described in the context of Dijkstra's algorithm, while heuristic function is introduced for A* search. They are mentioned in separate contexts without any connecting evidence."
+    }
+  ]
+}

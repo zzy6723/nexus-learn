@@ -1,0 +1,28 @@
+{
+  "id": "ff89ba0e-2e7b-487b-a93f-ec24911f0384",
+  "object": "chat.completion",
+  "created": 1784227046,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_112\",\n      \"source\": {\n        \"lecture_id\": \"numerical_root_finding_001\",\n        \"ko_id\": \"midpoint_formula\"\n      },\n      \"target\": {\n        \"lecture_id\": \"numerical_root_finding_001\",\n        \"ko_id\": \"newton_update_formula\"\n      },\n      \"relation_type\": \"NO_RELATION\",\n      \"evidence_spans\": [],\n      \"rationale\": \"The lecture text presents the midpoint formula and the Newton update formula as separate formulas used in different methods (bisection and Newton's method). There is no direct evidence establishing a relation between them; they are merely mentioned in the same lecture.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2268,
+    "completion_tokens": 162,
+    "total_tokens": 2430,
+    "prompt_tokens_details": {
+      "cached_tokens": 1920
+    },
+    "prompt_cache_hit_tokens": 1920,
+    "prompt_cache_miss_tokens": 348
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

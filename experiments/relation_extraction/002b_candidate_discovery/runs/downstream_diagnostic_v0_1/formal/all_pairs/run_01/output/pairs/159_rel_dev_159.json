@@ -1,0 +1,31 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_159",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The score function is the derivative of the log-likelihood with respect to the parameter"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation s(θ)=0."
+        }
+      ],
+      "rationale": "Maximum likelihood estimation requires the score function because the score equation s(θ)=0 is used to find the MLE candidate."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "d18aed2e-cf3f-4d43-bc51-e08e068748a4",
+  "object": "chat.completion",
+  "created": 1784226858,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_051\",\n      \"source\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"step_size\"\n      },\n      \"target\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"initial_value_problem\"\n      },\n      \"relation_type\": \"APPLIED_IN\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope. Its update is y_{n+1} = y_n + hF(t_n,y_n). The step size h sets the spacing between consecutive numerical time points.\"\n        }\n      ],\n      \"rationale\": \"The step size is a parameter used in numerical methods applied to initial value problems, as shown in the forward Euler update formula where h appears. Thus, step size is applied in the context of solving an initial value problem.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2309,
+    "completion_tokens": 238,
+    "total_tokens": 2547,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 261
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

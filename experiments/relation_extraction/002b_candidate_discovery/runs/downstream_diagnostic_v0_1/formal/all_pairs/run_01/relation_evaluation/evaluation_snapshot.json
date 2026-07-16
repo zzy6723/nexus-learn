@@ -1,0 +1,55 @@
+{
+  "artifact_type": "candidate_relation_evaluation_snapshot",
+  "version": "v0.1",
+  "evaluation_status": "final",
+  "condition": "all_pairs",
+  "method_commit": "78e47b8dc792dd970e72c0040f045c8d1cc1035c",
+  "contract": {
+    "path": "benchmark/candidate_relation_downstream_diagnostic_v0_1.json",
+    "sha256": "f4b46dc888b1600f1635a1deabc6a126467fac896c1938b7608d6bfd682352f7"
+  },
+  "preparation": {
+    "path": "experiments/relation_extraction/002b_candidate_discovery/runs/downstream_diagnostic_v0_1/preparation/all_pairs/preparation_complete.json",
+    "sha256": "64815a24e2b203679dce60a5c952605daa537a63216559ec1388e9b724b175c9"
+  },
+  "run_completion": {
+    "path": "experiments/relation_extraction/002b_candidate_discovery/runs/downstream_diagnostic_v0_1/formal/all_pairs/run_01/diagnostic_run_complete.json",
+    "sha256": "2083a241d315ef2d6e65fb97c23b2adad7f50668545fa29ea9b1d13e04f1a643"
+  },
+  "implementation": {
+    "path": "scripts/finalize_candidate_relation_evaluation.py",
+    "sha256": "4675d7c51835172196589ea93218b89e7c97fd9c8d7d7f17c98fbc78310d3e3f"
+  },
+  "artifacts": {
+    "adjudication_pending.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "adjudication_resolved.json": "afbf145253ec4da889193d36ba879c8c591f5cb5c0dcaf3ac081a05f44e8d6ea",
+    "confusion_matrix.json": "948aaaa587639caa9414fad6cfda3173adc48ff50d1989025529086bcff6eedc",
+    "errors.json": "2efa63c4a665b633563f1269db4896e6c9efbb1e079d68a066c7f46fa7b1f402",
+    "matches.json": "0c4ec1013f97a223195a1489fe2fb1c045e81df265c338c2bc59e114442d210a",
+    "metrics.json": "7059a39c493a3f0f8eeeffe42d8368697a99351ef907593466cdb12896b0618b",
+    "predictions.json": "0400ea9dd335958ff4dbeae6c17ef86e6dd13f368055bc88ad9fdde5dee9f22c",
+    "run_metadata.json": "8e398d2e0ba72476ecc08d220554d43923a8d864cac093bb78c1e29ada40a240",
+    "summary.md": "b9cb5feba71525e7677d324ddd7d29149ae67ec79c6f086f05c35eaaeb7a9acd"
+  },
+  "counts": {
+    "pairs": 176,
+    "primary_pairs": 171,
+    "manual_adjudications": 32,
+    "pending_adjudications": 0
+  },
+  "source": {
+    "evaluation_dir": "experiments/relation_extraction/002b_candidate_discovery/runs/downstream_diagnostic_v0_1/formal/all_pairs/run_01/evaluation",
+    "predictions": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/downstream_diagnostic_v0_1/formal/all_pairs/run_01/output/selected_relation_ground_truth.json",
+      "sha256": "0400ea9dd335958ff4dbeae6c17ef86e6dd13f368055bc88ad9fdde5dee9f22c"
+    },
+    "run_metadata": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/downstream_diagnostic_v0_1/formal/all_pairs/run_01/metadata/selected_relation_ground_truth.json",
+      "sha256": "8e398d2e0ba72476ecc08d220554d43923a8d864cac093bb78c1e29ada40a240"
+    },
+    "adjudication": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/downstream_diagnostic_v0_1/formal/all_pairs/run_01/evaluation/adjudication_resolved.json",
+      "sha256": "afbf145253ec4da889193d36ba879c8c591f5cb5c0dcaf3ac081a05f44e8d6ea"
+    }
+  }
+}

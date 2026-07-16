@@ -1,0 +1,28 @@
+{
+  "id": "357db762-3fef-4bd0-b023-f830e0df55cd",
+  "object": "chat.completion",
+  "created": 1784227173,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_154\",\n      \"source\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"score_function_formula\"\n      },\n      \"target\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"log_likelihood_function\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"s(θ) = ∇_θ ℓ(θ).\"\n        }\n      ],\n      \"rationale\": \"The Score Function Formula explicitly defines the score function as the derivative of the log-likelihood function, thus formalizing the relationship between the two.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2363,
+    "completion_tokens": 184,
+    "total_tokens": 2547,
+    "prompt_tokens_details": {
+      "cached_tokens": 2176
+    },
+    "prompt_cache_hit_tokens": 2176,
+    "prompt_cache_miss_tokens": 187
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_020",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope."
+        }
+      ],
+      "rationale": "The forward Euler method is a numerical method applied to solve first-order ordinary differential equations, as indicated by the lecture text stating it is applied to an initial value problem, which is a first-order equation with an initial condition."
+    }
+  ]
+}

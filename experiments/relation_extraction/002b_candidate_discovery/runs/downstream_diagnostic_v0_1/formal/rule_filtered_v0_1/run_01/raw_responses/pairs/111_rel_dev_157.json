@@ -1,0 +1,28 @@
+{
+  "id": "a250fbb6-eab9-4113-b791-b0f9b5eb2fe1",
+  "object": "chat.completion",
+  "created": 1784228621,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_157\",\n      \"source\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"newtons_method\"\n      },\n      \"target\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"maximum_likelihood_estimation\"\n      },\n      \"relation_type\": \"APPLIED_IN\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically.\"\n        }\n      ],\n      \"rationale\": \"Newton's method is applied within maximum likelihood estimation to compute a candidate numerically, so Newton's method is used in maximum likelihood estimation.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2343,
+    "completion_tokens": 183,
+    "total_tokens": 2526,
+    "prompt_tokens_details": {
+      "cached_tokens": 2304
+    },
+    "prompt_cache_hit_tokens": 2304,
+    "prompt_cache_miss_tokens": 39
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

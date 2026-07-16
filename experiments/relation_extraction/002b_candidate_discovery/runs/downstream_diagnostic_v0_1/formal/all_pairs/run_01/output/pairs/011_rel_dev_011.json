@@ -1,0 +1,27 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_011",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope. Its update is y_{n+1} = y_n + hF(t_n,y_n)."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "A first-order equation can be written as y'(t) = F(t,y(t))."
+        }
+      ],
+      "rationale": "The Euler predictor is a step in Heun's method, which is an extension of the forward Euler method. The forward Euler method is applied to first-order equations, as evidenced by the update formula using F(t_n,y_n) from the first-order equation form."
+    }
+  ]
+}

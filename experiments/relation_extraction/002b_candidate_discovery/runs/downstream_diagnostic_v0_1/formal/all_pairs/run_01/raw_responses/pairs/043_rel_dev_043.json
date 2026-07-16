@@ -1,0 +1,28 @@
+{
+  "id": "0f231390-4380-4c3f-b7cb-08fa75d1b728",
+  "object": "chat.completion",
+  "created": 1784226830,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_043\",\n      \"source\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"heuns_method\"\n      },\n      \"target\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"ordinary_differential_equation\"\n      },\n      \"relation_type\": \"APPLIED_IN\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"Heun's method extends the forward Euler method with a predictor-corrector step.\"\n        },\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"An ordinary differential equation relates an unknown function of one variable to its derivatives.\"\n        }\n      ],\n      \"rationale\": \"Heun's method is a numerical method applied to solve ordinary differential equations, as indicated by its use of the ODE's vector field F in its update formulas.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2311,
+    "completion_tokens": 228,
+    "total_tokens": 2539,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 263
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

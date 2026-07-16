@@ -1,0 +1,28 @@
+{
+  "id": "22be84d0-fb76-48c1-97b0-761f607e561f",
+  "object": "chat.completion",
+  "created": 1784226807,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_036\",\n      \"source\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"heuns_update\"\n      },\n      \"target\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"forward_euler_update\"\n      },\n      \"relation_type\": \"EXTENDS\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"Heun's method extends the forward Euler method with a predictor-corrector step.\"\n        },\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"It first forms the Euler predictor\\n\\n\\\\[\\n\\\\widetilde{y}_{n+1} = y_n + hF(t_n,y_n),\\n\\\\]\\n\\nthen averages the slope at the current point with the slope at the predicted point. The corrected update is\\n\\n\\\\[\\ny_{n+1} = y_n + \\\\frac{h}{2}\\\\left(F(t_n,y_n)+F(t_n+h,\\\\widetilde{y}_{n+1})\\\\right).\\n\\\\]\"\n        }\n      ],\n      \"rationale\": \"Heun's update is a more specific development that builds upon the forward Euler update by adding a predictor-corrector step, preserving the Euler method as its conceptual base.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2332,
+    "completion_tokens": 316,
+    "total_tokens": 2648,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 284
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

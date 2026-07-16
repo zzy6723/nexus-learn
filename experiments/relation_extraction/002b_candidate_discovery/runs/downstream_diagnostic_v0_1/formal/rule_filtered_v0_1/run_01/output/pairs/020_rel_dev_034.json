@@ -1,0 +1,27 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_034",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Its update is y_{n+1} = y_n + hF(t_n,y_n)."
+        }
+      ],
+      "rationale": "The forward Euler method uses the vector field F to compute its update step, as shown in the update formula y_{n+1} = y_n + hF(t_n,y_n). Thus, the vector field is applied in the method."
+    }
+  ]
+}

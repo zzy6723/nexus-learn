@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_121",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "sign_changing_bracket"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "root_finding_problem"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "The bisection method begins with a sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\)."
+        }
+      ],
+      "rationale": "The sign-changing bracket is a concept used in the bisection method, which is a method for solving the root-finding problem. The evidence shows the bracket is applied in the context of root-finding."
+    }
+  ]
+}

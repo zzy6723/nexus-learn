@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_033",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope. Its update is\n\ny_{n+1} = y_n + hF(t_n,y_n).\n\nThe step size h sets the spacing between consecutive numerical time points."
+        }
+      ],
+      "rationale": "The forward Euler method's update formula explicitly uses the step size h, and the lecture states that the step size sets the spacing between time points, indicating that understanding step size is necessary to apply the method."
+    }
+  ]
+}

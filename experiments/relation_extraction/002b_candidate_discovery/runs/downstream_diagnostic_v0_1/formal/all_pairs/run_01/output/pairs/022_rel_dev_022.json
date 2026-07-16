@@ -1,0 +1,27 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_022",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "A first-order equation can be written as y'(t) = F(t,y(t))."
+        }
+      ],
+      "rationale": "Heun's method is a numerical method applied to solve first-order ordinary differential equations, as evidenced by its use of the function F(t,y) from the first-order equation form."
+    }
+  ]
+}

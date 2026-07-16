@@ -1,0 +1,18 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_120",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newtons_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "sign_changing_bracket"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The lecture text describes Newton's method and the sign-changing bracket separately, but does not establish any direct relation between them. Newton's method does not require a sign-changing bracket, and the bracket is not used in Newton's method. Co-occurrence in the same lecture is insufficient for a positive relation."
+    }
+  ]
+}

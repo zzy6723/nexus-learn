@@ -1,0 +1,28 @@
+{
+  "id": "8de50e4d-b9d9-45d1-a9fc-b99982c3e77a",
+  "object": "chat.completion",
+  "created": 1784228402,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_069\",\n      \"source\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"path_cost_formula\"\n      },\n      \"target\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"dijkstras_algorithm\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"graph_algorithms_001\",\n          \"span\": \"C(v_0,\\\\ldots,v_k) = \\\\sum_{i=0}^{k-1} w(v_i,v_{i+1})\"\n        },\n        {\n          \"lecture_id\": \"graph_algorithms_001\",\n          \"span\": \"Dijkstra's algorithm stores tentative distance estimates in a priority queue. After removing a vertex \\\\(u\\\\) with the smallest tentative distance, it applies edge relaxation to each outgoing edge. Relaxation is formalized by the update\\n\\n\\\\[\\nd(v) \\\\leftarrow \\\\min\\\\{d(v),\\\\, d(u)+w(u,v)\\\\}.\\n\\\\]\"\n        }\n      ],\n      \"rationale\": \"The Path Cost Formula defines the cost of a path, which is the objective that Dijkstra's algorithm minimizes. The lecture states that relaxation is formalized by an update that uses the path cost concept, establishing the formula as a formalization of the algorithm's goal.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2288,
+    "completion_tokens": 321,
+    "total_tokens": 2609,
+    "prompt_tokens_details": {
+      "cached_tokens": 2176
+    },
+    "prompt_cache_hit_tokens": 2176,
+    "prompt_cache_miss_tokens": 112
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

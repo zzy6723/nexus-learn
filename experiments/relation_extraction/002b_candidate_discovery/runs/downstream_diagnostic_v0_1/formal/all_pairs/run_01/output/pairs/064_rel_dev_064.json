@@ -1,0 +1,27 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_064",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A* search extends Dijkstra's algorithm by using a heuristic function \\(h(v)\\) to guide which vertex is explored next."
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\)."
+        }
+      ],
+      "rationale": "A* search is a method applied to weighted directed graphs to find shortest paths, as the lecture discusses it in the context of such graphs."
+    }
+  ]
+}

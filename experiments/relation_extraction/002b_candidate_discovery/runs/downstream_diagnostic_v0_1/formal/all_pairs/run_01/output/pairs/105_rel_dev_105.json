@@ -1,0 +1,27 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_105",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "root_finding_problem"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "The bisection method begins with a sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\)."
+        },
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "A root-finding problem asks for a value \\(x^*\\) at which a scalar function is zero"
+        }
+      ],
+      "rationale": "The bisection method is a method applied to solve the root-finding problem, as it is described as a technique to find a root of a function."
+    }
+  ]
+}

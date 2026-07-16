@@ -1,0 +1,28 @@
+{
+  "id": "c7b496d5-9174-4c8e-9d55-895ce8121205",
+  "object": "chat.completion",
+  "created": 1784228343,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_037\",\n      \"source\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"forward_euler_update\"\n      },\n      \"target\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"initial_value_problem\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope. Its update is\\n\\ny_{n+1} = y_n + hF(t_n,y_n).\"\n        }\n      ],\n      \"rationale\": \"The Forward Euler Update formula explicitly defines the numerical update step for solving an Initial Value Problem, thus formalizing it.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2318,
+    "completion_tokens": 210,
+    "total_tokens": 2528,
+    "prompt_tokens_details": {
+      "cached_tokens": 2304
+    },
+    "prompt_cache_hit_tokens": 2304,
+    "prompt_cache_miss_tokens": 14
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

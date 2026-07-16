@@ -1,0 +1,28 @@
+{
+  "id": "b90e96a7-36a1-4626-aa7a-f4c7daa7a6b1",
+  "object": "chat.completion",
+  "created": 1784226887,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_060\",\n      \"source\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"a_star_search\"\n      },\n      \"target\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"path_cost\"\n      },\n      \"relation_type\": \"REQUIRES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"graph_algorithms_001\",\n          \"span\": \"A* search extends Dijkstra's algorithm by using a heuristic function \\\\(h(v)\\\\) to guide which vertex is explored next. Its queue priority combines the known path cost with the heuristic estimate\"\n        }\n      ],\n      \"rationale\": \"A* search uses path cost as part of its priority calculation, so path cost is necessary to understand A* search.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2265,
+    "completion_tokens": 196,
+    "total_tokens": 2461,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 217
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

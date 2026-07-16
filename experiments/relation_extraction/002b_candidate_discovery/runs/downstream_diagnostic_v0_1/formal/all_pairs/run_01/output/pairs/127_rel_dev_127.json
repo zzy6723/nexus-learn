@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_127",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically."
+        }
+      ],
+      "rationale": "Newton's method is a numerical optimization technique that is applied within the context of maximum likelihood estimation, which uses the likelihood function. Thus, Newton's method is applied in the process of maximizing the likelihood."
+    }
+  ]
+}

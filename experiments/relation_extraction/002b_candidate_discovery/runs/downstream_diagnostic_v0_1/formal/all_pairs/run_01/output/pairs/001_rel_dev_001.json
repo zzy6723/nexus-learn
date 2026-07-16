@@ -1,0 +1,18 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_001",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The lecture mentions discretization error in the context of step size, and the Euler predictor is part of Heun's method, but there is no direct evidence linking discretization error to the Euler predictor specifically."
+    }
+  ]
+}

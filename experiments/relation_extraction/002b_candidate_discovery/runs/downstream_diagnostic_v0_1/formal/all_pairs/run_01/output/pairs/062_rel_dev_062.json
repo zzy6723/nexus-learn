@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_062",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Relaxation is formalized by the update\n\n\\[\nd(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}.\n\\]"
+        }
+      ],
+      "rationale": "The relaxation update formula is presented as the formalization of the relaxation operation used in Dijkstra's algorithm, which is the base of A* search. The evidence directly states 'Relaxation is formalized by the update' and provides the formula."
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_009",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "relation_type": "RELATED_TO",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Smaller steps usually reduce discretization error but require more updates over a fixed time interval."
+        }
+      ],
+      "rationale": "The lecture directly states that smaller step sizes reduce discretization error, establishing a meaningful educational connection between the two concepts. However, the relation is not one of the stronger types: step size is not a prerequisite for discretization error (REQUIRES), nor is discretization error applied in step size (APPLIED_IN), nor does one extend the other (EXTENDS), nor is there a contrast (CONTRASTS_WITH), nor does one formalize the other (FORMALIZES). Thus, RELATED_TO is appropriate."
+    }
+  ]
+}

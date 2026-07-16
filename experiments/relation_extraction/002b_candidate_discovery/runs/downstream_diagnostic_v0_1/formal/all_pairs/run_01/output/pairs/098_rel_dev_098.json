@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_098",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Relaxation is formalized by the update\n\nd(v) ← min{d(v), d(u)+w(u,v)}."
+        }
+      ],
+      "rationale": "The relaxation update formula explicitly defines the update rule used in Dijkstra's algorithm, which solves the single-source shortest-path problem. The evidence states that relaxation is formalized by this update, establishing a direct FORMALIZES relation from the formula to the problem."
+    }
+  ]
+}

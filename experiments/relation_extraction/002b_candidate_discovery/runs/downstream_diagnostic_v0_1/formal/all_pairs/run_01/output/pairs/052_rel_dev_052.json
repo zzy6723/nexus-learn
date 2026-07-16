@@ -1,0 +1,27 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_052",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "An initial value problem combines an ordinary differential equation with an initial condition such as y(t_0)=y_0."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The vector field F specifies the slope that the solution should follow at each state."
+        }
+      ],
+      "rationale": "The initial value problem requires the vector field F to define the differential equation's right-hand side, as the vector field specifies the slope that the solution follows."
+    }
+  ]
+}

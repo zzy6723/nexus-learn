@@ -1,0 +1,28 @@
+{
+  "id": "32e94d4c-a599-42dc-9b7d-6a635ec9c769",
+  "object": "chat.completion",
+  "created": 1784227222,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_170\",\n      \"source\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"newtons_method\"\n      },\n      \"target\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"statistical_model\"\n      },\n      \"relation_type\": \"NO_RELATION\",\n      \"evidence_spans\": [],\n      \"rationale\": \"The lecture mentions Newton's method only in the context of maximum likelihood estimation, not in relation to the concept of a statistical model. There is no direct evidence that Newton's method is applied to or requires the statistical model itself; it is applied to the score equation derived from the likelihood. Thus, no graph relation is established.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2333,
+    "completion_tokens": 177,
+    "total_tokens": 2510,
+    "prompt_tokens_details": {
+      "cached_tokens": 2176
+    },
+    "prompt_cache_hit_tokens": 2176,
+    "prompt_cache_miss_tokens": 157
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

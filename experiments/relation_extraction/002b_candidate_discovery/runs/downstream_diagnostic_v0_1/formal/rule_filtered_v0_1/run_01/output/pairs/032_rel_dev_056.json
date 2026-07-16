@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_056",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "relation_type": "EXTENDS",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A* search extends Dijkstra's algorithm by using a heuristic function \\(h(v)\\) to guide which vertex is explored next."
+        }
+      ],
+      "rationale": "The lecture explicitly states that A* search extends Dijkstra's algorithm, indicating that A* is a more specific development of Dijkstra's algorithm while preserving it as a conceptual base."
+    }
+  ]
+}

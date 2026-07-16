@@ -1,0 +1,28 @@
+{
+  "id": "87520305-fce1-4cb4-a003-a6a9063cae0b",
+  "object": "chat.completion",
+  "created": 1784227194,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_161\",\n      \"source\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"maximum_likelihood_estimation\"\n      },\n      \"target\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"statistical_model\"\n      },\n      \"relation_type\": \"REQUIRES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"A statistical model is a family of probability distributions indexed by an unknown parameter \\\\(\\\\theta\\\\). The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values.\"\n        },\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it\"\n        }\n      ],\n      \"rationale\": \"Maximum likelihood estimation requires a statistical model because the likelihood is defined from the statistical model, and MLE uses the likelihood (or log-likelihood) as its objective.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2347,
+    "completion_tokens": 261,
+    "total_tokens": 2608,
+    "prompt_tokens_details": {
+      "cached_tokens": 2176
+    },
+    "prompt_cache_hit_tokens": 2176,
+    "prompt_cache_miss_tokens": 171
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

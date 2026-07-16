@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_174",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The score function is the derivative of the log-likelihood with respect to the parameter,\n\n\\[\ns(\\theta) = \\nabla_{\\theta}\\ell(\\theta).\n\\]"
+        }
+      ],
+      "rationale": "The formula explicitly defines the score function, so the formula formalizes the concept."
+    }
+  ]
+}

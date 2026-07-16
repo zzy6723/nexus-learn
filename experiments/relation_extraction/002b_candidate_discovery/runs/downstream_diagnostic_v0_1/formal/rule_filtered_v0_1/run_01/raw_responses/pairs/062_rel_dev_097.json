@@ -1,0 +1,28 @@
+{
+  "id": "26743ca2-51d4-46d9-b97e-15f77ae2245e",
+  "object": "chat.completion",
+  "created": 1784228468,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_097\",\n      \"source\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"path_cost_formula\"\n      },\n      \"target\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"weighted_directed_graph\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"graph_algorithms_001\",\n          \"span\": \"A weighted directed graph assigns a numerical weight \\\\(w(u,v)\\\\) to each directed edge \\\\((u,v)\\\\). A path is a sequence of compatible directed edges. Its path cost is the sum of their edge weights:\\n\\n\\\\[\\nC(v_0,\\\\ldots,v_k) = \\\\sum_{i=0}^{k-1} w(v_i,v_{i+1}).\\n\\\\]\"\n        }\n      ],\n      \"rationale\": \"The Path Cost Formula explicitly defines the cost of a path in a weighted directed graph, formalizing the concept of path cost for such graphs.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2293,
+    "completion_tokens": 250,
+    "total_tokens": 2543,
+    "prompt_tokens_details": {
+      "cached_tokens": 2176
+    },
+    "prompt_cache_hit_tokens": 2176,
+    "prompt_cache_miss_tokens": 117
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

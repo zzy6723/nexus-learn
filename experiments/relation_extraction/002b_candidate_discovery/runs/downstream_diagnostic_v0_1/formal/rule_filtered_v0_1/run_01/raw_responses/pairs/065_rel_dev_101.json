@@ -1,0 +1,28 @@
+{
+  "id": "20f35fd2-041c-44f9-95e6-465d5d5fe24c",
+  "object": "chat.completion",
+  "created": 1784228477,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_101\",\n      \"source\": {\n        \"lecture_id\": \"numerical_root_finding_001\",\n        \"ko_id\": \"damped_newton_method\"\n      },\n      \"target\": {\n        \"lecture_id\": \"numerical_root_finding_001\",\n        \"ko_id\": \"bisection_method\"\n      },\n      \"relation_type\": \"CONTRASTS_WITH\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"numerical_root_finding_001\",\n          \"span\": \"Newton's method and the bisection method contrast in the information they use: Newton's method requires derivative values and can converge rapidly near a root, whereas bisection uses only function signs and preserves a bracket at every iteration.\"\n        }\n      ],\n      \"rationale\": \"The lecture explicitly contrasts Newton's method (which the damped Newton method extends) with the bisection method, establishing a CONTRASTS_WITH relation between the damped Newton method and the bisection method.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2288,
+    "completion_tokens": 227,
+    "total_tokens": 2515,
+    "prompt_tokens_details": {
+      "cached_tokens": 2176
+    },
+    "prompt_cache_hit_tokens": 2176,
+    "prompt_cache_miss_tokens": 112
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

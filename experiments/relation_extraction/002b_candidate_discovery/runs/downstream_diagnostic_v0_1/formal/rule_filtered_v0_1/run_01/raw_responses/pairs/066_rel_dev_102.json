@@ -1,0 +1,28 @@
+{
+  "id": "05d7d6db-0faf-4627-9ce9-7f1750d336b2",
+  "object": "chat.completion",
+  "created": 1784228480,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_102\",\n      \"source\": {\n        \"lecture_id\": \"numerical_root_finding_001\",\n        \"ko_id\": \"midpoint_formula\"\n      },\n      \"target\": {\n        \"lecture_id\": \"numerical_root_finding_001\",\n        \"ko_id\": \"bisection_method\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"numerical_root_finding_001\",\n          \"span\": \"The bisection method begins with a sign-changing bracket \\\\([a,b]\\\\) satisfying \\\\(f(a)f(b)<0\\\\). It evaluates the midpoint\\n\\n\\\\[\\nm = \\\\frac{a+b}{2}\\n\\\\]\\n\\nand retains the half-interval whose endpoints still have opposite signs.\"\n        }\n      ],\n      \"rationale\": \"The midpoint formula m = (a+b)/2 is used in the bisection method to compute the midpoint of the bracket, and the lecture text directly presents this formula as part of the method's description, establishing that the formula formalizes the method's step.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2272,
+    "completion_tokens": 254,
+    "total_tokens": 2526,
+    "prompt_tokens_details": {
+      "cached_tokens": 2176
+    },
+    "prompt_cache_hit_tokens": 2176,
+    "prompt_cache_miss_tokens": 96
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

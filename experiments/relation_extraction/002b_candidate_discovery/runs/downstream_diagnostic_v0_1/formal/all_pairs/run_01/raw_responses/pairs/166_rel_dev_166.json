@@ -1,0 +1,28 @@
+{
+  "id": "0457a0b2-a286-4a58-9e2a-622effd65c7c",
+  "object": "chat.completion",
+  "created": 1784227209,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_166\",\n      \"source\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"mle_estimator\"\n      },\n      \"target\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"statistical_model\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:\\n\\n\\\\[\\n\\\\widehat{\\\\theta}_{\\\\mathrm{MLE}} = \\\\operatorname*{arg\\\\,max}_{\\\\theta}\\\\, \\\\ell(\\\\theta).\\n\\\\]\"\n        },\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"A statistical model is a family of probability distributions indexed by an unknown parameter \\\\(\\\\theta\\\\).\"\n        }\n      ],\n      \"rationale\": \"The MLE Estimator formula explicitly defines the estimator as the argmax of the log-likelihood, which is derived from the statistical model. The formula formalizes the concept of a statistical model by providing a concrete estimation procedure.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2354,
+    "completion_tokens": 293,
+    "total_tokens": 2647,
+    "prompt_tokens_details": {
+      "cached_tokens": 2176
+    },
+    "prompt_cache_hit_tokens": 2176,
+    "prompt_cache_miss_tokens": 178
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

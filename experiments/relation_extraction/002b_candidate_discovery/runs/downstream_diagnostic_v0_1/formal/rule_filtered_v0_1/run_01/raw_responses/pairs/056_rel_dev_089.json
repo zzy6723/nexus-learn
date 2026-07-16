@@ -1,0 +1,28 @@
+{
+  "id": "15307650-90de-4ef5-b72d-1a4c5aeb353e",
+  "object": "chat.completion",
+  "created": 1784228449,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_089\",\n      \"source\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"single_source_shortest_path_problem\"\n      },\n      \"target\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"path\"\n      },\n      \"relation_type\": \"REQUIRES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"graph_algorithms_001\",\n          \"span\": \"The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex.\"\n        }\n      ],\n      \"rationale\": \"The problem is defined in terms of paths, so understanding 'Path' is necessary to understand the problem.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2270,
+    "completion_tokens": 179,
+    "total_tokens": 2449,
+    "prompt_tokens_details": {
+      "cached_tokens": 2176
+    },
+    "prompt_cache_hit_tokens": 2176,
+    "prompt_cache_miss_tokens": 94
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

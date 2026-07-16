@@ -1,0 +1,18 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_061",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The lecture text does not directly establish a relation between A* Search and the Path Cost Formula. A* Search is described as extending Dijkstra's algorithm with a heuristic, but the path cost formula is only mentioned in the context of defining path cost for weighted graphs, not specifically linked to A* Search."
+    }
+  ]
+}

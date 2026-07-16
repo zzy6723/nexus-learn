@@ -1,0 +1,28 @@
+{
+  "id": "925c7140-ca68-4f5a-a451-9255427b0509",
+  "object": "chat.completion",
+  "created": 1784226988,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_094\",\n      \"source\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"path_cost\"\n      },\n      \"target\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"weighted_directed_graph\"\n      },\n      \"relation_type\": \"REQUIRES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"graph_algorithms_001\",\n          \"span\": \"A weighted directed graph assigns a numerical weight \\\\(w(u,v)\\\\) to each directed edge \\\\((u,v)\\\\). A path is a sequence of compatible directed edges. Its path cost is the sum of their edge weights\"\n        }\n      ],\n      \"rationale\": \"Path cost is defined as the sum of edge weights, which requires the concept of a weighted directed graph to assign weights to edges.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2267,
+    "completion_tokens": 205,
+    "total_tokens": 2472,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 219
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

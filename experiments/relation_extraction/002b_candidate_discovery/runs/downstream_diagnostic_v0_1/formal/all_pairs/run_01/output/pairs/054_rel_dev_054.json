@@ -1,0 +1,27 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_054",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "An ordinary differential equation relates an unknown function of one variable to its derivatives."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The vector field F specifies the slope that the solution should follow at each state."
+        }
+      ],
+      "rationale": "The ordinary differential equation is defined in terms of a vector field F that specifies the slope of the solution, so understanding the vector field is necessary to understand the ODE."
+    }
+  ]
+}

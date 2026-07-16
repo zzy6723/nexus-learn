@@ -1,0 +1,28 @@
+{
+  "id": "4758b22c-3a4d-44cb-b249-d2a53abd8029",
+  "object": "chat.completion",
+  "created": 1784226768,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_023\",\n      \"source\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"heuns_update\"\n      },\n      \"target\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"first_order_equation\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"y_{n+1} = y_n + \\\\frac{h}{2}\\\\left(F(t_n,y_n)+F(t_n+h,\\\\widetilde{y}_{n+1})\\\\right)\"\n        }\n      ],\n      \"rationale\": \"Heun's Update is a formula that explicitly defines the update step for solving a first-order equation numerically, thus formalizing the concept.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2335,
+    "completion_tokens": 205,
+    "total_tokens": 2540,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 287
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

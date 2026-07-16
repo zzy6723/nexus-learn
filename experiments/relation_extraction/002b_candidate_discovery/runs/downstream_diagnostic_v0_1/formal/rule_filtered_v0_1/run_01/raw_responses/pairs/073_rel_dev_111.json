@@ -1,0 +1,28 @@
+{
+  "id": "afbebf06-f62f-462e-9264-d56fbf30389d",
+  "object": "chat.completion",
+  "created": 1784228502,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_111\",\n      \"source\": {\n        \"lecture_id\": \"numerical_root_finding_001\",\n        \"ko_id\": \"damped_newton_method\"\n      },\n      \"target\": {\n        \"lecture_id\": \"numerical_root_finding_001\",\n        \"ko_id\": \"sign_changing_bracket\"\n      },\n      \"relation_type\": \"NO_RELATION\",\n      \"evidence_spans\": [],\n      \"rationale\": \"The lecture text describes the damped Newton method and the sign-changing bracket separately, but does not establish any direct relation between them. The damped Newton method is an extension of Newton's method, while the sign-changing bracket is used in the bisection method. No evidence connects these two objects.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2284,
+    "completion_tokens": 175,
+    "total_tokens": 2459,
+    "prompt_tokens_details": {
+      "cached_tokens": 2176
+    },
+    "prompt_cache_hit_tokens": 2176,
+    "prompt_cache_miss_tokens": 108
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,27 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_039",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y_{n+1} = y_n + hF(t_n,y_n)"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The step size h sets the spacing between consecutive numerical time points."
+        }
+      ],
+      "rationale": "The Forward Euler Update formula explicitly uses the step size h, so understanding the step size is necessary to understand the update."
+    }
+  ]
+}

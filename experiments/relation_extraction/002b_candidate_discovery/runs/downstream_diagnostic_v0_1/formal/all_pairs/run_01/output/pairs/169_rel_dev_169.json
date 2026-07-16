@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_169",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically."
+        }
+      ],
+      "rationale": "Newton's method is a numerical optimization technique that is applied in the context of maximum likelihood estimation to solve the score equation, but the evidence does not show that the Score Function Formula itself is used as a tool within Newton's method; rather, Newton's method is applied in the broader MLE context. However, the score function is central to the MLE problem that Newton's method solves, so the relation is APPLIED_IN with Newton's method as the tool applied in the context of MLE, which involves the score function. But the pair is between Newton's method and the Score Function Formula directly. The evidence states Newton's method is applied within MLE, and the score function is part of MLE. Thus, Newton's method is applied in the context that includes the score function, so APPLIED_IN is appropriate."
+    }
+  ]
+}

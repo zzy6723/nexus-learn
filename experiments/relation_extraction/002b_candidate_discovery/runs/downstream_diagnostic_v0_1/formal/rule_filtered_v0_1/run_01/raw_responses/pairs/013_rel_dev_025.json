@@ -1,0 +1,28 @@
+{
+  "id": "6e6ffd69-2a16-43c5-8dde-9c1a6a5324a6",
+  "object": "chat.completion",
+  "created": 1784228314,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_025\",\n      \"source\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"first_order_equation\"\n      },\n      \"target\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"ordinary_differential_equation\"\n      },\n      \"relation_type\": \"REQUIRES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"An ordinary differential equation relates an unknown function of one variable to its derivatives. A first-order equation can be written as y'(t) = F(t,y(t)).\"\n        }\n      ],\n      \"rationale\": \"A first-order equation is a specific type of ordinary differential equation, so understanding ordinary differential equations is necessary to understand first-order equations.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2315,
+    "completion_tokens": 201,
+    "total_tokens": 2516,
+    "prompt_tokens_details": {
+      "cached_tokens": 2304
+    },
+    "prompt_cache_hit_tokens": 2304,
+    "prompt_cache_miss_tokens": 11
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

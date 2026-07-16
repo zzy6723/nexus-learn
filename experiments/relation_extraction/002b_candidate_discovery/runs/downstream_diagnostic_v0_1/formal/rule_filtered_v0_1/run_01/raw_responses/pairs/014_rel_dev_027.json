@@ -1,0 +1,28 @@
+{
+  "id": "b2f87e63-5ef8-43f9-be9c-36a69f3d4bb4",
+  "object": "chat.completion",
+  "created": 1784228317,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_027\",\n      \"source\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"first_order_equation\"\n      },\n      \"target\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"vector_field\"\n      },\n      \"relation_type\": \"REQUIRES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"A first-order equation can be written as y'(t) = F(t,y(t)).\"\n        },\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"The vector field F specifies the slope that the solution should follow at each state.\"\n        }\n      ],\n      \"rationale\": \"The first-order equation is defined using the vector field F, so understanding the vector field is necessary to understand the first-order equation.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2308,
+    "completion_tokens": 223,
+    "total_tokens": 2531,
+    "prompt_tokens_details": {
+      "cached_tokens": 2304
+    },
+    "prompt_cache_hit_tokens": 2304,
+    "prompt_cache_miss_tokens": 4
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

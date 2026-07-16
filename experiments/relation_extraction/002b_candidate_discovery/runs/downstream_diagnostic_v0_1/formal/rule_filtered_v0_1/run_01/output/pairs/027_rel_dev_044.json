@@ -1,0 +1,27 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_044",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The step size h sets the spacing between consecutive numerical time points."
+        }
+      ],
+      "rationale": "Heun's method, as a numerical method for solving ODEs, requires a step size to define the discretization. The lecture discusses step size in the context of numerical methods, and Heun's method implicitly uses a step size in its update formula, making step size a prerequisite for applying Heun's method."
+    }
+  ]
+}

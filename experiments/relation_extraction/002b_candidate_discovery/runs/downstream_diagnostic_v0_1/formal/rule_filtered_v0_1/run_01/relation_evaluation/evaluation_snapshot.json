@@ -1,0 +1,55 @@
+{
+  "artifact_type": "candidate_relation_evaluation_snapshot",
+  "version": "v0.1",
+  "evaluation_status": "final",
+  "condition": "rule_filtered_v0_1",
+  "method_commit": "78e47b8dc792dd970e72c0040f045c8d1cc1035c",
+  "contract": {
+    "path": "benchmark/candidate_relation_downstream_diagnostic_v0_1.json",
+    "sha256": "f4b46dc888b1600f1635a1deabc6a126467fac896c1938b7608d6bfd682352f7"
+  },
+  "preparation": {
+    "path": "experiments/relation_extraction/002b_candidate_discovery/runs/downstream_diagnostic_v0_1/preparation/rule_filtered_v0_1/preparation_complete.json",
+    "sha256": "43f8050587a47557532bfb62917df3c457410a9a6a13be38d24f3ddf0de9730f"
+  },
+  "run_completion": {
+    "path": "experiments/relation_extraction/002b_candidate_discovery/runs/downstream_diagnostic_v0_1/formal/rule_filtered_v0_1/run_01/diagnostic_run_complete.json",
+    "sha256": "1c2e33091fb41a539ab0259d13420251dd0b37fff2103d27ac8844ba77d191ae"
+  },
+  "implementation": {
+    "path": "scripts/finalize_candidate_relation_evaluation.py",
+    "sha256": "4675d7c51835172196589ea93218b89e7c97fd9c8d7d7f17c98fbc78310d3e3f"
+  },
+  "artifacts": {
+    "adjudication_pending.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "adjudication_resolved.json": "baad91db91b1473f56c634c806c42703e4cb5252e956e268bda18d0d97ccaf7a",
+    "confusion_matrix.json": "bc92e9acf1d83b745d9630c33bc61f1560b5f51f7bd963505e4afe438d532532",
+    "errors.json": "27d95d4d055be27e14867fd80a5b86ce71aad2dc77994ef52f78e8245e439397",
+    "matches.json": "da1d51b56408a830d7788914b06bba89a045f324a6dad195a5ab0f806ed3efd7",
+    "metrics.json": "938f7d61e90e509ad0427f3baa1b618cc3215fe082dab78a8a8b06a178d2b499",
+    "predictions.json": "2d7a797d21220205464db6c159542a286f6e63b5286c7d2c20322edd8ece2472",
+    "run_metadata.json": "a6fa95f9eddcee1bd951c72581c54bfb8307ad5da5d3eff7cd2a1c967cd26a6d",
+    "summary.md": "a1605f5a9303b755c7b6fa9a1f83f53e3f9c0bc663eeb19817aa9d81fe7946a5"
+  },
+  "counts": {
+    "pairs": 127,
+    "primary_pairs": 122,
+    "manual_adjudications": 27,
+    "pending_adjudications": 0
+  },
+  "source": {
+    "evaluation_dir": "experiments/relation_extraction/002b_candidate_discovery/runs/downstream_diagnostic_v0_1/formal/rule_filtered_v0_1/run_01/evaluation",
+    "predictions": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/downstream_diagnostic_v0_1/formal/rule_filtered_v0_1/run_01/output/selected_relation_ground_truth.json",
+      "sha256": "2d7a797d21220205464db6c159542a286f6e63b5286c7d2c20322edd8ece2472"
+    },
+    "run_metadata": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/downstream_diagnostic_v0_1/formal/rule_filtered_v0_1/run_01/metadata/selected_relation_ground_truth.json",
+      "sha256": "a6fa95f9eddcee1bd951c72581c54bfb8307ad5da5d3eff7cd2a1c967cd26a6d"
+    },
+    "adjudication": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/downstream_diagnostic_v0_1/formal/rule_filtered_v0_1/run_01/evaluation/adjudication_resolved.json",
+      "sha256": "baad91db91b1473f56c634c806c42703e4cb5252e956e268bda18d0d97ccaf7a"
+    }
+  }
+}

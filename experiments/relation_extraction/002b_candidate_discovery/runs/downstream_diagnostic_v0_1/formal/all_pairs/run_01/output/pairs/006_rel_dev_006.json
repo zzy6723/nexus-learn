@@ -1,0 +1,18 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_006",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The lecture text does not directly establish a relation between Heun's update formula and discretization error. The formula is presented as an update rule, and discretization error is mentioned in the context of step size, but no evidence connects the two objects."
+    }
+  ]
+}

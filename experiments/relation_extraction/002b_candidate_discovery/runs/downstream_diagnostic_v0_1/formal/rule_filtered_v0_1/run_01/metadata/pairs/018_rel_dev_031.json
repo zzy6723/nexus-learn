@@ -1,0 +1,120 @@
+{
+  "provider": "deepseek",
+  "experiment": "002_prompt_refinement",
+  "run_id": "run_01",
+  "split": "development",
+  "benchmark_version": "v0.1",
+  "ground_truth": "experiments/relation_extraction/002b_candidate_discovery/runs/downstream_diagnostic_v0_1/preparation/rule_filtered_v0_1/selected_relation_ground_truth.json",
+  "prompt_path": "experiments/relation_extraction/002_prompt_refinement/prompt.md",
+  "relation_schema_path": "docs/decisions/004-relation-schema.md",
+  "model_requested": "deepseek-v4-flash",
+  "model_returned": "deepseek-v4-flash",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "finish_reason": "stop",
+  "request_parameters": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 8192,
+    "stream": false,
+    "response_format": {
+      "type": "json_object"
+    },
+    "thinking": {
+      "type": "disabled"
+    }
+  },
+  "run_timestamp": "2026-07-16T18:57:57.837708+00:00",
+  "latency_ms": 3033,
+  "git_commit_at_start": "78e47b8dc792dd970e72c0040f045c8d1cc1035c",
+  "git_dirty_at_start": false,
+  "hashes": {
+    "ground_truth_sha256": "2501dfd70321db53c7ad1f78f8f20c8cafaba7f7bdf9c7a46bb687eb8b47922e",
+    "prompt_sha256": "e3b0e53f3ceed60c60d082fa9c4a67f9497e64d50664118227cd9bea9fbc12af",
+    "relation_schema_sha256": "a50bbf3193fe03e6e407da6ced7f15f9f4bb819876140925bc87ac4419c50417",
+    "knowledge_object_ground_truth_sha256": {
+      "benchmark/ground_truth/candidate_relation_knowledge_objects_development_v0_1.json": "ed236a9d0a89984774c9e95418083acf784b38dcab88130bc0421cd7157becd2"
+    },
+    "lecture_sha256": {
+      "differential_equations_001": "7488ea27d88e3970e600829508a5673a43c111e4fcad13b87f33313be13986b0"
+    },
+    "model_input_sha256": "fe073535e05b1cdee82854effc0edbbdb538ed9fca3f4d86d243b2ca0c8a9ae1",
+    "request_payload_sha256": "22fec19ce038e1bf02046d0244dc18e49ede008578892223d601ff9fb01ea64b"
+  },
+  "input_counts": {
+    "candidate_pairs": 1,
+    "knowledge_objects": 2,
+    "lectures": 1
+  },
+  "gold_leakage_audit": {
+    "passed": true,
+    "candidate_serialization": "sorted_fully_qualified_references",
+    "forbidden_keys_checked": [
+      "acceptable_alternatives",
+      "category",
+      "evidence_spans",
+      "primary_scored",
+      "primary_scoring_categories",
+      "rationale",
+      "relation_type",
+      "source",
+      "symmetric",
+      "target"
+    ],
+    "rendered_pair_count": 1,
+    "rendered_knowledge_object_count": 2,
+    "rendered_lecture_count": 1
+  },
+  "artifacts": {
+    "rendered_input": "experiments/relation_extraction/002b_candidate_discovery/runs/downstream_diagnostic_v0_1/formal/rule_filtered_v0_1/run_01/rendered_inputs/pairs/018_rel_dev_031.json",
+    "raw_response": "experiments/relation_extraction/002b_candidate_discovery/runs/downstream_diagnostic_v0_1/formal/rule_filtered_v0_1/run_01/raw_responses/pairs/018_rel_dev_031.json",
+    "prediction": "experiments/relation_extraction/002b_candidate_discovery/runs/downstream_diagnostic_v0_1/formal/rule_filtered_v0_1/run_01/output/pairs/018_rel_dev_031.json",
+    "unparsed_output": "experiments/relation_extraction/002b_candidate_discovery/runs/downstream_diagnostic_v0_1/formal/rule_filtered_v0_1/run_01/output/pairs/018_rel_dev_031.raw.txt",
+    "metadata": "experiments/relation_extraction/002b_candidate_discovery/runs/downstream_diagnostic_v0_1/formal/rule_filtered_v0_1/run_01/metadata/pairs/018_rel_dev_031.json"
+  },
+  "usage": {
+    "prompt_tokens": 2325,
+    "completion_tokens": 198,
+    "total_tokens": 2523,
+    "prompt_tokens_details": {
+      "cached_tokens": 2304
+    },
+    "prompt_cache_hit_tokens": 2304,
+    "prompt_cache_miss_tokens": 21
+  },
+  "request_success": true,
+  "api_error": null,
+  "json_parse_success": true,
+  "json_parse_error": null,
+  "prediction_schema_valid": true,
+  "prediction_schema_error": null,
+  "retry_count": 0,
+  "dry_run": false,
+  "run_status": "completed",
+  "condition": "rule_filtered_v0_1",
+  "input_artifact": "experiments/relation_extraction/002b_candidate_discovery/runs/downstream_diagnostic_v0_1/preparation/rule_filtered_v0_1/model_input.json",
+  "input_artifact_sha256": "e978235383c0f0e4be79265cd970de9b927d3708a89116a51bf50684c0fe38b3",
+  "batch_plan": "experiments/relation_extraction/002b_candidate_discovery/runs/downstream_diagnostic_v0_1/preparation/rule_filtered_v0_1/batch_plan.json",
+  "batch_plan_sha256": "30a8439e81fcef66b708fdfdf2b18eee156c17cd09b9c141d08227c2da9c39f4",
+  "request_partitioning": "one_candidate_pair_per_request_v0_1",
+  "execution_batch_plan": "experiments/relation_extraction/002b_candidate_discovery/runs/downstream_diagnostic_v0_1/formal/rule_filtered_v0_1/run_01/execution_batch_plan.json",
+  "execution_batch_plan_sha256": "633514266d728cec60481013b20966d75eaed06d14380c53b48184079fa5b0cc",
+  "execution_batch_id": "candidate_018",
+  "execution_batch_index": 18,
+  "execution_batch_count": 127,
+  "pair_id": "rel_dev_031",
+  "diagnostic_contract": "benchmark/candidate_relation_downstream_diagnostic_v0_1.json",
+  "diagnostic_contract_sha256": "f4b46dc888b1600f1635a1deabc6a126467fac896c1938b7608d6bfd682352f7",
+  "diagnostic_preparation_marker": "experiments/relation_extraction/002b_candidate_discovery/runs/downstream_diagnostic_v0_1/preparation/rule_filtered_v0_1/preparation_complete.json",
+  "diagnostic_preparation_marker_sha256": "43f8050587a47557532bfb62917df3c457410a9a6a13be38d24f3ddf0de9730f",
+  "diagnostic_runner": "scripts/run_candidate_relation_diagnostic.py",
+  "diagnostic_runner_sha256": "2a36c0df48e2c4358567cafda96d12ec3d61262b59541979798052ce784359ce",
+  "candidate_method": "rule_filtered_v0_1",
+  "method_commit": "78e47b8dc792dd970e72c0040f045c8d1cc1035c",
+  "preceding_all_pairs_metadata": {
+    "path": "experiments/relation_extraction/002b_candidate_discovery/runs/downstream_diagnostic_v0_1/formal/all_pairs/run_01/metadata/selected_relation_ground_truth.json",
+    "sha256": "8e398d2e0ba72476ecc08d220554d43923a8d864cac093bb78c1e29ada40a240"
+  },
+  "request_id": "6ff9193b-306a-4b43-84b1-209e67876f4c",
+  "raw_response_sha256": "830fd467d8798e200e9df68c86b7cf9482499de04456b6facb6027dd8400f9be",
+  "prediction_sha256": "d9c2957401efa168775777a49f30505229810f6333d1fb9ba9dd0ab4a4080aa0"
+}

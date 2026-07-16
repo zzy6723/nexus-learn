@@ -1,0 +1,28 @@
+{
+  "id": "16a00da7-52cd-4ad3-b132-0765113145bb",
+  "object": "chat.completion",
+  "created": 1784226945,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_079\",\n      \"source\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"edge_relaxation\"\n      },\n      \"target\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"weighted_directed_graph\"\n      },\n      \"relation_type\": \"APPLIED_IN\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"graph_algorithms_001\",\n          \"span\": \"it applies edge relaxation to each outgoing edge.\"\n        },\n        {\n          \"lecture_id\": \"graph_algorithms_001\",\n          \"span\": \"A weighted directed graph assigns a numerical weight \\\\(w(u,v)\\\\) to each directed edge \\\\((u,v)\\\\).\"\n        }\n      ],\n      \"rationale\": \"Edge relaxation is a method applied to weighted directed graphs to update tentative distances during shortest-path algorithms.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2270,
+    "completion_tokens": 210,
+    "total_tokens": 2480,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 222
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

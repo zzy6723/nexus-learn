@@ -1,0 +1,27 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_036",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "relation_type": "EXTENDS",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "It first forms the Euler predictor\n\n\\[\n\\widetilde{y}_{n+1} = y_n + hF(t_n,y_n),\n\\]\n\nthen averages the slope at the current point with the slope at the predicted point. The corrected update is\n\n\\[\ny_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right).\n\\]"
+        }
+      ],
+      "rationale": "Heun's update is a more specific development that builds upon the forward Euler update by adding a predictor-corrector step, preserving the Euler method as its conceptual base."
+    }
+  ]
+}

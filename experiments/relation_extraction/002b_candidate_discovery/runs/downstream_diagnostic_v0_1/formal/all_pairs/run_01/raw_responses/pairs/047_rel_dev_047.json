@@ -1,0 +1,28 @@
+{
+  "id": "f607ccf9-3085-4e56-bc15-037bda4ac5de",
+  "object": "chat.completion",
+  "created": 1784226844,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_047\",\n      \"source\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"heuns_update\"\n      },\n      \"target\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"ordinary_differential_equation\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"y_{n+1} = y_n + \\\\frac{h}{2}\\\\left(F(t_n,y_n)+F(t_n+h,\\\\widetilde{y}_{n+1})\\\\right)\"\n        },\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"An ordinary differential equation relates an unknown function of one variable to its derivatives.\"\n        }\n      ],\n      \"rationale\": \"Heun's update is a formula that provides a numerical solution method for an ordinary differential equation, thus formalizing the concept by giving an explicit update rule.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2333,
+    "completion_tokens": 249,
+    "total_tokens": 2582,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 285
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

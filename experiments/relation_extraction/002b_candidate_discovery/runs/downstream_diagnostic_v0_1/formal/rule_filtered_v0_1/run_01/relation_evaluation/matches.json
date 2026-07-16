@@ -1,0 +1,6065 @@
+[
+  {
+    "pair_id": "rel_dev_001",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_003",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "relation_type": "RELATED_TO"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "differential_equations_001",
+        "span": "Smaller steps usually reduce discretization error but require more updates over a fixed time interval.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_004",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "differential_equations_001",
+        "span": "Smaller steps usually reduce discretization error but require more updates over a fixed time interval.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "differential_equations_001",
+        "span": "y_{n+1} = y_n + hF(t_n,y_n)",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_005",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "relation_type": "RELATED_TO"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "differential_equations_001",
+        "span": "Smaller steps usually reduce discretization error but require more updates over a fixed time interval.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "differential_equations_001",
+        "span": "Heun's method extends the forward Euler method with a predictor-corrector step.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_007",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_009",
+    "category": "schema_gap",
+    "primary_scored": false,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "relation_type": "RELATED_TO"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "relation_type": "RELATED_TO"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "differential_equations_001",
+        "span": "Smaller steps usually reduce discretization error but require more updates over a fixed time interval.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_012",
+    "category": "schema_gap",
+    "primary_scored": false,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "relation_type": "RELATED_TO"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "relation_type": "EXTENDS"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "differential_equations_001",
+        "span": "Heun's method extends the forward Euler method with a predictor-corrector step. It first forms the Euler predictor",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_013",
+    "category": "schema_gap",
+    "primary_scored": false,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "relation_type": "RELATED_TO"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "differential_equations_001",
+        "span": "It first forms the Euler predictor y_{n+1} = y_n + hF(t_n,y_n)",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_014",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "relation_type": "EXTENDS"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": false,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "differential_equations_001",
+        "span": "Heun's method extends the forward Euler method with a predictor-corrector step.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "differential_equations_001",
+        "span": "It first forms the Euler predictor y_{n+1} = y_n + hF(t_n,y_n)",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_015",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": true,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "differential_equations_001",
+        "span": "Heun's method extends the forward Euler method with a predictor-corrector step. It first forms the Euler predictor\n\n\\[\n\\widetilde{y}_{n+1} = y_n + hF(t_n,y_n),\n\\]\n\nthen averages the slope at the current point with the slope at the predicted point. The corrected update is\n\n\\[\ny_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right).\n\\]",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_018",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "differential_equations_001",
+        "span": "It first forms the Euler predictor y_{n+1} = y_n + hF(t_n,y_n)",
+        "lecture_allowed": true,
+        "exact_substring": false
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "differential_equations_001",
+        "span": "The step size h sets the spacing between consecutive numerical time points.",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_024",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "differential_equations_001",
+        "span": "An initial value problem combines an ordinary differential equation with an initial condition such as y(t_0)=y_0.",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_025",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "relation_type": "EXTENDS"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": true,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "differential_equations_001",
+        "span": "An ordinary differential equation relates an unknown function of one variable to its derivatives. A first-order equation can be written as y'(t) = F(t,y(t)).",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_027",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "differential_equations_001",
+        "span": "A first-order equation can be written as y'(t) = F(t,y(t)).",
+        "lecture_allowed": true,
+        "exact_substring": false
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "differential_equations_001",
+        "span": "The vector field F specifies the slope that the solution should follow at each state.",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_028",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "differential_equations_001",
+        "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope. Its update is\n\ny_{n+1} = y_n + hF(t_n,y_n).",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_029",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "relation_type": "EXTENDS"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "relation_type": "EXTENDS"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "differential_equations_001",
+        "span": "Heun's method extends the forward Euler method with a predictor-corrector step.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  },
+  {
+    "pair_id": "rel_dev_030",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "differential_equations_001",
+        "span": "Heun's method extends the forward Euler method with a predictor-corrector step. It first forms the Euler predictor\n\n\\[\n\\widetilde{y}_{n+1} = y_n + hF(t_n,y_n),\n\\]\n\nthen averages the slope at the current point with the slope at the predicted point. The corrected update is\n\n\\[\ny_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right).\n\\]",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_031",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "differential_equations_001",
+        "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  },
+  {
+    "pair_id": "rel_dev_033",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "differential_equations_001",
+        "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope. Its update is\n\ny_{n+1} = y_n + hF(t_n,y_n).\n\nThe step size h sets the spacing between consecutive numerical time points.",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_034",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": false,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "differential_equations_001",
+        "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "differential_equations_001",
+        "span": "Its update is y_{n+1} = y_n + hF(t_n,y_n).",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_035",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "relation_type": "EXTENDS"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": false,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "differential_equations_001",
+        "span": "Heun's method extends the forward Euler method with a predictor-corrector step.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_036",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "relation_type": "EXTENDS"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "relation_type": "EXTENDS"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "differential_equations_001",
+        "span": "Heun's method extends the forward Euler method with a predictor-corrector step.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "differential_equations_001",
+        "span": "It first forms the Euler predictor\n\n\\[\n\\widetilde{y}_{n+1} = y_n + hF(t_n,y_n),\n\\]\n\nthen averages the slope at the current point with the slope at the predicted point. The corrected update is\n\n\\[\ny_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right).\n\\]",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_037",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": true,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "differential_equations_001",
+        "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope. Its update is\n\ny_{n+1} = y_n + hF(t_n,y_n).",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_039",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "differential_equations_001",
+        "span": "y_{n+1} = y_n + hF(t_n,y_n)",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "differential_equations_001",
+        "span": "The step size h sets the spacing between consecutive numerical time points.",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_040",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": true,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "differential_equations_001",
+        "span": "y_{n+1} = y_n + hF(t_n,y_n)",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "differential_equations_001",
+        "span": "The vector field F specifies the slope that the solution should follow at each state.",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_041",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "differential_equations_001",
+        "span": "y_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right)",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "not_supported"
+  },
+  {
+    "pair_id": "rel_dev_044",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "differential_equations_001",
+        "span": "Heun's method extends the forward Euler method with a predictor-corrector step.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "differential_equations_001",
+        "span": "The step size h sets the spacing between consecutive numerical time points.",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": "not_supported"
+  },
+  {
+    "pair_id": "rel_dev_050",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "differential_equations_001",
+        "span": "An initial value problem combines an ordinary differential equation with an initial condition such as y(t_0)=y_0.",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_051",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "differential_equations_001",
+        "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope. Its update is y_{n+1} = y_n + hF(t_n,y_n). The step size h sets the spacing between consecutive numerical time points.",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_052",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": false,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "differential_equations_001",
+        "span": "An initial value problem combines an ordinary differential equation with an initial condition such as y(t_0)=y_0.",
+        "lecture_allowed": true,
+        "exact_substring": false
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "differential_equations_001",
+        "span": "The vector field F specifies the slope that the solution should follow at each state.",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_054",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "differential_equations_001",
+        "span": "An ordinary differential equation relates an unknown function of one variable to its derivatives.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "differential_equations_001",
+        "span": "The vector field F specifies the slope that the solution should follow at each state.",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_056",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "relation_type": "EXTENDS"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "relation_type": "EXTENDS"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "graph_algorithms_001",
+        "span": "A* search extends Dijkstra's algorithm by using a heuristic function \\(h(v)\\) to guide which vertex is explored next.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  },
+  {
+    "pair_id": "rel_dev_057",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "graph_algorithms_001",
+        "span": "A* search extends Dijkstra's algorithm by using a heuristic function \\(h(v)\\) to guide which vertex is explored next.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "graph_algorithms_001",
+        "span": "it applies edge relaxation to each outgoing edge.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_058",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": false,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "graph_algorithms_001",
+        "span": "A* search extends Dijkstra's algorithm by using a heuristic function \\(h(v)\\) to guide which vertex is explored next.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_059",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "graph_algorithms_001",
+        "span": "A path is a sequence of compatible directed edges. Its path cost is the sum of their edge weights: ... The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex. Dijkstra's algorithm is applied to this problem when all edge weights are nonnegative.",
+        "lecture_allowed": true,
+        "exact_substring": false
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "graph_algorithms_001",
+        "span": "A* search extends Dijkstra's algorithm by using a heuristic function \\(h(v)\\) to guide which vertex is explored next.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_060",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": false,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "graph_algorithms_001",
+        "span": "A* search extends Dijkstra's algorithm by using a heuristic function \\(h(v)\\) to guide which vertex is explored next. Its queue priority combines the known path cost with the heuristic estimate",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_061",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_062",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "graph_algorithms_001",
+        "span": "Relaxation is formalized by the update\n\n\\[\nd(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}.\n\\]",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_065",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": false,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "graph_algorithms_001",
+        "span": "Dijkstra's algorithm stores tentative distance estimates in a priority queue. After removing a vertex \\(u\\) with the smallest tentative distance, it applies edge relaxation to each outgoing edge.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_066",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "relation_type": "RELATED_TO"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": true,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "graph_algorithms_001",
+        "span": "A* search extends Dijkstra's algorithm by using a heuristic function \\(h(v)\\) to guide which vertex is explored next.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_067",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "graph_algorithms_001",
+        "span": "The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex. Dijkstra's algorithm is applied to this problem when all edge weights are nonnegative.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_068",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "graph_algorithms_001",
+        "span": "Its path cost is the sum of their edge weights",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "graph_algorithms_001",
+        "span": "Dijkstra's algorithm stores tentative distance estimates in a priority queue. After removing a vertex \\(u\\) with the smallest tentative distance, it applies edge relaxation to each outgoing edge. Relaxation is formalized by the update\n\n\\[\nd(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}.\n\\]",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_069",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "graph_algorithms_001",
+        "span": "C(v_0,\\ldots,v_k) = \\sum_{i=0}^{k-1} w(v_i,v_{i+1})",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "graph_algorithms_001",
+        "span": "Dijkstra's algorithm stores tentative distance estimates in a priority queue. After removing a vertex \\(u\\) with the smallest tentative distance, it applies edge relaxation to each outgoing edge. Relaxation is formalized by the update\n\n\\[\nd(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}.\n\\]",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_070",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": true,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "graph_algorithms_001",
+        "span": "Relaxation is formalized by the update\n\nd(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}.",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_071",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "graph_algorithms_001",
+        "span": "Dijkstra's algorithm is applied to this problem when all edge weights are nonnegative.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "not_supported"
+  },
+  {
+    "pair_id": "rel_dev_072",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "graph_algorithms_001",
+        "span": "Dijkstra's algorithm is applied to this problem when all edge weights are nonnegative.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "graph_algorithms_001",
+        "span": "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\).",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_073",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_077",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "graph_algorithms_001",
+        "span": "Relaxation is formalized by the update\n\nd(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}.",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_078",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "graph_algorithms_001",
+        "span": "Dijkstra's algorithm is applied to this problem when all edge weights are nonnegative.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "graph_algorithms_001",
+        "span": "it applies edge relaxation to each outgoing edge.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_080",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_081",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "relation_type": "RELATED_TO"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_082",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_083",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_086",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "graph_algorithms_001",
+        "span": "A path is a sequence of compatible directed edges. Its path cost is the sum of their edge weights",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_087",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": true,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "graph_algorithms_001",
+        "span": "A path is a sequence of compatible directed edges. Its path cost is the sum of their edge weights:\n\n\\[\nC(v_0,\\ldots,v_k) = \\sum_{i=0}^{k-1} w(v_i,v_{i+1}).\n\\]",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_089",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "graph_algorithms_001",
+        "span": "The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  },
+  {
+    "pair_id": "rel_dev_090",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "graph_algorithms_001",
+        "span": "A path is a sequence of compatible directed edges.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "graph_algorithms_001",
+        "span": "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\).",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  },
+  {
+    "pair_id": "rel_dev_091",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "graph_algorithms_001",
+        "span": "Its path cost is the sum of their edge weights:\n\n\\[\nC(v_0,\\ldots,v_k) = \\sum_{i=0}^{k-1} w(v_i,v_{i+1}).\n\\]",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_093",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "graph_algorithms_001",
+        "span": "The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "graph_algorithms_001",
+        "span": "Its path cost is the sum of their edge weights",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_094",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "graph_algorithms_001",
+        "span": "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\). A path is a sequence of compatible directed edges. Its path cost is the sum of their edge weights",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_096",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": true,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "graph_algorithms_001",
+        "span": "C(v_0,\\ldots,v_k) = \\sum_{i=0}^{k-1} w(v_i,v_{i+1})",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "graph_algorithms_001",
+        "span": "The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_097",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": true,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "graph_algorithms_001",
+        "span": "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\). A path is a sequence of compatible directed edges. Its path cost is the sum of their edge weights:\n\n\\[\nC(v_0,\\ldots,v_k) = \\sum_{i=0}^{k-1} w(v_i,v_{i+1}).\n\\]",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_098",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "graph_algorithms_001",
+        "span": "Relaxation is formalized by the update\n\nd(v) ← min{d(v), d(u)+w(u,v)}.",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_100",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "graph_algorithms_001",
+        "span": "The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "graph_algorithms_001",
+        "span": "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\). A path is a sequence of compatible directed edges. Its path cost is the sum of their edge weights:",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_101",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "relation_type": "CONTRASTS_WITH"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "numerical_root_finding_001",
+        "span": "Newton's method and the bisection method contrast in the information they use: Newton's method requires derivative values and can converge rapidly near a root, whereas bisection uses only function signs and preserves a bracket at every iteration.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_102",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "midpoint_formula"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "midpoint_formula"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "numerical_root_finding_001",
+        "span": "The bisection method begins with a sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\). It evaluates the midpoint\n\n\\[\nm = \\frac{a+b}{2}\n\\]\n\nand retains the half-interval whose endpoints still have opposite signs.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_103",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newton_update_formula"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newton_update_formula"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "relation_type": "CONTRASTS_WITH"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "numerical_root_finding_001",
+        "span": "Newton's method and the bisection method contrast in the information they use: Newton's method requires derivative values and can converge rapidly near a root, whereas bisection uses only function signs and preserves a bracket at every iteration.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_104",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newtons_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "relation_type": "CONTRASTS_WITH"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newtons_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "relation_type": "CONTRASTS_WITH"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "numerical_root_finding_001",
+        "span": "Newton's method and the bisection method contrast in the information they use: Newton's method requires derivative values and can converge rapidly near a root, whereas bisection uses only function signs and preserves a bracket at every iteration.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  },
+  {
+    "pair_id": "rel_dev_106",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "sign_changing_bracket"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "sign_changing_bracket"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "numerical_root_finding_001",
+        "span": "The bisection method begins with a sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\).",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  },
+  {
+    "pair_id": "rel_dev_107",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "midpoint_formula"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "midpoint_formula"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_108",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newton_update_formula"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newton_update_formula"
+      },
+      "relation_type": "EXTENDS"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": true,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "numerical_root_finding_001",
+        "span": "The damped Newton method extends Newton's method by scaling the Newton correction with a factor between zero and one.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "numerical_root_finding_001",
+        "span": "x_{k+1} = x_k - \\frac{f(x_k)}{f'(x_k)}",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_109",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newtons_method"
+      },
+      "relation_type": "EXTENDS"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newtons_method"
+      },
+      "relation_type": "EXTENDS"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "numerical_root_finding_001",
+        "span": "The damped Newton method extends Newton's method by scaling the Newton correction with a factor between zero and one.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  },
+  {
+    "pair_id": "rel_dev_111",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "sign_changing_bracket"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "sign_changing_bracket"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_115",
+    "category": "schema_gap",
+    "primary_scored": false,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "midpoint_formula"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "sign_changing_bracket"
+      },
+      "relation_type": "RELATED_TO"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "midpoint_formula"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "sign_changing_bracket"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "numerical_root_finding_001",
+        "span": "The bisection method begins with a sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\). It evaluates the midpoint\n\n\\[\nm = \\frac{a+b}{2}\n\\]",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_116",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newton_update_formula"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newtons_method"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newton_update_formula"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newtons_method"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "numerical_root_finding_001",
+        "span": "Newton's method uses the derivative to replace the function locally by its tangent line. Provided \\(f'(x_k)\\neq 0\\), its update is\n\n\\[\nx_{k+1} = x_k - \\frac{f(x_k)}{f'(x_k)}.\n\\]",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_117",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newton_update_formula"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "root_finding_problem"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newton_update_formula"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "root_finding_problem"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "numerical_root_finding_001",
+        "span": "Newton's method uses the derivative to replace the function locally by its tangent line. Provided \\(f'(x_k)\\neq 0\\), its update is\n\n\\[\nx_{k+1} = x_k - \\frac{f(x_k)}{f'(x_k)}.\n\\]",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_119",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newtons_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "root_finding_problem"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newtons_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "root_finding_problem"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "numerical_root_finding_001",
+        "span": "Newton's method uses the derivative to replace the function locally by its tangent line.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "numerical_root_finding_001",
+        "span": "A root-finding problem asks for a value \\(x^*\\) at which a scalar function is zero",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "not_supported"
+  },
+  {
+    "pair_id": "rel_dev_122",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "L(\\theta; x_{1:n}) = \\prod_{i=1}^{n} p(x_i \\mid \\theta).",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "statistics_estimation_001",
+        "span": "The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  },
+  {
+    "pair_id": "rel_dev_123",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "relation_type": "EXTENDS"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": true,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "The log-likelihood is obtained by taking the logarithm of the likelihood.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_124",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": true,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "The log-likelihood is obtained by taking the logarithm of the likelihood. Independence turns the product into a sum:\n\n\\[\n\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta).\n\\]",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_125",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_126",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:\n\n\\[\n\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta).\n\\]",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_127",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_128",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "The score function is the derivative of the log-likelihood with respect to the parameter",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "statistics_estimation_001",
+        "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\).",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_129",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "The score function is the derivative of the log-likelihood with respect to the parameter",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_130",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "The score function is the derivative of the log-likelihood with respect to the parameter, s(θ) = ∇_θ ℓ(θ).",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_131",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "auto_supported_by_gold_evidence"
+  },
+  {
+    "pair_id": "rel_dev_132",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": false,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "The log-likelihood is obtained by taking the logarithm of the likelihood.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "statistics_estimation_001",
+        "span": "ℓ(θ) = log L(θ; x_{1:n}) = ∑_{i=1}^{n} log p(x_i ∣ θ).",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_133",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": true,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "The log-likelihood is obtained by taking the logarithm of the likelihood.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "statistics_estimation_001",
+        "span": "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta).",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_134",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "L(\\theta; x_{1:n}) = \\prod_{i=1}^{n} p(x_i \\mid \\theta).",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "statistics_estimation_001",
+        "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_135",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:\n\n\\[\n\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta).\n\\]",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_136",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_137",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "The score function is the derivative of the log-likelihood with respect to the parameter, s(θ) = ∇_θ ℓ(θ). At an interior differentiable optimum, an MLE candidate satisfies the score equation s(θ)=0.",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_138",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "The score function is the derivative of the log-likelihood with respect to the parameter",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_139",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "The score function is the derivative of the log-likelihood with respect to the parameter, s(θ) = ∇_θ ℓ(θ).",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_140",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": true,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "statistics_estimation_001",
+        "span": "L(\\theta; x_{1:n}) = \\prod_{i=1}^{n} p(x_i \\mid \\theta).",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_141",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta).",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_142",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": false,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_143",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": true,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:\n\n\\[\n\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta).\n\\]",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_145",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "The score function is the derivative of the log-likelihood with respect to the parameter",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "statistics_estimation_001",
+        "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\).",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_146",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "The score function is the derivative of the log-likelihood with respect to the parameter",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_147",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": true,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "The score function is the derivative of the log-likelihood with respect to the parameter, s(θ) = ∇_θ ℓ(θ).",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_148",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "A statistical model is a family of probability distributions indexed by an unknown parameter \\(\\theta\\). The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "statistics_estimation_001",
+        "span": "The log-likelihood is obtained by taking the logarithm of the likelihood.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_149",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": true,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "statistics_estimation_001",
+        "span": "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta).",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_150",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": true,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:\n\n\\[\n\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta).\n\\]",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_152",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": true,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "The score function is the derivative of the log-likelihood with respect to the parameter, s(θ) = ∇_θ ℓ(θ). At an interior differentiable optimum, an MLE candidate satisfies the score equation s(θ)=0.",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_153",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": true,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "The score function is the derivative of the log-likelihood with respect to the parameter",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_154",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": true,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "s(θ) = ∇_θ ℓ(θ).",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_155",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "A statistical model is a family of probability distributions indexed by an unknown parameter \\(\\theta\\). The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "statistics_estimation_001",
+        "span": "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta).",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_156",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it: \n\n\\[\n\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta).\n\\]",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_157",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_158",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": true,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\).",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_159",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": false,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "statistics_estimation_001",
+        "span": "The score function is the derivative of the log-likelihood with respect to the parameter",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 2,
+        "lecture_id": "statistics_estimation_001",
+        "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation s(θ)=0.",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_160",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "The score function is the derivative of the log-likelihood with respect to the parameter,\n\n\\[\ns(\\theta) = \\nabla_{\\theta}\\ell(\\theta).\n\\]\n\nAt an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\).",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_162",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_163",
+    "category": "schema_gap",
+    "primary_scored": false,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "relation_type": "RELATED_TO"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\).",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_164",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "The score function is the derivative of the log-likelihood with respect to the parameter",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "statistics_estimation_001",
+        "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\).",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_165",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "The score function is the derivative of the log-likelihood with respect to the parameter, s(θ) = ∇_θ ℓ(θ). At an interior differentiable optimum, an MLE candidate satisfies the score equation s(θ)=0.",
+        "lecture_allowed": true,
+        "exact_substring": false
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_166",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "A statistical model is a family of probability distributions indexed by an unknown parameter \\(\\theta\\).",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "statistics_estimation_001",
+        "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:\n\n\\[\n\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta).\n\\]",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_167",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "not_supported"
+  },
+  {
+    "pair_id": "rel_dev_168",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "statistics_estimation_001",
+        "span": "The score function is the derivative of the log-likelihood with respect to the parameter",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_169",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically.",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_171",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "The score function is the derivative of the log-likelihood with respect to the parameter",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "statistics_estimation_001",
+        "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\).",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_172",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": false,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "s(\\theta) = \\nabla_{\\theta}\\ell(\\theta).",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "statistics_estimation_001",
+        "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\).",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_173",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "relation_type": "REQUIRES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "A statistical model is a family of probability distributions indexed by an unknown parameter \\(\\theta\\).",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "statistics_estimation_001",
+        "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\).",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  },
+  {
+    "pair_id": "rel_dev_174",
+    "category": "positive",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": true,
+    "direction_eligible": true,
+    "direction_type_conditioned_eligible": true,
+    "direction_correct": true,
+    "strict_edge_correct": true,
+    "acceptable_alternative_match": true,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "The score function is the derivative of the log-likelihood with respect to the parameter,\n\n\\[\ns(\\theta) = \\nabla_{\\theta}\\ell(\\theta).\n\\]",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": "supported"
+  },
+  {
+    "pair_id": "rel_dev_176",
+    "category": "hard_negative",
+    "primary_scored": true,
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "relation_type": "NO_RELATION"
+    },
+    "accepted_alternatives": [],
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "relation_type": "FORMALIZES"
+    },
+    "unordered_candidate_pair_correct": true,
+    "relation_type_correct": false,
+    "direction_eligible": false,
+    "direction_type_conditioned_eligible": false,
+    "direction_correct": null,
+    "strict_edge_correct": false,
+    "acceptable_alternative_match": false,
+    "rationale_present": true,
+    "evidence": [
+      {
+        "evidence_index": 0,
+        "lecture_id": "statistics_estimation_001",
+        "span": "A statistical model is a family of probability distributions indexed by an unknown parameter \\(\\theta\\).",
+        "lecture_allowed": true,
+        "exact_substring": true
+      },
+      {
+        "evidence_index": 1,
+        "lecture_id": "statistics_estimation_001",
+        "span": "The score function is the derivative of the log-likelihood with respect to the parameter,\n\n\\[\ns(\\theta) = \\nabla_{\\theta}\\ell(\\theta).\n\\]",
+        "lecture_allowed": true,
+        "exact_substring": true
+      }
+    ],
+    "evidence_support_status": null
+  }
+]

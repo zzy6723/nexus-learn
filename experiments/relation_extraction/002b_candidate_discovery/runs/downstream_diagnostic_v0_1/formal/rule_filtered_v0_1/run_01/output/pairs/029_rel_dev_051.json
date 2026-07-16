@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_051",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope. Its update is y_{n+1} = y_n + hF(t_n,y_n). The step size h sets the spacing between consecutive numerical time points."
+        }
+      ],
+      "rationale": "The step size is a parameter used in numerical methods applied to initial value problems, as shown in the forward Euler update formula where h appears. Thus, step size is applied in the context of solving initial value problems."
+    }
+  ]
+}

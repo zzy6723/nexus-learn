@@ -1,0 +1,28 @@
+{
+  "id": "e171dd82-e991-4490-befc-feb166cc2b3b",
+  "object": "chat.completion",
+  "created": 1784227167,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_152\",\n      \"source\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"score_equation\"\n      },\n      \"target\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"log_likelihood_function\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"The score function is the derivative of the log-likelihood with respect to the parameter, s(θ) = ∇_θ ℓ(θ). At an interior differentiable optimum, an MLE candidate satisfies the score equation s(θ)=0.\"\n        }\n      ],\n      \"rationale\": \"The score equation s(θ)=0 formalizes the condition for an optimum of the log-likelihood function, as the score is defined as its derivative.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2367,
+    "completion_tokens": 223,
+    "total_tokens": 2590,
+    "prompt_tokens_details": {
+      "cached_tokens": 2176
+    },
+    "prompt_cache_hit_tokens": 2176,
+    "prompt_cache_miss_tokens": 191
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "a83c6d1e-d924-4486-99a7-c3ef12ace813",
+  "object": "chat.completion",
+  "created": 1784228660,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_168\",\n      \"source\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"newtons_method\"\n      },\n      \"target\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"score_function\"\n      },\n      \"relation_type\": \"APPLIED_IN\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically.\"\n        },\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"The score function is the derivative of the log-likelihood with respect to the parameter\"\n        }\n      ],\n      \"rationale\": \"Newton's method is applied to solve the score equation (score function set to zero) in maximum likelihood estimation, so Newton's method is used in the context of the score function.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2328,
+    "completion_tokens": 230,
+    "total_tokens": 2558,
+    "prompt_tokens_details": {
+      "cached_tokens": 2304
+    },
+    "prompt_cache_hit_tokens": 2304,
+    "prompt_cache_miss_tokens": 24
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

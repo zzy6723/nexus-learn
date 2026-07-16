@@ -1,0 +1,167 @@
+{
+  "evaluation_status": "final",
+  "total_pairs": 176,
+  "primary_scored_pairs": 171,
+  "positive_pairs": 80,
+  "hard_negative_pairs": 91,
+  "ambiguous_pairs": 0,
+  "schema_gap_pairs": 5,
+  "strict_edge_accuracy": 0.36257309941520466,
+  "strict_edge_correct_count": 62,
+  "relation_type_accuracy_ignoring_direction": 0.38596491228070173,
+  "relation_type_correct_count": 66,
+  "endpoint_direction_accuracy": 0.8461538461538461,
+  "endpoint_direction_correct_count": 66,
+  "endpoint_direction_scored_count": 78,
+  "direction_accuracy_when_type_correct": 0.9069767441860465,
+  "direction_when_type_correct_count": 39,
+  "direction_when_type_correct_scored_count": 43,
+  "direction_accuracy": 0.8461538461538461,
+  "direction_correct_count": 66,
+  "direction_scored_count": 78,
+  "positive_relation_accuracy": 0.5,
+  "positive_relation_correct_count": 40,
+  "no_relation_accuracy": 0.24175824175824176,
+  "no_relation_correct_count": 22,
+  "acceptable_accuracy_ambiguous": null,
+  "ambiguous_acceptable_count": 0,
+  "macro_f1_supported_labels": 0.37344085086589834,
+  "macro_f1_included_labels": [
+    "REQUIRES",
+    "APPLIED_IN",
+    "EXTENDS",
+    "CONTRASTS_WITH",
+    "FORMALIZES",
+    "RELATED_TO",
+    "NO_RELATION"
+  ],
+  "related_to_prediction_rate": 0.005847953216374269,
+  "related_to_overuse_count": 1,
+  "unsupported_relation_count": 69,
+  "exact_evidence_span_rate": 0.7751196172248804,
+  "exact_evidence_span_count": 162,
+  "evidence_span_count": 209,
+  "invalid_evidence_span_count": 47,
+  "evidence_lecture_outside_candidate_count": 0,
+  "missing_evidence_count": 0,
+  "unexpected_no_relation_evidence_count": 0,
+  "missing_rationale_count": 0,
+  "manual_adjudication_count": 32,
+  "pending_adjudication_count": 0,
+  "schema_gap_predictions": [
+    {
+      "pair_id": "rel_dev_009",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "discretization_error"
+        },
+        "target": {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "step_size"
+        },
+        "relation_type": "RELATED_TO"
+      },
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Smaller steps usually reduce discretization error but require more updates over a fixed time interval."
+        }
+      ],
+      "rationale": "The lecture directly states that smaller step sizes reduce discretization error, establishing a meaningful educational connection between the two concepts. However, the relation does not fit the stronger types: step size is not a prerequisite for understanding discretization error (REQUIRES), discretization error is not applied in step size (APPLIED_IN), neither extends the other (EXTENDS), there is no contrast (CONTRASTS_WITH), and step size is not a formula that formalizes discretization error (FORMALIZES). Thus, RELATED_TO is appropriate."
+    },
+    {
+      "pair_id": "rel_dev_012",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "euler_predictor"
+        },
+        "target": {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "forward_euler_method"
+        },
+        "relation_type": "EXTENDS"
+      },
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Heun's method extends the forward Euler method with a predictor-corrector step. It first forms the Euler predictor"
+        }
+      ],
+      "rationale": "The Euler predictor is a component of Heun's method, which extends the forward Euler method. The evidence directly states that Heun's method extends the forward Euler method and that the Euler predictor is part of that extension."
+    },
+    {
+      "pair_id": "rel_dev_013",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "euler_predictor"
+        },
+        "target": {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "forward_euler_update"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "It first forms the Euler predictor y_{n+1} = y_n + hF(t_n,y_n)"
+        }
+      ],
+      "rationale": "The Euler Predictor is a concept that is formalized by the Forward Euler Update formula, as the evidence directly presents the formula as the expression of the predictor."
+    },
+    {
+      "pair_id": "rel_dev_115",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "numerical_root_finding_001",
+          "ko_id": "midpoint_formula"
+        },
+        "target": {
+          "lecture_id": "numerical_root_finding_001",
+          "ko_id": "sign_changing_bracket"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "The bisection method begins with a sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\). It evaluates the midpoint\n\n\\[\nm = \\frac{a+b}{2}\n\\]"
+        }
+      ],
+      "rationale": "The midpoint formula m = (a+b)/2 is used in the bisection method to compute the midpoint of the sign-changing bracket, thereby formalizing the bracket's role in the method."
+    },
+    {
+      "pair_id": "rel_dev_163",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "score_equation"
+        },
+        "target": {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "mle_estimator"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\)."
+        }
+      ],
+      "rationale": "The score equation provides the condition that an MLE candidate must satisfy, thus formalizing the MLE estimator."
+    }
+  ],
+  "relation_coverage": {
+    "REQUIRES": "covered_with_39_primary_instances",
+    "APPLIED_IN": "covered_with_23_primary_instances",
+    "EXTENDS": "covered_with_5_primary_instances",
+    "CONTRASTS_WITH": "covered_with_1_primary_instances",
+    "FORMALIZES": "covered_with_10_primary_instances",
+    "RELATED_TO": "covered_with_2_primary_instances",
+    "NO_RELATION": "covered_with_91_primary_instances"
+  }
+}

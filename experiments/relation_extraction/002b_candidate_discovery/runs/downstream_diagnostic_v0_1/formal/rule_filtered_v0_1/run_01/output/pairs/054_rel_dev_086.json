@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_086",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A path is a sequence of compatible directed edges. Its path cost is the sum of their edge weights"
+        }
+      ],
+      "rationale": "Path cost is defined in terms of a path, so understanding path cost requires understanding what a path is."
+    }
+  ]
+}

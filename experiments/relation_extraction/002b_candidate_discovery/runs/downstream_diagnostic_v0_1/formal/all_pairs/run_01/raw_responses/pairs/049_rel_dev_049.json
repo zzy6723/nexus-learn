@@ -1,0 +1,28 @@
+{
+  "id": "7e196be9-9cbb-4a60-8361-150efc825ec8",
+  "object": "chat.completion",
+  "created": 1784226851,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_049\",\n      \"source\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"heuns_update\"\n      },\n      \"target\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"vector_field\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"y_{n+1} = y_n + \\\\frac{h}{2}\\\\left(F(t_n,y_n)+F(t_n+h,\\\\widetilde{y}_{n+1})\\\\right)\"\n        },\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"The vector field F specifies the slope that the solution should follow at each state.\"\n        }\n      ],\n      \"rationale\": \"Heun's update formula explicitly uses the vector field F to compute the corrected slope, thereby formalizing the concept of the vector field in the context of numerical integration.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2326,
+    "completion_tokens": 249,
+    "total_tokens": 2575,
+    "prompt_tokens_details": {
+      "cached_tokens": 2176
+    },
+    "prompt_cache_hit_tokens": 2176,
+    "prompt_cache_miss_tokens": 150
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

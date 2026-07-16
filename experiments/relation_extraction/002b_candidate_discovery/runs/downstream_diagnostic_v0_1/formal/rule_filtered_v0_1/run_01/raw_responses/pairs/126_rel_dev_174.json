@@ -1,0 +1,28 @@
+{
+  "id": "85a40ad8-db7f-4bb1-8e88-d57cb7874934",
+  "object": "chat.completion",
+  "created": 1784228678,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_174\",\n      \"source\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"score_function_formula\"\n      },\n      \"target\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"score_function\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"The score function is the derivative of the log-likelihood with respect to the parameter,\\n\\n\\\\[\\ns(\\\\theta) = \\\\nabla_{\\\\theta}\\\\ell(\\\\theta).\\n\\\\]\"\n        }\n      ],\n      \"rationale\": \"The formula explicitly defines the score function, so the formula formalizes the concept.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2332,
+    "completion_tokens": 198,
+    "total_tokens": 2530,
+    "prompt_tokens_details": {
+      "cached_tokens": 2304
+    },
+    "prompt_cache_hit_tokens": 2304,
+    "prompt_cache_miss_tokens": 28
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

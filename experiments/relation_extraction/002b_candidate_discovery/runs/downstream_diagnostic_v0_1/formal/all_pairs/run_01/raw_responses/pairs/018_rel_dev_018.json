@@ -1,0 +1,28 @@
+{
+  "id": "c0542fc6-aa15-4fb3-8060-f39cbb6893f7",
+  "object": "chat.completion",
+  "created": 1784226752,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_018\",\n      \"source\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"euler_predictor\"\n      },\n      \"target\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"step_size\"\n      },\n      \"relation_type\": \"REQUIRES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"It first forms the Euler predictor y_{n+1} = y_n + hF(t_n,y_n)\"\n        },\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"The step size h sets the spacing between consecutive numerical time points.\"\n        }\n      ],\n      \"rationale\": \"The Euler predictor formula explicitly uses the step size h, so understanding the step size is necessary to define the Euler predictor.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2311,
+    "completion_tokens": 223,
+    "total_tokens": 2534,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 263
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

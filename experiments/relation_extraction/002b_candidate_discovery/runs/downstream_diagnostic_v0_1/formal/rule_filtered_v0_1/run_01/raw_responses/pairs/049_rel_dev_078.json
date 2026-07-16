@@ -1,0 +1,28 @@
+{
+  "id": "7006021c-e906-49cc-bf64-947aea74c7d3",
+  "object": "chat.completion",
+  "created": 1784228427,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_078\",\n      \"source\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"edge_relaxation\"\n      },\n      \"target\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"single_source_shortest_path_problem\"\n      },\n      \"relation_type\": \"APPLIED_IN\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"graph_algorithms_001\",\n          \"span\": \"Dijkstra's algorithm is applied to this problem when all edge weights are nonnegative.\"\n        },\n        {\n          \"lecture_id\": \"graph_algorithms_001\",\n          \"span\": \"it applies edge relaxation to each outgoing edge.\"\n        }\n      ],\n      \"rationale\": \"Edge relaxation is a method used within Dijkstra's algorithm, which is applied to solve the single-source shortest-path problem. The evidence shows that Dijkstra's algorithm applies edge relaxation to solve the problem.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2277,
+    "completion_tokens": 226,
+    "total_tokens": 2503,
+    "prompt_tokens_details": {
+      "cached_tokens": 2176
+    },
+    "prompt_cache_hit_tokens": 2176,
+    "prompt_cache_miss_tokens": 101
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "6c7b9c6c-52f5-44dd-9828-4c1d1bfe3e45",
+  "object": "chat.completion",
+  "created": 1784228518,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_122\",\n      \"source\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"likelihood_function\"\n      },\n      \"target\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"likelihood\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"L(\\\\theta; x_{1:n}) = \\\\prod_{i=1}^{n} p(x_i \\\\mid \\\\theta).\"\n        },\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values.\"\n        }\n      ],\n      \"rationale\": \"The Likelihood Function formula explicitly defines the Likelihood concept, as the lecture states 'The likelihood is defined...' and then presents the formula.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2343,
+    "completion_tokens": 239,
+    "total_tokens": 2582,
+    "prompt_tokens_details": {
+      "cached_tokens": 2304
+    },
+    "prompt_cache_hit_tokens": 2304,
+    "prompt_cache_miss_tokens": 39
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

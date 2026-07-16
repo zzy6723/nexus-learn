@@ -1,0 +1,28 @@
+{
+  "id": "eb5dbf1c-342e-43e5-b117-005cdec86ddf",
+  "object": "chat.completion",
+  "created": 1784228312,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_024\",\n      \"source\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"initial_value_problem\"\n      },\n      \"target\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"first_order_equation\"\n      },\n      \"relation_type\": \"REQUIRES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"An initial value problem combines an ordinary differential equation with an initial condition such as y(t_0)=y_0.\"\n        }\n      ],\n      \"rationale\": \"An initial value problem requires a differential equation (here a first-order equation) as a component, so the initial value problem depends on the first-order equation.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2321,
+    "completion_tokens": 195,
+    "total_tokens": 2516,
+    "prompt_tokens_details": {
+      "cached_tokens": 2304
+    },
+    "prompt_cache_hit_tokens": 2304,
+    "prompt_cache_miss_tokens": 17
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

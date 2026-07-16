@@ -1,0 +1,28 @@
+{
+  "id": "274653c4-c9c9-46e1-a298-363114c35f8f",
+  "object": "chat.completion",
+  "created": 1784226708,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_004\",\n      \"source\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"forward_euler_update\"\n      },\n      \"target\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"discretization_error\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"Smaller steps usually reduce discretization error but require more updates over a fixed time interval.\"\n        },\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"y_{n+1} = y_n + hF(t_n,y_n)\"\n        }\n      ],\n      \"rationale\": \"The Forward Euler Update formula includes the step size h, and the lecture directly states that smaller steps reduce discretization error, establishing that the formula formalizes the concept of discretization error.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2313,
+    "completion_tokens": 236,
+    "total_tokens": 2549,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 265
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

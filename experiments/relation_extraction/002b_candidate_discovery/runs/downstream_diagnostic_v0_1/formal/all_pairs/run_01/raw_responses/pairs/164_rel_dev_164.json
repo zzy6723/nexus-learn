@@ -1,0 +1,28 @@
+{
+  "id": "4a023691-ee23-4376-9260-851270d629a3",
+  "object": "chat.completion",
+  "created": 1784227203,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_164\",\n      \"source\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"mle_estimator\"\n      },\n      \"target\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"score_function\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"The score function is the derivative of the log-likelihood with respect to the parameter\"\n        },\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"At an interior differentiable optimum, an MLE candidate satisfies the score equation \\\\(s(\\\\theta)=0\\\\).\"\n        }\n      ],\n      \"rationale\": \"The MLE estimator formula formalizes the condition that the score function equals zero at an optimum, establishing a direct formal relationship.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2349,
+    "completion_tokens": 231,
+    "total_tokens": 2580,
+    "prompt_tokens_details": {
+      "cached_tokens": 2176
+    },
+    "prompt_cache_hit_tokens": 2176,
+    "prompt_cache_miss_tokens": 173
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

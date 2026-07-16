@@ -1,0 +1,28 @@
+{
+  "id": "eb5b9b02-5dd2-4c97-b3f4-bb035564e059",
+  "object": "chat.completion",
+  "created": 1784227105,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_132\",\n      \"source\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"log_likelihood\"\n      },\n      \"target\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"likelihood_function\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"The log-likelihood is obtained by taking the logarithm of the likelihood.\"\n        },\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"ℓ(θ) = log L(θ; x_{1:n}) = ∑_{i=1}^{n} log p(x_i ∣ θ).\"\n        }\n      ],\n      \"rationale\": \"The log-likelihood is defined as the logarithm of the likelihood function, and the formula ℓ(θ) = log L(θ; x_{1:n}) explicitly expresses the log-likelihood in terms of the likelihood function, establishing a FORMALIZES relation where the log-likelihood (source) formalizes the likelihood function (target).\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2344,
+    "completion_tokens": 283,
+    "total_tokens": 2627,
+    "prompt_tokens_details": {
+      "cached_tokens": 1664
+    },
+    "prompt_cache_hit_tokens": 1664,
+    "prompt_cache_miss_tokens": 680
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

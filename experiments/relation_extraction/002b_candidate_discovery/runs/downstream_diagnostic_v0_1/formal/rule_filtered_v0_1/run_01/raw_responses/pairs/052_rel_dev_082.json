@@ -1,0 +1,28 @@
+{
+  "id": "4efefe94-932f-4439-b28b-dd1dedfedcfe",
+  "object": "chat.completion",
+  "created": 1784228436,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_082\",\n      \"source\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"path_cost_formula\"\n      },\n      \"target\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"heuristic_function\"\n      },\n      \"relation_type\": \"NO_RELATION\",\n      \"evidence_spans\": [],\n      \"rationale\": \"The lecture does not directly establish a relation between the Path Cost Formula and the Heuristic Function. The Path Cost Formula is defined for weighted directed graphs, while the Heuristic Function is introduced in the context of A* search as an extension of Dijkstra's algorithm. There is no evidence that the formula formalizes, requires, or is applied in the heuristic function.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2272,
+    "completion_tokens": 182,
+    "total_tokens": 2454,
+    "prompt_tokens_details": {
+      "cached_tokens": 2176
+    },
+    "prompt_cache_hit_tokens": 2176,
+    "prompt_cache_miss_tokens": 96
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

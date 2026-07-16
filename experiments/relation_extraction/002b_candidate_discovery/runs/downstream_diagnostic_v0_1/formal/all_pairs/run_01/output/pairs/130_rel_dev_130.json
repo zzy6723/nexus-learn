@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_130",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The score function is the derivative of the log-likelihood with respect to the parameter, s(θ) = ∇_θ ℓ(θ)."
+        }
+      ],
+      "rationale": "The Score Function Formula explicitly defines the score function as the derivative of the log-likelihood, thus formalizing the concept of likelihood by providing its derivative expression."
+    }
+  ]
+}

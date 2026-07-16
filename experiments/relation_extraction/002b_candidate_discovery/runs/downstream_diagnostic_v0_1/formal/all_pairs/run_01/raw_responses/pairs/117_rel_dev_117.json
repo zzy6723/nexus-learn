@@ -1,0 +1,28 @@
+{
+  "id": "f5d2b7df-a740-41c3-9353-00a92dd7dba6",
+  "object": "chat.completion",
+  "created": 1784227061,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_117\",\n      \"source\": {\n        \"lecture_id\": \"numerical_root_finding_001\",\n        \"ko_id\": \"newton_update_formula\"\n      },\n      \"target\": {\n        \"lecture_id\": \"numerical_root_finding_001\",\n        \"ko_id\": \"root_finding_problem\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"numerical_root_finding_001\",\n          \"span\": \"A root-finding problem asks for a value \\\\(x^*\\\\) at which a scalar function is zero:\\n\\n\\\\[\\nf(x^*) = 0.\\n\\\\]\\n\\nNewton's method uses the derivative to replace the function locally by its tangent line. Provided \\\\(f'(x_k)\\\\neq 0\\\\), its update is\\n\\n\\\\[\\nx_{k+1} = x_k - \\\\frac{f(x_k)}{f'(x_k)}.\\n\\\\]\"\n        }\n      ],\n      \"rationale\": \"The Newton update formula provides the iterative update rule that defines how Newton's method solves the root-finding problem, thus formalizing the problem's solution condition.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2285,
+    "completion_tokens": 275,
+    "total_tokens": 2560,
+    "prompt_tokens_details": {
+      "cached_tokens": 1920
+    },
+    "prompt_cache_hit_tokens": 1920,
+    "prompt_cache_miss_tokens": 365
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

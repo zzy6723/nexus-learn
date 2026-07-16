@@ -1,0 +1,28 @@
+{
+  "id": "fe9f14e7-8965-44cf-8d1c-44f88d374c8f",
+  "object": "chat.completion",
+  "created": 1784226749,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_017\",\n      \"source\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"euler_predictor\"\n      },\n      \"target\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"ordinary_differential_equation\"\n      },\n      \"relation_type\": \"APPLIED_IN\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope. Its update is y_{n+1} = y_n + hF(t_n,y_n).\"\n        },\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"It first forms the Euler predictor y_{n+1} = y_n + hF(t_n,y_n)\"\n        }\n      ],\n      \"rationale\": \"The Euler predictor is a step within the forward Euler method, which is applied to solve ordinary differential equations. The evidence shows the Euler predictor formula is used in the context of solving ODEs.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2321,
+    "completion_tokens": 272,
+    "total_tokens": 2593,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 273
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

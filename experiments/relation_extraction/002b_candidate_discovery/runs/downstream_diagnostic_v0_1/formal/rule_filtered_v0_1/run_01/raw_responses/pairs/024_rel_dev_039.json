@@ -1,0 +1,28 @@
+{
+  "id": "ae16067b-d59d-445d-a556-11bf2ece8224",
+  "object": "chat.completion",
+  "created": 1784228345,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_039\",\n      \"source\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"forward_euler_update\"\n      },\n      \"target\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"step_size\"\n      },\n      \"relation_type\": \"REQUIRES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"y_{n+1} = y_n + hF(t_n,y_n)\"\n        },\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"The step size h sets the spacing between consecutive numerical time points.\"\n        }\n      ],\n      \"rationale\": \"The Forward Euler Update formula explicitly uses the step size h, so understanding the step size is necessary to apply the formula.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2302,
+    "completion_tokens": 216,
+    "total_tokens": 2518,
+    "prompt_tokens_details": {
+      "cached_tokens": 2176
+    },
+    "prompt_cache_hit_tokens": 2176,
+    "prompt_cache_miss_tokens": 126
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

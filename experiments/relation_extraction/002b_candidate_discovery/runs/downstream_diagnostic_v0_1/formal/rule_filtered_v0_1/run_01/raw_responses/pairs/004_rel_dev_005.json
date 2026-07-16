@@ -1,0 +1,28 @@
+{
+  "id": "0e7f7906-75a4-458c-84d4-66625e99564e",
+  "object": "chat.completion",
+  "created": 1784228288,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_005\",\n      \"source\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"heuns_method\"\n      },\n      \"target\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"discretization_error\"\n      },\n      \"relation_type\": \"RELATED_TO\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"Smaller steps usually reduce discretization error but require more updates over a fixed time interval.\"\n        },\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"Heun's method extends the forward Euler method with a predictor-corrector step.\"\n        }\n      ],\n      \"rationale\": \"The lecture mentions discretization error in the context of step size and Heun's method as a numerical method, but does not directly state a specific relation such as Heun's method reducing or requiring discretization error. The connection is indirect and weak, so RELATED_TO is appropriate.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2312,
+    "completion_tokens": 253,
+    "total_tokens": 2565,
+    "prompt_tokens_details": {
+      "cached_tokens": 2304
+    },
+    "prompt_cache_hit_tokens": 2304,
+    "prompt_cache_miss_tokens": 8
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

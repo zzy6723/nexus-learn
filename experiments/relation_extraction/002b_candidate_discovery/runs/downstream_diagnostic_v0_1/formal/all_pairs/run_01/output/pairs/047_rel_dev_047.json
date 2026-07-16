@@ -1,0 +1,27 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_047",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right)"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "An ordinary differential equation relates an unknown function of one variable to its derivatives."
+        }
+      ],
+      "rationale": "Heun's update is a formula that provides a numerical solution method for an ordinary differential equation, thus formalizing the concept by giving an explicit update rule."
+    }
+  ]
+}

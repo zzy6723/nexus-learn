@@ -1,0 +1,28 @@
+{
+  "id": "a550ba6f-7dfb-4631-bf1d-f38cc9adea8e",
+  "object": "chat.completion",
+  "created": 1784227134,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_141\",\n      \"source\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"log_likelihood_function\"\n      },\n      \"target\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"log_likelihood\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"\\\\ell(\\\\theta) = \\\\log L(\\\\theta; x_{1:n}) = \\\\sum_{i=1}^{n} \\\\log p(x_i \\\\mid \\\\theta).\"\n        }\n      ],\n      \"rationale\": \"The log-likelihood function is a formula that explicitly defines the log-likelihood concept, so it formalizes the concept.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2361,
+    "completion_tokens": 207,
+    "total_tokens": 2568,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 313
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

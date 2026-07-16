@@ -1,0 +1,28 @@
+{
+  "id": "d0c11915-49f0-4706-806c-eda9153d14ce",
+  "object": "chat.completion",
+  "created": 1784227146,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_145\",\n      \"source\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"score_equation\"\n      },\n      \"target\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"log_likelihood\"\n      },\n      \"relation_type\": \"REQUIRES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"The score function is the derivative of the log-likelihood with respect to the parameter\"\n        },\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"At an interior differentiable optimum, an MLE candidate satisfies the score equation \\\\(s(\\\\theta)=0\\\\).\"\n        }\n      ],\n      \"rationale\": \"The score equation is defined as setting the score function (derivative of log-likelihood) to zero, so understanding the log-likelihood is necessary to define the score equation.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2339,
+    "completion_tokens": 243,
+    "total_tokens": 2582,
+    "prompt_tokens_details": {
+      "cached_tokens": 2176
+    },
+    "prompt_cache_hit_tokens": 2176,
+    "prompt_cache_miss_tokens": 163
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "70dc2c99-b6c0-4f34-91e4-045b29b7b8b1",
+  "object": "chat.completion",
+  "created": 1784226733,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_012\",\n      \"source\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"euler_predictor\"\n      },\n      \"target\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"forward_euler_method\"\n      },\n      \"relation_type\": \"EXTENDS\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"Heun's method extends the forward Euler method with a predictor-corrector step. It first forms the Euler predictor\"\n        }\n      ],\n      \"rationale\": \"The Euler predictor is a component of Heun's method, which extends the forward Euler method. The evidence directly states that Heun's method extends the forward Euler method and that the Euler predictor is part of that extension.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2327,
+    "completion_tokens": 207,
+    "total_tokens": 2534,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 279
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

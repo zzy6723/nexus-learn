@@ -1,0 +1,18 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_081",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The lecture text does not directly establish a relation between heuristic function and path cost. Heuristic function is mentioned only in the context of A* search, and path cost is defined earlier for Dijkstra's algorithm. No evidence connects them directly."
+    }
+  ]
+}

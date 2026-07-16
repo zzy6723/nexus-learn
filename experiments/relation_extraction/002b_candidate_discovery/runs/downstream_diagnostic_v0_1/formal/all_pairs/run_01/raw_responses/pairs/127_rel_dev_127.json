@@ -1,0 +1,28 @@
+{
+  "id": "75fa2a40-05ca-4e33-b427-406c4bf76a1b",
+  "object": "chat.completion",
+  "created": 1784227090,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_127\",\n      \"source\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"newtons_method\"\n      },\n      \"target\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"likelihood\"\n      },\n      \"relation_type\": \"APPLIED_IN\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically.\"\n        }\n      ],\n      \"rationale\": \"Newton's method is a numerical optimization technique that is applied within the context of maximum likelihood estimation, which uses the likelihood function. Thus, Newton's method is applied in the process of maximizing the likelihood.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2330,
+    "completion_tokens": 192,
+    "total_tokens": 2522,
+    "prompt_tokens_details": {
+      "cached_tokens": 2176
+    },
+    "prompt_cache_hit_tokens": 2176,
+    "prompt_cache_miss_tokens": 154
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

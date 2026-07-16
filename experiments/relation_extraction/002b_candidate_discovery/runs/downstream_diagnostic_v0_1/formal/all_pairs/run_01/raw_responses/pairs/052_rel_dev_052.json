@@ -1,0 +1,28 @@
+{
+  "id": "59cda62c-c72e-4dc9-9294-96f167b13f5f",
+  "object": "chat.completion",
+  "created": 1784226861,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_052\",\n      \"source\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"initial_value_problem\"\n      },\n      \"target\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"vector_field\"\n      },\n      \"relation_type\": \"REQUIRES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"An initial value problem combines an ordinary differential equation with an initial condition such as y(t_0)=y_0.\"\n        },\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"The vector field F specifies the slope that the solution should follow at each state.\"\n        }\n      ],\n      \"rationale\": \"The initial value problem requires the vector field F to define the differential equation's right-hand side, as the vector field specifies the slope that the solution follows.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2312,
+    "completion_tokens": 233,
+    "total_tokens": 2545,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 264
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

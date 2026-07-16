@@ -1,0 +1,28 @@
+{
+  "id": "cc929c74-6e77-42da-b8a4-007acfac8b0a",
+  "object": "chat.completion",
+  "created": 1784228631,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_160\",\n      \"source\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"score_function_formula\"\n      },\n      \"target\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"maximum_likelihood_estimation\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"The score function is the derivative of the log-likelihood with respect to the parameter,\\n\\n\\\\[\\ns(\\\\theta) = \\\\nabla_{\\\\theta}\\\\ell(\\\\theta).\\n\\\\]\\n\\nAt an interior differentiable optimum, an MLE candidate satisfies the score equation \\\\(s(\\\\theta)=0\\\\).\"\n        }\n      ],\n      \"rationale\": \"The Score Function Formula formally defines the score function as the derivative of the log-likelihood, and the text states that an MLE candidate satisfies the score equation, establishing the formula as a formal condition for maximum likelihood estimation.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2347,
+    "completion_tokens": 258,
+    "total_tokens": 2605,
+    "prompt_tokens_details": {
+      "cached_tokens": 2304
+    },
+    "prompt_cache_hit_tokens": 2304,
+    "prompt_cache_miss_tokens": 43
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

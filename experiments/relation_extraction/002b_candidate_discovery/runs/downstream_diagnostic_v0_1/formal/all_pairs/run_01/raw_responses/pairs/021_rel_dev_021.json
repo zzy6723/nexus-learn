@@ -1,0 +1,28 @@
+{
+  "id": "cd2c02c2-c4d2-4e06-ab7b-0520a691307c",
+  "object": "chat.completion",
+  "created": 1784226762,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_021\",\n      \"source\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"forward_euler_update\"\n      },\n      \"target\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"first_order_equation\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope. Its update is\\n\\ny_{n+1} = y_n + hF(t_n,y_n).\"\n        }\n      ],\n      \"rationale\": \"The Forward Euler Update formula explicitly defines the numerical update step for solving a first-order ODE, thus formalizing the concept of a first-order equation in a discrete numerical context.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2314,
+    "completion_tokens": 222,
+    "total_tokens": 2536,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 266
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

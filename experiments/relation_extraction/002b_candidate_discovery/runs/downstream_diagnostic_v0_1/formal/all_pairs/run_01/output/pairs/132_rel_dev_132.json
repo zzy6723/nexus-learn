@@ -1,0 +1,27 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_132",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The log-likelihood is obtained by taking the logarithm of the likelihood."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "ℓ(θ) = log L(θ; x_{1:n}) = ∑_{i=1}^{n} log p(x_i ∣ θ)."
+        }
+      ],
+      "rationale": "The log-likelihood is defined as the logarithm of the likelihood function, and the formula ℓ(θ) = log L(θ; x_{1:n}) explicitly expresses the log-likelihood in terms of the likelihood function, establishing a FORMALIZES relation where the log-likelihood (source) formalizes the likelihood function (target)."
+    }
+  ]
+}

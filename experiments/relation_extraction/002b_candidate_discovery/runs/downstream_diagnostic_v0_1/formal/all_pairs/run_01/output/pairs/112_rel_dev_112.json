@@ -1,0 +1,18 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_112",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "midpoint_formula"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newton_update_formula"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The lecture text presents the midpoint formula and the Newton update formula as separate formulas used in different methods (bisection and Newton's method). There is no direct evidence establishing a relation between them; they are merely mentioned in the same lecture."
+    }
+  ]
+}

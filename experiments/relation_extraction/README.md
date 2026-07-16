@@ -15,14 +15,16 @@ Experiment status:
 
 - Experiment 002A, Oracle-KO Typed Relation Extraction: completed;
 - Experiment 002B-1, controlled predicted-KO pipeline coupling: completed;
-- Experiment 002B-2, Candidate Pair Generation under predicted KOs: Candidate
-  comparison completed; downstream typed-edge diagnostic awaiting method freeze;
+- Experiment 002B-2, Candidate Pair Generation under predicted KOs: completed
+  with a failed Rule-Filtered recall gate and All-Pairs safety fallback;
 - Experiment 002C, KO Resolution / Canonicalization: pending.
 
-The current implementation focus is Experiment 002B-2. Its definition is in:
+The next implementation focus is Experiment 002C. The completed 002B-2 records
+are in:
 
 - `experiments/relation_extraction/002b_candidate_discovery/README.md`;
-- `benchmark/candidate_pair_generation_protocol.md`.
+- `experiments/relation_extraction/002b_candidate_discovery/conclusion.md`;
+- `experiments/relation_extraction/002b_candidate_discovery/downstream_relation_diagnostic.md`.
 
 Selected method:
 
@@ -270,28 +272,31 @@ suite contains 21 tests and passed during holdout construction validation.
 
 # Next Steps
 
-Experiments 002A and 002B-1 are closed. Prompt 002 remains the frozen Relation
-classifier for subsequent Technical Validation. Experiment 002B-1 established
-how predicted-KO errors propagate when the candidate pair universe is supplied;
-it did not generate candidate pairs.
+Experiments 002A and 002B are closed. Prompt 002 remains the frozen Relation
+classifier for subsequent Technical Validation.
 
-Experiment 002B-2 now has a frozen, exhaustive development benchmark over 39
-predicted KOs and all 176 lecture-local unordered pairs. It contains 80
-in-schema positives, 91 primary negatives, and 5 out-of-schema diagnostics; all
-annotations pass the strict checker in final mode and are bound by the Ground
-Truth completion marker.
+Experiment 002B completed both missing layers:
 
-The All-Pairs control and Rule-Filtered v0.1 comparison are complete.
-Rule-Filtered selected 127/176 pairs, recalled 70/80 positives, and failed the
-frozen Candidate recall gate; All-Pairs remains the safe lecture-local fallback.
+- 002B-1 measured predicted-KO representation and endpoint-recoverability
+  effects when candidate pairs were supplied;
+- 002B-2 evaluated candidate discovery over all 176 lecture-local predicted-KO
+  pairs and propagated both Candidate methods through the frozen Relation
+  classifier.
 
-The remaining 002B gates are:
+Rule-Filtered v0.1 selected 127/176 pairs and reduced workload by 27.84%, but it
+recalled only 70/80 positives and failed the frozen Candidate gate. In the
+downstream diagnostic it produced 36/80 correct positive typed edges, compared
+with 40/80 under All-Pairs. All-Pairs therefore remains the current
+recall-preserving lecture-local fallback, with explicit quadratic-scaling and
+false-positive limitations.
 
-1. freeze the Candidate-to-Relation projection, preparation, execution,
-   snapshot, and pipeline-evaluation method;
-2. run All-Pairs and Rule-Filtered through the same frozen Relation classifier;
-3. complete independent Evidence adjudication and final snapshots;
-4. produce the 171-pair pipeline comparison and close 002B with scoped claims.
+The next experiment is 002C, Knowledge Object Resolution / Canonicalization:
 
-Cross-lecture mention resolution and canonical IDs remain Experiment 002C.
-Learner-facing Connection ranking remains Experiment 003.
+```text
+lecture-local predicted KO mentions
+-> canonical KO identities
+-> alias and duplicate resolution
+-> provenance-preserving cross-lecture objects
+```
+
+Learner-facing Connection discovery and ranking remain Experiment 003.

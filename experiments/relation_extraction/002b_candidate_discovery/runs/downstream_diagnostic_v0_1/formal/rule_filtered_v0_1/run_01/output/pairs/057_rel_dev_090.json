@@ -1,0 +1,27 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_090",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A path is a sequence of compatible directed edges."
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\)."
+        }
+      ],
+      "rationale": "A path is defined as a sequence of directed edges, which presupposes the existence of a weighted directed graph that provides the edges and their weights. Therefore, understanding a path requires understanding the weighted directed graph."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_083",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The lecture text does not establish a direct relation between the Heuristic Function and the Relaxation Update. The heuristic function is used in A* search to guide exploration, while the relaxation update is a formula for updating distance estimates in Dijkstra's algorithm. They are mentioned in separate contexts without any direct connection."
+    }
+  ]
+}

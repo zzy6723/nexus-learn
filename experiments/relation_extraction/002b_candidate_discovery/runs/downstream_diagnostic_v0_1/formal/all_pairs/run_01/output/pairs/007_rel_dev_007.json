@@ -1,0 +1,18 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_007",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The lecture text mentions discretization error in the context of step size for numerical methods, but does not directly establish a relation between discretization error and the initial value problem concept. The two objects are only co-occurring in the same lecture without a specific connection."
+    }
+  ]
+}

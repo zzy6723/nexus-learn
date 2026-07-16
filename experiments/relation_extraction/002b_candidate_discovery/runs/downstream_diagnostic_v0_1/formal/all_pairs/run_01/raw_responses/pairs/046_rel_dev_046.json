@@ -1,0 +1,28 @@
+{
+  "id": "68326946-0614-4f7a-bf1e-879a2fe6fa4a",
+  "object": "chat.completion",
+  "created": 1784226840,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_046\",\n      \"source\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"heuns_update\"\n      },\n      \"target\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"initial_value_problem\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"Heun's method extends the forward Euler method with a predictor-corrector step. It first forms the Euler predictor\\n\\n\\\\[\\n\\\\widetilde{y}_{n+1} = y_n + hF(t_n,y_n),\\n\\\\]\\n\\nthen averages the slope at the current point with the slope at the predicted point. The corrected update is\\n\\n\\\\[\\ny_{n+1} = y_n + \\\\frac{h}{2}\\\\left(F(t_n,y_n)+F(t_n+h,\\\\widetilde{y}_{n+1})\\\\right).\\n\\\\]\"\n        },\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"An initial value problem combines an ordinary differential equation with an initial condition such as \\\\(y(t_0)=y_0\\\\).\"\n        }\n      ],\n      \"rationale\": \"Heun's update formula explicitly defines the numerical solution update for an initial value problem, thus formalizing the concept of an initial value problem by providing a computational method to solve it.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2339,
+    "completion_tokens": 348,
+    "total_tokens": 2687,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 291
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

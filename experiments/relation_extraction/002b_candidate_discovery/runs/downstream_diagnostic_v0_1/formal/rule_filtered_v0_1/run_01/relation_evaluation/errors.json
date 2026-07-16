@@ -1,0 +1,1085 @@
+[
+  {
+    "pair_id": "rel_dev_003",
+    "error_type": "overused_related_to",
+    "gold_relation_type": "NO_RELATION"
+  },
+  {
+    "pair_id": "rel_dev_003",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "RELATED_TO"
+  },
+  {
+    "pair_id": "rel_dev_003",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "RELATED_TO"
+  },
+  {
+    "pair_id": "rel_dev_004",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_004",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_005",
+    "error_type": "overused_related_to",
+    "gold_relation_type": "NO_RELATION"
+  },
+  {
+    "pair_id": "rel_dev_005",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "RELATED_TO"
+  },
+  {
+    "pair_id": "rel_dev_005",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "RELATED_TO"
+  },
+  {
+    "pair_id": "rel_dev_013",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "differential_equations_001",
+    "span": "It first forms the Euler predictor y_{n+1} = y_n + hF(t_n,y_n)",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_014",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 1,
+    "lecture_id": "differential_equations_001",
+    "span": "It first forms the Euler predictor y_{n+1} = y_n + hF(t_n,y_n)",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_014",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "APPLIED_IN",
+    "predicted_relation_type": "EXTENDS"
+  },
+  {
+    "pair_id": "rel_dev_015",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "REQUIRES",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_018",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "differential_equations_001",
+    "span": "It first forms the Euler predictor y_{n+1} = y_n + hF(t_n,y_n)",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_018",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 1,
+    "lecture_id": "differential_equations_001",
+    "span": "The step size h sets the spacing between consecutive numerical time points.",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_024",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "differential_equations_001",
+    "span": "An initial value problem combines an ordinary differential equation with an initial condition such as y(t_0)=y_0.",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_024",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_024",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_025",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "differential_equations_001",
+    "span": "An ordinary differential equation relates an unknown function of one variable to its derivatives. A first-order equation can be written as y'(t) = F(t,y(t)).",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_025",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "EXTENDS",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_027",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "differential_equations_001",
+    "span": "A first-order equation can be written as y'(t) = F(t,y(t)).",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_027",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 1,
+    "lecture_id": "differential_equations_001",
+    "span": "The vector field F specifies the slope that the solution should follow at each state.",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_028",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "differential_equations_001",
+    "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope. Its update is\n\ny_{n+1} = y_n + hF(t_n,y_n).",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_030",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_030",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_033",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "differential_equations_001",
+    "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope. Its update is\n\ny_{n+1} = y_n + hF(t_n,y_n).\n\nThe step size h sets the spacing between consecutive numerical time points.",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_034",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 1,
+    "lecture_id": "differential_equations_001",
+    "span": "Its update is y_{n+1} = y_n + hF(t_n,y_n).",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_034",
+    "error_type": "wrong_direction",
+    "gold_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "relation_type": "APPLIED_IN"
+    }
+  },
+  {
+    "pair_id": "rel_dev_035",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "APPLIED_IN",
+    "predicted_relation_type": "EXTENDS"
+  },
+  {
+    "pair_id": "rel_dev_037",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "differential_equations_001",
+    "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope. Its update is\n\ny_{n+1} = y_n + hF(t_n,y_n).",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_037",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "APPLIED_IN",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_039",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 1,
+    "lecture_id": "differential_equations_001",
+    "span": "The step size h sets the spacing between consecutive numerical time points.",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_040",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 1,
+    "lecture_id": "differential_equations_001",
+    "span": "The vector field F specifies the slope that the solution should follow at each state.",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_040",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "REQUIRES",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_041",
+    "error_type": "evidence_does_not_support_relation",
+    "adjudication_rationale": "The selected formula does not name or otherwise identify Heun's method, so it cannot by itself establish that it formalizes that target method."
+  },
+  {
+    "pair_id": "rel_dev_044",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 1,
+    "lecture_id": "differential_equations_001",
+    "span": "The step size h sets the spacing between consecutive numerical time points.",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_044",
+    "error_type": "evidence_does_not_support_relation",
+    "adjudication_rationale": "One span names Heun's method and the other independently defines step size, but the selected evidence does not show that Heun's method uses or requires it."
+  },
+  {
+    "pair_id": "rel_dev_050",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "differential_equations_001",
+    "span": "An initial value problem combines an ordinary differential equation with an initial condition such as y(t_0)=y_0.",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_051",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "differential_equations_001",
+    "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope. Its update is y_{n+1} = y_n + hF(t_n,y_n). The step size h sets the spacing between consecutive numerical time points.",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_051",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "APPLIED_IN"
+  },
+  {
+    "pair_id": "rel_dev_051",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "APPLIED_IN"
+  },
+  {
+    "pair_id": "rel_dev_052",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "differential_equations_001",
+    "span": "An initial value problem combines an ordinary differential equation with an initial condition such as y(t_0)=y_0.",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_052",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 1,
+    "lecture_id": "differential_equations_001",
+    "span": "The vector field F specifies the slope that the solution should follow at each state.",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_052",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "APPLIED_IN",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_054",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 1,
+    "lecture_id": "differential_equations_001",
+    "span": "The vector field F specifies the slope that the solution should follow at each state.",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_054",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_054",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_057",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_057",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_058",
+    "error_type": "wrong_direction",
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "relation_type": "APPLIED_IN"
+    }
+  },
+  {
+    "pair_id": "rel_dev_059",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "graph_algorithms_001",
+    "span": "A path is a sequence of compatible directed edges. Its path cost is the sum of their edge weights: ... The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex. Dijkstra's algorithm is applied to this problem when all edge weights are nonnegative.",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_059",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_059",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_060",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "APPLIED_IN",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_062",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_062",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_065",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "APPLIED_IN",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_066",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "RELATED_TO",
+    "predicted_relation_type": "APPLIED_IN"
+  },
+  {
+    "pair_id": "rel_dev_067",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_067",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_068",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_068",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_069",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_069",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_070",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "graph_algorithms_001",
+    "span": "Relaxation is formalized by the update\n\nd(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}.",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_070",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "APPLIED_IN",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_071",
+    "error_type": "evidence_does_not_support_relation",
+    "adjudication_rationale": "The phrase \"this problem\" is unresolved within the selected evidence, so the span does not identify the single-source shortest-path problem."
+  },
+  {
+    "pair_id": "rel_dev_072",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_072",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_077",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "graph_algorithms_001",
+    "span": "Relaxation is formalized by the update\n\nd(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}.",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_078",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "APPLIED_IN"
+  },
+  {
+    "pair_id": "rel_dev_078",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "APPLIED_IN"
+  },
+  {
+    "pair_id": "rel_dev_081",
+    "error_type": "false_negative_relation",
+    "gold_relation_type": "RELATED_TO"
+  },
+  {
+    "pair_id": "rel_dev_081",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "RELATED_TO",
+    "predicted_relation_type": "NO_RELATION"
+  },
+  {
+    "pair_id": "rel_dev_087",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "REQUIRES",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_096",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "APPLIED_IN",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_097",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "REQUIRES",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_098",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "graph_algorithms_001",
+    "span": "Relaxation is formalized by the update\n\nd(v) ← min{d(v), d(u)+w(u,v)}.",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_098",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_098",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_101",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "CONTRASTS_WITH"
+  },
+  {
+    "pair_id": "rel_dev_101",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "CONTRASTS_WITH"
+  },
+  {
+    "pair_id": "rel_dev_103",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "CONTRASTS_WITH"
+  },
+  {
+    "pair_id": "rel_dev_103",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "CONTRASTS_WITH"
+  },
+  {
+    "pair_id": "rel_dev_108",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "REQUIRES",
+    "predicted_relation_type": "EXTENDS"
+  },
+  {
+    "pair_id": "rel_dev_117",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_117",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_119",
+    "error_type": "evidence_does_not_support_relation",
+    "adjudication_rationale": "The spans separately identify Newton's method and the root-finding problem but do not state or demonstrate the APPLIED_IN relation between them."
+  },
+  {
+    "pair_id": "rel_dev_123",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "REQUIRES",
+    "predicted_relation_type": "EXTENDS"
+  },
+  {
+    "pair_id": "rel_dev_124",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "REQUIRES",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_125",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_125",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_126",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_126",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_127",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "APPLIED_IN"
+  },
+  {
+    "pair_id": "rel_dev_127",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "APPLIED_IN"
+  },
+  {
+    "pair_id": "rel_dev_128",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_128",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_129",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_129",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_130",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "statistics_estimation_001",
+    "span": "The score function is the derivative of the log-likelihood with respect to the parameter, s(θ) = ∇_θ ℓ(θ).",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_130",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_130",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_132",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 1,
+    "lecture_id": "statistics_estimation_001",
+    "span": "ℓ(θ) = log L(θ; x_{1:n}) = ∑_{i=1}^{n} log p(x_i ∣ θ).",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_132",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "APPLIED_IN",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_133",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "REQUIRES",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_134",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_134",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_135",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_135",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_136",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "APPLIED_IN"
+  },
+  {
+    "pair_id": "rel_dev_136",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "APPLIED_IN"
+  },
+  {
+    "pair_id": "rel_dev_137",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "statistics_estimation_001",
+    "span": "The score function is the derivative of the log-likelihood with respect to the parameter, s(θ) = ∇_θ ℓ(θ). At an interior differentiable optimum, an MLE candidate satisfies the score equation s(θ)=0.",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_137",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_137",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_138",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_138",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_139",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "statistics_estimation_001",
+    "span": "The score function is the derivative of the log-likelihood with respect to the parameter, s(θ) = ∇_θ ℓ(θ).",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_139",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_139",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_140",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "REQUIRES",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_142",
+    "error_type": "wrong_direction",
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "relation_type": "APPLIED_IN"
+    }
+  },
+  {
+    "pair_id": "rel_dev_143",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "REQUIRES",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_145",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_145",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_147",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "statistics_estimation_001",
+    "span": "The score function is the derivative of the log-likelihood with respect to the parameter, s(θ) = ∇_θ ℓ(θ).",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_147",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "REQUIRES",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_148",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_148",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_149",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "APPLIED_IN",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_150",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "REQUIRES",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_152",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "statistics_estimation_001",
+    "span": "The score function is the derivative of the log-likelihood with respect to the parameter, s(θ) = ∇_θ ℓ(θ). At an interior differentiable optimum, an MLE candidate satisfies the score equation s(θ)=0.",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_152",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "REQUIRES",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_153",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "REQUIRES",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_154",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "statistics_estimation_001",
+    "span": "s(θ) = ∇_θ ℓ(θ).",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_154",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "REQUIRES",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_155",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_155",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_156",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "statistics_estimation_001",
+    "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it: \n\n\\[\n\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta).\n\\]",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_158",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "APPLIED_IN",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_159",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 2,
+    "lecture_id": "statistics_estimation_001",
+    "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation s(θ)=0.",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_159",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "APPLIED_IN",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_160",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_160",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_162",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "APPLIED_IN"
+  },
+  {
+    "pair_id": "rel_dev_162",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "APPLIED_IN"
+  },
+  {
+    "pair_id": "rel_dev_164",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_164",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_165",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "statistics_estimation_001",
+    "span": "The score function is the derivative of the log-likelihood with respect to the parameter, s(θ) = ∇_θ ℓ(θ). At an interior differentiable optimum, an MLE candidate satisfies the score equation s(θ)=0.",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_dev_165",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_165",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_166",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_166",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_167",
+    "error_type": "evidence_does_not_support_relation",
+    "adjudication_rationale": "The span links Newton's method to maximum likelihood estimation but does not mention or identify the score equation."
+  },
+  {
+    "pair_id": "rel_dev_168",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "APPLIED_IN"
+  },
+  {
+    "pair_id": "rel_dev_168",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "APPLIED_IN"
+  },
+  {
+    "pair_id": "rel_dev_169",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "APPLIED_IN"
+  },
+  {
+    "pair_id": "rel_dev_169",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "APPLIED_IN"
+  },
+  {
+    "pair_id": "rel_dev_172",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "REQUIRES",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_173",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_173",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_dev_176",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_dev_176",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "FORMALIZES"
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_003",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "relation_type": "RELATED_TO",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Smaller steps usually reduce discretization error but require more updates over a fixed time interval."
+        }
+      ],
+      "rationale": "The lecture mentions discretization error in the context of step size, which is a parameter of the forward Euler method, but does not establish a direct prerequisite, application, extension, contrast, or formalization relation between the two concepts."
+    }
+  ]
+}

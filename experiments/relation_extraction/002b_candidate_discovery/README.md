@@ -1,6 +1,6 @@
 # Experiment 002B-2: Candidate Pair Generation under Predicted KOs
 
-**Status:** Candidate layer completed; downstream diagnostic prepared and awaiting repository freeze
+**Status:** Completed with partial feasibility; All-Pairs v0.1 retained as the safety fallback
 **Stage:** Technical Validation
 **Predecessor:** Experiment 002B-1 completed
 
@@ -345,33 +345,50 @@ per-lecture recall gates. Seven missed pairs were `REQUIRES` and three were
 `APPLIED_IN`; no endpoint, order, or alignment failure occurred. See
 `rule_filtered_v0_1_results.md` for the comparison and false-negative analysis.
 
-## Immediate Next Gate
+## Downstream Typed-Edge Diagnostic Result
 
-Do not promote Rule-Filtered v0.1 to holdout or create pair-specific recovery
-rules. The current development selection is `all_pairs_v0_1` under the frozen
-recall-first fallback rule. A single v0.2 refinement may be opened only if a
-general contextual signal is predeclared without encoding the 10 known misses.
+The frozen downstream diagnostic is complete. Both conditions used the same
+Relation prompt, model, parameters, evaluator, and one-pair-per-request
+partitioning under method commit
+`78e47b8dc792dd970e72c0040f045c8d1cc1035c`.
 
-The downstream typed-edge diagnostic contract and implementation are frozen at
-the file/artifact level. The canonical projection and both model-input
-preparations are complete:
+| Metric | All-Pairs | Rule-Filtered v0.1 |
+| --- | ---: | ---: |
+| Candidate requests | 176 | 127 |
+| Candidate positive recall | 80/80 | 70/80 |
+| Conditional Relation strict | 62/171 | 45/122 |
+| Full-universe strict | 62/171 | 84/171 |
+| Positive typed-edge recall | 40/80 | 36/80 |
+| Positive typed-edge precision | 40/148 | 36/112 |
+| Candidate-induced false negatives | 0 | 10 |
+| False-positive Relations | 69 | 43 |
+| Exact Evidence spans | 162/209 | 126/160 |
 
-- canonical projection: 176 pairs, 171 primary, 5 diagnostics;
-- All-Pairs preparation: 176 candidate-scoped requests, 80 positives;
-- Rule-Filtered preparation: 127 candidate-scoped requests, 70 positives;
-- model-facing gold leakage: 0 fields in both conditions;
-- projection, preparation, evaluator, snapshot, and pipeline regression suite:
-  passed.
+Rule-Filtered rejected 39 hard negatives before classification, so its
+full-universe strict accuracy improved. It nevertheless lost four correct typed
+edges: the All-Pairs classifier was strictly correct on four of the 10 positive
+pairs omitted by Rule-Filtered. The other six omitted positives were classified
+incorrectly by the current All-Pairs run, but remain irrecoverable to any future
+classifier once filtered out.
 
-The repository-level method freeze and clean-state dry runs remain pending. The
-pre-API audit is recorded in `downstream_relation_diagnostic_pre_api_validation.md`.
-The implementation projects the exhaustive Candidate Ground Truth into Relation
-evaluation artifacts, prepares one gold-free request per selected pair, reuses
-the existing Relation evaluator, freezes independent condition snapshots, and
-scores both conditions over all 171 primary pairs.
+Both Relation evaluations are final with zero pending adjudications. Their
+independent snapshots and the 176-pair pipeline comparison are hash-bound by
+`pipeline_evaluation_complete.json`.
 
-Formal API execution remains pending. Both candidate manifests must use the
-same frozen Relation method, model, request partitioning, evaluator, and
-adjudication protocol; the failed candidate-layer gate cannot be overridden by
-downstream cost or precision. The exact execution sequence is recorded in
-`downstream_relation_diagnostic_runbook.md`.
+See `downstream_relation_diagnostic.md` for the complete comparison and
+`conclusion.md` for the experiment decision.
+
+## Decision And Next Stage
+
+Rule-Filtered v0.1 remains a failed development baseline. Its downstream cost
+and negative-rejection benefits do not override the frozen recall-first
+Candidate gate.
+
+`all_pairs_v0_1` remains the current lecture-local safety fallback. This is not
+a production scalability claim: pair workload grows quadratically, the frozen
+Relation classifier produced many false-positive edges, and exact Evidence
+grounding remained below 0.8 in both conditions.
+
+Experiment 002B is now complete with partial feasibility. No further candidate
+rule is tuned on this inspected 176-pair development snapshot. The next stage is
+Experiment 002C, Knowledge Object Resolution / Canonicalization.

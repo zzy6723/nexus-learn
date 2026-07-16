@@ -1,0 +1,28 @@
+{
+  "id": "772fbb77-6739-4956-aa44-9bf986f2bfce",
+  "object": "chat.completion",
+  "created": 1784226833,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_044\",\n      \"source\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"heuns_method\"\n      },\n      \"target\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"step_size\"\n      },\n      \"relation_type\": \"REQUIRES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"Heun's method extends the forward Euler method with a predictor-corrector step.\"\n        },\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"The step size h sets the spacing between consecutive numerical time points.\"\n        }\n      ],\n      \"rationale\": \"Heun's method, as a numerical method for solving ODEs, requires a step size to define the discretization; the lecture discusses step size in the context of numerical methods, implying it is a prerequisite for Heun's method.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2301,
+    "completion_tokens": 239,
+    "total_tokens": 2540,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 253
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

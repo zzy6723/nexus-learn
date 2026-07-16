@@ -1,0 +1,28 @@
+{
+  "id": "f9f42fb3-d4da-4d37-be4b-0d3f3d774b03",
+  "object": "chat.completion",
+  "created": 1784228440,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_083\",\n      \"source\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"relaxation_update\"\n      },\n      \"target\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"heuristic_function\"\n      },\n      \"relation_type\": \"NO_RELATION\",\n      \"evidence_spans\": [],\n      \"rationale\": \"The lecture text does not establish a direct relation between the Heuristic Function and the Relaxation Update. The heuristic function is used in A* search to guide exploration, while the relaxation update is a formula for updating distance estimates in Dijkstra's algorithm. They are mentioned in separate contexts without any direct connection.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2264,
+    "completion_tokens": 170,
+    "total_tokens": 2434,
+    "prompt_tokens_details": {
+      "cached_tokens": 2176
+    },
+    "prompt_cache_hit_tokens": 2176,
+    "prompt_cache_miss_tokens": 88
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

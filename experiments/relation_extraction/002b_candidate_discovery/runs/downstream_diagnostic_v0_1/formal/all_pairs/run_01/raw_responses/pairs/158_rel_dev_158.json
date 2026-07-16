@@ -1,0 +1,28 @@
+{
+  "id": "dbdd7193-e706-4bde-bf69-9e204aebc91f",
+  "object": "chat.completion",
+  "created": 1784227185,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_158\",\n      \"source\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"score_equation\"\n      },\n      \"target\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"maximum_likelihood_estimation\"\n      },\n      \"relation_type\": \"REQUIRES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"At an interior differentiable optimum, an MLE candidate satisfies the score equation \\\\(s(\\\\theta)=0\\\\).\"\n        }\n      ],\n      \"rationale\": \"The score equation is a necessary condition for maximum likelihood estimation, so understanding the score equation requires knowledge of maximum likelihood estimation.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2351,
+    "completion_tokens": 191,
+    "total_tokens": 2542,
+    "prompt_tokens_details": {
+      "cached_tokens": 2176
+    },
+    "prompt_cache_hit_tokens": 2176,
+    "prompt_cache_miss_tokens": 175
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

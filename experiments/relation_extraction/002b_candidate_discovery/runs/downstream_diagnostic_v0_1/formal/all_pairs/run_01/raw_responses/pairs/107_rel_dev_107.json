@@ -1,0 +1,28 @@
+{
+  "id": "b38f4951-fe10-49f7-a01a-2bcadc48f099",
+  "object": "chat.completion",
+  "created": 1784227028,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_107\",\n      \"source\": {\n        \"lecture_id\": \"numerical_root_finding_001\",\n        \"ko_id\": \"damped_newton_method\"\n      },\n      \"target\": {\n        \"lecture_id\": \"numerical_root_finding_001\",\n        \"ko_id\": \"midpoint_formula\"\n      },\n      \"relation_type\": \"NO_RELATION\",\n      \"evidence_spans\": [],\n      \"rationale\": \"The lecture text describes the damped Newton method and the midpoint formula in separate contexts without establishing any direct educational relation between them. The damped Newton method is an extension of Newton's method, while the midpoint formula is used in the bisection method; they are not connected in the provided material.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2269,
+    "completion_tokens": 174,
+    "total_tokens": 2443,
+    "prompt_tokens_details": {
+      "cached_tokens": 1664
+    },
+    "prompt_cache_hit_tokens": 1664,
+    "prompt_cache_miss_tokens": 605
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

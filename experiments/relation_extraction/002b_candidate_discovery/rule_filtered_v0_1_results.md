@@ -154,8 +154,8 @@ same 176-pair development snapshot would create an avoidable overfitting risk.
 - All pairs are lecture-local; cross-lecture discovery is not evaluated.
 - The result does not cover long documents, parsed PDFs, noisy source spans, or
   canonical KO identity.
-- No Relation API was called, so typed-edge and end-to-end consequences remain
-  unmeasured.
+- This Candidate-only comparison did not call the Relation API. The subsequent
+  frozen downstream diagnostic measured typed-edge and full-universe
+  consequences separately; see `downstream_relation_diagnostic.md`.
 - The sensitivity check is descriptive development analysis, not holdout
   evidence.
-

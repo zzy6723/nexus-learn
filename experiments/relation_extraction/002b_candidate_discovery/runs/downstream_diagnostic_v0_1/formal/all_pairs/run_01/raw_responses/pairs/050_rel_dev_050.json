@@ -1,0 +1,28 @@
+{
+  "id": "b434f812-ca71-4727-a3f8-c9bc31f69d95",
+  "object": "chat.completion",
+  "created": 1784226855,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_050\",\n      \"source\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"initial_value_problem\"\n      },\n      \"target\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"ordinary_differential_equation\"\n      },\n      \"relation_type\": \"REQUIRES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"An initial value problem combines an ordinary differential equation with an initial condition such as y(t_0)=y_0.\"\n        }\n      ],\n      \"rationale\": \"An initial value problem requires an ordinary differential equation as part of its definition; the evidence directly states that an initial value problem combines an ODE with an initial condition.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2319,
+    "completion_tokens": 198,
+    "total_tokens": 2517,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 271
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

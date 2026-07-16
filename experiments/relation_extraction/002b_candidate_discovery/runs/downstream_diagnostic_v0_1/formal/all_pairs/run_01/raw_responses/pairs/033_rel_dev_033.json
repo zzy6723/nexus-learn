@@ -1,0 +1,28 @@
+{
+  "id": "e588df31-1b01-4d82-b13e-dcf29461241e",
+  "object": "chat.completion",
+  "created": 1784226798,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_033\",\n      \"source\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"forward_euler_method\"\n      },\n      \"target\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"step_size\"\n      },\n      \"relation_type\": \"REQUIRES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope. Its update is\\n\\ny_{n+1} = y_n + hF(t_n,y_n).\\n\\nThe step size h sets the spacing between consecutive numerical time points.\"\n        }\n      ],\n      \"rationale\": \"The forward Euler method's update formula explicitly uses the step size h, and the lecture states that the step size sets the spacing between time points, indicating that understanding step size is necessary to apply the method.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2309,
+    "completion_tokens": 240,
+    "total_tokens": 2549,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 261
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,18 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_074",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The lecture text does not directly establish a relation between Edge Relaxation and Path. Edge relaxation is described as an operation on tentative distances, while a path is defined as a sequence of edges. No evidence connects them as prerequisite, application, extension, contrast, formalization, or meaningful relatedness."
+    }
+  ]
+}

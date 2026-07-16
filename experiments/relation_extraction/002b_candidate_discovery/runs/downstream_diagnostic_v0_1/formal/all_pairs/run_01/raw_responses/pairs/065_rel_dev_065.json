@@ -1,0 +1,28 @@
+{
+  "id": "08f54e51-3ba4-44a2-99ca-c8fcbcdfdac6",
+  "object": "chat.completion",
+  "created": 1784226902,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_065\",\n      \"source\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"dijkstras_algorithm\"\n      },\n      \"target\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"edge_relaxation\"\n      },\n      \"relation_type\": \"REQUIRES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"graph_algorithms_001\",\n          \"span\": \"Dijkstra's algorithm stores tentative distance estimates in a priority queue. After removing a vertex \\\\(u\\\\) with the smallest tentative distance, it applies edge relaxation to each outgoing edge.\"\n        }\n      ],\n      \"rationale\": \"Dijkstra's algorithm requires edge relaxation as a core step to update tentative distances, as shown by the evidence that the algorithm applies edge relaxation after removing a vertex.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2265,
+    "completion_tokens": 207,
+    "total_tokens": 2472,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 217
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

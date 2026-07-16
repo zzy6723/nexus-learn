@@ -1,0 +1,28 @@
+{
+  "id": "4f3379b8-6f89-43a7-851e-c126a43c960a",
+  "object": "chat.completion",
+  "created": 1784226742,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_015\",\n      \"source\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"heuns_update\"\n      },\n      \"target\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"euler_predictor\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"Heun's method extends the forward Euler method with a predictor-corrector step. It first forms the Euler predictor\\n\\n\\\\[\\n\\\\widetilde{y}_{n+1} = y_n + hF(t_n,y_n),\\n\\\\]\\n\\nthen averages the slope at the current point with the slope at the predicted point. The corrected update is\\n\\n\\\\[\\ny_{n+1} = y_n + \\\\frac{h}{2}\\\\left(F(t_n,y_n)+F(t_n+h,\\\\widetilde{y}_{n+1})\\\\right).\\n\\\\]\"\n        }\n      ],\n      \"rationale\": \"The Heun's update formula explicitly defines the corrected update using the Euler predictor, thus formalizing the predictor step.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2341,
+    "completion_tokens": 284,
+    "total_tokens": 2625,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 293
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

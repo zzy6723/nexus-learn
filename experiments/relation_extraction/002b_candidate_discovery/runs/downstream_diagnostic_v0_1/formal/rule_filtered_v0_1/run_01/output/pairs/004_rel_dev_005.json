@@ -1,0 +1,27 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_005",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "relation_type": "RELATED_TO",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Smaller steps usually reduce discretization error but require more updates over a fixed time interval."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+        }
+      ],
+      "rationale": "The lecture mentions discretization error in the context of step size and Heun's method as a numerical method, but does not directly state a specific relation such as Heun's method reducing or requiring discretization error. The connection is indirect and weak, so RELATED_TO is appropriate."
+    }
+  ]
+}

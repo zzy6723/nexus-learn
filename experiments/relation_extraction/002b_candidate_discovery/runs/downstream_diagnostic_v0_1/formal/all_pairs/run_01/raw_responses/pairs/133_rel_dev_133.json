@@ -1,0 +1,28 @@
+{
+  "id": "af60cfde-91af-4f72-a4a0-c1c7e7a0bba1",
+  "object": "chat.completion",
+  "created": 1784227108,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_133\",\n      \"source\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"log_likelihood_function\"\n      },\n      \"target\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"likelihood_function\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"The log-likelihood is obtained by taking the logarithm of the likelihood.\"\n        },\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"\\\\ell(\\\\theta) = \\\\log L(\\\\theta; x_{1:n}) = \\\\sum_{i=1}^{n} \\\\log p(x_i \\\\mid \\\\theta).\"\n        }\n      ],\n      \"rationale\": \"The log-likelihood function is a formula that explicitly defines the log-likelihood in terms of the likelihood function, thus formalizing the relationship.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2372,
+    "completion_tokens": 249,
+    "total_tokens": 2621,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 324
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

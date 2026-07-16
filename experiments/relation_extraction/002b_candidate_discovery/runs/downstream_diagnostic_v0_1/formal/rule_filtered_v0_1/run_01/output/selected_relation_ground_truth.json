@@ -1,0 +1,2539 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_001",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The lecture text does not directly establish a relation between discretization error and the Euler predictor. Discretization error is mentioned in the context of step size, while the Euler predictor is introduced as part of Heun's method, but no explicit connection is made between them."
+    },
+    {
+      "pair_id": "rel_dev_003",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "relation_type": "RELATED_TO",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Smaller steps usually reduce discretization error but require more updates over a fixed time interval."
+        }
+      ],
+      "rationale": "The lecture mentions discretization error in the context of step size, which is a parameter of the forward Euler method, but does not establish a direct prerequisite, application, extension, contrast, or formalization relation between the two concepts."
+    },
+    {
+      "pair_id": "rel_dev_004",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Smaller steps usually reduce discretization error but require more updates over a fixed time interval."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y_{n+1} = y_n + hF(t_n,y_n)"
+        }
+      ],
+      "rationale": "The Forward Euler Update formula explicitly defines the step size h, which directly determines the discretization error; the lecture states that smaller steps reduce discretization error, establishing the formula as the formal expression of the error concept."
+    },
+    {
+      "pair_id": "rel_dev_005",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "relation_type": "RELATED_TO",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Smaller steps usually reduce discretization error but require more updates over a fixed time interval."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+        }
+      ],
+      "rationale": "The lecture mentions discretization error in the context of step size and Heun's method as a numerical method, but does not directly state a specific relation such as Heun's method reducing or requiring discretization error. The connection is indirect and weak, so RELATED_TO is appropriate."
+    },
+    {
+      "pair_id": "rel_dev_007",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The lecture discusses discretization error in the context of step size for numerical methods, but does not directly establish a relation between discretization error and the initial value problem concept. The two objects are mentioned in separate contexts without a direct connection."
+    },
+    {
+      "pair_id": "rel_dev_009",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "relation_type": "RELATED_TO",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Smaller steps usually reduce discretization error but require more updates over a fixed time interval."
+        }
+      ],
+      "rationale": "The lecture directly states that smaller step sizes reduce discretization error, establishing a meaningful educational connection between the two concepts. However, the relation is not one of the stronger types: step size is not a prerequisite for discretization error (REQUIRES), nor is discretization error applied in step size (APPLIED_IN), nor does one extend the other (EXTENDS), nor is there a contrast (CONTRASTS_WITH), nor does one formalize the other (FORMALIZES). Thus, RELATED_TO is appropriate."
+    },
+    {
+      "pair_id": "rel_dev_012",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "relation_type": "EXTENDS",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Heun's method extends the forward Euler method with a predictor-corrector step. It first forms the Euler predictor"
+        }
+      ],
+      "rationale": "The Euler predictor is a component of Heun's method, which extends the forward Euler method. The evidence directly states that Heun's method extends the forward Euler method and uses the Euler predictor as part of its predictor-corrector step."
+    },
+    {
+      "pair_id": "rel_dev_013",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "It first forms the Euler predictor y_{n+1} = y_n + hF(t_n,y_n)"
+        }
+      ],
+      "rationale": "The Euler Predictor is a concept that is formalized by the Forward Euler Update formula, as the evidence directly presents the formula as the expression of the predictor."
+    },
+    {
+      "pair_id": "rel_dev_014",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "relation_type": "EXTENDS",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "It first forms the Euler predictor y_{n+1} = y_n + hF(t_n,y_n)"
+        }
+      ],
+      "rationale": "Heun's method is a more specific development that uses the Euler predictor as its conceptual base, as stated in the lecture."
+    },
+    {
+      "pair_id": "rel_dev_015",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Heun's method extends the forward Euler method with a predictor-corrector step. It first forms the Euler predictor\n\n\\[\n\\widetilde{y}_{n+1} = y_n + hF(t_n,y_n),\n\\]\n\nthen averages the slope at the current point with the slope at the predicted point. The corrected update is\n\n\\[\ny_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right).\n\\]"
+        }
+      ],
+      "rationale": "The Heun's update formula explicitly defines the corrected update using the Euler predictor, thus formalizing the predictor step as part of the method."
+    },
+    {
+      "pair_id": "rel_dev_018",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "It first forms the Euler predictor y_{n+1} = y_n + hF(t_n,y_n)"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The step size h sets the spacing between consecutive numerical time points."
+        }
+      ],
+      "rationale": "The Euler predictor formula uses the step size h, so understanding the step size is necessary to understand the Euler predictor."
+    },
+    {
+      "pair_id": "rel_dev_024",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "An initial value problem combines an ordinary differential equation with an initial condition such as y(t_0)=y_0."
+        }
+      ],
+      "rationale": "An initial value problem requires a differential equation (here a first-order equation) as a component, so the initial value problem depends on the first-order equation."
+    },
+    {
+      "pair_id": "rel_dev_025",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "An ordinary differential equation relates an unknown function of one variable to its derivatives. A first-order equation can be written as y'(t) = F(t,y(t))."
+        }
+      ],
+      "rationale": "A first-order equation is a specific type of ordinary differential equation, so understanding ordinary differential equations is necessary to understand first-order equations."
+    },
+    {
+      "pair_id": "rel_dev_027",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "A first-order equation can be written as y'(t) = F(t,y(t))."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The vector field F specifies the slope that the solution should follow at each state."
+        }
+      ],
+      "rationale": "The first-order equation is defined using the vector field F, so understanding the vector field is necessary to understand the first-order equation."
+    },
+    {
+      "pair_id": "rel_dev_028",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope. Its update is\n\ny_{n+1} = y_n + hF(t_n,y_n)."
+        }
+      ],
+      "rationale": "The Forward Euler Update formula explicitly defines the update step of the Forward Euler Method, thus formalizing the method."
+    },
+    {
+      "pair_id": "rel_dev_029",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "relation_type": "EXTENDS",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+        }
+      ],
+      "rationale": "The lecture explicitly states that Heun's method extends the forward Euler method, indicating that Heun's method is a more specific development of the forward Euler method."
+    },
+    {
+      "pair_id": "rel_dev_030",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Heun's method extends the forward Euler method with a predictor-corrector step. It first forms the Euler predictor\n\n\\[\n\\widetilde{y}_{n+1} = y_n + hF(t_n,y_n),\n\\]\n\nthen averages the slope at the current point with the slope at the predicted point. The corrected update is\n\n\\[\ny_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right).\n\\]"
+        }
+      ],
+      "rationale": "The Heun's update formula explicitly defines the corrected update step of Heun's method, which is an extension of the forward Euler method. The formula formalizes the predictor-corrector step that characterizes Heun's method."
+    },
+    {
+      "pair_id": "rel_dev_031",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope."
+        }
+      ],
+      "rationale": "The lecture explicitly states that the forward Euler method is applied to an initial value problem, establishing an APPLIED_IN relation where the method is used in the context of the problem."
+    },
+    {
+      "pair_id": "rel_dev_033",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope. Its update is\n\ny_{n+1} = y_n + hF(t_n,y_n).\n\nThe step size h sets the spacing between consecutive numerical time points."
+        }
+      ],
+      "rationale": "The forward Euler method's update formula explicitly uses the step size h, and the lecture states that the step size sets the spacing between time points, which is necessary for the method's application. Thus, the forward Euler method requires the concept of step size."
+    },
+    {
+      "pair_id": "rel_dev_034",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Its update is y_{n+1} = y_n + hF(t_n,y_n)."
+        }
+      ],
+      "rationale": "The forward Euler method uses the vector field F to compute its update step, as shown in the update formula y_{n+1} = y_n + hF(t_n,y_n). Thus, the vector field is applied in the method."
+    },
+    {
+      "pair_id": "rel_dev_035",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "relation_type": "EXTENDS",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+        }
+      ],
+      "rationale": "Heun's method is explicitly described as extending the forward Euler method, making it a more specific development that preserves the Euler method as its conceptual base."
+    },
+    {
+      "pair_id": "rel_dev_036",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "relation_type": "EXTENDS",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "It first forms the Euler predictor\n\n\\[\n\\widetilde{y}_{n+1} = y_n + hF(t_n,y_n),\n\\]\n\nthen averages the slope at the current point with the slope at the predicted point. The corrected update is\n\n\\[\ny_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right).\n\\]"
+        }
+      ],
+      "rationale": "The lecture explicitly states that Heun's method extends the forward Euler method, and the Heun update formula builds upon the Euler predictor, making Heun's update a more specific development of the forward Euler update."
+    },
+    {
+      "pair_id": "rel_dev_037",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope. Its update is\n\ny_{n+1} = y_n + hF(t_n,y_n)."
+        }
+      ],
+      "rationale": "The Forward Euler Update formula explicitly defines the numerical update step for solving an Initial Value Problem, thus formalizing it."
+    },
+    {
+      "pair_id": "rel_dev_039",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y_{n+1} = y_n + hF(t_n,y_n)"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The step size h sets the spacing between consecutive numerical time points."
+        }
+      ],
+      "rationale": "The Forward Euler Update formula explicitly uses the step size h, so understanding the step size is necessary to apply the formula."
+    },
+    {
+      "pair_id": "rel_dev_040",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y_{n+1} = y_n + hF(t_n,y_n)"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The vector field F specifies the slope that the solution should follow at each state."
+        }
+      ],
+      "rationale": "The Forward Euler Update formula explicitly uses the vector field F to compute the next approximation, thereby formalizing the concept of the vector field as the slope function in the numerical update."
+    },
+    {
+      "pair_id": "rel_dev_041",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right)"
+        }
+      ],
+      "rationale": "The Heun's Update formula explicitly defines the corrected update step of Heun's Method, thus formalizing the method."
+    },
+    {
+      "pair_id": "rel_dev_044",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The step size h sets the spacing between consecutive numerical time points."
+        }
+      ],
+      "rationale": "Heun's method, as a numerical method for solving ODEs, requires a step size to define the discretization. The lecture discusses step size in the context of numerical methods, and Heun's method implicitly uses a step size in its update formula, making step size a prerequisite for applying Heun's method."
+    },
+    {
+      "pair_id": "rel_dev_050",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "An initial value problem combines an ordinary differential equation with an initial condition such as y(t_0)=y_0."
+        }
+      ],
+      "rationale": "The initial value problem requires an ordinary differential equation as a component; the evidence directly states that an initial value problem combines an ODE with an initial condition."
+    },
+    {
+      "pair_id": "rel_dev_051",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope. Its update is y_{n+1} = y_n + hF(t_n,y_n). The step size h sets the spacing between consecutive numerical time points."
+        }
+      ],
+      "rationale": "The step size is a parameter used in numerical methods applied to initial value problems, as shown in the forward Euler update formula where h appears. Thus, step size is applied in the context of solving initial value problems."
+    },
+    {
+      "pair_id": "rel_dev_052",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "An initial value problem combines an ordinary differential equation with an initial condition such as y(t_0)=y_0."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The vector field F specifies the slope that the solution should follow at each state."
+        }
+      ],
+      "rationale": "The initial value problem requires the vector field F to define the slope of the solution, as the vector field specifies the slope that the solution should follow."
+    },
+    {
+      "pair_id": "rel_dev_054",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "An ordinary differential equation relates an unknown function of one variable to its derivatives."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The vector field F specifies the slope that the solution should follow at each state."
+        }
+      ],
+      "rationale": "The concept of an ordinary differential equation requires the concept of a vector field because the vector field specifies the slope that the solution must follow, which is essential to defining the differential equation."
+    },
+    {
+      "pair_id": "rel_dev_056",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "relation_type": "EXTENDS",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A* search extends Dijkstra's algorithm by using a heuristic function \\(h(v)\\) to guide which vertex is explored next."
+        }
+      ],
+      "rationale": "The lecture explicitly states that A* search extends Dijkstra's algorithm, indicating that A* is a more specific development of Dijkstra's algorithm while preserving it as a conceptual base."
+    },
+    {
+      "pair_id": "rel_dev_057",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A* search extends Dijkstra's algorithm by using a heuristic function \\(h(v)\\) to guide which vertex is explored next."
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "it applies edge relaxation to each outgoing edge."
+        }
+      ],
+      "rationale": "A* search extends Dijkstra's algorithm, which uses edge relaxation as a core step; therefore, A* search requires edge relaxation."
+    },
+    {
+      "pair_id": "rel_dev_058",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A* search extends Dijkstra's algorithm by using a heuristic function \\(h(v)\\) to guide which vertex is explored next."
+        }
+      ],
+      "rationale": "The heuristic function is used by A* search to guide exploration, establishing an APPLIED_IN relation where the heuristic function is applied in A* search."
+    },
+    {
+      "pair_id": "rel_dev_059",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A path is a sequence of compatible directed edges. Its path cost is the sum of their edge weights: ... The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex. Dijkstra's algorithm is applied to this problem when all edge weights are nonnegative."
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A* search extends Dijkstra's algorithm by using a heuristic function \\(h(v)\\) to guide which vertex is explored next."
+        }
+      ],
+      "rationale": "A* search is a method for finding shortest paths, which requires the concept of a path and its cost. The lecture defines path and path cost before introducing Dijkstra's algorithm, which A* extends."
+    },
+    {
+      "pair_id": "rel_dev_060",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A* search extends Dijkstra's algorithm by using a heuristic function \\(h(v)\\) to guide which vertex is explored next. Its queue priority combines the known path cost with the heuristic estimate"
+        }
+      ],
+      "rationale": "A* search uses path cost as part of its priority calculation, so path cost is necessary to understand A* search."
+    },
+    {
+      "pair_id": "rel_dev_061",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The lecture text does not directly establish a relation between A* Search and the Path Cost Formula. A* Search is described as extending Dijkstra's algorithm with a heuristic, but the path cost formula is only mentioned in the context of defining path cost for weighted graphs, not specifically linked to A* Search."
+    },
+    {
+      "pair_id": "rel_dev_062",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Relaxation is formalized by the update\n\n\\[\nd(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}.\n\\]"
+        }
+      ],
+      "rationale": "The relaxation update formula is presented as the formalization of the relaxation operation used in Dijkstra's algorithm, which A* search extends. The evidence directly states that relaxation is formalized by the update, establishing a FORMALIZES relation from the formula to the method."
+    },
+    {
+      "pair_id": "rel_dev_065",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Dijkstra's algorithm stores tentative distance estimates in a priority queue. After removing a vertex \\(u\\) with the smallest tentative distance, it applies edge relaxation to each outgoing edge."
+        }
+      ],
+      "rationale": "Dijkstra's algorithm requires edge relaxation as a core step to update tentative distances; the lecture states that after removing a vertex, the algorithm applies edge relaxation."
+    },
+    {
+      "pair_id": "rel_dev_066",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A* search extends Dijkstra's algorithm by using a heuristic function \\(h(v)\\) to guide which vertex is explored next."
+        }
+      ],
+      "rationale": "The heuristic function is used as a component within A* search, which extends Dijkstra's algorithm. The evidence shows the heuristic function is applied in the context of Dijkstra's algorithm (via A*), establishing an APPLIED_IN relation from heuristic function to Dijkstra's algorithm."
+    },
+    {
+      "pair_id": "rel_dev_067",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex. Dijkstra's algorithm is applied to this problem when all edge weights are nonnegative."
+        }
+      ],
+      "rationale": "Dijkstra's algorithm solves the shortest-path problem, which is defined in terms of paths; understanding what a path is is necessary to understand the algorithm."
+    },
+    {
+      "pair_id": "rel_dev_068",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Its path cost is the sum of their edge weights"
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Dijkstra's algorithm stores tentative distance estimates in a priority queue. After removing a vertex \\(u\\) with the smallest tentative distance, it applies edge relaxation to each outgoing edge. Relaxation is formalized by the update\n\n\\[\nd(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}.\n\\]"
+        }
+      ],
+      "rationale": "Dijkstra's algorithm relies on the concept of path cost to compute tentative distances and perform edge relaxation; the algorithm's update rule uses the sum of edge weights, which is the definition of path cost."
+    },
+    {
+      "pair_id": "rel_dev_069",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "C(v_0,\\ldots,v_k) = \\sum_{i=0}^{k-1} w(v_i,v_{i+1})"
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Dijkstra's algorithm stores tentative distance estimates in a priority queue. After removing a vertex \\(u\\) with the smallest tentative distance, it applies edge relaxation to each outgoing edge. Relaxation is formalized by the update\n\n\\[\nd(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}.\n\\]"
+        }
+      ],
+      "rationale": "The Path Cost Formula defines the cost of a path, which is the objective that Dijkstra's algorithm minimizes. The lecture states that relaxation is formalized by an update that uses the path cost concept, establishing the formula as a formalization of the algorithm's goal."
+    },
+    {
+      "pair_id": "rel_dev_070",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Relaxation is formalized by the update\n\nd(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}."
+        }
+      ],
+      "rationale": "The relaxation update formula explicitly defines the edge relaxation step used in Dijkstra's algorithm, as stated in the evidence."
+    },
+    {
+      "pair_id": "rel_dev_071",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Dijkstra's algorithm is applied to this problem when all edge weights are nonnegative."
+        }
+      ],
+      "rationale": "The lecture explicitly states that Dijkstra's algorithm is applied to the single-source shortest-path problem, establishing an APPLIED_IN relation where the algorithm is the tool used in the problem context."
+    },
+    {
+      "pair_id": "rel_dev_072",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Dijkstra's algorithm is applied to this problem when all edge weights are nonnegative."
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\)."
+        }
+      ],
+      "rationale": "Dijkstra's algorithm operates on a weighted directed graph, which is a prerequisite for defining edge weights and paths. The algorithm requires the graph structure to compute shortest paths."
+    },
+    {
+      "pair_id": "rel_dev_073",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The lecture text does not establish a direct relation between edge relaxation and heuristic function. Edge relaxation is described in the context of Dijkstra's algorithm, while heuristic function is introduced for A* search. They are mentioned in separate contexts without any connecting evidence."
+    },
+    {
+      "pair_id": "rel_dev_077",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Relaxation is formalized by the update\n\nd(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}."
+        }
+      ],
+      "rationale": "The lecture explicitly states that the relaxation update formula formalizes the edge relaxation method."
+    },
+    {
+      "pair_id": "rel_dev_078",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Dijkstra's algorithm is applied to this problem when all edge weights are nonnegative."
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "it applies edge relaxation to each outgoing edge."
+        }
+      ],
+      "rationale": "Edge relaxation is a method used within Dijkstra's algorithm, which is applied to solve the single-source shortest-path problem. The evidence shows that Dijkstra's algorithm applies edge relaxation to solve the problem."
+    },
+    {
+      "pair_id": "rel_dev_080",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The lecture text defines heuristic function in the context of A* search and path in the context of shortest paths, but does not directly establish a relation between them. They are mentioned in separate contexts without explicit connection."
+    },
+    {
+      "pair_id": "rel_dev_081",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The lecture text does not directly establish a relation between Heuristic Function and Path Cost. Heuristic function is mentioned only in the context of A* search, and path cost is defined earlier for Dijkstra's algorithm. No evidence connects them directly."
+    },
+    {
+      "pair_id": "rel_dev_082",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The lecture does not directly establish a relation between the Path Cost Formula and the Heuristic Function. The Path Cost Formula is defined for weighted directed graphs, while the Heuristic Function is introduced in the context of A* search as an extension of Dijkstra's algorithm. There is no evidence that the formula formalizes, requires, or is applied in the heuristic function."
+    },
+    {
+      "pair_id": "rel_dev_083",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The lecture text does not establish a direct relation between the Heuristic Function and the Relaxation Update. The heuristic function is used in A* search to guide exploration, while the relaxation update is a formula for updating distance estimates in Dijkstra's algorithm. They are mentioned in separate contexts without any direct connection."
+    },
+    {
+      "pair_id": "rel_dev_086",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A path is a sequence of compatible directed edges. Its path cost is the sum of their edge weights"
+        }
+      ],
+      "rationale": "Path cost is defined in terms of a path, so understanding path cost requires understanding what a path is."
+    },
+    {
+      "pair_id": "rel_dev_087",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A path is a sequence of compatible directed edges. Its path cost is the sum of their edge weights:\n\n\\[\nC(v_0,\\ldots,v_k) = \\sum_{i=0}^{k-1} w(v_i,v_{i+1}).\n\\]"
+        }
+      ],
+      "rationale": "The Path Cost Formula explicitly defines the cost of a Path, thus formalizing the concept of path cost."
+    },
+    {
+      "pair_id": "rel_dev_089",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex."
+        }
+      ],
+      "rationale": "The problem is defined in terms of paths, so understanding 'Path' is necessary to understand the problem."
+    },
+    {
+      "pair_id": "rel_dev_090",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A path is a sequence of compatible directed edges."
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\)."
+        }
+      ],
+      "rationale": "A path is defined as a sequence of directed edges, which presupposes the existence of a weighted directed graph that provides the edges and their weights. Therefore, understanding a path requires understanding the weighted directed graph."
+    },
+    {
+      "pair_id": "rel_dev_091",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Its path cost is the sum of their edge weights:\n\n\\[\nC(v_0,\\ldots,v_k) = \\sum_{i=0}^{k-1} w(v_i,v_{i+1}).\n\\]"
+        }
+      ],
+      "rationale": "The Path Cost Formula explicitly defines the Path Cost concept, as the formula is presented directly after stating what path cost is."
+    },
+    {
+      "pair_id": "rel_dev_093",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex."
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Its path cost is the sum of their edge weights"
+        }
+      ],
+      "rationale": "The single-source shortest-path problem requires the concept of path cost to define what a minimum-cost path is."
+    },
+    {
+      "pair_id": "rel_dev_094",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\). A path is a sequence of compatible directed edges. Its path cost is the sum of their edge weights"
+        }
+      ],
+      "rationale": "Path cost is defined as the sum of edge weights, which presupposes the concept of a weighted directed graph where edges have numerical weights. Therefore, understanding path cost requires understanding weighted directed graph."
+    },
+    {
+      "pair_id": "rel_dev_096",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "C(v_0,\\ldots,v_k) = \\sum_{i=0}^{k-1} w(v_i,v_{i+1})"
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex."
+        }
+      ],
+      "rationale": "The Path Cost Formula defines the cost of a path, which is the objective to be minimized in the Single-Source Shortest-Path Problem, thus formalizing the problem's cost concept."
+    },
+    {
+      "pair_id": "rel_dev_097",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\). A path is a sequence of compatible directed edges. Its path cost is the sum of their edge weights:\n\n\\[\nC(v_0,\\ldots,v_k) = \\sum_{i=0}^{k-1} w(v_i,v_{i+1}).\n\\]"
+        }
+      ],
+      "rationale": "The Path Cost Formula explicitly defines the cost of a path in a weighted directed graph, formalizing the concept of path cost for such graphs."
+    },
+    {
+      "pair_id": "rel_dev_098",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Relaxation is formalized by the update\n\nd(v) ← min{d(v), d(u)+w(u,v)}."
+        }
+      ],
+      "rationale": "The relaxation update formula explicitly formalizes the edge relaxation step used in solving the single-source shortest-path problem."
+    },
+    {
+      "pair_id": "rel_dev_100",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex."
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\). A path is a sequence of compatible directed edges. Its path cost is the sum of their edge weights:"
+        }
+      ],
+      "rationale": "The shortest-path problem is defined on a weighted directed graph, which provides the necessary concepts of edges, weights, and path cost. Thus, understanding the graph is required to define the problem."
+    },
+    {
+      "pair_id": "rel_dev_101",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "relation_type": "CONTRASTS_WITH",
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "Newton's method and the bisection method contrast in the information they use: Newton's method requires derivative values and can converge rapidly near a root, whereas bisection uses only function signs and preserves a bracket at every iteration."
+        }
+      ],
+      "rationale": "The lecture explicitly contrasts Newton's method (which the damped Newton method extends) with the bisection method, establishing a CONTRASTS_WITH relation between the damped Newton method and the bisection method."
+    },
+    {
+      "pair_id": "rel_dev_102",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "midpoint_formula"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "The bisection method begins with a sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\). It evaluates the midpoint\n\n\\[\nm = \\frac{a+b}{2}\n\\]\n\nand retains the half-interval whose endpoints still have opposite signs."
+        }
+      ],
+      "rationale": "The midpoint formula m = (a+b)/2 is used in the bisection method to compute the midpoint of the bracket, and the lecture text directly presents this formula as part of the method's description, establishing that the formula formalizes the method's step."
+    },
+    {
+      "pair_id": "rel_dev_103",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newton_update_formula"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "relation_type": "CONTRASTS_WITH",
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "Newton's method and the bisection method contrast in the information they use: Newton's method requires derivative values and can converge rapidly near a root, whereas bisection uses only function signs and preserves a bracket at every iteration."
+        }
+      ],
+      "rationale": "The lecture explicitly contrasts Newton's method (which uses the Newton update formula) with the bisection method, stating they contrast in the information they use."
+    },
+    {
+      "pair_id": "rel_dev_104",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newtons_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "relation_type": "CONTRASTS_WITH",
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "Newton's method and the bisection method contrast in the information they use: Newton's method requires derivative values and can converge rapidly near a root, whereas bisection uses only function signs and preserves a bracket at every iteration."
+        }
+      ],
+      "rationale": "The lecture explicitly contrasts Newton's method and the bisection method in terms of the information they use and their convergence behavior."
+    },
+    {
+      "pair_id": "rel_dev_106",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "sign_changing_bracket"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "The bisection method begins with a sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\)."
+        }
+      ],
+      "rationale": "The bisection method requires a sign-changing bracket as its starting condition, making the bracket a prerequisite for the method."
+    },
+    {
+      "pair_id": "rel_dev_107",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "midpoint_formula"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The lecture text describes the damped Newton method and the midpoint formula in separate contexts without establishing any direct educational relation between them. The damped Newton method is an extension of Newton's method, while the midpoint formula is used in the bisection method; they are not connected in the provided material."
+    },
+    {
+      "pair_id": "rel_dev_108",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newton_update_formula"
+      },
+      "relation_type": "EXTENDS",
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "The damped Newton method extends Newton's method by scaling the Newton correction with a factor between zero and one."
+        },
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "x_{k+1} = x_k - \\frac{f(x_k)}{f'(x_k)}"
+        }
+      ],
+      "rationale": "The damped Newton method is a more specific development of Newton's method, which uses the Newton update formula as its conceptual base. The evidence explicitly states that the damped Newton method extends Newton's method by scaling the Newton correction, and the Newton update formula is the formula for that correction."
+    },
+    {
+      "pair_id": "rel_dev_109",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newtons_method"
+      },
+      "relation_type": "EXTENDS",
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "The damped Newton method extends Newton's method by scaling the Newton correction with a factor between zero and one."
+        }
+      ],
+      "rationale": "The lecture explicitly states that the damped Newton method extends Newton's method, indicating a more specific development that preserves Newton's method as its conceptual base."
+    },
+    {
+      "pair_id": "rel_dev_111",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "sign_changing_bracket"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The lecture text describes the damped Newton method and the sign-changing bracket separately, but does not establish any direct relation between them. The damped Newton method is an extension of Newton's method, while the sign-changing bracket is used in the bisection method. No evidence connects these two objects."
+    },
+    {
+      "pair_id": "rel_dev_115",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "midpoint_formula"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "sign_changing_bracket"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "The bisection method begins with a sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\). It evaluates the midpoint\n\n\\[\nm = \\frac{a+b}{2}\n\\]"
+        }
+      ],
+      "rationale": "The midpoint formula m = (a+b)/2 is used in the bisection method to compute the midpoint of the sign-changing bracket, thus formalizing the bracket concept by providing the explicit expression for the midpoint."
+    },
+    {
+      "pair_id": "rel_dev_116",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newton_update_formula"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newtons_method"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "Newton's method uses the derivative to replace the function locally by its tangent line. Provided \\(f'(x_k)\\neq 0\\), its update is\n\n\\[\nx_{k+1} = x_k - \\frac{f(x_k)}{f'(x_k)}.\n\\]"
+        }
+      ],
+      "rationale": "The Newton update formula is the explicit mathematical expression that defines the update step of Newton's method, thus it formalizes the method."
+    },
+    {
+      "pair_id": "rel_dev_117",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newton_update_formula"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "root_finding_problem"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "Newton's method uses the derivative to replace the function locally by its tangent line. Provided \\(f'(x_k)\\neq 0\\), its update is\n\n\\[\nx_{k+1} = x_k - \\frac{f(x_k)}{f'(x_k)}.\n\\]"
+        }
+      ],
+      "rationale": "The Newton update formula is a Formula that explicitly defines the update rule for solving a root-finding problem, thus it formalizes the root-finding problem."
+    },
+    {
+      "pair_id": "rel_dev_119",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newtons_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "root_finding_problem"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "Newton's method uses the derivative to replace the function locally by its tangent line."
+        },
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "A root-finding problem asks for a value \\(x^*\\) at which a scalar function is zero"
+        }
+      ],
+      "rationale": "Newton's method is a method applied to solve root-finding problems, as the lecture introduces Newton's method in the context of root-finding."
+    },
+    {
+      "pair_id": "rel_dev_122",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "L(\\theta; x_{1:n}) = \\prod_{i=1}^{n} p(x_i \\mid \\theta)."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values."
+        }
+      ],
+      "rationale": "The Likelihood Function formula explicitly defines the Likelihood concept, as the lecture states 'The likelihood is defined...' and then presents the formula."
+    },
+    {
+      "pair_id": "rel_dev_123",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "relation_type": "EXTENDS",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The log-likelihood is obtained by taking the logarithm of the likelihood."
+        }
+      ],
+      "rationale": "The log-likelihood is a more specific development of the likelihood, obtained by applying the logarithm, while preserving the likelihood as its conceptual base."
+    },
+    {
+      "pair_id": "rel_dev_124",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The log-likelihood is obtained by taking the logarithm of the likelihood. Independence turns the product into a sum:\n\n\\[\n\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta).\n\\]"
+        }
+      ],
+      "rationale": "The log-likelihood function is a formula that explicitly defines the log-likelihood in terms of the likelihood, thus formalizing the concept of likelihood."
+    },
+    {
+      "pair_id": "rel_dev_125",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it"
+        }
+      ],
+      "rationale": "Maximum Likelihood Estimation requires the Likelihood concept because it uses the log-likelihood as its objective function."
+    },
+    {
+      "pair_id": "rel_dev_126",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:\n\n\\[\n\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta).\n\\]"
+        }
+      ],
+      "rationale": "The MLE Estimator formula explicitly defines the maximum likelihood estimate as the argmax of the log-likelihood, thereby formalizing the concept of Likelihood by providing its optimization condition."
+    },
+    {
+      "pair_id": "rel_dev_127",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically."
+        }
+      ],
+      "rationale": "Newton's method is applied within maximum likelihood estimation, which uses the likelihood concept, so Newton's method is applied in the context of likelihood."
+    },
+    {
+      "pair_id": "rel_dev_128",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The score function is the derivative of the log-likelihood with respect to the parameter"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\)."
+        }
+      ],
+      "rationale": "The score equation is defined in terms of the score function, which is the derivative of the log-likelihood. Understanding the score equation requires prior knowledge of the likelihood and its derivative."
+    },
+    {
+      "pair_id": "rel_dev_129",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The score function is the derivative of the log-likelihood with respect to the parameter"
+        }
+      ],
+      "rationale": "The score function is defined as the derivative of the log-likelihood, so understanding the likelihood is necessary to define the score function."
+    },
+    {
+      "pair_id": "rel_dev_130",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The score function is the derivative of the log-likelihood with respect to the parameter, s(θ) = ∇_θ ℓ(θ)."
+        }
+      ],
+      "rationale": "The Score Function Formula explicitly defines the score function as the derivative of the log-likelihood, thus formalizing the concept of likelihood."
+    },
+    {
+      "pair_id": "rel_dev_131",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values."
+        }
+      ],
+      "rationale": "The likelihood is defined from the statistical model, so understanding the likelihood requires the concept of a statistical model."
+    },
+    {
+      "pair_id": "rel_dev_132",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The log-likelihood is obtained by taking the logarithm of the likelihood."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "ℓ(θ) = log L(θ; x_{1:n}) = ∑_{i=1}^{n} log p(x_i ∣ θ)."
+        }
+      ],
+      "rationale": "The log-likelihood is defined as the logarithm of the likelihood function, and the formula ℓ(θ) = log L(θ; x_{1:n}) explicitly expresses the log-likelihood in terms of the likelihood function, establishing that the log-likelihood formalizes the likelihood."
+    },
+    {
+      "pair_id": "rel_dev_133",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The log-likelihood is obtained by taking the logarithm of the likelihood."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta)."
+        }
+      ],
+      "rationale": "The log-likelihood function is a formula that explicitly defines the log-likelihood in terms of the likelihood function, thus formalizing the relationship."
+    },
+    {
+      "pair_id": "rel_dev_134",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "L(\\theta; x_{1:n}) = \\prod_{i=1}^{n} p(x_i \\mid \\theta)."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it"
+        }
+      ],
+      "rationale": "The Likelihood Function is a formula that defines the objective used in Maximum Likelihood Estimation, as the lecture states that MLE uses the log-likelihood (derived from the likelihood) as its objective."
+    },
+    {
+      "pair_id": "rel_dev_135",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:\n\n\\[\n\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta).\n\\]"
+        }
+      ],
+      "rationale": "The MLE estimator formula explicitly defines the maximum likelihood estimate as the argmax of the log-likelihood, which is derived from the likelihood function. Thus, the MLE estimator formalizes the likelihood function by providing the solution condition for estimation."
+    },
+    {
+      "pair_id": "rel_dev_136",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically."
+        }
+      ],
+      "rationale": "Newton's method is applied within maximum likelihood estimation, which uses the likelihood function as its objective. The evidence directly states that Newton's method is applied in the context of maximum likelihood estimation, which is based on the likelihood function."
+    },
+    {
+      "pair_id": "rel_dev_137",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The score function is the derivative of the log-likelihood with respect to the parameter, s(θ) = ∇_θ ℓ(θ). At an interior differentiable optimum, an MLE candidate satisfies the score equation s(θ)=0."
+        }
+      ],
+      "rationale": "The score equation s(θ)=0 formalizes the condition for an optimum of the log-likelihood, which is derived from the likelihood function. The evidence directly presents the score equation as a condition based on the derivative of the log-likelihood."
+    },
+    {
+      "pair_id": "rel_dev_138",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The score function is the derivative of the log-likelihood with respect to the parameter"
+        }
+      ],
+      "rationale": "The score function is defined as the derivative of the log-likelihood, which is derived from the likelihood function. Thus, the score function formalizes the likelihood function by providing its derivative."
+    },
+    {
+      "pair_id": "rel_dev_139",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The score function is the derivative of the log-likelihood with respect to the parameter, s(θ) = ∇_θ ℓ(θ)."
+        }
+      ],
+      "rationale": "The Score Function Formula formalizes the derivative of the log-likelihood, which is derived from the Likelihood Function. The evidence directly states that the score function is the derivative of the log-likelihood, establishing a formalization relation."
+    },
+    {
+      "pair_id": "rel_dev_140",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "L(\\theta; x_{1:n}) = \\prod_{i=1}^{n} p(x_i \\mid \\theta)."
+        }
+      ],
+      "rationale": "The Likelihood Function is a formula that explicitly defines the likelihood from the Statistical Model, formalizing the concept of comparing parameter values given fixed observations."
+    },
+    {
+      "pair_id": "rel_dev_141",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta)."
+        }
+      ],
+      "rationale": "The log-likelihood function is a formula that explicitly defines the log-likelihood concept, so it formalizes the concept."
+    },
+    {
+      "pair_id": "rel_dev_142",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it"
+        }
+      ],
+      "rationale": "The log-likelihood is used as the objective function within the maximum likelihood estimation method."
+    },
+    {
+      "pair_id": "rel_dev_143",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:\n\n\\[\n\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta).\n\\]"
+        }
+      ],
+      "rationale": "The MLE Estimator formula explicitly defines the estimator as the argmax of the log-likelihood, thus formalizing the log-likelihood as the objective function."
+    },
+    {
+      "pair_id": "rel_dev_145",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The score function is the derivative of the log-likelihood with respect to the parameter"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\)."
+        }
+      ],
+      "rationale": "The score equation is defined as the derivative of the log-likelihood set to zero, so understanding the log-likelihood is necessary to define the score equation."
+    },
+    {
+      "pair_id": "rel_dev_146",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The score function is the derivative of the log-likelihood with respect to the parameter"
+        }
+      ],
+      "rationale": "The score function is defined as the derivative of the log-likelihood, so understanding the log-likelihood is necessary to define the score function."
+    },
+    {
+      "pair_id": "rel_dev_147",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The score function is the derivative of the log-likelihood with respect to the parameter, s(θ) = ∇_θ ℓ(θ)."
+        }
+      ],
+      "rationale": "The Score Function Formula explicitly defines the score function as the derivative of the log-likelihood, thus formalizing the concept of log-likelihood."
+    },
+    {
+      "pair_id": "rel_dev_148",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "A statistical model is a family of probability distributions indexed by an unknown parameter \\(\\theta\\). The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The log-likelihood is obtained by taking the logarithm of the likelihood."
+        }
+      ],
+      "rationale": "The log-likelihood is derived from the likelihood, which is defined from the statistical model. Therefore, understanding the statistical model is necessary to define the log-likelihood."
+    },
+    {
+      "pair_id": "rel_dev_149",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta)."
+        }
+      ],
+      "rationale": "The log-likelihood function is the formula that defines the objective for maximum likelihood estimation, as stated in the lecture: 'Maximum likelihood estimation uses the log-likelihood as its objective'. Therefore, the formula formalizes the method."
+    },
+    {
+      "pair_id": "rel_dev_150",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:\n\n\\[\n\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta).\n\\]"
+        }
+      ],
+      "rationale": "The MLE estimator formula explicitly defines the estimator as the argmax of the log-likelihood function, thereby formalizing the log-likelihood as the objective function for maximum likelihood estimation."
+    },
+    {
+      "pair_id": "rel_dev_152",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The score function is the derivative of the log-likelihood with respect to the parameter, s(θ) = ∇_θ ℓ(θ). At an interior differentiable optimum, an MLE candidate satisfies the score equation s(θ)=0."
+        }
+      ],
+      "rationale": "The score equation s(θ)=0 is derived from the log-likelihood function ℓ(θ) via its derivative, and it formalizes the condition for a maximum likelihood estimate."
+    },
+    {
+      "pair_id": "rel_dev_153",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The score function is the derivative of the log-likelihood with respect to the parameter"
+        }
+      ],
+      "rationale": "The score function is defined as the derivative of the log-likelihood, so the score function formalizes the log-likelihood by expressing its derivative."
+    },
+    {
+      "pair_id": "rel_dev_154",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "s(θ) = ∇_θ ℓ(θ)."
+        }
+      ],
+      "rationale": "The Score Function Formula explicitly defines the score function as the derivative of the log-likelihood function, thus formalizing the relationship between the two."
+    },
+    {
+      "pair_id": "rel_dev_155",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "A statistical model is a family of probability distributions indexed by an unknown parameter \\(\\theta\\). The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta)."
+        }
+      ],
+      "rationale": "The log-likelihood function is a formula that expresses the log-likelihood in terms of the statistical model's probability distributions, formalizing the concept of likelihood for the model."
+    },
+    {
+      "pair_id": "rel_dev_156",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it: \n\n\\[\n\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta).\n\\]"
+        }
+      ],
+      "rationale": "The MLE Estimator formula explicitly defines the parameter value selected by Maximum Likelihood Estimation, thus formalizing the method."
+    },
+    {
+      "pair_id": "rel_dev_157",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically."
+        }
+      ],
+      "rationale": "Newton's method is applied within maximum likelihood estimation to compute a candidate numerically, so Newton's method is used in maximum likelihood estimation."
+    },
+    {
+      "pair_id": "rel_dev_158",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\)."
+        }
+      ],
+      "rationale": "The score equation is a necessary condition for maximum likelihood estimation, so maximum likelihood estimation requires the score equation."
+    },
+    {
+      "pair_id": "rel_dev_159",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The score function is the derivative of the log-likelihood with respect to the parameter"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation s(θ)=0."
+        }
+      ],
+      "rationale": "Maximum likelihood estimation requires the score function because the score equation s(θ)=0 is used to find the MLE candidate."
+    },
+    {
+      "pair_id": "rel_dev_160",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The score function is the derivative of the log-likelihood with respect to the parameter,\n\n\\[\ns(\\theta) = \\nabla_{\\theta}\\ell(\\theta).\n\\]\n\nAt an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\)."
+        }
+      ],
+      "rationale": "The Score Function Formula formally defines the score function as the derivative of the log-likelihood, and the text states that an MLE candidate satisfies the score equation, establishing the formula as a formal condition for maximum likelihood estimation."
+    },
+    {
+      "pair_id": "rel_dev_162",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically."
+        }
+      ],
+      "rationale": "Newton's method is a numerical optimization technique that is applied within the context of maximum likelihood estimation to compute the MLE when the score equation has no closed-form solution."
+    },
+    {
+      "pair_id": "rel_dev_163",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\)."
+        }
+      ],
+      "rationale": "The score equation provides a condition that characterizes the MLE estimator, so it formalizes the MLE estimator."
+    },
+    {
+      "pair_id": "rel_dev_164",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The score function is the derivative of the log-likelihood with respect to the parameter"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\)."
+        }
+      ],
+      "rationale": "The MLE estimator is defined as the argmax of the log-likelihood, and the score function (derivative of log-likelihood) provides the condition for an interior optimum via the score equation, thus the MLE estimator formalizes the condition that the score function must be zero."
+    },
+    {
+      "pair_id": "rel_dev_165",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The score function is the derivative of the log-likelihood with respect to the parameter, s(θ) = ∇_θ ℓ(θ). At an interior differentiable optimum, an MLE candidate satisfies the score equation s(θ)=0."
+        }
+      ],
+      "rationale": "The Score Function Formula formalizes the condition for an MLE candidate by defining the score function and stating that the MLE satisfies the score equation s(θ)=0."
+    },
+    {
+      "pair_id": "rel_dev_166",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "A statistical model is a family of probability distributions indexed by an unknown parameter \\(\\theta\\)."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:\n\n\\[\n\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta).\n\\]"
+        }
+      ],
+      "rationale": "The MLE Estimator formula explicitly defines the estimator as the argmax of the log-likelihood, which is derived from the statistical model. Thus, the formula formalizes the concept of a statistical model by providing a specific estimation procedure."
+    },
+    {
+      "pair_id": "rel_dev_167",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically."
+        }
+      ],
+      "rationale": "Newton's method is applied to solve the score equation, as indicated by the lecture text stating it is used within maximum likelihood estimation to compute a candidate numerically, which refers to solving the score equation."
+    },
+    {
+      "pair_id": "rel_dev_168",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The score function is the derivative of the log-likelihood with respect to the parameter"
+        }
+      ],
+      "rationale": "Newton's method is applied to solve the score equation (score function set to zero) in maximum likelihood estimation, so Newton's method is used in the context of the score function."
+    },
+    {
+      "pair_id": "rel_dev_169",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically."
+        }
+      ],
+      "rationale": "Newton's method is a numerical optimization technique that is applied to solve the score equation, which involves the score function formula. The evidence states that Newton's method is applied within maximum likelihood estimation, which uses the score function."
+    },
+    {
+      "pair_id": "rel_dev_171",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The score function is the derivative of the log-likelihood with respect to the parameter"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\)."
+        }
+      ],
+      "rationale": "The score equation is defined as setting the score function to zero, so understanding the score function is necessary to understand the score equation."
+    },
+    {
+      "pair_id": "rel_dev_172",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "s(\\theta) = \\nabla_{\\theta}\\ell(\\theta)."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\)."
+        }
+      ],
+      "rationale": "The Score Function Formula defines the score function, which is then used to state the Score Equation. The formula formalizes the concept of the score equation by providing the explicit expression for s(θ)."
+    },
+    {
+      "pair_id": "rel_dev_173",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "A statistical model is a family of probability distributions indexed by an unknown parameter \\(\\theta\\)."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\)."
+        }
+      ],
+      "rationale": "The Score Equation is defined in terms of the parameter \\(\\theta\\) from the Statistical Model, and solving it requires the model's likelihood, so the Score Equation requires the Statistical Model."
+    },
+    {
+      "pair_id": "rel_dev_174",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The score function is the derivative of the log-likelihood with respect to the parameter,\n\n\\[\ns(\\theta) = \\nabla_{\\theta}\\ell(\\theta).\n\\]"
+        }
+      ],
+      "rationale": "The formula explicitly defines the score function, so the formula formalizes the concept."
+    },
+    {
+      "pair_id": "rel_dev_176",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "A statistical model is a family of probability distributions indexed by an unknown parameter \\(\\theta\\)."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The score function is the derivative of the log-likelihood with respect to the parameter,\n\n\\[\ns(\\theta) = \\nabla_{\\theta}\\ell(\\theta).\n\\]"
+        }
+      ],
+      "rationale": "The Score Function Formula formalizes the Statistical Model by providing the derivative of the log-likelihood with respect to the parameter, which is defined in the context of the statistical model."
+    }
+  ]
+}

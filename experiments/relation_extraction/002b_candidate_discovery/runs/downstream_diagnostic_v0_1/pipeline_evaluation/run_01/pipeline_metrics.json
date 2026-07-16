@@ -1,0 +1,347 @@
+{
+  "artifact_type": "candidate_relation_pipeline_metrics",
+  "version": "v0.1",
+  "evaluation_status": "final",
+  "experiment": "002B-2_downstream_typed_edge_diagnostic",
+  "split_role": "development_diagnostic",
+  "denominators": {
+    "total_pairs": 176,
+    "primary_pairs": 171,
+    "positive_pairs": 80,
+    "hard_negative_pairs": 91,
+    "schema_gap_pairs": 5,
+    "ambiguous_pairs": 0
+  },
+  "method_commit": "78e47b8dc792dd970e72c0040f045c8d1cc1035c",
+  "conditions": {
+    "all_pairs": {
+      "candidate": {
+        "selected_pair_count": 176,
+        "selected_primary_pairs": 171,
+        "selected_positive_pairs": 80,
+        "selected_hard_negative_pairs": 91,
+        "selected_schema_gap_pairs": 5,
+        "positive_recall": {
+          "numerator": 80,
+          "denominator": 80,
+          "value": 1.0
+        },
+        "primary_precision": {
+          "numerator": 80,
+          "denominator": 171,
+          "value": 0.4678362573099415
+        },
+        "total_workload_retention": {
+          "numerator": 176,
+          "denominator": 176,
+          "value": 1.0
+        },
+        "total_workload_reduction": {
+          "numerator": 0,
+          "denominator": 176,
+          "value": 0.0
+        }
+      },
+      "conditional_relation": {
+        "strict_edge_accuracy": {
+          "numerator": 62,
+          "denominator": 171,
+          "value": 0.36257309941520466
+        },
+        "relation_type_accuracy_ignoring_direction": {
+          "numerator": 66,
+          "denominator": 171,
+          "value": 0.38596491228070173
+        },
+        "positive_relation_accuracy": {
+          "numerator": 40,
+          "denominator": 80,
+          "value": 0.5
+        },
+        "no_relation_accuracy": {
+          "numerator": 22,
+          "denominator": 91,
+          "value": 0.24175824175824176
+        },
+        "endpoint_direction_accuracy": {
+          "numerator": 66,
+          "denominator": 78,
+          "value": 0.8461538461538461
+        },
+        "direction_accuracy_when_type_correct": {
+          "numerator": 39,
+          "denominator": 43,
+          "value": 0.9069767441860465
+        },
+        "exact_evidence_span_rate": {
+          "numerator": 162,
+          "denominator": 209,
+          "value": 0.7751196172248804
+        },
+        "semantic_evidence_support_on_accepted_primary_graph_edges": {
+          "numerator": 31,
+          "denominator": 40,
+          "value": 0.775
+        },
+        "evidence_support_breakdown": {
+          "auto_supported_by_gold_evidence": 9,
+          "not_supported": 9,
+          "supported": 22
+        },
+        "manual_adjudication_count": 32,
+        "pending_adjudication_count": 0,
+        "related_to_prediction_rate": {
+          "numerator": 1,
+          "denominator": 171,
+          "value": 0.005847953216374269
+        },
+        "related_to_overuse_count": 1
+      },
+      "pipeline": {
+        "strict_accuracy": {
+          "numerator": 62,
+          "denominator": 171,
+          "value": 0.36257309941520466
+        },
+        "positive_typed_edge_precision": {
+          "numerator": 40,
+          "denominator": 148,
+          "value": 0.2702702702702703
+        },
+        "positive_typed_edge_recall": {
+          "numerator": 40,
+          "denominator": 80,
+          "value": 0.5
+        },
+        "positive_typed_edge_f1": 0.3508771929824562,
+        "candidate_induced_false_negatives": 0,
+        "classifier_no_relation_false_negatives": 1,
+        "wrong_relation_type": 35,
+        "wrong_direction_when_type_correct": 4,
+        "false_positive_relations": 69,
+        "hard_negative_strict_success": {
+          "numerator": 22,
+          "denominator": 91,
+          "value": 0.24175824175824176
+        },
+        "positive_strict_success": {
+          "numerator": 40,
+          "denominator": 80,
+          "value": 0.5
+        }
+      },
+      "workload": {
+        "pair_workload": 176,
+        "api_request_count": 176,
+        "prompt_tokens": 406548,
+        "completion_tokens": 38157,
+        "total_tokens": 444705,
+        "prompt_cache_hit_tokens": 360064,
+        "prompt_cache_miss_tokens": 46484,
+        "latency_ms": 544699
+      },
+      "evidence": {
+        "exact_span_rate": {
+          "numerator": 162,
+          "denominator": 209,
+          "value": 0.7751196172248804
+        },
+        "semantic_support_on_accepted_primary_graph_edges": {
+          "numerator": 31,
+          "denominator": 40,
+          "value": 0.775,
+          "breakdown": {
+            "auto_supported_by_gold_evidence": 9,
+            "not_supported": 9,
+            "supported": 22
+          }
+        },
+        "manual_adjudication_count": 32,
+        "pending_adjudication_count": 0
+      },
+      "diagnostics": {
+        "schema_gap_pairs": 5,
+        "selected_schema_gap_pairs": 5,
+        "schema_gap_graph_predictions": 5
+      }
+    },
+    "rule_filtered_v0_1": {
+      "candidate": {
+        "selected_pair_count": 127,
+        "selected_primary_pairs": 122,
+        "selected_positive_pairs": 70,
+        "selected_hard_negative_pairs": 52,
+        "selected_schema_gap_pairs": 5,
+        "positive_recall": {
+          "numerator": 70,
+          "denominator": 80,
+          "value": 0.875
+        },
+        "primary_precision": {
+          "numerator": 70,
+          "denominator": 122,
+          "value": 0.5737704918032787
+        },
+        "total_workload_retention": {
+          "numerator": 127,
+          "denominator": 176,
+          "value": 0.7215909090909091
+        },
+        "total_workload_reduction": {
+          "numerator": 49,
+          "denominator": 176,
+          "value": 0.2784090909090909
+        }
+      },
+      "conditional_relation": {
+        "strict_edge_accuracy": {
+          "numerator": 45,
+          "denominator": 122,
+          "value": 0.36885245901639346
+        },
+        "relation_type_accuracy_ignoring_direction": {
+          "numerator": 48,
+          "denominator": 122,
+          "value": 0.39344262295081966
+        },
+        "positive_relation_accuracy": {
+          "numerator": 36,
+          "denominator": 70,
+          "value": 0.5142857142857142
+        },
+        "no_relation_accuracy": {
+          "numerator": 9,
+          "denominator": 52,
+          "value": 0.17307692307692307
+        },
+        "endpoint_direction_accuracy": {
+          "numerator": 57,
+          "denominator": 68,
+          "value": 0.8382352941176471
+        },
+        "direction_accuracy_when_type_correct": {
+          "numerator": 35,
+          "denominator": 38,
+          "value": 0.9210526315789473
+        },
+        "exact_evidence_span_rate": {
+          "numerator": 126,
+          "denominator": 160,
+          "value": 0.7875
+        },
+        "semantic_evidence_support_on_accepted_primary_graph_edges": {
+          "numerator": 31,
+          "denominator": 36,
+          "value": 0.8611111111111112
+        },
+        "evidence_support_breakdown": {
+          "auto_supported_by_gold_evidence": 10,
+          "not_supported": 5,
+          "supported": 21
+        },
+        "manual_adjudication_count": 27,
+        "pending_adjudication_count": 0,
+        "related_to_prediction_rate": {
+          "numerator": 2,
+          "denominator": 122,
+          "value": 0.01639344262295082
+        },
+        "related_to_overuse_count": 2
+      },
+      "pipeline": {
+        "strict_accuracy": {
+          "numerator": 84,
+          "denominator": 171,
+          "value": 0.49122807017543857
+        },
+        "positive_typed_edge_precision": {
+          "numerator": 36,
+          "denominator": 112,
+          "value": 0.32142857142857145
+        },
+        "positive_typed_edge_recall": {
+          "numerator": 36,
+          "denominator": 80,
+          "value": 0.45
+        },
+        "positive_typed_edge_f1": 0.375,
+        "candidate_induced_false_negatives": 10,
+        "classifier_no_relation_false_negatives": 1,
+        "wrong_relation_type": 30,
+        "wrong_direction_when_type_correct": 3,
+        "false_positive_relations": 43,
+        "hard_negative_strict_success": {
+          "numerator": 48,
+          "denominator": 91,
+          "value": 0.5274725274725275
+        },
+        "positive_strict_success": {
+          "numerator": 36,
+          "denominator": 80,
+          "value": 0.45
+        }
+      },
+      "workload": {
+        "pair_workload": 127,
+        "api_request_count": 127,
+        "prompt_tokens": 293753,
+        "completion_tokens": 27939,
+        "total_tokens": 321692,
+        "prompt_cache_hit_tokens": 286336,
+        "prompt_cache_miss_tokens": 7417,
+        "latency_ms": 407175
+      },
+      "evidence": {
+        "exact_span_rate": {
+          "numerator": 126,
+          "denominator": 160,
+          "value": 0.7875
+        },
+        "semantic_support_on_accepted_primary_graph_edges": {
+          "numerator": 31,
+          "denominator": 36,
+          "value": 0.8611111111111112,
+          "breakdown": {
+            "auto_supported_by_gold_evidence": 10,
+            "not_supported": 5,
+            "supported": 21
+          }
+        },
+        "manual_adjudication_count": 27,
+        "pending_adjudication_count": 0
+      },
+      "diagnostics": {
+        "schema_gap_pairs": 5,
+        "selected_schema_gap_pairs": 5,
+        "schema_gap_graph_predictions": 5
+      }
+    }
+  },
+  "comparison": {
+    "candidate_gate_outcome": "failed_frozen_recall_gate",
+    "candidate_gate_overridden": false,
+    "selected_safe_fallback": "all_pairs_v0_1",
+    "pair_workload_reduction": {
+      "numerator": 49,
+      "denominator": 176,
+      "value": 0.2784090909090909
+    },
+    "api_request_reduction": {
+      "numerator": 49,
+      "denominator": 176,
+      "value": 0.2784090909090909
+    },
+    "pipeline_strict_accuracy_delta_filtered_minus_all_pairs": 0.1286549707602339,
+    "positive_typed_edge_precision_delta_filtered_minus_all_pairs": 0.05115830115830117,
+    "positive_typed_edge_recall_delta_filtered_minus_all_pairs": -0.04999999999999999,
+    "missed_positive_pairs": 10,
+    "missed_positives_all_pairs_strict_correct": 4,
+    "missed_positives_all_pairs_strict_incorrect": 6,
+    "shared_selected_prediction_disagreement_count": 3
+  },
+  "interpretation_boundary": {
+    "downstream_results_may_override_candidate_gate": false,
+    "fresh_holdout_claim": false,
+    "production_readiness_established": false
+  }
+}

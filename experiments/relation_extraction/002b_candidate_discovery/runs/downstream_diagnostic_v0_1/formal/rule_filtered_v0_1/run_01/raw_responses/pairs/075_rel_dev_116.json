@@ -1,0 +1,28 @@
+{
+  "id": "d09053b5-1508-473e-b43d-922f549358a3",
+  "object": "chat.completion",
+  "created": 1784228508,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_116\",\n      \"source\": {\n        \"lecture_id\": \"numerical_root_finding_001\",\n        \"ko_id\": \"newton_update_formula\"\n      },\n      \"target\": {\n        \"lecture_id\": \"numerical_root_finding_001\",\n        \"ko_id\": \"newtons_method\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"numerical_root_finding_001\",\n          \"span\": \"Newton's method uses the derivative to replace the function locally by its tangent line. Provided \\\\(f'(x_k)\\\\neq 0\\\\), its update is\\n\\n\\\\[\\nx_{k+1} = x_k - \\\\frac{f(x_k)}{f'(x_k)}.\\n\\\\]\"\n        }\n      ],\n      \"rationale\": \"The Newton update formula is the explicit mathematical expression that defines the update step of Newton's method, thus it formalizes the method.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2273,
+    "completion_tokens": 228,
+    "total_tokens": 2501,
+    "prompt_tokens_details": {
+      "cached_tokens": 2176
+    },
+    "prompt_cache_hit_tokens": 2176,
+    "prompt_cache_miss_tokens": 97
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

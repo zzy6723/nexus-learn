@@ -1,0 +1,28 @@
+{
+  "id": "0d6df7e4-1b11-40a0-82eb-c7af992222ef",
+  "object": "chat.completion",
+  "created": 1784227077,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_122\",\n      \"source\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"likelihood_function\"\n      },\n      \"target\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"likelihood\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"L(\\\\theta; x_{1:n}) = \\\\prod_{i=1}^{n} p(x_i \\\\mid \\\\theta).\"\n        }\n      ],\n      \"rationale\": \"The Likelihood Function formula explicitly defines the Likelihood concept, so the formula formalizes the concept.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2343,
+    "completion_tokens": 186,
+    "total_tokens": 2529,
+    "prompt_tokens_details": {
+      "cached_tokens": 1664
+    },
+    "prompt_cache_hit_tokens": 1664,
+    "prompt_cache_miss_tokens": 679
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

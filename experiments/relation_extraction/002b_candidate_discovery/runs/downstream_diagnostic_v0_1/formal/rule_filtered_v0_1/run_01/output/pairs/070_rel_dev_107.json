@@ -1,0 +1,18 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_107",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "midpoint_formula"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The lecture text describes the damped Newton method and the midpoint formula in separate contexts without establishing any direct educational relation between them. The damped Newton method is an extension of Newton's method, while the midpoint formula is used in the bisection method; they are not connected in the provided material."
+    }
+  ]
+}

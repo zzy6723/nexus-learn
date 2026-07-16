@@ -1,0 +1,28 @@
+{
+  "id": "1add215b-92a9-416d-8625-7e0b8ad8ff68",
+  "object": "chat.completion",
+  "created": 1784228303,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_014\",\n      \"source\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"heuns_method\"\n      },\n      \"target\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"euler_predictor\"\n      },\n      \"relation_type\": \"EXTENDS\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"Heun's method extends the forward Euler method with a predictor-corrector step.\"\n        },\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"It first forms the Euler predictor y_{n+1} = y_n + hF(t_n,y_n)\"\n        }\n      ],\n      \"rationale\": \"Heun's method is a more specific development that uses the Euler predictor as its conceptual base, as stated in the lecture.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2319,
+    "completion_tokens": 227,
+    "total_tokens": 2546,
+    "prompt_tokens_details": {
+      "cached_tokens": 2304
+    },
+    "prompt_cache_hit_tokens": 2304,
+    "prompt_cache_miss_tokens": 15
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

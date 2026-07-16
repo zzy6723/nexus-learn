@@ -1,8 +1,12 @@
 # 002B-2 Downstream Diagnostic Pre-API Validation
 
 **Date:** 2026-07-17
-**Status:** Passed; repository freeze and clean-state dry runs pending
+**Status:** Passed; formal execution subsequently completed
 **API calls performed:** 0
+
+This document records the pre-API gate only. Formal execution, independent
+Evidence adjudication, final snapshots, and the full-universe comparison are
+reported in `downstream_relation_diagnostic.md`.
 
 ## Frozen Scope
 

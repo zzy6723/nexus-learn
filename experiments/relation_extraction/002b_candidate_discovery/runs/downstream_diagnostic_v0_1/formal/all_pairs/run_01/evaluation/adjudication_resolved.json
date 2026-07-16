@@ -1,0 +1,756 @@
+{
+  "decisions": [
+    {
+      "pair_id": "rel_dev_009",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "discretization_error"
+        },
+        "target": {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "step_size"
+        },
+        "relation_type": "RELATED_TO"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Smaller steps usually reduce discretization error but require more updates over a fixed time interval."
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The span directly links smaller step sizes to reduced discretization error, establishing the predicted educational connection."
+    },
+    {
+      "pair_id": "rel_dev_018",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "euler_predictor"
+        },
+        "target": {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "step_size"
+        },
+        "relation_type": "REQUIRES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "It first forms the Euler predictor y_{n+1} = y_n + hF(t_n,y_n)"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The step size h sets the spacing between consecutive numerical time points."
+        }
+      ],
+      "decision": "supported",
+      "rationale": "Read together, the spans identify the Euler predictor, show the parameter h in its update, and identify h as the step size."
+    },
+    {
+      "pair_id": "rel_dev_019",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "euler_predictor"
+        },
+        "target": {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "vector_field"
+        },
+        "relation_type": "REQUIRES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "It first forms the Euler predictor y_{n+1} = y_n + hF(t_n,y_n)"
+        }
+      ],
+      "decision": "not_supported",
+      "rationale": "The selected span shows F in the predictor formula but does not identify F as the vector field, so the target object and dependency are not self-contained."
+    },
+    {
+      "pair_id": "rel_dev_027",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "first_order_equation"
+        },
+        "target": {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "vector_field"
+        },
+        "relation_type": "REQUIRES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "A first-order equation can be written as y'(t) = F(t,y(t))."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The vector field F specifies the slope that the solution should follow at each state."
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The first span expresses the first-order equation using F, and the second identifies F as the vector field that supplies the slope."
+    },
+    {
+      "pair_id": "rel_dev_028",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "forward_euler_update"
+        },
+        "target": {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "forward_euler_method"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope. Its update is\n\ny_{n+1} = y_n + hF(t_n,y_n)."
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The span names the forward Euler method and immediately presents its update, directly supporting FORMALIZES."
+    },
+    {
+      "pair_id": "rel_dev_033",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "forward_euler_method"
+        },
+        "target": {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "step_size"
+        },
+        "relation_type": "REQUIRES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope. Its update is\n\ny_{n+1} = y_n + hF(t_n,y_n).\n\nThe step size h sets the spacing between consecutive numerical time points."
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The evidence names the forward Euler method, shows h in its update, and identifies h as the step size."
+    },
+    {
+      "pair_id": "rel_dev_036",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "heuns_update"
+        },
+        "target": {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "forward_euler_update"
+        },
+        "relation_type": "EXTENDS"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "It first forms the Euler predictor\n\n\\[\n\\widetilde{y}_{n+1} = y_n + hF(t_n,y_n),\n\\]\n\nthen averages the slope at the current point with the slope at the predicted point. The corrected update is\n\n\\[\ny_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right).\n\\]"
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The spans state that Heun construction extends forward Euler and show the Euler predictor followed by the corrected Heun update, supporting the update-level extension."
+    },
+    {
+      "pair_id": "rel_dev_039",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "forward_euler_update"
+        },
+        "target": {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "step_size"
+        },
+        "relation_type": "REQUIRES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y_{n+1} = y_n + hF(t_n,y_n)"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The step size h sets the spacing between consecutive numerical time points."
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The source formula contains h and the second span identifies h as the step size, directly establishing the formula dependency."
+    },
+    {
+      "pair_id": "rel_dev_041",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "heuns_update"
+        },
+        "target": {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "heuns_method"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right)"
+        }
+      ],
+      "decision": "not_supported",
+      "rationale": "The selected formula does not name or otherwise identify Heun's method, so it cannot by itself establish that it formalizes that target method."
+    },
+    {
+      "pair_id": "rel_dev_044",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "heuns_method"
+        },
+        "target": {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "step_size"
+        },
+        "relation_type": "REQUIRES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The step size h sets the spacing between consecutive numerical time points."
+        }
+      ],
+      "decision": "not_supported",
+      "rationale": "One span names Heun's method and the other independently defines step size, but the selected evidence does not show that Heun's method uses or requires it."
+    },
+    {
+      "pair_id": "rel_dev_048",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "heuns_update"
+        },
+        "target": {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "step_size"
+        },
+        "relation_type": "REQUIRES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right)"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The step size h sets the spacing between consecutive numerical time points."
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The source update formula uses h, and the second span identifies h as the step size, supporting the dependency of the update on step size."
+    },
+    {
+      "pair_id": "rel_dev_050",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "initial_value_problem"
+        },
+        "target": {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "ordinary_differential_equation"
+        },
+        "relation_type": "REQUIRES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "An initial value problem combines an ordinary differential equation with an initial condition such as y(t_0)=y_0."
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The span explicitly defines an initial value problem as combining an ordinary differential equation with an initial condition."
+    },
+    {
+      "pair_id": "rel_dev_071",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "dijkstras_algorithm"
+        },
+        "target": {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "single_source_shortest_path_problem"
+        },
+        "relation_type": "APPLIED_IN"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Dijkstra's algorithm is applied to this problem when all edge weights are nonnegative."
+        }
+      ],
+      "decision": "not_supported",
+      "rationale": "The phrase \"this problem\" is unresolved within the selected evidence, so the span does not identify the single-source shortest-path problem."
+    },
+    {
+      "pair_id": "rel_dev_077",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "relaxation_update"
+        },
+        "target": {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "edge_relaxation"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Relaxation is formalized by the update\n\nd(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}."
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The span explicitly says relaxation is formalized by the displayed update."
+    },
+    {
+      "pair_id": "rel_dev_086",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "path_cost"
+        },
+        "target": {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "path"
+        },
+        "relation_type": "REQUIRES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A path is a sequence of compatible directed edges. Its path cost is the sum of their edge weights"
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The span defines a path and immediately defines its path cost from the edge sequence, supporting the dependency."
+    },
+    {
+      "pair_id": "rel_dev_091",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "path_cost_formula"
+        },
+        "target": {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "path_cost"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Its path cost is the sum of their edge weights:\n\n\\[\nC(v_0,\\ldots,v_k) = \\sum_{i=0}^{k-1} w(v_i,v_{i+1}).\n\\]"
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The span names path cost and supplies the sum-of-edge-weights formula that expresses it."
+    },
+    {
+      "pair_id": "rel_dev_093",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "single_source_shortest_path_problem"
+        },
+        "target": {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "path_cost"
+        },
+        "relation_type": "REQUIRES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex."
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Its path cost is the sum of their edge weights"
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The spans define the shortest-path objective as a minimum-cost path and identify path cost as the sum of edge weights."
+    },
+    {
+      "pair_id": "rel_dev_094",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "path_cost"
+        },
+        "target": {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "weighted_directed_graph"
+        },
+        "relation_type": "REQUIRES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\). A path is a sequence of compatible directed edges. Its path cost is the sum of their edge weights"
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The span defines a weighted directed graph and explains that path cost is computed from its directed-edge weights."
+    },
+    {
+      "pair_id": "rel_dev_100",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "single_source_shortest_path_problem"
+        },
+        "target": {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "weighted_directed_graph"
+        },
+        "relation_type": "REQUIRES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex."
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\). A path is a sequence of compatible directed edges. Its path cost is the sum of their edge weights:"
+        }
+      ],
+      "decision": "supported",
+      "rationale": "Read together, the spans define the shortest-path task through minimum-cost paths and define those paths and costs over a weighted directed graph."
+    },
+    {
+      "pair_id": "rel_dev_102",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "numerical_root_finding_001",
+          "ko_id": "midpoint_formula"
+        },
+        "target": {
+          "lecture_id": "numerical_root_finding_001",
+          "ko_id": "bisection_method"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "The bisection method begins with a sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\). It evaluates the midpoint\n\n\\[\nm = \\frac{a+b}{2}\n\\]"
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The evidence names the bisection method and presents the midpoint formula used by that method."
+    },
+    {
+      "pair_id": "rel_dev_105",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "numerical_root_finding_001",
+          "ko_id": "bisection_method"
+        },
+        "target": {
+          "lecture_id": "numerical_root_finding_001",
+          "ko_id": "root_finding_problem"
+        },
+        "relation_type": "APPLIED_IN"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "The bisection method begins with a sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\)."
+        },
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "A root-finding problem asks for a value \\(x^*\\) at which a scalar function is zero"
+        }
+      ],
+      "decision": "not_supported",
+      "rationale": "The spans separately describe a bisection bracket and the root-finding objective but do not explicitly connect the method to that problem."
+    },
+    {
+      "pair_id": "rel_dev_110",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "numerical_root_finding_001",
+          "ko_id": "damped_newton_method"
+        },
+        "target": {
+          "lecture_id": "numerical_root_finding_001",
+          "ko_id": "root_finding_problem"
+        },
+        "relation_type": "APPLIED_IN"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "A root-finding problem asks for a value \\(x^*\\) at which a scalar function is zero"
+        },
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "The damped Newton method extends Newton's method by scaling the Newton correction with a factor between zero and one."
+        }
+      ],
+      "decision": "not_supported",
+      "rationale": "The spans identify the root-finding problem and damped Newton method separately but do not establish that the latter is applied to the former."
+    },
+    {
+      "pair_id": "rel_dev_116",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "numerical_root_finding_001",
+          "ko_id": "newton_update_formula"
+        },
+        "target": {
+          "lecture_id": "numerical_root_finding_001",
+          "ko_id": "newtons_method"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "Newton's method uses the derivative to replace the function locally by its tangent line. Provided \\(f'(x_k)\\neq 0\\), its update is\n\n\\[\nx_{k+1} = x_k - \\frac{f(x_k)}{f'(x_k)}.\n\\]"
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The span names Newton's method and immediately presents its update formula."
+    },
+    {
+      "pair_id": "rel_dev_119",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "numerical_root_finding_001",
+          "ko_id": "newtons_method"
+        },
+        "target": {
+          "lecture_id": "numerical_root_finding_001",
+          "ko_id": "root_finding_problem"
+        },
+        "relation_type": "APPLIED_IN"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "Newton's method uses the derivative to replace the function locally by its tangent line."
+        },
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "A root-finding problem asks for a value \\(x^*\\) at which a scalar function is zero"
+        }
+      ],
+      "decision": "not_supported",
+      "rationale": "The spans separately identify Newton's method and the root-finding problem but do not state or demonstrate the APPLIED_IN relation between them."
+    },
+    {
+      "pair_id": "rel_dev_122",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "likelihood_function"
+        },
+        "target": {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "likelihood"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "L(\\theta; x_{1:n}) = \\prod_{i=1}^{n} p(x_i \\mid \\theta)."
+        }
+      ],
+      "decision": "not_supported",
+      "rationale": "The isolated L formula does not identify the target Likelihood concept or state that the formula formalizes it."
+    },
+    {
+      "pair_id": "rel_dev_141",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "log_likelihood_function"
+        },
+        "target": {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "log_likelihood"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta)."
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The equation directly expresses the log-likelihood as the logarithm of the likelihood, supporting the formalization relation."
+    },
+    {
+      "pair_id": "rel_dev_146",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "score_function"
+        },
+        "target": {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "log_likelihood"
+        },
+        "relation_type": "REQUIRES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The score function is the derivative of the log-likelihood with respect to the parameter"
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The span explicitly defines the score function as the derivative of the log-likelihood."
+    },
+    {
+      "pair_id": "rel_dev_156",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "mle_estimator"
+        },
+        "target": {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "maximum_likelihood_estimation"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it: \\[\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta).\\]"
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The span names maximum likelihood estimation and gives the argmax estimator that formalizes its selection rule."
+    },
+    {
+      "pair_id": "rel_dev_157",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "newtons_method"
+        },
+        "target": {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "maximum_likelihood_estimation"
+        },
+        "relation_type": "APPLIED_IN"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically."
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The span explicitly states that Newton's method can be applied within maximum likelihood estimation."
+    },
+    {
+      "pair_id": "rel_dev_167",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "newtons_method"
+        },
+        "target": {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "score_equation"
+        },
+        "relation_type": "APPLIED_IN"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically."
+        }
+      ],
+      "decision": "not_supported",
+      "rationale": "The span links Newton's method to maximum likelihood estimation but does not mention or identify the score equation."
+    },
+    {
+      "pair_id": "rel_dev_171",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "score_equation"
+        },
+        "target": {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "score_function"
+        },
+        "relation_type": "REQUIRES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The score function is the derivative of the log-likelihood with respect to the parameter"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\)."
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The spans define the score function and identify the score equation as setting that function equal to zero."
+    },
+    {
+      "pair_id": "rel_dev_174",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "score_function_formula"
+        },
+        "target": {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "score_function"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The score function is the derivative of the log-likelihood with respect to the parameter,\n\n\\[\ns(\\theta) = \\nabla_{\\theta}\\ell(\\theta).\n\\]"
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The span names the score function and immediately gives its gradient formula."
+    }
+  ]
+}

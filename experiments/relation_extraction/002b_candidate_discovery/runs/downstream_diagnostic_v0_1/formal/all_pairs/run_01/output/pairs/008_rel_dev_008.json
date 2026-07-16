@@ -1,0 +1,18 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_dev_008",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The lecture text mentions discretization error in the context of numerical methods for solving ODEs, but does not directly establish a relation between the concept of discretization error and the concept of an ordinary differential equation itself. The evidence is insufficient to support any of the defined graph relation types."
+    }
+  ]
+}

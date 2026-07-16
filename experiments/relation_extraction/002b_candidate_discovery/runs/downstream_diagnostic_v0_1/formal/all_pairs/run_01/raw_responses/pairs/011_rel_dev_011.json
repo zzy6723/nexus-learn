@@ -1,0 +1,28 @@
+{
+  "id": "03af02ac-b7b7-40fc-ab94-7a5165ca7b54",
+  "object": "chat.completion",
+  "created": 1784226729,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_dev_011\",\n      \"source\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"euler_predictor\"\n      },\n      \"target\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"first_order_equation\"\n      },\n      \"relation_type\": \"APPLIED_IN\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope. Its update is y_{n+1} = y_n + hF(t_n,y_n).\"\n        },\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"A first-order equation can be written as y'(t) = F(t,y(t)).\"\n        }\n      ],\n      \"rationale\": \"The Euler predictor is a step in Heun's method, which is an extension of the forward Euler method. The forward Euler method is applied to first-order equations, as evidenced by the update formula using F(t_n,y_n) from the first-order equation form.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2323,
+    "completion_tokens": 281,
+    "total_tokens": 2604,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 275
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}
