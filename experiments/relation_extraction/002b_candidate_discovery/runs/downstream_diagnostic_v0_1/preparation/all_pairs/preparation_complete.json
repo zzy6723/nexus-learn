@@ -1,0 +1,67 @@
+{
+  "artifact_type": "candidate_relation_diagnostic_preparation_complete",
+  "version": "v0.1",
+  "status": "final",
+  "condition": "all_pairs",
+  "contract": {
+    "path": "benchmark/candidate_relation_downstream_diagnostic_v0_1.json",
+    "sha256": "f4b46dc888b1600f1635a1deabc6a126467fac896c1938b7608d6bfd682352f7"
+  },
+  "projection_completion": {
+    "path": "benchmark/ground_truth/candidate_relation_projection_development_v0_1_complete.json",
+    "sha256": "747c4a2e803c828089af6f41a3a41078bc306bd7f3f426a5790d957d0fe8e56e"
+  },
+  "implementation": {
+    "path": "scripts/prepare_candidate_relation_diagnostic.py",
+    "sha256": "9bf6bd1776f8480ffcb0969b6527c1a5c985f71bcbfcb6092312fd0031eb4112"
+  },
+  "artifacts": {
+    "selected_relation_ground_truth": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/downstream_diagnostic_v0_1/preparation/all_pairs/selected_relation_ground_truth.json",
+      "sha256": "69d9eb0e7ea6071a392e260385c9460857b264c65a66461fe7db45d4a9f2ed52"
+    },
+    "model_input": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/downstream_diagnostic_v0_1/preparation/all_pairs/model_input.json",
+      "sha256": "f38926bbcf196197d3c24da0d6279704c486ce177daeab169559ba473bd5fd3c"
+    },
+    "batch_plan": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/downstream_diagnostic_v0_1/preparation/all_pairs/batch_plan.json",
+      "sha256": "a972dea99b7dc8473c74e0db0a3c96dea984084f3bf5df5b9f10dd1019b53af4"
+    },
+    "source_manifest": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/downstream_diagnostic_v0_1/preparation/all_pairs/source_manifest.json",
+      "sha256": "f8c206b310e66c068a92d40235b89dde5ccb7b9bb03c499418fcfb8c7a655107"
+    }
+  },
+  "counts": {
+    "selected_pairs": 176,
+    "knowledge_objects": 39,
+    "lectures": 4,
+    "request_batches": 176
+  },
+  "gold_leakage_audit": {
+    "passed": true,
+    "candidate_serialization": "sorted_fully_qualified_references",
+    "forbidden_keys_checked": [
+      "acceptable_alternatives",
+      "category",
+      "evidence_spans",
+      "primary_scored",
+      "primary_scoring_categories",
+      "rationale",
+      "relation_type",
+      "source",
+      "symmetric",
+      "target"
+    ],
+    "rendered_pair_count": 176,
+    "rendered_knowledge_object_count": 39,
+    "rendered_lecture_count": 4
+  },
+  "integrity": {
+    "pair_ids_unique": true,
+    "pair_order_matches_candidate_selection": true,
+    "endpoint_mismatch_count": 0,
+    "gold_fields_model_facing": 0
+  }
+}

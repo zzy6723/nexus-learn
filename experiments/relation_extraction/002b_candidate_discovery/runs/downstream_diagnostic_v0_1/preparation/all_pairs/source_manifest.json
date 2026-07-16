@@ -1,0 +1,85 @@
+{
+  "artifact_type": "candidate_relation_diagnostic_source_manifest",
+  "version": "v0.1",
+  "condition": "all_pairs",
+  "contract": {
+    "path": "benchmark/candidate_relation_downstream_diagnostic_v0_1.json",
+    "sha256": "f4b46dc888b1600f1635a1deabc6a126467fac896c1938b7608d6bfd682352f7"
+  },
+  "projection_completion": {
+    "path": "benchmark/ground_truth/candidate_relation_projection_development_v0_1_complete.json",
+    "sha256": "747c4a2e803c828089af6f41a3a41078bc306bd7f3f426a5790d957d0fe8e56e"
+  },
+  "canonical_relation_ground_truth": {
+    "path": "benchmark/ground_truth/candidate_relation_projection_development_v0_1.json",
+    "sha256": "34594d92c6880ae08efaf27c9f4e0e5b67e018ff3498b325c32191543358bd93"
+  },
+  "knowledge_objects": {
+    "path": "benchmark/ground_truth/candidate_relation_knowledge_objects_development_v0_1.json",
+    "sha256": "ed236a9d0a89984774c9e95418083acf784b38dcab88130bc0421cd7157becd2"
+  },
+  "pair_mapping": {
+    "path": "benchmark/ground_truth/candidate_relation_pair_mapping_development_v0_1.json",
+    "sha256": "277d6d5715d1557f4453f3cc6c288ad03b7385660cf29c9a86162a788630b393"
+  },
+  "candidate_selection": {
+    "path": "experiments/relation_extraction/002b_candidate_discovery/runs/development_v0_1/all_pairs/run_01/candidate_pairs.json",
+    "sha256": "4fd1a8acffcf6b5d8a95a8502bbdab38053402f6ced47f1644e8347e66584c6f"
+  },
+  "candidate_completion": {
+    "path": "experiments/relation_extraction/002b_candidate_discovery/runs/development_v0_1/all_pairs/run_01/candidate_generation_complete.json",
+    "sha256": "0a2bc7ad43d6999ddf23d915204d49b594c567f891f1065ef450dee1ee41c8d4"
+  },
+  "selected_relation_ground_truth": {
+    "path": "experiments/relation_extraction/002b_candidate_discovery/runs/downstream_diagnostic_v0_1/preparation/all_pairs/selected_relation_ground_truth.json",
+    "sha256": "69d9eb0e7ea6071a392e260385c9460857b264c65a66461fe7db45d4a9f2ed52"
+  },
+  "relation_prompt": {
+    "path": "experiments/relation_extraction/002_prompt_refinement/prompt.md",
+    "sha256": "e3b0e53f3ceed60c60d082fa9c4a67f9497e64d50664118227cd9bea9fbc12af"
+  },
+  "relation_schema": {
+    "path": "docs/decisions/004-relation-schema.md",
+    "sha256": "a50bbf3193fe03e6e407da6ced7f15f9f4bb819876140925bc87ac4419c50417"
+  },
+  "base_runner_dependency": {
+    "path": "scripts/run_relation_extraction.py",
+    "sha256": "2c5a25c4b32f9630264b1dac777bbb786f7b3de77d4040fdb0cf1c006436438f"
+  },
+  "base_evaluator": {
+    "path": "scripts/evaluate_relation_extraction.py",
+    "sha256": "efe45e3100ee16a4851de88461441270ed00e9ae520731dbdc7a084f546d10c4"
+  },
+  "preparer": {
+    "path": "scripts/prepare_candidate_relation_diagnostic.py",
+    "sha256": "9bf6bd1776f8480ffcb0969b6527c1a5c985f71bcbfcb6092312fd0031eb4112"
+  },
+  "knowledge_object_ground_truth_hashes": {
+    "benchmark/ground_truth/candidate_relation_knowledge_objects_development_v0_1.json": "ed236a9d0a89984774c9e95418083acf784b38dcab88130bc0421cd7157becd2"
+  },
+  "counts": {
+    "selected_pairs": 176,
+    "knowledge_objects": 39,
+    "lectures": 4,
+    "request_batches": 176
+  },
+  "gold_leakage_audit": {
+    "passed": true,
+    "candidate_serialization": "sorted_fully_qualified_references",
+    "forbidden_keys_checked": [
+      "acceptable_alternatives",
+      "category",
+      "evidence_spans",
+      "primary_scored",
+      "primary_scoring_categories",
+      "rationale",
+      "relation_type",
+      "source",
+      "symmetric",
+      "target"
+    ],
+    "rendered_pair_count": 176,
+    "rendered_knowledge_object_count": 39,
+    "rendered_lecture_count": 4
+  }
+}

@@ -15,8 +15,8 @@ Experiment status:
 
 - Experiment 002A, Oracle-KO Typed Relation Extraction: completed;
 - Experiment 002B-1, controlled predicted-KO pipeline coupling: completed;
-- Experiment 002B-2, Candidate Pair Generation under predicted KOs: development
-  benchmark frozen; generator implementation pending;
+- Experiment 002B-2, Candidate Pair Generation under predicted KOs: Candidate
+  comparison completed; downstream typed-edge diagnostic awaiting method freeze;
 - Experiment 002C, KO Resolution / Canonicalization: pending.
 
 The current implementation focus is Experiment 002B-2. Its definition is in:
@@ -281,13 +281,17 @@ in-schema positives, 91 primary negatives, and 5 out-of-schema diagnostics; all
 annotations pass the strict checker in final mode and are bound by the Ground
 Truth completion marker.
 
-The remaining gates are:
+The All-Pairs control and Rule-Filtered v0.1 comparison are complete.
+Rule-Filtered selected 127/176 pairs, recalled 70/80 positives, and failed the
+frozen Candidate recall gate; All-Pairs remains the safe lecture-local fallback.
 
-1. implement and verify the All-Pairs control;
-2. implement one deterministic Rule-Filtered method;
-3. compare candidate metrics without calling the Relation API;
-4. run the frozen Relation classifier for the downstream comparison;
-5. freeze the selected generator and evaluate it on a lecture-disjoint holdout.
+The remaining 002B gates are:
+
+1. freeze the Candidate-to-Relation projection, preparation, execution,
+   snapshot, and pipeline-evaluation method;
+2. run All-Pairs and Rule-Filtered through the same frozen Relation classifier;
+3. complete independent Evidence adjudication and final snapshots;
+4. produce the 171-pair pipeline comparison and close 002B with scoped claims.
 
 Cross-lecture mention resolution and canonical IDs remain Experiment 002C.
 Learner-facing Connection ranking remains Experiment 003.

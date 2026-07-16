@@ -1,6 +1,6 @@
 # Experiment 002B-2: Candidate Pair Generation under Predicted KOs
 
-**Status:** Candidate-layer development comparison completed; All-Pairs retained as the safe fallback
+**Status:** Candidate layer completed; downstream diagnostic prepared and awaiting repository freeze
 **Stage:** Technical Validation
 **Predecessor:** Experiment 002B-1 completed
 
@@ -352,7 +352,26 @@ rules. The current development selection is `all_pairs_v0_1` under the frozen
 recall-first fallback rule. A single v0.2 refinement may be opened only if a
 general contextual signal is predeclared without encoding the 10 known misses.
 
-Downstream Relation Classification remains pending. If it is run for diagnostic
-comparison, both candidate manifests must use the same frozen Relation method,
-model, request partitioning, evaluator, and adjudication protocol; the failed
-candidate-layer gate cannot be overridden by downstream cost or precision.
+The downstream typed-edge diagnostic contract and implementation are frozen at
+the file/artifact level. The canonical projection and both model-input
+preparations are complete:
+
+- canonical projection: 176 pairs, 171 primary, 5 diagnostics;
+- All-Pairs preparation: 176 candidate-scoped requests, 80 positives;
+- Rule-Filtered preparation: 127 candidate-scoped requests, 70 positives;
+- model-facing gold leakage: 0 fields in both conditions;
+- projection, preparation, evaluator, snapshot, and pipeline regression suite:
+  passed.
+
+The repository-level method freeze and clean-state dry runs remain pending. The
+pre-API audit is recorded in `downstream_relation_diagnostic_pre_api_validation.md`.
+The implementation projects the exhaustive Candidate Ground Truth into Relation
+evaluation artifacts, prepares one gold-free request per selected pair, reuses
+the existing Relation evaluator, freezes independent condition snapshots, and
+scores both conditions over all 171 primary pairs.
+
+Formal API execution remains pending. Both candidate manifests must use the
+same frozen Relation method, model, request partitioning, evaluator, and
+adjudication protocol; the failed candidate-layer gate cannot be overridden by
+downstream cost or precision. The exact execution sequence is recorded in
+`downstream_relation_diagnostic_runbook.md`.

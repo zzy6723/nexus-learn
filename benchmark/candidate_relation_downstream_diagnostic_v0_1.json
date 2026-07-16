@@ -1,0 +1,152 @@
+{
+  "artifact_type": "candidate_relation_downstream_diagnostic_contract",
+  "version": "v0.1",
+  "status": "frozen_before_projection_and_api_execution",
+  "experiment": "002B-2_downstream_typed_edge_diagnostic",
+  "split_role": "development_diagnostic",
+  "created": "2026-07-17",
+  "protocol": {
+    "path": "benchmark/candidate_to_relation_projection_protocol.md",
+    "sha256": "680ab7ff7335b051129c9a5fc48076536506a907bbeb745c2f528812272620b2"
+  },
+  "source_artifacts": {
+    "candidate_ground_truth": {
+      "path": "benchmark/ground_truth/candidate_pairs_development_v0_1.json",
+      "sha256": "a25e5c9568b090fc97fd03ce0462fda608f62d88bd5b62f9b8d2db40530a133d"
+    },
+    "candidate_ground_truth_completion": {
+      "path": "benchmark/ground_truth/candidate_pairs_development_v0_1_complete.json",
+      "sha256": "8c1a07bba5e4b3f1fb0ef71b72bfc744d0ff75569008f94308ba885114de0f73"
+    },
+    "pair_universe": {
+      "path": "benchmark/candidate_pairs/development_v0_1/pair_universe.json",
+      "sha256": "d0c756b3e5533fac1e02c0aa5c1446cb78d206f21232e020ab0b5cb23b2bad84"
+    },
+    "pair_universe_completion": {
+      "path": "benchmark/candidate_pairs/development_v0_1/pair_universe_complete.json",
+      "sha256": "bc655e71b03dd3beb50f5efc38464bb4ba5c7a5a1790d9d6dd206ad2465fa565"
+    },
+    "predicted_ko_inventory": {
+      "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/normalization/normalized_predicted_kos.json",
+      "sha256": "fe37cf7d77dd7304a090b21b206b6dd61621cdfedf75507f45edd09a2d8feda3"
+    },
+    "lecture_inventory": {
+      "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/lecture_inventory.json",
+      "sha256": "5b53aed0b1c793d47908d773d4e4a6b9ef9dd24e920307f71fa73bc71ec8b069"
+    }
+  },
+  "candidate_conditions": [
+    {
+      "condition": "all_pairs",
+      "method_id": "all_pairs_v0_1",
+      "selection": {
+        "path": "experiments/relation_extraction/002b_candidate_discovery/runs/development_v0_1/all_pairs/run_01/candidate_pairs.json",
+        "sha256": "4fd1a8acffcf6b5d8a95a8502bbdab38053402f6ced47f1644e8347e66584c6f"
+      },
+      "completion": {
+        "path": "experiments/relation_extraction/002b_candidate_discovery/runs/development_v0_1/all_pairs/run_01/candidate_generation_complete.json",
+        "sha256": "0a2bc7ad43d6999ddf23d915204d49b594c567f891f1065ef450dee1ee41c8d4"
+      },
+      "expected_selected_pairs": 176,
+      "expected_selected_primary_positives": 80
+    },
+    {
+      "condition": "rule_filtered_v0_1",
+      "method_id": "rule_filtered_v0_1",
+      "selection": {
+        "path": "experiments/relation_extraction/002b_candidate_discovery/runs/development_v0_1/rule_filtered_v0_1/run_01/candidate_pairs.json",
+        "sha256": "cf1982e5f8456de8e4d4ce4885da7f45a7adf15b024139291c3489767f617e21"
+      },
+      "completion": {
+        "path": "experiments/relation_extraction/002b_candidate_discovery/runs/development_v0_1/rule_filtered_v0_1/run_01/candidate_generation_complete.json",
+        "sha256": "4e5e1bf0f821976a2e6759fc55e487129a2053a36627d78ef9f1b2779a1d7a8e"
+      },
+      "expected_selected_pairs": 127,
+      "expected_selected_primary_positives": 70
+    }
+  ],
+  "projection_policy": {
+    "candidate_pair_id_pattern": "cand_dev_NNN",
+    "relation_pair_id_pattern": "rel_dev_NNN",
+    "pair_id_mapping": "preserve_three_digit_suffix",
+    "positive_relation_multiplicity": "exactly_one_primary_relation_required",
+    "negative_projection": "hard_negative_NO_RELATION",
+    "out_of_schema_projection": "schema_gap_RELATED_TO_diagnostic_placeholder",
+    "ambiguous_projection": "fatal"
+  },
+  "denominators": {
+    "total_pairs": 176,
+    "primary_pairs": 171,
+    "positive_pairs": 80,
+    "hard_negative_pairs": 91,
+    "schema_gap_pairs": 5,
+    "ambiguous_pairs": 0
+  },
+  "relation_method": {
+    "experiment": "002_prompt_refinement",
+    "prompt": {
+      "path": "experiments/relation_extraction/002_prompt_refinement/prompt.md",
+      "sha256": "e3b0e53f3ceed60c60d082fa9c4a67f9497e64d50664118227cd9bea9fbc12af"
+    },
+    "schema": {
+      "path": "docs/decisions/004-relation-schema.md",
+      "sha256": "a50bbf3193fe03e6e407da6ced7f15f9f4bb819876140925bc87ac4419c50417"
+    },
+    "base_runner_dependency": {
+      "path": "scripts/run_relation_extraction.py",
+      "sha256": "2c5a25c4b32f9630264b1dac777bbb786f7b3de77d4040fdb0cf1c006436438f"
+    },
+    "base_evaluator": {
+      "path": "scripts/evaluate_relation_extraction.py",
+      "sha256": "efe45e3100ee16a4851de88461441270ed00e9ae520731dbdc7a084f546d10c4"
+    }
+  },
+  "diagnostic_implementations": {
+    "projector": {
+      "path": "scripts/project_candidate_pairs_to_relations.py",
+      "sha256": "2e3c68c1d05e3b88c12891d4ef2f17c285eaaab70bf84e9348c1c22391e5f400"
+    },
+    "preparer": {
+      "path": "scripts/prepare_candidate_relation_diagnostic.py",
+      "sha256": "9bf6bd1776f8480ffcb0969b6527c1a5c985f71bcbfcb6092312fd0031eb4112"
+    },
+    "runner": {
+      "path": "scripts/run_candidate_relation_diagnostic.py",
+      "sha256": "2a36c0df48e2c4358567cafda96d12ec3d61262b59541979798052ce784359ce"
+    },
+    "evaluation_finalizer": {
+      "path": "scripts/finalize_candidate_relation_evaluation.py",
+      "sha256": "4675d7c51835172196589ea93218b89e7c97fd9c8d7d7f17c98fbc78310d3e3f"
+    },
+    "pipeline_evaluator": {
+      "path": "scripts/evaluate_candidate_relation_pipeline.py",
+      "sha256": "0d2f7dab41d395d2037e6b6235fce855263cc0f11110b3e3b04deda5505f8f6d"
+    }
+  },
+  "execution": {
+    "provider": "deepseek",
+    "model": "deepseek-v4-flash",
+    "temperature": 0,
+    "top_p": 1,
+    "max_tokens": 8192,
+    "stream": false,
+    "response_format": {
+      "type": "json_object"
+    },
+    "thinking": {
+      "type": "disabled"
+    },
+    "request_partitioning": "one_candidate_pair_per_request_v0_1",
+    "condition_order": [
+      "all_pairs",
+      "rule_filtered_v0_1"
+    ],
+    "overwrite": false,
+    "retry_policy": "new_complete_condition_attempt_only"
+  },
+  "selection_boundary": {
+    "rule_filtered_candidate_gate_outcome": "failed",
+    "selected_safe_fallback": "all_pairs_v0_1",
+    "downstream_results_may_override_candidate_gate": false
+  }
+}

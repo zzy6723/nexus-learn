@@ -1,0 +1,94 @@
+{
+  "artifact_type": "candidate_relation_projection_complete",
+  "version": "v0.1",
+  "status": "final",
+  "contract": {
+    "path": "benchmark/candidate_relation_downstream_diagnostic_v0_1.json",
+    "sha256": "f4b46dc888b1600f1635a1deabc6a126467fac896c1938b7608d6bfd682352f7"
+  },
+  "implementation": {
+    "path": "scripts/project_candidate_pairs_to_relations.py",
+    "sha256": "2e3c68c1d05e3b88c12891d4ef2f17c285eaaab70bf84e9348c1c22391e5f400"
+  },
+  "inputs": {
+    "candidate_ground_truth": {
+      "path": "benchmark/ground_truth/candidate_pairs_development_v0_1.json",
+      "sha256": "a25e5c9568b090fc97fd03ce0462fda608f62d88bd5b62f9b8d2db40530a133d"
+    },
+    "evaluation_finalizer": {
+      "path": "scripts/finalize_candidate_relation_evaluation.py",
+      "sha256": "4675d7c51835172196589ea93218b89e7c97fd9c8d7d7f17c98fbc78310d3e3f"
+    },
+    "lecture_inventory": {
+      "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/lecture_inventory.json",
+      "sha256": "5b53aed0b1c793d47908d773d4e4a6b9ef9dd24e920307f71fa73bc71ec8b069"
+    },
+    "pair_universe": {
+      "path": "benchmark/candidate_pairs/development_v0_1/pair_universe.json",
+      "sha256": "d0c756b3e5533fac1e02c0aa5c1446cb78d206f21232e020ab0b5cb23b2bad84"
+    },
+    "pipeline_evaluator": {
+      "path": "scripts/evaluate_candidate_relation_pipeline.py",
+      "sha256": "0d2f7dab41d395d2037e6b6235fce855263cc0f11110b3e3b04deda5505f8f6d"
+    },
+    "predicted_ko_inventory": {
+      "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/normalization/normalized_predicted_kos.json",
+      "sha256": "fe37cf7d77dd7304a090b21b206b6dd61621cdfedf75507f45edd09a2d8feda3"
+    },
+    "preparer": {
+      "path": "scripts/prepare_candidate_relation_diagnostic.py",
+      "sha256": "9bf6bd1776f8480ffcb0969b6527c1a5c985f71bcbfcb6092312fd0031eb4112"
+    },
+    "projector": {
+      "path": "scripts/project_candidate_pairs_to_relations.py",
+      "sha256": "2e3c68c1d05e3b88c12891d4ef2f17c285eaaab70bf84e9348c1c22391e5f400"
+    },
+    "protocol": {
+      "path": "benchmark/candidate_to_relation_projection_protocol.md",
+      "sha256": "680ab7ff7335b051129c9a5fc48076536506a907bbeb745c2f528812272620b2"
+    },
+    "runner": {
+      "path": "scripts/run_candidate_relation_diagnostic.py",
+      "sha256": "2a36c0df48e2c4358567cafda96d12ec3d61262b59541979798052ce784359ce"
+    }
+  },
+  "artifacts": {
+    "knowledge_objects": {
+      "path": "benchmark/ground_truth/candidate_relation_knowledge_objects_development_v0_1.json",
+      "sha256": "ed236a9d0a89984774c9e95418083acf784b38dcab88130bc0421cd7157becd2"
+    },
+    "relation_ground_truth": {
+      "path": "benchmark/ground_truth/candidate_relation_projection_development_v0_1.json",
+      "sha256": "34594d92c6880ae08efaf27c9f4e0e5b67e018ff3498b325c32191543358bd93"
+    },
+    "pair_mapping": {
+      "path": "benchmark/ground_truth/candidate_relation_pair_mapping_development_v0_1.json",
+      "sha256": "277d6d5715d1557f4453f3cc6c288ad03b7385660cf29c9a86162a788630b393"
+    }
+  },
+  "counts": {
+    "knowledge_objects": 39,
+    "lectures": 4,
+    "pairs": 176,
+    "primary_pairs": 171,
+    "positive_pairs": 80,
+    "hard_negative_pairs": 91,
+    "schema_gap_pairs": 5,
+    "ambiguous_pairs": 0
+  },
+  "primary_relation_counts": {
+    "REQUIRES": 39,
+    "APPLIED_IN": 23,
+    "EXTENDS": 5,
+    "CONTRASTS_WITH": 1,
+    "FORMALIZES": 10,
+    "RELATED_TO": 2,
+    "NO_RELATION": 91
+  },
+  "integrity": {
+    "pair_id_mapping_complete": true,
+    "endpoint_mismatch_count": 0,
+    "multi_relation_pair_count": 0,
+    "gold_fields_model_facing": 0
+  }
+}

@@ -1,0 +1,2651 @@
+{
+  "artifact_type": "candidate_to_relation_pair_mapping",
+  "version": "v0.1",
+  "benchmark_split": "development",
+  "candidate_pair_id_pattern": "cand_dev_NNN",
+  "relation_pair_id_pattern": "rel_dev_NNN",
+  "mapping_policy": "preserve_three_digit_suffix_and_unordered_endpoints",
+  "mapping_count": 176,
+  "mappings": [
+    {
+      "candidate_pair_id": "cand_dev_001",
+      "relation_pair_id": "rel_dev_001",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_002",
+      "relation_pair_id": "rel_dev_002",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_003",
+      "relation_pair_id": "rel_dev_003",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_004",
+      "relation_pair_id": "rel_dev_004",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_005",
+      "relation_pair_id": "rel_dev_005",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_006",
+      "relation_pair_id": "rel_dev_006",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_007",
+      "relation_pair_id": "rel_dev_007",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_008",
+      "relation_pair_id": "rel_dev_008",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_009",
+      "relation_pair_id": "rel_dev_009",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "candidate_label": "OUT_OF_SCHEMA_RELATION",
+      "relation_category": "schema_gap"
+    },
+    {
+      "candidate_pair_id": "cand_dev_010",
+      "relation_pair_id": "rel_dev_010",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_011",
+      "relation_pair_id": "rel_dev_011",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_012",
+      "relation_pair_id": "rel_dev_012",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "candidate_label": "OUT_OF_SCHEMA_RELATION",
+      "relation_category": "schema_gap"
+    },
+    {
+      "candidate_pair_id": "cand_dev_013",
+      "relation_pair_id": "rel_dev_013",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "candidate_label": "OUT_OF_SCHEMA_RELATION",
+      "relation_category": "schema_gap"
+    },
+    {
+      "candidate_pair_id": "cand_dev_014",
+      "relation_pair_id": "rel_dev_014",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_015",
+      "relation_pair_id": "rel_dev_015",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_016",
+      "relation_pair_id": "rel_dev_016",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_017",
+      "relation_pair_id": "rel_dev_017",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_018",
+      "relation_pair_id": "rel_dev_018",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_019",
+      "relation_pair_id": "rel_dev_019",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_020",
+      "relation_pair_id": "rel_dev_020",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_021",
+      "relation_pair_id": "rel_dev_021",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_022",
+      "relation_pair_id": "rel_dev_022",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_023",
+      "relation_pair_id": "rel_dev_023",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_024",
+      "relation_pair_id": "rel_dev_024",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_025",
+      "relation_pair_id": "rel_dev_025",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_026",
+      "relation_pair_id": "rel_dev_026",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_027",
+      "relation_pair_id": "rel_dev_027",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_028",
+      "relation_pair_id": "rel_dev_028",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_029",
+      "relation_pair_id": "rel_dev_029",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_030",
+      "relation_pair_id": "rel_dev_030",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_031",
+      "relation_pair_id": "rel_dev_031",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_032",
+      "relation_pair_id": "rel_dev_032",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_033",
+      "relation_pair_id": "rel_dev_033",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_034",
+      "relation_pair_id": "rel_dev_034",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_035",
+      "relation_pair_id": "rel_dev_035",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_036",
+      "relation_pair_id": "rel_dev_036",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_037",
+      "relation_pair_id": "rel_dev_037",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_038",
+      "relation_pair_id": "rel_dev_038",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_039",
+      "relation_pair_id": "rel_dev_039",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_040",
+      "relation_pair_id": "rel_dev_040",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_041",
+      "relation_pair_id": "rel_dev_041",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_042",
+      "relation_pair_id": "rel_dev_042",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_043",
+      "relation_pair_id": "rel_dev_043",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_044",
+      "relation_pair_id": "rel_dev_044",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_045",
+      "relation_pair_id": "rel_dev_045",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_046",
+      "relation_pair_id": "rel_dev_046",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_047",
+      "relation_pair_id": "rel_dev_047",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_048",
+      "relation_pair_id": "rel_dev_048",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_049",
+      "relation_pair_id": "rel_dev_049",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_050",
+      "relation_pair_id": "rel_dev_050",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_051",
+      "relation_pair_id": "rel_dev_051",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_052",
+      "relation_pair_id": "rel_dev_052",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_053",
+      "relation_pair_id": "rel_dev_053",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_054",
+      "relation_pair_id": "rel_dev_054",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_055",
+      "relation_pair_id": "rel_dev_055",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_056",
+      "relation_pair_id": "rel_dev_056",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_057",
+      "relation_pair_id": "rel_dev_057",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_058",
+      "relation_pair_id": "rel_dev_058",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_059",
+      "relation_pair_id": "rel_dev_059",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_060",
+      "relation_pair_id": "rel_dev_060",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_061",
+      "relation_pair_id": "rel_dev_061",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_062",
+      "relation_pair_id": "rel_dev_062",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_063",
+      "relation_pair_id": "rel_dev_063",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_064",
+      "relation_pair_id": "rel_dev_064",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_065",
+      "relation_pair_id": "rel_dev_065",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_066",
+      "relation_pair_id": "rel_dev_066",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_067",
+      "relation_pair_id": "rel_dev_067",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_068",
+      "relation_pair_id": "rel_dev_068",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_069",
+      "relation_pair_id": "rel_dev_069",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_070",
+      "relation_pair_id": "rel_dev_070",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_071",
+      "relation_pair_id": "rel_dev_071",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_072",
+      "relation_pair_id": "rel_dev_072",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_073",
+      "relation_pair_id": "rel_dev_073",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_074",
+      "relation_pair_id": "rel_dev_074",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_075",
+      "relation_pair_id": "rel_dev_075",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_076",
+      "relation_pair_id": "rel_dev_076",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_077",
+      "relation_pair_id": "rel_dev_077",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_078",
+      "relation_pair_id": "rel_dev_078",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_079",
+      "relation_pair_id": "rel_dev_079",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_080",
+      "relation_pair_id": "rel_dev_080",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_081",
+      "relation_pair_id": "rel_dev_081",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_082",
+      "relation_pair_id": "rel_dev_082",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_083",
+      "relation_pair_id": "rel_dev_083",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_084",
+      "relation_pair_id": "rel_dev_084",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_085",
+      "relation_pair_id": "rel_dev_085",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_086",
+      "relation_pair_id": "rel_dev_086",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_087",
+      "relation_pair_id": "rel_dev_087",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_088",
+      "relation_pair_id": "rel_dev_088",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_089",
+      "relation_pair_id": "rel_dev_089",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_090",
+      "relation_pair_id": "rel_dev_090",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_091",
+      "relation_pair_id": "rel_dev_091",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_092",
+      "relation_pair_id": "rel_dev_092",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_093",
+      "relation_pair_id": "rel_dev_093",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_094",
+      "relation_pair_id": "rel_dev_094",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_095",
+      "relation_pair_id": "rel_dev_095",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_096",
+      "relation_pair_id": "rel_dev_096",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_097",
+      "relation_pair_id": "rel_dev_097",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_098",
+      "relation_pair_id": "rel_dev_098",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_099",
+      "relation_pair_id": "rel_dev_099",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_100",
+      "relation_pair_id": "rel_dev_100",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_101",
+      "relation_pair_id": "rel_dev_101",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_102",
+      "relation_pair_id": "rel_dev_102",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "midpoint_formula"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_103",
+      "relation_pair_id": "rel_dev_103",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newton_update_formula"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_104",
+      "relation_pair_id": "rel_dev_104",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newtons_method"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_105",
+      "relation_pair_id": "rel_dev_105",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "root_finding_problem"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_106",
+      "relation_pair_id": "rel_dev_106",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "sign_changing_bracket"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_107",
+      "relation_pair_id": "rel_dev_107",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "midpoint_formula"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_108",
+      "relation_pair_id": "rel_dev_108",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newton_update_formula"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_109",
+      "relation_pair_id": "rel_dev_109",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newtons_method"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_110",
+      "relation_pair_id": "rel_dev_110",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "root_finding_problem"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_111",
+      "relation_pair_id": "rel_dev_111",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "sign_changing_bracket"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_112",
+      "relation_pair_id": "rel_dev_112",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "midpoint_formula"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newton_update_formula"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_113",
+      "relation_pair_id": "rel_dev_113",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "midpoint_formula"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newtons_method"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_114",
+      "relation_pair_id": "rel_dev_114",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "midpoint_formula"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "root_finding_problem"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_115",
+      "relation_pair_id": "rel_dev_115",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "midpoint_formula"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "sign_changing_bracket"
+      },
+      "candidate_label": "OUT_OF_SCHEMA_RELATION",
+      "relation_category": "schema_gap"
+    },
+    {
+      "candidate_pair_id": "cand_dev_116",
+      "relation_pair_id": "rel_dev_116",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newton_update_formula"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newtons_method"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_117",
+      "relation_pair_id": "rel_dev_117",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newton_update_formula"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "root_finding_problem"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_118",
+      "relation_pair_id": "rel_dev_118",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newton_update_formula"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "sign_changing_bracket"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_119",
+      "relation_pair_id": "rel_dev_119",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newtons_method"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "root_finding_problem"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_120",
+      "relation_pair_id": "rel_dev_120",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newtons_method"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "sign_changing_bracket"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_121",
+      "relation_pair_id": "rel_dev_121",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "root_finding_problem"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "sign_changing_bracket"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_122",
+      "relation_pair_id": "rel_dev_122",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_123",
+      "relation_pair_id": "rel_dev_123",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_124",
+      "relation_pair_id": "rel_dev_124",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_125",
+      "relation_pair_id": "rel_dev_125",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_126",
+      "relation_pair_id": "rel_dev_126",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_127",
+      "relation_pair_id": "rel_dev_127",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_128",
+      "relation_pair_id": "rel_dev_128",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_129",
+      "relation_pair_id": "rel_dev_129",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_130",
+      "relation_pair_id": "rel_dev_130",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_131",
+      "relation_pair_id": "rel_dev_131",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_132",
+      "relation_pair_id": "rel_dev_132",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_133",
+      "relation_pair_id": "rel_dev_133",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_134",
+      "relation_pair_id": "rel_dev_134",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_135",
+      "relation_pair_id": "rel_dev_135",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_136",
+      "relation_pair_id": "rel_dev_136",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_137",
+      "relation_pair_id": "rel_dev_137",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_138",
+      "relation_pair_id": "rel_dev_138",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_139",
+      "relation_pair_id": "rel_dev_139",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_140",
+      "relation_pair_id": "rel_dev_140",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_141",
+      "relation_pair_id": "rel_dev_141",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_142",
+      "relation_pair_id": "rel_dev_142",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_143",
+      "relation_pair_id": "rel_dev_143",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_144",
+      "relation_pair_id": "rel_dev_144",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_145",
+      "relation_pair_id": "rel_dev_145",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_146",
+      "relation_pair_id": "rel_dev_146",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_147",
+      "relation_pair_id": "rel_dev_147",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_148",
+      "relation_pair_id": "rel_dev_148",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_149",
+      "relation_pair_id": "rel_dev_149",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_150",
+      "relation_pair_id": "rel_dev_150",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_151",
+      "relation_pair_id": "rel_dev_151",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_152",
+      "relation_pair_id": "rel_dev_152",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_153",
+      "relation_pair_id": "rel_dev_153",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_154",
+      "relation_pair_id": "rel_dev_154",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_155",
+      "relation_pair_id": "rel_dev_155",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_156",
+      "relation_pair_id": "rel_dev_156",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_157",
+      "relation_pair_id": "rel_dev_157",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_158",
+      "relation_pair_id": "rel_dev_158",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_159",
+      "relation_pair_id": "rel_dev_159",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_160",
+      "relation_pair_id": "rel_dev_160",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_161",
+      "relation_pair_id": "rel_dev_161",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_162",
+      "relation_pair_id": "rel_dev_162",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_163",
+      "relation_pair_id": "rel_dev_163",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "candidate_label": "OUT_OF_SCHEMA_RELATION",
+      "relation_category": "schema_gap"
+    },
+    {
+      "candidate_pair_id": "cand_dev_164",
+      "relation_pair_id": "rel_dev_164",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_165",
+      "relation_pair_id": "rel_dev_165",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_166",
+      "relation_pair_id": "rel_dev_166",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_167",
+      "relation_pair_id": "rel_dev_167",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_168",
+      "relation_pair_id": "rel_dev_168",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_169",
+      "relation_pair_id": "rel_dev_169",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_170",
+      "relation_pair_id": "rel_dev_170",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_171",
+      "relation_pair_id": "rel_dev_171",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_172",
+      "relation_pair_id": "rel_dev_172",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_173",
+      "relation_pair_id": "rel_dev_173",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_174",
+      "relation_pair_id": "rel_dev_174",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "relation_category": "positive"
+    },
+    {
+      "candidate_pair_id": "cand_dev_175",
+      "relation_pair_id": "rel_dev_175",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    },
+    {
+      "candidate_pair_id": "cand_dev_176",
+      "relation_pair_id": "rel_dev_176",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "relation_category": "hard_negative"
+    }
+  ]
+}

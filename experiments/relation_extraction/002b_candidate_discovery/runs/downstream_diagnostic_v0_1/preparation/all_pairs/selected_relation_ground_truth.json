@@ -1,0 +1,3859 @@
+{
+  "version": "v0.1",
+  "split": "development",
+  "status": "derived_not_run",
+  "created": "2026-07-17",
+  "description": "Relation Ground Truth subset selected by Candidate condition all_pairs.",
+  "annotation_guidelines": "benchmark/candidate_pair_annotation_guidelines.md",
+  "evaluation_protocol": "benchmark/candidate_to_relation_projection_protocol.md",
+  "knowledge_object_ground_truths": [
+    "benchmark/ground_truth/candidate_relation_knowledge_objects_development_v0_1.json"
+  ],
+  "notes": [
+    "cand_dev_NNN maps deterministically to rel_dev_NNN.",
+    "Every primary positive has exactly one predeclared gold Relation.",
+    "Schema-gap RELATED_TO labels are diagnostic placeholders excluded from primary scoring.",
+    "This is inspected development data and not a fresh holdout.",
+    "Selected by frozen Candidate condition all_pairs.",
+    "This gold artifact is evaluator-facing and is never included in model input."
+  ],
+  "allowed_relation_types": [
+    "REQUIRES",
+    "APPLIED_IN",
+    "EXTENDS",
+    "CONTRASTS_WITH",
+    "FORMALIZES",
+    "RELATED_TO",
+    "NO_RELATION"
+  ],
+  "relation_coverage": {
+    "REQUIRES": "covered_with_39_primary_instances",
+    "APPLIED_IN": "covered_with_23_primary_instances",
+    "EXTENDS": "covered_with_5_primary_instances",
+    "CONTRASTS_WITH": "covered_with_1_primary_instances",
+    "FORMALIZES": "covered_with_10_primary_instances",
+    "RELATED_TO": "covered_with_2_primary_instances",
+    "NO_RELATION": "covered_with_91_primary_instances"
+  },
+  "primary_scoring_categories": [
+    "positive",
+    "hard_negative"
+  ],
+  "lectures": [
+    "differential_equations_001",
+    "graph_algorithms_001",
+    "numerical_root_finding_001",
+    "statistics_estimation_001"
+  ],
+  "artifact_type": "candidate_relation_selected_ground_truth",
+  "derivation": {
+    "condition": "all_pairs",
+    "canonical_relation_ground_truth": {
+      "path": "benchmark/ground_truth/candidate_relation_projection_development_v0_1.json",
+      "sha256": "34594d92c6880ae08efaf27c9f4e0e5b67e018ff3498b325c32191543358bd93"
+    },
+    "candidate_selection": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/development_v0_1/all_pairs/run_01/candidate_pairs.json",
+      "sha256": "4fd1a8acffcf6b5d8a95a8502bbdab38053402f6ced47f1644e8347e66584c6f"
+    },
+    "pair_mapping": {
+      "path": "benchmark/ground_truth/candidate_relation_pair_mapping_development_v0_1.json",
+      "sha256": "277d6d5715d1557f4453f3cc6c288ad03b7385660cf29c9a86162a788630b393"
+    }
+  },
+  "pairs": [
+    {
+      "pair_id": "rel_dev_001",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "Discretization error is discussed through step size, not directly through the Euler Predictor object."
+    },
+    {
+      "pair_id": "rel_dev_002",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The lecture does not directly relate discretization error to the First-Order Equation object."
+    },
+    {
+      "pair_id": "rel_dev_003",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The error statement is tied to smaller step sizes and does not directly type a Relation to the Forward Euler Method."
+    },
+    {
+      "pair_id": "rel_dev_004",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The Forward Euler update contains the step size, but its Relation to discretization error would be mediated by that third object."
+    },
+    {
+      "pair_id": "rel_dev_005",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The lecture does not directly relate discretization error to Heun's Method."
+    },
+    {
+      "pair_id": "rel_dev_006",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The lecture does not directly relate discretization error to Heun's Update."
+    },
+    {
+      "pair_id": "rel_dev_007",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "An initial value problem is the problem context, while discretization error is discussed only as an effect of step size."
+    },
+    {
+      "pair_id": "rel_dev_008",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The lecture supplies no direct frozen Relation between discretization error and the Ordinary Differential Equation object."
+    },
+    {
+      "pair_id": "rel_dev_009",
+      "category": "schema_gap",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "relation_type": "RELATED_TO",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The step size \\(h\\) sets the spacing between consecutive numerical time points."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Smaller steps usually reduce discretization error but require more updates over a fixed time interval."
+        }
+      ],
+      "rationale": "Diagnostic placeholder only: The frozen schema has no causal or trade-off Relation such as AFFECTS or CONTROLS; RELATED_TO would discard the explicit direction of influence."
+    },
+    {
+      "pair_id": "rel_dev_010",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The vector field supplies slopes, while discretization error is linked to step size; no direct Relation between the pair is stated."
+    },
+    {
+      "pair_id": "rel_dev_011",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The predictor uses the same vector-field notation as the first-order equation, but the lecture does not directly type a Relation between these two objects."
+    },
+    {
+      "pair_id": "rel_dev_012",
+      "category": "schema_gap",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "relation_type": "RELATED_TO",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "It first forms the Euler predictor"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "\\widetilde{y}_{n+1} = y_n + hF(t_n,y_n),"
+        }
+      ],
+      "rationale": "Diagnostic placeholder only: The frozen schema has no instance-of or reuses-step Relation for linking a predictor object to the method whose step it instantiates."
+    },
+    {
+      "pair_id": "rel_dev_013",
+      "category": "schema_gap",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "relation_type": "RELATED_TO",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Its update is"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y_{n+1} = y_n + hF(t_n,y_n)."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "It first forms the Euler predictor"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "\\widetilde{y}_{n+1} = y_n + hF(t_n,y_n),"
+        }
+      ],
+      "rationale": "Diagnostic placeholder only: The objects are not duplicate mentions, and the frozen schema has no SAME_UPDATE_STRUCTURE or REUSES_FORMULA Relation."
+    },
+    {
+      "pair_id": "rel_dev_014",
+      "category": "positive",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "relation_type": "APPLIED_IN",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "It first forms the Euler predictor"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "\\widetilde{y}_{n+1} = y_n + hF(t_n,y_n),"
+        }
+      ],
+      "rationale": "Heun's method explicitly forms the Euler predictor as its predictor step."
+    },
+    {
+      "pair_id": "rel_dev_015",
+      "category": "positive",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "It first forms the Euler predictor"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "\\widetilde{y}_{n+1} = y_n + hF(t_n,y_n),"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "then averages the slope at the current point with the slope at the predicted point."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The corrected update is"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right)."
+        }
+      ],
+      "rationale": "The corrected Heun update explicitly evaluates the vector field at the predicted state, so the Euler Predictor is required to state the update."
+    },
+    {
+      "pair_id": "rel_dev_016",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The Euler Predictor is used within Heun's method; its connection to the Initial Value Problem is not directly stated for this pair."
+    },
+    {
+      "pair_id": "rel_dev_017",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The Euler Predictor is an intermediate numerical step, and the lecture does not directly type it against the generic Ordinary Differential Equation object."
+    },
+    {
+      "pair_id": "rel_dev_018",
+      "category": "positive",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The step size \\(h\\) sets the spacing between consecutive numerical time points."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "It first forms the Euler predictor"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "\\widetilde{y}_{n+1} = y_n + hF(t_n,y_n),"
+        }
+      ],
+      "rationale": "The Euler predictor contains h, which the lecture defines as the step size."
+    },
+    {
+      "pair_id": "rel_dev_019",
+      "category": "positive",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The vector field \\(F\\) specifies the slope that the solution should follow at each state."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "It first forms the Euler predictor"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "\\widetilde{y}_{n+1} = y_n + hF(t_n,y_n),"
+        }
+      ],
+      "rationale": "The Euler predictor evaluates the vector field F at the current state."
+    },
+    {
+      "pair_id": "rel_dev_020",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "Forward Euler is explicitly applied to an Initial Value Problem, but the lecture does not directly type the method against the First-Order Equation object."
+    },
+    {
+      "pair_id": "rel_dev_021",
+      "category": "positive",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "A first-order equation can be written as"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y'(t) = F(t,y(t))."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Its update is"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y_{n+1} = y_n + hF(t_n,y_n)."
+        }
+      ],
+      "rationale": "The Euler update advances a state using the right-hand side F introduced by the first-order equation."
+    },
+    {
+      "pair_id": "rel_dev_022",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "Heun's method is introduced as an extension of Forward Euler; the text does not directly type it against the First-Order Equation object."
+    },
+    {
+      "pair_id": "rel_dev_023",
+      "category": "positive",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "A first-order equation can be written as"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y'(t) = F(t,y(t))."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The corrected update is"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right)."
+        }
+      ],
+      "rationale": "The Heun update evaluates the right-hand side F supplied by the first-order equation."
+    },
+    {
+      "pair_id": "rel_dev_024",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The Initial Value Problem requires an ordinary differential equation, not specifically the First-Order Equation object as a separately stated requirement."
+    },
+    {
+      "pair_id": "rel_dev_025",
+      "category": "positive",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "relation_type": "EXTENDS",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "An ordinary differential equation relates an unknown function of one variable to its derivatives."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "A first-order equation can be written as"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y'(t) = F(t,y(t))."
+        }
+      ],
+      "rationale": "The first-order equation is the more specific form introduced immediately after the general ordinary differential equation concept."
+    },
+    {
+      "pair_id": "rel_dev_026",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "Step size belongs to the numerical discretization, not to the definition of the First-Order Equation itself."
+    },
+    {
+      "pair_id": "rel_dev_027",
+      "category": "positive",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "A first-order equation can be written as"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y'(t) = F(t,y(t))."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The vector field \\(F\\) specifies the slope that the solution should follow at each state."
+        }
+      ],
+      "rationale": "The first-order equation is written using F, whose role is defined by the Vector Field object."
+    },
+    {
+      "pair_id": "rel_dev_028",
+      "category": "positive",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "relation_type": "FORMALIZES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y_{n+1} = y_n + hF(t_n,y_n)."
+        }
+      ],
+      "rationale": "The displayed update is the formal step performed by the forward Euler method."
+    },
+    {
+      "pair_id": "rel_dev_029",
+      "category": "positive",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "relation_type": "EXTENDS",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+        }
+      ],
+      "rationale": "Heun's method preserves the Euler predictor and enriches it with a correction."
+    },
+    {
+      "pair_id": "rel_dev_030",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "Heun's Update formalizes Heun's Method; the lecture does not directly assign it a Relation to Forward Euler Method as an endpoint pair."
+    },
+    {
+      "pair_id": "rel_dev_031",
+      "category": "positive",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "relation_type": "APPLIED_IN",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope."
+        }
+      ],
+      "rationale": "Forward Euler is explicitly presented as a numerical method applied to an initial value problem."
+    },
+    {
+      "pair_id": "rel_dev_032",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "Forward Euler is explicitly applied to an Initial Value Problem; a direct Relation to the generic Ordinary Differential Equation object is not separately stated."
+    },
+    {
+      "pair_id": "rel_dev_033",
+      "category": "positive",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Its update is"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y_{n+1} = y_n + hF(t_n,y_n)."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The step size \\(h\\) sets the spacing between consecutive numerical time points."
+        }
+      ],
+      "rationale": "The Forward Euler method's update requires h, which is defined as the step size."
+    },
+    {
+      "pair_id": "rel_dev_034",
+      "category": "positive",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "relation_type": "APPLIED_IN",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope."
+        }
+      ],
+      "rationale": "Forward Euler uses the current vector-field slope to construct each step."
+    },
+    {
+      "pair_id": "rel_dev_035",
+      "category": "positive",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "relation_type": "APPLIED_IN",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y_{n+1} = y_n + hF(t_n,y_n)."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "It first forms the Euler predictor"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "\\widetilde{y}_{n+1} = y_n + hF(t_n,y_n),"
+        }
+      ],
+      "rationale": "Heun's method reuses the Forward Euler update structure to form its predictor."
+    },
+    {
+      "pair_id": "rel_dev_036",
+      "category": "positive",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "relation_type": "EXTENDS",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Its update is"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y_{n+1} = y_n + hF(t_n,y_n)."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "\\widetilde{y}_{n+1} = y_n + hF(t_n,y_n),"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "then averages the slope at the current point with the slope at the predicted point."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The corrected update is"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right)."
+        }
+      ],
+      "rationale": "The corrected Heun update enriches the Forward Euler update with a predictor and an average of two slopes."
+    },
+    {
+      "pair_id": "rel_dev_037",
+      "category": "positive",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "relation_type": "APPLIED_IN",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Its update is"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y_{n+1} = y_n + hF(t_n,y_n)."
+        }
+      ],
+      "rationale": "The update is the computational rule of Forward Euler as it is applied to the Initial Value Problem."
+    },
+    {
+      "pair_id": "rel_dev_038",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The update is applied through the Initial Value Problem and is not directly typed against the generic Ordinary Differential Equation object."
+    },
+    {
+      "pair_id": "rel_dev_039",
+      "category": "positive",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y_{n+1} = y_n + hF(t_n,y_n)."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The step size \\(h\\) sets the spacing between consecutive numerical time points."
+        }
+      ],
+      "rationale": "The Forward Euler update explicitly contains h, which the lecture defines as step size."
+    },
+    {
+      "pair_id": "rel_dev_040",
+      "category": "positive",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The vector field \\(F\\) specifies the slope that the solution should follow at each state."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y_{n+1} = y_n + hF(t_n,y_n)."
+        }
+      ],
+      "rationale": "The update evaluates the vector field F at the current state."
+    },
+    {
+      "pair_id": "rel_dev_041",
+      "category": "positive",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "relation_type": "FORMALIZES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The corrected update is"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right)."
+        }
+      ],
+      "rationale": "The corrected formula gives the update rule for Heun's predictor-corrector method."
+    },
+    {
+      "pair_id": "rel_dev_042",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "Heun's method inherits the Initial Value Problem context through Forward Euler, but that pair is not directly stated in the lecture."
+    },
+    {
+      "pair_id": "rel_dev_043",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The lecture does not directly type Heun's Method against the generic Ordinary Differential Equation object."
+    },
+    {
+      "pair_id": "rel_dev_044",
+      "category": "positive",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The step size \\(h\\) sets the spacing between consecutive numerical time points."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "\\widetilde{y}_{n+1} = y_n + hF(t_n,y_n),"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right)."
+        }
+      ],
+      "rationale": "Both the predictor and corrected Heun step use h, the defined step size."
+    },
+    {
+      "pair_id": "rel_dev_045",
+      "category": "positive",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "relation_type": "APPLIED_IN",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The vector field \\(F\\) specifies the slope that the solution should follow at each state."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "then averages the slope at the current point with the slope at the predicted point."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right)."
+        }
+      ],
+      "rationale": "Heun's method evaluates and averages vector-field slopes at the current and predicted states."
+    },
+    {
+      "pair_id": "rel_dev_046",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The Heun update belongs to a method that extends Forward Euler, but its application to the Initial Value Problem is not directly stated for this pair."
+    },
+    {
+      "pair_id": "rel_dev_047",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The Heun update uses F, but the lecture does not directly type the formula against the generic Ordinary Differential Equation object."
+    },
+    {
+      "pair_id": "rel_dev_048",
+      "category": "positive",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The step size \\(h\\) sets the spacing between consecutive numerical time points."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The corrected update is"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right)."
+        }
+      ],
+      "rationale": "The corrected Heun update explicitly contains h, the step size."
+    },
+    {
+      "pair_id": "rel_dev_049",
+      "category": "positive",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The vector field \\(F\\) specifies the slope that the solution should follow at each state."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "then averages the slope at the current point with the slope at the predicted point."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The corrected update is"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right)."
+        }
+      ],
+      "rationale": "The corrected update explicitly evaluates the vector field at two states."
+    },
+    {
+      "pair_id": "rel_dev_050",
+      "category": "positive",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "An initial value problem combines an ordinary differential equation with an initial condition such as \\(y(t_0)=y_0\\)."
+        }
+      ],
+      "rationale": "An ordinary differential equation is one of the defining components of an initial value problem."
+    },
+    {
+      "pair_id": "rel_dev_051",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The step size controls a numerical discretization, but the lecture does not directly relate it to the mathematical definition of an initial value problem."
+    },
+    {
+      "pair_id": "rel_dev_052",
+      "category": "positive",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "relation_type": "APPLIED_IN",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "An initial value problem combines an ordinary differential equation with an initial condition such as \\(y(t_0)=y_0\\)."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The vector field \\(F\\) specifies the slope that the solution should follow at each state."
+        }
+      ],
+      "rationale": "The vector field supplies the slope followed by the solution in the stated Initial Value Problem context."
+    },
+    {
+      "pair_id": "rel_dev_053",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "Step size is a numerical-discretization choice and is not part of the Ordinary Differential Equation definition."
+    },
+    {
+      "pair_id": "rel_dev_054",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The vector field is tied specifically to the displayed first-order form; the lecture does not separately type it against the general Ordinary Differential Equation object."
+    },
+    {
+      "pair_id": "rel_dev_055",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "Step size and vector field both occur in numerical updates, but no direct Relation between the two objects is stated."
+    },
+    {
+      "pair_id": "rel_dev_056",
+      "category": "positive",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "relation_type": "EXTENDS",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A* search extends Dijkstra's algorithm by using a heuristic function \\(h(v)\\) to guide which vertex is explored next."
+        }
+      ],
+      "rationale": "A* retains Dijkstra's path-cost ordering as a base and enriches it with a heuristic."
+    },
+    {
+      "pair_id": "rel_dev_057",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "A* extends Dijkstra's algorithm, but the lecture does not directly state that A* itself applies edge relaxation."
+    },
+    {
+      "pair_id": "rel_dev_058",
+      "category": "positive",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "relation_type": "APPLIED_IN",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A* search extends Dijkstra's algorithm by using a heuristic function \\(h(v)\\) to guide which vertex is explored next."
+        }
+      ],
+      "rationale": "A* uses the heuristic function to guide its exploration order."
+    },
+    {
+      "pair_id": "rel_dev_059",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The lecture does not directly relate A* search to the Path object; their connection would be inferred through the shortest-path problem."
+    },
+    {
+      "pair_id": "rel_dev_060",
+      "category": "positive",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "relation_type": "APPLIED_IN",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A* search extends Dijkstra's algorithm by using a heuristic function \\(h(v)\\) to guide which vertex is explored next."
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Its queue priority combines the known path cost with the heuristic estimate, and setting \\(h(v)=0\\) recovers Dijkstra's ordering."
+        }
+      ],
+      "rationale": "A* explicitly uses the known path cost as one component of its queue priority."
+    },
+    {
+      "pair_id": "rel_dev_061",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "A* uses the path-cost concept, but the lecture does not state that the displayed path-cost formula itself is applied in A*."
+    },
+    {
+      "pair_id": "rel_dev_062",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The relaxation update is introduced for Dijkstra's edge relaxation; no direct Relation to A* is stated."
+    },
+    {
+      "pair_id": "rel_dev_063",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "A* extends Dijkstra, which is applied to the shortest-path problem, but the lecture does not directly type A* against that problem."
+    },
+    {
+      "pair_id": "rel_dev_064",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The lecture does not directly relate A* search to the Weighted Directed Graph object without passing through other objects."
+    },
+    {
+      "pair_id": "rel_dev_065",
+      "category": "positive",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "relation_type": "APPLIED_IN",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Dijkstra's algorithm stores tentative distance estimates in a priority queue."
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "After removing a vertex \\(u\\) with the smallest tentative distance, it applies edge relaxation to each outgoing edge."
+        }
+      ],
+      "rationale": "Dijkstra's algorithm repeatedly applies edge relaxation to update tentative distances."
+    },
+    {
+      "pair_id": "rel_dev_066",
+      "category": "positive",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "relation_type": "RELATED_TO",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A* search extends Dijkstra's algorithm by using a heuristic function \\(h(v)\\) to guide which vertex is explored next."
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Its queue priority combines the known path cost with the heuristic estimate, and setting \\(h(v)=0\\) recovers Dijkstra's ordering."
+        }
+      ],
+      "rationale": "The lecture connects the heuristic to Dijkstra by stating that a zero heuristic recovers Dijkstra's ordering, while no stronger frozen label fits this pair."
+    },
+    {
+      "pair_id": "rel_dev_067",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "Dijkstra is applied to a problem that asks for paths, but no direct frozen Relation between the method and the Path object is stated."
+    },
+    {
+      "pair_id": "rel_dev_068",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "Dijkstra is applied to the shortest-path problem, but the lecture does not directly state a Relation from the method to Path Cost itself."
+    },
+    {
+      "pair_id": "rel_dev_069",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The path-cost formula and Dijkstra's algorithm are connected only through other objects in the lecture, not by a direct supported Relation."
+    },
+    {
+      "pair_id": "rel_dev_070",
+      "category": "positive",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "relation_type": "APPLIED_IN",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Dijkstra's algorithm stores tentative distance estimates in a priority queue. After removing a vertex \\(u\\) with the smallest tentative distance, it applies edge relaxation to each outgoing edge."
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Relaxation is formalized by the update"
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "d(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}."
+        }
+      ],
+      "rationale": "The update formalizes the edge-relaxation operation that Dijkstra explicitly applies."
+    },
+    {
+      "pair_id": "rel_dev_071",
+      "category": "positive",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "relation_type": "APPLIED_IN",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex."
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Dijkstra's algorithm is applied to this problem when all edge weights are nonnegative."
+        }
+      ],
+      "rationale": "Dijkstra's algorithm is a method applied to the single-source shortest-path problem."
+    },
+    {
+      "pair_id": "rel_dev_072",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The weighted graph supplies the setting for the problem, but the text does not directly type a Relation between Dijkstra and the graph object."
+    },
+    {
+      "pair_id": "rel_dev_073",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "Edge relaxation is described for Dijkstra and the heuristic for A*; no direct Relation between the pair is supported."
+    },
+    {
+      "pair_id": "rel_dev_074",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The lecture does not directly relate Edge Relaxation to the Path object."
+    },
+    {
+      "pair_id": "rel_dev_075",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "Edge relaxation updates tentative distances, but the lecture does not explicitly identify those estimates with the Path Cost object."
+    },
+    {
+      "pair_id": "rel_dev_076",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The two objects are separate formulas in the lecture and no direct Relation between them is stated."
+    },
+    {
+      "pair_id": "rel_dev_077",
+      "category": "positive",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "relation_type": "FORMALIZES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Relaxation is formalized by the update"
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "d(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}."
+        }
+      ],
+      "rationale": "The minimum-distance assignment is the formal update performed by edge relaxation."
+    },
+    {
+      "pair_id": "rel_dev_078",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "Edge relaxation is applied within Dijkstra; its connection to the shortest-path problem is mediated by that method rather than directly stated."
+    },
+    {
+      "pair_id": "rel_dev_079",
+      "category": "positive",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\)."
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Dijkstra's algorithm stores tentative distance estimates in a priority queue. After removing a vertex \\(u\\) with the smallest tentative distance, it applies edge relaxation to each outgoing edge."
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "d(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}."
+        }
+      ],
+      "rationale": "Edge relaxation is stated on weighted outgoing edges and uses the graph's edge-weight function, making the weighted directed graph a definitional dependency in this lecture."
+    },
+    {
+      "pair_id": "rel_dev_080",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The heuristic guides A* exploration, but the lecture does not directly relate it to the Path object."
+    },
+    {
+      "pair_id": "rel_dev_081",
+      "category": "positive",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "relation_type": "RELATED_TO",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A* search extends Dijkstra's algorithm by using a heuristic function \\(h(v)\\) to guide which vertex is explored next."
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Its queue priority combines the known path cost with the heuristic estimate, and setting \\(h(v)=0\\) recovers Dijkstra's ordering."
+        }
+      ],
+      "rationale": "A* combines the heuristic estimate with known path cost in one priority, establishing a meaningful weak connection not covered by a stronger label."
+    },
+    {
+      "pair_id": "rel_dev_082",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "A* combines the heuristic with the path-cost concept, but it does not directly relate the heuristic to the displayed path-cost formula."
+    },
+    {
+      "pair_id": "rel_dev_083",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The heuristic and the relaxation update belong to different described parts of the algorithms, with no direct Relation stated."
+    },
+    {
+      "pair_id": "rel_dev_084",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The heuristic is introduced through A*, while the shortest-path problem is linked to Dijkstra; no direct pair Relation is stated."
+    },
+    {
+      "pair_id": "rel_dev_085",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The lecture does not directly relate the Heuristic Function to the Weighted Directed Graph object."
+    },
+    {
+      "pair_id": "rel_dev_086",
+      "category": "positive",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A path is a sequence of compatible directed edges."
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Its path cost is the sum of their edge weights:"
+        }
+      ],
+      "rationale": "Path cost is defined as a cost belonging to a path, so the Path object is required to define it."
+    },
+    {
+      "pair_id": "rel_dev_087",
+      "category": "positive",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A path is a sequence of compatible directed edges."
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Its path cost is the sum of their edge weights:"
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "C(v_0,\\ldots,v_k) = \\sum_{i=0}^{k-1} w(v_i,v_{i+1})."
+        }
+      ],
+      "rationale": "The formula sums weights along the directed-edge sequence that constitutes a path."
+    },
+    {
+      "pair_id": "rel_dev_088",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The relaxation update operates on tentative distances and an outgoing edge; no direct Relation to the Path object is stated."
+    },
+    {
+      "pair_id": "rel_dev_089",
+      "category": "positive",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex."
+        }
+      ],
+      "rationale": "The problem is stated by asking for a minimum-cost path, making Path necessary to define the problem."
+    },
+    {
+      "pair_id": "rel_dev_090",
+      "category": "positive",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\)."
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A path is a sequence of compatible directed edges."
+        }
+      ],
+      "rationale": "Within this lecture, a path is defined as a sequence of directed edges supplied by the graph."
+    },
+    {
+      "pair_id": "rel_dev_091",
+      "category": "positive",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "relation_type": "FORMALIZES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Its path cost is the sum of their edge weights:"
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "C(v_0,\\ldots,v_k) = \\sum_{i=0}^{k-1} w(v_i,v_{i+1})."
+        }
+      ],
+      "rationale": "The displayed sum is the symbolic expression for path cost."
+    },
+    {
+      "pair_id": "rel_dev_092",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The relaxation update uses tentative distances, but the lecture does not directly equate or type them as the Path Cost object."
+    },
+    {
+      "pair_id": "rel_dev_093",
+      "category": "positive",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Its path cost is the sum of their edge weights:"
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex."
+        }
+      ],
+      "rationale": "Understanding the shortest-path objective requires the definition of path cost."
+    },
+    {
+      "pair_id": "rel_dev_094",
+      "category": "positive",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\)."
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A path is a sequence of compatible directed edges."
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Its path cost is the sum of their edge weights:"
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "C(v_0,\\ldots,v_k) = \\sum_{i=0}^{k-1} w(v_i,v_{i+1})."
+        }
+      ],
+      "rationale": "Path cost is defined by summing the edge weights assigned by the weighted directed graph."
+    },
+    {
+      "pair_id": "rel_dev_095",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "Both formulas use edge weights, but the lecture does not state a direct Relation between the path-cost and relaxation updates."
+    },
+    {
+      "pair_id": "rel_dev_096",
+      "category": "positive",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "relation_type": "APPLIED_IN",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Its path cost is the sum of their edge weights:"
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "C(v_0,\\ldots,v_k) = \\sum_{i=0}^{k-1} w(v_i,v_{i+1})."
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex."
+        }
+      ],
+      "rationale": "The formula supplies the cost evaluated when the problem asks for a minimum-cost path."
+    },
+    {
+      "pair_id": "rel_dev_097",
+      "category": "positive",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\)."
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Its path cost is the sum of their edge weights:"
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "C(v_0,\\ldots,v_k) = \\sum_{i=0}^{k-1} w(v_i,v_{i+1})."
+        }
+      ],
+      "rationale": "The formula depends on the directed-edge weights defined by the weighted graph."
+    },
+    {
+      "pair_id": "rel_dev_098",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The relaxation update is applied through Dijkstra, so its connection to the shortest-path problem is not directly typed in the lecture."
+    },
+    {
+      "pair_id": "rel_dev_099",
+      "category": "positive",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\)."
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Dijkstra's algorithm stores tentative distance estimates in a priority queue. After removing a vertex \\(u\\) with the smallest tentative distance, it applies edge relaxation to each outgoing edge."
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Relaxation is formalized by the update"
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "d(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}."
+        }
+      ],
+      "rationale": "The relaxation update requires the graph's directed edges and weight function appearing in the formula."
+    },
+    {
+      "pair_id": "rel_dev_100",
+      "category": "positive",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\)."
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A path is a sequence of compatible directed edges."
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex."
+        }
+      ],
+      "rationale": "The shortest-path problem is stated over paths formed from the weighted directed graph's edges."
+    },
+    {
+      "pair_id": "rel_dev_101",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The lecture contrasts ordinary Newton's method with bisection but does not directly compare or type a Relation between damped Newton and bisection."
+    },
+    {
+      "pair_id": "rel_dev_102",
+      "category": "positive",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "midpoint_formula"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "relation_type": "FORMALIZES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "The bisection method begins with a sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\)."
+        },
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "It evaluates the midpoint"
+        },
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "m = \\frac{a+b}{2}"
+        }
+      ],
+      "rationale": "The midpoint equation formalizes the point evaluated at each bisection step."
+    },
+    {
+      "pair_id": "rel_dev_103",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newton_update_formula"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The Newton update belongs to Newton's method, while bisection is described with bracket refinement and a midpoint; no direct Relation between this pair is supported."
+    },
+    {
+      "pair_id": "rel_dev_104",
+      "category": "positive",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newtons_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "relation_type": "CONTRASTS_WITH",
+      "symmetric": true,
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "Newton's method and the bisection method contrast in the information they use: Newton's method requires derivative values and can converge rapidly near a root, whereas bisection uses only function signs and preserves a bracket at every iteration."
+        }
+      ],
+      "rationale": "The lecture explicitly contrasts the information and convergence behavior of the two methods."
+    },
+    {
+      "pair_id": "rel_dev_105",
+      "category": "positive",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "root_finding_problem"
+      },
+      "relation_type": "APPLIED_IN",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "A root-finding problem asks for a value \\(x^*\\) at which a scalar function is zero:"
+        },
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "The bisection method begins with a sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\). It evaluates the midpoint"
+        },
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "and retains the half-interval whose endpoints still have opposite signs."
+        }
+      ],
+      "rationale": "The bisection procedure uses a sign-changing interval and repeated refinement in the root-finding problem context."
+    },
+    {
+      "pair_id": "rel_dev_106",
+      "category": "positive",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "sign_changing_bracket"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "The bisection method begins with a sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\)."
+        }
+      ],
+      "rationale": "The sign-changing bracket is the required starting condition for bisection in the lecture."
+    },
+    {
+      "pair_id": "rel_dev_107",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "midpoint_formula"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The midpoint formula is presented as part of bisection, while damped Newton scales the Newton correction; the lecture does not directly relate the pair."
+    },
+    {
+      "pair_id": "rel_dev_108",
+      "category": "positive",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newton_update_formula"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "Newton's method uses the derivative to replace the function locally by its tangent line."
+        },
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "x_{k+1} = x_k - \\frac{f(x_k)}{f'(x_k)}."
+        },
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "The damped Newton method extends Newton's method by scaling the Newton correction with a factor between zero and one."
+        }
+      ],
+      "rationale": "Damped Newton is defined by scaling the Newton correction supplied by the base Newton update, so that update is a definitional dependency."
+    },
+    {
+      "pair_id": "rel_dev_109",
+      "category": "positive",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newtons_method"
+      },
+      "relation_type": "EXTENDS",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "The damped Newton method extends Newton's method by scaling the Newton correction with a factor between zero and one."
+        }
+      ],
+      "rationale": "Damped Newton retains the Newton correction and adds a scaling control."
+    },
+    {
+      "pair_id": "rel_dev_110",
+      "category": "positive",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "root_finding_problem"
+      },
+      "relation_type": "APPLIED_IN",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "A root-finding problem asks for a value \\(x^*\\) at which a scalar function is zero:"
+        },
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "The damped Newton method extends Newton's method by scaling the Newton correction with a factor between zero and one. This extra control can prevent a full Newton step from moving too far when the current iterate is not yet near a root."
+        }
+      ],
+      "rationale": "The damped Newton procedure controls Newton iterates while seeking a root, placing it in the stated root-finding problem context."
+    },
+    {
+      "pair_id": "rel_dev_111",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "sign_changing_bracket"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The sign-changing bracket is introduced for bisection, while damped Newton is described through a scaled Newton correction; no direct Relation is stated."
+    },
+    {
+      "pair_id": "rel_dev_112",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "midpoint_formula"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newton_update_formula"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The two formulas belong to separate numerical methods and the lecture supplies no direct Relation between them."
+    },
+    {
+      "pair_id": "rel_dev_113",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "midpoint_formula"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newtons_method"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The midpoint formula is presented within bisection, not Newton's method, and no direct Relation between the pair is supported."
+    },
+    {
+      "pair_id": "rel_dev_114",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "midpoint_formula"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "root_finding_problem"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The midpoint formula participates in bisection, but the lecture does not directly relate that formula itself to the root-finding problem without passing through the method."
+    },
+    {
+      "pair_id": "rel_dev_115",
+      "category": "schema_gap",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "midpoint_formula"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "sign_changing_bracket"
+      },
+      "relation_type": "RELATED_TO",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "The bisection method begins with a sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\). It evaluates the midpoint"
+        },
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "m = \\frac{a+b}{2}"
+        }
+      ],
+      "rationale": "Diagnostic placeholder only: The frozen schema has no relation for a formula computing a derived point from an interval; FORMALIZES and APPLIED_IN would misstate the bracket as a method or definition target."
+    },
+    {
+      "pair_id": "rel_dev_116",
+      "category": "positive",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newton_update_formula"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newtons_method"
+      },
+      "relation_type": "FORMALIZES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "Newton's method uses the derivative to replace the function locally by its tangent line."
+        },
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "x_{k+1} = x_k - \\frac{f(x_k)}{f'(x_k)}."
+        }
+      ],
+      "rationale": "The displayed iteration is the update rule defining Newton's method."
+    },
+    {
+      "pair_id": "rel_dev_117",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newton_update_formula"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "root_finding_problem"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The update formula directly formalizes Newton's method; the lecture does not independently type a Relation from the formula to the broader root-finding problem."
+    },
+    {
+      "pair_id": "rel_dev_118",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newton_update_formula"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "sign_changing_bracket"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The bracket belongs to bisection, while the Newton update is presented separately; the lecture establishes no direct v0.1 Relation between them."
+    },
+    {
+      "pair_id": "rel_dev_119",
+      "category": "positive",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newtons_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "root_finding_problem"
+      },
+      "relation_type": "APPLIED_IN",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "A root-finding problem asks for a value \\(x^*\\) at which a scalar function is zero:"
+        },
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "Newton's method and the bisection method contrast in the information they use: Newton's method requires derivative values and can converge rapidly near a root, whereas bisection uses only function signs and preserves a bracket at every iteration."
+        }
+      ],
+      "rationale": "The lecture presents Newton's method as an iterative method that converges near a root in the stated root-finding problem context."
+    },
+    {
+      "pair_id": "rel_dev_120",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newtons_method"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "sign_changing_bracket"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The sign-changing bracket is tied to bisection. The comparison with Newton's method does not establish a direct graph Relation between Newton's method and the bracket itself."
+    },
+    {
+      "pair_id": "rel_dev_121",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "root_finding_problem"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "sign_changing_bracket"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "A sign-changing bracket is the starting condition for bisection, not for every root-finding problem, and the lecture does not directly assign it a Relation to the general problem concept."
+    },
+    {
+      "pair_id": "rel_dev_122",
+      "category": "positive",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "relation_type": "FORMALIZES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "L(\\theta; x_{1:n}) = \\prod_{i=1}^{n} p(x_i \\mid \\theta)."
+        }
+      ],
+      "rationale": "The product formula explicitly expresses the likelihood for independent observations."
+    },
+    {
+      "pair_id": "rel_dev_123",
+      "category": "positive",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The log-likelihood is obtained by taking the logarithm of the likelihood."
+        }
+      ],
+      "rationale": "The log-likelihood is defined by transforming the likelihood."
+    },
+    {
+      "pair_id": "rel_dev_124",
+      "category": "positive",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The log-likelihood is obtained by taking the logarithm of the likelihood."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta)."
+        }
+      ],
+      "rationale": "The log-likelihood formula explicitly contains the logarithm of the likelihood L, making Likelihood a definitional dependency."
+    },
+    {
+      "pair_id": "rel_dev_125",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "Maximum Likelihood Estimation is stated to use Log-Likelihood; a Relation to Likelihood itself would be inferred transitively through that third object."
+    },
+    {
+      "pair_id": "rel_dev_126",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The estimator formula uses the log-likelihood symbol, not the Likelihood object directly."
+    },
+    {
+      "pair_id": "rel_dev_127",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "Newton's method is applied to the score equation within MLE, and no direct Relation to Likelihood is stated."
+    },
+    {
+      "pair_id": "rel_dev_128",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The Score Equation is derived downstream through log-likelihood and the score function; no direct Relation to Likelihood is stated."
+    },
+    {
+      "pair_id": "rel_dev_129",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The Score Function is the derivative of Log-Likelihood, so its connection to Likelihood is mediated by that separate object."
+    },
+    {
+      "pair_id": "rel_dev_130",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The score formula differentiates log-likelihood and does not directly relate to the Likelihood concept."
+    },
+    {
+      "pair_id": "rel_dev_131",
+      "category": "positive",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values."
+        }
+      ],
+      "rationale": "Likelihood is defined relative to the probability distributions supplied by a statistical model."
+    },
+    {
+      "pair_id": "rel_dev_132",
+      "category": "positive",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "relation_type": "APPLIED_IN",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "For independent observations \\(x_1,\\ldots,x_n\\), it is"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "L(\\theta; x_{1:n}) = \\prod_{i=1}^{n} p(x_i \\mid \\theta)."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The log-likelihood is obtained by taking the logarithm of the likelihood."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta)."
+        }
+      ],
+      "rationale": "The likelihood function L is explicitly placed inside the logarithm that defines Log-Likelihood."
+    },
+    {
+      "pair_id": "rel_dev_133",
+      "category": "positive",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "L(\\theta; x_{1:n}) = \\prod_{i=1}^{n} p(x_i \\mid \\theta)."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The log-likelihood is obtained by taking the logarithm of the likelihood."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Independence turns the product into a sum:"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta)."
+        }
+      ],
+      "rationale": "The log-likelihood formula is constructed from the likelihood function and explicitly contains log L."
+    },
+    {
+      "pair_id": "rel_dev_134",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "MLE uses Log-Likelihood as its objective; the Likelihood Function is connected only through that transformed object."
+    },
+    {
+      "pair_id": "rel_dev_135",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The formulas occur in the same estimation pipeline, but neither formula directly formalizes, requires, or is applied in the other formula under v0.1."
+    },
+    {
+      "pair_id": "rel_dev_136",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "Newton's method is introduced for solving the score equation, not for operating directly on the Likelihood Function."
+    },
+    {
+      "pair_id": "rel_dev_137",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The Score Equation is stated in terms of s(theta), and its connection to the Likelihood Function passes through log-likelihood and the score function."
+    },
+    {
+      "pair_id": "rel_dev_138",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The Score Function differentiates Log-Likelihood, not the Likelihood Function directly."
+    },
+    {
+      "pair_id": "rel_dev_139",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The score formula uses log-likelihood and does not directly use the displayed Likelihood Function formula."
+    },
+    {
+      "pair_id": "rel_dev_140",
+      "category": "positive",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "A statistical model is a family of probability distributions indexed by an unknown parameter \\(\\theta\\)."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "For independent observations \\(x_1,\\ldots,x_n\\), it is"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "L(\\theta; x_{1:n}) = \\prod_{i=1}^{n} p(x_i \\mid \\theta)."
+        }
+      ],
+      "rationale": "The likelihood function is defined from the probability distributions supplied by the Statistical Model."
+    },
+    {
+      "pair_id": "rel_dev_141",
+      "category": "positive",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "relation_type": "FORMALIZES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The log-likelihood is obtained by taking the logarithm of the likelihood."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta)."
+        }
+      ],
+      "rationale": "The displayed equation explicitly expresses the log-likelihood."
+    },
+    {
+      "pair_id": "rel_dev_142",
+      "category": "positive",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "relation_type": "APPLIED_IN",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:"
+        }
+      ],
+      "rationale": "The log-likelihood is used as the objective in maximum likelihood estimation."
+    },
+    {
+      "pair_id": "rel_dev_143",
+      "category": "positive",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta)."
+        }
+      ],
+      "rationale": "The MLE estimator formula maximizes ell(theta), the Log-Likelihood objective."
+    },
+    {
+      "pair_id": "rel_dev_144",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "Newton's method is applied to the Score Equation; its connection to Log-Likelihood is mediated by the score function."
+    },
+    {
+      "pair_id": "rel_dev_145",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The Score Equation uses the score function, which is derived from Log-Likelihood; the pair is not directly typed without that intermediate object."
+    },
+    {
+      "pair_id": "rel_dev_146",
+      "category": "positive",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The score function is the derivative of the log-likelihood with respect to the parameter,"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "s(\\theta) = \\nabla_{\\theta}\\ell(\\theta)."
+        }
+      ],
+      "rationale": "The Score Function is defined as the derivative of Log-Likelihood."
+    },
+    {
+      "pair_id": "rel_dev_147",
+      "category": "positive",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The score function is the derivative of the log-likelihood with respect to the parameter,"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "s(\\theta) = \\nabla_{\\theta}\\ell(\\theta)."
+        }
+      ],
+      "rationale": "The score formula explicitly differentiates ell(theta), the Log-Likelihood."
+    },
+    {
+      "pair_id": "rel_dev_148",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "Log-Likelihood reaches the Statistical Model through Likelihood; no direct pair Relation is stated."
+    },
+    {
+      "pair_id": "rel_dev_149",
+      "category": "positive",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "relation_type": "APPLIED_IN",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta)."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta)."
+        }
+      ],
+      "rationale": "The displayed log-likelihood function supplies the objective maximized by Maximum Likelihood Estimation."
+    },
+    {
+      "pair_id": "rel_dev_150",
+      "category": "positive",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta)."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta)."
+        }
+      ],
+      "rationale": "The estimator is stated as an argmax of the displayed log-likelihood function."
+    },
+    {
+      "pair_id": "rel_dev_151",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "Newton's method is applied to the score equation, not directly to the Log-Likelihood Function in the lecture."
+    },
+    {
+      "pair_id": "rel_dev_152",
+      "category": "positive",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta)."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The score function is the derivative of the log-likelihood with respect to the parameter,"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "s(\\theta) = \\nabla_{\\theta}\\ell(\\theta)."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\)."
+        }
+      ],
+      "rationale": "The Score Equation sets to zero the score obtained by differentiating the Log-Likelihood Function."
+    },
+    {
+      "pair_id": "rel_dev_153",
+      "category": "positive",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta)."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The score function is the derivative of the log-likelihood with respect to the parameter,"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "s(\\theta) = \\nabla_{\\theta}\\ell(\\theta)."
+        }
+      ],
+      "rationale": "The Score Function is defined by differentiating the Log-Likelihood Function."
+    },
+    {
+      "pair_id": "rel_dev_154",
+      "category": "positive",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta)."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The score function is the derivative of the log-likelihood with respect to the parameter,"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "s(\\theta) = \\nabla_{\\theta}\\ell(\\theta)."
+        }
+      ],
+      "rationale": "The score formula explicitly applies the parameter gradient to the Log-Likelihood Function."
+    },
+    {
+      "pair_id": "rel_dev_155",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The Log-Likelihood Function depends on Likelihood, which is defined from the model; the direct pair Relation is not stated without that intermediate object."
+    },
+    {
+      "pair_id": "rel_dev_156",
+      "category": "positive",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "relation_type": "FORMALIZES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta)."
+        }
+      ],
+      "rationale": "The argmax formula is the formal optimization statement of maximum likelihood estimation."
+    },
+    {
+      "pair_id": "rel_dev_157",
+      "category": "positive",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "relation_type": "APPLIED_IN",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\)."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "When this equation has no closed-form solution, Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically."
+        }
+      ],
+      "rationale": "The lecture explicitly applies Newton's Method within Maximum Likelihood Estimation when the score equation lacks a closed form."
+    },
+    {
+      "pair_id": "rel_dev_158",
+      "category": "positive",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "relation_type": "APPLIED_IN",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta)."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\)."
+        }
+      ],
+      "rationale": "An interior MLE candidate is explicitly required to satisfy the Score Equation, so the condition is applied in the estimation method."
+    },
+    {
+      "pair_id": "rel_dev_159",
+      "category": "positive",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "relation_type": "APPLIED_IN",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The score function is the derivative of the log-likelihood with respect to the parameter,"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "s(\\theta) = \\nabla_{\\theta}\\ell(\\theta)."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\)."
+        }
+      ],
+      "rationale": "The score function supplies the zero condition used to identify an interior MLE candidate."
+    },
+    {
+      "pair_id": "rel_dev_160",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The Score Function Formula reaches MLE through the separately named Score Equation, so no direct pair Relation is annotated."
+    },
+    {
+      "pair_id": "rel_dev_161",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "MLE depends on Log-Likelihood, which depends on Likelihood and the Statistical Model; the lecture does not directly type the outer pair."
+    },
+    {
+      "pair_id": "rel_dev_162",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "Newton's method computes an MLE candidate through the Score Equation; it is not directly related to the MLE Estimator formula as an endpoint pair."
+    },
+    {
+      "pair_id": "rel_dev_163",
+      "category": "schema_gap",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "relation_type": "RELATED_TO",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta)."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\)."
+        }
+      ],
+      "rationale": "Diagnostic placeholder only: The frozen schema has no CHARACTERIZES or FIRST_ORDER_CONDITION_FOR Relation; FORMALIZES is unavailable because the predicted Score Equation object is typed as Concept rather than Formula."
+    },
+    {
+      "pair_id": "rel_dev_164",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The Score Function contributes through the Score Equation, but no direct Relation to the MLE Estimator formula is stated."
+    },
+    {
+      "pair_id": "rel_dev_165",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The Score Function Formula contributes through the Score Equation, not by a direct Relation to the MLE Estimator formula."
+    },
+    {
+      "pair_id": "rel_dev_166",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The MLE Estimator reaches the Statistical Model through several intervening objects, and no direct Relation is stated."
+    },
+    {
+      "pair_id": "rel_dev_167",
+      "category": "positive",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "relation_type": "APPLIED_IN",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\)."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "When this equation has no closed-form solution, Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically."
+        }
+      ],
+      "rationale": "Newton's Method is explicitly applied when the Score Equation has no closed-form solution."
+    },
+    {
+      "pair_id": "rel_dev_168",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "Newton's Method is applied to the Score Equation; a separate direct Relation to the Score Function is not stated."
+    },
+    {
+      "pair_id": "rel_dev_169",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "Newton's Method is applied to the Score Equation, not directly to the Score Function Formula."
+    },
+    {
+      "pair_id": "rel_dev_170",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The lecture supplies no direct Relation between Newton's Method and the Statistical Model."
+    },
+    {
+      "pair_id": "rel_dev_171",
+      "category": "positive",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The score function is the derivative of the log-likelihood with respect to the parameter,"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "s(\\theta) = \\nabla_{\\theta}\\ell(\\theta)."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\)."
+        }
+      ],
+      "rationale": "The Score Equation is the zero condition imposed on the Score Function."
+    },
+    {
+      "pair_id": "rel_dev_172",
+      "category": "positive",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "s(\\theta) = \\nabla_{\\theta}\\ell(\\theta)."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\)."
+        }
+      ],
+      "rationale": "The Score Equation uses s(theta), whose displayed formula defines the quantity being set to zero."
+    },
+    {
+      "pair_id": "rel_dev_173",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The Score Equation reaches the Statistical Model through log-likelihood and likelihood, so no direct pair Relation is stated."
+    },
+    {
+      "pair_id": "rel_dev_174",
+      "category": "positive",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "relation_type": "FORMALIZES",
+      "symmetric": false,
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The score function is the derivative of the log-likelihood with respect to the parameter,"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "s(\\theta) = \\nabla_{\\theta}\\ell(\\theta)."
+        }
+      ],
+      "rationale": "The displayed gradient formula explicitly defines the Score Function."
+    },
+    {
+      "pair_id": "rel_dev_175",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The Score Function is derived from Log-Likelihood; its connection to the Statistical Model is mediated by likelihood objects."
+    },
+    {
+      "pair_id": "rel_dev_176",
+      "category": "hard_negative",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "relation_type": "NO_RELATION",
+      "symmetric": false,
+      "evidence_spans": [],
+      "rationale": "The Score Function Formula depends on log-likelihood and likelihood before reaching the Statistical Model, so no direct Relation is stated."
+    }
+  ]
+}
