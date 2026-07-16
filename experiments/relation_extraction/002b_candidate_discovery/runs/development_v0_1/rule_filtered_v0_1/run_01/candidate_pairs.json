@@ -1,0 +1,2055 @@
+{
+  "artifact_type": "candidate_pair_selection",
+  "version": "v0.1",
+  "benchmark_split": "development",
+  "scope": "lecture_local_unordered_nonself",
+  "selection_order": "pair_universe_order",
+  "generator": {
+    "id": "rule_filtered_v0_1",
+    "name": "rule_filtered",
+    "version": "v0.1",
+    "implementation": {
+      "path": "scripts/generate_rule_filtered_candidate_pairs.py",
+      "sha256": "6d4f0e52a1c76b603482b919dcaf9eee6156b41f8f95605d9750b51a9fbf1075"
+    },
+    "config": {
+      "strategy": "rule_filtered",
+      "selection_policy": "select_if_any_enabled_rule_matches",
+      "rules_artifact": {
+        "path": "benchmark/candidate_pair_generation_rules_v0_1.json",
+        "sha256": "9c6fcbcd9f46070abd9ba409e7669c068fec5cc715b7a17cc7b52a4d282493b6"
+      },
+      "rules_schema": {
+        "path": "benchmark/schema/candidate_pair_generation_rules.schema.json",
+        "sha256": "f8ad6903fdae70fd8e1926552ebefdcd37b383c003d469b75bcb5a26e72bc748"
+      },
+      "decision_audit": {
+        "path": "experiments/relation_extraction/002b_candidate_discovery/runs/development_v0_1/rule_filtered_v0_1/run_01/selection_decisions.json",
+        "sha256": "b268129111f153627948bf43ab08529ef1d026bd246626292cf37eebe89f8d94"
+      },
+      "decision_schema": {
+        "path": "benchmark/schema/candidate_pair_selection_decisions.schema.json",
+        "sha256": "c43355eda186852fe915b588218c19c57866e0c01786ec1f501eb3f17796062f"
+      },
+      "implementation_dependencies": [
+        {
+          "path": "scripts/generate_candidate_pairs.py",
+          "sha256": "8dc848762f153b0a5e72be3da7cee12434ee6bbf105d2246478752d2454dfe33"
+        },
+        {
+          "path": "scripts/knowledge_object_matching.py",
+          "sha256": "a5d1083d4e3f7447012eb8019bcabb0f33fd46f70950696cc46e5b9865b9e705"
+        }
+      ]
+    },
+    "config_sha256": "4fb116fbdb69ebcd8e5987a5274344549897d515d5f82e8b3c52a7a1fbfe2274"
+  },
+  "pair_universe": {
+    "path": "benchmark/candidate_pairs/development_v0_1/pair_universe.json",
+    "sha256": "d0c756b3e5533fac1e02c0aa5c1446cb78d206f21232e020ab0b5cb23b2bad84"
+  },
+  "source_inventory": {
+    "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/normalization/normalized_predicted_kos.json",
+    "sha256": "fe37cf7d77dd7304a090b21b206b6dd61621cdfedf75507f45edd09a2d8feda3",
+    "normalized_content_sha256": "a4429ce68193033ba78dbd46015ed02918e01b611c8d83d65e9afbc3dede3d5b"
+  },
+  "selected_pair_count": 127,
+  "selected_pairs": [
+    {
+      "pair_id": "cand_dev_001",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "candidate_reasons": [
+        "source_proximity"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_003",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "candidate_reasons": [
+        "source_proximity"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_004",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "candidate_reasons": [
+        "source_proximity"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_005",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "candidate_reasons": [
+        "source_proximity"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_007",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "candidate_reasons": [
+        "source_proximity"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_009",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "candidate_reasons": [
+        "source_proximity"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_012",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "candidate_reasons": [
+        "lexical_overlap",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_013",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "candidate_reasons": [
+        "lexical_overlap",
+        "symbol_overlap",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_014",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_015",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_018",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "candidate_reasons": [
+        "source_proximity"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_024",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "candidate_reasons": [
+        "source_proximity"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_025",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "candidate_reasons": [
+        "source_proximity"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_027",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "candidate_reasons": [
+        "source_proximity"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_028",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "lexical_overlap",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_029",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "candidate_reasons": [
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_030",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "candidate_reasons": [
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_031",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_033",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "candidate_reasons": [
+        "source_proximity"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_034",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_035",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "candidate_reasons": [
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_036",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "candidate_reasons": [
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_037",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_039",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "candidate_reasons": [
+        "source_proximity"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_040",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_041",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "lexical_overlap",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_044",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "candidate_reasons": [
+        "source_proximity"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_050",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_051",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "candidate_reasons": [
+        "source_proximity"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_052",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_054",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_056",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "candidate_reasons": [
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_057",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "candidate_reasons": [
+        "source_proximity"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_058",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_059",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "candidate_reasons": [
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_060",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "candidate_reasons": [
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_061",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "candidate_reasons": [
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_062",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "candidate_reasons": [
+        "source_proximity"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_065",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_066",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "candidate_reasons": [
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_067",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_068",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_069",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_070",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_071",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_072",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "candidate_reasons": [
+        "source_proximity"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_073",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "candidate_reasons": [
+        "source_proximity"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_077",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "lexical_overlap",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_078",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "candidate_reasons": [
+        "source_proximity"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_080",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "candidate_reasons": [
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_081",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "candidate_reasons": [
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_082",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "candidate_reasons": [
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_083",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "candidate_reasons": [
+        "source_proximity"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_086",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "lexical_overlap",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_087",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "lexical_overlap",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_089",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "lexical_overlap",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_090",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "candidate_reasons": [
+        "source_proximity"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_091",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "lexical_overlap",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_093",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "lexical_overlap",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_094",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "candidate_reasons": [
+        "source_proximity"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_096",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "lexical_overlap",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_097",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "candidate_reasons": [
+        "source_proximity"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_098",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "candidate_reasons": [
+        "source_proximity"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_100",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "candidate_reasons": [
+        "source_proximity"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_101",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "candidate_reasons": [
+        "source_proximity"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_102",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "midpoint_formula"
+      },
+      "candidate_reasons": [
+        "source_proximity"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_103",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newton_update_formula"
+      },
+      "candidate_reasons": [
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_104",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newtons_method"
+      },
+      "candidate_reasons": [
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_106",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "sign_changing_bracket"
+      },
+      "candidate_reasons": [
+        "source_proximity"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_107",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "midpoint_formula"
+      },
+      "candidate_reasons": [
+        "source_proximity"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_108",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newton_update_formula"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "lexical_overlap",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_109",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newtons_method"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "lexical_overlap",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_111",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "sign_changing_bracket"
+      },
+      "candidate_reasons": [
+        "source_proximity"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_115",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "midpoint_formula"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "sign_changing_bracket"
+      },
+      "candidate_reasons": [
+        "source_proximity"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_116",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newton_update_formula"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newtons_method"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "lexical_overlap",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_117",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newton_update_formula"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "root_finding_problem"
+      },
+      "candidate_reasons": [
+        "source_proximity"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_119",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newtons_method"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "root_finding_problem"
+      },
+      "candidate_reasons": [
+        "source_proximity"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_122",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "lexical_overlap",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_123",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "lexical_overlap",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_124",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "lexical_overlap",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_125",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "candidate_reasons": [
+        "lexical_overlap",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_126",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "candidate_reasons": [
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_127",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "candidate_reasons": [
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_128",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "candidate_reasons": [
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_129",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "candidate_reasons": [
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_130",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "candidate_reasons": [
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_131",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_132",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "lexical_overlap",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_133",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "lexical_overlap",
+        "symbol_overlap",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_134",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "candidate_reasons": [
+        "lexical_overlap",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_135",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "candidate_reasons": [
+        "symbol_overlap",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_136",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "candidate_reasons": [
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_137",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "candidate_reasons": [
+        "symbol_overlap",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_138",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "candidate_reasons": [
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_139",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "candidate_reasons": [
+        "symbol_overlap",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_140",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "symbol_overlap",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_141",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "lexical_overlap",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_142",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "lexical_overlap",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_143",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_145",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "candidate_reasons": [
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_146",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "candidate_reasons": [
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_147",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "candidate_reasons": [
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_148",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "candidate_reasons": [
+        "source_proximity"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_149",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "lexical_overlap",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_150",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "symbol_overlap",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_152",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "candidate_reasons": [
+        "symbol_overlap",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_153",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "candidate_reasons": [
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_154",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "candidate_reasons": [
+        "symbol_overlap",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_155",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "symbol_overlap"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_156",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_157",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "candidate_reasons": [
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_158",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "candidate_reasons": [
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_159",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_160",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_162",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "candidate_reasons": [
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_163",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "candidate_reasons": [
+        "symbol_overlap",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_164",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_165",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "symbol_overlap",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_166",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "candidate_reasons": [
+        "symbol_overlap"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_167",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_168",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_169",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_171",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "lexical_overlap",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_172",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "lexical_overlap",
+        "symbol_overlap",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_173",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "candidate_reasons": [
+        "symbol_overlap"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_174",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "candidate_reasons": [
+        "source_proximity",
+        "lexical_overlap",
+        "explicit_reference"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_176",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "candidate_reasons": [
+        "symbol_overlap"
+      ]
+    }
+  ]
+}

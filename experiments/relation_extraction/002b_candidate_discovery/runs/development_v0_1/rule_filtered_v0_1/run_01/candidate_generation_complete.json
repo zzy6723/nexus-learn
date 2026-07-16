@@ -1,0 +1,44 @@
+{
+  "artifact_type": "candidate_pair_generation_complete",
+  "version": "v0.1",
+  "status": "final",
+  "artifacts": {
+    "candidate_selection": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/development_v0_1/rule_filtered_v0_1/run_01/candidate_pairs.json",
+      "sha256": "cf1982e5f8456de8e4d4ce4885da7f45a7adf15b024139291c3489767f617e21"
+    },
+    "metadata": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/development_v0_1/rule_filtered_v0_1/run_01/metadata.json",
+      "sha256": "f30f786ff527bc44f93ec0709b3c6ab83d8e386f59074fa2e2a05c9a0607dc38"
+    },
+    "pair_universe": {
+      "path": "benchmark/candidate_pairs/development_v0_1/pair_universe.json",
+      "sha256": "d0c756b3e5533fac1e02c0aa5c1446cb78d206f21232e020ab0b5cb23b2bad84"
+    },
+    "pair_universe_completion_marker": {
+      "path": "benchmark/candidate_pairs/development_v0_1/pair_universe_complete.json",
+      "sha256": "bc655e71b03dd3beb50f5efc38464bb4ba5c7a5a1790d9d6dd206ad2465fa565"
+    },
+    "output_schema": {
+      "path": "benchmark/schema/candidate_pair_generation_output.schema.json",
+      "sha256": "3927402e2907fa994930b8d9a6b8cd79735932005f5179dc2e20133959926ac6"
+    }
+  },
+  "generator": {
+    "id": "rule_filtered_v0_1",
+    "version": "v0.1",
+    "implementation": {
+      "path": "scripts/generate_rule_filtered_candidate_pairs.py",
+      "sha256": "6d4f0e52a1c76b603482b919dcaf9eee6156b41f8f95605d9750b51a9fbf1075"
+    },
+    "config_sha256": "4fb116fbdb69ebcd8e5987a5274344549897d515d5f82e8b3c52a7a1fbfe2274"
+  },
+  "counts": {
+    "universe_pairs": 176,
+    "selected_pairs": 127,
+    "missing_universe_pairs": 49,
+    "extra_pairs": 0,
+    "duplicate_pairs": 0,
+    "endpoint_mismatches": 0
+  }
+}

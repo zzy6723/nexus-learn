@@ -1,0 +1,102 @@
+{
+  "artifact_type": "candidate_pair_generation_metadata",
+  "version": "v0.1",
+  "status": "final",
+  "generator": {
+    "id": "rule_filtered_v0_1",
+    "name": "rule_filtered",
+    "version": "v0.1",
+    "implementation": {
+      "path": "scripts/generate_rule_filtered_candidate_pairs.py",
+      "sha256": "6d4f0e52a1c76b603482b919dcaf9eee6156b41f8f95605d9750b51a9fbf1075"
+    },
+    "config": {
+      "strategy": "rule_filtered",
+      "selection_policy": "select_if_any_enabled_rule_matches",
+      "rules_artifact": {
+        "path": "benchmark/candidate_pair_generation_rules_v0_1.json",
+        "sha256": "9c6fcbcd9f46070abd9ba409e7669c068fec5cc715b7a17cc7b52a4d282493b6"
+      },
+      "rules_schema": {
+        "path": "benchmark/schema/candidate_pair_generation_rules.schema.json",
+        "sha256": "f8ad6903fdae70fd8e1926552ebefdcd37b383c003d469b75bcb5a26e72bc748"
+      },
+      "decision_audit": {
+        "path": "experiments/relation_extraction/002b_candidate_discovery/runs/development_v0_1/rule_filtered_v0_1/run_01/selection_decisions.json",
+        "sha256": "b268129111f153627948bf43ab08529ef1d026bd246626292cf37eebe89f8d94"
+      },
+      "decision_schema": {
+        "path": "benchmark/schema/candidate_pair_selection_decisions.schema.json",
+        "sha256": "c43355eda186852fe915b588218c19c57866e0c01786ec1f501eb3f17796062f"
+      },
+      "implementation_dependencies": [
+        {
+          "path": "scripts/generate_candidate_pairs.py",
+          "sha256": "8dc848762f153b0a5e72be3da7cee12434ee6bbf105d2246478752d2454dfe33"
+        },
+        {
+          "path": "scripts/knowledge_object_matching.py",
+          "sha256": "a5d1083d4e3f7447012eb8019bcabb0f33fd46f70950696cc46e5b9865b9e705"
+        }
+      ]
+    },
+    "config_sha256": "4fb116fbdb69ebcd8e5987a5274344549897d515d5f82e8b3c52a7a1fbfe2274"
+  },
+  "inputs": {
+    "pair_universe": {
+      "path": "benchmark/candidate_pairs/development_v0_1/pair_universe.json",
+      "sha256": "d0c756b3e5533fac1e02c0aa5c1446cb78d206f21232e020ab0b5cb23b2bad84"
+    },
+    "pair_universe_completion_marker": {
+      "path": "benchmark/candidate_pairs/development_v0_1/pair_universe_complete.json",
+      "sha256": "bc655e71b03dd3beb50f5efc38464bb4ba5c7a5a1790d9d6dd206ad2465fa565"
+    },
+    "source_inventory": {
+      "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/normalization/normalized_predicted_kos.json",
+      "sha256": "fe37cf7d77dd7304a090b21b206b6dd61621cdfedf75507f45edd09a2d8feda3"
+    },
+    "lecture_inventory": {
+      "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/lecture_inventory.json",
+      "sha256": "5b53aed0b1c793d47908d773d4e4a6b9ef9dd24e920307f71fa73bc71ec8b069"
+    },
+    "rules": {
+      "path": "benchmark/candidate_pair_generation_rules_v0_1.json",
+      "sha256": "9c6fcbcd9f46070abd9ba409e7669c068fec5cc715b7a17cc7b52a4d282493b6"
+    },
+    "rules_schema": {
+      "path": "benchmark/schema/candidate_pair_generation_rules.schema.json",
+      "sha256": "f8ad6903fdae70fd8e1926552ebefdcd37b383c003d469b75bcb5a26e72bc748"
+    },
+    "output_schema": {
+      "path": "benchmark/schema/candidate_pair_generation_output.schema.json",
+      "sha256": "3927402e2907fa994930b8d9a6b8cd79735932005f5179dc2e20133959926ac6"
+    },
+    "decisions_schema": {
+      "path": "benchmark/schema/candidate_pair_selection_decisions.schema.json",
+      "sha256": "c43355eda186852fe915b588218c19c57866e0c01786ec1f501eb3f17796062f"
+    }
+  },
+  "decision_audit": {
+    "path": "experiments/relation_extraction/002b_candidate_discovery/runs/development_v0_1/rule_filtered_v0_1/run_01/selection_decisions.json",
+    "sha256": "b268129111f153627948bf43ab08529ef1d026bd246626292cf37eebe89f8d94"
+  },
+  "rule_trigger_counts": {
+    "source_proximity": 86,
+    "lexical_overlap": 27,
+    "symbol_overlap": 16,
+    "explicit_reference": 89,
+    "type_compatibility": 0
+  },
+  "output": {
+    "path": "experiments/relation_extraction/002b_candidate_discovery/runs/development_v0_1/rule_filtered_v0_1/run_01/candidate_pairs.json",
+    "sha256": "cf1982e5f8456de8e4d4ce4885da7f45a7adf15b024139291c3489767f617e21",
+    "selected_pair_count": 127
+  },
+  "integrity": {
+    "duplicate_pair_count": 0,
+    "unknown_pair_count": 0,
+    "endpoint_mismatch_count": 0,
+    "order_matches_universe": true,
+    "gold_artifacts_read": false
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "artifact_type": "rule_filtered_feature_fixture",
+  "version": "v0.1",
+  "lectures": [
+    {
+      "lecture_id": "explicit_none_001",
+      "text": "An independent quantity is recorded for context.\n\nA neutral filler paragraph separates the definitions.\n\nAnother neutral paragraph contains no mathematical cue.\n\nA separate construction is introduced for a different purpose.",
+      "knowledge_objects": [
+        {
+          "predicted_ko_id": "independent_quantity",
+          "name": "Independent Quantity",
+          "type": "Concept",
+          "source_spans": [
+            "An independent quantity is recorded for context."
+          ]
+        },
+        {
+          "predicted_ko_id": "separate_construction",
+          "name": "Separate Construction",
+          "type": "Method",
+          "source_spans": [
+            "A separate construction is introduced for a different purpose."
+          ]
+        }
+      ]
+    },
+    {
+      "lecture_id": "proximity_001",
+      "text": "The gradient gives the direction of steepest increase.\n\nGradient descent uses the gradient to update the current point.\n\nA filler paragraph discusses implementation details.\n\nA second filler paragraph remains unrelated.\n\nA distant topic concerns boundary conditions.",
+      "knowledge_objects": [
+        {
+          "predicted_ko_id": "gradient",
+          "name": "Gradient",
+          "type": "Concept",
+          "source_spans": [
+            "The gradient gives the direction of steepest increase."
+          ]
+        },
+        {
+          "predicted_ko_id": "gradient_descent",
+          "name": "Gradient Descent",
+          "type": "Method",
+          "source_spans": [
+            "Gradient descent uses the gradient to update the current point."
+          ]
+        },
+        {
+          "predicted_ko_id": "distant_topic",
+          "name": "Distant Topic",
+          "type": "Concept",
+          "source_spans": [
+            "A distant topic concerns boundary conditions."
+          ]
+        }
+      ]
+    },
+    {
+      "lecture_id": "symbol_001",
+      "text": "A parameter estimate is denoted by \\(\\theta\\).\n\nA filler paragraph separates the two objects.\n\nAnother filler paragraph contains no shared names.\n\nAn asymptotic expression contains \\(\\theta^2\\).",
+      "knowledge_objects": [
+        {
+          "predicted_ko_id": "parameter_estimate",
+          "name": "Parameter Estimate",
+          "type": "Concept",
+          "source_spans": [
+            "A parameter estimate is denoted by \\(\\theta\\)."
+          ]
+        },
+        {
+          "predicted_ko_id": "asymptotic_expression",
+          "name": "Asymptotic Expression",
+          "type": "Formula",
+          "source_spans": [
+            "An asymptotic expression contains \\(\\theta^2\\)."
+          ]
+        }
+      ]
+    }
+  ],
+  "expected": {
+    "universe_pair_count": 5,
+    "selected_pair_ids": [
+      "cand_dev_004",
+      "cand_dev_005"
+    ],
+    "rejected_pair_count": 3
+  }
+}

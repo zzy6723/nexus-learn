@@ -1,0 +1,5777 @@
+{
+  "artifact_type": "candidate_pair_selection_decisions",
+  "version": "v0.1",
+  "benchmark_split": "development",
+  "generator": {
+    "id": "rule_filtered_v0_1",
+    "name": "rule_filtered",
+    "version": "v0.1"
+  },
+  "pair_universe": {
+    "path": "benchmark/candidate_pairs/development_v0_1/pair_universe.json",
+    "sha256": "d0c756b3e5533fac1e02c0aa5c1446cb78d206f21232e020ab0b5cb23b2bad84"
+  },
+  "rules": {
+    "path": "benchmark/candidate_pair_generation_rules_v0_1.json",
+    "sha256": "9c6fcbcd9f46070abd9ba409e7669c068fec5cc715b7a17cc7b52a4d282493b6"
+  },
+  "source_inventory": {
+    "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/normalization/normalized_predicted_kos.json",
+    "sha256": "fe37cf7d77dd7304a090b21b206b6dd61621cdfedf75507f45edd09a2d8feda3"
+  },
+  "lecture_inventory": {
+    "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/lecture_inventory.json",
+    "sha256": "5b53aed0b1c793d47908d773d4e4a6b9ef9dd24e920307f71fa73bc71ec8b069"
+  },
+  "decision_count": 176,
+  "selected_pair_count": 127,
+  "decisions": [
+    {
+      "pair_id": "cand_dev_001",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              3
+            ],
+            "ko_b_block_indices": [
+              4
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "name_fallback",
+            "minimum_semantic_block_distance": 1
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_002",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_003",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              3
+            ],
+            "ko_b_block_indices": [
+              2
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_004",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              3
+            ],
+            "ko_b_block_indices": [
+              2
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_005",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              3
+            ],
+            "ko_b_block_indices": [
+              4
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_006",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_007",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              3
+            ],
+            "ko_b_block_indices": [
+              1,
+              2
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "name_fallback",
+            "minimum_semantic_block_distance": 1
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_008",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_009",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              3
+            ],
+            "ko_b_block_indices": [
+              3
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 0
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_010",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "discretization_error"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_011",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_012",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "lexical_overlap",
+          "details": {
+            "shared_tokens": [
+              "euler"
+            ]
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "extends"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_013",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "lexical_overlap",
+          "details": {
+            "shared_tokens": [
+              "euler"
+            ]
+          }
+        },
+        {
+          "rule": "symbol_overlap",
+          "details": {
+            "shared_symbols": [
+              "hf"
+            ]
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "extends"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_014",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              4
+            ],
+            "ko_b_block_indices": [
+              4
+            ],
+            "ko_a_location_method": "name_fallback",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 0
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "extends"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_015",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              4
+            ],
+            "ko_b_block_indices": [
+              5
+            ],
+            "ko_a_location_method": "name_fallback",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "extends"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_016",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_017",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_018",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              4
+            ],
+            "ko_b_block_indices": [
+              3
+            ],
+            "ko_a_location_method": "name_fallback",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_019",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_020",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_021",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_022",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_023",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_024",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              0
+            ],
+            "ko_b_block_indices": [
+              1,
+              2
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "name_fallback",
+            "minimum_semantic_block_distance": 1
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_025",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              0
+            ],
+            "ko_b_block_indices": [
+              0
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 0
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_026",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_027",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              0
+            ],
+            "ko_b_block_indices": [
+              1
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_028",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              2
+            ],
+            "ko_b_block_indices": [
+              2
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 0
+          }
+        },
+        {
+          "rule": "lexical_overlap",
+          "details": {
+            "shared_tokens": [
+              "euler",
+              "forward"
+            ]
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 2,
+                "cue_phrases": [
+                  "applied to"
+                ]
+              },
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "extends"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_029",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "extends"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_030",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "extends"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_031",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              2
+            ],
+            "ko_b_block_indices": [
+              1,
+              2
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "name_fallback",
+            "minimum_semantic_block_distance": 0
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 2,
+                "cue_phrases": [
+                  "applied to"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_032",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_033",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              2
+            ],
+            "ko_b_block_indices": [
+              3
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_034",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              2
+            ],
+            "ko_b_block_indices": [
+              1
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 2,
+                "cue_phrases": [
+                  "applied to"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_035",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "extends"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_036",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "extends"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_037",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              2
+            ],
+            "ko_b_block_indices": [
+              1,
+              2
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "name_fallback",
+            "minimum_semantic_block_distance": 0
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 2,
+                "cue_phrases": [
+                  "applied to"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_038",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_039",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              2
+            ],
+            "ko_b_block_indices": [
+              3
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_040",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              2
+            ],
+            "ko_b_block_indices": [
+              1
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 2,
+                "cue_phrases": [
+                  "applied to"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_041",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              4
+            ],
+            "ko_b_block_indices": [
+              5
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        },
+        {
+          "rule": "lexical_overlap",
+          "details": {
+            "shared_tokens": [
+              "heun"
+            ]
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "extends"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_042",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_043",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_044",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              4
+            ],
+            "ko_b_block_indices": [
+              3
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_045",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_method"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_046",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_047",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_048",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_049",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_050",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              1,
+              2
+            ],
+            "ko_b_block_indices": [
+              0
+            ],
+            "ko_a_location_method": "name_fallback",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 1,
+                "cue_phrases": [
+                  "combines"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_051",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              1,
+              2
+            ],
+            "ko_b_block_indices": [
+              3
+            ],
+            "ko_a_location_method": "name_fallback",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_052",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "initial_value_problem"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              1,
+              2
+            ],
+            "ko_b_block_indices": [
+              1
+            ],
+            "ko_a_location_method": "name_fallback",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 0
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 1,
+                "cue_phrases": [
+                  "combines"
+                ]
+              },
+              {
+                "semantic_block_index": 2,
+                "cue_phrases": [
+                  "applied to"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_053",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_054",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ordinary_differential_equation"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              0
+            ],
+            "ko_b_block_indices": [
+              1
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 1,
+                "cue_phrases": [
+                  "combines"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_055",
+      "lecture_id": "differential_equations_001",
+      "ko_a": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "step_size"
+      },
+      "ko_b": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_056",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 3,
+                "cue_phrases": [
+                  "combines",
+                  "extends",
+                  "recovers"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_057",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              3
+            ],
+            "ko_b_block_indices": [
+              2
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_058",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              3
+            ],
+            "ko_b_block_indices": [
+              3
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 0
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 3,
+                "cue_phrases": [
+                  "combines",
+                  "extends",
+                  "recovers"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_059",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 3,
+                "cue_phrases": [
+                  "combines",
+                  "extends",
+                  "recovers"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_060",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 3,
+                "cue_phrases": [
+                  "combines",
+                  "extends",
+                  "recovers"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_061",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 3,
+                "cue_phrases": [
+                  "combines",
+                  "extends",
+                  "recovers"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_062",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              3
+            ],
+            "ko_b_block_indices": [
+              2
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_063",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_064",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_065",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              1
+            ],
+            "ko_b_block_indices": [
+              2
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 2,
+                "cue_phrases": [
+                  "formalized by"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_066",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 3,
+                "cue_phrases": [
+                  "combines",
+                  "extends",
+                  "recovers"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_067",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              1
+            ],
+            "ko_b_block_indices": [
+              0
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 1,
+                "cue_phrases": [
+                  "applied to"
+                ]
+              },
+              {
+                "semantic_block_index": 3,
+                "cue_phrases": [
+                  "combines",
+                  "extends",
+                  "recovers"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_068",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              1
+            ],
+            "ko_b_block_indices": [
+              0
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 1,
+                "cue_phrases": [
+                  "applied to"
+                ]
+              },
+              {
+                "semantic_block_index": 3,
+                "cue_phrases": [
+                  "combines",
+                  "extends",
+                  "recovers"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_069",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              1
+            ],
+            "ko_b_block_indices": [
+              0
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 1,
+                "cue_phrases": [
+                  "applied to"
+                ]
+              },
+              {
+                "semantic_block_index": 3,
+                "cue_phrases": [
+                  "combines",
+                  "extends",
+                  "recovers"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_070",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              1
+            ],
+            "ko_b_block_indices": [
+              2
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 2,
+                "cue_phrases": [
+                  "formalized by"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_071",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              1
+            ],
+            "ko_b_block_indices": [
+              1
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 0
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 1,
+                "cue_phrases": [
+                  "applied to"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_072",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstras_algorithm"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              1
+            ],
+            "ko_b_block_indices": [
+              0
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_073",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              2
+            ],
+            "ko_b_block_indices": [
+              3
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_074",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_075",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_076",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_077",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              2
+            ],
+            "ko_b_block_indices": [
+              2
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 0
+          }
+        },
+        {
+          "rule": "lexical_overlap",
+          "details": {
+            "shared_tokens": [
+              "relaxation"
+            ]
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 2,
+                "cue_phrases": [
+                  "formalized by"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_078",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              2
+            ],
+            "ko_b_block_indices": [
+              1
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_079",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_080",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 3,
+                "cue_phrases": [
+                  "combines",
+                  "extends",
+                  "recovers"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_081",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 3,
+                "cue_phrases": [
+                  "combines",
+                  "extends",
+                  "recovers"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_082",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 3,
+                "cue_phrases": [
+                  "combines",
+                  "extends",
+                  "recovers"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_083",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              3
+            ],
+            "ko_b_block_indices": [
+              2
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_084",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_085",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_086",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              0
+            ],
+            "ko_b_block_indices": [
+              0
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 0
+          }
+        },
+        {
+          "rule": "lexical_overlap",
+          "details": {
+            "shared_tokens": [
+              "path"
+            ]
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 1,
+                "cue_phrases": [
+                  "applied to"
+                ]
+              },
+              {
+                "semantic_block_index": 3,
+                "cue_phrases": [
+                  "combines",
+                  "extends",
+                  "recovers"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_087",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              0
+            ],
+            "ko_b_block_indices": [
+              0
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 0
+          }
+        },
+        {
+          "rule": "lexical_overlap",
+          "details": {
+            "shared_tokens": [
+              "path"
+            ]
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 1,
+                "cue_phrases": [
+                  "applied to"
+                ]
+              },
+              {
+                "semantic_block_index": 3,
+                "cue_phrases": [
+                  "combines",
+                  "extends",
+                  "recovers"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_088",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_089",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              0
+            ],
+            "ko_b_block_indices": [
+              1
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        },
+        {
+          "rule": "lexical_overlap",
+          "details": {
+            "shared_tokens": [
+              "path"
+            ]
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 1,
+                "cue_phrases": [
+                  "applied to"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_090",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              0
+            ],
+            "ko_b_block_indices": [
+              0
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 0
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_091",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              0
+            ],
+            "ko_b_block_indices": [
+              0
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 0
+          }
+        },
+        {
+          "rule": "lexical_overlap",
+          "details": {
+            "shared_tokens": [
+              "cost",
+              "path"
+            ]
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 1,
+                "cue_phrases": [
+                  "applied to"
+                ]
+              },
+              {
+                "semantic_block_index": 3,
+                "cue_phrases": [
+                  "combines",
+                  "extends",
+                  "recovers"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_092",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_093",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              0
+            ],
+            "ko_b_block_indices": [
+              1
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        },
+        {
+          "rule": "lexical_overlap",
+          "details": {
+            "shared_tokens": [
+              "path"
+            ]
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 1,
+                "cue_phrases": [
+                  "applied to"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_094",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              0
+            ],
+            "ko_b_block_indices": [
+              0
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 0
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_095",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_096",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              0
+            ],
+            "ko_b_block_indices": [
+              1
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        },
+        {
+          "rule": "lexical_overlap",
+          "details": {
+            "shared_tokens": [
+              "path"
+            ]
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 1,
+                "cue_phrases": [
+                  "applied to"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_097",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "path_cost_formula"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              0
+            ],
+            "ko_b_block_indices": [
+              0
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 0
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_098",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              2
+            ],
+            "ko_b_block_indices": [
+              1
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_099",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_100",
+      "lecture_id": "graph_algorithms_001",
+      "ko_a": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "single_source_shortest_path_problem"
+      },
+      "ko_b": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "weighted_directed_graph"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              1
+            ],
+            "ko_b_block_indices": [
+              0
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_101",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              3
+            ],
+            "ko_b_block_indices": [
+              2
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_102",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "midpoint_formula"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              3
+            ],
+            "ko_b_block_indices": [
+              3
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 0
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_103",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newton_update_formula"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 5,
+                "cue_phrases": [
+                  "requires",
+                  "uses"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_104",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newtons_method"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 5,
+                "cue_phrases": [
+                  "requires",
+                  "uses"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_105",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "root_finding_problem"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_106",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "bisection_method"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "sign_changing_bracket"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              3
+            ],
+            "ko_b_block_indices": [
+              3
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 0
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_107",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "midpoint_formula"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              2
+            ],
+            "ko_b_block_indices": [
+              3
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_108",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newton_update_formula"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              2
+            ],
+            "ko_b_block_indices": [
+              1
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        },
+        {
+          "rule": "lexical_overlap",
+          "details": {
+            "shared_tokens": [
+              "newton"
+            ]
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 2,
+                "cue_phrases": [
+                  "extends"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_109",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newtons_method"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              2
+            ],
+            "ko_b_block_indices": [
+              1
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        },
+        {
+          "rule": "lexical_overlap",
+          "details": {
+            "shared_tokens": [
+              "newton"
+            ]
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 2,
+                "cue_phrases": [
+                  "extends"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_110",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "root_finding_problem"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_111",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "damped_newton_method"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "sign_changing_bracket"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              2
+            ],
+            "ko_b_block_indices": [
+              3
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_112",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "midpoint_formula"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newton_update_formula"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_113",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "midpoint_formula"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newtons_method"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_114",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "midpoint_formula"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "root_finding_problem"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_115",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "midpoint_formula"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "sign_changing_bracket"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              3
+            ],
+            "ko_b_block_indices": [
+              3
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 0
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_116",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newton_update_formula"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newtons_method"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              1
+            ],
+            "ko_b_block_indices": [
+              1
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 0
+          }
+        },
+        {
+          "rule": "lexical_overlap",
+          "details": {
+            "shared_tokens": [
+              "newton"
+            ]
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 1,
+                "cue_phrases": [
+                  "uses"
+                ]
+              },
+              {
+                "semantic_block_index": 2,
+                "cue_phrases": [
+                  "extends"
+                ]
+              },
+              {
+                "semantic_block_index": 5,
+                "cue_phrases": [
+                  "requires",
+                  "uses"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_117",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newton_update_formula"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "root_finding_problem"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              1
+            ],
+            "ko_b_block_indices": [
+              0
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_118",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newton_update_formula"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "sign_changing_bracket"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_119",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newtons_method"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "root_finding_problem"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              1
+            ],
+            "ko_b_block_indices": [
+              0
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_120",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "newtons_method"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "sign_changing_bracket"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_121",
+      "lecture_id": "numerical_root_finding_001",
+      "ko_a": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "root_finding_problem"
+      },
+      "ko_b": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "sign_changing_bracket"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_122",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              0
+            ],
+            "ko_b_block_indices": [
+              0
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 0
+          }
+        },
+        {
+          "rule": "lexical_overlap",
+          "details": {
+            "shared_tokens": [
+              "likelihood"
+            ]
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 0,
+                "cue_phrases": [
+                  "defined from"
+                ]
+              },
+              {
+                "semantic_block_index": 1,
+                "cue_phrases": [
+                  "obtained by"
+                ]
+              },
+              {
+                "semantic_block_index": 2,
+                "cue_phrases": [
+                  "uses"
+                ]
+              },
+              {
+                "semantic_block_index": 3,
+                "cue_phrases": [
+                  "derivative of"
+                ]
+              },
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "within"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_123",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              0
+            ],
+            "ko_b_block_indices": [
+              1
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        },
+        {
+          "rule": "lexical_overlap",
+          "details": {
+            "shared_tokens": [
+              "likelihood"
+            ]
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 1,
+                "cue_phrases": [
+                  "obtained by"
+                ]
+              },
+              {
+                "semantic_block_index": 2,
+                "cue_phrases": [
+                  "uses"
+                ]
+              },
+              {
+                "semantic_block_index": 3,
+                "cue_phrases": [
+                  "derivative of"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_124",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              0
+            ],
+            "ko_b_block_indices": [
+              1
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        },
+        {
+          "rule": "lexical_overlap",
+          "details": {
+            "shared_tokens": [
+              "likelihood"
+            ]
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 1,
+                "cue_phrases": [
+                  "obtained by"
+                ]
+              },
+              {
+                "semantic_block_index": 2,
+                "cue_phrases": [
+                  "uses"
+                ]
+              },
+              {
+                "semantic_block_index": 3,
+                "cue_phrases": [
+                  "derivative of"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_125",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "lexical_overlap",
+          "details": {
+            "shared_tokens": [
+              "likelihood"
+            ]
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 2,
+                "cue_phrases": [
+                  "uses"
+                ]
+              },
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "within"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_126",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 2,
+                "cue_phrases": [
+                  "uses"
+                ]
+              },
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "within"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_127",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "within"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_128",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 3,
+                "cue_phrases": [
+                  "derivative of"
+                ]
+              },
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "within"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_129",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 3,
+                "cue_phrases": [
+                  "derivative of"
+                ]
+              },
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "within"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_130",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 3,
+                "cue_phrases": [
+                  "derivative of"
+                ]
+              },
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "within"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_131",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              0
+            ],
+            "ko_b_block_indices": [
+              0
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 0
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 0,
+                "cue_phrases": [
+                  "defined from"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_132",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              0
+            ],
+            "ko_b_block_indices": [
+              1
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        },
+        {
+          "rule": "lexical_overlap",
+          "details": {
+            "shared_tokens": [
+              "likelihood"
+            ]
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 1,
+                "cue_phrases": [
+                  "obtained by"
+                ]
+              },
+              {
+                "semantic_block_index": 2,
+                "cue_phrases": [
+                  "uses"
+                ]
+              },
+              {
+                "semantic_block_index": 3,
+                "cue_phrases": [
+                  "derivative of"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_133",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              0
+            ],
+            "ko_b_block_indices": [
+              1
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        },
+        {
+          "rule": "lexical_overlap",
+          "details": {
+            "shared_tokens": [
+              "likelihood"
+            ]
+          }
+        },
+        {
+          "rule": "symbol_overlap",
+          "details": {
+            "shared_symbols": [
+              "theta"
+            ]
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 1,
+                "cue_phrases": [
+                  "obtained by"
+                ]
+              },
+              {
+                "semantic_block_index": 2,
+                "cue_phrases": [
+                  "uses"
+                ]
+              },
+              {
+                "semantic_block_index": 3,
+                "cue_phrases": [
+                  "derivative of"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_134",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "lexical_overlap",
+          "details": {
+            "shared_tokens": [
+              "likelihood"
+            ]
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 2,
+                "cue_phrases": [
+                  "uses"
+                ]
+              },
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "within"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_135",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "symbol_overlap",
+          "details": {
+            "shared_symbols": [
+              "theta"
+            ]
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 2,
+                "cue_phrases": [
+                  "uses"
+                ]
+              },
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "within"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_136",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "within"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_137",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "symbol_overlap",
+          "details": {
+            "shared_symbols": [
+              "theta"
+            ]
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 3,
+                "cue_phrases": [
+                  "derivative of"
+                ]
+              },
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "within"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_138",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 3,
+                "cue_phrases": [
+                  "derivative of"
+                ]
+              },
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "within"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_139",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "symbol_overlap",
+          "details": {
+            "shared_symbols": [
+              "theta"
+            ]
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 3,
+                "cue_phrases": [
+                  "derivative of"
+                ]
+              },
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "within"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_140",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              0
+            ],
+            "ko_b_block_indices": [
+              0
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 0
+          }
+        },
+        {
+          "rule": "symbol_overlap",
+          "details": {
+            "shared_symbols": [
+              "theta"
+            ]
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 0,
+                "cue_phrases": [
+                  "defined from"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_141",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              1
+            ],
+            "ko_b_block_indices": [
+              1
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 0
+          }
+        },
+        {
+          "rule": "lexical_overlap",
+          "details": {
+            "shared_tokens": [
+              "likelihood",
+              "log"
+            ]
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 1,
+                "cue_phrases": [
+                  "obtained by"
+                ]
+              },
+              {
+                "semantic_block_index": 2,
+                "cue_phrases": [
+                  "uses"
+                ]
+              },
+              {
+                "semantic_block_index": 3,
+                "cue_phrases": [
+                  "derivative of"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_142",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              1
+            ],
+            "ko_b_block_indices": [
+              2
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        },
+        {
+          "rule": "lexical_overlap",
+          "details": {
+            "shared_tokens": [
+              "likelihood"
+            ]
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 2,
+                "cue_phrases": [
+                  "uses"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_143",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              1
+            ],
+            "ko_b_block_indices": [
+              2
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 2,
+                "cue_phrases": [
+                  "uses"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_144",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_145",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 3,
+                "cue_phrases": [
+                  "derivative of"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_146",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 3,
+                "cue_phrases": [
+                  "derivative of"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_147",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 3,
+                "cue_phrases": [
+                  "derivative of"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_148",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              1
+            ],
+            "ko_b_block_indices": [
+              0
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_149",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              1
+            ],
+            "ko_b_block_indices": [
+              2
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        },
+        {
+          "rule": "lexical_overlap",
+          "details": {
+            "shared_tokens": [
+              "likelihood"
+            ]
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 2,
+                "cue_phrases": [
+                  "uses"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_150",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              1
+            ],
+            "ko_b_block_indices": [
+              2
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        },
+        {
+          "rule": "symbol_overlap",
+          "details": {
+            "shared_symbols": [
+              "ell",
+              "theta"
+            ]
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 2,
+                "cue_phrases": [
+                  "uses"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_151",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_152",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "symbol_overlap",
+          "details": {
+            "shared_symbols": [
+              "theta"
+            ]
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 3,
+                "cue_phrases": [
+                  "derivative of"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_153",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 3,
+                "cue_phrases": [
+                  "derivative of"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_154",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "symbol_overlap",
+          "details": {
+            "shared_symbols": [
+              "ell",
+              "theta"
+            ]
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 3,
+                "cue_phrases": [
+                  "derivative of"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_155",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              1
+            ],
+            "ko_b_block_indices": [
+              0
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        },
+        {
+          "rule": "symbol_overlap",
+          "details": {
+            "shared_symbols": [
+              "theta"
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_156",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              2
+            ],
+            "ko_b_block_indices": [
+              2
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 0
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 2,
+                "cue_phrases": [
+                  "uses"
+                ]
+              },
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "within"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_157",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "within"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_158",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "within"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_159",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              2
+            ],
+            "ko_b_block_indices": [
+              3
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "within"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_160",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              2
+            ],
+            "ko_b_block_indices": [
+              3
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "within"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_161",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_162",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "within"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_163",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "symbol_overlap",
+          "details": {
+            "shared_symbols": [
+              "mle",
+              "theta"
+            ]
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "within"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_164",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              2
+            ],
+            "ko_b_block_indices": [
+              3
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "within"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_165",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              2
+            ],
+            "ko_b_block_indices": [
+              3
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        },
+        {
+          "rule": "symbol_overlap",
+          "details": {
+            "shared_symbols": [
+              "ell",
+              "theta"
+            ]
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "within"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_166",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "symbol_overlap",
+          "details": {
+            "shared_symbols": [
+              "theta"
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_167",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              4
+            ],
+            "ko_b_block_indices": [
+              4
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 0
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "within"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_168",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              4
+            ],
+            "ko_b_block_indices": [
+              3
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "within"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_169",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              4
+            ],
+            "ko_b_block_indices": [
+              3
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "within"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_170",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "newtons_method"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_171",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              4
+            ],
+            "ko_b_block_indices": [
+              3
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        },
+        {
+          "rule": "lexical_overlap",
+          "details": {
+            "shared_tokens": [
+              "score"
+            ]
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 3,
+                "cue_phrases": [
+                  "derivative of"
+                ]
+              },
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "within"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_172",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              4
+            ],
+            "ko_b_block_indices": [
+              3
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 1
+          }
+        },
+        {
+          "rule": "lexical_overlap",
+          "details": {
+            "shared_tokens": [
+              "score"
+            ]
+          }
+        },
+        {
+          "rule": "symbol_overlap",
+          "details": {
+            "shared_symbols": [
+              "theta"
+            ]
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 3,
+                "cue_phrases": [
+                  "derivative of"
+                ]
+              },
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "within"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_173",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_equation"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "symbol_overlap",
+          "details": {
+            "shared_symbols": [
+              "theta"
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_174",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "source_proximity",
+          "details": {
+            "ko_a_block_indices": [
+              3
+            ],
+            "ko_b_block_indices": [
+              3
+            ],
+            "ko_a_location_method": "source_span",
+            "ko_b_location_method": "source_span",
+            "minimum_semantic_block_distance": 0
+          }
+        },
+        {
+          "rule": "lexical_overlap",
+          "details": {
+            "shared_tokens": [
+              "score"
+            ]
+          }
+        },
+        {
+          "rule": "explicit_reference",
+          "details": {
+            "matches": [
+              {
+                "semantic_block_index": 3,
+                "cue_phrases": [
+                  "derivative of"
+                ]
+              },
+              {
+                "semantic_block_index": 4,
+                "cue_phrases": [
+                  "within"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    },
+    {
+      "pair_id": "cand_dev_175",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "selected": false,
+      "triggered_rules": [],
+      "exclusion_reason": "no_rule_triggered"
+    },
+    {
+      "pair_id": "cand_dev_176",
+      "lecture_id": "statistics_estimation_001",
+      "ko_a": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "score_function_formula"
+      },
+      "ko_b": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "statistical_model"
+      },
+      "selected": true,
+      "triggered_rules": [
+        {
+          "rule": "symbol_overlap",
+          "details": {
+            "shared_symbols": [
+              "theta"
+            ]
+          }
+        }
+      ],
+      "exclusion_reason": null
+    }
+  ]
+}

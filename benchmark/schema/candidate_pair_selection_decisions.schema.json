@@ -1,0 +1,189 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "candidate_pair_selection_decisions.schema.json",
+  "title": "Candidate Pair Selection Decisions",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_type",
+    "version",
+    "benchmark_split",
+    "generator",
+    "pair_universe",
+    "rules",
+    "source_inventory",
+    "lecture_inventory",
+    "decision_count",
+    "selected_pair_count",
+    "decisions"
+  ],
+  "properties": {
+    "artifact_type": {
+      "const": "candidate_pair_selection_decisions"
+    },
+    "version": {
+      "const": "v0.1"
+    },
+    "benchmark_split": {
+      "enum": [
+        "development",
+        "holdout"
+      ]
+    },
+    "generator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "version"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "const": "rule_filtered"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "pair_universe": {
+      "$ref": "#/$defs/artifact_binding"
+    },
+    "rules": {
+      "$ref": "#/$defs/artifact_binding"
+    },
+    "source_inventory": {
+      "$ref": "#/$defs/artifact_binding"
+    },
+    "lecture_inventory": {
+      "$ref": "#/$defs/artifact_binding"
+    },
+    "decision_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "selected_pair_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "decisions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/decision"
+      }
+    }
+  },
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "artifact_binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    },
+    "ko_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "lecture_id",
+        "ko_id"
+      ],
+      "properties": {
+        "lecture_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "ko_id": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "triggered_rule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "rule",
+        "details"
+      ],
+      "properties": {
+        "rule": {
+          "enum": [
+            "source_proximity",
+            "lexical_overlap",
+            "symbol_overlap",
+            "explicit_reference",
+            "type_compatibility"
+          ]
+        },
+        "details": {
+          "type": "object"
+        }
+      }
+    },
+    "decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "pair_id",
+        "lecture_id",
+        "ko_a",
+        "ko_b",
+        "selected",
+        "triggered_rules",
+        "exclusion_reason"
+      ],
+      "properties": {
+        "pair_id": {
+          "type": "string",
+          "pattern": "^cand_(dev|holdout)_[0-9]{3,}$"
+        },
+        "lecture_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "ko_a": {
+          "$ref": "#/$defs/ko_ref"
+        },
+        "ko_b": {
+          "$ref": "#/$defs/ko_ref"
+        },
+        "selected": {
+          "type": "boolean"
+        },
+        "triggered_rules": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/triggered_rule"
+          }
+        },
+        "exclusion_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "artifact_type": "candidate_pair_generation_evaluation_complete",
+  "version": "v0.1",
+  "evaluation_status": "final",
+  "inputs": {
+    "pair_universe": {
+      "path": "benchmark/candidate_pairs/development_v0_1/pair_universe.json",
+      "sha256": "d0c756b3e5533fac1e02c0aa5c1446cb78d206f21232e020ab0b5cb23b2bad84"
+    },
+    "pair_universe_completion_marker": {
+      "path": "benchmark/candidate_pairs/development_v0_1/pair_universe_complete.json",
+      "sha256": "bc655e71b03dd3beb50f5efc38464bb4ba5c7a5a1790d9d6dd206ad2465fa565"
+    },
+    "ground_truth": {
+      "path": "benchmark/ground_truth/candidate_pairs_development_v0_1.json",
+      "sha256": "a25e5c9568b090fc97fd03ce0462fda608f62d88bd5b62f9b8d2db40530a133d"
+    },
+    "ground_truth_completion_marker": {
+      "path": "benchmark/ground_truth/candidate_pairs_development_v0_1_complete.json",
+      "sha256": "8c1a07bba5e4b3f1fb0ef71b72bfc744d0ff75569008f94308ba885114de0f73"
+    },
+    "success_criteria": {
+      "path": "benchmark/candidate_pair_generation_success_criteria_v0_1.json",
+      "sha256": "79c0f044c16077843ee74a07bf12c7e2638b10c2afd2fe05e96ca195105d4628"
+    },
+    "candidate_selection": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/development_v0_1/rule_filtered_v0_1/run_01/candidate_pairs.json",
+      "sha256": "cf1982e5f8456de8e4d4ce4885da7f45a7adf15b024139291c3489767f617e21"
+    },
+    "candidate_metadata": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/development_v0_1/rule_filtered_v0_1/run_01/metadata.json",
+      "sha256": "f30f786ff527bc44f93ec0709b3c6ab83d8e386f59074fa2e2a05c9a0607dc38"
+    },
+    "candidate_completion_marker": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/development_v0_1/rule_filtered_v0_1/run_01/candidate_generation_complete.json",
+      "sha256": "4e5e1bf0f821976a2e6759fc55e487129a2053a36627d78ef9f1b2779a1d7a8e"
+    },
+    "output_schema": {
+      "path": "benchmark/schema/candidate_pair_generation_output.schema.json",
+      "sha256": "3927402e2907fa994930b8d9a6b8cd79735932005f5179dc2e20133959926ac6"
+    }
+  },
+  "evaluator": {
+    "path": "scripts/evaluate_candidate_pair_generation.py",
+    "sha256": "4c3643168985af86c4adf8eb2c2f999d3e1d6bf8c0dc235b706ea860e8ed8dc7",
+    "version": "candidate_pair_generation_evaluator_v0.1"
+  },
+  "outputs": {
+    "metrics": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/development_v0_1/rule_filtered_v0_1/run_01/evaluation/metrics.json",
+      "sha256": "5a8f50d55db708ed33a516ccdf8e27e7d7392726711a69bf21b901efddc535c4"
+    },
+    "matches": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/development_v0_1/rule_filtered_v0_1/run_01/evaluation/matches.json",
+      "sha256": "4bf20ddfac57d0d7adfc01afb75bdfe1fbb54552380c82add43d3184035cf3dc"
+    },
+    "errors": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/development_v0_1/rule_filtered_v0_1/run_01/evaluation/errors.json",
+      "sha256": "cf6f3110c9daf280515f5b916ce0fc8555fec5957c34939c1b2d791d291a61a0"
+    },
+    "per_relation_metrics": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/development_v0_1/rule_filtered_v0_1/run_01/evaluation/per_relation_metrics.json",
+      "sha256": "a90aee9740b376a53ba6cef212f104173bc573c90587c67e32369fbbc7e1c83f"
+    },
+    "per_lecture_metrics": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/development_v0_1/rule_filtered_v0_1/run_01/evaluation/per_lecture_metrics.json",
+      "sha256": "4b118b147533ac72f3cfbac4f563a8ceb24cf62b2789ce80ca0aa4c124e9179e"
+    }
+  },
+  "counts": {
+    "total_pairs": 176,
+    "primary_pairs": 171,
+    "positive_pairs": 80,
+    "negative_pairs": 91,
+    "diagnostic_pairs": 5,
+    "retrieved_pairs": 127,
+    "retrieved_primary_pairs": 122,
+    "retrieved_positive_pairs": 70,
+    "missed_positive_pairs": 10,
+    "retrieved_negative_pairs": 52,
+    "filtered_negative_pairs": 39,
+    "retrieved_diagnostic_pairs": 5
+  }
+}

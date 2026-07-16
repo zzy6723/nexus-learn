@@ -1,0 +1,157 @@
+{
+  "artifact_type": "candidate_pair_generation_rules",
+  "version": "v0.1",
+  "status": "frozen_for_development_baseline",
+  "method_id": "rule_filtered_v0_1",
+  "scope": "lecture_local_unordered_nonself",
+  "strategy": "deterministic_union_filter",
+  "input_contract": {
+    "allowed_ko_fields": [
+      "lecture_id",
+      "predicted_ko_id",
+      "name",
+      "type",
+      "source_spans"
+    ],
+    "allowed_lecture_fields": [
+      "lecture_id",
+      "text"
+    ],
+    "forbidden_fields": [
+      "candidate_label",
+      "gold_relations",
+      "relation_type",
+      "gold_evidence",
+      "gold_rationale",
+      "evaluation_errors",
+      "oracle_alignment",
+      "pair_id_allowlist"
+    ]
+  },
+  "normalization": {
+    "name_matching": {
+      "path": "scripts/knowledge_object_matching.py",
+      "sha256": "a5d1083d4e3f7447012eb8019bcabb0f33fd46f70950696cc46e5b9865b9e705",
+      "version": "predicted_ko_name_matching_v0_1"
+    },
+    "lexical": {
+      "token_pattern": "[a-z0-9]+",
+      "stop_tokens": [
+        "a",
+        "algorithm",
+        "an",
+        "and",
+        "as",
+        "at",
+        "by",
+        "concept",
+        "equation",
+        "estimator",
+        "for",
+        "formula",
+        "from",
+        "function",
+        "in",
+        "is",
+        "method",
+        "of",
+        "on",
+        "or",
+        "problem",
+        "s",
+        "search",
+        "the",
+        "to",
+        "update",
+        "with"
+      ]
+    },
+    "semantic_blocks": {
+      "paragraph_split": "one_or_more_blank_lines",
+      "display_math_policy": "attach_to_immediately_preceding_prose_block",
+      "text_normalization": "nfkc_casefold_remove_latex_delimiters_collapse_whitespace"
+    },
+    "symbols": {
+      "latex_command_pattern": "\\\\([A-Za-z]+)",
+      "subscript_or_call_identifier_pattern": "\\b([A-Za-z]+)(?=[_(])",
+      "uppercase_identifier_pattern": "\\b[A-Z]{2,}\\b",
+      "stop_symbols": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "f",
+        "frac",
+        "g",
+        "h",
+        "i",
+        "k",
+        "l",
+        "left",
+        "m",
+        "mathrm",
+        "mid",
+        "n",
+        "operatorname",
+        "p",
+        "right",
+        "s",
+        "t",
+        "text",
+        "u",
+        "v",
+        "w",
+        "x",
+        "y"
+      ]
+    }
+  },
+  "rules": {
+    "source_proximity": {
+      "enabled": true,
+      "maximum_semantic_block_distance": 1
+    },
+    "lexical_overlap": {
+      "enabled": true,
+      "minimum_shared_normalized_tokens": 1
+    },
+    "symbol_overlap": {
+      "enabled": true,
+      "minimum_shared_symbols": 1
+    },
+    "explicit_reference": {
+      "enabled": true,
+      "cue_phrases": [
+        "applied to",
+        "combines",
+        "contrasts",
+        "defined from",
+        "derivative of",
+        "extends",
+        "formalized by",
+        "obtained by",
+        "recovers",
+        "requires",
+        "uses",
+        "within"
+      ]
+    },
+    "type_compatibility": {
+      "enabled": false,
+      "rationale": "The frozen Relation schema permits broad endpoint-type combinations, so type alone is not a reliable high-recall filter."
+    }
+  },
+  "selection_policy": "select_if_any_enabled_rule_matches",
+  "reason_order": [
+    "source_proximity",
+    "lexical_overlap",
+    "symbol_overlap",
+    "explicit_reference",
+    "type_compatibility"
+  ],
+  "failure_policy": {
+    "missing_source_artifact": "fatal",
+    "unknown_endpoint": "fatal",
+    "unlocatable_source_span": "do_not_trigger_source_proximity"
+  }
+}

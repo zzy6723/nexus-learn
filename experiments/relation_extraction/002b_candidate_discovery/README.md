@@ -1,6 +1,6 @@
 # Experiment 002B-2: Candidate Pair Generation under Predicted KOs
 
-**Status:** All-Pairs development control completed; Rule-Filtered method pending
+**Status:** Candidate-layer development comparison completed; All-Pairs retained as the safe fallback
 **Stage:** Technical Validation
 **Predecessor:** Experiment 002B-1 completed
 
@@ -105,10 +105,9 @@ annotations have been reviewed and finalized:
 - 0 `AMBIGUOUS`.
 
 The checker passes the artifact in final mode, and the Ground Truth completion
-marker binds the frozen snapshot. The deterministic All-Pairs generator and
-Candidate Generation evaluator are now implemented and validated. The formal
-development control selected all 176 pairs and reproduced the expected frozen
-denominators exactly.
+marker binds the frozen snapshot. The deterministic All-Pairs and Rule-Filtered
+generators are implemented and validated. Their formal development runs use the
+same frozen 176-pair snapshot and Candidate Generation evaluator.
 
 Current Candidate Generation infrastructure:
 
@@ -117,13 +116,22 @@ Current Candidate Generation infrastructure:
 - `scripts/evaluate_candidate_pair_generation.py`;
 - `tests/test_candidate_pair_generator.py`;
 - `tests/test_candidate_pair_generation_evaluator.py`;
+- `benchmark/candidate_pair_generation_rules_v0_1.json`;
+- `benchmark/schema/candidate_pair_generation_rules.schema.json`;
+- `benchmark/schema/candidate_pair_selection_decisions.schema.json`;
+- `scripts/generate_rule_filtered_candidate_pairs.py`;
+- `tests/test_rule_filtered_candidate_generator.py`;
 - `tests/fixtures/candidate_pair_generation/`;
 - `all_pairs_control.md`;
-- `runs/development_v0_1/all_pairs/run_01/`.
+- `rule_filtered_design.md`;
+- `rule_filtered_v0_1_results.md`;
+- `runs/development_v0_1/all_pairs/run_01/`;
+- `runs/development_v0_1/rule_filtered_v0_1/run_01/`.
 
-Thirty-one pair-universe, Ground Truth, generator, and evaluator regression
-tests pass together. A Rule-Filtered generator has not yet been implemented or
-selected.
+The existing pair-universe, Ground Truth, All-Pairs, and evaluator regression
+tests are supplemented by 11 Rule-Filtered generator tests covering individual
+rules, full decision auditing, determinism, leakage rejection, stale bindings,
+and no-overwrite behavior.
 
 ## Inputs
 
@@ -314,14 +322,37 @@ The formal control is final and hash-bound:
 - diagnostics selected: `5 / 5`.
 
 This validates the Candidate Generation evaluator and establishes the maximum
-workload control. It does not select All Pairs as the final generator and does
-not constitute downstream Relation Classification evidence. See
-`all_pairs_control.md` for the formal record.
+workload control. The control alone did not select a final method. After the
+Rule-Filtered comparison failed the frozen recall gates, All Pairs was retained
+as the current safe fallback. This still does not constitute downstream
+Relation Classification evidence. See `all_pairs_control.md` for the formal
+control record.
+
+## Rule-Filtered v0.1 Result
+
+The formal Rule-Filtered run is final and hash-bound:
+
+- selected pairs: `127 / 176`;
+- selected positive pairs: `70 / 80`;
+- missed positive pairs: `10`;
+- candidate recall: `0.875`;
+- primary candidate precision: `70 / 122 = 0.5737704918`;
+- total workload reduction: `49 / 176 = 0.2784090909`;
+- diagnostics selected: `5 / 5`.
+
+The method reduced workload but failed candidate recall, missed-positive, and
+per-lecture recall gates. Seven missed pairs were `REQUIRES` and three were
+`APPLIED_IN`; no endpoint, order, or alignment failure occurred. See
+`rule_filtered_v0_1_results.md` for the comparison and false-negative analysis.
 
 ## Immediate Next Gate
 
-Specify one general deterministic Rule-Filtered v0.1 method using only
-model-visible KO and lecture fields, freeze its configuration, and evaluate it
-against the same 176-pair development snapshot. Do not call the Relation API
-until the candidate-layer comparison has established whether any filtered
-method passes the frozen recall and reduction gates.
+Do not promote Rule-Filtered v0.1 to holdout or create pair-specific recovery
+rules. The current development selection is `all_pairs_v0_1` under the frozen
+recall-first fallback rule. A single v0.2 refinement may be opened only if a
+general contextual signal is predeclared without encoding the 10 known misses.
+
+Downstream Relation Classification remains pending. If it is run for diagnostic
+comparison, both candidate manifests must use the same frozen Relation method,
+model, request partitioning, evaluator, and adjudication protocol; the failed
+candidate-layer gate cannot be overridden by downstream cost or precision.
