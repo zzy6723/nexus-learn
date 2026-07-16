@@ -1,0 +1,167 @@
+{
+  "artifact_type": "candidate_pair_generation_per_lecture_metrics",
+  "version": "v0.1",
+  "evaluation_status": "final",
+  "lectures": [
+    {
+      "lecture_id": "differential_equations_001",
+      "counts": {
+        "total_pairs": 55,
+        "primary_pairs": 52,
+        "positive_pairs": 25,
+        "negative_pairs": 27,
+        "diagnostic_pairs": 3,
+        "retrieved_pairs": 55,
+        "retrieved_primary_pairs": 52,
+        "retrieved_positive_pairs": 25,
+        "missed_positive_pairs": 0,
+        "retrieved_negative_pairs": 27,
+        "filtered_negative_pairs": 0,
+        "retrieved_diagnostic_pairs": 3
+      },
+      "metrics": {
+        "candidate_recall": 1.0,
+        "candidate_precision": 0.4807692307692308,
+        "retention_rate_primary": 1.0,
+        "reduction_ratio_primary": 0.0,
+        "workload_retained_total": 1.0,
+        "workload_reduction_total": 0.0,
+        "actionable_yield_total": 0.45454545454545453
+      },
+      "diagnostics": {
+        "OUT_OF_SCHEMA_RELATION": {
+          "support": 3,
+          "selected": 3,
+          "omitted": 0,
+          "selection_rate": 1.0
+        },
+        "AMBIGUOUS": {
+          "support": 0,
+          "selected": 0,
+          "omitted": 0,
+          "selection_rate": null
+        }
+      }
+    },
+    {
+      "lecture_id": "graph_algorithms_001",
+      "counts": {
+        "total_pairs": 45,
+        "primary_pairs": 45,
+        "positive_pairs": 21,
+        "negative_pairs": 24,
+        "diagnostic_pairs": 0,
+        "retrieved_pairs": 45,
+        "retrieved_primary_pairs": 45,
+        "retrieved_positive_pairs": 21,
+        "missed_positive_pairs": 0,
+        "retrieved_negative_pairs": 24,
+        "filtered_negative_pairs": 0,
+        "retrieved_diagnostic_pairs": 0
+      },
+      "metrics": {
+        "candidate_recall": 1.0,
+        "candidate_precision": 0.4666666666666667,
+        "retention_rate_primary": 1.0,
+        "reduction_ratio_primary": 0.0,
+        "workload_retained_total": 1.0,
+        "workload_reduction_total": 0.0,
+        "actionable_yield_total": 0.4666666666666667
+      },
+      "diagnostics": {
+        "OUT_OF_SCHEMA_RELATION": {
+          "support": 0,
+          "selected": 0,
+          "omitted": 0,
+          "selection_rate": null
+        },
+        "AMBIGUOUS": {
+          "support": 0,
+          "selected": 0,
+          "omitted": 0,
+          "selection_rate": null
+        }
+      }
+    },
+    {
+      "lecture_id": "numerical_root_finding_001",
+      "counts": {
+        "total_pairs": 21,
+        "primary_pairs": 20,
+        "positive_pairs": 9,
+        "negative_pairs": 11,
+        "diagnostic_pairs": 1,
+        "retrieved_pairs": 21,
+        "retrieved_primary_pairs": 20,
+        "retrieved_positive_pairs": 9,
+        "missed_positive_pairs": 0,
+        "retrieved_negative_pairs": 11,
+        "filtered_negative_pairs": 0,
+        "retrieved_diagnostic_pairs": 1
+      },
+      "metrics": {
+        "candidate_recall": 1.0,
+        "candidate_precision": 0.45,
+        "retention_rate_primary": 1.0,
+        "reduction_ratio_primary": 0.0,
+        "workload_retained_total": 1.0,
+        "workload_reduction_total": 0.0,
+        "actionable_yield_total": 0.42857142857142855
+      },
+      "diagnostics": {
+        "OUT_OF_SCHEMA_RELATION": {
+          "support": 1,
+          "selected": 1,
+          "omitted": 0,
+          "selection_rate": 1.0
+        },
+        "AMBIGUOUS": {
+          "support": 0,
+          "selected": 0,
+          "omitted": 0,
+          "selection_rate": null
+        }
+      }
+    },
+    {
+      "lecture_id": "statistics_estimation_001",
+      "counts": {
+        "total_pairs": 55,
+        "primary_pairs": 54,
+        "positive_pairs": 25,
+        "negative_pairs": 29,
+        "diagnostic_pairs": 1,
+        "retrieved_pairs": 55,
+        "retrieved_primary_pairs": 54,
+        "retrieved_positive_pairs": 25,
+        "missed_positive_pairs": 0,
+        "retrieved_negative_pairs": 29,
+        "filtered_negative_pairs": 0,
+        "retrieved_diagnostic_pairs": 1
+      },
+      "metrics": {
+        "candidate_recall": 1.0,
+        "candidate_precision": 0.46296296296296297,
+        "retention_rate_primary": 1.0,
+        "reduction_ratio_primary": 0.0,
+        "workload_retained_total": 1.0,
+        "workload_reduction_total": 0.0,
+        "actionable_yield_total": 0.45454545454545453
+      },
+      "diagnostics": {
+        "OUT_OF_SCHEMA_RELATION": {
+          "support": 1,
+          "selected": 1,
+          "omitted": 0,
+          "selection_rate": 1.0
+        },
+        "AMBIGUOUS": {
+          "support": 0,
+          "selected": 0,
+          "omitted": 0,
+          "selection_rate": null
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "artifact_type": "candidate_pair_generation_per_relation_metrics",
+  "version": "v0.1",
+  "evaluation_status": "final",
+  "scoring_unit": "positive_pair_with_secondary_relation_instance_coverage",
+  "relations": [
+    {
+      "relation_type": "REQUIRES",
+      "positive_pair_support": 39,
+      "selected_positive_pairs": 39,
+      "candidate_recall": 1.0,
+      "relation_instance_support": 39,
+      "selected_relation_instances": 39,
+      "relation_instance_coverage": 1.0
+    },
+    {
+      "relation_type": "APPLIED_IN",
+      "positive_pair_support": 23,
+      "selected_positive_pairs": 23,
+      "candidate_recall": 1.0,
+      "relation_instance_support": 23,
+      "selected_relation_instances": 23,
+      "relation_instance_coverage": 1.0
+    },
+    {
+      "relation_type": "EXTENDS",
+      "positive_pair_support": 5,
+      "selected_positive_pairs": 5,
+      "candidate_recall": 1.0,
+      "relation_instance_support": 5,
+      "selected_relation_instances": 5,
+      "relation_instance_coverage": 1.0
+    },
+    {
+      "relation_type": "CONTRASTS_WITH",
+      "positive_pair_support": 1,
+      "selected_positive_pairs": 1,
+      "candidate_recall": 1.0,
+      "relation_instance_support": 1,
+      "selected_relation_instances": 1,
+      "relation_instance_coverage": 1.0
+    },
+    {
+      "relation_type": "FORMALIZES",
+      "positive_pair_support": 10,
+      "selected_positive_pairs": 10,
+      "candidate_recall": 1.0,
+      "relation_instance_support": 10,
+      "selected_relation_instances": 10,
+      "relation_instance_coverage": 1.0
+    },
+    {
+      "relation_type": "RELATED_TO",
+      "positive_pair_support": 2,
+      "selected_positive_pairs": 2,
+      "candidate_recall": 1.0,
+      "relation_instance_support": 2,
+      "selected_relation_instances": 2,
+      "relation_instance_coverage": 1.0
+    }
+  ]
+}

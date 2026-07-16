@@ -1,0 +1,84 @@
+{
+  "artifact_type": "candidate_pair_generation_evaluation_complete",
+  "version": "v0.1",
+  "evaluation_status": "final",
+  "inputs": {
+    "pair_universe": {
+      "path": "benchmark/candidate_pairs/development_v0_1/pair_universe.json",
+      "sha256": "d0c756b3e5533fac1e02c0aa5c1446cb78d206f21232e020ab0b5cb23b2bad84"
+    },
+    "pair_universe_completion_marker": {
+      "path": "benchmark/candidate_pairs/development_v0_1/pair_universe_complete.json",
+      "sha256": "bc655e71b03dd3beb50f5efc38464bb4ba5c7a5a1790d9d6dd206ad2465fa565"
+    },
+    "ground_truth": {
+      "path": "benchmark/ground_truth/candidate_pairs_development_v0_1.json",
+      "sha256": "a25e5c9568b090fc97fd03ce0462fda608f62d88bd5b62f9b8d2db40530a133d"
+    },
+    "ground_truth_completion_marker": {
+      "path": "benchmark/ground_truth/candidate_pairs_development_v0_1_complete.json",
+      "sha256": "8c1a07bba5e4b3f1fb0ef71b72bfc744d0ff75569008f94308ba885114de0f73"
+    },
+    "success_criteria": {
+      "path": "benchmark/candidate_pair_generation_success_criteria_v0_1.json",
+      "sha256": "79c0f044c16077843ee74a07bf12c7e2638b10c2afd2fe05e96ca195105d4628"
+    },
+    "candidate_selection": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/development_v0_1/all_pairs/run_01/candidate_pairs.json",
+      "sha256": "4fd1a8acffcf6b5d8a95a8502bbdab38053402f6ced47f1644e8347e66584c6f"
+    },
+    "candidate_metadata": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/development_v0_1/all_pairs/run_01/metadata.json",
+      "sha256": "35e3dcaf366a8fb96975699518c126ebc71a319f3445d7997945e7d5a895c03b"
+    },
+    "candidate_completion_marker": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/development_v0_1/all_pairs/run_01/candidate_generation_complete.json",
+      "sha256": "0a2bc7ad43d6999ddf23d915204d49b594c567f891f1065ef450dee1ee41c8d4"
+    },
+    "output_schema": {
+      "path": "benchmark/schema/candidate_pair_generation_output.schema.json",
+      "sha256": "3927402e2907fa994930b8d9a6b8cd79735932005f5179dc2e20133959926ac6"
+    }
+  },
+  "evaluator": {
+    "path": "scripts/evaluate_candidate_pair_generation.py",
+    "sha256": "4c3643168985af86c4adf8eb2c2f999d3e1d6bf8c0dc235b706ea860e8ed8dc7",
+    "version": "candidate_pair_generation_evaluator_v0.1"
+  },
+  "outputs": {
+    "metrics": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/development_v0_1/all_pairs/run_01/evaluation/metrics.json",
+      "sha256": "ab135909bba8a14a9fa4fc20478f7a7b52b0924710ca907a182c2210498ad278"
+    },
+    "matches": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/development_v0_1/all_pairs/run_01/evaluation/matches.json",
+      "sha256": "efa3cb6fecb4275ccfccb3ef363e5c7934dfd1ab2192f5dd18e42d940667d87e"
+    },
+    "errors": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/development_v0_1/all_pairs/run_01/evaluation/errors.json",
+      "sha256": "14c46115f63cd0f25ffe3d6424ef6afaf2e98518a8cc8f9fe6d38ee353327811"
+    },
+    "per_relation_metrics": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/development_v0_1/all_pairs/run_01/evaluation/per_relation_metrics.json",
+      "sha256": "f57b573892de1e2f7272ce97b5b698cae805bb920935867966c3b728944984f2"
+    },
+    "per_lecture_metrics": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/development_v0_1/all_pairs/run_01/evaluation/per_lecture_metrics.json",
+      "sha256": "56da6951cfd178068c5241ecb9d81f4787aad05466559c56cdae87386f94f4d2"
+    }
+  },
+  "counts": {
+    "total_pairs": 176,
+    "primary_pairs": 171,
+    "positive_pairs": 80,
+    "negative_pairs": 91,
+    "diagnostic_pairs": 5,
+    "retrieved_pairs": 176,
+    "retrieved_primary_pairs": 171,
+    "retrieved_positive_pairs": 80,
+    "missed_positive_pairs": 0,
+    "retrieved_negative_pairs": 91,
+    "filtered_negative_pairs": 0,
+    "retrieved_diagnostic_pairs": 5
+  }
+}

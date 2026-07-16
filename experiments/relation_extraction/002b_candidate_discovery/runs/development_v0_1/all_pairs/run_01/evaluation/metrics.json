@@ -1,0 +1,65 @@
+{
+  "artifact_type": "candidate_pair_generation_metrics",
+  "version": "v0.1",
+  "evaluation_status": "final",
+  "benchmark_split": "development",
+  "generator": {
+    "id": "all_pairs_v0_1",
+    "name": "all_pairs",
+    "version": "v0.1",
+    "implementation": {
+      "path": "scripts/generate_candidate_pairs.py",
+      "sha256": "8dc848762f153b0a5e72be3da7cee12434ee6bbf105d2246478752d2454dfe33"
+    },
+    "config": {
+      "strategy": "all_pairs",
+      "selection_scope": "complete_pair_universe",
+      "candidate_reasons": [
+        "all_pairs_control"
+      ]
+    },
+    "config_sha256": "6700e7bf38de9d65af775f3393935ec75fc0c37d0129d54837f48141b27ac7b3"
+  },
+  "counts": {
+    "total_pairs": 176,
+    "primary_pairs": 171,
+    "positive_pairs": 80,
+    "negative_pairs": 91,
+    "diagnostic_pairs": 5,
+    "retrieved_pairs": 176,
+    "retrieved_primary_pairs": 171,
+    "retrieved_positive_pairs": 80,
+    "missed_positive_pairs": 0,
+    "retrieved_negative_pairs": 91,
+    "filtered_negative_pairs": 0,
+    "retrieved_diagnostic_pairs": 5
+  },
+  "metrics": {
+    "candidate_recall": 1.0,
+    "candidate_precision": 0.4678362573099415,
+    "retention_rate_primary": 1.0,
+    "reduction_ratio_primary": 0.0,
+    "workload_retained_total": 1.0,
+    "workload_reduction_total": 0.0,
+    "actionable_yield_total": 0.45454545454545453
+  },
+  "diagnostics": {
+    "OUT_OF_SCHEMA_RELATION": {
+      "support": 5,
+      "selected": 5,
+      "omitted": 0,
+      "selection_rate": 1.0
+    },
+    "AMBIGUOUS": {
+      "support": 0,
+      "selected": 0,
+      "omitted": 0,
+      "selection_rate": null
+    }
+  },
+  "gate_assessment": {
+    "applicable": false,
+    "outcome": "not_applicable_control",
+    "reason": "All Pairs is the control and is not required to satisfy the Rule-Filtered workload-reduction gate."
+  }
+}

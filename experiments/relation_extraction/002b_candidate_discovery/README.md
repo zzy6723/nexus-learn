@@ -1,6 +1,6 @@
 # Experiment 002B-2: Candidate Pair Generation under Predicted KOs
 
-**Status:** Development benchmark frozen; generator implementation pending
+**Status:** All-Pairs development control completed; Rule-Filtered method pending
 **Stage:** Technical Validation
 **Predecessor:** Experiment 002B-1 completed
 
@@ -105,8 +105,25 @@ annotations have been reviewed and finalized:
 - 0 `AMBIGUOUS`.
 
 The checker passes the artifact in final mode, and the Ground Truth completion
-marker binds the frozen snapshot. Eighteen pair-universe and checker regression
-tests pass. No Candidate Generator has been implemented or scored.
+marker binds the frozen snapshot. The deterministic All-Pairs generator and
+Candidate Generation evaluator are now implemented and validated. The formal
+development control selected all 176 pairs and reproduced the expected frozen
+denominators exactly.
+
+Current Candidate Generation infrastructure:
+
+- `benchmark/schema/candidate_pair_generation_output.schema.json`;
+- `scripts/generate_candidate_pairs.py`;
+- `scripts/evaluate_candidate_pair_generation.py`;
+- `tests/test_candidate_pair_generator.py`;
+- `tests/test_candidate_pair_generation_evaluator.py`;
+- `tests/fixtures/candidate_pair_generation/`;
+- `all_pairs_control.md`;
+- `runs/development_v0_1/all_pairs/run_01/`.
+
+Thirty-one pair-universe, Ground Truth, generator, and evaluator regression
+tests pass together. A Rule-Filtered generator has not yet been implemented or
+selected.
 
 ## Inputs
 
@@ -129,13 +146,40 @@ The generator must not receive:
 
 ```json
 {
-  "artifact_type": "candidate_pair_manifest",
+  "artifact_type": "candidate_pair_selection",
   "version": "v0.1",
-  "generator_id": "all_pairs_v0_1",
-  "inventory_sha256": "...",
-  "pairs": [
+  "benchmark_split": "development",
+  "scope": "lecture_local_unordered_nonself",
+  "selection_order": "pair_universe_order",
+  "generator": {
+    "id": "all_pairs_v0_1",
+    "name": "all_pairs",
+    "version": "v0.1",
+    "implementation": {
+      "path": "scripts/generate_candidate_pairs.py",
+      "sha256": "..."
+    },
+    "config": {
+      "strategy": "all_pairs",
+      "selection_scope": "complete_pair_universe",
+      "candidate_reasons": ["all_pairs_control"]
+    },
+    "config_sha256": "..."
+  },
+  "pair_universe": {
+    "path": "benchmark/candidate_pairs/development_v0_1/pair_universe.json",
+    "sha256": "..."
+  },
+  "source_inventory": {
+    "path": "...",
+    "sha256": "...",
+    "normalized_content_sha256": "..."
+  },
+  "selected_pair_count": 176,
+  "selected_pairs": [
     {
-      "candidate_pair_id": "cand_dev_001",
+      "pair_id": "cand_dev_001",
+      "lecture_id": "lecture_001",
       "ko_a": {
         "lecture_id": "lecture_001",
         "ko_id": "pred_ko_001"
@@ -144,8 +188,7 @@ The generator must not receive:
         "lecture_id": "lecture_001",
         "ko_id": "pred_ko_004"
       },
-      "candidate_reasons": ["same_lecture"],
-      "generator_version": "v0.1"
+      "candidate_reasons": ["all_pairs_control"]
     }
   ]
 }
@@ -258,13 +301,27 @@ candidate metric denominator.
 11. Construct and annotate a lecture-disjoint holdout.
 12. Run both generators and produce the final comparison.
 
+## All-Pairs Control Result
+
+The formal control is final and hash-bound:
+
+- selected pairs: `176 / 176`;
+- candidate recall: `80 / 80 = 1.0`;
+- primary candidate precision: `80 / 171 = 0.4678362573`;
+- primary retention: `171 / 171 = 1.0`;
+- total workload retention: `176 / 176 = 1.0`;
+- total workload reduction: `0.0`;
+- diagnostics selected: `5 / 5`.
+
+This validates the Candidate Generation evaluator and establishes the maximum
+workload control. It does not select All Pairs as the final generator and does
+not constitute downstream Relation Classification evidence. See
+`all_pairs_control.md` for the formal record.
+
 ## Immediate Next Gate
 
-Implement the deterministic All-Pairs generator and candidate-evaluator
-fixtures against the frozen development snapshot. Generation code must use only
-the model-visible predicted-KO and lecture artifacts; it must not read Ground
-Truth labels, Evidence, rationales, or the 002B-1 alignment.
-
-After the All-Pairs control reproduces all 176 pair IDs exactly, implement one
-predeclared Rule-Filtered method and compare candidate metrics without calling
-the Relation API.
+Specify one general deterministic Rule-Filtered v0.1 method using only
+model-visible KO and lecture fields, freeze its configuration, and evaluate it
+against the same 176-pair development snapshot. Do not call the Relation API
+until the candidate-layer comparison has established whether any filtered
+method passes the frozen recall and reduction gates.

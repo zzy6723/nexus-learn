@@ -1,0 +1,44 @@
+{
+  "artifact_type": "candidate_pair_generation_complete",
+  "version": "v0.1",
+  "status": "final",
+  "artifacts": {
+    "candidate_selection": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/development_v0_1/all_pairs/run_01/candidate_pairs.json",
+      "sha256": "4fd1a8acffcf6b5d8a95a8502bbdab38053402f6ced47f1644e8347e66584c6f"
+    },
+    "metadata": {
+      "path": "experiments/relation_extraction/002b_candidate_discovery/runs/development_v0_1/all_pairs/run_01/metadata.json",
+      "sha256": "35e3dcaf366a8fb96975699518c126ebc71a319f3445d7997945e7d5a895c03b"
+    },
+    "pair_universe": {
+      "path": "benchmark/candidate_pairs/development_v0_1/pair_universe.json",
+      "sha256": "d0c756b3e5533fac1e02c0aa5c1446cb78d206f21232e020ab0b5cb23b2bad84"
+    },
+    "pair_universe_completion_marker": {
+      "path": "benchmark/candidate_pairs/development_v0_1/pair_universe_complete.json",
+      "sha256": "bc655e71b03dd3beb50f5efc38464bb4ba5c7a5a1790d9d6dd206ad2465fa565"
+    },
+    "output_schema": {
+      "path": "benchmark/schema/candidate_pair_generation_output.schema.json",
+      "sha256": "3927402e2907fa994930b8d9a6b8cd79735932005f5179dc2e20133959926ac6"
+    }
+  },
+  "generator": {
+    "id": "all_pairs_v0_1",
+    "version": "v0.1",
+    "implementation": {
+      "path": "scripts/generate_candidate_pairs.py",
+      "sha256": "8dc848762f153b0a5e72be3da7cee12434ee6bbf105d2246478752d2454dfe33"
+    },
+    "config_sha256": "6700e7bf38de9d65af775f3393935ec75fc0c37d0129d54837f48141b27ac7b3"
+  },
+  "counts": {
+    "universe_pairs": 176,
+    "selected_pairs": 176,
+    "missing_universe_pairs": 0,
+    "extra_pairs": 0,
+    "duplicate_pairs": 0,
+    "endpoint_mismatches": 0
+  }
+}
