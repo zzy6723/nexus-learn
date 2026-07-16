@@ -1,6 +1,7 @@
 # Candidate Pair Annotation Guidelines
 
-**Version:** candidate_pair_annotation_v0.1 (Draft)
+**Version:** candidate_pair_annotation_v0.1
+**Status:** Frozen for the 002B-2 development benchmark
 **Experiment:** 002B-2 Candidate Pair Generation under Predicted KOs
 **Scope:** lecture-local, unordered, non-self predicted-KO pairs
 

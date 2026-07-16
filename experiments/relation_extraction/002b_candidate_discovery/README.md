@@ -1,6 +1,6 @@
 # Experiment 002B-2: Candidate Pair Generation under Predicted KOs
 
-**Status:** Pair universe and strict checker complete; exhaustive annotation pending
+**Status:** Development benchmark frozen; generator implementation pending
 **Stage:** Technical Validation
 **Predecessor:** Experiment 002B-1 completed
 
@@ -87,19 +87,26 @@ Artifacts:
 - `benchmark/candidate_pairs/development_v0_1/pair_universe.json`;
 - `benchmark/candidate_pairs/development_v0_1/pair_universe_complete.json`;
 - `benchmark/ground_truth/candidate_pairs_development_v0_1.json`;
+- `benchmark/ground_truth/candidate_pairs_development_v0_1_complete.json`;
 - `benchmark/candidate_pair_annotation_guidelines.md`;
 - `benchmark/schema/candidate_pair_universe.schema.json`;
 - `benchmark/schema/candidate_pair_ground_truth.schema.json`;
-- `benchmark/candidate_pair_generation_success_criteria_v0_1.json`.
+- `benchmark/candidate_pair_generation_success_criteria_v0_1.json`;
 - `scripts/check_candidate_pair_ground_truth.py`;
 - `tests/test_candidate_pair_ground_truth_checker.py`;
 - `tests/fixtures/candidate_pair_ground_truth/`.
 
-The pair universe is structurally complete and hash-bound. The ground-truth
-artifact is intentionally still a draft: all 176 labels require manual review.
-The checker passes this artifact in draft mode and rejects it in final mode.
-Seventeen pair-universe and checker regression tests pass. No Candidate Generator
-has been implemented or scored.
+The pair universe is structurally complete and hash-bound. All 176 Ground Truth
+annotations have been reviewed and finalized:
+
+- 80 `IN_SCHEMA_RELATION`;
+- 91 `NO_IN_SCHEMA_RELATION`;
+- 5 `OUT_OF_SCHEMA_RELATION`;
+- 0 `AMBIGUOUS`.
+
+The checker passes the artifact in final mode, and the Ground Truth completion
+marker binds the frozen snapshot. Eighteen pair-universe and checker regression
+tests pass. No Candidate Generator has been implemented or scored.
 
 ## Inputs
 
@@ -253,16 +260,11 @@ candidate metric denominator.
 
 ## Immediate Next Gate
 
-Annotate one lecture at a time without inspecting Candidate Generator outputs.
-After each batch, run:
+Implement the deterministic All-Pairs generator and candidate-evaluator
+fixtures against the frozen development snapshot. Generation code must use only
+the model-visible predicted-KO and lecture artifacts; it must not read Ground
+Truth labels, Evidence, rationales, or the 002B-1 alignment.
 
-```bash
-python3 scripts/check_candidate_pair_ground_truth.py \
-  --pair-universe benchmark/candidate_pairs/development_v0_1/pair_universe.json \
-  --ground-truth benchmark/ground_truth/candidate_pairs_development_v0_1.json \
-  --allow-draft
-```
-
-After all annotations and reviews are final, change top-level `status` to
-`frozen`, run the checker without `--allow-draft`, and write the completion
-marker. Do not implement or score a Candidate Generator before that final gate.
+After the All-Pairs control reproduces all 176 pair IDs exactly, implement one
+predeclared Rule-Filtered method and compare candidate metrics without calling
+the Relation API.

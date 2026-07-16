@@ -1,0 +1,68 @@
+{
+  "artifact_type": "candidate_pair_ground_truth_complete",
+  "version": "v0.1",
+  "completion_status": "final",
+  "artifacts": {
+    "pair_universe": {
+      "path": "benchmark/candidate_pairs/development_v0_1/pair_universe.json",
+      "sha256": "d0c756b3e5533fac1e02c0aa5c1446cb78d206f21232e020ab0b5cb23b2bad84"
+    },
+    "ground_truth": {
+      "path": "benchmark/ground_truth/candidate_pairs_development_v0_1.json",
+      "sha256": "a25e5c9568b090fc97fd03ce0462fda608f62d88bd5b62f9b8d2db40530a133d"
+    },
+    "pair_universe_completion_marker": {
+      "path": "benchmark/candidate_pairs/development_v0_1/pair_universe_complete.json",
+      "sha256": "bc655e71b03dd3beb50f5efc38464bb4ba5c7a5a1790d9d6dd206ad2465fa565"
+    },
+    "annotation_guidelines": {
+      "path": "benchmark/candidate_pair_annotation_guidelines.md",
+      "version": "candidate_pair_annotation_v0.1",
+      "sha256": "67a6b321c6218ed86dfb2d4613e56f268b980dbff337e89226dc516c671adcb5"
+    },
+    "relation_annotation_guidelines": {
+      "path": "benchmark/relation_annotation_guidelines.md",
+      "version": "relation_annotation_v0.1",
+      "sha256": "532435693120aedb3041385783cf8598c72d6c247acf06895657150eb38338c7"
+    },
+    "evaluation_protocol": {
+      "path": "benchmark/candidate_pair_generation_protocol.md",
+      "version": "candidate_pair_evaluation_v0.1",
+      "sha256": "137b5a97191af68578db359d2c75044d7b6fb90a4c1da286349cbffd43f3e6f8"
+    },
+    "success_criteria": {
+      "path": "benchmark/candidate_pair_generation_success_criteria_v0_1.json",
+      "version": "candidate_pair_success_criteria_v0.1",
+      "sha256": "79c0f044c16077843ee74a07bf12c7e2638b10c2afd2fe05e96ca195105d4628"
+    },
+    "pair_universe_schema": {
+      "path": "benchmark/schema/candidate_pair_universe.schema.json",
+      "version": "candidate_pair_universe_v0.1",
+      "sha256": "b9eb5ccf3a7be12f0c99e0dd7b0d63b75a3e9fca60b07f3ce6768fe580e7425f"
+    },
+    "ground_truth_schema": {
+      "path": "benchmark/schema/candidate_pair_ground_truth.schema.json",
+      "version": "candidate_pair_ground_truth_v0.1",
+      "sha256": "42323f9a2c1665371fddb877a8b1ef967d60605c78bb116973edb554ca0cf132"
+    }
+  },
+  "checker": {
+    "path": "scripts/check_candidate_pair_ground_truth.py",
+    "sha256": "0165db817e5482b09f4d3d15171cdb9edfffd24389ed5a8d6df4635f0b0d065a",
+    "version": "candidate_pair_ground_truth_checker_v0.1"
+  },
+  "counts": {
+    "total_pairs": 176,
+    "labels": {
+      "IN_SCHEMA_RELATION": 80,
+      "NO_IN_SCHEMA_RELATION": 91,
+      "OUT_OF_SCHEMA_RELATION": 5
+    },
+    "annotation_statuses": {
+      "final": 176
+    },
+    "primary_denominator": 171,
+    "diagnostic_denominator": 5,
+    "pending_workflow_items": 0
+  }
+}

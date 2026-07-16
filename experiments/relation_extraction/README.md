@@ -15,8 +15,8 @@ Experiment status:
 
 - Experiment 002A, Oracle-KO Typed Relation Extraction: completed;
 - Experiment 002B-1, controlled predicted-KO pipeline coupling: completed;
-- Experiment 002B-2, Candidate Pair Generation under predicted KOs: benchmark
-  construction pending;
+- Experiment 002B-2, Candidate Pair Generation under predicted KOs: development
+  benchmark frozen; generator implementation pending;
 - Experiment 002C, KO Resolution / Canonicalization: pending.
 
 The current implementation focus is Experiment 002B-2. Its definition is in:
@@ -275,20 +275,19 @@ classifier for subsequent Technical Validation. Experiment 002B-1 established
 how predicted-KO errors propagate when the candidate pair universe is supplied;
 it did not generate candidate pairs.
 
-The next experiment is 002B-2. Before implementing a generator, it must create a
-complete annotated pair universe for a deliberately small lecture-local scope.
-The existing 40-pair Relation holdout is a selected classification benchmark,
-not an exhaustive annotation of every possible KO pair, and therefore cannot be
-used to calculate candidate precision.
+Experiment 002B-2 now has a frozen, exhaustive development benchmark over 39
+predicted KOs and all 176 lecture-local unordered pairs. It contains 80
+in-schema positives, 91 primary negatives, and 5 out-of-schema diagnostics; all
+annotations pass the strict checker in final mode and are bound by the Ground
+Truth completion marker.
 
-The deterministic 176-pair universe, draft/final strict checker, and synthetic
-checker fixtures are complete. The remaining gates are:
+The remaining gates are:
 
-1. annotate and review each lecture batch as `IN_SCHEMA_RELATION`,
-   `NO_IN_SCHEMA_RELATION`, `AMBIGUOUS`, or `OUT_OF_SCHEMA_RELATION`;
-2. pass the checker in final mode and create the ground-truth completion marker;
-3. compare All-Pairs and Rule-Filtered baselines;
-4. freeze the selected generator and evaluate it on a lecture-disjoint holdout.
+1. implement and verify the All-Pairs control;
+2. implement one deterministic Rule-Filtered method;
+3. compare candidate metrics without calling the Relation API;
+4. run the frozen Relation classifier for the downstream comparison;
+5. freeze the selected generator and evaluate it on a lecture-disjoint holdout.
 
 Cross-lecture mention resolution and canonical IDs remain Experiment 002C.
 Learner-facing Connection ranking remains Experiment 003.

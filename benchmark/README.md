@@ -48,7 +48,8 @@ benchmark/
 │   ├── relation_holdout_knowledge_objects_v0_1.json
 │   ├── relations_development_v0_1.json
 │   ├── relations_holdout_v0_1.json
-│   └── candidate_pairs_development_v0_1.json
+│   ├── candidate_pairs_development_v0_1.json
+│   └── candidate_pairs_development_v0_1_complete.json
 └── results/
 ```
 
@@ -176,9 +177,9 @@ predicted-KO inventory:
 - 176 exhaustive unordered non-self pairs.
 
 `candidate_pairs/development_v0_1/pair_universe.json` is deterministic and
-hash-bound. `ground_truth/candidate_pairs_development_v0_1.json` is a separate
-draft scaffold with 176 unlabelled annotations. It is not frozen ground truth
-and cannot yet support Candidate Generator evaluation.
+hash-bound. `ground_truth/candidate_pairs_development_v0_1.json` is now the
+frozen exhaustive annotation over all 176 pairs: 80 in-schema positives, 91
+primary negatives, and 5 out-of-schema diagnostics.
 
 The pair universe also binds the complete model-facing lecture inventory and
 its SHA-256, allowing exact Evidence validation without reading mutable external
@@ -188,17 +189,17 @@ text. Draft and final validation are implemented in:
 - `tests/test_candidate_pair_ground_truth_checker.py`;
 - `tests/fixtures/candidate_pair_ground_truth/`.
 
-The real scaffold currently passes `--allow-draft` with 176 pending items and
-zero structural errors. Final mode intentionally rejects it until every item is
-reviewed and the top-level status is frozen.
+The Ground Truth passes the strict checker in final mode with no pending items
+or structural errors. Its completion marker binds the final file hash and the
+frozen annotation, Relation, evaluation, success-criteria, and schema inputs.
 
 The existing 40-pair Relation holdout is not an exhaustive annotation of all
 possible pairs among its Knowledge Objects. Unlisted pairs must not be treated
 as `NO_RELATION`, and candidate precision, reduction, or all-pairs edge recall
 must not be calculated from that selected benchmark. Experiment 002B-2 requires
-a separately versioned complete pair universe. That universe now exists for
-development; exhaustive semantic annotation and strict validation remain
-pending. The checker infrastructure itself is complete.
+a separately versioned complete pair universe. That development universe and
+its exhaustive semantic annotation are now complete and frozen. Candidate
+Generator implementation and evaluation are the next gates.
 
 ---
 

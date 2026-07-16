@@ -2,7 +2,7 @@
   "artifact_type": "candidate_pair_ground_truth",
   "version": "v0.1",
   "benchmark_split": "development",
-  "status": "draft_annotation_required",
+  "status": "frozen",
   "pair_universe": {
     "path": "benchmark/candidate_pairs/development_v0_1/pair_universe.json",
     "sha256": "d0c756b3e5533fac1e02c0aa5c1446cb78d206f21232e020ab0b5cb23b2bad84"
@@ -21,7 +21,7 @@
   "annotation_guidelines": {
     "path": "benchmark/candidate_pair_annotation_guidelines.md",
     "version": "candidate_pair_annotation_v0.1",
-    "sha256": "121c8e906db27065f838b429af70eef0a12cf724c5375f8fec1bc6bfc5c06e6c"
+    "sha256": "67a6b321c6218ed86dfb2d4613e56f268b980dbff337e89226dc516c671adcb5"
   },
   "relation_annotation_guidelines": {
     "path": "benchmark/relation_annotation_guidelines.md",
@@ -30,13 +30,13 @@
   },
   "evaluation_protocol": {
     "path": "benchmark/candidate_pair_generation_protocol.md",
-    "version": "candidate_pair_evaluation_v0.1-draft",
-    "sha256": "f2d0586d1db9d78224837e50603603c0b18307e9c0c39f486b028493d6c3b9d1"
+    "version": "candidate_pair_evaluation_v0.1",
+    "sha256": "137b5a97191af68578db359d2c75044d7b6fb90a4c1da286349cbffd43f3e6f8"
   },
   "success_criteria": {
     "path": "benchmark/candidate_pair_generation_success_criteria_v0_1.json",
     "version": "candidate_pair_success_criteria_v0.1",
-    "sha256": "d177429de5d8c71f65e1a1f401d9300fbaf9ce9ee78d8c196e7f380dbb1fc28f"
+    "sha256": "79c0f044c16077843ee74a07bf12c7e2638b10c2afd2fe05e96ca195105d4628"
   },
   "schema_bindings": {
     "pair_universe": {
@@ -71,1201 +71,2602 @@
   "annotations": [
     {
       "pair_id": "cand_dev_001",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "Discretization error is discussed through step size, not directly through the Euler Predictor object.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_002",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The lecture does not directly relate discretization error to the First-Order Equation object.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_003",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The error statement is tied to smaller step sizes and does not directly type a Relation to the Forward Euler Method.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_004",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The Forward Euler update contains the step size, but its Relation to discretization error would be mediated by that third object.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_005",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The lecture does not directly relate discretization error to Heun's Method.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_006",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The lecture does not directly relate discretization error to Heun's Update.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_007",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "An initial value problem is the problem context, while discretization error is discussed only as an effect of step size.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_008",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The lecture supplies no direct frozen Relation between discretization error and the Ordinary Differential Equation object.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_009",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "OUT_OF_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
-      "out_of_schema_relation": null,
+      "out_of_schema_relation": {
+        "relation_description": "Reducing the step size usually reduces discretization error while increasing the number of updates.",
+        "schema_exclusion_rationale": "The frozen schema has no causal or trade-off Relation such as AFFECTS or CONTROLS; RELATED_TO would discard the explicit direction of influence.",
+        "evidence_spans": [
+          {
+            "lecture_id": "differential_equations_001",
+            "span": "The step size \\(h\\) sets the spacing between consecutive numerical time points."
+          },
+          {
+            "lecture_id": "differential_equations_001",
+            "span": "Smaller steps usually reduce discretization error but require more updates over a fixed time interval."
+          }
+        ]
+      },
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_010",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The vector field supplies slopes, while discretization error is linked to step size; no direct Relation between the pair is stated.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_011",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The predictor uses the same vector-field notation as the first-order equation, but the lecture does not directly type a Relation between these two objects.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_012",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "OUT_OF_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
-      "out_of_schema_relation": null,
+      "out_of_schema_relation": {
+        "relation_description": "The Euler predictor is a Forward Euler step used as the predictor inside Heun's method.",
+        "schema_exclusion_rationale": "The frozen schema has no instance-of or reuses-step Relation for linking a predictor object to the method whose step it instantiates.",
+        "evidence_spans": [
+          {
+            "lecture_id": "differential_equations_001",
+            "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope."
+          },
+          {
+            "lecture_id": "differential_equations_001",
+            "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+          },
+          {
+            "lecture_id": "differential_equations_001",
+            "span": "It first forms the Euler predictor"
+          },
+          {
+            "lecture_id": "differential_equations_001",
+            "span": "\\widetilde{y}_{n+1} = y_n + hF(t_n,y_n),"
+          }
+        ]
+      },
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_013",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "OUT_OF_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
-      "out_of_schema_relation": null,
+      "out_of_schema_relation": {
+        "relation_description": "The Euler predictor reuses the algebraic structure of the Forward Euler update in an intermediate predictor role.",
+        "schema_exclusion_rationale": "The objects are not duplicate mentions, and the frozen schema has no SAME_UPDATE_STRUCTURE or REUSES_FORMULA Relation.",
+        "evidence_spans": [
+          {
+            "lecture_id": "differential_equations_001",
+            "span": "Its update is"
+          },
+          {
+            "lecture_id": "differential_equations_001",
+            "span": "y_{n+1} = y_n + hF(t_n,y_n)."
+          },
+          {
+            "lecture_id": "differential_equations_001",
+            "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+          },
+          {
+            "lecture_id": "differential_equations_001",
+            "span": "It first forms the Euler predictor"
+          },
+          {
+            "lecture_id": "differential_equations_001",
+            "span": "\\widetilde{y}_{n+1} = y_n + hF(t_n,y_n),"
+          }
+        ]
+      },
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_014",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "APPLIED_IN",
+          "source": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "euler_predictor"
+          },
+          "target": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "heuns_method"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "It first forms the Euler predictor"
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "\\widetilde{y}_{n+1} = y_n + hF(t_n,y_n),"
+            }
+          ],
+          "rationale": "Heun's method explicitly forms the Euler predictor as its predictor step."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_015",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "heuns_update"
+          },
+          "target": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "euler_predictor"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "It first forms the Euler predictor"
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "\\widetilde{y}_{n+1} = y_n + hF(t_n,y_n),"
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "then averages the slope at the current point with the slope at the predicted point."
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "The corrected update is"
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "y_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right)."
+            }
+          ],
+          "rationale": "The corrected Heun update explicitly evaluates the vector field at the predicted state, so the Euler Predictor is required to state the update."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_016",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The Euler Predictor is used within Heun's method; its connection to the Initial Value Problem is not directly stated for this pair.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_017",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The Euler Predictor is an intermediate numerical step, and the lecture does not directly type it against the generic Ordinary Differential Equation object.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_018",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "euler_predictor"
+          },
+          "target": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "step_size"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "The step size \\(h\\) sets the spacing between consecutive numerical time points."
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "It first forms the Euler predictor"
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "\\widetilde{y}_{n+1} = y_n + hF(t_n,y_n),"
+            }
+          ],
+          "rationale": "The Euler predictor contains h, which the lecture defines as the step size."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_019",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "euler_predictor"
+          },
+          "target": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "vector_field"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "The vector field \\(F\\) specifies the slope that the solution should follow at each state."
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "It first forms the Euler predictor"
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "\\widetilde{y}_{n+1} = y_n + hF(t_n,y_n),"
+            }
+          ],
+          "rationale": "The Euler predictor evaluates the vector field F at the current state."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_020",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "Forward Euler is explicitly applied to an Initial Value Problem, but the lecture does not directly type the method against the First-Order Equation object.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_021",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "forward_euler_update"
+          },
+          "target": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "first_order_equation"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "A first-order equation can be written as"
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "y'(t) = F(t,y(t))."
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope."
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "Its update is"
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "y_{n+1} = y_n + hF(t_n,y_n)."
+            }
+          ],
+          "rationale": "The Euler update advances a state using the right-hand side F introduced by the first-order equation."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_022",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "Heun's method is introduced as an extension of Forward Euler; the text does not directly type it against the First-Order Equation object.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_023",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "heuns_update"
+          },
+          "target": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "first_order_equation"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "A first-order equation can be written as"
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "y'(t) = F(t,y(t))."
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "The corrected update is"
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "y_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right)."
+            }
+          ],
+          "rationale": "The Heun update evaluates the right-hand side F supplied by the first-order equation."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_024",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The Initial Value Problem requires an ordinary differential equation, not specifically the First-Order Equation object as a separately stated requirement.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_025",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "EXTENDS",
+          "source": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "first_order_equation"
+          },
+          "target": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "ordinary_differential_equation"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "An ordinary differential equation relates an unknown function of one variable to its derivatives."
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "A first-order equation can be written as"
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "y'(t) = F(t,y(t))."
+            }
+          ],
+          "rationale": "The first-order equation is the more specific form introduced immediately after the general ordinary differential equation concept."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_026",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "Step size belongs to the numerical discretization, not to the definition of the First-Order Equation itself.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_027",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "first_order_equation"
+          },
+          "target": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "vector_field"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "A first-order equation can be written as"
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "y'(t) = F(t,y(t))."
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "The vector field \\(F\\) specifies the slope that the solution should follow at each state."
+            }
+          ],
+          "rationale": "The first-order equation is written using F, whose role is defined by the Vector Field object."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_028",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "FORMALIZES",
+          "source": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "forward_euler_update"
+          },
+          "target": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "forward_euler_method"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope."
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "y_{n+1} = y_n + hF(t_n,y_n)."
+            }
+          ],
+          "rationale": "The displayed update is the formal step performed by the forward Euler method."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
-      "source_annotation": null,
+      "annotation_source": "reused_existing_relation_annotation",
+      "source_annotation": {
+        "source_relation_id": "rel_holdout_015",
+        "source_artifact_path": "benchmark/ground_truth/relations_holdout_v0_1.json",
+        "source_artifact_sha256": "20cf7a8b2aeb76f372e103c59c453bfa15c43732885b6c621af26f5edd427a6f"
+      },
       "notes": null
     },
     {
       "pair_id": "cand_dev_029",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "EXTENDS",
+          "source": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "heuns_method"
+          },
+          "target": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "forward_euler_method"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+            }
+          ],
+          "rationale": "Heun's method preserves the Euler predictor and enriches it with a correction."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
-      "source_annotation": null,
+      "annotation_source": "reused_existing_relation_annotation",
+      "source_annotation": {
+        "source_relation_id": "rel_holdout_009",
+        "source_artifact_path": "benchmark/ground_truth/relations_holdout_v0_1.json",
+        "source_artifact_sha256": "20cf7a8b2aeb76f372e103c59c453bfa15c43732885b6c621af26f5edd427a6f"
+      },
       "notes": null
     },
     {
       "pair_id": "cand_dev_030",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "Heun's Update formalizes Heun's Method; the lecture does not directly assign it a Relation to Forward Euler Method as an endpoint pair.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_031",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "APPLIED_IN",
+          "source": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "forward_euler_method"
+          },
+          "target": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "initial_value_problem"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope."
+            }
+          ],
+          "rationale": "Forward Euler is explicitly presented as a numerical method applied to an initial value problem."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
-      "source_annotation": null,
+      "annotation_source": "reused_existing_relation_annotation",
+      "source_annotation": {
+        "source_relation_id": "rel_holdout_020",
+        "source_artifact_path": "benchmark/ground_truth/relations_holdout_v0_1.json",
+        "source_artifact_sha256": "20cf7a8b2aeb76f372e103c59c453bfa15c43732885b6c621af26f5edd427a6f"
+      },
       "notes": null
     },
     {
       "pair_id": "cand_dev_032",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "Forward Euler is explicitly applied to an Initial Value Problem; a direct Relation to the generic Ordinary Differential Equation object is not separately stated.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_033",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "forward_euler_method"
+          },
+          "target": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "step_size"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope."
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "Its update is"
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "y_{n+1} = y_n + hF(t_n,y_n)."
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "The step size \\(h\\) sets the spacing between consecutive numerical time points."
+            }
+          ],
+          "rationale": "The Forward Euler method's update requires h, which is defined as the step size."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_034",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "APPLIED_IN",
+          "source": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "vector_field"
+          },
+          "target": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "forward_euler_method"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope."
+            }
+          ],
+          "rationale": "Forward Euler uses the current vector-field slope to construct each step."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
-      "source_annotation": null,
+      "annotation_source": "reused_existing_relation_annotation",
+      "source_annotation": {
+        "source_relation_id": "rel_holdout_032",
+        "source_artifact_path": "benchmark/ground_truth/relations_holdout_v0_1.json",
+        "source_artifact_sha256": "20cf7a8b2aeb76f372e103c59c453bfa15c43732885b6c621af26f5edd427a6f"
+      },
       "notes": null
     },
     {
       "pair_id": "cand_dev_035",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "APPLIED_IN",
+          "source": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "forward_euler_update"
+          },
+          "target": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "heuns_method"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "y_{n+1} = y_n + hF(t_n,y_n)."
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "It first forms the Euler predictor"
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "\\widetilde{y}_{n+1} = y_n + hF(t_n,y_n),"
+            }
+          ],
+          "rationale": "Heun's method reuses the Forward Euler update structure to form its predictor."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_036",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "EXTENDS",
+          "source": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "heuns_update"
+          },
+          "target": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "forward_euler_update"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "Its update is"
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "y_{n+1} = y_n + hF(t_n,y_n)."
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "\\widetilde{y}_{n+1} = y_n + hF(t_n,y_n),"
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "then averages the slope at the current point with the slope at the predicted point."
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "The corrected update is"
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "y_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right)."
+            }
+          ],
+          "rationale": "The corrected Heun update enriches the Forward Euler update with a predictor and an average of two slopes."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_037",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "APPLIED_IN",
+          "source": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "forward_euler_update"
+          },
+          "target": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "initial_value_problem"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope."
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "Its update is"
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "y_{n+1} = y_n + hF(t_n,y_n)."
+            }
+          ],
+          "rationale": "The update is the computational rule of Forward Euler as it is applied to the Initial Value Problem."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_038",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The update is applied through the Initial Value Problem and is not directly typed against the generic Ordinary Differential Equation object.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_039",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "forward_euler_update"
+          },
+          "target": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "step_size"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "y_{n+1} = y_n + hF(t_n,y_n)."
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "The step size \\(h\\) sets the spacing between consecutive numerical time points."
+            }
+          ],
+          "rationale": "The Forward Euler update explicitly contains h, which the lecture defines as step size."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_040",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "forward_euler_update"
+          },
+          "target": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "vector_field"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "The vector field \\(F\\) specifies the slope that the solution should follow at each state."
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "y_{n+1} = y_n + hF(t_n,y_n)."
+            }
+          ],
+          "rationale": "The update evaluates the vector field F at the current state."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_041",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "FORMALIZES",
+          "source": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "heuns_update"
+          },
+          "target": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "heuns_method"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "The corrected update is"
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "y_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right)."
+            }
+          ],
+          "rationale": "The corrected formula gives the update rule for Heun's predictor-corrector method."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
-      "source_annotation": null,
+      "annotation_source": "reused_existing_relation_annotation",
+      "source_annotation": {
+        "source_relation_id": "rel_holdout_037",
+        "source_artifact_path": "benchmark/ground_truth/relations_holdout_v0_1.json",
+        "source_artifact_sha256": "20cf7a8b2aeb76f372e103c59c453bfa15c43732885b6c621af26f5edd427a6f"
+      },
       "notes": null
     },
     {
       "pair_id": "cand_dev_042",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "Heun's method inherits the Initial Value Problem context through Forward Euler, but that pair is not directly stated in the lecture.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_043",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The lecture does not directly type Heun's Method against the generic Ordinary Differential Equation object.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_044",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "heuns_method"
+          },
+          "target": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "step_size"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "The step size \\(h\\) sets the spacing between consecutive numerical time points."
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "\\widetilde{y}_{n+1} = y_n + hF(t_n,y_n),"
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "y_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right)."
+            }
+          ],
+          "rationale": "Both the predictor and corrected Heun step use h, the defined step size."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_045",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "APPLIED_IN",
+          "source": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "vector_field"
+          },
+          "target": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "heuns_method"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "The vector field \\(F\\) specifies the slope that the solution should follow at each state."
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "then averages the slope at the current point with the slope at the predicted point."
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "y_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right)."
+            }
+          ],
+          "rationale": "Heun's method evaluates and averages vector-field slopes at the current and predicted states."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_046",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The Heun update belongs to a method that extends Forward Euler, but its application to the Initial Value Problem is not directly stated for this pair.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_047",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The Heun update uses F, but the lecture does not directly type the formula against the generic Ordinary Differential Equation object.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_048",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "heuns_update"
+          },
+          "target": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "step_size"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "The step size \\(h\\) sets the spacing between consecutive numerical time points."
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "The corrected update is"
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "y_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right)."
+            }
+          ],
+          "rationale": "The corrected Heun update explicitly contains h, the step size."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_049",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "heuns_update"
+          },
+          "target": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "vector_field"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "The vector field \\(F\\) specifies the slope that the solution should follow at each state."
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "then averages the slope at the current point with the slope at the predicted point."
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "The corrected update is"
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "y_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right)."
+            }
+          ],
+          "rationale": "The corrected update explicitly evaluates the vector field at two states."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_050",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "initial_value_problem"
+          },
+          "target": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "ordinary_differential_equation"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "An initial value problem combines an ordinary differential equation with an initial condition such as \\(y(t_0)=y_0\\)."
+            }
+          ],
+          "rationale": "An ordinary differential equation is one of the defining components of an initial value problem."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
-      "source_annotation": null,
+      "annotation_source": "reused_existing_relation_annotation",
+      "source_annotation": {
+        "source_relation_id": "rel_holdout_004",
+        "source_artifact_path": "benchmark/ground_truth/relations_holdout_v0_1.json",
+        "source_artifact_sha256": "20cf7a8b2aeb76f372e103c59c453bfa15c43732885b6c621af26f5edd427a6f"
+      },
       "notes": null
     },
     {
       "pair_id": "cand_dev_051",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
-      "source_annotation": null,
+      "negative_rationale": "The step size controls a numerical discretization, but the lecture does not directly relate it to the mathematical definition of an initial value problem.",
+      "annotation_source": "reused_existing_relation_annotation",
+      "source_annotation": {
+        "source_relation_id": "rel_holdout_014",
+        "source_artifact_path": "benchmark/ground_truth/relations_holdout_v0_1.json",
+        "source_artifact_sha256": "20cf7a8b2aeb76f372e103c59c453bfa15c43732885b6c621af26f5edd427a6f"
+      },
       "notes": null
     },
     {
       "pair_id": "cand_dev_052",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "APPLIED_IN",
+          "source": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "vector_field"
+          },
+          "target": {
+            "lecture_id": "differential_equations_001",
+            "ko_id": "initial_value_problem"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "An initial value problem combines an ordinary differential equation with an initial condition such as \\(y(t_0)=y_0\\)."
+            },
+            {
+              "lecture_id": "differential_equations_001",
+              "span": "The vector field \\(F\\) specifies the slope that the solution should follow at each state."
+            }
+          ],
+          "rationale": "The vector field supplies the slope followed by the solution in the stated Initial Value Problem context."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_053",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "Step size is a numerical-discretization choice and is not part of the Ordinary Differential Equation definition.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_054",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The vector field is tied specifically to the displayed first-order form; the lecture does not separately type it against the general Ordinary Differential Equation object.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_055",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "Step size and vector field both occur in numerical updates, but no direct Relation between the two objects is stated.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_056",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "EXTENDS",
+          "source": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "a_star_search"
+          },
+          "target": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "dijkstras_algorithm"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "A* search extends Dijkstra's algorithm by using a heuristic function \\(h(v)\\) to guide which vertex is explored next."
+            }
+          ],
+          "rationale": "A* retains Dijkstra's path-cost ordering as a base and enriches it with a heuristic."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
-      "source_annotation": null,
+      "annotation_source": "reused_existing_relation_annotation",
+      "source_annotation": {
+        "source_relation_id": "rel_holdout_021",
+        "source_artifact_path": "benchmark/ground_truth/relations_holdout_v0_1.json",
+        "source_artifact_sha256": "20cf7a8b2aeb76f372e103c59c453bfa15c43732885b6c621af26f5edd427a6f"
+      },
       "notes": null
     },
     {
       "pair_id": "cand_dev_057",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "A* extends Dijkstra's algorithm, but the lecture does not directly state that A* itself applies edge relaxation.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_058",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "APPLIED_IN",
+          "source": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "heuristic_function"
+          },
+          "target": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "a_star_search"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "A* search extends Dijkstra's algorithm by using a heuristic function \\(h(v)\\) to guide which vertex is explored next."
+            }
+          ],
+          "rationale": "A* uses the heuristic function to guide its exploration order."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
-      "source_annotation": null,
+      "annotation_source": "reused_existing_relation_annotation",
+      "source_annotation": {
+        "source_relation_id": "rel_holdout_036",
+        "source_artifact_path": "benchmark/ground_truth/relations_holdout_v0_1.json",
+        "source_artifact_sha256": "20cf7a8b2aeb76f372e103c59c453bfa15c43732885b6c621af26f5edd427a6f"
+      },
       "notes": null
     },
     {
       "pair_id": "cand_dev_059",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The lecture does not directly relate A* search to the Path object; their connection would be inferred through the shortest-path problem.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_060",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "APPLIED_IN",
+          "source": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "path_cost"
+          },
+          "target": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "a_star_search"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "A* search extends Dijkstra's algorithm by using a heuristic function \\(h(v)\\) to guide which vertex is explored next."
+            },
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "Its queue priority combines the known path cost with the heuristic estimate, and setting \\(h(v)=0\\) recovers Dijkstra's ordering."
+            }
+          ],
+          "rationale": "A* explicitly uses the known path cost as one component of its queue priority."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_061",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "A* uses the path-cost concept, but the lecture does not state that the displayed path-cost formula itself is applied in A*.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_062",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The relaxation update is introduced for Dijkstra's edge relaxation; no direct Relation to A* is stated.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_063",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "A* extends Dijkstra, which is applied to the shortest-path problem, but the lecture does not directly type A* against that problem.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_064",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The lecture does not directly relate A* search to the Weighted Directed Graph object without passing through other objects.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_065",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "APPLIED_IN",
+          "source": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "edge_relaxation"
+          },
+          "target": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "dijkstras_algorithm"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "Dijkstra's algorithm stores tentative distance estimates in a priority queue."
+            },
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "After removing a vertex \\(u\\) with the smallest tentative distance, it applies edge relaxation to each outgoing edge."
+            }
+          ],
+          "rationale": "Dijkstra's algorithm repeatedly applies edge relaxation to update tentative distances."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
-      "source_annotation": null,
+      "annotation_source": "reused_existing_relation_annotation",
+      "source_annotation": {
+        "source_relation_id": "rel_holdout_030",
+        "source_artifact_path": "benchmark/ground_truth/relations_holdout_v0_1.json",
+        "source_artifact_sha256": "20cf7a8b2aeb76f372e103c59c453bfa15c43732885b6c621af26f5edd427a6f"
+      },
       "notes": null
     },
     {
       "pair_id": "cand_dev_066",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "RELATED_TO",
+          "source": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "heuristic_function"
+          },
+          "target": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "dijkstras_algorithm"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "A* search extends Dijkstra's algorithm by using a heuristic function \\(h(v)\\) to guide which vertex is explored next."
+            },
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "Its queue priority combines the known path cost with the heuristic estimate, and setting \\(h(v)=0\\) recovers Dijkstra's ordering."
+            }
+          ],
+          "rationale": "The lecture connects the heuristic to Dijkstra by stating that a zero heuristic recovers Dijkstra's ordering, while no stronger frozen label fits this pair."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_067",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "Dijkstra is applied to a problem that asks for paths, but no direct frozen Relation between the method and the Path object is stated.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_068",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "Dijkstra is applied to the shortest-path problem, but the lecture does not directly state a Relation from the method to Path Cost itself.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_069",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The path-cost formula and Dijkstra's algorithm are connected only through other objects in the lecture, not by a direct supported Relation.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_070",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "APPLIED_IN",
+          "source": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "relaxation_update"
+          },
+          "target": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "dijkstras_algorithm"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "Dijkstra's algorithm stores tentative distance estimates in a priority queue. After removing a vertex \\(u\\) with the smallest tentative distance, it applies edge relaxation to each outgoing edge."
+            },
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "Relaxation is formalized by the update"
+            },
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "d(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}."
+            }
+          ],
+          "rationale": "The update formalizes the edge-relaxation operation that Dijkstra explicitly applies."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_071",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "APPLIED_IN",
+          "source": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "dijkstras_algorithm"
+          },
+          "target": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "single_source_shortest_path_problem"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex."
+            },
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "Dijkstra's algorithm is applied to this problem when all edge weights are nonnegative."
+            }
+          ],
+          "rationale": "Dijkstra's algorithm is a method applied to the single-source shortest-path problem."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
-      "source_annotation": null,
+      "annotation_source": "reused_existing_relation_annotation",
+      "source_annotation": {
+        "source_relation_id": "rel_holdout_007",
+        "source_artifact_path": "benchmark/ground_truth/relations_holdout_v0_1.json",
+        "source_artifact_sha256": "20cf7a8b2aeb76f372e103c59c453bfa15c43732885b6c621af26f5edd427a6f"
+      },
       "notes": null
     },
     {
       "pair_id": "cand_dev_072",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The weighted graph supplies the setting for the problem, but the text does not directly type a Relation between Dijkstra and the graph object.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_073",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "Edge relaxation is described for Dijkstra and the heuristic for A*; no direct Relation between the pair is supported.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_074",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The lecture does not directly relate Edge Relaxation to the Path object.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_075",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "Edge relaxation updates tentative distances, but the lecture does not explicitly identify those estimates with the Path Cost object.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_076",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The two objects are separate formulas in the lecture and no direct Relation between them is stated.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_077",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "FORMALIZES",
+          "source": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "relaxation_update"
+          },
+          "target": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "edge_relaxation"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "Relaxation is formalized by the update"
+            },
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "d(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}."
+            }
+          ],
+          "rationale": "The minimum-distance assignment is the formal update performed by edge relaxation."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
-      "source_annotation": null,
+      "annotation_source": "reused_existing_relation_annotation",
+      "source_annotation": {
+        "source_relation_id": "rel_holdout_025",
+        "source_artifact_path": "benchmark/ground_truth/relations_holdout_v0_1.json",
+        "source_artifact_sha256": "20cf7a8b2aeb76f372e103c59c453bfa15c43732885b6c621af26f5edd427a6f"
+      },
       "notes": null
     },
     {
       "pair_id": "cand_dev_078",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "Edge relaxation is applied within Dijkstra; its connection to the shortest-path problem is mediated by that method rather than directly stated.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_079",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "edge_relaxation"
+          },
+          "target": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "weighted_directed_graph"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\)."
+            },
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "Dijkstra's algorithm stores tentative distance estimates in a priority queue. After removing a vertex \\(u\\) with the smallest tentative distance, it applies edge relaxation to each outgoing edge."
+            },
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "d(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}."
+            }
+          ],
+          "rationale": "Edge relaxation is stated on weighted outgoing edges and uses the graph's edge-weight function, making the weighted directed graph a definitional dependency in this lecture."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_080",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The heuristic guides A* exploration, but the lecture does not directly relate it to the Path object.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_081",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "RELATED_TO",
+          "source": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "heuristic_function"
+          },
+          "target": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "path_cost"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "A* search extends Dijkstra's algorithm by using a heuristic function \\(h(v)\\) to guide which vertex is explored next."
+            },
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "Its queue priority combines the known path cost with the heuristic estimate, and setting \\(h(v)=0\\) recovers Dijkstra's ordering."
+            }
+          ],
+          "rationale": "A* combines the heuristic estimate with known path cost in one priority, establishing a meaningful weak connection not covered by a stronger label."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_082",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "A* combines the heuristic with the path-cost concept, but it does not directly relate the heuristic to the displayed path-cost formula.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_083",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The heuristic and the relaxation update belong to different described parts of the algorithms, with no direct Relation stated.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_084",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The heuristic is introduced through A*, while the shortest-path problem is linked to Dijkstra; no direct pair Relation is stated.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_085",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The lecture does not directly relate the Heuristic Function to the Weighted Directed Graph object.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_086",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "path_cost"
+          },
+          "target": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "path"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "A path is a sequence of compatible directed edges."
+            },
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "Its path cost is the sum of their edge weights:"
+            }
+          ],
+          "rationale": "Path cost is defined as a cost belonging to a path, so the Path object is required to define it."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_087",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "path_cost_formula"
+          },
+          "target": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "path"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "A path is a sequence of compatible directed edges."
+            },
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "Its path cost is the sum of their edge weights:"
+            },
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "C(v_0,\\ldots,v_k) = \\sum_{i=0}^{k-1} w(v_i,v_{i+1})."
+            }
+          ],
+          "rationale": "The formula sums weights along the directed-edge sequence that constitutes a path."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_088",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The relaxation update operates on tentative distances and an outgoing edge; no direct Relation to the Path object is stated.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_089",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "single_source_shortest_path_problem"
+          },
+          "target": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "path"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex."
+            }
+          ],
+          "rationale": "The problem is stated by asking for a minimum-cost path, making Path necessary to define the problem."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_090",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "path"
+          },
+          "target": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "weighted_directed_graph"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\)."
+            },
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "A path is a sequence of compatible directed edges."
+            }
+          ],
+          "rationale": "Within this lecture, a path is defined as a sequence of directed edges supplied by the graph."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_091",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "FORMALIZES",
+          "source": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "path_cost_formula"
+          },
+          "target": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "path_cost"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "Its path cost is the sum of their edge weights:"
+            },
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "C(v_0,\\ldots,v_k) = \\sum_{i=0}^{k-1} w(v_i,v_{i+1})."
+            }
+          ],
+          "rationale": "The displayed sum is the symbolic expression for path cost."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
-      "source_annotation": null,
+      "annotation_source": "reused_existing_relation_annotation",
+      "source_annotation": {
+        "source_relation_id": "rel_holdout_003",
+        "source_artifact_path": "benchmark/ground_truth/relations_holdout_v0_1.json",
+        "source_artifact_sha256": "20cf7a8b2aeb76f372e103c59c453bfa15c43732885b6c621af26f5edd427a6f"
+      },
       "notes": null
     },
     {
       "pair_id": "cand_dev_092",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The relaxation update uses tentative distances, but the lecture does not directly equate or type them as the Path Cost object.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_093",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "single_source_shortest_path_problem"
+          },
+          "target": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "path_cost"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "Its path cost is the sum of their edge weights:"
+            },
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex."
+            }
+          ],
+          "rationale": "Understanding the shortest-path objective requires the definition of path cost."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
-      "source_annotation": null,
+      "annotation_source": "reused_existing_relation_annotation",
+      "source_annotation": {
+        "source_relation_id": "rel_holdout_017",
+        "source_artifact_path": "benchmark/ground_truth/relations_holdout_v0_1.json",
+        "source_artifact_sha256": "20cf7a8b2aeb76f372e103c59c453bfa15c43732885b6c621af26f5edd427a6f"
+      },
       "notes": null
     },
     {
       "pair_id": "cand_dev_094",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "path_cost"
+          },
+          "target": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "weighted_directed_graph"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\)."
+            },
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "A path is a sequence of compatible directed edges."
+            },
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "Its path cost is the sum of their edge weights:"
+            },
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "C(v_0,\\ldots,v_k) = \\sum_{i=0}^{k-1} w(v_i,v_{i+1})."
+            }
+          ],
+          "rationale": "Path cost is defined by summing the edge weights assigned by the weighted directed graph."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_095",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "Both formulas use edge weights, but the lecture does not state a direct Relation between the path-cost and relaxation updates.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_096",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "APPLIED_IN",
+          "source": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "path_cost_formula"
+          },
+          "target": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "single_source_shortest_path_problem"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "Its path cost is the sum of their edge weights:"
+            },
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "C(v_0,\\ldots,v_k) = \\sum_{i=0}^{k-1} w(v_i,v_{i+1})."
+            },
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex."
+            }
+          ],
+          "rationale": "The formula supplies the cost evaluated when the problem asks for a minimum-cost path."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_097",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "path_cost_formula"
+          },
+          "target": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "weighted_directed_graph"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\)."
+            },
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "Its path cost is the sum of their edge weights:"
+            },
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "C(v_0,\\ldots,v_k) = \\sum_{i=0}^{k-1} w(v_i,v_{i+1})."
+            }
+          ],
+          "rationale": "The formula depends on the directed-edge weights defined by the weighted graph."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_098",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The relaxation update is applied through Dijkstra, so its connection to the shortest-path problem is not directly typed in the lecture.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_099",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "relaxation_update"
+          },
+          "target": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "weighted_directed_graph"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\)."
+            },
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "Dijkstra's algorithm stores tentative distance estimates in a priority queue. After removing a vertex \\(u\\) with the smallest tentative distance, it applies edge relaxation to each outgoing edge."
+            },
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "Relaxation is formalized by the update"
+            },
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "d(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}."
+            }
+          ],
+          "rationale": "The relaxation update requires the graph's directed edges and weight function appearing in the formula."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_100",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "single_source_shortest_path_problem"
+          },
+          "target": {
+            "lecture_id": "graph_algorithms_001",
+            "ko_id": "weighted_directed_graph"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\)."
+            },
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "A path is a sequence of compatible directed edges."
+            },
+            {
+              "lecture_id": "graph_algorithms_001",
+              "span": "The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex."
+            }
+          ],
+          "rationale": "The shortest-path problem is stated over paths formed from the weighted directed graph's edges."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
@@ -1789,661 +3190,1383 @@
     },
     {
       "pair_id": "cand_dev_122",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "FORMALIZES",
+          "source": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "likelihood_function"
+          },
+          "target": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "likelihood"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values."
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "L(\\theta; x_{1:n}) = \\prod_{i=1}^{n} p(x_i \\mid \\theta)."
+            }
+          ],
+          "rationale": "The product formula explicitly expresses the likelihood for independent observations."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
-      "source_annotation": null,
+      "annotation_source": "reused_existing_relation_annotation",
+      "source_annotation": {
+        "source_relation_id": "rel_holdout_019",
+        "source_artifact_path": "benchmark/ground_truth/relations_holdout_v0_1.json",
+        "source_artifact_sha256": "20cf7a8b2aeb76f372e103c59c453bfa15c43732885b6c621af26f5edd427a6f"
+      },
       "notes": null
     },
     {
       "pair_id": "cand_dev_123",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "log_likelihood"
+          },
+          "target": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "likelihood"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "The log-likelihood is obtained by taking the logarithm of the likelihood."
+            }
+          ],
+          "rationale": "The log-likelihood is defined by transforming the likelihood."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
-      "source_annotation": null,
+      "annotation_source": "reused_existing_relation_annotation",
+      "source_annotation": {
+        "source_relation_id": "rel_holdout_029",
+        "source_artifact_path": "benchmark/ground_truth/relations_holdout_v0_1.json",
+        "source_artifact_sha256": "20cf7a8b2aeb76f372e103c59c453bfa15c43732885b6c621af26f5edd427a6f"
+      },
       "notes": null
     },
     {
       "pair_id": "cand_dev_124",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "log_likelihood_function"
+          },
+          "target": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "likelihood"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values."
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "The log-likelihood is obtained by taking the logarithm of the likelihood."
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta)."
+            }
+          ],
+          "rationale": "The log-likelihood formula explicitly contains the logarithm of the likelihood L, making Likelihood a definitional dependency."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_125",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "Maximum Likelihood Estimation is stated to use Log-Likelihood; a Relation to Likelihood itself would be inferred transitively through that third object.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_126",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The estimator formula uses the log-likelihood symbol, not the Likelihood object directly.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_127",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "Newton's method is applied to the score equation within MLE, and no direct Relation to Likelihood is stated.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_128",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The Score Equation is derived downstream through log-likelihood and the score function; no direct Relation to Likelihood is stated.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_129",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The Score Function is the derivative of Log-Likelihood, so its connection to Likelihood is mediated by that separate object.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_130",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The score formula differentiates log-likelihood and does not directly relate to the Likelihood concept.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_131",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "likelihood"
+          },
+          "target": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "statistical_model"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values."
+            }
+          ],
+          "rationale": "Likelihood is defined relative to the probability distributions supplied by a statistical model."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
-      "source_annotation": null,
+      "annotation_source": "reused_existing_relation_annotation",
+      "source_annotation": {
+        "source_relation_id": "rel_holdout_001",
+        "source_artifact_path": "benchmark/ground_truth/relations_holdout_v0_1.json",
+        "source_artifact_sha256": "20cf7a8b2aeb76f372e103c59c453bfa15c43732885b6c621af26f5edd427a6f"
+      },
       "notes": null
     },
     {
       "pair_id": "cand_dev_132",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "APPLIED_IN",
+          "source": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "likelihood_function"
+          },
+          "target": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "log_likelihood"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "For independent observations \\(x_1,\\ldots,x_n\\), it is"
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "L(\\theta; x_{1:n}) = \\prod_{i=1}^{n} p(x_i \\mid \\theta)."
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "The log-likelihood is obtained by taking the logarithm of the likelihood."
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta)."
+            }
+          ],
+          "rationale": "The likelihood function L is explicitly placed inside the logarithm that defines Log-Likelihood."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_133",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "log_likelihood_function"
+          },
+          "target": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "likelihood_function"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "L(\\theta; x_{1:n}) = \\prod_{i=1}^{n} p(x_i \\mid \\theta)."
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "The log-likelihood is obtained by taking the logarithm of the likelihood."
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "Independence turns the product into a sum:"
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta)."
+            }
+          ],
+          "rationale": "The log-likelihood formula is constructed from the likelihood function and explicitly contains log L."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_134",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "MLE uses Log-Likelihood as its objective; the Likelihood Function is connected only through that transformed object.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_135",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
-      "source_annotation": null,
+      "negative_rationale": "The formulas occur in the same estimation pipeline, but neither formula directly formalizes, requires, or is applied in the other formula under v0.1.",
+      "annotation_source": "reused_existing_relation_annotation",
+      "source_annotation": {
+        "source_relation_id": "rel_holdout_006",
+        "source_artifact_path": "benchmark/ground_truth/relations_holdout_v0_1.json",
+        "source_artifact_sha256": "20cf7a8b2aeb76f372e103c59c453bfa15c43732885b6c621af26f5edd427a6f"
+      },
       "notes": null
     },
     {
       "pair_id": "cand_dev_136",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "Newton's method is introduced for solving the score equation, not for operating directly on the Likelihood Function.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_137",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The Score Equation is stated in terms of s(theta), and its connection to the Likelihood Function passes through log-likelihood and the score function.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_138",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The Score Function differentiates Log-Likelihood, not the Likelihood Function directly.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_139",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The score formula uses log-likelihood and does not directly use the displayed Likelihood Function formula.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_140",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "likelihood_function"
+          },
+          "target": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "statistical_model"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "A statistical model is a family of probability distributions indexed by an unknown parameter \\(\\theta\\)."
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values."
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "For independent observations \\(x_1,\\ldots,x_n\\), it is"
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "L(\\theta; x_{1:n}) = \\prod_{i=1}^{n} p(x_i \\mid \\theta)."
+            }
+          ],
+          "rationale": "The likelihood function is defined from the probability distributions supplied by the Statistical Model."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_141",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "FORMALIZES",
+          "source": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "log_likelihood_function"
+          },
+          "target": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "log_likelihood"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "The log-likelihood is obtained by taking the logarithm of the likelihood."
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta)."
+            }
+          ],
+          "rationale": "The displayed equation explicitly expresses the log-likelihood."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
-      "source_annotation": null,
+      "annotation_source": "reused_existing_relation_annotation",
+      "source_annotation": {
+        "source_relation_id": "rel_holdout_008",
+        "source_artifact_path": "benchmark/ground_truth/relations_holdout_v0_1.json",
+        "source_artifact_sha256": "20cf7a8b2aeb76f372e103c59c453bfa15c43732885b6c621af26f5edd427a6f"
+      },
       "notes": null
     },
     {
       "pair_id": "cand_dev_142",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "APPLIED_IN",
+          "source": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "log_likelihood"
+          },
+          "target": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "maximum_likelihood_estimation"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:"
+            }
+          ],
+          "rationale": "The log-likelihood is used as the objective in maximum likelihood estimation."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
-      "source_annotation": null,
+      "annotation_source": "reused_existing_relation_annotation",
+      "source_annotation": {
+        "source_relation_id": "rel_holdout_013",
+        "source_artifact_path": "benchmark/ground_truth/relations_holdout_v0_1.json",
+        "source_artifact_sha256": "20cf7a8b2aeb76f372e103c59c453bfa15c43732885b6c621af26f5edd427a6f"
+      },
       "notes": null
     },
     {
       "pair_id": "cand_dev_143",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "mle_estimator"
+          },
+          "target": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "log_likelihood"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:"
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta)."
+            }
+          ],
+          "rationale": "The MLE estimator formula maximizes ell(theta), the Log-Likelihood objective."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_144",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "Newton's method is applied to the Score Equation; its connection to Log-Likelihood is mediated by the score function.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_145",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The Score Equation uses the score function, which is derived from Log-Likelihood; the pair is not directly typed without that intermediate object.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_146",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "score_function"
+          },
+          "target": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "log_likelihood"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "The score function is the derivative of the log-likelihood with respect to the parameter,"
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "s(\\theta) = \\nabla_{\\theta}\\ell(\\theta)."
+            }
+          ],
+          "rationale": "The Score Function is defined as the derivative of Log-Likelihood."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_147",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "score_function_formula"
+          },
+          "target": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "log_likelihood"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "The score function is the derivative of the log-likelihood with respect to the parameter,"
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "s(\\theta) = \\nabla_{\\theta}\\ell(\\theta)."
+            }
+          ],
+          "rationale": "The score formula explicitly differentiates ell(theta), the Log-Likelihood."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_148",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "Log-Likelihood reaches the Statistical Model through Likelihood; no direct pair Relation is stated.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_149",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "APPLIED_IN",
+          "source": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "log_likelihood_function"
+          },
+          "target": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "maximum_likelihood_estimation"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta)."
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:"
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta)."
+            }
+          ],
+          "rationale": "The displayed log-likelihood function supplies the objective maximized by Maximum Likelihood Estimation."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_150",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "mle_estimator"
+          },
+          "target": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "log_likelihood_function"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta)."
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:"
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta)."
+            }
+          ],
+          "rationale": "The estimator is stated as an argmax of the displayed log-likelihood function."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_151",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "Newton's method is applied to the score equation, not directly to the Log-Likelihood Function in the lecture.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_152",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "score_equation"
+          },
+          "target": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "log_likelihood_function"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta)."
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "The score function is the derivative of the log-likelihood with respect to the parameter,"
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "s(\\theta) = \\nabla_{\\theta}\\ell(\\theta)."
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\)."
+            }
+          ],
+          "rationale": "The Score Equation sets to zero the score obtained by differentiating the Log-Likelihood Function."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_153",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "score_function"
+          },
+          "target": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "log_likelihood_function"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta)."
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "The score function is the derivative of the log-likelihood with respect to the parameter,"
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "s(\\theta) = \\nabla_{\\theta}\\ell(\\theta)."
+            }
+          ],
+          "rationale": "The Score Function is defined by differentiating the Log-Likelihood Function."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_154",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "score_function_formula"
+          },
+          "target": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "log_likelihood_function"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta)."
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "The score function is the derivative of the log-likelihood with respect to the parameter,"
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "s(\\theta) = \\nabla_{\\theta}\\ell(\\theta)."
+            }
+          ],
+          "rationale": "The score formula explicitly applies the parameter gradient to the Log-Likelihood Function."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_155",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The Log-Likelihood Function depends on Likelihood, which is defined from the model; the direct pair Relation is not stated without that intermediate object.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_156",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "FORMALIZES",
+          "source": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "mle_estimator"
+          },
+          "target": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "maximum_likelihood_estimation"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:"
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta)."
+            }
+          ],
+          "rationale": "The argmax formula is the formal optimization statement of maximum likelihood estimation."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
-      "source_annotation": null,
+      "annotation_source": "reused_existing_relation_annotation",
+      "source_annotation": {
+        "source_relation_id": "rel_holdout_033",
+        "source_artifact_path": "benchmark/ground_truth/relations_holdout_v0_1.json",
+        "source_artifact_sha256": "20cf7a8b2aeb76f372e103c59c453bfa15c43732885b6c621af26f5edd427a6f"
+      },
       "notes": null
     },
     {
       "pair_id": "cand_dev_157",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "APPLIED_IN",
+          "source": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "newtons_method"
+          },
+          "target": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "maximum_likelihood_estimation"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\)."
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "When this equation has no closed-form solution, Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically."
+            }
+          ],
+          "rationale": "The lecture explicitly applies Newton's Method within Maximum Likelihood Estimation when the score equation lacks a closed form."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_158",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "APPLIED_IN",
+          "source": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "score_equation"
+          },
+          "target": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "maximum_likelihood_estimation"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:"
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta)."
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\)."
+            }
+          ],
+          "rationale": "An interior MLE candidate is explicitly required to satisfy the Score Equation, so the condition is applied in the estimation method."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_159",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "APPLIED_IN",
+          "source": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "score_function"
+          },
+          "target": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "maximum_likelihood_estimation"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "The score function is the derivative of the log-likelihood with respect to the parameter,"
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "s(\\theta) = \\nabla_{\\theta}\\ell(\\theta)."
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\)."
+            }
+          ],
+          "rationale": "The score function supplies the zero condition used to identify an interior MLE candidate."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_160",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The Score Function Formula reaches MLE through the separately named Score Equation, so no direct pair Relation is annotated.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_161",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "MLE depends on Log-Likelihood, which depends on Likelihood and the Statistical Model; the lecture does not directly type the outer pair.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_162",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "Newton's method computes an MLE candidate through the Score Equation; it is not directly related to the MLE Estimator formula as an endpoint pair.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_163",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "OUT_OF_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
-      "out_of_schema_relation": null,
+      "out_of_schema_relation": {
+        "relation_description": "The score equation gives a first-order solution condition that characterizes an interior MLE candidate represented by the estimator formula.",
+        "schema_exclusion_rationale": "The frozen schema has no CHARACTERIZES or FIRST_ORDER_CONDITION_FOR Relation; FORMALIZES is unavailable because the predicted Score Equation object is typed as Concept rather than Formula.",
+        "evidence_spans": [
+          {
+            "lecture_id": "statistics_estimation_001",
+            "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:"
+          },
+          {
+            "lecture_id": "statistics_estimation_001",
+            "span": "\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta)."
+          },
+          {
+            "lecture_id": "statistics_estimation_001",
+            "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\)."
+          }
+        ]
+      },
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_164",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The Score Function contributes through the Score Equation, but no direct Relation to the MLE Estimator formula is stated.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_165",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The Score Function Formula contributes through the Score Equation, not by a direct Relation to the MLE Estimator formula.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_166",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The MLE Estimator reaches the Statistical Model through several intervening objects, and no direct Relation is stated.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_167",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "APPLIED_IN",
+          "source": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "newtons_method"
+          },
+          "target": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "score_equation"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\)."
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "When this equation has no closed-form solution, Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically."
+            }
+          ],
+          "rationale": "Newton's Method is explicitly applied when the Score Equation has no closed-form solution."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_168",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "Newton's Method is applied to the Score Equation; a separate direct Relation to the Score Function is not stated.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_169",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "Newton's Method is applied to the Score Equation, not directly to the Score Function Formula.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_170",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The lecture supplies no direct Relation between Newton's Method and the Statistical Model.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_171",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "score_equation"
+          },
+          "target": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "score_function"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "The score function is the derivative of the log-likelihood with respect to the parameter,"
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "s(\\theta) = \\nabla_{\\theta}\\ell(\\theta)."
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\)."
+            }
+          ],
+          "rationale": "The Score Equation is the zero condition imposed on the Score Function."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_172",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "score_equation"
+          },
+          "target": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "score_function_formula"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "s(\\theta) = \\nabla_{\\theta}\\ell(\\theta)."
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\)."
+            }
+          ],
+          "rationale": "The Score Equation uses s(theta), whose displayed formula defines the quantity being set to zero."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_173",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The Score Equation reaches the Statistical Model through log-likelihood and likelihood, so no direct pair Relation is stated.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_174",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "FORMALIZES",
+          "source": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "score_function_formula"
+          },
+          "target": {
+            "lecture_id": "statistics_estimation_001",
+            "ko_id": "score_function"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "The score function is the derivative of the log-likelihood with respect to the parameter,"
+            },
+            {
+              "lecture_id": "statistics_estimation_001",
+              "span": "s(\\theta) = \\nabla_{\\theta}\\ell(\\theta)."
+            }
+          ],
+          "rationale": "The displayed gradient formula explicitly defines the Score Function."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_175",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The Score Function is derived from Log-Likelihood; its connection to the Statistical Model is mediated by likelihood objects.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_176",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The Score Function Formula depends on log-likelihood and likelihood before reaching the Statistical Model, so no direct Relation is stated.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     }

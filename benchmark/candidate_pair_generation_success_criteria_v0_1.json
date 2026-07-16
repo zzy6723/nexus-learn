@@ -1,7 +1,7 @@
 {
   "artifact_type": "candidate_pair_generation_success_criteria",
   "version": "v0.1",
-  "status": "ready_to_freeze_before_generator_implementation",
+  "status": "frozen_before_generator_implementation",
   "selection_priority": [
     "candidate_recall",
     "downstream_typed_edge_recall",

@@ -150,21 +150,43 @@ class CandidatePairGroundTruthCheckerTests(unittest.TestCase):
             },
         )
 
-    def test_real_176_pair_draft_passes_allow_draft(self) -> None:
+    def test_real_176_pair_final_passes_allow_draft(self) -> None:
         errors, summary = validate_candidate_pair_ground_truth(
             REAL_UNIVERSE_PATH, REAL_GROUND_TRUTH_PATH, allow_draft=True
         )
 
         self.assertEqual(errors, [])
         self.assertEqual(summary["pair_count"], 176)
-        self.assertEqual(summary["pending_workflow_items"], 176)
-        self.assertEqual(summary["label_counts"], {"UNLABELLED": 176})
-        self.assertEqual(summary["evaluation_status"], "valid_draft")
+        self.assertEqual(summary["pending_workflow_items"], 0)
+        self.assertEqual(
+            summary["label_counts"],
+            {
+                "IN_SCHEMA_RELATION": 80,
+                "NO_IN_SCHEMA_RELATION": 91,
+                "OUT_OF_SCHEMA_RELATION": 5,
+            },
+        )
+        self.assertEqual(summary["evaluation_status"], "final")
 
-    def test_real_draft_fails_final_mode(self) -> None:
+    def test_real_final_passes_final_mode(self) -> None:
         errors, summary = validate_candidate_pair_ground_truth(
             REAL_UNIVERSE_PATH, REAL_GROUND_TRUTH_PATH, allow_draft=False
         )
+
+        self.assertEqual(errors, [])
+        self.assertEqual(summary["evaluation_status"], "final")
+        self.assertEqual(summary["pending_workflow_items"], 0)
+
+    def test_synthetic_draft_fails_final_mode(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            universe_path, ground_truth_path = make_valid_bundle(Path(temp_dir))
+            data = load_json(ground_truth_path)
+            data["status"] = "draft_annotation_required"
+            data["annotations"][0]["annotation_status"] = "draft"
+            write_json(ground_truth_path, data)
+            errors, summary = validate_candidate_pair_ground_truth(
+                universe_path, ground_truth_path, allow_draft=False
+            )
 
         self.assertEqual(summary["evaluation_status"], "invalid")
         self.assertTrue(any("final mode requires frozen" in error for error in errors))

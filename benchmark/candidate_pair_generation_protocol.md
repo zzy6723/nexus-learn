@@ -1,6 +1,6 @@
 # Candidate Pair Generation Evaluation Protocol
 
-**Status:** Draft v0.1 for Experiment 002B-2 benchmark construction
+**Status:** Frozen v0.1 for Experiment 002B-2 development evaluation
 **Scope:** lecture-local predicted Knowledge Objects
 **Owner:** Project
 
@@ -274,13 +274,14 @@ final result.
 
 ## Current Status
 
-The 002B-2 development pair universe has been generated and hash-bound: 39
-predicted KOs across four inspected lectures produce 176 lecture-local unordered
-pairs. A separate ground-truth scaffold contains 176 draft annotations.
+The 002B-2 development pair universe is generated and hash-bound: 39 predicted
+KOs across four inspected lectures produce 176 lecture-local unordered pairs.
+Exhaustive annotation is complete with 80 `IN_SCHEMA_RELATION` pairs, 91
+`NO_IN_SCHEMA_RELATION` pairs, 5 `OUT_OF_SCHEMA_RELATION` diagnostics, and no
+unresolved `AMBIGUOUS` items.
 
-The draft/final strict checker and its synthetic regression fixtures are
-complete. The real scaffold passes draft validation with 176 pending workflow
-items and no structural errors.
+All 176 annotations are final. The strict checker passes in final mode, and the
+ground-truth completion marker binds the resulting benchmark snapshot.
 
-Exhaustive semantic annotation, final ground-truth completion marker, generator
-implementations, evaluation results, and holdout claims remain incomplete.
+Generator implementations, candidate evaluation results, downstream Relation
+runs, and lecture-disjoint holdout claims remain incomplete.
