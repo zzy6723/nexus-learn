@@ -12,26 +12,34 @@
     "source_split": "holdout",
     "structural_normalization_version": "predicted_ko_structural_normalization_v0_1"
   },
+  "lecture_inventory": {
+    "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/lecture_inventory.json",
+    "sha256": "5b53aed0b1c793d47908d773d4e4a6b9ef9dd24e920307f71fa73bc71ec8b069"
+  },
   "lectures": [
     {
       "lecture_id": "differential_equations_001",
       "ko_count": 11,
-      "pair_count": 55
+      "pair_count": 55,
+      "lecture_text_sha256": "7488ea27d88e3970e600829508a5673a43c111e4fcad13b87f33313be13986b0"
     },
     {
       "lecture_id": "graph_algorithms_001",
       "ko_count": 10,
-      "pair_count": 45
+      "pair_count": 45,
+      "lecture_text_sha256": "0fdb7752023500999cc9ad8c439035c4a60be707908ae996d26d2f907c27e41d"
     },
     {
       "lecture_id": "numerical_root_finding_001",
       "ko_count": 7,
-      "pair_count": 21
+      "pair_count": 21,
+      "lecture_text_sha256": "95949cbece45bed2e21a8fe3a0936b735f73b72d3e1af895e9c09bb968f11c12"
     },
     {
       "lecture_id": "statistics_estimation_001",
       "ko_count": 11,
-      "pair_count": 55
+      "pair_count": 55,
+      "lecture_text_sha256": "0f48d5fa14623d7af50716342e2c3f456e9f5728d741f8856fdb01dd2b95f4fa"
     }
   ],
   "total_ko_count": 39,

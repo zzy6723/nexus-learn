@@ -1,6 +1,6 @@
 # Experiment 002B-2: Candidate Pair Generation under Predicted KOs
 
-**Status:** Pair universe generated; exhaustive annotation pending
+**Status:** Pair universe and strict checker complete; exhaustive annotation pending
 **Stage:** Technical Validation
 **Predecessor:** Experiment 002B-1 completed
 
@@ -91,10 +91,15 @@ Artifacts:
 - `benchmark/schema/candidate_pair_universe.schema.json`;
 - `benchmark/schema/candidate_pair_ground_truth.schema.json`;
 - `benchmark/candidate_pair_generation_success_criteria_v0_1.json`.
+- `scripts/check_candidate_pair_ground_truth.py`;
+- `tests/test_candidate_pair_ground_truth_checker.py`;
+- `tests/fixtures/candidate_pair_ground_truth/`.
 
 The pair universe is structurally complete and hash-bound. The ground-truth
 artifact is intentionally still a draft: all 176 labels require manual review.
-No Candidate Generator has been implemented or scored.
+The checker passes this artifact in draft mode and rejects it in final mode.
+Seventeen pair-universe and checker regression tests pass. No Candidate Generator
+has been implemented or scored.
 
 ## Inputs
 
@@ -248,7 +253,16 @@ candidate metric denominator.
 
 ## Immediate Next Gate
 
-Complete the 176 manual annotations without inspecting Candidate Generator
-outputs. Then implement the strict ground-truth checker and synthetic fixtures.
-Do not implement or score a Candidate Generator until the checker passes and
-the exhaustive ground truth is frozen.
+Annotate one lecture at a time without inspecting Candidate Generator outputs.
+After each batch, run:
+
+```bash
+python3 scripts/check_candidate_pair_ground_truth.py \
+  --pair-universe benchmark/candidate_pairs/development_v0_1/pair_universe.json \
+  --ground-truth benchmark/ground_truth/candidate_pairs_development_v0_1.json \
+  --allow-draft
+```
+
+After all annotations and reviews are final, change top-level `status` to
+`frozen`, run the checker without `--allow-draft`, and write the completion
+marker. Do not implement or score a Candidate Generator before that final gate.

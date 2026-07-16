@@ -1,0 +1,29 @@
+{
+  "artifact_type": "predicted_ko_relation_lecture_inventory",
+  "version": "v0.1",
+  "split": "synthetic",
+  "sources": [
+    {
+      "lecture_id": "synthetic_candidate_001",
+      "path": "synthetic_candidate_001.md",
+      "markdown_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "model_text_sha256": "782a8913d8a4f86b853f960520038c700864e5c8eaf5e559cea996264096269a"
+    },
+    {
+      "lecture_id": "synthetic_candidate_002",
+      "path": "synthetic_candidate_002.md",
+      "markdown_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "model_text_sha256": "92cdeb8997c47839e768c3b8308a911066df9e87338513e3426f8b9249beef5a"
+    }
+  ],
+  "lectures": [
+    {
+      "lecture_id": "synthetic_candidate_001",
+      "text": "Concept Alpha is a foundational idea.\nFormula Alpha formalizes Concept Alpha: F_alpha(x) = x.\nMethod Beta requires Concept Alpha.\nFormula Alpha is applied in Method Beta, and Method Beta requires Formula Alpha.\nConcept Alpha Alias denotes the same educational object as Concept Alpha.\nThe relation between Concept Alpha Alias and Method Beta admits two readings in this synthetic fixture.\n"
+    },
+    {
+      "lecture_id": "synthetic_candidate_002",
+      "text": "Concept Gamma is an isolated concept.\n"
+    }
+  ]
+}

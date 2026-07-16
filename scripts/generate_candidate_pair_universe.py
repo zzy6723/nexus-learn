@@ -26,6 +26,16 @@ DEFAULT_INVENTORY = (
     / "normalization"
     / "normalized_predicted_kos.json"
 )
+DEFAULT_LECTURE_INVENTORY = (
+    ROOT
+    / "experiments"
+    / "relation_extraction"
+    / "002b_predicted_ko"
+    / "runs"
+    / "locked_reuse_v0_2"
+    / "run_01"
+    / "lecture_inventory.json"
+)
 DEFAULT_OUTPUT = (
     ROOT
     / "benchmark"
@@ -155,11 +165,77 @@ def validate_inventory(data: dict[str, Any]) -> list[dict[str, Any]]:
     return validated
 
 
+def validate_lecture_inventory(
+    data: dict[str, Any], *, expected_lecture_ids: set[str]
+) -> dict[str, str]:
+    if data.get("artifact_type") != "predicted_ko_relation_lecture_inventory":
+        raise CandidatePairUniverseError(
+            "Lecture artifact_type must be predicted_ko_relation_lecture_inventory."
+        )
+    sources = data.get("sources")
+    lectures = data.get("lectures")
+    if not isinstance(sources, list) or not isinstance(lectures, list):
+        raise CandidatePairUniverseError(
+            "Lecture inventory requires sources and lectures lists."
+        )
+
+    source_hashes: dict[str, str] = {}
+    for index, item in enumerate(sources):
+        if not isinstance(item, dict):
+            raise CandidatePairUniverseError(f"sources[{index}] must be an object.")
+        lecture_id = item.get("lecture_id")
+        text_hash = item.get("model_text_sha256")
+        if not isinstance(lecture_id, str) or not lecture_id:
+            raise CandidatePairUniverseError(f"sources[{index}] has invalid lecture_id.")
+        if not isinstance(text_hash, str) or not SHA256_PATTERN.fullmatch(text_hash):
+            raise CandidatePairUniverseError(
+                f"sources[{index}] has invalid model_text_sha256."
+            )
+        if lecture_id in source_hashes:
+            raise CandidatePairUniverseError(
+                f"Duplicate lecture source declaration: {lecture_id}."
+            )
+        source_hashes[lecture_id] = text_hash
+
+    lecture_hashes: dict[str, str] = {}
+    for index, item in enumerate(lectures):
+        if not isinstance(item, dict):
+            raise CandidatePairUniverseError(f"lectures[{index}] must be an object.")
+        lecture_id = item.get("lecture_id")
+        text = item.get("text")
+        if not isinstance(lecture_id, str) or not lecture_id:
+            raise CandidatePairUniverseError(f"lectures[{index}] has invalid lecture_id.")
+        if not isinstance(text, str) or not text:
+            raise CandidatePairUniverseError(f"lectures[{index}] has invalid text.")
+        if lecture_id in lecture_hashes:
+            raise CandidatePairUniverseError(
+                f"Duplicate lecture text declaration: {lecture_id}."
+            )
+        lecture_hashes[lecture_id] = sha256_bytes(text.encode("utf-8"))
+
+    if set(source_hashes) != expected_lecture_ids:
+        raise CandidatePairUniverseError(
+            "Lecture source IDs do not match predicted-KO lecture IDs."
+        )
+    if set(lecture_hashes) != expected_lecture_ids:
+        raise CandidatePairUniverseError(
+            "Lecture text IDs do not match predicted-KO lecture IDs."
+        )
+    if lecture_hashes != source_hashes:
+        raise CandidatePairUniverseError(
+            "Lecture text hashes do not match declared model_text_sha256 values."
+        )
+    return lecture_hashes
+
+
 def build_pair_universe(
     inventory: dict[str, Any],
     *,
     source_inventory_path: str,
     source_inventory_sha256: str,
+    lecture_inventory: dict[str, Any],
+    lecture_inventory_path: str,
+    lecture_inventory_sha256: str,
     benchmark_split: str,
 ) -> dict[str, Any]:
     if benchmark_split not in PAIR_ID_PREFIX:
@@ -168,11 +244,16 @@ def build_pair_universe(
         )
     if not SHA256_PATTERN.fullmatch(source_inventory_sha256):
         raise CandidatePairUniverseError("source_inventory_sha256 must be SHA-256.")
+    if not SHA256_PATTERN.fullmatch(lecture_inventory_sha256):
+        raise CandidatePairUniverseError("lecture_inventory_sha256 must be SHA-256.")
 
     objects = validate_inventory(inventory)
     by_lecture: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for item in objects:
         by_lecture[item["lecture_id"]].append(item)
+    lecture_text_hashes = validate_lecture_inventory(
+        lecture_inventory, expected_lecture_ids=set(by_lecture)
+    )
 
     lecture_summaries: list[dict[str, Any]] = []
     endpoint_pairs: list[tuple[str, str, str]] = []
@@ -190,6 +271,7 @@ def build_pair_universe(
                 "lecture_id": lecture_id,
                 "ko_count": ko_count,
                 "pair_count": ko_count * (ko_count - 1) // 2,
+                "lecture_text_sha256": lecture_text_hashes[lecture_id],
             }
         )
 
@@ -221,6 +303,10 @@ def build_pair_universe(
                 "structural_normalization_version"
             ),
         },
+        "lecture_inventory": {
+            "path": lecture_inventory_path,
+            "sha256": lecture_inventory_sha256,
+        },
         "lectures": lecture_summaries,
         "total_ko_count": len(objects),
         "total_pair_count": len(pairs),
@@ -234,6 +320,8 @@ def build_completion_marker(
     pair_universe_sha256: str,
     source_inventory_path: Path,
     source_inventory_sha256: str,
+    lecture_inventory_path: Path,
+    lecture_inventory_sha256: str,
     pair_universe: dict[str, Any],
 ) -> dict[str, Any]:
     generator_path = Path(__file__).resolve()
@@ -248,6 +336,10 @@ def build_completion_marker(
         "source_inventory": {
             "path": display_path(source_inventory_path),
             "sha256": source_inventory_sha256,
+        },
+        "lecture_inventory": {
+            "path": display_path(lecture_inventory_path),
+            "sha256": lecture_inventory_sha256,
         },
         "generator": {
             "path": display_path(generator_path),
@@ -269,6 +361,8 @@ def write_outputs(
     pair_universe: dict[str, Any],
     source_inventory_path: Path,
     source_inventory_sha256: str,
+    lecture_inventory_path: Path,
+    lecture_inventory_sha256: str,
     overwrite: bool,
 ) -> None:
     existing = [path for path in (output_path, marker_path) if path.exists()]
@@ -287,6 +381,8 @@ def write_outputs(
         pair_universe_sha256=sha256_bytes(output_text.encode("utf-8")),
         source_inventory_path=source_inventory_path,
         source_inventory_sha256=source_inventory_sha256,
+        lecture_inventory_path=lecture_inventory_path,
+        lecture_inventory_sha256=lecture_inventory_sha256,
         pair_universe=pair_universe,
     )
     marker_path.write_text(serialize_json(marker), encoding="utf-8")
@@ -300,6 +396,7 @@ def parse_args() -> argparse.Namespace:
         )
     )
     parser.add_argument("--inventory", default=str(DEFAULT_INVENTORY))
+    parser.add_argument("--lecture-inventory", default=str(DEFAULT_LECTURE_INVENTORY))
     parser.add_argument("--output", default=str(DEFAULT_OUTPUT))
     parser.add_argument("--completion-marker", default=str(DEFAULT_MARKER))
     parser.add_argument(
@@ -323,6 +420,7 @@ def resolve_path(path_text: str) -> Path:
 def main() -> int:
     args = parse_args()
     inventory_path = resolve_path(args.inventory)
+    lecture_inventory_path = resolve_path(args.lecture_inventory)
     output_path = resolve_path(args.output)
     marker_path = resolve_path(args.completion_marker)
     try:
@@ -333,10 +431,20 @@ def main() -> int:
                 "Predicted-KO inventory must be a JSON object."
             )
         inventory_hash = sha256_bytes(inventory_raw)
+        lecture_inventory_raw = lecture_inventory_path.read_bytes()
+        lecture_inventory = json.loads(lecture_inventory_raw.decode("utf-8"))
+        if not isinstance(lecture_inventory, dict):
+            raise CandidatePairUniverseError(
+                "Lecture inventory must be a JSON object."
+            )
+        lecture_inventory_hash = sha256_bytes(lecture_inventory_raw)
         pair_universe = build_pair_universe(
             inventory,
             source_inventory_path=display_path(inventory_path),
             source_inventory_sha256=inventory_hash,
+            lecture_inventory=lecture_inventory,
+            lecture_inventory_path=display_path(lecture_inventory_path),
+            lecture_inventory_sha256=lecture_inventory_hash,
             benchmark_split=args.benchmark_split,
         )
         write_outputs(
@@ -345,6 +453,8 @@ def main() -> int:
             pair_universe=pair_universe,
             source_inventory_path=inventory_path,
             source_inventory_sha256=inventory_hash,
+            lecture_inventory_path=lecture_inventory_path,
+            lecture_inventory_sha256=lecture_inventory_hash,
             overwrite=args.overwrite,
         )
     except (OSError, json.JSONDecodeError, CandidatePairUniverseError) as exc:

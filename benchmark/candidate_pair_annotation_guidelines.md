@@ -78,8 +78,11 @@ Record a concise `negative_rationale`; do not invent negative evidence spans.
 ## Out-of-Schema and Duplicate Mentions
 
 Use `OUT_OF_SCHEMA_RELATION` when a meaningful, evidenced relation exists but
-none of the frozen Relation labels can represent it. Record a short description
-and exact evidence spans.
+none of the frozen Relation labels can represent it. Record:
+
+- `relation_description`;
+- `schema_exclusion_rationale`;
+- exact `evidence_spans`.
 
 Two predicted mentions that appear to denote the same educational object remain
 in the exhaustive pair universe. Until Experiment 002C provides canonical
@@ -99,6 +102,16 @@ For `IN_SCHEMA_RELATION`, record every defensible in-schema relation in
 Select the primary relation using the frozen Relation annotation guide and its
 strongest-supported-label principle. If the evidence genuinely does not support
 a unique primary outcome, use `AMBIGUOUS` instead of choosing for convenience.
+
+For `AMBIGUOUS`, record an `ambiguity` object containing:
+
+- a concise rationale;
+- at least two competing interpretations;
+- `adjudication_status = pending_review` while under review;
+- `adjudication_status = adjudicated_final` before a final ambiguous label.
+
+Any listed `gold_relations` for an ambiguous item are possible outcomes, not a
+selected primary Relation, and therefore use `role = acceptable_alternative`.
 
 ## Formula Boundaries
 
@@ -129,22 +142,33 @@ A label may be reused when all of the following hold:
 - the Relation judgment remains valid for the predicted objects;
 - the evidence is still traceable to the lecture text.
 
-Set `annotation_source = reused_existing_relation_annotation`. Otherwise perform
-a new manual annotation. Pairs absent from the 40-pair benchmark are unreviewed,
-not automatic negatives.
+Set `annotation_source = reused_existing_relation_annotation` and provide:
+
+- `source_relation_id`;
+- `source_artifact_path`;
+- `source_artifact_sha256`.
+
+Otherwise perform a new manual annotation with
+`annotation_source = new_exhaustive_annotation`. Pairs absent from the 40-pair
+benchmark are unreviewed, not automatic negatives.
 
 ## Workflow Status
 
 Use:
 
 - `annotation_status = draft` while an item is unreviewed or being revised;
+- `annotation_status = pending_review` when a completed first-pass decision is
+  awaiting review;
 - `annotation_status = final` after the item has been reviewed under this guide.
 
 Allowed `annotation_source` values are:
 
-- `new_manual_annotation`;
+- `new_exhaustive_annotation`;
 - `reused_existing_relation_annotation`;
 - `adjudicated`.
+
+`source_annotation` must be non-null only for reused annotations. New and
+adjudicated decisions keep it null.
 
 Do not inspect Candidate Generator outputs while creating or adjudicating ground
 truth.
@@ -163,3 +187,7 @@ Before benchmark freeze:
 
 Finalized `AMBIGUOUS` and `OUT_OF_SCHEMA_RELATION` items are permitted, but they
 remain outside the primary candidate precision and recall denominators.
+
+During annotation, run the strict checker with `--allow-draft` after every
+lecture batch. Final freeze requires a checker run without `--allow-draft` and a
+separate `candidate_pairs_development_v0_1_complete.json` completion marker.

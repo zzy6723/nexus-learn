@@ -278,5 +278,9 @@ The 002B-2 development pair universe has been generated and hash-bound: 39
 predicted KOs across four inspected lectures produce 176 lecture-local unordered
 pairs. A separate ground-truth scaffold contains 176 draft annotations.
 
-Exhaustive semantic annotation, the strict checker, generator implementations,
-evaluation results, and holdout claims remain incomplete.
+The draft/final strict checker and its synthetic regression fixtures are
+complete. The real scaffold passes draft validation with 176 pending workflow
+items and no structural errors.
+
+Exhaustive semantic annotation, final ground-truth completion marker, generator
+implementations, evaluation results, and holdout claims remain incomplete.

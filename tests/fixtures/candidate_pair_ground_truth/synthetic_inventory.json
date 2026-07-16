@@ -1,0 +1,54 @@
+{
+  "artifact_type": "predicted_ko_normalized_inventory",
+  "version": "v0.1",
+  "split": "synthetic",
+  "structural_normalization_version": "synthetic_normalization_v0.1",
+  "knowledge_objects": [
+    {
+      "lecture_id": "synthetic_candidate_001",
+      "predicted_ko_id": "concept_alias",
+      "name": "Concept Alpha Alias",
+      "type": "Concept",
+      "source_spans": [
+        "Concept Alpha Alias denotes the same educational object as Concept Alpha."
+      ]
+    },
+    {
+      "lecture_id": "synthetic_candidate_001",
+      "predicted_ko_id": "concept_alpha",
+      "name": "Concept Alpha",
+      "type": "Concept",
+      "source_spans": [
+        "Concept Alpha is a foundational idea."
+      ]
+    },
+    {
+      "lecture_id": "synthetic_candidate_001",
+      "predicted_ko_id": "formula_alpha",
+      "name": "Formula Alpha",
+      "type": "Formula",
+      "source_spans": [
+        "Formula Alpha formalizes Concept Alpha: F_alpha(x) = x."
+      ]
+    },
+    {
+      "lecture_id": "synthetic_candidate_001",
+      "predicted_ko_id": "method_beta",
+      "name": "Method Beta",
+      "type": "Method",
+      "source_spans": [
+        "Method Beta requires Concept Alpha."
+      ]
+    },
+    {
+      "lecture_id": "synthetic_candidate_002",
+      "predicted_ko_id": "concept_gamma",
+      "name": "Concept Gamma",
+      "type": "Concept",
+      "source_spans": [
+        "Concept Gamma is an isolated concept."
+      ]
+    }
+  ],
+  "normalized_content_sha256": "97f20220a7f5ebf3b308fbf470df55263fd1b42ef84f5f480569562f98bfb338"
+}

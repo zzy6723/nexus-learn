@@ -1,0 +1,173 @@
+[
+  {
+    "pair_id": "cand_dev_001",
+    "candidate_label": "OUT_OF_SCHEMA_RELATION",
+    "annotation_status": "final",
+    "gold_relations": [],
+    "out_of_schema_relation": {
+      "relation_description": "The two predicted mentions denote the same educational object.",
+      "schema_exclusion_rationale": "The frozen Relation schema has no identity or duplicate-mention label.",
+      "evidence_spans": [
+        {
+          "lecture_id": "synthetic_candidate_001",
+          "span": "Concept Alpha Alias denotes the same educational object as Concept Alpha."
+        }
+      ]
+    },
+    "ambiguity": null,
+    "negative_rationale": null,
+    "annotation_source": "new_exhaustive_annotation",
+    "source_annotation": null,
+    "notes": null
+  },
+  {
+    "pair_id": "cand_dev_002",
+    "candidate_label": "NO_IN_SCHEMA_RELATION",
+    "annotation_status": "final",
+    "gold_relations": [],
+    "out_of_schema_relation": null,
+    "ambiguity": null,
+    "negative_rationale": "The lecture does not directly relate the alias mention to Formula Alpha.",
+    "annotation_source": "new_exhaustive_annotation",
+    "source_annotation": null,
+    "notes": null
+  },
+  {
+    "pair_id": "cand_dev_003",
+    "candidate_label": "AMBIGUOUS",
+    "annotation_status": "final",
+    "gold_relations": [],
+    "out_of_schema_relation": null,
+    "ambiguity": {
+      "rationale": "The synthetic text explicitly leaves two competing readings.",
+      "competing_interpretations": [
+        "The alias is required background for Method Beta.",
+        "No direct in-schema Relation is established."
+      ],
+      "adjudication_status": "adjudicated_final"
+    },
+    "negative_rationale": null,
+    "annotation_source": "adjudicated",
+    "source_annotation": null,
+    "notes": null
+  },
+  {
+    "pair_id": "cand_dev_004",
+    "candidate_label": "IN_SCHEMA_RELATION",
+    "annotation_status": "final",
+    "gold_relations": [
+      {
+        "role": "primary",
+        "relation_type": "FORMALIZES",
+        "source": {
+          "lecture_id": "synthetic_candidate_001",
+          "ko_id": "formula_alpha"
+        },
+        "target": {
+          "lecture_id": "synthetic_candidate_001",
+          "ko_id": "concept_alpha"
+        },
+        "symmetric": false,
+        "evidence_spans": [
+          {
+            "lecture_id": "synthetic_candidate_001",
+            "span": "Formula Alpha formalizes Concept Alpha: F_alpha(x) = x."
+          }
+        ],
+        "rationale": "The formula is explicitly presented as formalizing Concept Alpha."
+      }
+    ],
+    "out_of_schema_relation": null,
+    "ambiguity": null,
+    "negative_rationale": null,
+    "annotation_source": "new_exhaustive_annotation",
+    "source_annotation": null,
+    "notes": null
+  },
+  {
+    "pair_id": "cand_dev_005",
+    "candidate_label": "IN_SCHEMA_RELATION",
+    "annotation_status": "final",
+    "gold_relations": [
+      {
+        "role": "primary",
+        "relation_type": "REQUIRES",
+        "source": {
+          "lecture_id": "synthetic_candidate_001",
+          "ko_id": "method_beta"
+        },
+        "target": {
+          "lecture_id": "synthetic_candidate_001",
+          "ko_id": "concept_alpha"
+        },
+        "symmetric": false,
+        "evidence_spans": [
+          {
+            "lecture_id": "synthetic_candidate_001",
+            "span": "Method Beta requires Concept Alpha."
+          }
+        ],
+        "rationale": "Method Beta explicitly requires Concept Alpha."
+      }
+    ],
+    "out_of_schema_relation": null,
+    "ambiguity": null,
+    "negative_rationale": null,
+    "annotation_source": "new_exhaustive_annotation",
+    "source_annotation": null,
+    "notes": null
+  },
+  {
+    "pair_id": "cand_dev_006",
+    "candidate_label": "IN_SCHEMA_RELATION",
+    "annotation_status": "final",
+    "gold_relations": [
+      {
+        "role": "primary",
+        "relation_type": "APPLIED_IN",
+        "source": {
+          "lecture_id": "synthetic_candidate_001",
+          "ko_id": "formula_alpha"
+        },
+        "target": {
+          "lecture_id": "synthetic_candidate_001",
+          "ko_id": "method_beta"
+        },
+        "symmetric": false,
+        "evidence_spans": [
+          {
+            "lecture_id": "synthetic_candidate_001",
+            "span": "Formula Alpha is applied in Method Beta, and Method Beta requires Formula Alpha."
+          }
+        ],
+        "rationale": "Formula Alpha is explicitly applied in Method Beta."
+      },
+      {
+        "role": "acceptable_alternative",
+        "relation_type": "REQUIRES",
+        "source": {
+          "lecture_id": "synthetic_candidate_001",
+          "ko_id": "method_beta"
+        },
+        "target": {
+          "lecture_id": "synthetic_candidate_001",
+          "ko_id": "formula_alpha"
+        },
+        "symmetric": false,
+        "evidence_spans": [
+          {
+            "lecture_id": "synthetic_candidate_001",
+            "span": "Formula Alpha is applied in Method Beta, and Method Beta requires Formula Alpha."
+          }
+        ],
+        "rationale": "The same sentence states that Method Beta requires Formula Alpha."
+      }
+    ],
+    "out_of_schema_relation": null,
+    "ambiguity": null,
+    "negative_rationale": null,
+    "annotation_source": "new_exhaustive_annotation",
+    "source_annotation": null,
+    "notes": null
+  }
+]

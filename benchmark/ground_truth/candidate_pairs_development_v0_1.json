@@ -5,7 +5,7 @@
   "status": "draft_annotation_required",
   "pair_universe": {
     "path": "benchmark/candidate_pairs/development_v0_1/pair_universe.json",
-    "sha256": "bb5e53f06159e422791f90a02d192d1417a2066b7f0fd651291a43c4cd026e0d"
+    "sha256": "d0c756b3e5533fac1e02c0aa5c1446cb78d206f21232e020ab0b5cb23b2bad84"
   },
   "source_inventory": {
     "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/normalization/normalized_predicted_kos.json",
@@ -14,10 +14,14 @@
     "source_split": "holdout",
     "structural_normalization_version": "predicted_ko_structural_normalization_v0_1"
   },
+  "lecture_inventory": {
+    "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/lecture_inventory.json",
+    "sha256": "5b53aed0b1c793d47908d773d4e4a6b9ef9dd24e920307f71fa73bc71ec8b069"
+  },
   "annotation_guidelines": {
     "path": "benchmark/candidate_pair_annotation_guidelines.md",
     "version": "candidate_pair_annotation_v0.1",
-    "sha256": "0a002984b5cb3c0ff950fcad21c763d4ea2d39995be80be910b12f191cf35e74"
+    "sha256": "121c8e906db27065f838b429af70eef0a12cf724c5375f8fec1bc6bfc5c06e6c"
   },
   "relation_annotation_guidelines": {
     "path": "benchmark/relation_annotation_guidelines.md",
@@ -27,12 +31,24 @@
   "evaluation_protocol": {
     "path": "benchmark/candidate_pair_generation_protocol.md",
     "version": "candidate_pair_evaluation_v0.1-draft",
-    "sha256": "fc3d0583a61f40371fb68944c84fc4926d96b82ce4e38e6d7661a68c77b0be6e"
+    "sha256": "f2d0586d1db9d78224837e50603603c0b18307e9c0c39f486b028493d6c3b9d1"
   },
   "success_criteria": {
     "path": "benchmark/candidate_pair_generation_success_criteria_v0_1.json",
     "version": "candidate_pair_success_criteria_v0.1",
     "sha256": "d177429de5d8c71f65e1a1f401d9300fbaf9ce9ee78d8c196e7f380dbb1fc28f"
+  },
+  "schema_bindings": {
+    "pair_universe": {
+      "path": "benchmark/schema/candidate_pair_universe.schema.json",
+      "version": "candidate_pair_universe_v0.1",
+      "sha256": "b9eb5ccf3a7be12f0c99e0dd7b0d63b75a3e9fca60b07f3ce6768fe580e7425f"
+    },
+    "ground_truth": {
+      "path": "benchmark/schema/candidate_pair_ground_truth.schema.json",
+      "version": "candidate_pair_ground_truth_v0.1",
+      "sha256": "42323f9a2c1665371fddb877a8b1ef967d60605c78bb116973edb554ca0cf132"
+    }
   },
   "allowed_candidate_labels": [
     "IN_SCHEMA_RELATION",
@@ -59,8 +75,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -69,8 +87,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -79,8 +99,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -89,8 +111,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -99,8 +123,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -109,8 +135,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -119,8 +147,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -129,8 +159,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -139,8 +171,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -149,8 +183,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -159,8 +195,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -169,8 +207,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -179,8 +219,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -189,8 +231,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -199,8 +243,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -209,8 +255,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -219,8 +267,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -229,8 +279,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -239,8 +291,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -249,8 +303,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -259,8 +315,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -269,8 +327,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -279,8 +339,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -289,8 +351,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -299,8 +363,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -309,8 +375,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -319,8 +387,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -329,8 +399,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -339,8 +411,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -349,8 +423,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -359,8 +435,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -369,8 +447,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -379,8 +459,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -389,8 +471,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -399,8 +483,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -409,8 +495,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -419,8 +507,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -429,8 +519,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -439,8 +531,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -449,8 +543,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -459,8 +555,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -469,8 +567,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -479,8 +579,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -489,8 +591,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -499,8 +603,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -509,8 +615,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -519,8 +627,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -529,8 +639,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -539,8 +651,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -549,8 +663,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -559,8 +675,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -569,8 +687,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -579,8 +699,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -589,8 +711,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -599,8 +723,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -609,8 +735,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -619,8 +747,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -629,8 +759,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -639,8 +771,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -649,8 +783,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -659,8 +795,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -669,8 +807,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -679,8 +819,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -689,8 +831,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -699,8 +843,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -709,8 +855,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -719,8 +867,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -729,8 +879,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -739,8 +891,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -749,8 +903,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -759,8 +915,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -769,8 +927,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -779,8 +939,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -789,8 +951,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -799,8 +963,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -809,8 +975,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -819,8 +987,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -829,8 +999,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -839,8 +1011,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -849,8 +1023,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -859,8 +1035,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -869,8 +1047,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -879,8 +1059,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -889,8 +1071,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -899,8 +1083,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -909,8 +1095,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -919,8 +1107,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -929,8 +1119,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -939,8 +1131,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -949,8 +1143,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -959,8 +1155,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -969,8 +1167,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -979,8 +1179,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -989,8 +1191,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -999,8 +1203,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1009,8 +1215,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1019,8 +1227,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1029,8 +1239,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1039,8 +1251,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1049,8 +1263,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1059,8 +1275,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1069,8 +1287,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1079,8 +1299,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1089,8 +1311,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1099,8 +1323,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1109,8 +1335,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1119,8 +1347,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1129,8 +1359,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1139,8 +1371,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1149,8 +1383,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1159,8 +1395,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1169,8 +1407,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1179,8 +1419,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1189,8 +1431,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1199,8 +1443,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1209,8 +1455,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1219,8 +1467,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1229,8 +1479,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1239,8 +1491,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1249,8 +1503,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1259,8 +1515,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1269,8 +1527,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1279,8 +1539,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1289,8 +1551,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1299,8 +1563,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1309,8 +1575,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1319,8 +1587,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1329,8 +1599,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1339,8 +1611,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1349,8 +1623,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1359,8 +1635,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1369,8 +1647,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1379,8 +1659,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1389,8 +1671,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1399,8 +1683,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1409,8 +1695,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1419,8 +1707,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1429,8 +1719,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1439,8 +1731,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1449,8 +1743,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1459,8 +1755,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1469,8 +1767,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1479,8 +1779,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1489,8 +1791,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1499,8 +1803,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1509,8 +1815,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1519,8 +1827,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1529,8 +1839,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1539,8 +1851,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1549,8 +1863,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1559,8 +1875,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1569,8 +1887,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1579,8 +1899,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1589,8 +1911,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1599,8 +1923,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1609,8 +1935,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1619,8 +1947,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1629,8 +1959,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1639,8 +1971,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1649,8 +1983,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1659,8 +1995,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1669,8 +2007,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1679,8 +2019,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1689,8 +2031,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1699,8 +2043,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1709,8 +2055,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1719,8 +2067,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1729,8 +2079,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1739,8 +2091,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1749,8 +2103,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1759,8 +2115,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1769,8 +2127,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1779,8 +2139,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1789,8 +2151,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1799,8 +2163,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     },
     {
@@ -1809,8 +2175,10 @@
       "annotation_status": "draft",
       "gold_relations": [],
       "out_of_schema_relation": null,
+      "ambiguity": null,
       "negative_rationale": null,
       "annotation_source": null,
+      "source_annotation": null,
       "notes": null
     }
   ]

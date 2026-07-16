@@ -9,9 +9,11 @@ from pathlib import Path
 from scripts.create_candidate_pair_annotation_template import build_annotation_template
 from scripts.generate_candidate_pair_universe import (
     DEFAULT_INVENTORY,
+    DEFAULT_LECTURE_INVENTORY,
     CandidatePairUniverseError,
     build_pair_universe,
     serialize_json,
+    sha256_bytes,
     sha256_file,
     sha256_json,
     validate_inventory,
@@ -70,11 +72,41 @@ def make_inventory() -> dict:
     }
 
 
+def make_lecture_inventory() -> dict:
+    texts = {
+        "lecture_a": (
+            "Alpha is a formula. Middle is a method. Zeta is defined."
+        ),
+        "lecture_b": "Concept B is defined. Method B is introduced.",
+    }
+    return {
+        "artifact_type": "predicted_ko_relation_lecture_inventory",
+        "version": "v0.1",
+        "split": "source_split",
+        "sources": [
+            {
+                "lecture_id": lecture_id,
+                "path": f"{lecture_id}.md",
+                "markdown_sha256": "b" * 64,
+                "model_text_sha256": sha256_bytes(text.encode("utf-8")),
+            }
+            for lecture_id, text in sorted(texts.items())
+        ],
+        "lectures": [
+            {"lecture_id": lecture_id, "text": text}
+            for lecture_id, text in sorted(texts.items())
+        ],
+    }
+
+
 def build_test_universe(inventory: dict | None = None) -> dict:
     return build_pair_universe(
         inventory or make_inventory(),
         source_inventory_path="inventory.json",
         source_inventory_sha256="a" * 64,
+        lecture_inventory=make_lecture_inventory(),
+        lecture_inventory_path="lecture_inventory.json",
+        lecture_inventory_sha256="c" * 64,
         benchmark_split="development",
     )
 
@@ -87,10 +119,13 @@ class CandidatePairUniverseTests(unittest.TestCase):
         self.assertEqual(universe["total_ko_count"], 5)
         self.assertEqual(universe["total_pair_count"], 4)
         self.assertEqual(
-            universe["lectures"],
             [
-                {"lecture_id": "lecture_a", "ko_count": 3, "pair_count": 3},
-                {"lecture_id": "lecture_b", "ko_count": 2, "pair_count": 1},
+                (item["lecture_id"], item["ko_count"], item["pair_count"])
+                for item in universe["lectures"]
+            ],
+            [
+                ("lecture_a", 3, 3),
+                ("lecture_b", 2, 1),
             ],
         )
         self.assertEqual(
@@ -145,10 +180,15 @@ class CandidatePairUniverseTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)
             inventory_path = root / "inventory.json"
+            lecture_inventory_path = root / "lecture_inventory.json"
             output_path = root / "pair_universe.json"
             marker_path = root / "pair_universe_complete.json"
             inventory_path.write_text(serialize_json(make_inventory()), encoding="utf-8")
+            lecture_inventory_path.write_text(
+                serialize_json(make_lecture_inventory()), encoding="utf-8"
+            )
             inventory_hash = sha256_file(inventory_path)
+            lecture_inventory_hash = sha256_file(lecture_inventory_path)
 
             write_outputs(
                 output_path=output_path,
@@ -156,6 +196,8 @@ class CandidatePairUniverseTests(unittest.TestCase):
                 pair_universe=universe,
                 source_inventory_path=inventory_path,
                 source_inventory_sha256=inventory_hash,
+                lecture_inventory_path=lecture_inventory_path,
+                lecture_inventory_sha256=lecture_inventory_hash,
                 overwrite=False,
             )
 
@@ -164,6 +206,9 @@ class CandidatePairUniverseTests(unittest.TestCase):
             self.assertEqual(marker["counts"]["pairs"], 4)
             self.assertEqual(marker["pair_universe"]["sha256"], sha256_file(output_path))
             self.assertEqual(marker["source_inventory"]["sha256"], inventory_hash)
+            self.assertEqual(
+                marker["lecture_inventory"]["sha256"], lecture_inventory_hash
+            )
 
             with self.assertRaisesRegex(
                 CandidatePairUniverseError, "Refusing to overwrite"
@@ -174,6 +219,8 @@ class CandidatePairUniverseTests(unittest.TestCase):
                     pair_universe=universe,
                     source_inventory_path=inventory_path,
                     source_inventory_sha256=inventory_hash,
+                    lecture_inventory_path=lecture_inventory_path,
+                    lecture_inventory_sha256=lecture_inventory_hash,
                     overwrite=False,
                 )
 
@@ -186,8 +233,17 @@ class CandidatePairUniverseTests(unittest.TestCase):
             evaluation = root / "evaluation.md"
             success = root / "success.json"
             relation = root / "relation.md"
+            pair_schema = root / "pair_schema.json"
+            ground_truth_schema = root / "ground_truth_schema.json"
             universe_path.write_text(serialize_json(universe), encoding="utf-8")
-            for path in (guidelines, evaluation, success, relation):
+            for path in (
+                guidelines,
+                evaluation,
+                success,
+                relation,
+                pair_schema,
+                ground_truth_schema,
+            ):
                 path.write_text("frozen test document\n", encoding="utf-8")
 
             template = build_annotation_template(
@@ -197,6 +253,8 @@ class CandidatePairUniverseTests(unittest.TestCase):
                 evaluation_protocol_path=evaluation,
                 success_criteria_path=success,
                 relation_guidelines_path=relation,
+                pair_universe_schema_path=pair_schema,
+                ground_truth_schema_path=ground_truth_schema,
             )
 
         self.assertEqual(template["status"], "draft_annotation_required")
@@ -214,10 +272,16 @@ class CandidatePairUniverseTests(unittest.TestCase):
 
     def test_current_locked_reuse_inventory_yields_176_pairs(self) -> None:
         inventory = json.loads(DEFAULT_INVENTORY.read_text(encoding="utf-8"))
+        lecture_inventory = json.loads(
+            DEFAULT_LECTURE_INVENTORY.read_text(encoding="utf-8")
+        )
         universe = build_pair_universe(
             inventory,
             source_inventory_path=str(DEFAULT_INVENTORY),
             source_inventory_sha256=sha256_file(DEFAULT_INVENTORY),
+            lecture_inventory=lecture_inventory,
+            lecture_inventory_path=str(DEFAULT_LECTURE_INVENTORY),
+            lecture_inventory_sha256=sha256_file(DEFAULT_LECTURE_INVENTORY),
             benchmark_split="development",
         )
 

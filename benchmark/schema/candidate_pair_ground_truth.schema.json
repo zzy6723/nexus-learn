@@ -11,10 +11,12 @@
     "status",
     "pair_universe",
     "source_inventory",
+    "lecture_inventory",
     "annotation_guidelines",
     "relation_annotation_guidelines",
     "evaluation_protocol",
     "success_criteria",
+    "schema_bindings",
     "allowed_candidate_labels",
     "allowed_relation_types",
     "primary_scoring_labels",
@@ -45,6 +47,9 @@
     "source_inventory": {
       "type": "object"
     },
+    "lecture_inventory": {
+      "$ref": "#/$defs/artifact_binding"
+    },
     "annotation_guidelines": {
       "$ref": "#/$defs/document_binding"
     },
@@ -56,6 +61,22 @@
     },
     "success_criteria": {
       "$ref": "#/$defs/document_binding"
+    },
+    "schema_bindings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "pair_universe",
+        "ground_truth"
+      ],
+      "properties": {
+        "pair_universe": {
+          "$ref": "#/$defs/document_binding"
+        },
+        "ground_truth": {
+          "$ref": "#/$defs/document_binding"
+        }
+      }
     },
     "allowed_candidate_labels": {
       "const": [
@@ -226,11 +247,16 @@
       ],
       "additionalProperties": false,
       "required": [
-        "description",
+        "relation_description",
+        "schema_exclusion_rationale",
         "evidence_spans"
       ],
       "properties": {
-        "description": {
+        "relation_description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "schema_exclusion_rationale": {
           "type": "string",
           "minLength": 1
         },
@@ -243,6 +269,63 @@
         }
       }
     },
+    "ambiguity": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "required": [
+        "rationale",
+        "competing_interpretations",
+        "adjudication_status"
+      ],
+      "properties": {
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "competing_interpretations": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "adjudication_status": {
+          "enum": [
+            "pending_review",
+            "adjudicated_final"
+          ]
+        }
+      }
+    },
+    "source_annotation": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "required": [
+        "source_relation_id",
+        "source_artifact_path",
+        "source_artifact_sha256"
+      ],
+      "properties": {
+        "source_relation_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_artifact_path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_artifact_sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    },
     "annotation": {
       "type": "object",
       "additionalProperties": false,
@@ -252,8 +335,10 @@
         "annotation_status",
         "gold_relations",
         "out_of_schema_relation",
+        "ambiguity",
         "negative_rationale",
         "annotation_source",
+        "source_annotation",
         "notes"
       ],
       "properties": {
@@ -277,6 +362,7 @@
         "annotation_status": {
           "enum": [
             "draft",
+            "pending_review",
             "final"
           ]
         },
@@ -288,6 +374,9 @@
         },
         "out_of_schema_relation": {
           "$ref": "#/$defs/out_of_schema_relation"
+        },
+        "ambiguity": {
+          "$ref": "#/$defs/ambiguity"
         },
         "negative_rationale": {
           "type": [
@@ -301,11 +390,14 @@
             "null"
           ],
           "enum": [
-            "new_manual_annotation",
+            "new_exhaustive_annotation",
             "reused_existing_relation_annotation",
             "adjudicated",
             null
           ]
+        },
+        "source_annotation": {
+          "$ref": "#/$defs/source_annotation"
         },
         "notes": {
           "type": [

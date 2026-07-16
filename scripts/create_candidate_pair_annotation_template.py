@@ -40,6 +40,12 @@ DEFAULT_SUCCESS_CRITERIA = (
     ROOT / "benchmark" / "candidate_pair_generation_success_criteria_v0_1.json"
 )
 DEFAULT_RELATION_GUIDELINES = ROOT / "benchmark" / "relation_annotation_guidelines.md"
+DEFAULT_PAIR_UNIVERSE_SCHEMA = (
+    ROOT / "benchmark" / "schema" / "candidate_pair_universe.schema.json"
+)
+DEFAULT_GROUND_TRUTH_SCHEMA = (
+    ROOT / "benchmark" / "schema" / "candidate_pair_ground_truth.schema.json"
+)
 
 
 def resolve_path(path_text: str) -> Path:
@@ -100,6 +106,8 @@ def build_annotation_template(
     evaluation_protocol_path: Path,
     success_criteria_path: Path,
     relation_guidelines_path: Path,
+    pair_universe_schema_path: Path,
+    ground_truth_schema_path: Path,
 ) -> dict[str, Any]:
     pair_ids = validate_universe_for_template(universe)
     return {
@@ -112,6 +120,7 @@ def build_annotation_template(
             "sha256": sha256_file(pair_universe_path),
         },
         "source_inventory": universe.get("source_inventory"),
+        "lecture_inventory": universe.get("lecture_inventory"),
         "annotation_guidelines": document_binding(
             guidelines_path, version="candidate_pair_annotation_v0.1"
         ),
@@ -124,6 +133,14 @@ def build_annotation_template(
         "success_criteria": document_binding(
             success_criteria_path, version="candidate_pair_success_criteria_v0.1"
         ),
+        "schema_bindings": {
+            "pair_universe": document_binding(
+                pair_universe_schema_path, version="candidate_pair_universe_v0.1"
+            ),
+            "ground_truth": document_binding(
+                ground_truth_schema_path, version="candidate_pair_ground_truth_v0.1"
+            ),
+        },
         "allowed_candidate_labels": [
             "IN_SCHEMA_RELATION",
             "NO_IN_SCHEMA_RELATION",
@@ -149,8 +166,10 @@ def build_annotation_template(
                 "annotation_status": "draft",
                 "gold_relations": [],
                 "out_of_schema_relation": None,
+                "ambiguity": None,
                 "negative_rationale": None,
                 "annotation_source": None,
+                "source_annotation": None,
                 "notes": None,
             }
             for pair_id in pair_ids
@@ -170,6 +189,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--relation-annotation-guidelines", default=str(DEFAULT_RELATION_GUIDELINES)
     )
+    parser.add_argument("--pair-universe-schema", default=str(DEFAULT_PAIR_UNIVERSE_SCHEMA))
+    parser.add_argument("--ground-truth-schema", default=str(DEFAULT_GROUND_TRUTH_SCHEMA))
     parser.add_argument(
         "--overwrite",
         action="store_true",
@@ -186,6 +207,8 @@ def main() -> int:
     evaluation_protocol_path = resolve_path(args.evaluation_protocol)
     success_criteria_path = resolve_path(args.success_criteria)
     relation_guidelines_path = resolve_path(args.relation_annotation_guidelines)
+    pair_universe_schema_path = resolve_path(args.pair_universe_schema)
+    ground_truth_schema_path = resolve_path(args.ground_truth_schema)
     try:
         if output_path.exists() and not args.overwrite:
             raise CandidatePairUniverseError(
@@ -199,6 +222,8 @@ def main() -> int:
             evaluation_protocol_path=evaluation_protocol_path,
             success_criteria_path=success_criteria_path,
             relation_guidelines_path=relation_guidelines_path,
+            pair_universe_schema_path=pair_universe_schema_path,
+            ground_truth_schema_path=ground_truth_schema_path,
         )
         output_path.parent.mkdir(parents=True, exist_ok=True)
         output_path.write_text(serialize_json(template), encoding="utf-8")

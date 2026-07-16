@@ -281,13 +281,12 @@ The existing 40-pair Relation holdout is a selected classification benchmark,
 not an exhaustive annotation of every possible KO pair, and therefore cannot be
 used to calculate candidate precision.
 
-The first two gates are complete: the frozen predicted-KO inventory produced a
-deterministic 176-pair development universe with a separate draft annotation
-artifact. The remaining gates are:
+The deterministic 176-pair universe, draft/final strict checker, and synthetic
+checker fixtures are complete. The remaining gates are:
 
-1. annotate every pair as `IN_SCHEMA_RELATION`, `NO_IN_SCHEMA_RELATION`,
-   `AMBIGUOUS`, or `OUT_OF_SCHEMA_RELATION` under the frozen guide;
-2. implement strict fixtures and validate the exhaustive benchmark;
+1. annotate and review each lecture batch as `IN_SCHEMA_RELATION`,
+   `NO_IN_SCHEMA_RELATION`, `AMBIGUOUS`, or `OUT_OF_SCHEMA_RELATION`;
+2. pass the checker in final mode and create the ground-truth completion marker;
 3. compare All-Pairs and Rule-Filtered baselines;
 4. freeze the selected generator and evaluate it on a lecture-disjoint holdout.
 

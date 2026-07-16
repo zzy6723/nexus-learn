@@ -180,13 +180,25 @@ hash-bound. `ground_truth/candidate_pairs_development_v0_1.json` is a separate
 draft scaffold with 176 unlabelled annotations. It is not frozen ground truth
 and cannot yet support Candidate Generator evaluation.
 
+The pair universe also binds the complete model-facing lecture inventory and
+its SHA-256, allowing exact Evidence validation without reading mutable external
+text. Draft and final validation are implemented in:
+
+- `scripts/check_candidate_pair_ground_truth.py`;
+- `tests/test_candidate_pair_ground_truth_checker.py`;
+- `tests/fixtures/candidate_pair_ground_truth/`.
+
+The real scaffold currently passes `--allow-draft` with 176 pending items and
+zero structural errors. Final mode intentionally rejects it until every item is
+reviewed and the top-level status is frozen.
+
 The existing 40-pair Relation holdout is not an exhaustive annotation of all
 possible pairs among its Knowledge Objects. Unlisted pairs must not be treated
 as `NO_RELATION`, and candidate precision, reduction, or all-pairs edge recall
 must not be calculated from that selected benchmark. Experiment 002B-2 requires
 a separately versioned complete pair universe. That universe now exists for
 development; exhaustive semantic annotation and strict validation remain
-pending.
+pending. The checker infrastructure itself is complete.
 
 ---
 

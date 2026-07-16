@@ -12,6 +12,7 @@
     "endpoint_order",
     "pair_order",
     "source_inventory",
+    "lecture_inventory",
     "lectures",
     "total_ko_count",
     "total_pair_count",
@@ -70,6 +71,23 @@
         }
       }
     },
+    "lecture_inventory": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    },
     "lectures": {
       "type": "array",
       "minItems": 1,
@@ -79,7 +97,8 @@
         "required": [
           "lecture_id",
           "ko_count",
-          "pair_count"
+          "pair_count",
+          "lecture_text_sha256"
         ],
         "properties": {
           "lecture_id": {
@@ -93,6 +112,9 @@
           "pair_count": {
             "type": "integer",
             "minimum": 0
+          },
+          "lecture_text_sha256": {
+            "$ref": "#/$defs/sha256"
           }
         }
       }
