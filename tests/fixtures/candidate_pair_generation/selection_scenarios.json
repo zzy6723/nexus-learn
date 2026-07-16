@@ -1,0 +1,120 @@
+{
+  "artifact_type": "candidate_pair_generation_scoring_fixture",
+  "version": "v0.1",
+  "pairs": [
+    {
+      "pair_id": "cand_dev_001",
+      "lecture_id": "lecture_alpha",
+      "ko_a": {
+        "lecture_id": "lecture_alpha",
+        "ko_id": "concept_a"
+      },
+      "ko_b": {
+        "lecture_id": "lecture_alpha",
+        "ko_id": "method_a"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "gold_relation_types": [
+        "REQUIRES"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_002",
+      "lecture_id": "lecture_alpha",
+      "ko_a": {
+        "lecture_id": "lecture_alpha",
+        "ko_id": "concept_a"
+      },
+      "ko_b": {
+        "lecture_id": "lecture_alpha",
+        "ko_id": "formula_a"
+      },
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "gold_relation_types": [
+        "FORMALIZES",
+        "RELATED_TO"
+      ]
+    },
+    {
+      "pair_id": "cand_dev_003",
+      "lecture_id": "lecture_alpha",
+      "ko_a": {
+        "lecture_id": "lecture_alpha",
+        "ko_id": "formula_a"
+      },
+      "ko_b": {
+        "lecture_id": "lecture_alpha",
+        "ko_id": "method_a"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "gold_relation_types": []
+    },
+    {
+      "pair_id": "cand_dev_004",
+      "lecture_id": "lecture_beta",
+      "ko_a": {
+        "lecture_id": "lecture_beta",
+        "ko_id": "concept_b"
+      },
+      "ko_b": {
+        "lecture_id": "lecture_beta",
+        "ko_id": "method_b"
+      },
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "gold_relation_types": []
+    },
+    {
+      "pair_id": "cand_dev_005",
+      "lecture_id": "lecture_beta",
+      "ko_a": {
+        "lecture_id": "lecture_beta",
+        "ko_id": "concept_b"
+      },
+      "ko_b": {
+        "lecture_id": "lecture_beta",
+        "ko_id": "formula_b"
+      },
+      "candidate_label": "OUT_OF_SCHEMA_RELATION",
+      "gold_relation_types": []
+    }
+  ],
+  "final_ambiguous_pair": {
+    "pair_id": "cand_dev_006",
+    "lecture_id": "lecture_beta",
+    "ko_a": {
+      "lecture_id": "lecture_beta",
+      "ko_id": "formula_b"
+    },
+    "ko_b": {
+      "lecture_id": "lecture_beta",
+      "ko_id": "method_b"
+    },
+    "candidate_label": "AMBIGUOUS",
+    "gold_relation_types": []
+  },
+  "selection_scenarios": {
+    "all_pairs": [
+      "cand_dev_001",
+      "cand_dev_002",
+      "cand_dev_003",
+      "cand_dev_004",
+      "cand_dev_005"
+    ],
+    "positives_only": [
+      "cand_dev_001",
+      "cand_dev_002"
+    ],
+    "negatives_only": [
+      "cand_dev_003",
+      "cand_dev_004"
+    ],
+    "partial_recall": [
+      "cand_dev_001",
+      "cand_dev_003"
+    ],
+    "diagnostic_only": [
+      "cand_dev_005"
+    ],
+    "zero_selected": []
+  }
+}
