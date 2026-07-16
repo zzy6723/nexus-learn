@@ -103,3 +103,11 @@ Relation Evidence grounding was 32/35 under B-prime, with three non-exact spans.
 This supports conditional predicted-KO representation viability for the current
 single paired run, while rejecting any production-readiness, stability, or
 generalization claim. Full results are in `locked_reuse_v0_2_results.md`.
+
+## Programme Boundary
+
+This closes Experiment 002B-1 only. It does not close the full Experiment 002B
+programme because candidate pairs were projected from the existing gold pair
+universe. Experiment 002B-2 must still validate candidate pair generation from
+predicted KOs. The Oracle-based alignment used here also does not implement the
+canonical KO resolution layer planned for Experiment 002C.

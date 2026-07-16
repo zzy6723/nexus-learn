@@ -11,9 +11,18 @@ Relation Extraction is separate from Connection Discovery.
 
 # Current Stage
 
-Current stage:
+Experiment status:
 
-`Experiment 002A: Oracle-KO Typed Relation Extraction - Completed`
+- Experiment 002A, Oracle-KO Typed Relation Extraction: completed;
+- Experiment 002B-1, controlled predicted-KO pipeline coupling: completed;
+- Experiment 002B-2, Candidate Pair Generation under predicted KOs: benchmark
+  construction pending;
+- Experiment 002C, KO Resolution / Canonicalization: pending.
+
+The current implementation focus is Experiment 002B-2. Its definition is in:
+
+- `experiments/relation_extraction/002b_candidate_discovery/README.md`;
+- `benchmark/candidate_pair_generation_protocol.md`.
 
 Selected method:
 
@@ -34,7 +43,7 @@ This isolates Relation typing from Knowledge Object extraction errors.
 
 ---
 
-# Scope
+# Experiment 002A Scope
 
 In scope:
 
@@ -261,24 +270,26 @@ suite contains 21 tests and passed during holdout construction validation.
 
 # Next Steps
 
-Experiment 002A is closed. Prompt 002 is the selected Relation Extraction
-prompt v0.1 for subsequent Technical Validation.
+Experiments 002A and 002B-1 are closed. Prompt 002 remains the frozen Relation
+classifier for subsequent Technical Validation. Experiment 002B-1 established
+how predicted-KO errors propagate when the candidate pair universe is supplied;
+it did not generate candidate pairs.
 
-Experiment 002B-1 Step 3 contracts and fixture expectations are statically
-validated. Step 4.0 fixture infrastructure, Step 4.1 structural normalization,
-and Step 4.2 inventory-level alignment are implemented. It evaluates Relation
-classification with predicted rather than Oracle Knowledge Objects while
-retaining human-authored candidate pairs:
+The next experiment is 002B-2. Before implementing a generator, it must create a
+complete annotated pair universe for a deliberately small lecture-local scope.
+The existing 40-pair Relation holdout is a selected classification benchmark,
+not an exhaustive annotation of every possible KO pair, and therefore cannot be
+used to calculate candidate precision.
 
-- `experiments/relation_extraction/002b_predicted_ko/README.md`;
-- `experiments/relation_extraction/002b_predicted_ko/input_contract_audit.md`;
-- `benchmark/predicted_ko_alignment_protocol.md`;
-- `benchmark/predicted_ko_relation_evaluation_protocol.md`;
-- `benchmark/predicted_ko_relation_artifact_contract.md`;
-- `tests/fixtures/predicted_ko_relation/`.
+The immediate gates are:
 
-All 14 predeclared alignment cases now execute against the conservative,
-Relation-blind aligner. The next milestone is Step 4.3 pair projection and
-matched KO inventory generation, followed by Step 4.4 pipeline aggregation. No
-further prompt tuning should be performed against the inspected 002A holdout
-pairs.
+1. freeze the 002B-2 input inventory and lecture-local pair-universe rules;
+2. enumerate every unordered pair in the development scope;
+3. annotate every pair as a typed Relation, `NO_RELATION`, ambiguous, or schema
+   gap under the frozen guide;
+4. validate the exhaustive benchmark before implementing generators;
+5. compare All-Pairs and Rule-Filtered baselines;
+6. freeze the selected generator and evaluate it on a lecture-disjoint holdout.
+
+Cross-lecture mention resolution and canonical IDs remain Experiment 002C.
+Learner-facing Connection ranking remains Experiment 003.

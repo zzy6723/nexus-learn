@@ -63,13 +63,22 @@ The current MVP focuses on validating whether LLMs can reliably discover meaning
 
 ## Current Status
 
-Current engineering focus:
+Technical Validation currently has the following experiment status:
 
-- Designing Knowledge Objects
-- Validating Entity Extraction
-- Validating Relation Extraction
-- Evaluating Connection Discovery
-- Building benchmark datasets
+| Experiment | Capability | Status |
+| --- | --- | --- |
+| 001 | Knowledge Object Extraction | Completed |
+| 002A | Oracle-KO Typed Relation Extraction | Completed |
+| 002B-1 | Controlled predicted-KO pipeline coupling | Completed |
+| 002B-2 | Candidate Pair Generation under predicted KOs | Benchmark construction pending |
+| 002C | Knowledge Object Resolution / Canonicalization | Pending |
+| 003 | Learner-relevant Connection Discovery | Not started |
+| 004 | Learner-facing Connection Explanation | Not started |
+
+The current engineering focus is Experiment 002B-2. This experiment validates
+which lecture-local Knowledge Object pairs should be sent to the frozen Relation
+classifier. It does not yet rank learner-facing Connections or merge
+lecture-local mentions into canonical cross-course objects.
 
 The user interface is intentionally postponed until the core AI pipeline has been validated.
 

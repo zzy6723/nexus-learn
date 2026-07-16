@@ -30,3 +30,21 @@ Validates whether typed Relations can be extracted or inferred from Knowledge Ob
 Validates whether the system can propose evidence-supported Connection Hypotheses across courses, time, or disciplines.
 
 Connection Discovery is the central AI capability of the project.
+
+---
+
+# Technical Validation Sequence
+
+| Experiment | Boundary | Status |
+| --- | --- | --- |
+| 001 | Extract structured Knowledge Objects | Completed |
+| 002A | Classify typed Relations for supplied Oracle-KO pairs | Completed |
+| 002B-1 | Measure predicted-KO error propagation on supplied gold pair candidates | Completed |
+| 002B-2 | Generate Relation candidate pairs from predicted KOs | Pending |
+| 002C | Resolve lecture-local KO mentions into canonical objects | Pending |
+| 003 | Discover and rank learner-relevant Connections | Not started |
+| 004 | Generate learner-facing evidence-supported explanations | Not started |
+
+The alignment used in Experiment 002B-1 is an evaluation scaffold against an
+Oracle inventory. It is not the product canonicalization layer planned for
+Experiment 002C.

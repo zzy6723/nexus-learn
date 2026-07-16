@@ -18,6 +18,7 @@ benchmark/
 ├── predicted_ko_alignment_protocol.md
 ├── predicted_ko_relation_evaluation_protocol.md
 ├── predicted_ko_relation_artifact_contract.md
+├── candidate_pair_generation_protocol.md
 ├── lectures/
 │   ├── development/
 │   │   ├── calculus_001.md
@@ -149,6 +150,19 @@ the Step 4 implementation is written.
 
 These protocols do not redefine the Experiment 002A Relation metrics and do not
 implement candidate discovery or product Entity Resolution.
+
+Experiment 002B-1 is now complete. Its evaluation-scoped alignment remains
+separate from product canonicalization.
+
+Experiment 002B-2 introduces candidate pair generation. Its protocol is:
+
+- `candidate_pair_generation_protocol.md`.
+
+The existing 40-pair Relation holdout is not an exhaustive annotation of all
+possible pairs among its Knowledge Objects. Unlisted pairs must not be treated
+as `NO_RELATION`, and candidate precision, reduction, or all-pairs edge recall
+must not be calculated from that selected benchmark. Experiment 002B-2 requires
+a separately versioned complete pair universe.
 
 ---
 
