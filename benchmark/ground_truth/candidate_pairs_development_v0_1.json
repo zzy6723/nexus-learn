@@ -1271,253 +1271,519 @@
     },
     {
       "pair_id": "cand_dev_101",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
-      "source_annotation": null,
+      "negative_rationale": "The lecture contrasts ordinary Newton's method with bisection but does not directly compare or type a Relation between damped Newton and bisection.",
+      "annotation_source": "reused_existing_relation_annotation",
+      "source_annotation": {
+        "source_relation_id": "rel_holdout_031",
+        "source_artifact_path": "benchmark/ground_truth/relations_holdout_v0_1.json",
+        "source_artifact_sha256": "20cf7a8b2aeb76f372e103c59c453bfa15c43732885b6c621af26f5edd427a6f"
+      },
       "notes": null
     },
     {
       "pair_id": "cand_dev_102",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "FORMALIZES",
+          "source": {
+            "lecture_id": "numerical_root_finding_001",
+            "ko_id": "midpoint_formula"
+          },
+          "target": {
+            "lecture_id": "numerical_root_finding_001",
+            "ko_id": "bisection_method"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "numerical_root_finding_001",
+              "span": "The bisection method begins with a sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\)."
+            },
+            {
+              "lecture_id": "numerical_root_finding_001",
+              "span": "It evaluates the midpoint"
+            },
+            {
+              "lecture_id": "numerical_root_finding_001",
+              "span": "m = \\frac{a+b}{2}"
+            }
+          ],
+          "rationale": "The midpoint equation formalizes the point evaluated at each bisection step."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
-      "source_annotation": null,
+      "annotation_source": "reused_existing_relation_annotation",
+      "source_annotation": {
+        "source_relation_id": "rel_holdout_039",
+        "source_artifact_path": "benchmark/ground_truth/relations_holdout_v0_1.json",
+        "source_artifact_sha256": "20cf7a8b2aeb76f372e103c59c453bfa15c43732885b6c621af26f5edd427a6f"
+      },
       "notes": null
     },
     {
       "pair_id": "cand_dev_103",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The Newton update belongs to Newton's method, while bisection is described with bracket refinement and a midpoint; no direct Relation between this pair is supported.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_104",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "CONTRASTS_WITH",
+          "source": {
+            "lecture_id": "numerical_root_finding_001",
+            "ko_id": "newtons_method"
+          },
+          "target": {
+            "lecture_id": "numerical_root_finding_001",
+            "ko_id": "bisection_method"
+          },
+          "symmetric": true,
+          "evidence_spans": [
+            {
+              "lecture_id": "numerical_root_finding_001",
+              "span": "Newton's method and the bisection method contrast in the information they use: Newton's method requires derivative values and can converge rapidly near a root, whereas bisection uses only function signs and preserves a bracket at every iteration."
+            }
+          ],
+          "rationale": "The lecture explicitly contrasts the information and convergence behavior of the two methods."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
-      "source_annotation": null,
+      "annotation_source": "reused_existing_relation_annotation",
+      "source_annotation": {
+        "source_relation_id": "rel_holdout_016",
+        "source_artifact_path": "benchmark/ground_truth/relations_holdout_v0_1.json",
+        "source_artifact_sha256": "20cf7a8b2aeb76f372e103c59c453bfa15c43732885b6c621af26f5edd427a6f"
+      },
       "notes": null
     },
     {
       "pair_id": "cand_dev_105",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "APPLIED_IN",
+          "source": {
+            "lecture_id": "numerical_root_finding_001",
+            "ko_id": "bisection_method"
+          },
+          "target": {
+            "lecture_id": "numerical_root_finding_001",
+            "ko_id": "root_finding_problem"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "numerical_root_finding_001",
+              "span": "A root-finding problem asks for a value \\(x^*\\) at which a scalar function is zero:"
+            },
+            {
+              "lecture_id": "numerical_root_finding_001",
+              "span": "The bisection method begins with a sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\). It evaluates the midpoint"
+            },
+            {
+              "lecture_id": "numerical_root_finding_001",
+              "span": "and retains the half-interval whose endpoints still have opposite signs."
+            }
+          ],
+          "rationale": "The bisection procedure uses a sign-changing interval and repeated refinement in the root-finding problem context."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_106",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "numerical_root_finding_001",
+            "ko_id": "bisection_method"
+          },
+          "target": {
+            "lecture_id": "numerical_root_finding_001",
+            "ko_id": "sign_changing_bracket"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "numerical_root_finding_001",
+              "span": "The bisection method begins with a sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\)."
+            }
+          ],
+          "rationale": "The sign-changing bracket is the required starting condition for bisection in the lecture."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
-      "source_annotation": null,
+      "annotation_source": "reused_existing_relation_annotation",
+      "source_annotation": {
+        "source_relation_id": "rel_holdout_028",
+        "source_artifact_path": "benchmark/ground_truth/relations_holdout_v0_1.json",
+        "source_artifact_sha256": "20cf7a8b2aeb76f372e103c59c453bfa15c43732885b6c621af26f5edd427a6f"
+      },
       "notes": null
     },
     {
       "pair_id": "cand_dev_107",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The midpoint formula is presented as part of bisection, while damped Newton scales the Newton correction; the lecture does not directly relate the pair.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_108",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "REQUIRES",
+          "source": {
+            "lecture_id": "numerical_root_finding_001",
+            "ko_id": "damped_newton_method"
+          },
+          "target": {
+            "lecture_id": "numerical_root_finding_001",
+            "ko_id": "newton_update_formula"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "numerical_root_finding_001",
+              "span": "Newton's method uses the derivative to replace the function locally by its tangent line."
+            },
+            {
+              "lecture_id": "numerical_root_finding_001",
+              "span": "x_{k+1} = x_k - \\frac{f(x_k)}{f'(x_k)}."
+            },
+            {
+              "lecture_id": "numerical_root_finding_001",
+              "span": "The damped Newton method extends Newton's method by scaling the Newton correction with a factor between zero and one."
+            }
+          ],
+          "rationale": "Damped Newton is defined by scaling the Newton correction supplied by the base Newton update, so that update is a definitional dependency."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_109",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "EXTENDS",
+          "source": {
+            "lecture_id": "numerical_root_finding_001",
+            "ko_id": "damped_newton_method"
+          },
+          "target": {
+            "lecture_id": "numerical_root_finding_001",
+            "ko_id": "newtons_method"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "numerical_root_finding_001",
+              "span": "The damped Newton method extends Newton's method by scaling the Newton correction with a factor between zero and one."
+            }
+          ],
+          "rationale": "Damped Newton retains the Newton correction and adds a scaling control."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
-      "source_annotation": null,
+      "annotation_source": "reused_existing_relation_annotation",
+      "source_annotation": {
+        "source_relation_id": "rel_holdout_035",
+        "source_artifact_path": "benchmark/ground_truth/relations_holdout_v0_1.json",
+        "source_artifact_sha256": "20cf7a8b2aeb76f372e103c59c453bfa15c43732885b6c621af26f5edd427a6f"
+      },
       "notes": null
     },
     {
       "pair_id": "cand_dev_110",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "APPLIED_IN",
+          "source": {
+            "lecture_id": "numerical_root_finding_001",
+            "ko_id": "damped_newton_method"
+          },
+          "target": {
+            "lecture_id": "numerical_root_finding_001",
+            "ko_id": "root_finding_problem"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "numerical_root_finding_001",
+              "span": "A root-finding problem asks for a value \\(x^*\\) at which a scalar function is zero:"
+            },
+            {
+              "lecture_id": "numerical_root_finding_001",
+              "span": "The damped Newton method extends Newton's method by scaling the Newton correction with a factor between zero and one. This extra control can prevent a full Newton step from moving too far when the current iterate is not yet near a root."
+            }
+          ],
+          "rationale": "The damped Newton procedure controls Newton iterates while seeking a root, placing it in the stated root-finding problem context."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_111",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The sign-changing bracket is introduced for bisection, while damped Newton is described through a scaled Newton correction; no direct Relation is stated.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_112",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The two formulas belong to separate numerical methods and the lecture supplies no direct Relation between them.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_113",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The midpoint formula is presented within bisection, not Newton's method, and no direct Relation between the pair is supported.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_114",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The midpoint formula participates in bisection, but the lecture does not directly relate that formula itself to the root-finding problem without passing through the method.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_115",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "OUT_OF_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
-      "out_of_schema_relation": null,
+      "out_of_schema_relation": {
+        "relation_description": "The midpoint formula computes the midpoint from the endpoints of the sign-changing bracket used by bisection.",
+        "schema_exclusion_rationale": "The frozen schema has no relation for a formula computing a derived point from an interval; FORMALIZES and APPLIED_IN would misstate the bracket as a method or definition target.",
+        "evidence_spans": [
+          {
+            "lecture_id": "numerical_root_finding_001",
+            "span": "The bisection method begins with a sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\). It evaluates the midpoint"
+          },
+          {
+            "lecture_id": "numerical_root_finding_001",
+            "span": "m = \\frac{a+b}{2}"
+          }
+        ]
+      },
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_116",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "FORMALIZES",
+          "source": {
+            "lecture_id": "numerical_root_finding_001",
+            "ko_id": "newton_update_formula"
+          },
+          "target": {
+            "lecture_id": "numerical_root_finding_001",
+            "ko_id": "newtons_method"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "numerical_root_finding_001",
+              "span": "Newton's method uses the derivative to replace the function locally by its tangent line."
+            },
+            {
+              "lecture_id": "numerical_root_finding_001",
+              "span": "x_{k+1} = x_k - \\frac{f(x_k)}{f'(x_k)}."
+            }
+          ],
+          "rationale": "The displayed iteration is the update rule defining Newton's method."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
-      "source_annotation": null,
+      "annotation_source": "reused_existing_relation_annotation",
+      "source_annotation": {
+        "source_relation_id": "rel_holdout_023",
+        "source_artifact_path": "benchmark/ground_truth/relations_holdout_v0_1.json",
+        "source_artifact_sha256": "20cf7a8b2aeb76f372e103c59c453bfa15c43732885b6c621af26f5edd427a6f"
+      },
       "notes": null
     },
     {
       "pair_id": "cand_dev_117",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The update formula directly formalizes Newton's method; the lecture does not independently type a Relation from the formula to the broader root-finding problem.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_118",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
-      "source_annotation": null,
+      "negative_rationale": "The bracket belongs to bisection, while the Newton update is presented separately; the lecture establishes no direct v0.1 Relation between them.",
+      "annotation_source": "reused_existing_relation_annotation",
+      "source_annotation": {
+        "source_relation_id": "rel_holdout_002",
+        "source_artifact_path": "benchmark/ground_truth/relations_holdout_v0_1.json",
+        "source_artifact_sha256": "20cf7a8b2aeb76f372e103c59c453bfa15c43732885b6c621af26f5edd427a6f"
+      },
       "notes": null
     },
     {
       "pair_id": "cand_dev_119",
-      "candidate_label": null,
-      "annotation_status": "draft",
-      "gold_relations": [],
+      "candidate_label": "IN_SCHEMA_RELATION",
+      "annotation_status": "final",
+      "gold_relations": [
+        {
+          "role": "primary",
+          "relation_type": "APPLIED_IN",
+          "source": {
+            "lecture_id": "numerical_root_finding_001",
+            "ko_id": "newtons_method"
+          },
+          "target": {
+            "lecture_id": "numerical_root_finding_001",
+            "ko_id": "root_finding_problem"
+          },
+          "symmetric": false,
+          "evidence_spans": [
+            {
+              "lecture_id": "numerical_root_finding_001",
+              "span": "A root-finding problem asks for a value \\(x^*\\) at which a scalar function is zero:"
+            },
+            {
+              "lecture_id": "numerical_root_finding_001",
+              "span": "Newton's method and the bisection method contrast in the information they use: Newton's method requires derivative values and can converge rapidly near a root, whereas bisection uses only function signs and preserves a bracket at every iteration."
+            }
+          ],
+          "rationale": "The lecture presents Newton's method as an iterative method that converges near a root in the stated root-finding problem context."
+        }
+      ],
       "out_of_schema_relation": null,
       "ambiguity": null,
       "negative_rationale": null,
-      "annotation_source": null,
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_120",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "The sign-changing bracket is tied to bisection. The comparison with Newton's method does not establish a direct graph Relation between Newton's method and the bracket itself.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
     {
       "pair_id": "cand_dev_121",
-      "candidate_label": null,
-      "annotation_status": "draft",
+      "candidate_label": "NO_IN_SCHEMA_RELATION",
+      "annotation_status": "final",
       "gold_relations": [],
       "out_of_schema_relation": null,
       "ambiguity": null,
-      "negative_rationale": null,
-      "annotation_source": null,
+      "negative_rationale": "A sign-changing bracket is the starting condition for bisection, not for every root-finding problem, and the lecture does not directly assign it a Relation to the general problem concept.",
+      "annotation_source": "new_exhaustive_annotation",
       "source_annotation": null,
       "notes": null
     },
