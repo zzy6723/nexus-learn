@@ -1,0 +1,27 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_holdout_037",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ko_slot_004"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ko_slot_003"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right)"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+        }
+      ],
+      "rationale": "The formula is the update rule that defines Heun's method, so it formalizes the method."
+    }
+  ]
+}

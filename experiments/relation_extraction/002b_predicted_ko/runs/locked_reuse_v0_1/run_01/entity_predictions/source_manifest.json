@@ -1,0 +1,88 @@
+{
+  "artifact_type": "entity_prediction_source_manifest",
+  "version": "v0.1",
+  "status": "prepared_pending_entity_reruns",
+  "method_commit": "38395faaf3ff36ca1bb178b843d659cb908497f1",
+  "execution_scope": "locked_reuse_v0_1",
+  "input_split": "holdout",
+  "entity_prompt": {
+    "path": "experiments/entity_extraction/002_prompt_refinement/prompt.md",
+    "sha256": "12d85ea9b3ed66b751b637d7ce2e459c69368b9685bbc39c4713c24ff69feeeb"
+  },
+  "reuse_policy": {
+    "requires_exact_lecture_and_prompt_hashes": true,
+    "requires_identical_model_and_request_parameters": true,
+    "requires_traceable_raw_rendered_parsed_artifacts": true,
+    "requires_raw_parsed_content_equivalence": true,
+    "does_not_require_historical_git_dirty_false": true
+  },
+  "source_runs_audited": [
+    "experiments/entity_extraction/002_prompt_refinement",
+    "experiments/entity_extraction/002_prompt_refinement/runs/holdout_v0_1/run_01"
+  ],
+  "counts": {
+    "lectures": 4,
+    "reused": 0,
+    "rerun_required": 4
+  },
+  "rerun_required_lecture_ids": [
+    "statistics_estimation_001",
+    "numerical_root_finding_001",
+    "differential_equations_001",
+    "graph_algorithms_001"
+  ],
+  "lectures": [
+    {
+      "lecture_id": "statistics_estimation_001",
+      "decision": "rerun_required",
+      "source_run": null,
+      "checks": {
+        "source_candidate_unique": false
+      },
+      "reasons": [
+        "missing_source_candidate"
+      ],
+      "source_paths": {},
+      "source_sha256": {}
+    },
+    {
+      "lecture_id": "numerical_root_finding_001",
+      "decision": "rerun_required",
+      "source_run": null,
+      "checks": {
+        "source_candidate_unique": false
+      },
+      "reasons": [
+        "missing_source_candidate"
+      ],
+      "source_paths": {},
+      "source_sha256": {}
+    },
+    {
+      "lecture_id": "differential_equations_001",
+      "decision": "rerun_required",
+      "source_run": null,
+      "checks": {
+        "source_candidate_unique": false
+      },
+      "reasons": [
+        "missing_source_candidate"
+      ],
+      "source_paths": {},
+      "source_sha256": {}
+    },
+    {
+      "lecture_id": "graph_algorithms_001",
+      "decision": "rerun_required",
+      "source_run": null,
+      "checks": {
+        "source_candidate_unique": false
+      },
+      "reasons": [
+        "missing_source_candidate"
+      ],
+      "source_paths": {},
+      "source_sha256": {}
+    }
+  ]
+}

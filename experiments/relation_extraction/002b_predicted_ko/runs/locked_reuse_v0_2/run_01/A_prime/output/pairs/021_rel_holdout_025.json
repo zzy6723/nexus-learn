@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_holdout_025",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "ko_slot_015"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "ko_slot_011"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Relaxation is formalized by the update\n\n\\[\nd(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}.\n\\]"
+        }
+      ],
+      "rationale": "The lecture explicitly states that the Edge Relaxation Formula formalizes the Edge Relaxation method, satisfying the FORMALIZES relation where the formula is the source and the method is the target."
+    }
+  ]
+}

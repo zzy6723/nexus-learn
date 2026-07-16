@@ -1,0 +1,103 @@
+{
+  "lecture_id": "differential_equations_001",
+  "knowledge_objects": [
+    {
+      "id": "ordinary_differential_equation",
+      "name": "Ordinary Differential Equation",
+      "type": "Concept",
+      "aliases": [
+        "ODE"
+      ],
+      "short_definition": "An equation that relates an unknown function of one variable to its derivatives.",
+      "source_span": "An ordinary differential equation relates an unknown function of one variable to its derivatives."
+    },
+    {
+      "id": "first_order_equation",
+      "name": "First-Order Equation",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "A differential equation that can be written as y'(t) = F(t, y(t)).",
+      "source_span": "A first-order equation can be written as y'(t) = F(t,y(t))."
+    },
+    {
+      "id": "initial_value_problem",
+      "name": "Initial Value Problem",
+      "type": "Concept",
+      "aliases": [
+        "IVP"
+      ],
+      "short_definition": "An ordinary differential equation combined with an initial condition such as y(t0)=y0.",
+      "source_span": "An initial value problem combines an ordinary differential equation with an initial condition such as y(t_0)=y_0."
+    },
+    {
+      "id": "vector_field",
+      "name": "Vector Field",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "The function F that specifies the slope that the solution should follow at each state.",
+      "source_span": "The vector field F specifies the slope that the solution should follow at each state."
+    },
+    {
+      "id": "forward_euler_method",
+      "name": "Forward Euler Method",
+      "type": "Method",
+      "aliases": [
+        "Euler's method"
+      ],
+      "short_definition": "A method that advances from the current approximation along the current vector-field slope.",
+      "source_span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope."
+    },
+    {
+      "id": "step_size",
+      "name": "Step Size",
+      "type": "Concept",
+      "aliases": [
+        "h"
+      ],
+      "short_definition": "The spacing between consecutive numerical time points.",
+      "source_span": "The step size h sets the spacing between consecutive numerical time points."
+    },
+    {
+      "id": "discretization_error",
+      "name": "Discretization Error",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "Error that is reduced by smaller steps but requires more updates.",
+      "source_span": "Smaller steps usually reduce discretization error but require more updates over a fixed time interval."
+    },
+    {
+      "id": "heuns_method",
+      "name": "Heun's Method",
+      "type": "Method",
+      "aliases": [
+        "predictor-corrector method"
+      ],
+      "short_definition": "A method that extends forward Euler with a predictor-corrector step.",
+      "source_span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+    },
+    {
+      "id": "euler_predictor",
+      "name": "Euler Predictor",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "The predictor step in Heun's method, given by y_{n+1} = y_n + h F(t_n, y_n).",
+      "source_span": "It first forms the Euler predictor y_{n+1} = y_n + hF(t_n,y_n)"
+    },
+    {
+      "id": "forward_euler_update",
+      "name": "Forward Euler Update",
+      "type": "Formula",
+      "aliases": [],
+      "short_definition": "The update formula y_{n+1} = y_n + h F(t_n, y_n).",
+      "source_span": "y_{n+1} = y_n + hF(t_n,y_n)"
+    },
+    {
+      "id": "heuns_update",
+      "name": "Heun's Update",
+      "type": "Formula",
+      "aliases": [],
+      "short_definition": "The corrected update formula y_{n+1} = y_n + (h/2)(F(t_n,y_n)+F(t_n+h, y_{n+1})).",
+      "source_span": "y_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right)"
+    }
+  ]
+}

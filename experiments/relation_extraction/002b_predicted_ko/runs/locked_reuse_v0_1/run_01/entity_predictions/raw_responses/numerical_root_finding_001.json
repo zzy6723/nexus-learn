@@ -1,0 +1,28 @@
+{
+  "id": "07df8210-e0e0-4b5b-999b-9a9f01eee2c0",
+  "object": "chat.completion",
+  "created": 1784133195,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"lecture_id\": \"numerical_root_finding_001\",\n  \"knowledge_objects\": [\n    {\n      \"id\": \"root_finding_problem\",\n      \"name\": \"Root-finding problem\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"A problem that asks for a value at which a scalar function is zero.\",\n      \"source_span\": \"A root-finding problem asks for a value \\\\(x^*\\\\) at which a scalar function is zero\"\n    },\n    {\n      \"id\": \"newtons_method\",\n      \"name\": \"Newton's method\",\n      \"type\": \"Method\",\n      \"aliases\": [],\n      \"short_definition\": \"A method that uses the derivative to replace the function locally by its tangent line to find roots.\",\n      \"source_span\": \"Newton's method uses the derivative to replace the function locally by its tangent line.\"\n    },\n    {\n      \"id\": \"newton_update_formula\",\n      \"name\": \"Newton update formula\",\n      \"type\": \"Formula\",\n      \"aliases\": [],\n      \"short_definition\": \"The update rule for Newton's method: x_{k+1} = x_k - f(x_k)/f'(x_k).\",\n      \"source_span\": \"x_{k+1} = x_k - \\\\frac{f(x_k)}{f'(x_k)}\"\n    },\n    {\n      \"id\": \"damped_newton_method\",\n      \"name\": \"Damped Newton method\",\n      \"type\": \"Method\",\n      \"aliases\": [],\n      \"short_definition\": \"An extension of Newton's method that scales the Newton correction with a factor between zero and one.\",\n      \"source_span\": \"The damped Newton method extends Newton's method by scaling the Newton correction with a factor between zero and one.\"\n    },\n    {\n      \"id\": \"bisection_method\",\n      \"name\": \"Bisection method\",\n      \"type\": \"Method\",\n      \"aliases\": [],\n      \"short_definition\": \"A method that begins with a sign-changing bracket and repeatedly halves the interval retaining the half with opposite signs.\",\n      \"source_span\": \"The bisection method begins with a sign-changing bracket \\\\([a,b]\\\\) satisfying \\\\(f(a)f(b)<0\\\\).\"\n    },\n    {\n      \"id\": \"midpoint_formula\",\n      \"name\": \"Midpoint formula\",\n      \"type\": \"Formula\",\n      \"aliases\": [],\n      \"short_definition\": \"The formula for the midpoint of an interval: m = (a+b)/2.\",\n      \"source_span\": \"m = \\\\frac{a+b}{2}\"\n    },\n    {\n      \"id\": \"sign_changing_bracket\",\n      \"name\": \"Sign-changing bracket\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"An interval [a,b] such that f(a)f(b) < 0, guaranteeing a root inside.\",\n      \"source_span\": \"sign-changing bracket \\\\([a,b]\\\\) satisfying \\\\(f(a)f(b)<0\\\\)\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 736,
+    "completion_tokens": 665,
+    "total_tokens": 1401,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 736
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

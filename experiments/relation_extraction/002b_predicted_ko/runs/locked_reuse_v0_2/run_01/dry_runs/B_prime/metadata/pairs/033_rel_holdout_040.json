@@ -1,0 +1,104 @@
+{
+  "provider": "deepseek",
+  "experiment": "002_prompt_refinement",
+  "run_id": "run_01",
+  "split": "holdout",
+  "benchmark_version": "v0.1",
+  "ground_truth": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/projection/matched_relation_ground_truth.json",
+  "prompt_path": "experiments/relation_extraction/002_prompt_refinement/prompt.md",
+  "relation_schema_path": "docs/decisions/004-relation-schema.md",
+  "model_requested": "deepseek-v4-flash",
+  "model_returned": null,
+  "system_fingerprint": null,
+  "finish_reason": null,
+  "request_parameters": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 8192,
+    "stream": false,
+    "response_format": {
+      "type": "json_object"
+    },
+    "thinking": {
+      "type": "disabled"
+    }
+  },
+  "run_timestamp": "2026-07-15T17:39:44.672508+00:00",
+  "latency_ms": null,
+  "git_commit_at_start": "3c8606d9243465a8a15639a628db80ea79155f96",
+  "git_dirty_at_start": false,
+  "hashes": {
+    "ground_truth_sha256": "d949b240c937a2c637a96ea30c03384d1e48791dea640f7b851094efb9e154f6",
+    "prompt_sha256": "e3b0e53f3ceed60c60d082fa9c4a67f9497e64d50664118227cd9bea9fbc12af",
+    "relation_schema_sha256": "a50bbf3193fe03e6e407da6ced7f15f9f4bb819876140925bc87ac4419c50417",
+    "knowledge_object_ground_truth_sha256": {
+      "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/projection/matched_knowledge_objects.json": "20249e4d4ab1212d29dee489f754c187363b14c582887c19243bf19f71845165"
+    },
+    "lecture_sha256": {
+      "graph_algorithms_001": "0fdb7752023500999cc9ad8c439035c4a60be707908ae996d26d2f907c27e41d",
+      "statistics_estimation_001": "0f48d5fa14623d7af50716342e2c3f456e9f5728d741f8856fdb01dd2b95f4fa"
+    },
+    "model_input_sha256": "5e8fc4eb4e44deaad4ddf90943126f4d25551589232d72c708ab54bd6868c87f",
+    "request_payload_sha256": "c18185807bb3c02646339282f4c1b16230ce5e9f0e91893522d9ab813b29cd0a"
+  },
+  "input_counts": {
+    "candidate_pairs": 1,
+    "knowledge_objects": 2,
+    "lectures": 2
+  },
+  "gold_leakage_audit": {
+    "passed": true,
+    "candidate_serialization": "sorted_fully_qualified_references",
+    "forbidden_keys_checked": [
+      "acceptable_alternatives",
+      "category",
+      "evidence_spans",
+      "primary_scored",
+      "primary_scoring_categories",
+      "rationale",
+      "relation_type",
+      "source",
+      "symmetric",
+      "target"
+    ],
+    "rendered_pair_count": 1,
+    "rendered_knowledge_object_count": 2,
+    "rendered_lecture_count": 2
+  },
+  "artifacts": {
+    "rendered_input": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/dry_runs/B_prime/rendered_inputs/pairs/033_rel_holdout_040.json",
+    "raw_response": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/dry_runs/B_prime/raw_responses/pairs/033_rel_holdout_040.json",
+    "prediction": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/dry_runs/B_prime/output/pairs/033_rel_holdout_040.json",
+    "unparsed_output": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/dry_runs/B_prime/output/pairs/033_rel_holdout_040.raw.txt",
+    "metadata": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/dry_runs/B_prime/metadata/pairs/033_rel_holdout_040.json"
+  },
+  "usage": null,
+  "request_success": null,
+  "api_error": null,
+  "json_parse_success": null,
+  "json_parse_error": null,
+  "prediction_schema_valid": null,
+  "prediction_schema_error": null,
+  "retry_count": 0,
+  "dry_run": true,
+  "run_status": "dry_run_complete",
+  "condition": "B_prime",
+  "input_artifact": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/projection/predicted_normalized_input.json",
+  "input_artifact_sha256": "b03f92ac00ce35bb0c07cffae47223a06134d85d9e3f85f26513c9055b06ba9e",
+  "batch_plan": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/projection/batch_plan.json",
+  "batch_plan_sha256": "1e5f1851ec1ce14329ffc828052390ab8e29344de9486c88b94d815276a9177e",
+  "request_partitioning": "one_candidate_pair_per_request_v0_1",
+  "execution_batch_plan": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/dry_runs/B_prime/execution_batch_plan.json",
+  "execution_batch_plan_sha256": "4bb89c549f5edfa4c01384d1f69f43cfd91e79937764b635d02128e65ab61656",
+  "execution_batch_id": "candidate_033",
+  "execution_batch_index": 33,
+  "execution_batch_count": 33,
+  "pair_id": "rel_holdout_040",
+  "execution_manifest": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/execution_manifest.json",
+  "execution_manifest_sha256": "ae44d16312dc254a0c4c0fae26d2f1007ac8ff3fed5e84c1633b82ab0bb1304d",
+  "method_commit": "3c8606d9243465a8a15639a628db80ea79155f96",
+  "projection_completion_marker": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/projection/projection_bundle_complete.json",
+  "projection_completion_marker_sha256": "93ff5d79453124a161f88cefc33732f1599dc0ea5b7e0df5e525e32cad2520a6",
+  "entity_completion_marker": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/entity_predictions/entity_predictions_complete.json",
+  "entity_completion_marker_sha256": "e72e08662d4a3a75a4296371c9eab544bca71647617ec5e74b8fe183ea58dab0"
+}

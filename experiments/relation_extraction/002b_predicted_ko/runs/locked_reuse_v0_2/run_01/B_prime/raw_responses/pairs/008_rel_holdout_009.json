@@ -1,0 +1,28 @@
+{
+  "id": "c31e4e4d-6452-4bb6-a922-fe7711e79e40",
+  "object": "chat.completion",
+  "created": 1784138025,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_holdout_009\",\n      \"source\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"ko_slot_003\"\n      },\n      \"target\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"ko_slot_002\"\n      },\n      \"relation_type\": \"EXTENDS\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"Heun's method extends the forward Euler method with a predictor-corrector step.\"\n        }\n      ],\n      \"rationale\": \"The lecture explicitly states that Heun's method extends the forward Euler method, indicating that Heun's method is a more specific development of the forward Euler method.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2325,
+    "completion_tokens": 191,
+    "total_tokens": 2516,
+    "prompt_tokens_details": {
+      "cached_tokens": 2304
+    },
+    "prompt_cache_hit_tokens": 2304,
+    "prompt_cache_miss_tokens": 21
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

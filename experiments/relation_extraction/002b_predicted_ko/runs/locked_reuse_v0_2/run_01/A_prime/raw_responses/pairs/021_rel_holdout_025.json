@@ -1,0 +1,28 @@
+{
+  "id": "a95a579b-f57d-400d-a83a-8ec3b835ef51",
+  "object": "chat.completion",
+  "created": 1784137431,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_holdout_025\",\n      \"source\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"ko_slot_015\"\n      },\n      \"target\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"ko_slot_011\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"graph_algorithms_001\",\n          \"span\": \"Relaxation is formalized by the update\\n\\n\\\\[\\nd(v) \\\\leftarrow \\\\min\\\\{d(v),\\\\, d(u)+w(u,v)\\\\}.\\n\\\\]\"\n        }\n      ],\n      \"rationale\": \"The lecture explicitly states that the Edge Relaxation Formula formalizes the Edge Relaxation method, satisfying the FORMALIZES relation where the formula is the source and the method is the target.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2287,
+    "completion_tokens": 217,
+    "total_tokens": 2504,
+    "prompt_tokens_details": {
+      "cached_tokens": 1920
+    },
+    "prompt_cache_hit_tokens": 1920,
+    "prompt_cache_miss_tokens": 367
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,27 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_holdout_033",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "ko_slot_028"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "ko_slot_027"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta)."
+        }
+      ],
+      "rationale": "The formula for the MLE estimator explicitly defines the result of the maximum likelihood estimation method, thus formalizing it."
+    }
+  ]
+}

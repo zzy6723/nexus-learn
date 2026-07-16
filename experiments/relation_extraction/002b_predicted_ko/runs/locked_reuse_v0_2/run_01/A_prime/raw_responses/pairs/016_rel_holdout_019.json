@@ -1,0 +1,28 @@
+{
+  "id": "7a053ede-1695-4799-b2b2-6724fce78689",
+  "object": "chat.completion",
+  "created": 1784137418,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_holdout_019\",\n      \"source\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"ko_slot_024\"\n      },\n      \"target\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"ko_slot_023\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"L(\\\\theta; x_{1:n}) = \\\\prod_{i=1}^{n} p(x_i \\\\mid \\\\theta).\"\n        },\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values.\"\n        }\n      ],\n      \"rationale\": \"The Likelihood Formula explicitly defines the Likelihood concept, as the formula is presented as the mathematical expression of the likelihood for independent observations.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2355,
+    "completion_tokens": 244,
+    "total_tokens": 2599,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 307
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

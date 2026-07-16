@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_holdout_030",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "ko_slot_010"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "ko_slot_011"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "it applies edge relaxation to each outgoing edge."
+        }
+      ],
+      "rationale": "Dijkstra's algorithm applies edge relaxation as a step, so edge relaxation is a prerequisite for the algorithm."
+    }
+  ]
+}

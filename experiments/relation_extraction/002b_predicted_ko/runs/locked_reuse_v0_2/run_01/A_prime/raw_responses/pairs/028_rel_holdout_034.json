@@ -1,0 +1,28 @@
+{
+  "id": "5e66962e-97a4-4218-b88c-35e2ff519d6c",
+  "object": "chat.completion",
+  "created": 1784137450,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_holdout_034\",\n      \"source\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"ko_slot_001\"\n      },\n      \"target\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"ko_slot_026\"\n      },\n      \"relation_type\": \"NO_RELATION\",\n      \"evidence_spans\": [],\n      \"rationale\": \"The two formulas appear in different lectures with no shared context or direct connection. The lecture texts do not establish any meaningful educational relation between the Forward Euler Update Formula and the Log-Likelihood Formula.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2694,
+    "completion_tokens": 157,
+    "total_tokens": 2851,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 646
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

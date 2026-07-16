@@ -1,0 +1,388 @@
+{
+  "allowed_object_types": [
+    "Concept",
+    "Formula",
+    "Method"
+  ],
+  "annotation_guidelines": "benchmark/annotation_guidelines.md",
+  "artifact_type": "matched_knowledge_object_ground_truth",
+  "created": "derived",
+  "derivation": {
+    "alignment_sha256": "7c19999b7f9eca0e7a6af194826241df4373d1432c6eca345c0a9ee71e6dabca",
+    "ko_manifest_sha256": "598cfff40af7d9e36f00c6fa05d2c7dbe72f362011a3e2521f1dd495c3bec505",
+    "original_ko_ground_truth_sha256": "d92898ab30ce33b91a56c247a69e04ad397c50707c5decc7d10eeb3082466cda",
+    "pair_manifest_sha256": "8ac25e5b514593d9ad604f490ce7df8aa50fb70f810e68b7e121aa6112fcca0b",
+    "version": "predicted_ko_projection_v0_1"
+  },
+  "description": "Evaluator-facing neutral-slot Oracle KO inventory derived by Step 4.3.",
+  "evaluation_protocol": "benchmark/evaluation_protocol.md",
+  "lectures": [
+    {
+      "lecture_id": "differential_equations_001",
+      "objects": [
+        {
+          "aliases": [
+            "Euler update"
+          ],
+          "category": "required",
+          "id": "ko_slot_001",
+          "name": "Forward Euler Update Formula",
+          "source_spans": [
+            "y_{n+1} = y_n + hF(t_n,y_n)."
+          ],
+          "type": "Formula"
+        },
+        {
+          "aliases": [
+            "forward Euler",
+            "Euler method"
+          ],
+          "category": "required",
+          "id": "ko_slot_002",
+          "name": "Forward Euler Method",
+          "source_spans": [
+            "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope."
+          ],
+          "type": "Method"
+        },
+        {
+          "aliases": [
+            "Heun method"
+          ],
+          "category": "required",
+          "id": "ko_slot_003",
+          "name": "Heun's Method",
+          "source_spans": [
+            "Heun's method extends the forward Euler method with a predictor-corrector step."
+          ],
+          "type": "Method"
+        },
+        {
+          "aliases": [
+            "Heun update"
+          ],
+          "category": "required",
+          "id": "ko_slot_004",
+          "name": "Heun Corrected Update Formula",
+          "source_spans": [
+            "y_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right)."
+          ],
+          "type": "Formula"
+        },
+        {
+          "aliases": [
+            "IVP"
+          ],
+          "category": "required",
+          "id": "ko_slot_005",
+          "name": "Initial Value Problem",
+          "source_spans": [
+            "An initial value problem combines an ordinary differential equation with an initial condition such as \\(y(t_0)=y_0\\)."
+          ],
+          "type": "Concept"
+        },
+        {
+          "aliases": [
+            "ODE"
+          ],
+          "category": "required",
+          "id": "ko_slot_006",
+          "name": "Ordinary Differential Equation",
+          "source_spans": [
+            "An ordinary differential equation relates an unknown function of one variable to its derivatives."
+          ],
+          "type": "Concept"
+        },
+        {
+          "aliases": [],
+          "category": "required",
+          "id": "ko_slot_007",
+          "name": "Step Size",
+          "source_spans": [
+            "The step size \\(h\\) sets the spacing between consecutive numerical time points."
+          ],
+          "type": "Concept"
+        },
+        {
+          "aliases": [],
+          "category": "required",
+          "id": "ko_slot_008",
+          "name": "Vector Field",
+          "source_spans": [
+            "The vector field \\(F\\) specifies the slope that the solution should follow at each state."
+          ],
+          "type": "Concept"
+        }
+      ],
+      "path": "benchmark/lectures/relation_holdout/differential_equations_001.md"
+    },
+    {
+      "lecture_id": "graph_algorithms_001",
+      "objects": [
+        {
+          "aliases": [
+            "A-star search"
+          ],
+          "category": "required",
+          "id": "ko_slot_009",
+          "name": "A* Search",
+          "source_spans": [
+            "A* search extends Dijkstra's algorithm by using a heuristic function \\(h(v)\\) to guide which vertex is explored next."
+          ],
+          "type": "Method"
+        },
+        {
+          "aliases": [
+            "Dijkstra algorithm"
+          ],
+          "category": "required",
+          "id": "ko_slot_010",
+          "name": "Dijkstra's Algorithm",
+          "source_spans": [
+            "Dijkstra's algorithm is applied to this problem when all edge weights are nonnegative."
+          ],
+          "type": "Method"
+        },
+        {
+          "aliases": [
+            "relaxation"
+          ],
+          "category": "required",
+          "id": "ko_slot_011",
+          "name": "Edge Relaxation",
+          "source_spans": [
+            "After removing a vertex \\(u\\) with the smallest tentative distance, it applies edge relaxation to each outgoing edge."
+          ],
+          "type": "Method"
+        },
+        {
+          "aliases": [
+            "heuristic"
+          ],
+          "category": "required",
+          "id": "ko_slot_012",
+          "name": "Heuristic Function",
+          "source_spans": [
+            "a heuristic function \\(h(v)\\) to guide which vertex is explored next"
+          ],
+          "type": "Concept"
+        },
+        {
+          "aliases": [],
+          "category": "required",
+          "id": "ko_slot_013",
+          "name": "Path Cost",
+          "source_spans": [
+            "Its path cost is the sum of their edge weights:"
+          ],
+          "type": "Concept"
+        },
+        {
+          "aliases": [],
+          "category": "required",
+          "id": "ko_slot_014",
+          "name": "Path Cost Formula",
+          "source_spans": [
+            "C(v_0,\\ldots,v_k) = \\sum_{i=0}^{k-1} w(v_i,v_{i+1})."
+          ],
+          "type": "Formula"
+        },
+        {
+          "aliases": [],
+          "category": "required",
+          "id": "ko_slot_015",
+          "name": "Edge Relaxation Formula",
+          "source_spans": [
+            "d(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}."
+          ],
+          "type": "Formula"
+        },
+        {
+          "aliases": [
+            "shortest-path problem"
+          ],
+          "category": "required",
+          "id": "ko_slot_016",
+          "name": "Single-Source Shortest-Path Problem",
+          "source_spans": [
+            "The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex."
+          ],
+          "type": "Concept"
+        }
+      ],
+      "path": "benchmark/lectures/relation_holdout/graph_algorithms_001.md"
+    },
+    {
+      "lecture_id": "numerical_root_finding_001",
+      "objects": [
+        {
+          "aliases": [
+            "bisection"
+          ],
+          "category": "required",
+          "id": "ko_slot_017",
+          "name": "Bisection Method",
+          "source_spans": [
+            "The bisection method begins with a sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\)."
+          ],
+          "type": "Method"
+        },
+        {
+          "aliases": [],
+          "category": "required",
+          "id": "ko_slot_018",
+          "name": "Damped Newton Method",
+          "source_spans": [
+            "The damped Newton method extends Newton's method by scaling the Newton correction with a factor between zero and one."
+          ],
+          "type": "Method"
+        },
+        {
+          "aliases": [],
+          "category": "required",
+          "id": "ko_slot_019",
+          "name": "Bisection Midpoint Formula",
+          "source_spans": [
+            "m = \\frac{a+b}{2}"
+          ],
+          "type": "Formula"
+        },
+        {
+          "aliases": [
+            "Newton method"
+          ],
+          "category": "required",
+          "id": "ko_slot_020",
+          "name": "Newton's Method",
+          "source_spans": [
+            "Newton's method uses the derivative to replace the function locally by its tangent line."
+          ],
+          "type": "Method"
+        },
+        {
+          "aliases": [],
+          "category": "required",
+          "id": "ko_slot_021",
+          "name": "Newton Update Formula",
+          "source_spans": [
+            "x_{k+1} = x_k - \\frac{f(x_k)}{f'(x_k)}."
+          ],
+          "type": "Formula"
+        },
+        {
+          "aliases": [
+            "bracket"
+          ],
+          "category": "required",
+          "id": "ko_slot_022",
+          "name": "Sign-Changing Bracket",
+          "source_spans": [
+            "The bisection method begins with a sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\)."
+          ],
+          "type": "Concept"
+        }
+      ],
+      "path": "benchmark/lectures/relation_holdout/numerical_root_finding_001.md"
+    },
+    {
+      "lecture_id": "statistics_estimation_001",
+      "objects": [
+        {
+          "aliases": [],
+          "category": "required",
+          "id": "ko_slot_023",
+          "name": "Likelihood",
+          "source_spans": [
+            "The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values."
+          ],
+          "type": "Concept"
+        },
+        {
+          "aliases": [],
+          "category": "required",
+          "id": "ko_slot_024",
+          "name": "Likelihood Formula",
+          "source_spans": [
+            "L(\\theta; x_{1:n}) = \\prod_{i=1}^{n} p(x_i \\mid \\theta)."
+          ],
+          "type": "Formula"
+        },
+        {
+          "aliases": [
+            "log likelihood"
+          ],
+          "category": "required",
+          "id": "ko_slot_025",
+          "name": "Log-Likelihood",
+          "source_spans": [
+            "The log-likelihood is obtained by taking the logarithm of the likelihood."
+          ],
+          "type": "Concept"
+        },
+        {
+          "aliases": [],
+          "category": "required",
+          "id": "ko_slot_026",
+          "name": "Log-Likelihood Formula",
+          "source_spans": [
+            "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta)."
+          ],
+          "type": "Formula"
+        },
+        {
+          "aliases": [
+            "MLE"
+          ],
+          "category": "required",
+          "id": "ko_slot_027",
+          "name": "Maximum Likelihood Estimation",
+          "source_spans": [
+            "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:"
+          ],
+          "type": "Method"
+        },
+        {
+          "aliases": [
+            "MLE formula"
+          ],
+          "category": "required",
+          "id": "ko_slot_028",
+          "name": "Maximum Likelihood Estimator Formula",
+          "source_spans": [
+            "\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta)."
+          ],
+          "type": "Formula"
+        },
+        {
+          "aliases": [],
+          "category": "required",
+          "id": "ko_slot_029",
+          "name": "Score Function",
+          "source_spans": [
+            "The score function is the derivative of the log-likelihood with respect to the parameter"
+          ],
+          "type": "Concept"
+        },
+        {
+          "aliases": [],
+          "category": "required",
+          "id": "ko_slot_030",
+          "name": "Statistical Model",
+          "source_spans": [
+            "A statistical model is a family of probability distributions indexed by an unknown parameter \\(\\theta\\)."
+          ],
+          "type": "Concept"
+        }
+      ],
+      "path": "benchmark/lectures/relation_holdout/statistics_estimation_001.md"
+    }
+  ],
+  "notes": [
+    "This artifact is deterministically derived and is not model-facing.",
+    "It does not repair B-prime Knowledge Object content."
+  ],
+  "scope": "Contains only KOs referenced by recoverable primary Relation pairs.",
+  "split": "holdout",
+  "status": "derived",
+  "version": "v0.1"
+}

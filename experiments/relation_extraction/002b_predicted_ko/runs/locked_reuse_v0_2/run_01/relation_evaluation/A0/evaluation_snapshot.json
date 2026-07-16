@@ -1,0 +1,20 @@
+{
+  "artifact_type": "relation_evaluation_snapshot",
+  "version": "v0.1",
+  "condition": "A0",
+  "evaluation_status": "final",
+  "base_evaluation_dir": "experiments/relation_extraction/002_prompt_refinement/runs/holdout_v0_1/run_01/evaluation",
+  "prediction_sha256": "2f39f157b3a5b1c5e44880d66f030fc37c1d9a4d3b13373d0f39a2e0f10d9343",
+  "run_metadata_sha256": "69f1751b8feea243f82808e97c0a7918ddf8dd8744c519ce602d58d673a3fdf0",
+  "metrics_sha256": "8275a7db537df981f8c15e330bf283a1d1be6997619f953a64496cf327003473",
+  "matches_sha256": "53f6115a9a4d236ace12cce3f01c8c1f7469ede0c26defdc54a836bbd787eed3",
+  "errors_sha256": "bc6b91401c60c2cd3607615ec7f8c3864c5e94d293c867bc519d0e7d4c0878f0",
+  "source": {
+    "base_metrics_sha256": "8275a7db537df981f8c15e330bf283a1d1be6997619f953a64496cf327003473",
+    "base_matches_sha256": "53f6115a9a4d236ace12cce3f01c8c1f7469ede0c26defdc54a836bbd787eed3",
+    "base_errors_sha256": "bc6b91401c60c2cd3607615ec7f8c3864c5e94d293c867bc519d0e7d4c0878f0",
+    "base_pending_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "predictions_path": "experiments/relation_extraction/002_prompt_refinement/runs/holdout_v0_1/run_01/output/relations_holdout_v0_1.json",
+    "run_metadata_path": "experiments/relation_extraction/002_prompt_refinement/runs/holdout_v0_1/run_01/metadata/relations_holdout_v0_1.json"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "72a66916-782c-412b-ba5b-322f2686c60e",
+  "object": "chat.completion",
+  "created": 1784138014,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_holdout_004\",\n      \"source\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"ko_slot_005\"\n      },\n      \"target\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"ko_slot_006\"\n      },\n      \"relation_type\": \"REQUIRES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"An initial value problem combines an ordinary differential equation with an initial condition such as y(t_0)=y_0.\"\n        }\n      ],\n      \"rationale\": \"The Initial Value Problem requires an Ordinary Differential Equation as a component, as stated in the evidence.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2323,
+    "completion_tokens": 187,
+    "total_tokens": 2510,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 275
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

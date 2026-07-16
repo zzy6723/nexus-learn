@@ -1,0 +1,27 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_holdout_039",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "ko_slot_019"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "ko_slot_017"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "m = \\frac{a+b}{2}"
+        },
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "The bisection method begins with a sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\). It evaluates the midpoint\n\n\\[\nm = \\frac{a+b}{2}\n\\]\n\nand retains the half-interval whose endpoints still have opposite signs."
+        }
+      ],
+      "rationale": "The Bisection Midpoint Formula is the formula that defines the midpoint evaluation step of the Bisection Method, thus it formalizes the method."
+    }
+  ]
+}

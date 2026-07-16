@@ -1,0 +1,114 @@
+{
+  "artifact_type": "predicted_ko_alignment_review_items",
+  "version": "v0.1",
+  "items": [
+    {
+      "item_id": "review_statistics_estimation_001_likelihood_formula",
+      "oracle_refs": [
+        {"lecture_id": "statistics_estimation_001", "ko_id": "likelihood_formula"}
+      ],
+      "candidate_predicted_refs": [
+        {"lecture_id": "statistics_estimation_001", "ko_id": "likelihood_function"}
+      ],
+      "proposed_alignment_level": "manual",
+      "proposed_primary_structural_status": "ambiguous",
+      "reason_code": "manual_identity_adjudication_pending"
+    },
+    {
+      "item_id": "review_statistics_estimation_001_log_likelihood_formula",
+      "oracle_refs": [
+        {"lecture_id": "statistics_estimation_001", "ko_id": "log_likelihood_formula"}
+      ],
+      "candidate_predicted_refs": [
+        {"lecture_id": "statistics_estimation_001", "ko_id": "log_likelihood_function"}
+      ],
+      "proposed_alignment_level": "manual",
+      "proposed_primary_structural_status": "ambiguous",
+      "reason_code": "manual_identity_adjudication_pending"
+    },
+    {
+      "item_id": "review_statistics_estimation_001_mle_formula",
+      "oracle_refs": [
+        {"lecture_id": "statistics_estimation_001", "ko_id": "mle_formula"}
+      ],
+      "candidate_predicted_refs": [
+        {"lecture_id": "statistics_estimation_001", "ko_id": "mle_estimator"}
+      ],
+      "proposed_alignment_level": "manual",
+      "proposed_primary_structural_status": "ambiguous",
+      "reason_code": "manual_identity_adjudication_pending"
+    },
+    {
+      "item_id": "review_numerical_root_finding_001_midpoint_formula",
+      "oracle_refs": [
+        {"lecture_id": "numerical_root_finding_001", "ko_id": "midpoint_formula"}
+      ],
+      "candidate_predicted_refs": [
+        {"lecture_id": "numerical_root_finding_001", "ko_id": "midpoint_formula"}
+      ],
+      "proposed_alignment_level": "manual",
+      "proposed_primary_structural_status": "ambiguous",
+      "reason_code": "manual_identity_adjudication_pending"
+    },
+    {
+      "item_id": "review_differential_equations_001_euler_update",
+      "oracle_refs": [
+        {"lecture_id": "differential_equations_001", "ko_id": "euler_update"}
+      ],
+      "candidate_predicted_refs": [
+        {"lecture_id": "differential_equations_001", "ko_id": "forward_euler_update"}
+      ],
+      "proposed_alignment_level": "manual",
+      "proposed_primary_structural_status": "ambiguous",
+      "reason_code": "manual_identity_adjudication_pending"
+    },
+    {
+      "item_id": "review_differential_equations_001_heun_predictor_formula",
+      "oracle_refs": [
+        {"lecture_id": "differential_equations_001", "ko_id": "heun_predictor_formula"}
+      ],
+      "candidate_predicted_refs": [
+        {"lecture_id": "differential_equations_001", "ko_id": "euler_predictor"}
+      ],
+      "proposed_alignment_level": "manual",
+      "proposed_primary_structural_status": "ambiguous",
+      "reason_code": "manual_identity_adjudication_pending"
+    },
+    {
+      "item_id": "review_differential_equations_001_heun_update",
+      "oracle_refs": [
+        {"lecture_id": "differential_equations_001", "ko_id": "heun_update"}
+      ],
+      "candidate_predicted_refs": [
+        {"lecture_id": "differential_equations_001", "ko_id": "heuns_update"}
+      ],
+      "proposed_alignment_level": "manual",
+      "proposed_primary_structural_status": "ambiguous",
+      "reason_code": "manual_identity_adjudication_pending"
+    },
+    {
+      "item_id": "review_differential_equations_001_ode_formula",
+      "oracle_refs": [
+        {"lecture_id": "differential_equations_001", "ko_id": "ode_formula"}
+      ],
+      "candidate_predicted_refs": [
+        {"lecture_id": "differential_equations_001", "ko_id": "first_order_equation"}
+      ],
+      "proposed_alignment_level": "manual",
+      "proposed_primary_structural_status": "ambiguous",
+      "reason_code": "manual_identity_adjudication_pending"
+    },
+    {
+      "item_id": "review_graph_algorithms_001_relaxation_formula",
+      "oracle_refs": [
+        {"lecture_id": "graph_algorithms_001", "ko_id": "relaxation_formula"}
+      ],
+      "candidate_predicted_refs": [
+        {"lecture_id": "graph_algorithms_001", "ko_id": "relaxation_update"}
+      ],
+      "proposed_alignment_level": "manual",
+      "proposed_primary_structural_status": "ambiguous",
+      "reason_code": "manual_identity_adjudication_pending"
+    }
+  ]
+}

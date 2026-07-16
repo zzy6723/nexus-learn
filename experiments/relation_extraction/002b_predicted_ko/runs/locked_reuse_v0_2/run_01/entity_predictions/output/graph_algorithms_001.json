@@ -1,0 +1,85 @@
+{
+  "lecture_id": "graph_algorithms_001",
+  "knowledge_objects": [
+    {
+      "id": "weighted_directed_graph",
+      "name": "Weighted Directed Graph",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "A directed graph where each edge has an associated numerical weight.",
+      "source_span": "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\)."
+    },
+    {
+      "id": "path",
+      "name": "Path",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "A sequence of compatible directed edges.",
+      "source_span": "A path is a sequence of compatible directed edges."
+    },
+    {
+      "id": "path_cost",
+      "name": "Path Cost",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "The sum of edge weights along a path.",
+      "source_span": "Its path cost is the sum of their edge weights"
+    },
+    {
+      "id": "path_cost_formula",
+      "name": "Path Cost Formula",
+      "type": "Formula",
+      "aliases": [],
+      "short_definition": "Formula for the cost of a path as the sum of edge weights.",
+      "source_span": "C(v_0,\\ldots,v_k) = \\sum_{i=0}^{k-1} w(v_i,v_{i+1})"
+    },
+    {
+      "id": "single_source_shortest_path_problem",
+      "name": "Single-Source Shortest-Path Problem",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "Problem of finding a minimum-cost path from a source vertex to every reachable vertex.",
+      "source_span": "The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex."
+    },
+    {
+      "id": "dijkstras_algorithm",
+      "name": "Dijkstra's Algorithm",
+      "type": "Method",
+      "aliases": [],
+      "short_definition": "Algorithm for single-source shortest paths with nonnegative edge weights using a priority queue and edge relaxation.",
+      "source_span": "Dijkstra's algorithm is applied to this problem when all edge weights are nonnegative."
+    },
+    {
+      "id": "edge_relaxation",
+      "name": "Edge Relaxation",
+      "type": "Method",
+      "aliases": [],
+      "short_definition": "Update operation that reduces the tentative distance to a vertex if a shorter path is found.",
+      "source_span": "it applies edge relaxation to each outgoing edge."
+    },
+    {
+      "id": "relaxation_update",
+      "name": "Relaxation Update",
+      "type": "Formula",
+      "aliases": [],
+      "short_definition": "Update rule for tentative distance d(v) as min of current d(v) and d(u)+w(u,v).",
+      "source_span": "d(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}"
+    },
+    {
+      "id": "a_star_search",
+      "name": "A* Search",
+      "type": "Method",
+      "aliases": [],
+      "short_definition": "Extension of Dijkstra's algorithm that uses a heuristic function to guide exploration.",
+      "source_span": "A* search extends Dijkstra's algorithm by using a heuristic function \\(h(v)\\) to guide which vertex is explored next."
+    },
+    {
+      "id": "heuristic_function",
+      "name": "Heuristic Function",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "Function h(v) that estimates the cost from vertex v to the goal.",
+      "source_span": "heuristic function \\(h(v)\\)"
+    }
+  ]
+}

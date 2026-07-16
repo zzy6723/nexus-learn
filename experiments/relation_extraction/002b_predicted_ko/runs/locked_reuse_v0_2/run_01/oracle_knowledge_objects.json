@@ -1,0 +1,507 @@
+{
+  "artifact_type": "composed_oracle_ko_inventory",
+  "version": "v0.1",
+  "split": "holdout",
+  "status": "derived",
+  "description": "Relation Oracle KO inventory composed without changing source Knowledge Object annotations.",
+  "allowed_object_types": [
+    "Concept",
+    "Formula",
+    "Method"
+  ],
+  "derivation": {
+    "relation_ground_truth": {
+      "path": "benchmark/ground_truth/relations_holdout_v0_1.json",
+      "sha256": "20cf7a8b2aeb76f372e103c59c453bfa15c43732885b6c621af26f5edd427a6f"
+    },
+    "source_inventories": [
+      {
+        "path": "benchmark/ground_truth/relation_holdout_knowledge_objects_v0_1.json",
+        "sha256": "4df9f63f279b9d02f7d0f6f3aafb59db91bc1774951f6aa1be25e47a0d474a0f"
+      }
+    ],
+    "lecture_order": [
+      "statistics_estimation_001",
+      "numerical_root_finding_001",
+      "differential_equations_001",
+      "graph_algorithms_001"
+    ]
+  },
+  "lectures": [
+    {
+      "lecture_id": "statistics_estimation_001",
+      "path": "benchmark/lectures/relation_holdout/statistics_estimation_001.md",
+      "objects": [
+        {
+          "id": "statistical_model",
+          "name": "Statistical Model",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "A statistical model is a family of probability distributions indexed by an unknown parameter \\(\\theta\\)."
+          ]
+        },
+        {
+          "id": "likelihood",
+          "name": "Likelihood",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values."
+          ]
+        },
+        {
+          "id": "likelihood_formula",
+          "name": "Likelihood Formula",
+          "type": "Formula",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "L(\\theta; x_{1:n}) = \\prod_{i=1}^{n} p(x_i \\mid \\theta)."
+          ]
+        },
+        {
+          "id": "log_likelihood",
+          "name": "Log-Likelihood",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [
+            "log likelihood"
+          ],
+          "source_spans": [
+            "The log-likelihood is obtained by taking the logarithm of the likelihood."
+          ]
+        },
+        {
+          "id": "log_likelihood_formula",
+          "name": "Log-Likelihood Formula",
+          "type": "Formula",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta)."
+          ]
+        },
+        {
+          "id": "maximum_likelihood_estimation",
+          "name": "Maximum Likelihood Estimation",
+          "type": "Method",
+          "category": "required",
+          "aliases": [
+            "MLE"
+          ],
+          "source_spans": [
+            "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:"
+          ]
+        },
+        {
+          "id": "mle_formula",
+          "name": "Maximum Likelihood Estimator Formula",
+          "type": "Formula",
+          "category": "required",
+          "aliases": [
+            "MLE formula"
+          ],
+          "source_spans": [
+            "\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta)."
+          ]
+        },
+        {
+          "id": "score_function",
+          "name": "Score Function",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "The score function is the derivative of the log-likelihood with respect to the parameter"
+          ]
+        },
+        {
+          "id": "score_function_formula",
+          "name": "Score Function Formula",
+          "type": "Formula",
+          "category": "optional",
+          "aliases": [],
+          "source_spans": [
+            "s(\\theta) = \\nabla_{\\theta}\\ell(\\theta)."
+          ]
+        }
+      ]
+    },
+    {
+      "lecture_id": "numerical_root_finding_001",
+      "path": "benchmark/lectures/relation_holdout/numerical_root_finding_001.md",
+      "objects": [
+        {
+          "id": "root_finding_problem",
+          "name": "Root-Finding Problem",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [
+            "root finding"
+          ],
+          "source_spans": [
+            "A root-finding problem asks for a value \\(x^*\\) at which a scalar function is zero:"
+          ]
+        },
+        {
+          "id": "root_equation",
+          "name": "Root Equation",
+          "type": "Formula",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "f(x^*) = 0."
+          ]
+        },
+        {
+          "id": "derivative",
+          "name": "Derivative",
+          "type": "Concept",
+          "category": "optional",
+          "aliases": [
+            "derivative values"
+          ],
+          "source_spans": [
+            "Newton's method uses the derivative to replace the function locally by its tangent line."
+          ]
+        },
+        {
+          "id": "newton_method",
+          "name": "Newton's Method",
+          "type": "Method",
+          "category": "required",
+          "aliases": [
+            "Newton method"
+          ],
+          "source_spans": [
+            "Newton's method uses the derivative to replace the function locally by its tangent line."
+          ]
+        },
+        {
+          "id": "newton_update",
+          "name": "Newton Update Formula",
+          "type": "Formula",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "x_{k+1} = x_k - \\frac{f(x_k)}{f'(x_k)}."
+          ]
+        },
+        {
+          "id": "damped_newton_method",
+          "name": "Damped Newton Method",
+          "type": "Method",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "The damped Newton method extends Newton's method by scaling the Newton correction with a factor between zero and one."
+          ]
+        },
+        {
+          "id": "sign_changing_bracket",
+          "name": "Sign-Changing Bracket",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [
+            "bracket"
+          ],
+          "source_spans": [
+            "The bisection method begins with a sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\)."
+          ]
+        },
+        {
+          "id": "bisection_method",
+          "name": "Bisection Method",
+          "type": "Method",
+          "category": "required",
+          "aliases": [
+            "bisection"
+          ],
+          "source_spans": [
+            "The bisection method begins with a sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\)."
+          ]
+        },
+        {
+          "id": "midpoint_formula",
+          "name": "Bisection Midpoint Formula",
+          "type": "Formula",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "m = \\frac{a+b}{2}"
+          ]
+        }
+      ]
+    },
+    {
+      "lecture_id": "differential_equations_001",
+      "path": "benchmark/lectures/relation_holdout/differential_equations_001.md",
+      "objects": [
+        {
+          "id": "ordinary_differential_equation",
+          "name": "Ordinary Differential Equation",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [
+            "ODE"
+          ],
+          "source_spans": [
+            "An ordinary differential equation relates an unknown function of one variable to its derivatives."
+          ]
+        },
+        {
+          "id": "ode_formula",
+          "name": "First-Order ODE Formula",
+          "type": "Formula",
+          "category": "optional",
+          "aliases": [],
+          "source_spans": [
+            "y'(t) = F(t,y(t))."
+          ]
+        },
+        {
+          "id": "initial_value_problem",
+          "name": "Initial Value Problem",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [
+            "IVP"
+          ],
+          "source_spans": [
+            "An initial value problem combines an ordinary differential equation with an initial condition such as \\(y(t_0)=y_0\\)."
+          ]
+        },
+        {
+          "id": "initial_condition",
+          "name": "Initial Condition",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "an initial condition such as \\(y(t_0)=y_0\\)"
+          ]
+        },
+        {
+          "id": "vector_field",
+          "name": "Vector Field",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "The vector field \\(F\\) specifies the slope that the solution should follow at each state."
+          ]
+        },
+        {
+          "id": "forward_euler_method",
+          "name": "Forward Euler Method",
+          "type": "Method",
+          "category": "required",
+          "aliases": [
+            "forward Euler",
+            "Euler method"
+          ],
+          "source_spans": [
+            "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope."
+          ]
+        },
+        {
+          "id": "euler_update",
+          "name": "Forward Euler Update Formula",
+          "type": "Formula",
+          "category": "required",
+          "aliases": [
+            "Euler update"
+          ],
+          "source_spans": [
+            "y_{n+1} = y_n + hF(t_n,y_n)."
+          ]
+        },
+        {
+          "id": "step_size",
+          "name": "Step Size",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "The step size \\(h\\) sets the spacing between consecutive numerical time points."
+          ]
+        },
+        {
+          "id": "heun_method",
+          "name": "Heun's Method",
+          "type": "Method",
+          "category": "required",
+          "aliases": [
+            "Heun method"
+          ],
+          "source_spans": [
+            "Heun's method extends the forward Euler method with a predictor-corrector step."
+          ]
+        },
+        {
+          "id": "heun_predictor_formula",
+          "name": "Heun Predictor Formula",
+          "type": "Formula",
+          "category": "optional",
+          "aliases": [],
+          "source_spans": [
+            "\\widetilde{y}_{n+1} = y_n + hF(t_n,y_n),"
+          ]
+        },
+        {
+          "id": "heun_update",
+          "name": "Heun Corrected Update Formula",
+          "type": "Formula",
+          "category": "required",
+          "aliases": [
+            "Heun update"
+          ],
+          "source_spans": [
+            "y_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right)."
+          ]
+        }
+      ]
+    },
+    {
+      "lecture_id": "graph_algorithms_001",
+      "path": "benchmark/lectures/relation_holdout/graph_algorithms_001.md",
+      "objects": [
+        {
+          "id": "weighted_directed_graph",
+          "name": "Weighted Directed Graph",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [
+            "weighted graph"
+          ],
+          "source_spans": [
+            "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\)."
+          ]
+        },
+        {
+          "id": "path",
+          "name": "Path",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "A path is a sequence of compatible directed edges."
+          ]
+        },
+        {
+          "id": "path_cost",
+          "name": "Path Cost",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "Its path cost is the sum of their edge weights:"
+          ]
+        },
+        {
+          "id": "path_cost_formula",
+          "name": "Path Cost Formula",
+          "type": "Formula",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "C(v_0,\\ldots,v_k) = \\sum_{i=0}^{k-1} w(v_i,v_{i+1})."
+          ]
+        },
+        {
+          "id": "shortest_path_problem",
+          "name": "Single-Source Shortest-Path Problem",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [
+            "shortest-path problem"
+          ],
+          "source_spans": [
+            "The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex."
+          ]
+        },
+        {
+          "id": "dijkstra_algorithm",
+          "name": "Dijkstra's Algorithm",
+          "type": "Method",
+          "category": "required",
+          "aliases": [
+            "Dijkstra algorithm"
+          ],
+          "source_spans": [
+            "Dijkstra's algorithm is applied to this problem when all edge weights are nonnegative."
+          ]
+        },
+        {
+          "id": "nonnegative_edge_weights",
+          "name": "Nonnegative Edge Weights",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "all edge weights are nonnegative"
+          ]
+        },
+        {
+          "id": "priority_queue",
+          "name": "Priority Queue",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "Dijkstra's algorithm stores tentative distance estimates in a priority queue."
+          ]
+        },
+        {
+          "id": "edge_relaxation",
+          "name": "Edge Relaxation",
+          "type": "Method",
+          "category": "required",
+          "aliases": [
+            "relaxation"
+          ],
+          "source_spans": [
+            "After removing a vertex \\(u\\) with the smallest tentative distance, it applies edge relaxation to each outgoing edge."
+          ]
+        },
+        {
+          "id": "relaxation_formula",
+          "name": "Edge Relaxation Formula",
+          "type": "Formula",
+          "category": "required",
+          "aliases": [],
+          "source_spans": [
+            "d(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}."
+          ]
+        },
+        {
+          "id": "a_star_search",
+          "name": "A* Search",
+          "type": "Method",
+          "category": "required",
+          "aliases": [
+            "A-star search"
+          ],
+          "source_spans": [
+            "A* search extends Dijkstra's algorithm by using a heuristic function \\(h(v)\\) to guide which vertex is explored next."
+          ]
+        },
+        {
+          "id": "heuristic_function",
+          "name": "Heuristic Function",
+          "type": "Concept",
+          "category": "required",
+          "aliases": [
+            "heuristic"
+          ],
+          "source_spans": [
+            "a heuristic function \\(h(v)\\) to guide which vertex is explored next"
+          ]
+        }
+      ]
+    }
+  ]
+}

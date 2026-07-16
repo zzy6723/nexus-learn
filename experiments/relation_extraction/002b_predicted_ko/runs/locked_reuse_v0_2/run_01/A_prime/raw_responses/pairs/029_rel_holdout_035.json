@@ -1,0 +1,28 @@
+{
+  "id": "f384a2d0-10a7-4148-ae94-c6abf6a03627",
+  "object": "chat.completion",
+  "created": 1784137452,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_holdout_035\",\n      \"source\": {\n        \"lecture_id\": \"numerical_root_finding_001\",\n        \"ko_id\": \"ko_slot_018\"\n      },\n      \"target\": {\n        \"lecture_id\": \"numerical_root_finding_001\",\n        \"ko_id\": \"ko_slot_020\"\n      },\n      \"relation_type\": \"EXTENDS\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"numerical_root_finding_001\",\n          \"span\": \"The damped Newton method extends Newton's method by scaling the Newton correction with a factor between zero and one.\"\n        }\n      ],\n      \"rationale\": \"The lecture explicitly states that the damped Newton method extends Newton's method, making it a more specific development that preserves Newton's method as its conceptual base.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2280,
+    "completion_tokens": 195,
+    "total_tokens": 2475,
+    "prompt_tokens_details": {
+      "cached_tokens": 1920
+    },
+    "prompt_cache_hit_tokens": 1920,
+    "prompt_cache_miss_tokens": 360
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

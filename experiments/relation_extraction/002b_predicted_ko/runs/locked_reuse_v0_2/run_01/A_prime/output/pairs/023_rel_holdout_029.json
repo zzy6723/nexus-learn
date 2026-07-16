@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_holdout_029",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "ko_slot_025"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "ko_slot_023"
+      },
+      "relation_type": "EXTENDS",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The log-likelihood is obtained by taking the logarithm of the likelihood."
+        }
+      ],
+      "rationale": "Log-Likelihood is a more specific development of Likelihood, obtained by applying the logarithm, preserving Likelihood as its conceptual base."
+    }
+  ]
+}

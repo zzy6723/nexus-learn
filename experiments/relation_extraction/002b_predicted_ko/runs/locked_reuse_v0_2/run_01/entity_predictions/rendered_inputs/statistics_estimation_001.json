@@ -1,0 +1,23 @@
+{
+  "model": "deepseek-v4-flash",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You extract structured Knowledge Objects from STEM learning materials.\n\nA Knowledge Object is a meaningful educational entity, such as a concept, method, or formula, that may later participate in typed learning relations.\n\nReturn only valid JSON. Do not include markdown fences, commentary, or explanations.\n"
+    },
+    {
+      "role": "user",
+      "content": "Extract Knowledge Objects from the following lecture snippet.\n\nAllowed object types:\n\n- `Concept`\n- `Method`\n- `Formula`\n\nReturn only valid JSON with this schema:\n\n```json\n{\n  \"lecture_id\": \"statistics_estimation_001\",\n  \"knowledge_objects\": [\n    {\n      \"id\": \"lower_snake_case_stable_identifier\",\n      \"name\": \"Canonical Name\",\n      \"type\": \"Concept | Method | Formula\",\n      \"aliases\": [\"optional alias\"],\n      \"short_definition\": \"One sentence definition based only on the input.\",\n      \"source_span\": \"Exact text span copied from the input.\"\n    }\n  ]\n}\n```\n\nObject inclusion rules:\n\n1. Extract named or clearly defined educational entities that could later participate in typed learning relations.\n2. Include central objects and useful supporting objects if they are explicitly named or explained in the text.\n3. Do not extract broad domains, section headings, historical people, isolated variables, or ordinary words.\n4. Merge duplicates into one canonical object.\n\nType rules:\n\n1. Use `Concept` for mathematical objects, properties, structures, and named constructs.\n2. Use `Method` for procedures, algorithms, or techniques.\n3. Use `Formula` only for symbolic equations, update rules, or displayed mathematical expressions.\n4. If a named mathematical construct is mentioned together with a formula, the named construct is usually a `Concept`; the equation itself may be a separate `Formula` only if it defines or updates something important.\n5. Displayed equations should usually be extracted as `Formula` objects when they define, characterize, or update a concept or method.\n\nGrounding rules:\n\n1. `source_span` must be an exact substring copied from the lecture snippet.\n2. Do not normalize LaTeX into Unicode inside `source_span`.\n3. Keep `source_span` short but sufficient.\n4. If no exact grounding span exists, do not extract the object.\n\nLecture ID:\n\n```text\nstatistics_estimation_001\n```\n\nLecture snippet:\n\n```text\nA statistical model is a family of probability distributions indexed by an unknown parameter \\(\\theta\\). The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values. For independent observations \\(x_1,\\ldots,x_n\\), it is\n\n\\[\nL(\\theta; x_{1:n}) = \\prod_{i=1}^{n} p(x_i \\mid \\theta).\n\\]\n\nThe log-likelihood is obtained by taking the logarithm of the likelihood. Independence turns the product into a sum:\n\n\\[\n\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta).\n\\]\n\nMaximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:\n\n\\[\n\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta).\n\\]\n\nThe score function is the derivative of the log-likelihood with respect to the parameter,\n\n\\[\ns(\\theta) = \\nabla_{\\theta}\\ell(\\theta).\n\\]\n\nAt an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\). When this equation has no closed-form solution, Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically.\n```\n"
+    }
+  ],
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "max_tokens": 4096,
+  "stream": false,
+  "response_format": {
+    "type": "json_object"
+  },
+  "thinking": {
+    "type": "disabled"
+  }
+}

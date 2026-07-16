@@ -565,12 +565,22 @@ Completed:
   Entity finalization, atomic aggregate failure, and paired-plan integrity. The
   frozen development Relation
   ground truth remains 41 total pairs, 38 primary pairs, and 3 diagnostic pairs.
+- repository-frozen `locked_reuse_v0_2` execution under method commit
+  `3c8606d9243465a8a15639a628db80ea79155f96`;
+- all-reused four-lecture Entity bundle, final alignment, and 33-pair matched
+  projection;
+- 33/33 candidate-scoped requests completed independently for both A-prime and
+  B-prime with no retries or endpoint substitutions;
+- final A0, A-prime, and B-prime Relation evaluation snapshots;
+- final locked-reuse pipeline evaluation with 33/40 recoverable pairs and 26/40
+  end-to-end strict successes. See `locked_reuse_v0_2_results.md`.
 
 Pending:
 
-- user-managed repository-level freeze for the candidate-scoped v0.2 method;
-- `locked_reuse_v0_2` preflight and deterministic upstream reconstruction;
-- candidate-scoped A-prime/B-prime execution and locked-reuse evaluation.
+- user-managed repository commit for the completed v0.2 result documents and
+  retained experiment artifacts;
+- definition of the next experiment version; no further tuning on the same
+  locked-reuse pairs is authorized under 002B-1.
 
 Real development execution completed under `development_v0_1/run_03`.
 Entity extraction, alignment adjudication, matched A-prime/B-prime API runs,

@@ -1,0 +1,28 @@
+{
+  "id": "c6ac1c6d-9251-48a4-94a0-95de5243b55e",
+  "object": "chat.completion",
+  "created": 1784138088,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_holdout_039\",\n      \"source\": {\n        \"lecture_id\": \"numerical_root_finding_001\",\n        \"ko_id\": \"ko_slot_019\"\n      },\n      \"target\": {\n        \"lecture_id\": \"numerical_root_finding_001\",\n        \"ko_id\": \"ko_slot_017\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"numerical_root_finding_001\",\n          \"span\": \"m = \\\\frac{a+b}{2}\"\n        },\n        {\n          \"lecture_id\": \"numerical_root_finding_001\",\n          \"span\": \"The bisection method begins with a sign-changing bracket \\\\([a,b]\\\\) satisfying \\\\(f(a)f(b)<0\\\\). It evaluates the midpoint\\n\\n\\\\[\\nm = \\\\frac{a+b}{2}\\n\\\\]\\n\\nand retains the half-interval whose endpoints still have opposite signs.\"\n        }\n      ],\n      \"rationale\": \"The midpoint formula explicitly defines the midpoint used in the bisection method, thus formalizing the method's step.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2280,
+    "completion_tokens": 262,
+    "total_tokens": 2542,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 232
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_holdout_013",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "ko_slot_027"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "ko_slot_025"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Maximum likelihood estimation uses the log-likelihood as its objective"
+        }
+      ],
+      "rationale": "The log-likelihood is used as the objective function within the maximum likelihood estimation method."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_holdout_019",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "ko_slot_024"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "ko_slot_023"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "L(\\theta; x_{1:n}) = \\prod_{i=1}^{n} p(x_i \\mid \\theta)."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values."
+        }
+      ],
+      "rationale": "The Likelihood Formula explicitly defines the Likelihood concept, as the formula is presented as the mathematical expression of the likelihood for independent observations."
+    }
+  ]
+}

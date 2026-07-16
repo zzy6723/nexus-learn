@@ -1,0 +1,436 @@
+{
+  "artifact_type": "predicted_ko_alignment_resolved",
+  "version": "v0.1",
+  "alignment_snapshot_sha256": "a3cb06960c86ab7f6cf62034df70f0d72d98628b4fdc512fb6f4b2afa76eb7f0",
+  "oracle_inventory_sha256": "d92898ab30ce33b91a56c247a69e04ad397c50707c5decc7d10eeb3082466cda",
+  "predicted_inventory_sha256": "fe37cf7d77dd7304a090b21b206b6dd61621cdfedf75507f45edd09a2d8feda3",
+  "lecture_sha256": {
+    "differential_equations_001": "7488ea27d88e3970e600829508a5673a43c111e4fcad13b87f33313be13986b0",
+    "graph_algorithms_001": "0fdb7752023500999cc9ad8c439035c4a60be707908ae996d26d2f907c27e41d",
+    "numerical_root_finding_001": "95949cbece45bed2e21a8fe3a0936b735f73b72d3e1af895e9c09bb968f11c12",
+    "statistics_estimation_001": "0f48d5fa14623d7af50716342e2c3f456e9f5728d741f8856fdb01dd2b95f4fa"
+  },
+  "name_matching_normalization_version": "predicted_ko_name_matching_v0_1",
+  "decisions": [
+    {
+      "item_id": "review_differential_equations_001_euler_update",
+      "decision": "matched",
+      "resulting_alignment_level": "manual",
+      "resulting_primary_structural_status": "one_to_one",
+      "matched_predicted_ref": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_update"
+      },
+      "predicted_source_span_supports_identity": true,
+      "rationale": "Both objects denote the same forward Euler update formula. The predicted label omits only the generic word Formula, and its source span contains the same update equation apart from terminal punctuation.",
+      "item_snapshot_sha256": "6899eda1610772ba0a51a95fc7b1d93d7c755b4c66d4d8f2a209f3de6565e621",
+      "oracle_snapshots": [
+        {
+          "aliases": [
+            "Euler update"
+          ],
+          "ko_id": "euler_update",
+          "lecture_id": "differential_equations_001",
+          "name": "Forward Euler Update Formula",
+          "source_spans": [
+            "y_{n+1} = y_n + hF(t_n,y_n)."
+          ],
+          "type": "Formula"
+        }
+      ],
+      "candidate_predicted_snapshots": [
+        {
+          "ko_id": "forward_euler_update",
+          "lecture_id": "differential_equations_001",
+          "name": "Forward Euler Update",
+          "provenance": {
+            "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/entity_predictions/output/differential_equations_001.json",
+            "source_object_index": 9,
+            "source_prediction_id": "forward_euler_update"
+          },
+          "source_spans": [
+            "y_{n+1} = y_n + hF(t_n,y_n)"
+          ],
+          "type": "Formula"
+        }
+      ],
+      "lecture_snapshot": {
+        "lecture_id": "differential_equations_001",
+        "sha256": "7488ea27d88e3970e600829508a5673a43c111e4fcad13b87f33313be13986b0",
+        "text": "An ordinary differential equation relates an unknown function of one variable to its derivatives. A first-order equation can be written as\n\n\\[\ny'(t) = F(t,y(t)).\n\\]\n\nAn initial value problem combines an ordinary differential equation with an initial condition such as \\(y(t_0)=y_0\\). The vector field \\(F\\) specifies the slope that the solution should follow at each state.\n\nThe forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope. Its update is\n\n\\[\ny_{n+1} = y_n + hF(t_n,y_n).\n\\]\n\nThe step size \\(h\\) sets the spacing between consecutive numerical time points. Smaller steps usually reduce discretization error but require more updates over a fixed time interval.\n\nHeun's method extends the forward Euler method with a predictor-corrector step. It first forms the Euler predictor\n\n\\[\n\\widetilde{y}_{n+1} = y_n + hF(t_n,y_n),\n\\]\n\nthen averages the slope at the current point with the slope at the predicted point. The corrected update is\n\n\\[\ny_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right).\n\\]\n"
+      }
+    },
+    {
+      "item_id": "review_differential_equations_001_heun_predictor_formula",
+      "decision": "matched",
+      "resulting_alignment_level": "manual",
+      "resulting_primary_structural_status": "one_to_one",
+      "matched_predicted_ref": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "euler_predictor"
+      },
+      "predicted_source_span_supports_identity": true,
+      "rationale": "Both objects denote the Euler predictor step used inside Heun method. The predicted span explicitly names the Euler predictor and gives the same predictor equation; the Concept versus Formula label is retained separately as a type mismatch.",
+      "item_snapshot_sha256": "306f7a86ae7f9674ef1d61c3217b6ef9580fdeb9142f67e69de55f92150bf998",
+      "oracle_snapshots": [
+        {
+          "aliases": [],
+          "ko_id": "heun_predictor_formula",
+          "lecture_id": "differential_equations_001",
+          "name": "Heun Predictor Formula",
+          "source_spans": [
+            "\\widetilde{y}_{n+1} = y_n + hF(t_n,y_n),"
+          ],
+          "type": "Formula"
+        }
+      ],
+      "candidate_predicted_snapshots": [
+        {
+          "ko_id": "euler_predictor",
+          "lecture_id": "differential_equations_001",
+          "name": "Euler Predictor",
+          "provenance": {
+            "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/entity_predictions/output/differential_equations_001.json",
+            "source_object_index": 8,
+            "source_prediction_id": "euler_predictor"
+          },
+          "source_spans": [
+            "It first forms the Euler predictor y_{n+1} = y_n + hF(t_n,y_n)"
+          ],
+          "type": "Concept"
+        }
+      ],
+      "lecture_snapshot": {
+        "lecture_id": "differential_equations_001",
+        "sha256": "7488ea27d88e3970e600829508a5673a43c111e4fcad13b87f33313be13986b0",
+        "text": "An ordinary differential equation relates an unknown function of one variable to its derivatives. A first-order equation can be written as\n\n\\[\ny'(t) = F(t,y(t)).\n\\]\n\nAn initial value problem combines an ordinary differential equation with an initial condition such as \\(y(t_0)=y_0\\). The vector field \\(F\\) specifies the slope that the solution should follow at each state.\n\nThe forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope. Its update is\n\n\\[\ny_{n+1} = y_n + hF(t_n,y_n).\n\\]\n\nThe step size \\(h\\) sets the spacing between consecutive numerical time points. Smaller steps usually reduce discretization error but require more updates over a fixed time interval.\n\nHeun's method extends the forward Euler method with a predictor-corrector step. It first forms the Euler predictor\n\n\\[\n\\widetilde{y}_{n+1} = y_n + hF(t_n,y_n),\n\\]\n\nthen averages the slope at the current point with the slope at the predicted point. The corrected update is\n\n\\[\ny_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right).\n\\]\n"
+      }
+    },
+    {
+      "item_id": "review_differential_equations_001_heun_update",
+      "decision": "matched",
+      "resulting_alignment_level": "manual",
+      "resulting_primary_structural_status": "one_to_one",
+      "matched_predicted_ref": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "heuns_update"
+      },
+      "predicted_source_span_supports_identity": true,
+      "rationale": "Both objects denote the same corrected Heun update formula. Their source spans contain the same equation, with only the generic label and terminal punctuation differing.",
+      "item_snapshot_sha256": "3fb10248a28769080736afaac9818d030eb4d98f44767e9a1660c046ac951e68",
+      "oracle_snapshots": [
+        {
+          "aliases": [
+            "Heun update"
+          ],
+          "ko_id": "heun_update",
+          "lecture_id": "differential_equations_001",
+          "name": "Heun Corrected Update Formula",
+          "source_spans": [
+            "y_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right)."
+          ],
+          "type": "Formula"
+        }
+      ],
+      "candidate_predicted_snapshots": [
+        {
+          "ko_id": "heuns_update",
+          "lecture_id": "differential_equations_001",
+          "name": "Heun's Update",
+          "provenance": {
+            "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/entity_predictions/output/differential_equations_001.json",
+            "source_object_index": 10,
+            "source_prediction_id": "heuns_update"
+          },
+          "source_spans": [
+            "y_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right)"
+          ],
+          "type": "Formula"
+        }
+      ],
+      "lecture_snapshot": {
+        "lecture_id": "differential_equations_001",
+        "sha256": "7488ea27d88e3970e600829508a5673a43c111e4fcad13b87f33313be13986b0",
+        "text": "An ordinary differential equation relates an unknown function of one variable to its derivatives. A first-order equation can be written as\n\n\\[\ny'(t) = F(t,y(t)).\n\\]\n\nAn initial value problem combines an ordinary differential equation with an initial condition such as \\(y(t_0)=y_0\\). The vector field \\(F\\) specifies the slope that the solution should follow at each state.\n\nThe forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope. Its update is\n\n\\[\ny_{n+1} = y_n + hF(t_n,y_n).\n\\]\n\nThe step size \\(h\\) sets the spacing between consecutive numerical time points. Smaller steps usually reduce discretization error but require more updates over a fixed time interval.\n\nHeun's method extends the forward Euler method with a predictor-corrector step. It first forms the Euler predictor\n\n\\[\n\\widetilde{y}_{n+1} = y_n + hF(t_n,y_n),\n\\]\n\nthen averages the slope at the current point with the slope at the predicted point. The corrected update is\n\n\\[\ny_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right).\n\\]\n"
+      }
+    },
+    {
+      "item_id": "review_differential_equations_001_ode_formula",
+      "decision": "matched",
+      "resulting_alignment_level": "manual",
+      "resulting_primary_structural_status": "one_to_one",
+      "matched_predicted_ref": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "first_order_equation"
+      },
+      "predicted_source_span_supports_identity": true,
+      "rationale": "Both objects identify the displayed first-order ODE equation y prime equals F of t and y. The predicted span states that exact equation; the Concept versus Formula label is retained separately as a type mismatch.",
+      "item_snapshot_sha256": "ee6bdb2bb0f7ff7149a9207207178a3fd93aba6190573cebf6dbd3c952214a5e",
+      "oracle_snapshots": [
+        {
+          "aliases": [],
+          "ko_id": "ode_formula",
+          "lecture_id": "differential_equations_001",
+          "name": "First-Order ODE Formula",
+          "source_spans": [
+            "y'(t) = F(t,y(t))."
+          ],
+          "type": "Formula"
+        }
+      ],
+      "candidate_predicted_snapshots": [
+        {
+          "ko_id": "first_order_equation",
+          "lecture_id": "differential_equations_001",
+          "name": "First-Order Equation",
+          "provenance": {
+            "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/entity_predictions/output/differential_equations_001.json",
+            "source_object_index": 1,
+            "source_prediction_id": "first_order_equation"
+          },
+          "source_spans": [
+            "A first-order equation can be written as y'(t) = F(t,y(t))."
+          ],
+          "type": "Concept"
+        }
+      ],
+      "lecture_snapshot": {
+        "lecture_id": "differential_equations_001",
+        "sha256": "7488ea27d88e3970e600829508a5673a43c111e4fcad13b87f33313be13986b0",
+        "text": "An ordinary differential equation relates an unknown function of one variable to its derivatives. A first-order equation can be written as\n\n\\[\ny'(t) = F(t,y(t)).\n\\]\n\nAn initial value problem combines an ordinary differential equation with an initial condition such as \\(y(t_0)=y_0\\). The vector field \\(F\\) specifies the slope that the solution should follow at each state.\n\nThe forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope. Its update is\n\n\\[\ny_{n+1} = y_n + hF(t_n,y_n).\n\\]\n\nThe step size \\(h\\) sets the spacing between consecutive numerical time points. Smaller steps usually reduce discretization error but require more updates over a fixed time interval.\n\nHeun's method extends the forward Euler method with a predictor-corrector step. It first forms the Euler predictor\n\n\\[\n\\widetilde{y}_{n+1} = y_n + hF(t_n,y_n),\n\\]\n\nthen averages the slope at the current point with the slope at the predicted point. The corrected update is\n\n\\[\ny_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right).\n\\]\n"
+      }
+    },
+    {
+      "item_id": "review_graph_algorithms_001_relaxation_formula",
+      "decision": "matched",
+      "resulting_alignment_level": "manual",
+      "resulting_primary_structural_status": "one_to_one",
+      "matched_predicted_ref": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "relaxation_update"
+      },
+      "predicted_source_span_supports_identity": true,
+      "rationale": "Both objects denote the same edge-relaxation update formula. Their source spans contain the identical minimum update apart from terminal punctuation.",
+      "item_snapshot_sha256": "7f92e59f234c5c39f9e2dad77b1a1cf2a7e49274ddf087913e03577f613f1871",
+      "oracle_snapshots": [
+        {
+          "aliases": [],
+          "ko_id": "relaxation_formula",
+          "lecture_id": "graph_algorithms_001",
+          "name": "Edge Relaxation Formula",
+          "source_spans": [
+            "d(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}."
+          ],
+          "type": "Formula"
+        }
+      ],
+      "candidate_predicted_snapshots": [
+        {
+          "ko_id": "relaxation_update",
+          "lecture_id": "graph_algorithms_001",
+          "name": "Relaxation Update",
+          "provenance": {
+            "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/entity_predictions/output/graph_algorithms_001.json",
+            "source_object_index": 7,
+            "source_prediction_id": "relaxation_update"
+          },
+          "source_spans": [
+            "d(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}"
+          ],
+          "type": "Formula"
+        }
+      ],
+      "lecture_snapshot": {
+        "lecture_id": "graph_algorithms_001",
+        "sha256": "0fdb7752023500999cc9ad8c439035c4a60be707908ae996d26d2f907c27e41d",
+        "text": "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\). A path is a sequence of compatible directed edges. Its path cost is the sum of their edge weights:\n\n\\[\nC(v_0,\\ldots,v_k) = \\sum_{i=0}^{k-1} w(v_i,v_{i+1}).\n\\]\n\nThe single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex. Dijkstra's algorithm is applied to this problem when all edge weights are nonnegative.\n\nDijkstra's algorithm stores tentative distance estimates in a priority queue. After removing a vertex \\(u\\) with the smallest tentative distance, it applies edge relaxation to each outgoing edge. Relaxation is formalized by the update\n\n\\[\nd(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}.\n\\]\n\nA* search extends Dijkstra's algorithm by using a heuristic function \\(h(v)\\) to guide which vertex is explored next. Its queue priority combines the known path cost with the heuristic estimate, and setting \\(h(v)=0\\) recovers Dijkstra's ordering.\n"
+      }
+    },
+    {
+      "item_id": "review_numerical_root_finding_001_midpoint_formula",
+      "decision": "matched",
+      "resulting_alignment_level": "manual",
+      "resulting_primary_structural_status": "one_to_one",
+      "matched_predicted_ref": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "midpoint_formula"
+      },
+      "predicted_source_span_supports_identity": true,
+      "rationale": "Both objects denote the same bisection midpoint formula, and both are grounded in the identical equation m equals (a+b)/2.",
+      "item_snapshot_sha256": "ed431c7d96e43ce6e2788cc872c023adc6f5a0cbc2da006851e65a304ddb3116",
+      "oracle_snapshots": [
+        {
+          "aliases": [],
+          "ko_id": "midpoint_formula",
+          "lecture_id": "numerical_root_finding_001",
+          "name": "Bisection Midpoint Formula",
+          "source_spans": [
+            "m = \\frac{a+b}{2}"
+          ],
+          "type": "Formula"
+        }
+      ],
+      "candidate_predicted_snapshots": [
+        {
+          "ko_id": "midpoint_formula",
+          "lecture_id": "numerical_root_finding_001",
+          "name": "Midpoint formula",
+          "provenance": {
+            "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/entity_predictions/output/numerical_root_finding_001.json",
+            "source_object_index": 5,
+            "source_prediction_id": "midpoint_formula"
+          },
+          "source_spans": [
+            "m = \\frac{a+b}{2}"
+          ],
+          "type": "Formula"
+        }
+      ],
+      "lecture_snapshot": {
+        "lecture_id": "numerical_root_finding_001",
+        "sha256": "95949cbece45bed2e21a8fe3a0936b735f73b72d3e1af895e9c09bb968f11c12",
+        "text": "A root-finding problem asks for a value \\(x^*\\) at which a scalar function is zero:\n\n\\[\nf(x^*) = 0.\n\\]\n\nNewton's method uses the derivative to replace the function locally by its tangent line. Provided \\(f'(x_k)\\neq 0\\), its update is\n\n\\[\nx_{k+1} = x_k - \\frac{f(x_k)}{f'(x_k)}.\n\\]\n\nThe damped Newton method extends Newton's method by scaling the Newton correction with a factor between zero and one. This extra control can prevent a full Newton step from moving too far when the current iterate is not yet near a root.\n\nThe bisection method begins with a sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\). It evaluates the midpoint\n\n\\[\nm = \\frac{a+b}{2}\n\\]\n\nand retains the half-interval whose endpoints still have opposite signs.\n\nNewton's method and the bisection method contrast in the information they use: Newton's method requires derivative values and can converge rapidly near a root, whereas bisection uses only function signs and preserves a bracket at every iteration.\n"
+      }
+    },
+    {
+      "item_id": "review_statistics_estimation_001_likelihood_formula",
+      "decision": "matched",
+      "resulting_alignment_level": "manual",
+      "resulting_primary_structural_status": "one_to_one",
+      "matched_predicted_ref": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "likelihood_function"
+      },
+      "predicted_source_span_supports_identity": true,
+      "rationale": "Both objects denote the displayed likelihood formula. The Formula versus Function wording does not change the educational object, and the source spans are identical.",
+      "item_snapshot_sha256": "4556cdbfda8813839c5e213f9fd1496632094fc1845e0611125dde2e733b3357",
+      "oracle_snapshots": [
+        {
+          "aliases": [],
+          "ko_id": "likelihood_formula",
+          "lecture_id": "statistics_estimation_001",
+          "name": "Likelihood Formula",
+          "source_spans": [
+            "L(\\theta; x_{1:n}) = \\prod_{i=1}^{n} p(x_i \\mid \\theta)."
+          ],
+          "type": "Formula"
+        }
+      ],
+      "candidate_predicted_snapshots": [
+        {
+          "ko_id": "likelihood_function",
+          "lecture_id": "statistics_estimation_001",
+          "name": "Likelihood Function",
+          "provenance": {
+            "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/entity_predictions/output/statistics_estimation_001.json",
+            "source_object_index": 2,
+            "source_prediction_id": "likelihood_function"
+          },
+          "source_spans": [
+            "L(\\theta; x_{1:n}) = \\prod_{i=1}^{n} p(x_i \\mid \\theta)."
+          ],
+          "type": "Formula"
+        }
+      ],
+      "lecture_snapshot": {
+        "lecture_id": "statistics_estimation_001",
+        "sha256": "0f48d5fa14623d7af50716342e2c3f456e9f5728d741f8856fdb01dd2b95f4fa",
+        "text": "A statistical model is a family of probability distributions indexed by an unknown parameter \\(\\theta\\). The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values. For independent observations \\(x_1,\\ldots,x_n\\), it is\n\n\\[\nL(\\theta; x_{1:n}) = \\prod_{i=1}^{n} p(x_i \\mid \\theta).\n\\]\n\nThe log-likelihood is obtained by taking the logarithm of the likelihood. Independence turns the product into a sum:\n\n\\[\n\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta).\n\\]\n\nMaximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:\n\n\\[\n\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta).\n\\]\n\nThe score function is the derivative of the log-likelihood with respect to the parameter,\n\n\\[\ns(\\theta) = \\nabla_{\\theta}\\ell(\\theta).\n\\]\n\nAt an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\). When this equation has no closed-form solution, Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically.\n"
+      }
+    },
+    {
+      "item_id": "review_statistics_estimation_001_log_likelihood_formula",
+      "decision": "matched",
+      "resulting_alignment_level": "manual",
+      "resulting_primary_structural_status": "one_to_one",
+      "matched_predicted_ref": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood_function"
+      },
+      "predicted_source_span_supports_identity": true,
+      "rationale": "Both objects denote the displayed log-likelihood formula. The Formula versus Function wording does not change the educational object, and the source spans are identical.",
+      "item_snapshot_sha256": "d2b4a30a6b017f1e63570a30b3dc5301b13535f4a42ccca76113f91127b7537e",
+      "oracle_snapshots": [
+        {
+          "aliases": [],
+          "ko_id": "log_likelihood_formula",
+          "lecture_id": "statistics_estimation_001",
+          "name": "Log-Likelihood Formula",
+          "source_spans": [
+            "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta)."
+          ],
+          "type": "Formula"
+        }
+      ],
+      "candidate_predicted_snapshots": [
+        {
+          "ko_id": "log_likelihood_function",
+          "lecture_id": "statistics_estimation_001",
+          "name": "Log-Likelihood Function",
+          "provenance": {
+            "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/entity_predictions/output/statistics_estimation_001.json",
+            "source_object_index": 4,
+            "source_prediction_id": "log_likelihood_function"
+          },
+          "source_spans": [
+            "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta)."
+          ],
+          "type": "Formula"
+        }
+      ],
+      "lecture_snapshot": {
+        "lecture_id": "statistics_estimation_001",
+        "sha256": "0f48d5fa14623d7af50716342e2c3f456e9f5728d741f8856fdb01dd2b95f4fa",
+        "text": "A statistical model is a family of probability distributions indexed by an unknown parameter \\(\\theta\\). The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values. For independent observations \\(x_1,\\ldots,x_n\\), it is\n\n\\[\nL(\\theta; x_{1:n}) = \\prod_{i=1}^{n} p(x_i \\mid \\theta).\n\\]\n\nThe log-likelihood is obtained by taking the logarithm of the likelihood. Independence turns the product into a sum:\n\n\\[\n\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta).\n\\]\n\nMaximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:\n\n\\[\n\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta).\n\\]\n\nThe score function is the derivative of the log-likelihood with respect to the parameter,\n\n\\[\ns(\\theta) = \\nabla_{\\theta}\\ell(\\theta).\n\\]\n\nAt an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\). When this equation has no closed-form solution, Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically.\n"
+      }
+    },
+    {
+      "item_id": "review_statistics_estimation_001_mle_formula",
+      "decision": "matched",
+      "resulting_alignment_level": "manual",
+      "resulting_primary_structural_status": "one_to_one",
+      "matched_predicted_ref": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "mle_estimator"
+      },
+      "predicted_source_span_supports_identity": true,
+      "rationale": "Both objects denote the displayed maximum-likelihood estimator formula. The abbreviated predicted label and the Oracle label refer to the same equation, with identical source spans.",
+      "item_snapshot_sha256": "166743888180a7af25bb44f27871017ce2fe156457413482846e9fc505eb9afa",
+      "oracle_snapshots": [
+        {
+          "aliases": [
+            "MLE formula"
+          ],
+          "ko_id": "mle_formula",
+          "lecture_id": "statistics_estimation_001",
+          "name": "Maximum Likelihood Estimator Formula",
+          "source_spans": [
+            "\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta)."
+          ],
+          "type": "Formula"
+        }
+      ],
+      "candidate_predicted_snapshots": [
+        {
+          "ko_id": "mle_estimator",
+          "lecture_id": "statistics_estimation_001",
+          "name": "MLE Estimator",
+          "provenance": {
+            "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/entity_predictions/output/statistics_estimation_001.json",
+            "source_object_index": 6,
+            "source_prediction_id": "mle_estimator"
+          },
+          "source_spans": [
+            "\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta)."
+          ],
+          "type": "Formula"
+        }
+      ],
+      "lecture_snapshot": {
+        "lecture_id": "statistics_estimation_001",
+        "sha256": "0f48d5fa14623d7af50716342e2c3f456e9f5728d741f8856fdb01dd2b95f4fa",
+        "text": "A statistical model is a family of probability distributions indexed by an unknown parameter \\(\\theta\\). The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values. For independent observations \\(x_1,\\ldots,x_n\\), it is\n\n\\[\nL(\\theta; x_{1:n}) = \\prod_{i=1}^{n} p(x_i \\mid \\theta).\n\\]\n\nThe log-likelihood is obtained by taking the logarithm of the likelihood. Independence turns the product into a sum:\n\n\\[\n\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta).\n\\]\n\nMaximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:\n\n\\[\n\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta).\n\\]\n\nThe score function is the derivative of the log-likelihood with respect to the parameter,\n\n\\[\ns(\\theta) = \\nabla_{\\theta}\\ell(\\theta).\n\\]\n\nAt an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\). When this equation has no closed-form solution, Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically.\n"
+      }
+    }
+  ]
+}

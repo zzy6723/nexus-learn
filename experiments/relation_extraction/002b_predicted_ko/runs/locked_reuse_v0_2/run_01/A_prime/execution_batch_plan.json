@@ -1,0 +1,648 @@
+{
+  "artifact_type": "candidate_scoped_relation_execution_plan",
+  "version": "v0.1",
+  "request_partitioning": "one_candidate_pair_per_request_v0_1",
+  "batch_count": 33,
+  "pair_ids": [
+    "rel_holdout_001",
+    "rel_holdout_002",
+    "rel_holdout_003",
+    "rel_holdout_004",
+    "rel_holdout_006",
+    "rel_holdout_007",
+    "rel_holdout_008",
+    "rel_holdout_009",
+    "rel_holdout_010",
+    "rel_holdout_013",
+    "rel_holdout_014",
+    "rel_holdout_015",
+    "rel_holdout_016",
+    "rel_holdout_017",
+    "rel_holdout_018",
+    "rel_holdout_019",
+    "rel_holdout_020",
+    "rel_holdout_021",
+    "rel_holdout_023",
+    "rel_holdout_024",
+    "rel_holdout_025",
+    "rel_holdout_028",
+    "rel_holdout_029",
+    "rel_holdout_030",
+    "rel_holdout_031",
+    "rel_holdout_032",
+    "rel_holdout_033",
+    "rel_holdout_034",
+    "rel_holdout_035",
+    "rel_holdout_036",
+    "rel_holdout_037",
+    "rel_holdout_039",
+    "rel_holdout_040"
+  ],
+  "batches": [
+    {
+      "batch_id": "candidate_001",
+      "batch_index": 1,
+      "pair_id": "rel_holdout_001",
+      "endpoint_refs": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "ko_slot_023"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "ko_slot_030"
+        }
+      ],
+      "lecture_ids": [
+        "statistics_estimation_001"
+      ]
+    },
+    {
+      "batch_id": "candidate_002",
+      "batch_index": 2,
+      "pair_id": "rel_holdout_002",
+      "endpoint_refs": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "ko_id": "ko_slot_021"
+        },
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "ko_id": "ko_slot_022"
+        }
+      ],
+      "lecture_ids": [
+        "numerical_root_finding_001"
+      ]
+    },
+    {
+      "batch_id": "candidate_003",
+      "batch_index": 3,
+      "pair_id": "rel_holdout_003",
+      "endpoint_refs": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "ko_slot_013"
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "ko_slot_014"
+        }
+      ],
+      "lecture_ids": [
+        "graph_algorithms_001"
+      ]
+    },
+    {
+      "batch_id": "candidate_004",
+      "batch_index": 4,
+      "pair_id": "rel_holdout_004",
+      "endpoint_refs": [
+        {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "ko_slot_005"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "ko_slot_006"
+        }
+      ],
+      "lecture_ids": [
+        "differential_equations_001"
+      ]
+    },
+    {
+      "batch_id": "candidate_005",
+      "batch_index": 5,
+      "pair_id": "rel_holdout_006",
+      "endpoint_refs": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "ko_slot_024"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "ko_slot_028"
+        }
+      ],
+      "lecture_ids": [
+        "statistics_estimation_001"
+      ]
+    },
+    {
+      "batch_id": "candidate_006",
+      "batch_index": 6,
+      "pair_id": "rel_holdout_007",
+      "endpoint_refs": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "ko_slot_010"
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "ko_slot_016"
+        }
+      ],
+      "lecture_ids": [
+        "graph_algorithms_001"
+      ]
+    },
+    {
+      "batch_id": "candidate_007",
+      "batch_index": 7,
+      "pair_id": "rel_holdout_008",
+      "endpoint_refs": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "ko_slot_025"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "ko_slot_026"
+        }
+      ],
+      "lecture_ids": [
+        "statistics_estimation_001"
+      ]
+    },
+    {
+      "batch_id": "candidate_008",
+      "batch_index": 8,
+      "pair_id": "rel_holdout_009",
+      "endpoint_refs": [
+        {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "ko_slot_002"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "ko_slot_003"
+        }
+      ],
+      "lecture_ids": [
+        "differential_equations_001"
+      ]
+    },
+    {
+      "batch_id": "candidate_009",
+      "batch_index": 9,
+      "pair_id": "rel_holdout_010",
+      "endpoint_refs": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "ko_slot_010"
+        },
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "ko_id": "ko_slot_017"
+        }
+      ],
+      "lecture_ids": [
+        "graph_algorithms_001",
+        "numerical_root_finding_001"
+      ]
+    },
+    {
+      "batch_id": "candidate_010",
+      "batch_index": 10,
+      "pair_id": "rel_holdout_013",
+      "endpoint_refs": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "ko_slot_025"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "ko_slot_027"
+        }
+      ],
+      "lecture_ids": [
+        "statistics_estimation_001"
+      ]
+    },
+    {
+      "batch_id": "candidate_011",
+      "batch_index": 11,
+      "pair_id": "rel_holdout_014",
+      "endpoint_refs": [
+        {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "ko_slot_005"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "ko_slot_007"
+        }
+      ],
+      "lecture_ids": [
+        "differential_equations_001"
+      ]
+    },
+    {
+      "batch_id": "candidate_012",
+      "batch_index": 12,
+      "pair_id": "rel_holdout_015",
+      "endpoint_refs": [
+        {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "ko_slot_001"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "ko_slot_002"
+        }
+      ],
+      "lecture_ids": [
+        "differential_equations_001"
+      ]
+    },
+    {
+      "batch_id": "candidate_013",
+      "batch_index": 13,
+      "pair_id": "rel_holdout_016",
+      "endpoint_refs": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "ko_id": "ko_slot_017"
+        },
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "ko_id": "ko_slot_020"
+        }
+      ],
+      "lecture_ids": [
+        "numerical_root_finding_001"
+      ]
+    },
+    {
+      "batch_id": "candidate_014",
+      "batch_index": 14,
+      "pair_id": "rel_holdout_017",
+      "endpoint_refs": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "ko_slot_013"
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "ko_slot_016"
+        }
+      ],
+      "lecture_ids": [
+        "graph_algorithms_001"
+      ]
+    },
+    {
+      "batch_id": "candidate_015",
+      "batch_index": 15,
+      "pair_id": "rel_holdout_018",
+      "endpoint_refs": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "ko_slot_013"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "ko_slot_023"
+        }
+      ],
+      "lecture_ids": [
+        "graph_algorithms_001",
+        "statistics_estimation_001"
+      ]
+    },
+    {
+      "batch_id": "candidate_016",
+      "batch_index": 16,
+      "pair_id": "rel_holdout_019",
+      "endpoint_refs": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "ko_slot_023"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "ko_slot_024"
+        }
+      ],
+      "lecture_ids": [
+        "statistics_estimation_001"
+      ]
+    },
+    {
+      "batch_id": "candidate_017",
+      "batch_index": 17,
+      "pair_id": "rel_holdout_020",
+      "endpoint_refs": [
+        {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "ko_slot_002"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "ko_slot_005"
+        }
+      ],
+      "lecture_ids": [
+        "differential_equations_001"
+      ]
+    },
+    {
+      "batch_id": "candidate_018",
+      "batch_index": 18,
+      "pair_id": "rel_holdout_021",
+      "endpoint_refs": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "ko_slot_009"
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "ko_slot_010"
+        }
+      ],
+      "lecture_ids": [
+        "graph_algorithms_001"
+      ]
+    },
+    {
+      "batch_id": "candidate_019",
+      "batch_index": 19,
+      "pair_id": "rel_holdout_023",
+      "endpoint_refs": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "ko_id": "ko_slot_020"
+        },
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "ko_id": "ko_slot_021"
+        }
+      ],
+      "lecture_ids": [
+        "numerical_root_finding_001"
+      ]
+    },
+    {
+      "batch_id": "candidate_020",
+      "batch_index": 20,
+      "pair_id": "rel_holdout_024",
+      "endpoint_refs": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "ko_id": "ko_slot_020"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "ko_slot_027"
+        }
+      ],
+      "lecture_ids": [
+        "numerical_root_finding_001",
+        "statistics_estimation_001"
+      ]
+    },
+    {
+      "batch_id": "candidate_021",
+      "batch_index": 21,
+      "pair_id": "rel_holdout_025",
+      "endpoint_refs": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "ko_slot_011"
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "ko_slot_015"
+        }
+      ],
+      "lecture_ids": [
+        "graph_algorithms_001"
+      ]
+    },
+    {
+      "batch_id": "candidate_022",
+      "batch_index": 22,
+      "pair_id": "rel_holdout_028",
+      "endpoint_refs": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "ko_id": "ko_slot_017"
+        },
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "ko_id": "ko_slot_022"
+        }
+      ],
+      "lecture_ids": [
+        "numerical_root_finding_001"
+      ]
+    },
+    {
+      "batch_id": "candidate_023",
+      "batch_index": 23,
+      "pair_id": "rel_holdout_029",
+      "endpoint_refs": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "ko_slot_023"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "ko_slot_025"
+        }
+      ],
+      "lecture_ids": [
+        "statistics_estimation_001"
+      ]
+    },
+    {
+      "batch_id": "candidate_024",
+      "batch_index": 24,
+      "pair_id": "rel_holdout_030",
+      "endpoint_refs": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "ko_slot_010"
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "ko_slot_011"
+        }
+      ],
+      "lecture_ids": [
+        "graph_algorithms_001"
+      ]
+    },
+    {
+      "batch_id": "candidate_025",
+      "batch_index": 25,
+      "pair_id": "rel_holdout_031",
+      "endpoint_refs": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "ko_id": "ko_slot_017"
+        },
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "ko_id": "ko_slot_018"
+        }
+      ],
+      "lecture_ids": [
+        "numerical_root_finding_001"
+      ]
+    },
+    {
+      "batch_id": "candidate_026",
+      "batch_index": 26,
+      "pair_id": "rel_holdout_032",
+      "endpoint_refs": [
+        {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "ko_slot_002"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "ko_slot_008"
+        }
+      ],
+      "lecture_ids": [
+        "differential_equations_001"
+      ]
+    },
+    {
+      "batch_id": "candidate_027",
+      "batch_index": 27,
+      "pair_id": "rel_holdout_033",
+      "endpoint_refs": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "ko_slot_027"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "ko_slot_028"
+        }
+      ],
+      "lecture_ids": [
+        "statistics_estimation_001"
+      ]
+    },
+    {
+      "batch_id": "candidate_028",
+      "batch_index": 28,
+      "pair_id": "rel_holdout_034",
+      "endpoint_refs": [
+        {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "ko_slot_001"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "ko_slot_026"
+        }
+      ],
+      "lecture_ids": [
+        "differential_equations_001",
+        "statistics_estimation_001"
+      ]
+    },
+    {
+      "batch_id": "candidate_029",
+      "batch_index": 29,
+      "pair_id": "rel_holdout_035",
+      "endpoint_refs": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "ko_id": "ko_slot_018"
+        },
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "ko_id": "ko_slot_020"
+        }
+      ],
+      "lecture_ids": [
+        "numerical_root_finding_001"
+      ]
+    },
+    {
+      "batch_id": "candidate_030",
+      "batch_index": 30,
+      "pair_id": "rel_holdout_036",
+      "endpoint_refs": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "ko_slot_009"
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "ko_slot_012"
+        }
+      ],
+      "lecture_ids": [
+        "graph_algorithms_001"
+      ]
+    },
+    {
+      "batch_id": "candidate_031",
+      "batch_index": 31,
+      "pair_id": "rel_holdout_037",
+      "endpoint_refs": [
+        {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "ko_slot_003"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "ko_slot_004"
+        }
+      ],
+      "lecture_ids": [
+        "differential_equations_001"
+      ]
+    },
+    {
+      "batch_id": "candidate_032",
+      "batch_index": 32,
+      "pair_id": "rel_holdout_039",
+      "endpoint_refs": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "ko_id": "ko_slot_017"
+        },
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "ko_id": "ko_slot_019"
+        }
+      ],
+      "lecture_ids": [
+        "numerical_root_finding_001"
+      ]
+    },
+    {
+      "batch_id": "candidate_033",
+      "batch_index": 33,
+      "pair_id": "rel_holdout_040",
+      "endpoint_refs": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "ko_slot_011"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "ko_slot_029"
+        }
+      ],
+      "lecture_ids": [
+        "graph_algorithms_001",
+        "statistics_estimation_001"
+      ]
+    }
+  ],
+  "source_batch_plan_sha256": "1e5f1851ec1ce14329ffc828052390ab8e29344de9486c88b94d815276a9177e",
+  "pair_manifest_sha256": "9454970f63f9403a6fbee2b93a7f005c20bf8a4530887b5de6d2c234392ba2dd",
+  "ko_manifest_sha256": "ce23e9e3bfdb6fbdc85ce6f688fab1586e095eb61e49aeb2cd87ed8adc4110c4",
+  "matched_ground_truth_sha256": "d949b240c937a2c637a96ea30c03384d1e48791dea640f7b851094efb9e154f6",
+  "relation_prompt_sha256": "e3b0e53f3ceed60c60d082fa9c4a67f9497e64d50664118227cd9bea9fbc12af",
+  "relation_schema_sha256": "a50bbf3193fe03e6e407da6ced7f15f9f4bb819876140925bc87ac4419c50417"
+}

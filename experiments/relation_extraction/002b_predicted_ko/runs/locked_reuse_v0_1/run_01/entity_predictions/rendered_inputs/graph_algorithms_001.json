@@ -1,0 +1,23 @@
+{
+  "model": "deepseek-v4-flash",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You extract structured Knowledge Objects from STEM learning materials.\n\nA Knowledge Object is a meaningful educational entity, such as a concept, method, or formula, that may later participate in typed learning relations.\n\nReturn only valid JSON. Do not include markdown fences, commentary, or explanations.\n"
+    },
+    {
+      "role": "user",
+      "content": "Extract Knowledge Objects from the following lecture snippet.\n\nAllowed object types:\n\n- `Concept`\n- `Method`\n- `Formula`\n\nReturn only valid JSON with this schema:\n\n```json\n{\n  \"lecture_id\": \"graph_algorithms_001\",\n  \"knowledge_objects\": [\n    {\n      \"id\": \"lower_snake_case_stable_identifier\",\n      \"name\": \"Canonical Name\",\n      \"type\": \"Concept | Method | Formula\",\n      \"aliases\": [\"optional alias\"],\n      \"short_definition\": \"One sentence definition based only on the input.\",\n      \"source_span\": \"Exact text span copied from the input.\"\n    }\n  ]\n}\n```\n\nObject inclusion rules:\n\n1. Extract named or clearly defined educational entities that could later participate in typed learning relations.\n2. Include central objects and useful supporting objects if they are explicitly named or explained in the text.\n3. Do not extract broad domains, section headings, historical people, isolated variables, or ordinary words.\n4. Merge duplicates into one canonical object.\n\nType rules:\n\n1. Use `Concept` for mathematical objects, properties, structures, and named constructs.\n2. Use `Method` for procedures, algorithms, or techniques.\n3. Use `Formula` only for symbolic equations, update rules, or displayed mathematical expressions.\n4. If a named mathematical construct is mentioned together with a formula, the named construct is usually a `Concept`; the equation itself may be a separate `Formula` only if it defines or updates something important.\n5. Displayed equations should usually be extracted as `Formula` objects when they define, characterize, or update a concept or method.\n\nGrounding rules:\n\n1. `source_span` must be an exact substring copied from the lecture snippet.\n2. Do not normalize LaTeX into Unicode inside `source_span`.\n3. Keep `source_span` short but sufficient.\n4. If no exact grounding span exists, do not extract the object.\n\nLecture ID:\n\n```text\ngraph_algorithms_001\n```\n\nLecture snippet:\n\n```text\nA weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\). A path is a sequence of compatible directed edges. Its path cost is the sum of their edge weights:\n\n\\[\nC(v_0,\\ldots,v_k) = \\sum_{i=0}^{k-1} w(v_i,v_{i+1}).\n\\]\n\nThe single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex. Dijkstra's algorithm is applied to this problem when all edge weights are nonnegative.\n\nDijkstra's algorithm stores tentative distance estimates in a priority queue. After removing a vertex \\(u\\) with the smallest tentative distance, it applies edge relaxation to each outgoing edge. Relaxation is formalized by the update\n\n\\[\nd(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}.\n\\]\n\nA* search extends Dijkstra's algorithm by using a heuristic function \\(h(v)\\) to guide which vertex is explored next. Its queue priority combines the known path cost with the heuristic estimate, and setting \\(h(v)=0\\) recovers Dijkstra's ordering.\n```\n"
+    }
+  ],
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "max_tokens": 4096,
+  "stream": false,
+  "response_format": {
+    "type": "json_object"
+  },
+  "thinking": {
+    "type": "disabled"
+  }
+}

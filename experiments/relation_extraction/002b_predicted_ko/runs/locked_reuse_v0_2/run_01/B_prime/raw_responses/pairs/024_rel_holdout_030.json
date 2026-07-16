@@ -1,0 +1,28 @@
+{
+  "id": "970df08c-8ee3-41a5-a31d-4daa37f46551",
+  "object": "chat.completion",
+  "created": 1784138067,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_holdout_030\",\n      \"source\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"ko_slot_010\"\n      },\n      \"target\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"ko_slot_011\"\n      },\n      \"relation_type\": \"REQUIRES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"graph_algorithms_001\",\n          \"span\": \"it applies edge relaxation to each outgoing edge.\"\n        }\n      ],\n      \"rationale\": \"Dijkstra's algorithm applies edge relaxation as a step, so edge relaxation is a prerequisite for the algorithm.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2267,
+    "completion_tokens": 169,
+    "total_tokens": 2436,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 219
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

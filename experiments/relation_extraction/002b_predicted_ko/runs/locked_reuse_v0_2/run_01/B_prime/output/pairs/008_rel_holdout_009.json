@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_holdout_009",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ko_slot_003"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ko_slot_002"
+      },
+      "relation_type": "EXTENDS",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+        }
+      ],
+      "rationale": "The lecture explicitly states that Heun's method extends the forward Euler method, indicating that Heun's method is a more specific development of the forward Euler method."
+    }
+  ]
+}

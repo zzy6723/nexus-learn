@@ -1,0 +1,28 @@
+{
+  "id": "8e0396ea-690c-4532-b0bb-792637fc96dd",
+  "object": "chat.completion",
+  "created": 1784138030,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_holdout_013\",\n      \"source\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"ko_slot_027\"\n      },\n      \"target\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"ko_slot_025\"\n      },\n      \"relation_type\": \"APPLIED_IN\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"Maximum likelihood estimation uses the log-likelihood as its objective\"\n        }\n      ],\n      \"rationale\": \"The log-likelihood is used as the objective function within the maximum likelihood estimation method.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2345,
+    "completion_tokens": 174,
+    "total_tokens": 2519,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 297
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

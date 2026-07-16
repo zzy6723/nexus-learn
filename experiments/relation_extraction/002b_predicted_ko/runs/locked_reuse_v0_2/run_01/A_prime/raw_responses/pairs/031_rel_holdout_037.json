@@ -1,0 +1,28 @@
+{
+  "id": "ebf5612f-9bdb-45f2-976c-3987e07bb43a",
+  "object": "chat.completion",
+  "created": 1784137458,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_holdout_037\",\n      \"source\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"ko_slot_004\"\n      },\n      \"target\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"ko_slot_003\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"y_{n+1} = y_n + \\\\frac{h}{2}\\\\left(F(t_n,y_n)+F(t_n+h,\\\\widetilde{y}_{n+1})\\\\right).\"\n        },\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"Heun's method extends the forward Euler method with a predictor-corrector step.\"\n        }\n      ],\n      \"rationale\": \"The Heun Corrected Update Formula is the explicit mathematical expression that defines the corrected update step of Heun's Method, thus formalizing the method.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2344,
+    "completion_tokens": 255,
+    "total_tokens": 2599,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 296
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

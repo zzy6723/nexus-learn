@@ -1,0 +1,20 @@
+{
+  "artifact_type": "relation_evaluation_snapshot",
+  "version": "v0.1",
+  "condition": "B_prime",
+  "evaluation_status": "final",
+  "base_evaluation_dir": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/B_prime/evaluation",
+  "prediction_sha256": "117fd90d6a7bbc581a73fc6f6ecba8d6ab19e3b192035cfe37f6b3d84d6b53e5",
+  "run_metadata_sha256": "234ba613b0883570ddb820d459c5be1f0bd25cc6ca00d72b1f07bcae4cc32e7a",
+  "metrics_sha256": "79b92569588007d41a8829445773b58355e881228e2cbc7c30106e0202d4d458",
+  "matches_sha256": "6a7551f55664b793567dbced69645f622f78263b6ad2363220d6abaf659c7675",
+  "errors_sha256": "8c86364eac639032ee79739fa4b7999282b7bf0ca24d1cf111eb69651dbf3653",
+  "source": {
+    "base_metrics_sha256": "79b92569588007d41a8829445773b58355e881228e2cbc7c30106e0202d4d458",
+    "base_matches_sha256": "6a7551f55664b793567dbced69645f622f78263b6ad2363220d6abaf659c7675",
+    "base_errors_sha256": "8c86364eac639032ee79739fa4b7999282b7bf0ca24d1cf111eb69651dbf3653",
+    "base_pending_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "predictions_path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/B_prime/output/matched_relation_ground_truth.json",
+    "run_metadata_path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/B_prime/metadata/matched_relation_ground_truth.json"
+  }
+}

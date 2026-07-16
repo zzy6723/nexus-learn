@@ -1,0 +1,28 @@
+{
+  "id": "5a48efb8-3ae5-4491-bbd3-b614ef671604",
+  "object": "chat.completion",
+  "created": 1784138017,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_holdout_006\",\n      \"source\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"ko_slot_028\"\n      },\n      \"target\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"ko_slot_024\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:\\n\\n\\\\[\\n\\\\widehat{\\\\theta}_{\\\\mathrm{MLE}} = \\\\operatorname*{arg\\\\,max}_{\\\\theta}\\\\, \\\\ell(\\\\theta).\\n\\\\]\"\n        }\n      ],\n      \"rationale\": \"The MLE Estimator formula explicitly defines the estimator as the argmax of the log-likelihood, which is derived from the Likelihood Function. Thus, the MLE Estimator formalizes the Likelihood Function by providing the solution condition for estimation.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2369,
+    "completion_tokens": 257,
+    "total_tokens": 2626,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 321
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

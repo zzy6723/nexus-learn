@@ -1,0 +1,28 @@
+{
+  "id": "0b9f47cb-c80c-4cb2-bc45-536c07253fd2",
+  "object": "chat.completion",
+  "created": 1784138083,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_holdout_036\",\n      \"source\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"ko_slot_009\"\n      },\n      \"target\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"ko_slot_012\"\n      },\n      \"relation_type\": \"APPLIED_IN\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"graph_algorithms_001\",\n          \"span\": \"A* search extends Dijkstra's algorithm by using a heuristic function \\\\(h(v)\\\\) to guide which vertex is explored next.\"\n        }\n      ],\n      \"rationale\": \"The heuristic function is used by A* search to guide exploration, establishing an APPLIED_IN relation from the heuristic function to A* search.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2275,
+    "completion_tokens": 192,
+    "total_tokens": 2467,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 227
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

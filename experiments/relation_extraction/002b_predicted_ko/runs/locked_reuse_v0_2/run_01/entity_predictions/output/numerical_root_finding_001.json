@@ -1,0 +1,61 @@
+{
+  "lecture_id": "numerical_root_finding_001",
+  "knowledge_objects": [
+    {
+      "id": "root_finding_problem",
+      "name": "Root-finding problem",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "A problem that asks for a value at which a scalar function is zero.",
+      "source_span": "A root-finding problem asks for a value \\(x^*\\) at which a scalar function is zero"
+    },
+    {
+      "id": "newtons_method",
+      "name": "Newton's method",
+      "type": "Method",
+      "aliases": [],
+      "short_definition": "A method that uses the derivative to replace the function locally by its tangent line to find roots.",
+      "source_span": "Newton's method uses the derivative to replace the function locally by its tangent line."
+    },
+    {
+      "id": "newton_update_formula",
+      "name": "Newton update formula",
+      "type": "Formula",
+      "aliases": [],
+      "short_definition": "The update rule for Newton's method: x_{k+1} = x_k - f(x_k)/f'(x_k).",
+      "source_span": "x_{k+1} = x_k - \\frac{f(x_k)}{f'(x_k)}"
+    },
+    {
+      "id": "damped_newton_method",
+      "name": "Damped Newton method",
+      "type": "Method",
+      "aliases": [],
+      "short_definition": "An extension of Newton's method that scales the Newton correction with a factor between zero and one.",
+      "source_span": "The damped Newton method extends Newton's method by scaling the Newton correction with a factor between zero and one."
+    },
+    {
+      "id": "bisection_method",
+      "name": "Bisection method",
+      "type": "Method",
+      "aliases": [],
+      "short_definition": "A method that begins with a sign-changing bracket and repeatedly halves the interval retaining the half with opposite signs.",
+      "source_span": "The bisection method begins with a sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\)."
+    },
+    {
+      "id": "midpoint_formula",
+      "name": "Midpoint formula",
+      "type": "Formula",
+      "aliases": [],
+      "short_definition": "The formula for the midpoint of an interval: m = (a+b)/2.",
+      "source_span": "m = \\frac{a+b}{2}"
+    },
+    {
+      "id": "sign_changing_bracket",
+      "name": "Sign-changing bracket",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "An interval [a,b] such that f(a)f(b) < 0, guaranteeing a root inside.",
+      "source_span": "sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\)"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "provider": "deepseek",
+  "experiment": "002_prompt_refinement",
+  "run_id": "run_01",
+  "split": "holdout",
+  "benchmark_version": "v0.1",
+  "ground_truth": "benchmark/ground_truth/relations_holdout_v0_1.json",
+  "prompt_path": "experiments/relation_extraction/002_prompt_refinement/prompt.md",
+  "relation_schema_path": "docs/decisions/004-relation-schema.md",
+  "model_requested": "deepseek-v4-flash",
+  "model_returned": "deepseek-v4-flash",
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402",
+  "finish_reason": "stop",
+  "request_parameters": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 8192,
+    "stream": false,
+    "response_format": {
+      "type": "json_object"
+    },
+    "thinking": {
+      "type": "disabled"
+    }
+  },
+  "run_timestamp": "2026-07-13T15:23:47.705552+00:00",
+  "latency_ms": 36280,
+  "git_commit_at_start": "5fd7e2b9ea02fad6a15f2a1a703193bd7d606c7d",
+  "git_dirty_at_start": false,
+  "hashes": {
+    "ground_truth_sha256": "20cf7a8b2aeb76f372e103c59c453bfa15c43732885b6c621af26f5edd427a6f",
+    "prompt_sha256": "e3b0e53f3ceed60c60d082fa9c4a67f9497e64d50664118227cd9bea9fbc12af",
+    "relation_schema_sha256": "a50bbf3193fe03e6e407da6ced7f15f9f4bb819876140925bc87ac4419c50417",
+    "knowledge_object_ground_truth_sha256": {
+      "benchmark/ground_truth/relation_holdout_knowledge_objects_v0_1.json": "4df9f63f279b9d02f7d0f6f3aafb59db91bc1774951f6aa1be25e47a0d474a0f"
+    },
+    "lecture_sha256": {
+      "differential_equations_001": "7c7650f7975bde77e45e683d8b1089ec12507b27f07b7eedb1911616260260db",
+      "graph_algorithms_001": "af9645b1f2baa4655a09cab06a7183e11f0dc697b81f1b9f94486459916b596e",
+      "numerical_root_finding_001": "07b9fd847f4e763c19627752f6c0bd72a720cde88dac9229478d9a3d4dc34d40",
+      "statistics_estimation_001": "6c2b5d0b2e1ac0f039d7fe8bbc5044fc4ab9926538d4645f57dda6cbbdf421fb"
+    },
+    "model_input_sha256": "b0cdcb17b09769d8334dedbd1c880c717353be319e5e26b9f4ff72e853f11d8d",
+    "request_payload_sha256": "9e462b00253b0d869d62261871b8781ce75781dd9793b1faa7006c3ae9a1400e"
+  },
+  "input_counts": {
+    "candidate_pairs": 40,
+    "knowledge_objects": 36,
+    "lectures": 4
+  },
+  "gold_leakage_audit": {
+    "passed": true,
+    "candidate_serialization": "sorted_fully_qualified_references",
+    "forbidden_keys_checked": [
+      "acceptable_alternatives",
+      "category",
+      "evidence_spans",
+      "primary_scored",
+      "primary_scoring_categories",
+      "rationale",
+      "relation_type",
+      "source",
+      "symmetric",
+      "target"
+    ],
+    "rendered_pair_count": 40,
+    "rendered_knowledge_object_count": 36,
+    "rendered_lecture_count": 4
+  },
+  "artifacts": {
+    "rendered_input": "experiments/relation_extraction/002_prompt_refinement/runs/holdout_v0_1/run_01/rendered_inputs/relations_holdout_v0_1.json",
+    "raw_response": "experiments/relation_extraction/002_prompt_refinement/runs/holdout_v0_1/run_01/raw_responses/relations_holdout_v0_1.json",
+    "prediction": "experiments/relation_extraction/002_prompt_refinement/runs/holdout_v0_1/run_01/output/relations_holdout_v0_1.json",
+    "unparsed_output": "experiments/relation_extraction/002_prompt_refinement/runs/holdout_v0_1/run_01/output/relations_holdout_v0_1.raw.txt",
+    "metadata": "experiments/relation_extraction/002_prompt_refinement/runs/holdout_v0_1/run_01/metadata/relations_holdout_v0_1.json"
+  },
+  "usage": {
+    "prompt_tokens": 9147,
+    "completion_tokens": 6229,
+    "total_tokens": 15376,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 9147
+  },
+  "request_success": true,
+  "api_error": null,
+  "json_parse_success": true,
+  "json_parse_error": null,
+  "prediction_schema_valid": true,
+  "prediction_schema_error": null,
+  "retry_count": 0,
+  "dry_run": false,
+  "run_status": "completed",
+  "prediction_sha256": "2f39f157b3a5b1c5e44880d66f030fc37c1d9a4d3b13373d0f39a2e0f10d9343",
+  "source_run_metadata": "experiments/relation_extraction/002_prompt_refinement/runs/holdout_v0_1/run_01/metadata/relations_holdout_v0_1.json",
+  "source_run_metadata_sha256": "79b001cd2459cf05c3c42f08681b5e35ea506ea6bec219db004bd3570aaefe8f"
+}

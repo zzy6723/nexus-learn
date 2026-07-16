@@ -1,0 +1,27 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_holdout_008",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "ko_slot_026"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "ko_slot_025"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The log-likelihood is obtained by taking the logarithm of the likelihood."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta)."
+        }
+      ],
+      "rationale": "The Formula 'Log-Likelihood Function' explicitly defines the concept 'Log-Likelihood' by providing its mathematical expression, thus FORMALIZES is appropriate."
+    }
+  ]
+}

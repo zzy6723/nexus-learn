@@ -1,13 +1,13 @@
 # Experiment 002B-1 Conclusion
 
-**Decision:** Pass the development feasibility gate with an Evidence exact-span
-compliance caveat.
+**Development decision:** Pass the development feasibility gate with an
+Evidence exact-span compliance caveat.
 
 **Execution update:** The original `locked_reuse_v0_1` Relation stage closed
-after two repeated schema-invalid A-prime responses. The next step is a separate
-repository freeze for `locked_reuse_v0_2`, which changes only request
-partitioning to one candidate pair per request. It is a method-revision
-diagnostic, not the untouched locked-reuse claim authorized below.
+after two repeated schema-invalid A-prime responses. The versioned
+`locked_reuse_v0_2` candidate-scoped execution subsequently completed. It is a
+method-revision diagnostic, not an untouched locked-reuse or unseen-holdout
+result.
 
 ---
 
@@ -88,3 +88,18 @@ authorize a production claim, a stability claim, or immediate product
 integration.
 
 Detailed results and denominators are in `development_results.md`.
+
+## Locked-Reuse v0.2 Outcome
+
+The candidate-scoped revision completed all 33 recoverable pair requests in
+both matched conditions without retries or endpoint substitutions. Conditional
+strict edge accuracy was 25/33 for A-prime and 26/33 for B-prime. No pair moved
+from an A-prime strict success to a B-prime strict failure.
+
+Five missing endpoint KOs made seven of the 40 original pairs unrecoverable.
+The complete B-prime pipeline therefore achieved 26/40 strict success. Exact
+Relation Evidence grounding was 32/35 under B-prime, with three non-exact spans.
+
+This supports conditional predicted-KO representation viability for the current
+single paired run, while rejecting any production-readiness, stability, or
+generalization claim. Full results are in `locked_reuse_v0_2_results.md`.

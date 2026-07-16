@@ -1,0 +1,466 @@
+{
+  "alignment_sha256": "9d9770bc0a33b73284dd54e2f9b9c03433855db8ed96019188a548626891f075",
+  "artifact_type": "recoverable_ko_manifest",
+  "derivation_version": "predicted_ko_projection_v0_1",
+  "pair_manifest_sha256": "9454970f63f9403a6fbee2b93a7f005c20bf8a4530887b5de6d2c234392ba2dd",
+  "slots": [
+    {
+      "oracle_ref": {
+        "ko_id": "euler_update",
+        "lecture_id": "differential_equations_001"
+      },
+      "predicted_ref": {
+        "ko_id": "forward_euler_update",
+        "lecture_id": "differential_equations_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_holdout_015",
+        "rel_holdout_034"
+      ],
+      "slot_id": "ko_slot_001"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "forward_euler_method",
+        "lecture_id": "differential_equations_001"
+      },
+      "predicted_ref": {
+        "ko_id": "forward_euler_method",
+        "lecture_id": "differential_equations_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_holdout_009",
+        "rel_holdout_015",
+        "rel_holdout_020",
+        "rel_holdout_032"
+      ],
+      "slot_id": "ko_slot_002"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "heun_method",
+        "lecture_id": "differential_equations_001"
+      },
+      "predicted_ref": {
+        "ko_id": "heuns_method",
+        "lecture_id": "differential_equations_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_holdout_009",
+        "rel_holdout_037"
+      ],
+      "slot_id": "ko_slot_003"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "heun_update",
+        "lecture_id": "differential_equations_001"
+      },
+      "predicted_ref": {
+        "ko_id": "heuns_update",
+        "lecture_id": "differential_equations_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_holdout_037"
+      ],
+      "slot_id": "ko_slot_004"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "initial_value_problem",
+        "lecture_id": "differential_equations_001"
+      },
+      "predicted_ref": {
+        "ko_id": "initial_value_problem",
+        "lecture_id": "differential_equations_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_holdout_004",
+        "rel_holdout_014",
+        "rel_holdout_020"
+      ],
+      "slot_id": "ko_slot_005"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "ordinary_differential_equation",
+        "lecture_id": "differential_equations_001"
+      },
+      "predicted_ref": {
+        "ko_id": "ordinary_differential_equation",
+        "lecture_id": "differential_equations_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_holdout_004"
+      ],
+      "slot_id": "ko_slot_006"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "step_size",
+        "lecture_id": "differential_equations_001"
+      },
+      "predicted_ref": {
+        "ko_id": "step_size",
+        "lecture_id": "differential_equations_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_holdout_014"
+      ],
+      "slot_id": "ko_slot_007"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "vector_field",
+        "lecture_id": "differential_equations_001"
+      },
+      "predicted_ref": {
+        "ko_id": "vector_field",
+        "lecture_id": "differential_equations_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_holdout_032"
+      ],
+      "slot_id": "ko_slot_008"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "a_star_search",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "predicted_ref": {
+        "ko_id": "a_star_search",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_holdout_021",
+        "rel_holdout_036"
+      ],
+      "slot_id": "ko_slot_009"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "dijkstra_algorithm",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "predicted_ref": {
+        "ko_id": "dijkstras_algorithm",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_holdout_007",
+        "rel_holdout_010",
+        "rel_holdout_021",
+        "rel_holdout_030"
+      ],
+      "slot_id": "ko_slot_010"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "edge_relaxation",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "predicted_ref": {
+        "ko_id": "edge_relaxation",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_holdout_025",
+        "rel_holdout_030",
+        "rel_holdout_040"
+      ],
+      "slot_id": "ko_slot_011"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "heuristic_function",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "predicted_ref": {
+        "ko_id": "heuristic_function",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_holdout_036"
+      ],
+      "slot_id": "ko_slot_012"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "path_cost",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "predicted_ref": {
+        "ko_id": "path_cost",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_holdout_003",
+        "rel_holdout_017",
+        "rel_holdout_018"
+      ],
+      "slot_id": "ko_slot_013"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "path_cost_formula",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "predicted_ref": {
+        "ko_id": "path_cost_formula",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_holdout_003"
+      ],
+      "slot_id": "ko_slot_014"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "relaxation_formula",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "predicted_ref": {
+        "ko_id": "relaxation_update",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_holdout_025"
+      ],
+      "slot_id": "ko_slot_015"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "shortest_path_problem",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "predicted_ref": {
+        "ko_id": "single_source_shortest_path_problem",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_holdout_007",
+        "rel_holdout_017"
+      ],
+      "slot_id": "ko_slot_016"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "bisection_method",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "predicted_ref": {
+        "ko_id": "bisection_method",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_holdout_010",
+        "rel_holdout_016",
+        "rel_holdout_028",
+        "rel_holdout_031",
+        "rel_holdout_039"
+      ],
+      "slot_id": "ko_slot_017"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "damped_newton_method",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "predicted_ref": {
+        "ko_id": "damped_newton_method",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_holdout_031",
+        "rel_holdout_035"
+      ],
+      "slot_id": "ko_slot_018"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "midpoint_formula",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "predicted_ref": {
+        "ko_id": "midpoint_formula",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_holdout_039"
+      ],
+      "slot_id": "ko_slot_019"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "newton_method",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "predicted_ref": {
+        "ko_id": "newtons_method",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_holdout_016",
+        "rel_holdout_023",
+        "rel_holdout_024",
+        "rel_holdout_035"
+      ],
+      "slot_id": "ko_slot_020"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "newton_update",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "predicted_ref": {
+        "ko_id": "newton_update_formula",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_holdout_002",
+        "rel_holdout_023"
+      ],
+      "slot_id": "ko_slot_021"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "sign_changing_bracket",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "predicted_ref": {
+        "ko_id": "sign_changing_bracket",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_holdout_002",
+        "rel_holdout_028"
+      ],
+      "slot_id": "ko_slot_022"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "likelihood",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "predicted_ref": {
+        "ko_id": "likelihood",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_holdout_001",
+        "rel_holdout_018",
+        "rel_holdout_019",
+        "rel_holdout_029"
+      ],
+      "slot_id": "ko_slot_023"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "likelihood_formula",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "predicted_ref": {
+        "ko_id": "likelihood_function",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_holdout_006",
+        "rel_holdout_019"
+      ],
+      "slot_id": "ko_slot_024"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "log_likelihood",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "predicted_ref": {
+        "ko_id": "log_likelihood",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_holdout_008",
+        "rel_holdout_013",
+        "rel_holdout_029"
+      ],
+      "slot_id": "ko_slot_025"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "log_likelihood_formula",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "predicted_ref": {
+        "ko_id": "log_likelihood_function",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_holdout_008",
+        "rel_holdout_034"
+      ],
+      "slot_id": "ko_slot_026"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "maximum_likelihood_estimation",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "predicted_ref": {
+        "ko_id": "maximum_likelihood_estimation",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_holdout_013",
+        "rel_holdout_024",
+        "rel_holdout_033"
+      ],
+      "slot_id": "ko_slot_027"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "mle_formula",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "predicted_ref": {
+        "ko_id": "mle_estimator",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_holdout_006",
+        "rel_holdout_033"
+      ],
+      "slot_id": "ko_slot_028"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "score_function",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "predicted_ref": {
+        "ko_id": "score_function",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_holdout_040"
+      ],
+      "slot_id": "ko_slot_029"
+    },
+    {
+      "oracle_ref": {
+        "ko_id": "statistical_model",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "predicted_ref": {
+        "ko_id": "statistical_model",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "referenced_by_pair_ids": [
+        "rel_holdout_001"
+      ],
+      "slot_id": "ko_slot_030"
+    }
+  ],
+  "split": "holdout",
+  "version": "v0.1"
+}

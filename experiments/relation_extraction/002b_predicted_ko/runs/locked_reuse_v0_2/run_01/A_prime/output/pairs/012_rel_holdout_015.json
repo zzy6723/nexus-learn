@@ -1,0 +1,27 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_holdout_015",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ko_slot_001"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ko_slot_002"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y_{n+1} = y_n + hF(t_n,y_n)."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope."
+        }
+      ],
+      "rationale": "The Forward Euler Update Formula explicitly defines the update step of the Forward Euler Method, thus formalizing the method's computation."
+    }
+  ]
+}

@@ -1,0 +1,693 @@
+{
+  "artifact_type": "matched_relation_input",
+  "batch_count": 1,
+  "batch_id": "batch_001",
+  "batch_index": 1,
+  "batch_plan_sha256": "ad0773597b9021e9ca0ce6d5cb9efd5d15893608aafcbe605135e00a4c8beab6",
+  "condition": "A_prime",
+  "ko_content_sha256": "2cbbb7275ec2a07f1f2ad049c52e5176ba9304fea6b78429d3f8a2f8f11d6609",
+  "ko_manifest_sha256": "598cfff40af7d9e36f00c6fa05d2c7dbe72f362011a3e2521f1dd495c3bec505",
+  "lecture_sha256": {
+    "differential_equations_001": "7488ea27d88e3970e600829508a5673a43c111e4fcad13b87f33313be13986b0",
+    "graph_algorithms_001": "0fdb7752023500999cc9ad8c439035c4a60be707908ae996d26d2f907c27e41d",
+    "numerical_root_finding_001": "95949cbece45bed2e21a8fe3a0936b735f73b72d3e1af895e9c09bb968f11c12",
+    "statistics_estimation_001": "0f48d5fa14623d7af50716342e2c3f456e9f5728d741f8856fdb01dd2b95f4fa"
+  },
+  "matched_ground_truth_sha256": "06068ccee14650ac65b2de52abd6843bb73216966ed15825fadcf78492820fea",
+  "model_input": {
+    "candidate_pairs": [
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_023",
+          "lecture_id": "statistics_estimation_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_030",
+          "lecture_id": "statistics_estimation_001"
+        },
+        "pair_id": "rel_holdout_001"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_021",
+          "lecture_id": "numerical_root_finding_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_022",
+          "lecture_id": "numerical_root_finding_001"
+        },
+        "pair_id": "rel_holdout_002"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_013",
+          "lecture_id": "graph_algorithms_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_014",
+          "lecture_id": "graph_algorithms_001"
+        },
+        "pair_id": "rel_holdout_003"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_005",
+          "lecture_id": "differential_equations_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_006",
+          "lecture_id": "differential_equations_001"
+        },
+        "pair_id": "rel_holdout_004"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_024",
+          "lecture_id": "statistics_estimation_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_028",
+          "lecture_id": "statistics_estimation_001"
+        },
+        "pair_id": "rel_holdout_006"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_010",
+          "lecture_id": "graph_algorithms_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_016",
+          "lecture_id": "graph_algorithms_001"
+        },
+        "pair_id": "rel_holdout_007"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_025",
+          "lecture_id": "statistics_estimation_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_026",
+          "lecture_id": "statistics_estimation_001"
+        },
+        "pair_id": "rel_holdout_008"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_002",
+          "lecture_id": "differential_equations_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_003",
+          "lecture_id": "differential_equations_001"
+        },
+        "pair_id": "rel_holdout_009"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_010",
+          "lecture_id": "graph_algorithms_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_017",
+          "lecture_id": "numerical_root_finding_001"
+        },
+        "pair_id": "rel_holdout_010"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_025",
+          "lecture_id": "statistics_estimation_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_027",
+          "lecture_id": "statistics_estimation_001"
+        },
+        "pair_id": "rel_holdout_013"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_005",
+          "lecture_id": "differential_equations_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_007",
+          "lecture_id": "differential_equations_001"
+        },
+        "pair_id": "rel_holdout_014"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_001",
+          "lecture_id": "differential_equations_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_002",
+          "lecture_id": "differential_equations_001"
+        },
+        "pair_id": "rel_holdout_015"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_017",
+          "lecture_id": "numerical_root_finding_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_020",
+          "lecture_id": "numerical_root_finding_001"
+        },
+        "pair_id": "rel_holdout_016"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_013",
+          "lecture_id": "graph_algorithms_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_016",
+          "lecture_id": "graph_algorithms_001"
+        },
+        "pair_id": "rel_holdout_017"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_013",
+          "lecture_id": "graph_algorithms_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_023",
+          "lecture_id": "statistics_estimation_001"
+        },
+        "pair_id": "rel_holdout_018"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_023",
+          "lecture_id": "statistics_estimation_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_024",
+          "lecture_id": "statistics_estimation_001"
+        },
+        "pair_id": "rel_holdout_019"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_002",
+          "lecture_id": "differential_equations_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_005",
+          "lecture_id": "differential_equations_001"
+        },
+        "pair_id": "rel_holdout_020"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_009",
+          "lecture_id": "graph_algorithms_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_010",
+          "lecture_id": "graph_algorithms_001"
+        },
+        "pair_id": "rel_holdout_021"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_020",
+          "lecture_id": "numerical_root_finding_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_021",
+          "lecture_id": "numerical_root_finding_001"
+        },
+        "pair_id": "rel_holdout_023"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_020",
+          "lecture_id": "numerical_root_finding_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_027",
+          "lecture_id": "statistics_estimation_001"
+        },
+        "pair_id": "rel_holdout_024"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_011",
+          "lecture_id": "graph_algorithms_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_015",
+          "lecture_id": "graph_algorithms_001"
+        },
+        "pair_id": "rel_holdout_025"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_017",
+          "lecture_id": "numerical_root_finding_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_022",
+          "lecture_id": "numerical_root_finding_001"
+        },
+        "pair_id": "rel_holdout_028"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_023",
+          "lecture_id": "statistics_estimation_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_025",
+          "lecture_id": "statistics_estimation_001"
+        },
+        "pair_id": "rel_holdout_029"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_010",
+          "lecture_id": "graph_algorithms_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_011",
+          "lecture_id": "graph_algorithms_001"
+        },
+        "pair_id": "rel_holdout_030"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_017",
+          "lecture_id": "numerical_root_finding_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_018",
+          "lecture_id": "numerical_root_finding_001"
+        },
+        "pair_id": "rel_holdout_031"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_002",
+          "lecture_id": "differential_equations_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_008",
+          "lecture_id": "differential_equations_001"
+        },
+        "pair_id": "rel_holdout_032"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_027",
+          "lecture_id": "statistics_estimation_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_028",
+          "lecture_id": "statistics_estimation_001"
+        },
+        "pair_id": "rel_holdout_033"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_001",
+          "lecture_id": "differential_equations_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_026",
+          "lecture_id": "statistics_estimation_001"
+        },
+        "pair_id": "rel_holdout_034"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_018",
+          "lecture_id": "numerical_root_finding_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_020",
+          "lecture_id": "numerical_root_finding_001"
+        },
+        "pair_id": "rel_holdout_035"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_009",
+          "lecture_id": "graph_algorithms_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_012",
+          "lecture_id": "graph_algorithms_001"
+        },
+        "pair_id": "rel_holdout_036"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_003",
+          "lecture_id": "differential_equations_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_004",
+          "lecture_id": "differential_equations_001"
+        },
+        "pair_id": "rel_holdout_037"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_017",
+          "lecture_id": "numerical_root_finding_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_019",
+          "lecture_id": "numerical_root_finding_001"
+        },
+        "pair_id": "rel_holdout_039"
+      },
+      {
+        "ko_a": {
+          "ko_id": "ko_slot_011",
+          "lecture_id": "graph_algorithms_001"
+        },
+        "ko_b": {
+          "ko_id": "ko_slot_029",
+          "lecture_id": "statistics_estimation_001"
+        },
+        "pair_id": "rel_holdout_040"
+      }
+    ],
+    "knowledge_objects": [
+      {
+        "ko_id": "ko_slot_001",
+        "lecture_id": "differential_equations_001",
+        "name": "Forward Euler Update Formula",
+        "source_spans": [
+          "y_{n+1} = y_n + hF(t_n,y_n)."
+        ],
+        "type": "Formula"
+      },
+      {
+        "ko_id": "ko_slot_002",
+        "lecture_id": "differential_equations_001",
+        "name": "Forward Euler Method",
+        "source_spans": [
+          "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope."
+        ],
+        "type": "Method"
+      },
+      {
+        "ko_id": "ko_slot_003",
+        "lecture_id": "differential_equations_001",
+        "name": "Heun's Method",
+        "source_spans": [
+          "Heun's method extends the forward Euler method with a predictor-corrector step."
+        ],
+        "type": "Method"
+      },
+      {
+        "ko_id": "ko_slot_004",
+        "lecture_id": "differential_equations_001",
+        "name": "Heun Corrected Update Formula",
+        "source_spans": [
+          "y_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right)."
+        ],
+        "type": "Formula"
+      },
+      {
+        "ko_id": "ko_slot_005",
+        "lecture_id": "differential_equations_001",
+        "name": "Initial Value Problem",
+        "source_spans": [
+          "An initial value problem combines an ordinary differential equation with an initial condition such as \\(y(t_0)=y_0\\)."
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_006",
+        "lecture_id": "differential_equations_001",
+        "name": "Ordinary Differential Equation",
+        "source_spans": [
+          "An ordinary differential equation relates an unknown function of one variable to its derivatives."
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_007",
+        "lecture_id": "differential_equations_001",
+        "name": "Step Size",
+        "source_spans": [
+          "The step size \\(h\\) sets the spacing between consecutive numerical time points."
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_008",
+        "lecture_id": "differential_equations_001",
+        "name": "Vector Field",
+        "source_spans": [
+          "The vector field \\(F\\) specifies the slope that the solution should follow at each state."
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_009",
+        "lecture_id": "graph_algorithms_001",
+        "name": "A* Search",
+        "source_spans": [
+          "A* search extends Dijkstra's algorithm by using a heuristic function \\(h(v)\\) to guide which vertex is explored next."
+        ],
+        "type": "Method"
+      },
+      {
+        "ko_id": "ko_slot_010",
+        "lecture_id": "graph_algorithms_001",
+        "name": "Dijkstra's Algorithm",
+        "source_spans": [
+          "Dijkstra's algorithm is applied to this problem when all edge weights are nonnegative."
+        ],
+        "type": "Method"
+      },
+      {
+        "ko_id": "ko_slot_011",
+        "lecture_id": "graph_algorithms_001",
+        "name": "Edge Relaxation",
+        "source_spans": [
+          "After removing a vertex \\(u\\) with the smallest tentative distance, it applies edge relaxation to each outgoing edge."
+        ],
+        "type": "Method"
+      },
+      {
+        "ko_id": "ko_slot_012",
+        "lecture_id": "graph_algorithms_001",
+        "name": "Heuristic Function",
+        "source_spans": [
+          "a heuristic function \\(h(v)\\) to guide which vertex is explored next"
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_013",
+        "lecture_id": "graph_algorithms_001",
+        "name": "Path Cost",
+        "source_spans": [
+          "Its path cost is the sum of their edge weights:"
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_014",
+        "lecture_id": "graph_algorithms_001",
+        "name": "Path Cost Formula",
+        "source_spans": [
+          "C(v_0,\\ldots,v_k) = \\sum_{i=0}^{k-1} w(v_i,v_{i+1})."
+        ],
+        "type": "Formula"
+      },
+      {
+        "ko_id": "ko_slot_015",
+        "lecture_id": "graph_algorithms_001",
+        "name": "Edge Relaxation Formula",
+        "source_spans": [
+          "d(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}."
+        ],
+        "type": "Formula"
+      },
+      {
+        "ko_id": "ko_slot_016",
+        "lecture_id": "graph_algorithms_001",
+        "name": "Single-Source Shortest-Path Problem",
+        "source_spans": [
+          "The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex."
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_017",
+        "lecture_id": "numerical_root_finding_001",
+        "name": "Bisection Method",
+        "source_spans": [
+          "The bisection method begins with a sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\)."
+        ],
+        "type": "Method"
+      },
+      {
+        "ko_id": "ko_slot_018",
+        "lecture_id": "numerical_root_finding_001",
+        "name": "Damped Newton Method",
+        "source_spans": [
+          "The damped Newton method extends Newton's method by scaling the Newton correction with a factor between zero and one."
+        ],
+        "type": "Method"
+      },
+      {
+        "ko_id": "ko_slot_019",
+        "lecture_id": "numerical_root_finding_001",
+        "name": "Bisection Midpoint Formula",
+        "source_spans": [
+          "m = \\frac{a+b}{2}"
+        ],
+        "type": "Formula"
+      },
+      {
+        "ko_id": "ko_slot_020",
+        "lecture_id": "numerical_root_finding_001",
+        "name": "Newton's Method",
+        "source_spans": [
+          "Newton's method uses the derivative to replace the function locally by its tangent line."
+        ],
+        "type": "Method"
+      },
+      {
+        "ko_id": "ko_slot_021",
+        "lecture_id": "numerical_root_finding_001",
+        "name": "Newton Update Formula",
+        "source_spans": [
+          "x_{k+1} = x_k - \\frac{f(x_k)}{f'(x_k)}."
+        ],
+        "type": "Formula"
+      },
+      {
+        "ko_id": "ko_slot_022",
+        "lecture_id": "numerical_root_finding_001",
+        "name": "Sign-Changing Bracket",
+        "source_spans": [
+          "The bisection method begins with a sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\)."
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_023",
+        "lecture_id": "statistics_estimation_001",
+        "name": "Likelihood",
+        "source_spans": [
+          "The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values."
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_024",
+        "lecture_id": "statistics_estimation_001",
+        "name": "Likelihood Formula",
+        "source_spans": [
+          "L(\\theta; x_{1:n}) = \\prod_{i=1}^{n} p(x_i \\mid \\theta)."
+        ],
+        "type": "Formula"
+      },
+      {
+        "ko_id": "ko_slot_025",
+        "lecture_id": "statistics_estimation_001",
+        "name": "Log-Likelihood",
+        "source_spans": [
+          "The log-likelihood is obtained by taking the logarithm of the likelihood."
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_026",
+        "lecture_id": "statistics_estimation_001",
+        "name": "Log-Likelihood Formula",
+        "source_spans": [
+          "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta)."
+        ],
+        "type": "Formula"
+      },
+      {
+        "ko_id": "ko_slot_027",
+        "lecture_id": "statistics_estimation_001",
+        "name": "Maximum Likelihood Estimation",
+        "source_spans": [
+          "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:"
+        ],
+        "type": "Method"
+      },
+      {
+        "ko_id": "ko_slot_028",
+        "lecture_id": "statistics_estimation_001",
+        "name": "Maximum Likelihood Estimator Formula",
+        "source_spans": [
+          "\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta)."
+        ],
+        "type": "Formula"
+      },
+      {
+        "ko_id": "ko_slot_029",
+        "lecture_id": "statistics_estimation_001",
+        "name": "Score Function",
+        "source_spans": [
+          "The score function is the derivative of the log-likelihood with respect to the parameter"
+        ],
+        "type": "Concept"
+      },
+      {
+        "ko_id": "ko_slot_030",
+        "lecture_id": "statistics_estimation_001",
+        "name": "Statistical Model",
+        "source_spans": [
+          "A statistical model is a family of probability distributions indexed by an unknown parameter \\(\\theta\\)."
+        ],
+        "type": "Concept"
+      }
+    ],
+    "lectures": [
+      {
+        "lecture_id": "differential_equations_001",
+        "text": "An ordinary differential equation relates an unknown function of one variable to its derivatives. A first-order equation can be written as\n\n\\[\ny'(t) = F(t,y(t)).\n\\]\n\nAn initial value problem combines an ordinary differential equation with an initial condition such as \\(y(t_0)=y_0\\). The vector field \\(F\\) specifies the slope that the solution should follow at each state.\n\nThe forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope. Its update is\n\n\\[\ny_{n+1} = y_n + hF(t_n,y_n).\n\\]\n\nThe step size \\(h\\) sets the spacing between consecutive numerical time points. Smaller steps usually reduce discretization error but require more updates over a fixed time interval.\n\nHeun's method extends the forward Euler method with a predictor-corrector step. It first forms the Euler predictor\n\n\\[\n\\widetilde{y}_{n+1} = y_n + hF(t_n,y_n),\n\\]\n\nthen averages the slope at the current point with the slope at the predicted point. The corrected update is\n\n\\[\ny_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right).\n\\]\n"
+      },
+      {
+        "lecture_id": "graph_algorithms_001",
+        "text": "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\). A path is a sequence of compatible directed edges. Its path cost is the sum of their edge weights:\n\n\\[\nC(v_0,\\ldots,v_k) = \\sum_{i=0}^{k-1} w(v_i,v_{i+1}).\n\\]\n\nThe single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex. Dijkstra's algorithm is applied to this problem when all edge weights are nonnegative.\n\nDijkstra's algorithm stores tentative distance estimates in a priority queue. After removing a vertex \\(u\\) with the smallest tentative distance, it applies edge relaxation to each outgoing edge. Relaxation is formalized by the update\n\n\\[\nd(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}.\n\\]\n\nA* search extends Dijkstra's algorithm by using a heuristic function \\(h(v)\\) to guide which vertex is explored next. Its queue priority combines the known path cost with the heuristic estimate, and setting \\(h(v)=0\\) recovers Dijkstra's ordering.\n"
+      },
+      {
+        "lecture_id": "numerical_root_finding_001",
+        "text": "A root-finding problem asks for a value \\(x^*\\) at which a scalar function is zero:\n\n\\[\nf(x^*) = 0.\n\\]\n\nNewton's method uses the derivative to replace the function locally by its tangent line. Provided \\(f'(x_k)\\neq 0\\), its update is\n\n\\[\nx_{k+1} = x_k - \\frac{f(x_k)}{f'(x_k)}.\n\\]\n\nThe damped Newton method extends Newton's method by scaling the Newton correction with a factor between zero and one. This extra control can prevent a full Newton step from moving too far when the current iterate is not yet near a root.\n\nThe bisection method begins with a sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\). It evaluates the midpoint\n\n\\[\nm = \\frac{a+b}{2}\n\\]\n\nand retains the half-interval whose endpoints still have opposite signs.\n\nNewton's method and the bisection method contrast in the information they use: Newton's method requires derivative values and can converge rapidly near a root, whereas bisection uses only function signs and preserves a bracket at every iteration.\n"
+      },
+      {
+        "lecture_id": "statistics_estimation_001",
+        "text": "A statistical model is a family of probability distributions indexed by an unknown parameter \\(\\theta\\). The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values. For independent observations \\(x_1,\\ldots,x_n\\), it is\n\n\\[\nL(\\theta; x_{1:n}) = \\prod_{i=1}^{n} p(x_i \\mid \\theta).\n\\]\n\nThe log-likelihood is obtained by taking the logarithm of the likelihood. Independence turns the product into a sum:\n\n\\[\n\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta).\n\\]\n\nMaximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:\n\n\\[\n\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta).\n\\]\n\nThe score function is the derivative of the log-likelihood with respect to the parameter,\n\n\\[\ns(\\theta) = \\nabla_{\\theta}\\ell(\\theta).\n\\]\n\nAt an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\). When this equation has no closed-form solution, Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically.\n"
+      }
+    ],
+    "relation_schema": {
+      "benchmark_only_relation_types": [
+        "NO_RELATION"
+      ],
+      "graph_relation_types": [
+        "REQUIRES",
+        "APPLIED_IN",
+        "EXTENDS",
+        "CONTRASTS_WITH",
+        "FORMALIZES",
+        "RELATED_TO"
+      ]
+    }
+  },
+  "model_input_sha256": "edc03c1c316cb534dfa76fdc38dee7253417cad4dc946347b4774956492c8cca",
+  "pair_manifest_sha256": "8ac25e5b514593d9ad604f490ce7df8aa50fb70f810e68b7e121aa6112fcca0b",
+  "relation_prompt_sha256": "e3b0e53f3ceed60c60d082fa9c4a67f9497e64d50664118227cd9bea9fbc12af",
+  "relation_schema_sha256": "a50bbf3193fe03e6e407da6ced7f15f9f4bb819876140925bc87ac4419c50417",
+  "structural_normalization_version": "predicted_ko_structural_normalization_v0_1",
+  "version": "v0.1"
+}

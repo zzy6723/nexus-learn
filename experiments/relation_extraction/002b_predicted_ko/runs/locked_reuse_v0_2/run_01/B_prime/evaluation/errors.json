@@ -1,0 +1,131 @@
+[
+  {
+    "pair_id": "rel_holdout_004",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "differential_equations_001",
+    "span": "An initial value problem combines an ordinary differential equation with an initial condition such as y(t_0)=y_0.",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_holdout_006",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_holdout_006",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "FORMALIZES"
+  },
+  {
+    "pair_id": "rel_holdout_007",
+    "error_type": "evidence_does_not_support_relation",
+    "adjudication_rationale": "The selected span names Dijkstra's Algorithm but refers only to \"this problem\"; no selected span resolves that reference as the Single-Source Shortest-Path Problem."
+  },
+  {
+    "pair_id": "rel_holdout_013",
+    "error_type": "wrong_direction",
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "ko_slot_025"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "ko_slot_027"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "ko_slot_027"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "ko_slot_025"
+      },
+      "relation_type": "APPLIED_IN"
+    }
+  },
+  {
+    "pair_id": "rel_holdout_025",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 0,
+    "lecture_id": "graph_algorithms_001",
+    "span": "Relaxation is formalized by the update\n\nd(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}.",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_holdout_029",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "REQUIRES",
+    "predicted_relation_type": "EXTENDS"
+  },
+  {
+    "pair_id": "rel_holdout_030",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "APPLIED_IN",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_holdout_031",
+    "error_type": "false_positive_relation",
+    "predicted_relation_type": "CONTRASTS_WITH"
+  },
+  {
+    "pair_id": "rel_holdout_031",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "NO_RELATION",
+    "predicted_relation_type": "CONTRASTS_WITH"
+  },
+  {
+    "pair_id": "rel_holdout_032",
+    "error_type": "invalid_evidence_span",
+    "evidence_index": 1,
+    "lecture_id": "differential_equations_001",
+    "span": "Its update is y_{n+1} = y_n + hF(t_n,y_n).",
+    "lecture_allowed": true,
+    "exact_substring": false
+  },
+  {
+    "pair_id": "rel_holdout_032",
+    "error_type": "wrong_relation_type",
+    "gold_relation_type": "APPLIED_IN",
+    "predicted_relation_type": "REQUIRES"
+  },
+  {
+    "pair_id": "rel_holdout_036",
+    "error_type": "wrong_direction",
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "ko_slot_012"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "ko_slot_009"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "ko_slot_009"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "ko_slot_012"
+      },
+      "relation_type": "APPLIED_IN"
+    }
+  },
+  {
+    "pair_id": "rel_holdout_037",
+    "error_type": "evidence_does_not_support_relation",
+    "adjudication_rationale": "The selected sentence only states that Heun's Method extends Forward Euler with a predictor-corrector step. The separate formula span is not identified as Heun's corrected update because the linking phrase \"The corrected update is\" was omitted."
+  }
+]

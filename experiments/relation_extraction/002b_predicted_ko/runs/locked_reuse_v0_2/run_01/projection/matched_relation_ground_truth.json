@@ -1,0 +1,771 @@
+{
+  "allowed_relation_types": [
+    "REQUIRES",
+    "APPLIED_IN",
+    "EXTENDS",
+    "CONTRASTS_WITH",
+    "FORMALIZES",
+    "RELATED_TO",
+    "NO_RELATION"
+  ],
+  "annotation_guidelines": "benchmark/relation_annotation_guidelines.md",
+  "artifact_type": "matched_relation_ground_truth",
+  "created": "2026-07-13",
+  "derivation": {
+    "alignment_sha256": "9d9770bc0a33b73284dd54e2f9b9c03433855db8ed96019188a548626891f075",
+    "ko_manifest_sha256": "ce23e9e3bfdb6fbdc85ce6f688fab1586e095eb61e49aeb2cd87ed8adc4110c4",
+    "matched_knowledge_objects_sha256": "20249e4d4ab1212d29dee489f754c187363b14c582887c19243bf19f71845165",
+    "name_matching_normalization_version": "predicted_ko_name_matching_v0_1",
+    "original_ground_truth_sha256": "20cf7a8b2aeb76f372e103c59c453bfa15c43732885b6c621af26f5edd427a6f",
+    "pair_manifest_sha256": "9454970f63f9403a6fbee2b93a7f005c20bf8a4530887b5de6d2c234392ba2dd",
+    "structural_normalization_version": "predicted_ko_structural_normalization_v0_1",
+    "version": "predicted_ko_projection_v0_1"
+  },
+  "description": "Matched primary Relation ground truth using neutral KO slots.",
+  "evaluation_protocol": "benchmark/relation_evaluation_protocol.md",
+  "knowledge_object_ground_truths": [
+    "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/projection/matched_knowledge_objects.json"
+  ],
+  "lectures": [
+    "differential_equations_001",
+    "graph_algorithms_001",
+    "numerical_root_finding_001",
+    "statistics_estimation_001"
+  ],
+  "notes": [
+    "The holdout material and annotations were authored only after the development method was frozen at commit 18e687d5cd7909531918b51e2d6bef38cb64a053.",
+    "All lectures, Knowledge Objects, candidate pairs, and pair-specific wording are new relative to Relation development.",
+    "Pair IDs are opaque and positive and hard-negative pairs are deliberately interleaved.",
+    "NO_RELATION is a benchmark-only label and must not be written to the product graph.",
+    "Neither baseline nor Prompt 002 had access to this file during development refinement.",
+    "Do not change labels, directions, evidence, scoring categories, or acceptable alternatives after either holdout prompt is run.",
+    "This artifact is deterministically derived; it is never model-facing."
+  ],
+  "pairs": [
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values."
+        }
+      ],
+      "pair_id": "rel_holdout_001",
+      "rationale": "Likelihood is defined relative to the probability distributions supplied by a statistical model.",
+      "relation_type": "REQUIRES",
+      "source": {
+        "ko_id": "ko_slot_023",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_030",
+        "lecture_id": "statistics_estimation_001"
+      }
+    },
+    {
+      "category": "hard_negative",
+      "evidence_spans": [],
+      "pair_id": "rel_holdout_002",
+      "rationale": "The bracket belongs to bisection, while the Newton update is presented separately; the lecture establishes no direct v0.1 Relation between them.",
+      "relation_type": "NO_RELATION",
+      "source": {
+        "ko_id": "ko_slot_022",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_021",
+        "lecture_id": "numerical_root_finding_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Its path cost is the sum of their edge weights:"
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "C(v_0,\\ldots,v_k) = \\sum_{i=0}^{k-1} w(v_i,v_{i+1})."
+        }
+      ],
+      "pair_id": "rel_holdout_003",
+      "rationale": "The displayed sum is the symbolic expression for path cost.",
+      "relation_type": "FORMALIZES",
+      "source": {
+        "ko_id": "ko_slot_014",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_013",
+        "lecture_id": "graph_algorithms_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "An initial value problem combines an ordinary differential equation with an initial condition such as \\(y(t_0)=y_0\\)."
+        }
+      ],
+      "pair_id": "rel_holdout_004",
+      "rationale": "An ordinary differential equation is one of the defining components of an initial value problem.",
+      "relation_type": "REQUIRES",
+      "source": {
+        "ko_id": "ko_slot_005",
+        "lecture_id": "differential_equations_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_006",
+        "lecture_id": "differential_equations_001"
+      }
+    },
+    {
+      "category": "hard_negative",
+      "evidence_spans": [],
+      "pair_id": "rel_holdout_006",
+      "rationale": "The formulas occur in the same estimation pipeline, but neither formula directly formalizes, requires, or is applied in the other formula under v0.1.",
+      "relation_type": "NO_RELATION",
+      "source": {
+        "ko_id": "ko_slot_024",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_028",
+        "lecture_id": "statistics_estimation_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex."
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Dijkstra's algorithm is applied to this problem when all edge weights are nonnegative."
+        }
+      ],
+      "pair_id": "rel_holdout_007",
+      "rationale": "Dijkstra's algorithm is a method applied to the single-source shortest-path problem.",
+      "relation_type": "APPLIED_IN",
+      "source": {
+        "ko_id": "ko_slot_010",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_016",
+        "lecture_id": "graph_algorithms_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The log-likelihood is obtained by taking the logarithm of the likelihood."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta)."
+        }
+      ],
+      "pair_id": "rel_holdout_008",
+      "rationale": "The displayed equation explicitly expresses the log-likelihood.",
+      "relation_type": "FORMALIZES",
+      "source": {
+        "ko_id": "ko_slot_026",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_025",
+        "lecture_id": "statistics_estimation_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+        }
+      ],
+      "pair_id": "rel_holdout_009",
+      "rationale": "Heun's method preserves the Euler predictor and enriches it with a correction.",
+      "relation_type": "EXTENDS",
+      "source": {
+        "ko_id": "ko_slot_003",
+        "lecture_id": "differential_equations_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_002",
+        "lecture_id": "differential_equations_001"
+      }
+    },
+    {
+      "category": "hard_negative",
+      "evidence_spans": [],
+      "pair_id": "rel_holdout_010",
+      "rationale": "Both objects are algorithms, but the holdout material supplies no educational Relation between root bracketing and shortest-path search.",
+      "relation_type": "NO_RELATION",
+      "source": {
+        "ko_id": "ko_slot_017",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_010",
+        "lecture_id": "graph_algorithms_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:"
+        }
+      ],
+      "pair_id": "rel_holdout_013",
+      "rationale": "The log-likelihood is used as the objective in maximum likelihood estimation.",
+      "relation_type": "APPLIED_IN",
+      "source": {
+        "ko_id": "ko_slot_025",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_027",
+        "lecture_id": "statistics_estimation_001"
+      }
+    },
+    {
+      "category": "hard_negative",
+      "evidence_spans": [],
+      "pair_id": "rel_holdout_014",
+      "rationale": "The step size controls a numerical discretization, but the lecture does not directly relate it to the mathematical definition of an initial value problem.",
+      "relation_type": "NO_RELATION",
+      "source": {
+        "ko_id": "ko_slot_007",
+        "lecture_id": "differential_equations_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_005",
+        "lecture_id": "differential_equations_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y_{n+1} = y_n + hF(t_n,y_n)."
+        }
+      ],
+      "pair_id": "rel_holdout_015",
+      "rationale": "The displayed update is the formal step performed by the forward Euler method.",
+      "relation_type": "FORMALIZES",
+      "source": {
+        "ko_id": "ko_slot_001",
+        "lecture_id": "differential_equations_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_002",
+        "lecture_id": "differential_equations_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "Newton's method and the bisection method contrast in the information they use: Newton's method requires derivative values and can converge rapidly near a root, whereas bisection uses only function signs and preserves a bracket at every iteration."
+        }
+      ],
+      "pair_id": "rel_holdout_016",
+      "rationale": "The lecture explicitly contrasts the information and convergence behavior of the two methods.",
+      "relation_type": "CONTRASTS_WITH",
+      "source": {
+        "ko_id": "ko_slot_020",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "symmetric": true,
+      "target": {
+        "ko_id": "ko_slot_017",
+        "lecture_id": "numerical_root_finding_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Its path cost is the sum of their edge weights:"
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex."
+        }
+      ],
+      "pair_id": "rel_holdout_017",
+      "rationale": "Understanding the shortest-path objective requires the definition of path cost.",
+      "relation_type": "REQUIRES",
+      "source": {
+        "ko_id": "ko_slot_016",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_013",
+        "lecture_id": "graph_algorithms_001"
+      }
+    },
+    {
+      "category": "hard_negative",
+      "evidence_spans": [],
+      "pair_id": "rel_holdout_018",
+      "rationale": "Both objects assign numerical values to alternatives in their own domains, but the holdout texts establish no educational Relation between likelihood and path cost.",
+      "relation_type": "NO_RELATION",
+      "source": {
+        "ko_id": "ko_slot_023",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_013",
+        "lecture_id": "graph_algorithms_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "L(\\theta; x_{1:n}) = \\prod_{i=1}^{n} p(x_i \\mid \\theta)."
+        }
+      ],
+      "pair_id": "rel_holdout_019",
+      "rationale": "The product formula explicitly expresses the likelihood for independent observations.",
+      "relation_type": "FORMALIZES",
+      "source": {
+        "ko_id": "ko_slot_024",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_023",
+        "lecture_id": "statistics_estimation_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope."
+        }
+      ],
+      "pair_id": "rel_holdout_020",
+      "rationale": "Forward Euler is explicitly presented as a numerical method applied to an initial value problem.",
+      "relation_type": "APPLIED_IN",
+      "source": {
+        "ko_id": "ko_slot_002",
+        "lecture_id": "differential_equations_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_005",
+        "lecture_id": "differential_equations_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A* search extends Dijkstra's algorithm by using a heuristic function \\(h(v)\\) to guide which vertex is explored next."
+        }
+      ],
+      "pair_id": "rel_holdout_021",
+      "rationale": "A* retains Dijkstra's path-cost ordering as a base and enriches it with a heuristic.",
+      "relation_type": "EXTENDS",
+      "source": {
+        "ko_id": "ko_slot_009",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_010",
+        "lecture_id": "graph_algorithms_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "Newton's method uses the derivative to replace the function locally by its tangent line."
+        },
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "x_{k+1} = x_k - \\frac{f(x_k)}{f'(x_k)}."
+        }
+      ],
+      "pair_id": "rel_holdout_023",
+      "rationale": "The displayed iteration is the update rule defining Newton's method.",
+      "relation_type": "FORMALIZES",
+      "source": {
+        "ko_id": "ko_slot_021",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_020",
+        "lecture_id": "numerical_root_finding_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "When this equation has no closed-form solution, Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically."
+        }
+      ],
+      "pair_id": "rel_holdout_024",
+      "rationale": "The statistics lecture explicitly applies Newton's method within maximum likelihood estimation.",
+      "relation_type": "APPLIED_IN",
+      "source": {
+        "ko_id": "ko_slot_020",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_027",
+        "lecture_id": "statistics_estimation_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Relaxation is formalized by the update"
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "d(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}."
+        }
+      ],
+      "pair_id": "rel_holdout_025",
+      "rationale": "The minimum-distance assignment is the formal update performed by edge relaxation.",
+      "relation_type": "FORMALIZES",
+      "source": {
+        "ko_id": "ko_slot_015",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_011",
+        "lecture_id": "graph_algorithms_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "The bisection method begins with a sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\)."
+        }
+      ],
+      "pair_id": "rel_holdout_028",
+      "rationale": "The sign-changing bracket is the required starting condition for bisection in the lecture.",
+      "relation_type": "REQUIRES",
+      "source": {
+        "ko_id": "ko_slot_017",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_022",
+        "lecture_id": "numerical_root_finding_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The log-likelihood is obtained by taking the logarithm of the likelihood."
+        }
+      ],
+      "pair_id": "rel_holdout_029",
+      "rationale": "The log-likelihood is defined by transforming the likelihood.",
+      "relation_type": "REQUIRES",
+      "source": {
+        "ko_id": "ko_slot_025",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_023",
+        "lecture_id": "statistics_estimation_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Dijkstra's algorithm stores tentative distance estimates in a priority queue."
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "After removing a vertex \\(u\\) with the smallest tentative distance, it applies edge relaxation to each outgoing edge."
+        }
+      ],
+      "pair_id": "rel_holdout_030",
+      "rationale": "Dijkstra's algorithm repeatedly applies edge relaxation to update tentative distances.",
+      "relation_type": "APPLIED_IN",
+      "source": {
+        "ko_id": "ko_slot_011",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_010",
+        "lecture_id": "graph_algorithms_001"
+      }
+    },
+    {
+      "category": "hard_negative",
+      "evidence_spans": [],
+      "pair_id": "rel_holdout_031",
+      "rationale": "The lecture contrasts ordinary Newton's method with bisection but does not directly compare or type a Relation between damped Newton and bisection.",
+      "relation_type": "NO_RELATION",
+      "source": {
+        "ko_id": "ko_slot_018",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_017",
+        "lecture_id": "numerical_root_finding_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope."
+        }
+      ],
+      "pair_id": "rel_holdout_032",
+      "rationale": "Forward Euler uses the current vector-field slope to construct each step.",
+      "relation_type": "APPLIED_IN",
+      "source": {
+        "ko_id": "ko_slot_008",
+        "lecture_id": "differential_equations_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_002",
+        "lecture_id": "differential_equations_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta)."
+        }
+      ],
+      "pair_id": "rel_holdout_033",
+      "rationale": "The argmax formula is the formal optimization statement of maximum likelihood estimation.",
+      "relation_type": "FORMALIZES",
+      "source": {
+        "ko_id": "ko_slot_028",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_027",
+        "lecture_id": "statistics_estimation_001"
+      }
+    },
+    {
+      "category": "hard_negative",
+      "evidence_spans": [],
+      "pair_id": "rel_holdout_034",
+      "rationale": "Both are formulas, but the holdout texts establish no learning Relation between statistical estimation and Euler time stepping.",
+      "relation_type": "NO_RELATION",
+      "source": {
+        "ko_id": "ko_slot_026",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_001",
+        "lecture_id": "differential_equations_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "The damped Newton method extends Newton's method by scaling the Newton correction with a factor between zero and one."
+        }
+      ],
+      "pair_id": "rel_holdout_035",
+      "rationale": "Damped Newton retains the Newton correction and adds a scaling control.",
+      "relation_type": "EXTENDS",
+      "source": {
+        "ko_id": "ko_slot_018",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_020",
+        "lecture_id": "numerical_root_finding_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A* search extends Dijkstra's algorithm by using a heuristic function \\(h(v)\\) to guide which vertex is explored next."
+        }
+      ],
+      "pair_id": "rel_holdout_036",
+      "rationale": "A* uses the heuristic function to guide its exploration order.",
+      "relation_type": "APPLIED_IN",
+      "source": {
+        "ko_id": "ko_slot_012",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_009",
+        "lecture_id": "graph_algorithms_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The corrected update is"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right)."
+        }
+      ],
+      "pair_id": "rel_holdout_037",
+      "rationale": "The corrected formula gives the update rule for Heun's predictor-corrector method.",
+      "relation_type": "FORMALIZES",
+      "source": {
+        "ko_id": "ko_slot_004",
+        "lecture_id": "differential_equations_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_003",
+        "lecture_id": "differential_equations_001"
+      }
+    },
+    {
+      "category": "positive",
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "The bisection method begins with a sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\)."
+        },
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "It evaluates the midpoint"
+        },
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "m = \\frac{a+b}{2}"
+        }
+      ],
+      "pair_id": "rel_holdout_039",
+      "rationale": "The midpoint equation formalizes the point evaluated at each bisection step.",
+      "relation_type": "FORMALIZES",
+      "source": {
+        "ko_id": "ko_slot_019",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_017",
+        "lecture_id": "numerical_root_finding_001"
+      }
+    },
+    {
+      "category": "hard_negative",
+      "evidence_spans": [],
+      "pair_id": "rel_holdout_040",
+      "rationale": "The holdout materials provide no Relation between differentiating a log-likelihood and updating graph distances.",
+      "relation_type": "NO_RELATION",
+      "source": {
+        "ko_id": "ko_slot_029",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "symmetric": false,
+      "target": {
+        "ko_id": "ko_slot_011",
+        "lecture_id": "graph_algorithms_001"
+      }
+    }
+  ],
+  "primary_scoring_categories": [
+    "positive",
+    "hard_negative"
+  ],
+  "relation_coverage": {
+    "APPLIED_IN": "covered_with_seven_primary_positives_including_one_cross_lecture_pair",
+    "CONTRASTS_WITH": "covered_with_one_symmetric_primary_positive",
+    "EXTENDS": "covered_with_three_primary_positives",
+    "FORMALIZES": "covered_with_ten_primary_positives",
+    "NO_RELATION": "covered_with_eleven_within_and_cross_lecture_hard_negatives",
+    "RELATED_TO": "no_primary_positive_support_overuse_only",
+    "REQUIRES": "covered_with_eight_primary_positives"
+  },
+  "split": "holdout",
+  "status": "derived",
+  "version": "v0.1"
+}

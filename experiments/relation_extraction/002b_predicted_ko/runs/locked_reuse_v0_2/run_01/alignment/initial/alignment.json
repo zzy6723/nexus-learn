@@ -1,0 +1,1875 @@
+{
+  "artifact_type": "predicted_ko_alignment",
+  "errors": [
+    {
+      "error_code": "missing_oracle_ko",
+      "oracle_ref": {
+        "ko_id": "derivative",
+        "lecture_id": "numerical_root_finding_001"
+      }
+    },
+    {
+      "error_code": "missing_oracle_ko",
+      "oracle_ref": {
+        "ko_id": "euler_update",
+        "lecture_id": "differential_equations_001"
+      }
+    },
+    {
+      "error_code": "missing_oracle_ko",
+      "oracle_ref": {
+        "ko_id": "heun_predictor_formula",
+        "lecture_id": "differential_equations_001"
+      }
+    },
+    {
+      "error_code": "missing_oracle_ko",
+      "oracle_ref": {
+        "ko_id": "heun_update",
+        "lecture_id": "differential_equations_001"
+      }
+    },
+    {
+      "error_code": "missing_oracle_ko",
+      "oracle_ref": {
+        "ko_id": "initial_condition",
+        "lecture_id": "differential_equations_001"
+      }
+    },
+    {
+      "error_code": "missing_oracle_ko",
+      "oracle_ref": {
+        "ko_id": "likelihood_formula",
+        "lecture_id": "statistics_estimation_001"
+      }
+    },
+    {
+      "error_code": "missing_oracle_ko",
+      "oracle_ref": {
+        "ko_id": "log_likelihood_formula",
+        "lecture_id": "statistics_estimation_001"
+      }
+    },
+    {
+      "error_code": "missing_oracle_ko",
+      "oracle_ref": {
+        "ko_id": "midpoint_formula",
+        "lecture_id": "numerical_root_finding_001"
+      }
+    },
+    {
+      "error_code": "missing_oracle_ko",
+      "oracle_ref": {
+        "ko_id": "mle_formula",
+        "lecture_id": "statistics_estimation_001"
+      }
+    },
+    {
+      "error_code": "missing_oracle_ko",
+      "oracle_ref": {
+        "ko_id": "nonnegative_edge_weights",
+        "lecture_id": "graph_algorithms_001"
+      }
+    },
+    {
+      "error_code": "missing_oracle_ko",
+      "oracle_ref": {
+        "ko_id": "ode_formula",
+        "lecture_id": "differential_equations_001"
+      }
+    },
+    {
+      "error_code": "missing_oracle_ko",
+      "oracle_ref": {
+        "ko_id": "priority_queue",
+        "lecture_id": "graph_algorithms_001"
+      }
+    },
+    {
+      "error_code": "missing_oracle_ko",
+      "oracle_ref": {
+        "ko_id": "relaxation_formula",
+        "lecture_id": "graph_algorithms_001"
+      }
+    },
+    {
+      "error_code": "missing_oracle_ko",
+      "oracle_ref": {
+        "ko_id": "root_equation",
+        "lecture_id": "numerical_root_finding_001"
+      }
+    },
+    {
+      "error_code": "predicted_source_span_invalid",
+      "oracle_ref": {
+        "ko_id": "initial_value_problem",
+        "lecture_id": "differential_equations_001"
+      },
+      "predicted_ref": {
+        "ko_id": "initial_value_problem",
+        "lecture_id": "differential_equations_001"
+      }
+    },
+    {
+      "error_code": "predicted_source_span_invalid",
+      "oracle_ref": {
+        "ko_id": "step_size",
+        "lecture_id": "differential_equations_001"
+      },
+      "predicted_ref": {
+        "ko_id": "step_size",
+        "lecture_id": "differential_equations_001"
+      }
+    },
+    {
+      "error_code": "predicted_source_span_invalid",
+      "oracle_ref": {
+        "ko_id": "vector_field",
+        "lecture_id": "differential_equations_001"
+      },
+      "predicted_ref": {
+        "ko_id": "vector_field",
+        "lecture_id": "differential_equations_001"
+      }
+    },
+    {
+      "error_code": "unmatched_extra_predicted_ko",
+      "predicted_ref": {
+        "ko_id": "discretization_error",
+        "lecture_id": "differential_equations_001"
+      }
+    },
+    {
+      "error_code": "unmatched_extra_predicted_ko",
+      "predicted_ref": {
+        "ko_id": "euler_predictor",
+        "lecture_id": "differential_equations_001"
+      }
+    },
+    {
+      "error_code": "unmatched_extra_predicted_ko",
+      "predicted_ref": {
+        "ko_id": "first_order_equation",
+        "lecture_id": "differential_equations_001"
+      }
+    },
+    {
+      "error_code": "unmatched_extra_predicted_ko",
+      "predicted_ref": {
+        "ko_id": "forward_euler_update",
+        "lecture_id": "differential_equations_001"
+      }
+    },
+    {
+      "error_code": "unmatched_extra_predicted_ko",
+      "predicted_ref": {
+        "ko_id": "heuns_update",
+        "lecture_id": "differential_equations_001"
+      }
+    },
+    {
+      "error_code": "unmatched_extra_predicted_ko",
+      "predicted_ref": {
+        "ko_id": "likelihood_function",
+        "lecture_id": "statistics_estimation_001"
+      }
+    },
+    {
+      "error_code": "unmatched_extra_predicted_ko",
+      "predicted_ref": {
+        "ko_id": "log_likelihood_function",
+        "lecture_id": "statistics_estimation_001"
+      }
+    },
+    {
+      "error_code": "unmatched_extra_predicted_ko",
+      "predicted_ref": {
+        "ko_id": "midpoint_formula",
+        "lecture_id": "numerical_root_finding_001"
+      }
+    },
+    {
+      "error_code": "unmatched_extra_predicted_ko",
+      "predicted_ref": {
+        "ko_id": "mle_estimator",
+        "lecture_id": "statistics_estimation_001"
+      }
+    },
+    {
+      "error_code": "unmatched_extra_predicted_ko",
+      "predicted_ref": {
+        "ko_id": "newtons_method",
+        "lecture_id": "statistics_estimation_001"
+      }
+    },
+    {
+      "error_code": "unmatched_extra_predicted_ko",
+      "predicted_ref": {
+        "ko_id": "relaxation_update",
+        "lecture_id": "graph_algorithms_001"
+      }
+    },
+    {
+      "error_code": "unmatched_extra_predicted_ko",
+      "predicted_ref": {
+        "ko_id": "score_equation",
+        "lecture_id": "statistics_estimation_001"
+      }
+    }
+  ],
+  "evaluation_status": "final",
+  "lecture_sha256": {
+    "differential_equations_001": "7488ea27d88e3970e600829508a5673a43c111e4fcad13b87f33313be13986b0",
+    "graph_algorithms_001": "0fdb7752023500999cc9ad8c439035c4a60be707908ae996d26d2f907c27e41d",
+    "numerical_root_finding_001": "95949cbece45bed2e21a8fe3a0936b735f73b72d3e1af895e9c09bb968f11c12",
+    "statistics_estimation_001": "0f48d5fa14623d7af50716342e2c3f456e9f5728d741f8856fdb01dd2b95f4fa"
+  },
+  "name_matching_normalization_version": "predicted_ko_name_matching_v0_1",
+  "oracle_inventory_sha256": "d92898ab30ce33b91a56c247a69e04ad397c50707c5decc7d10eeb3082466cda",
+  "oracle_records": [
+    {
+      "adjudication_required": false,
+      "alignment_level": "unresolved",
+      "identity_match": false,
+      "linked_predicted_refs": [],
+      "matched_predicted_ref": null,
+      "notes": "",
+      "oracle_ref": {
+        "ko_id": "euler_update",
+        "lecture_id": "differential_equations_001"
+      },
+      "predicted_source_span_exact": null,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "missing",
+      "recoverable": false,
+      "structural_flags": [],
+      "type_match": null
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "forward_euler_method",
+          "lecture_id": "differential_equations_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "forward_euler_method",
+        "lecture_id": "differential_equations_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "forward_euler_method",
+        "lecture_id": "differential_equations_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "heuns_method",
+          "lecture_id": "differential_equations_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "heuns_method",
+        "lecture_id": "differential_equations_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "heun_method",
+        "lecture_id": "differential_equations_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "unresolved",
+      "identity_match": false,
+      "linked_predicted_refs": [],
+      "matched_predicted_ref": null,
+      "notes": "",
+      "oracle_ref": {
+        "ko_id": "heun_predictor_formula",
+        "lecture_id": "differential_equations_001"
+      },
+      "predicted_source_span_exact": null,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "missing",
+      "recoverable": false,
+      "structural_flags": [],
+      "type_match": null
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "unresolved",
+      "identity_match": false,
+      "linked_predicted_refs": [],
+      "matched_predicted_ref": null,
+      "notes": "",
+      "oracle_ref": {
+        "ko_id": "heun_update",
+        "lecture_id": "differential_equations_001"
+      },
+      "predicted_source_span_exact": null,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "missing",
+      "recoverable": false,
+      "structural_flags": [],
+      "type_match": null
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "unresolved",
+      "identity_match": false,
+      "linked_predicted_refs": [],
+      "matched_predicted_ref": null,
+      "notes": "",
+      "oracle_ref": {
+        "ko_id": "initial_condition",
+        "lecture_id": "differential_equations_001"
+      },
+      "predicted_source_span_exact": null,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "missing",
+      "recoverable": false,
+      "structural_flags": [],
+      "type_match": null
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "initial_value_problem",
+          "lecture_id": "differential_equations_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "initial_value_problem",
+        "lecture_id": "differential_equations_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "initial_value_problem",
+        "lecture_id": "differential_equations_001"
+      },
+      "predicted_source_span_exact": false,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "unresolved",
+      "identity_match": false,
+      "linked_predicted_refs": [],
+      "matched_predicted_ref": null,
+      "notes": "",
+      "oracle_ref": {
+        "ko_id": "ode_formula",
+        "lecture_id": "differential_equations_001"
+      },
+      "predicted_source_span_exact": null,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "missing",
+      "recoverable": false,
+      "structural_flags": [],
+      "type_match": null
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "ordinary_differential_equation",
+          "lecture_id": "differential_equations_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "ordinary_differential_equation",
+        "lecture_id": "differential_equations_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "ordinary_differential_equation",
+        "lecture_id": "differential_equations_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "step_size",
+          "lecture_id": "differential_equations_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "step_size",
+        "lecture_id": "differential_equations_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "step_size",
+        "lecture_id": "differential_equations_001"
+      },
+      "predicted_source_span_exact": false,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "vector_field",
+          "lecture_id": "differential_equations_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "vector_field",
+        "lecture_id": "differential_equations_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "vector_field",
+        "lecture_id": "differential_equations_001"
+      },
+      "predicted_source_span_exact": false,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "a_star_search",
+          "lecture_id": "graph_algorithms_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "a_star_search",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "a_star_search",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "dijkstras_algorithm",
+          "lecture_id": "graph_algorithms_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "dijkstras_algorithm",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "dijkstra_algorithm",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "edge_relaxation",
+          "lecture_id": "graph_algorithms_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "edge_relaxation",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "edge_relaxation",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "heuristic_function",
+          "lecture_id": "graph_algorithms_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "heuristic_function",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "heuristic_function",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "unresolved",
+      "identity_match": false,
+      "linked_predicted_refs": [],
+      "matched_predicted_ref": null,
+      "notes": "",
+      "oracle_ref": {
+        "ko_id": "nonnegative_edge_weights",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "predicted_source_span_exact": null,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "missing",
+      "recoverable": false,
+      "structural_flags": [],
+      "type_match": null
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "path",
+          "lecture_id": "graph_algorithms_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "path",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "path",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "path_cost",
+          "lecture_id": "graph_algorithms_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "path_cost",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "path_cost",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "path_cost_formula",
+          "lecture_id": "graph_algorithms_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "path_cost_formula",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "path_cost_formula",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "unresolved",
+      "identity_match": false,
+      "linked_predicted_refs": [],
+      "matched_predicted_ref": null,
+      "notes": "",
+      "oracle_ref": {
+        "ko_id": "priority_queue",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "predicted_source_span_exact": null,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "missing",
+      "recoverable": false,
+      "structural_flags": [],
+      "type_match": null
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "unresolved",
+      "identity_match": false,
+      "linked_predicted_refs": [],
+      "matched_predicted_ref": null,
+      "notes": "",
+      "oracle_ref": {
+        "ko_id": "relaxation_formula",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "predicted_source_span_exact": null,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "missing",
+      "recoverable": false,
+      "structural_flags": [],
+      "type_match": null
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "single_source_shortest_path_problem",
+          "lecture_id": "graph_algorithms_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "single_source_shortest_path_problem",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "shortest_path_problem",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "weighted_directed_graph",
+          "lecture_id": "graph_algorithms_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "weighted_directed_graph",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "weighted_directed_graph",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "bisection_method",
+          "lecture_id": "numerical_root_finding_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "bisection_method",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "bisection_method",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "damped_newton_method",
+          "lecture_id": "numerical_root_finding_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "damped_newton_method",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "damped_newton_method",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "unresolved",
+      "identity_match": false,
+      "linked_predicted_refs": [],
+      "matched_predicted_ref": null,
+      "notes": "",
+      "oracle_ref": {
+        "ko_id": "derivative",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "predicted_source_span_exact": null,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "missing",
+      "recoverable": false,
+      "structural_flags": [],
+      "type_match": null
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "unresolved",
+      "identity_match": false,
+      "linked_predicted_refs": [],
+      "matched_predicted_ref": null,
+      "notes": "",
+      "oracle_ref": {
+        "ko_id": "midpoint_formula",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "predicted_source_span_exact": null,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "missing",
+      "recoverable": false,
+      "structural_flags": [],
+      "type_match": null
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "newtons_method",
+          "lecture_id": "numerical_root_finding_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "newtons_method",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "newton_method",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "newton_update_formula",
+          "lecture_id": "numerical_root_finding_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "newton_update_formula",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "newton_update",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "unresolved",
+      "identity_match": false,
+      "linked_predicted_refs": [],
+      "matched_predicted_ref": null,
+      "notes": "",
+      "oracle_ref": {
+        "ko_id": "root_equation",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "predicted_source_span_exact": null,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "missing",
+      "recoverable": false,
+      "structural_flags": [],
+      "type_match": null
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "root_finding_problem",
+          "lecture_id": "numerical_root_finding_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "root_finding_problem",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "root_finding_problem",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "sign_changing_bracket",
+          "lecture_id": "numerical_root_finding_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "sign_changing_bracket",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "sign_changing_bracket",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "likelihood",
+          "lecture_id": "statistics_estimation_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "likelihood",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "likelihood",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "unresolved",
+      "identity_match": false,
+      "linked_predicted_refs": [],
+      "matched_predicted_ref": null,
+      "notes": "",
+      "oracle_ref": {
+        "ko_id": "likelihood_formula",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "predicted_source_span_exact": null,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "missing",
+      "recoverable": false,
+      "structural_flags": [],
+      "type_match": null
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "log_likelihood",
+          "lecture_id": "statistics_estimation_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "log_likelihood",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "log_likelihood",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "unresolved",
+      "identity_match": false,
+      "linked_predicted_refs": [],
+      "matched_predicted_ref": null,
+      "notes": "",
+      "oracle_ref": {
+        "ko_id": "log_likelihood_formula",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "predicted_source_span_exact": null,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "missing",
+      "recoverable": false,
+      "structural_flags": [],
+      "type_match": null
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "maximum_likelihood_estimation",
+          "lecture_id": "statistics_estimation_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "maximum_likelihood_estimation",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "maximum_likelihood_estimation",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "unresolved",
+      "identity_match": false,
+      "linked_predicted_refs": [],
+      "matched_predicted_ref": null,
+      "notes": "",
+      "oracle_ref": {
+        "ko_id": "mle_formula",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "predicted_source_span_exact": null,
+      "predicted_source_span_supports_identity": null,
+      "primary_structural_status": "missing",
+      "recoverable": false,
+      "structural_flags": [],
+      "type_match": null
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "score_function",
+          "lecture_id": "statistics_estimation_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "score_function",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "score_function",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "score_function_formula",
+          "lecture_id": "statistics_estimation_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "score_function_formula",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "score_function_formula",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    },
+    {
+      "adjudication_required": false,
+      "alignment_level": "exact",
+      "identity_match": true,
+      "linked_predicted_refs": [
+        {
+          "ko_id": "statistical_model",
+          "lecture_id": "statistics_estimation_001"
+        }
+      ],
+      "matched_predicted_ref": {
+        "ko_id": "statistical_model",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "oracle_ref": {
+        "ko_id": "statistical_model",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "predicted_source_span_exact": true,
+      "predicted_source_span_supports_identity": true,
+      "primary_structural_status": "one_to_one",
+      "recoverable": true,
+      "structural_flags": [],
+      "type_match": true
+    }
+  ],
+  "predicted_inventory_sha256": "fe37cf7d77dd7304a090b21b206b6dd61621cdfedf75507f45edd09a2d8feda3",
+  "predicted_records": [
+    {
+      "accounting_status": "unmatched_extra",
+      "identity_match": false,
+      "linked_oracle_refs": [],
+      "matched_oracle_ref": null,
+      "notes": "",
+      "predicted_ref": {
+        "ko_id": "discretization_error",
+        "lecture_id": "differential_equations_001"
+      },
+      "recoverable": false
+    },
+    {
+      "accounting_status": "unmatched_extra",
+      "identity_match": false,
+      "linked_oracle_refs": [],
+      "matched_oracle_ref": null,
+      "notes": "",
+      "predicted_ref": {
+        "ko_id": "euler_predictor",
+        "lecture_id": "differential_equations_001"
+      },
+      "recoverable": false
+    },
+    {
+      "accounting_status": "unmatched_extra",
+      "identity_match": false,
+      "linked_oracle_refs": [],
+      "matched_oracle_ref": null,
+      "notes": "",
+      "predicted_ref": {
+        "ko_id": "first_order_equation",
+        "lecture_id": "differential_equations_001"
+      },
+      "recoverable": false
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "forward_euler_method",
+          "lecture_id": "differential_equations_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "forward_euler_method",
+        "lecture_id": "differential_equations_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "forward_euler_method",
+        "lecture_id": "differential_equations_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "unmatched_extra",
+      "identity_match": false,
+      "linked_oracle_refs": [],
+      "matched_oracle_ref": null,
+      "notes": "",
+      "predicted_ref": {
+        "ko_id": "forward_euler_update",
+        "lecture_id": "differential_equations_001"
+      },
+      "recoverable": false
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "heun_method",
+          "lecture_id": "differential_equations_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "heun_method",
+        "lecture_id": "differential_equations_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "heuns_method",
+        "lecture_id": "differential_equations_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "unmatched_extra",
+      "identity_match": false,
+      "linked_oracle_refs": [],
+      "matched_oracle_ref": null,
+      "notes": "",
+      "predicted_ref": {
+        "ko_id": "heuns_update",
+        "lecture_id": "differential_equations_001"
+      },
+      "recoverable": false
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "initial_value_problem",
+          "lecture_id": "differential_equations_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "initial_value_problem",
+        "lecture_id": "differential_equations_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "initial_value_problem",
+        "lecture_id": "differential_equations_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "ordinary_differential_equation",
+          "lecture_id": "differential_equations_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "ordinary_differential_equation",
+        "lecture_id": "differential_equations_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "ordinary_differential_equation",
+        "lecture_id": "differential_equations_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "step_size",
+          "lecture_id": "differential_equations_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "step_size",
+        "lecture_id": "differential_equations_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "step_size",
+        "lecture_id": "differential_equations_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "vector_field",
+          "lecture_id": "differential_equations_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "vector_field",
+        "lecture_id": "differential_equations_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "vector_field",
+        "lecture_id": "differential_equations_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "a_star_search",
+          "lecture_id": "graph_algorithms_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "a_star_search",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "a_star_search",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "dijkstra_algorithm",
+          "lecture_id": "graph_algorithms_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "dijkstra_algorithm",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "dijkstras_algorithm",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "edge_relaxation",
+          "lecture_id": "graph_algorithms_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "edge_relaxation",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "edge_relaxation",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "heuristic_function",
+          "lecture_id": "graph_algorithms_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "heuristic_function",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "heuristic_function",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "path",
+          "lecture_id": "graph_algorithms_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "path",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "path",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "path_cost",
+          "lecture_id": "graph_algorithms_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "path_cost",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "path_cost",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "path_cost_formula",
+          "lecture_id": "graph_algorithms_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "path_cost_formula",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "path_cost_formula",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "unmatched_extra",
+      "identity_match": false,
+      "linked_oracle_refs": [],
+      "matched_oracle_ref": null,
+      "notes": "",
+      "predicted_ref": {
+        "ko_id": "relaxation_update",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "recoverable": false
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "shortest_path_problem",
+          "lecture_id": "graph_algorithms_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "shortest_path_problem",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "single_source_shortest_path_problem",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "weighted_directed_graph",
+          "lecture_id": "graph_algorithms_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "weighted_directed_graph",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "weighted_directed_graph",
+        "lecture_id": "graph_algorithms_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "bisection_method",
+          "lecture_id": "numerical_root_finding_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "bisection_method",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "bisection_method",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "damped_newton_method",
+          "lecture_id": "numerical_root_finding_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "damped_newton_method",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "damped_newton_method",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "unmatched_extra",
+      "identity_match": false,
+      "linked_oracle_refs": [],
+      "matched_oracle_ref": null,
+      "notes": "",
+      "predicted_ref": {
+        "ko_id": "midpoint_formula",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "recoverable": false
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "newton_update",
+          "lecture_id": "numerical_root_finding_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "newton_update",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "newton_update_formula",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "newton_method",
+          "lecture_id": "numerical_root_finding_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "newton_method",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "newtons_method",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "root_finding_problem",
+          "lecture_id": "numerical_root_finding_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "root_finding_problem",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "root_finding_problem",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "sign_changing_bracket",
+          "lecture_id": "numerical_root_finding_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "sign_changing_bracket",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "sign_changing_bracket",
+        "lecture_id": "numerical_root_finding_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "likelihood",
+          "lecture_id": "statistics_estimation_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "likelihood",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "likelihood",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "unmatched_extra",
+      "identity_match": false,
+      "linked_oracle_refs": [],
+      "matched_oracle_ref": null,
+      "notes": "",
+      "predicted_ref": {
+        "ko_id": "likelihood_function",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "recoverable": false
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "log_likelihood",
+          "lecture_id": "statistics_estimation_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "log_likelihood",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "log_likelihood",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "unmatched_extra",
+      "identity_match": false,
+      "linked_oracle_refs": [],
+      "matched_oracle_ref": null,
+      "notes": "",
+      "predicted_ref": {
+        "ko_id": "log_likelihood_function",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "recoverable": false
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "maximum_likelihood_estimation",
+          "lecture_id": "statistics_estimation_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "maximum_likelihood_estimation",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "maximum_likelihood_estimation",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "unmatched_extra",
+      "identity_match": false,
+      "linked_oracle_refs": [],
+      "matched_oracle_ref": null,
+      "notes": "",
+      "predicted_ref": {
+        "ko_id": "mle_estimator",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "recoverable": false
+    },
+    {
+      "accounting_status": "unmatched_extra",
+      "identity_match": false,
+      "linked_oracle_refs": [],
+      "matched_oracle_ref": null,
+      "notes": "",
+      "predicted_ref": {
+        "ko_id": "newtons_method",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "recoverable": false
+    },
+    {
+      "accounting_status": "unmatched_extra",
+      "identity_match": false,
+      "linked_oracle_refs": [],
+      "matched_oracle_ref": null,
+      "notes": "",
+      "predicted_ref": {
+        "ko_id": "score_equation",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "recoverable": false
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "score_function",
+          "lecture_id": "statistics_estimation_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "score_function",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "score_function",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "score_function_formula",
+          "lecture_id": "statistics_estimation_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "score_function_formula",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "score_function_formula",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "recoverable": true
+    },
+    {
+      "accounting_status": "one_to_one",
+      "identity_match": true,
+      "linked_oracle_refs": [
+        {
+          "ko_id": "statistical_model",
+          "lecture_id": "statistics_estimation_001"
+        }
+      ],
+      "matched_oracle_ref": {
+        "ko_id": "statistical_model",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "notes": "Unique exact one-to-one identity match.",
+      "predicted_ref": {
+        "ko_id": "statistical_model",
+        "lecture_id": "statistics_estimation_001"
+      },
+      "recoverable": true
+    }
+  ],
+  "split": "holdout",
+  "structural_normalization_version": "predicted_ko_structural_normalization_v0_1",
+  "version": "v0.1"
+}

@@ -1,0 +1,18 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_holdout_002",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "ko_slot_021"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "ko_slot_022"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The lecture text does not establish any direct relation between the Newton Update Formula and the Sign-Changing Bracket. They belong to different methods (Newton's method and bisection method) and are only mentioned in the same lecture without any connecting evidence."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_holdout_034",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ko_slot_001"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "ko_slot_026"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The two formulas appear in different lectures with no shared context or direct connection. The lecture texts do not establish any meaningful educational relation between the Forward Euler Update Formula and the Log-Likelihood Formula."
+    }
+  ]
+}

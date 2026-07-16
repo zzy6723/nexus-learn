@@ -1,0 +1,28 @@
+{
+  "id": "74d4ab80-b905-4a3f-8a7e-2cfdb77854d6",
+  "object": "chat.completion",
+  "created": 1784138075,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_holdout_033\",\n      \"source\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"ko_slot_028\"\n      },\n      \"target\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"ko_slot_027\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it\"\n        },\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"\\\\widehat{\\\\theta}_{\\\\mathrm{MLE}} = \\\\operatorname*{arg\\\\,max}_{\\\\theta}\\\\, \\\\ell(\\\\theta).\"\n        }\n      ],\n      \"rationale\": \"The formula for the MLE estimator explicitly defines the result of the maximum likelihood estimation method, thus formalizing it.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2362,
+    "completion_tokens": 244,
+    "total_tokens": 2606,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 314
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

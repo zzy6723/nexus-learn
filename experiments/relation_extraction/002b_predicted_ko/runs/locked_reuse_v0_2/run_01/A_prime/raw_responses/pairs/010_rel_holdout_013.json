@@ -1,0 +1,28 @@
+{
+  "id": "94064acc-1574-477b-ba7f-5e797ba6af76",
+  "object": "chat.completion",
+  "created": 1784137402,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_holdout_013\",\n      \"source\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"ko_slot_027\"\n      },\n      \"target\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"ko_slot_025\"\n      },\n      \"relation_type\": \"REQUIRES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:\"\n        }\n      ],\n      \"rationale\": \"Maximum Likelihood Estimation requires the Log-Likelihood as its objective function, as stated in the evidence.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2346,
+    "completion_tokens": 187,
+    "total_tokens": 2533,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 298
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "801cf57e-598d-4945-b968-0671174623fd",
+  "object": "chat.completion",
+  "created": 1784138048,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_holdout_020\",\n      \"source\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"ko_slot_002\"\n      },\n      \"target\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"ko_slot_005\"\n      },\n      \"relation_type\": \"APPLIED_IN\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope.\"\n        }\n      ],\n      \"rationale\": \"The lecture explicitly states that the forward Euler method is applied to an initial value problem, establishing an APPLIED_IN relation where the method is used in the context of the concept.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2331,
+    "completion_tokens": 202,
+    "total_tokens": 2533,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 283
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

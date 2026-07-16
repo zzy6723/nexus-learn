@@ -1,0 +1,28 @@
+{
+  "id": "3253ba2a-4cf6-446c-b177-f852def5e8a1",
+  "object": "chat.completion",
+  "created": 1784137383,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_holdout_003\",\n      \"source\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"ko_slot_014\"\n      },\n      \"target\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"ko_slot_013\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"graph_algorithms_001\",\n          \"span\": \"Its path cost is the sum of their edge weights:\\n\\n\\\\[\\nC(v_0,\\\\ldots,v_k) = \\\\sum_{i=0}^{k-1} w(v_i,v_{i+1}).\\n\\\\]\"\n        }\n      ],\n      \"rationale\": \"The Path Cost Formula explicitly defines the Path Cost concept, so the formula formalizes the concept.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2281,
+    "completion_tokens": 209,
+    "total_tokens": 2490,
+    "prompt_tokens_details": {
+      "cached_tokens": 1664
+    },
+    "prompt_cache_hit_tokens": 1664,
+    "prompt_cache_miss_tokens": 617
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

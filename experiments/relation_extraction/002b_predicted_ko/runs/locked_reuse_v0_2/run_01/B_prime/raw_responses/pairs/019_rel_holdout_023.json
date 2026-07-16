@@ -1,0 +1,28 @@
+{
+  "id": "80f5e832-6321-46ec-b310-bd8eff875098",
+  "object": "chat.completion",
+  "created": 1784138053,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_holdout_023\",\n      \"source\": {\n        \"lecture_id\": \"numerical_root_finding_001\",\n        \"ko_id\": \"ko_slot_021\"\n      },\n      \"target\": {\n        \"lecture_id\": \"numerical_root_finding_001\",\n        \"ko_id\": \"ko_slot_020\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"numerical_root_finding_001\",\n          \"span\": \"Newton's method uses the derivative to replace the function locally by its tangent line. Provided \\\\(f'(x_k)\\\\neq 0\\\\), its update is\\n\\n\\\\[\\nx_{k+1} = x_k - \\\\frac{f(x_k)}{f'(x_k)}.\\n\\\\]\"\n        }\n      ],\n      \"rationale\": \"The Newton update formula explicitly defines the update step of Newton's method, thus formalizing the method.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2279,
+    "completion_tokens": 226,
+    "total_tokens": 2505,
+    "prompt_tokens_details": {
+      "cached_tokens": 1920
+    },
+    "prompt_cache_hit_tokens": 1920,
+    "prompt_cache_miss_tokens": 359
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

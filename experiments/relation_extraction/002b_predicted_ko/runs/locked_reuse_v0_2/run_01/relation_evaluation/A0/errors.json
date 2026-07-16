@@ -1,0 +1,111 @@
+[
+  {
+    "pair_id": "rel_holdout_007",
+    "error_type": "evidence_does_not_support_relation",
+    "adjudication_rationale": "The span names Dijkstra's algorithm but refers only to 'this problem'; no selected span resolves that phrase to the single-source shortest-path problem."
+  },
+  {
+    "pair_id": "rel_holdout_013",
+    "error_type": "wrong_direction",
+    "gold_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "maximum_likelihood_estimation"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "log_likelihood"
+      },
+      "relation_type": "APPLIED_IN"
+    }
+  },
+  {
+    "pair_id": "rel_holdout_030",
+    "error_type": "wrong_direction",
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstra_algorithm"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "dijkstra_algorithm"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "edge_relaxation"
+      },
+      "relation_type": "APPLIED_IN"
+    }
+  },
+  {
+    "pair_id": "rel_holdout_032",
+    "error_type": "wrong_direction",
+    "gold_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "forward_euler_method"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "vector_field"
+      },
+      "relation_type": "APPLIED_IN"
+    }
+  },
+  {
+    "pair_id": "rel_holdout_036",
+    "error_type": "wrong_direction",
+    "gold_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "relation_type": "APPLIED_IN"
+    },
+    "predicted_edge": {
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "a_star_search"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "heuristic_function"
+      },
+      "relation_type": "APPLIED_IN"
+    }
+  }
+]

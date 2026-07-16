@@ -1,0 +1,256 @@
+{
+  "artifact_type": "predicted_ko_relation_execution_manifest",
+  "version": "v0.1",
+  "status": "prepared_pending_entity_reruns",
+  "experiment": "002B-1",
+  "split": "locked_reuse_v0_1",
+  "prepared_at": "2026-07-15T16:29:54.829784+00:00",
+  "method_commit": "38395faaf3ff36ca1bb178b843d659cb908497f1",
+  "repository_state": {
+    "repository_root": ".",
+    "head_commit": "38395faaf3ff36ca1bb178b843d659cb908497f1",
+    "branch": "main",
+    "worktree_clean": true,
+    "status_scope": "tracked_and_non_ignored_untracked",
+    "verified_artifacts": [
+      {
+        "path": "benchmark/ground_truth/relation_holdout_knowledge_objects_v0_1.json",
+        "sha256": "4df9f63f279b9d02f7d0f6f3aafb59db91bc1774951f6aa1be25e47a0d474a0f"
+      },
+      {
+        "path": "benchmark/ground_truth/relations_holdout_v0_1.json",
+        "sha256": "20cf7a8b2aeb76f372e103c59c453bfa15c43732885b6c621af26f5edd427a6f"
+      },
+      {
+        "path": "benchmark/lectures/relation_holdout/differential_equations_001.md",
+        "sha256": "7c7650f7975bde77e45e683d8b1089ec12507b27f07b7eedb1911616260260db"
+      },
+      {
+        "path": "benchmark/lectures/relation_holdout/graph_algorithms_001.md",
+        "sha256": "af9645b1f2baa4655a09cab06a7183e11f0dc697b81f1b9f94486459916b596e"
+      },
+      {
+        "path": "benchmark/lectures/relation_holdout/numerical_root_finding_001.md",
+        "sha256": "07b9fd847f4e763c19627752f6c0bd72a720cde88dac9229478d9a3d4dc34d40"
+      },
+      {
+        "path": "benchmark/lectures/relation_holdout/statistics_estimation_001.md",
+        "sha256": "6c2b5d0b2e1ac0f039d7fe8bbc5044fc4ab9926538d4645f57dda6cbbdf421fb"
+      },
+      {
+        "path": "docs/decisions/004-relation-schema.md",
+        "sha256": "a50bbf3193fe03e6e407da6ced7f15f9f4bb819876140925bc87ac4419c50417"
+      },
+      {
+        "path": "experiments/entity_extraction/002_prompt_refinement/prompt.md",
+        "sha256": "12d85ea9b3ed66b751b637d7ce2e459c69368b9685bbc39c4713c24ff69feeeb"
+      },
+      {
+        "path": "experiments/relation_extraction/002_prompt_refinement/prompt.md",
+        "sha256": "e3b0e53f3ceed60c60d082fa9c4a67f9497e64d50664118227cd9bea9fbc12af"
+      },
+      {
+        "path": "scripts/align_predicted_kos.py",
+        "sha256": "3d8ff9c5f3639a756d059607817a28ca8c0d325dd2eae03f9fab94c0cd93ebf5"
+      },
+      {
+        "path": "scripts/evaluate_predicted_ko_relation_pipeline.py",
+        "sha256": "7f3b26932bb5fa3982ee9ffbb8252bad1e5b7eb65f067289a550297da0fe83c8"
+      },
+      {
+        "path": "scripts/evaluate_relation_extraction.py",
+        "sha256": "efe45e3100ee16a4851de88461441270ed00e9ae520731dbdc7a084f546d10c4"
+      },
+      {
+        "path": "scripts/finalize_entity_prediction_bundle.py",
+        "sha256": "c729aa9204f26855179e85398b9e9a71fce4564fab1dd15791fd0f4ae1359c82"
+      },
+      {
+        "path": "scripts/finalize_relation_evaluation_bundle.py",
+        "sha256": "405f73698c882e3ae51490f56eba20c08cbc4e84241e32d8194f04d36c6ea14f"
+      },
+      {
+        "path": "scripts/knowledge_object_matching.py",
+        "sha256": "a5d1083d4e3f7447012eb8019bcabb0f33fd46f70950696cc46e5b9865b9e705"
+      },
+      {
+        "path": "scripts/normalize_predicted_kos.py",
+        "sha256": "baaaf4ee578c4f84b16f60580c43ac51317d567d5f41ba31a14929eaf77dd883"
+      },
+      {
+        "path": "scripts/prepare_predicted_ko_relation_run.py",
+        "sha256": "52bd574ebba728c3181220c5079af72cc46cd4e28d5bba8373f3149c4a4630e5"
+      },
+      {
+        "path": "scripts/project_recoverable_relation_pairs.py",
+        "sha256": "698ab1170b709fcad67fee817111ae2537db98ce5874e0776c0061a5e277880b"
+      },
+      {
+        "path": "scripts/run_entity_extraction.py",
+        "sha256": "f2ff88561ef9e56fb2dec449a3d6a710d7a8059e822bd88e1391f4d1ecfb0bbc"
+      },
+      {
+        "path": "scripts/run_relation_extraction.py",
+        "sha256": "307c81e6c416e5c9d99d47d359f44d53d667d7001a40e612a559515373cb4855"
+      }
+    ]
+  },
+  "claim_boundary": "locked reuse of the previously evaluated 002A holdout",
+  "frozen_methods": {
+    "entity_prompt": {
+      "path": "experiments/entity_extraction/002_prompt_refinement/prompt.md",
+      "sha256": "12d85ea9b3ed66b751b637d7ce2e459c69368b9685bbc39c4713c24ff69feeeb"
+    },
+    "relation_prompt": {
+      "path": "experiments/relation_extraction/002_prompt_refinement/prompt.md",
+      "sha256": "e3b0e53f3ceed60c60d082fa9c4a67f9497e64d50664118227cd9bea9fbc12af"
+    },
+    "relation_schema": {
+      "path": "docs/decisions/004-relation-schema.md",
+      "sha256": "a50bbf3193fe03e6e407da6ced7f15f9f4bb819876140925bc87ac4419c50417"
+    },
+    "implementation": [
+      {
+        "path": "scripts/prepare_predicted_ko_relation_run.py",
+        "sha256": "52bd574ebba728c3181220c5079af72cc46cd4e28d5bba8373f3149c4a4630e5"
+      },
+      {
+        "path": "scripts/run_entity_extraction.py",
+        "sha256": "f2ff88561ef9e56fb2dec449a3d6a710d7a8059e822bd88e1391f4d1ecfb0bbc"
+      },
+      {
+        "path": "scripts/finalize_entity_prediction_bundle.py",
+        "sha256": "c729aa9204f26855179e85398b9e9a71fce4564fab1dd15791fd0f4ae1359c82"
+      },
+      {
+        "path": "scripts/knowledge_object_matching.py",
+        "sha256": "a5d1083d4e3f7447012eb8019bcabb0f33fd46f70950696cc46e5b9865b9e705"
+      },
+      {
+        "path": "scripts/normalize_predicted_kos.py",
+        "sha256": "baaaf4ee578c4f84b16f60580c43ac51317d567d5f41ba31a14929eaf77dd883"
+      },
+      {
+        "path": "scripts/align_predicted_kos.py",
+        "sha256": "3d8ff9c5f3639a756d059607817a28ca8c0d325dd2eae03f9fab94c0cd93ebf5"
+      },
+      {
+        "path": "scripts/project_recoverable_relation_pairs.py",
+        "sha256": "698ab1170b709fcad67fee817111ae2537db98ce5874e0776c0061a5e277880b"
+      },
+      {
+        "path": "scripts/run_relation_extraction.py",
+        "sha256": "307c81e6c416e5c9d99d47d359f44d53d667d7001a40e612a559515373cb4855"
+      },
+      {
+        "path": "scripts/evaluate_relation_extraction.py",
+        "sha256": "efe45e3100ee16a4851de88461441270ed00e9ae520731dbdc7a084f546d10c4"
+      },
+      {
+        "path": "scripts/finalize_relation_evaluation_bundle.py",
+        "sha256": "405f73698c882e3ae51490f56eba20c08cbc4e84241e32d8194f04d36c6ea14f"
+      },
+      {
+        "path": "scripts/evaluate_predicted_ko_relation_pipeline.py",
+        "sha256": "7f3b26932bb5fa3982ee9ffbb8252bad1e5b7eb65f067289a550297da0fe83c8"
+      }
+    ]
+  },
+  "entity_execution": {
+    "provider": "deepseek",
+    "model": "deepseek-v4-flash",
+    "input_split": "holdout",
+    "request_parameters": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "max_tokens": 4096,
+      "stream": false,
+      "response_format": {
+        "type": "json_object"
+      },
+      "thinking": {
+        "type": "disabled"
+      }
+    },
+    "source_manifest": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/source_manifest.json",
+    "source_manifest_sha256": "abf6a8d19fe0653e2292f7af027deda599eecf708ba5b639318dcdc7e097a7be",
+    "rerun_required_lecture_ids": [
+      "statistics_estimation_001",
+      "numerical_root_finding_001",
+      "differential_equations_001",
+      "graph_algorithms_001"
+    ]
+  },
+  "relation_execution": {
+    "provider": "deepseek",
+    "model": "deepseek-v4-flash",
+    "request_parameters": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "max_tokens": 8192,
+      "stream": false,
+      "response_format": {
+        "type": "json_object"
+      },
+      "thinking": {
+        "type": "disabled"
+      }
+    },
+    "matched_execution_order": [
+      "A_prime",
+      "B_prime"
+    ]
+  },
+  "benchmark": {
+    "relation_split": "holdout",
+    "original_relation_ground_truth": {
+      "path": "benchmark/ground_truth/relations_holdout_v0_1.json",
+      "sha256": "20cf7a8b2aeb76f372e103c59c453bfa15c43732885b6c621af26f5edd427a6f"
+    },
+    "source_ko_inventories": [
+      {
+        "path": "benchmark/ground_truth/relation_holdout_knowledge_objects_v0_1.json",
+        "sha256": "4df9f63f279b9d02f7d0f6f3aafb59db91bc1774951f6aa1be25e47a0d474a0f"
+      }
+    ],
+    "oracle_inventory": {
+      "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/oracle_knowledge_objects.json",
+      "sha256": "d92898ab30ce33b91a56c247a69e04ad397c50707c5decc7d10eeb3082466cda"
+    },
+    "lecture_inventory": {
+      "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/lecture_inventory.json",
+      "sha256": "5b53aed0b1c793d47908d773d4e4a6b9ef9dd24e920307f71fa73bc71ec8b069"
+    },
+    "lecture_ids": [
+      "statistics_estimation_001",
+      "numerical_root_finding_001",
+      "differential_equations_001",
+      "graph_algorithms_001"
+    ],
+    "lecture_markdown_sha256": {
+      "statistics_estimation_001": "6c2b5d0b2e1ac0f039d7fe8bbc5044fc4ab9926538d4645f57dda6cbbdf421fb",
+      "numerical_root_finding_001": "07b9fd847f4e763c19627752f6c0bd72a720cde88dac9229478d9a3d4dc34d40",
+      "differential_equations_001": "7c7650f7975bde77e45e683d8b1089ec12507b27f07b7eedb1911616260260db",
+      "graph_algorithms_001": "af9645b1f2baa4655a09cab06a7183e11f0dc697b81f1b9f94486459916b596e"
+    },
+    "lecture_model_text_sha256": {
+      "statistics_estimation_001": "0f48d5fa14623d7af50716342e2c3f456e9f5728d741f8856fdb01dd2b95f4fa",
+      "numerical_root_finding_001": "95949cbece45bed2e21a8fe3a0936b735f73b72d3e1af895e9c09bb968f11c12",
+      "differential_equations_001": "7488ea27d88e3970e600829508a5673a43c111e4fcad13b87f33313be13986b0",
+      "graph_algorithms_001": "0fdb7752023500999cc9ad8c439035c4a60be707908ae996d26d2f907c27e41d"
+    }
+  },
+  "downstream_gate_order": [
+    "entity_predictions_complete",
+    "normalization_complete",
+    "alignment_final",
+    "projection_complete",
+    "A_prime_dry_run",
+    "B_prime_dry_run",
+    "A_prime_formal_run",
+    "B_prime_formal_run",
+    "A_prime_relation_evaluation_final",
+    "B_prime_relation_evaluation_final",
+    "pipeline_evaluation_final"
+  ]
+}

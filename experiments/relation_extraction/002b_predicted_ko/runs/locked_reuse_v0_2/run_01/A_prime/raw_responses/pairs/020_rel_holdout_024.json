@@ -1,0 +1,28 @@
+{
+  "id": "169a6bc3-e54e-4519-9a74-074ab9f04154",
+  "object": "chat.completion",
+  "created": 1784137428,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_holdout_024\",\n      \"source\": {\n        \"lecture_id\": \"numerical_root_finding_001\",\n        \"ko_id\": \"ko_slot_020\"\n      },\n      \"target\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"ko_slot_027\"\n      },\n      \"relation_type\": \"APPLIED_IN\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"When this equation has no closed-form solution, Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically.\"\n        }\n      ],\n      \"rationale\": \"The lecture explicitly states that Newton's method is applied within maximum likelihood estimation to solve the score equation, establishing an APPLIED_IN relation where Newton's method is the tool used in the context of maximum likelihood estimation.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2630,
+    "completion_tokens": 210,
+    "total_tokens": 2840,
+    "prompt_tokens_details": {
+      "cached_tokens": 1920
+    },
+    "prompt_cache_hit_tokens": 1920,
+    "prompt_cache_miss_tokens": 710
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

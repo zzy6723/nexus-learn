@@ -1,0 +1,28 @@
+{
+  "id": "11523703-e9d5-44bd-8af8-333f91e4db6b",
+  "object": "chat.completion",
+  "created": 1784137437,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_holdout_029\",\n      \"source\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"ko_slot_025\"\n      },\n      \"target\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"ko_slot_023\"\n      },\n      \"relation_type\": \"EXTENDS\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"The log-likelihood is obtained by taking the logarithm of the likelihood.\"\n        }\n      ],\n      \"rationale\": \"Log-Likelihood is a more specific development of Likelihood, obtained by applying the logarithm, preserving Likelihood as its conceptual base.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2342,
+    "completion_tokens": 184,
+    "total_tokens": 2526,
+    "prompt_tokens_details": {
+      "cached_tokens": 2176
+    },
+    "prompt_cache_hit_tokens": 2176,
+    "prompt_cache_miss_tokens": 166
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

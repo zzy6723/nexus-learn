@@ -1,0 +1,28 @@
+{
+  "id": "2315fd11-4c5b-4e94-8da5-ac45b266321a",
+  "object": "chat.completion",
+  "created": 1784137439,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_holdout_030\",\n      \"source\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"ko_slot_010\"\n      },\n      \"target\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"ko_slot_011\"\n      },\n      \"relation_type\": \"REQUIRES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"graph_algorithms_001\",\n          \"span\": \"After removing a vertex \\\\(u\\\\) with the smallest tentative distance, it applies edge relaxation to each outgoing edge.\"\n        }\n      ],\n      \"rationale\": \"Dijkstra's algorithm applies edge relaxation as a step within its procedure, so edge relaxation is necessary to understand how Dijkstra's algorithm works.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2282,
+    "completion_tokens": 191,
+    "total_tokens": 2473,
+    "prompt_tokens_details": {
+      "cached_tokens": 1920
+    },
+    "prompt_cache_hit_tokens": 1920,
+    "prompt_cache_miss_tokens": 362
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

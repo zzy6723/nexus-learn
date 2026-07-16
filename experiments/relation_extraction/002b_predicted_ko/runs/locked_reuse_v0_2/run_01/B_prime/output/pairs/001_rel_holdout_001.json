@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_holdout_001",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "ko_slot_023"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "ko_slot_030"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values."
+        }
+      ],
+      "rationale": "The likelihood is defined from the statistical model, so the likelihood requires the statistical model as a prerequisite."
+    }
+  ]
+}

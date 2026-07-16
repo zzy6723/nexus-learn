@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_holdout_020",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ko_slot_002"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ko_slot_005"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope."
+        }
+      ],
+      "rationale": "The lecture explicitly states that the forward Euler method is applied to an initial value problem, establishing an APPLIED_IN relation where the method is used in the context of the concept."
+    }
+  ]
+}

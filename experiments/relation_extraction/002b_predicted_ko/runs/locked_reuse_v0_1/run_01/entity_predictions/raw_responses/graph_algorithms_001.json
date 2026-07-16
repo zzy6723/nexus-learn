@@ -1,0 +1,28 @@
+{
+  "id": "44968f15-d393-4e7f-b9b6-222c4d03886e",
+  "object": "chat.completion",
+  "created": 1784133210,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"lecture_id\": \"graph_algorithms_001\",\n  \"knowledge_objects\": [\n    {\n      \"id\": \"weighted_directed_graph\",\n      \"name\": \"Weighted Directed Graph\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"A directed graph where each edge has an associated numerical weight.\",\n      \"source_span\": \"A weighted directed graph assigns a numerical weight \\\\(w(u,v)\\\\) to each directed edge \\\\((u,v)\\\\).\"\n    },\n    {\n      \"id\": \"path\",\n      \"name\": \"Path\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"A sequence of compatible directed edges.\",\n      \"source_span\": \"A path is a sequence of compatible directed edges.\"\n    },\n    {\n      \"id\": \"path_cost\",\n      \"name\": \"Path Cost\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"The sum of edge weights along a path.\",\n      \"source_span\": \"Its path cost is the sum of their edge weights\"\n    },\n    {\n      \"id\": \"path_cost_formula\",\n      \"name\": \"Path Cost Formula\",\n      \"type\": \"Formula\",\n      \"aliases\": [],\n      \"short_definition\": \"Formula for the cost of a path as the sum of edge weights.\",\n      \"source_span\": \"C(v_0,\\\\ldots,v_k) = \\\\sum_{i=0}^{k-1} w(v_i,v_{i+1})\"\n    },\n    {\n      \"id\": \"single_source_shortest_path_problem\",\n      \"name\": \"Single-Source Shortest-Path Problem\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"Problem of finding a minimum-cost path from a source vertex to every reachable vertex.\",\n      \"source_span\": \"The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex.\"\n    },\n    {\n      \"id\": \"dijkstras_algorithm\",\n      \"name\": \"Dijkstra's Algorithm\",\n      \"type\": \"Method\",\n      \"aliases\": [],\n      \"short_definition\": \"Algorithm for single-source shortest paths with nonnegative edge weights using a priority queue and edge relaxation.\",\n      \"source_span\": \"Dijkstra's algorithm is applied to this problem when all edge weights are nonnegative.\"\n    },\n    {\n      \"id\": \"edge_relaxation\",\n      \"name\": \"Edge Relaxation\",\n      \"type\": \"Method\",\n      \"aliases\": [],\n      \"short_definition\": \"Update operation that reduces the tentative distance to a vertex if a shorter path is found.\",\n      \"source_span\": \"it applies edge relaxation to each outgoing edge.\"\n    },\n    {\n      \"id\": \"relaxation_update\",\n      \"name\": \"Relaxation Update\",\n      \"type\": \"Formula\",\n      \"aliases\": [],\n      \"short_definition\": \"Update rule for tentative distance d(v) as min of current d(v) and d(u)+w(u,v).\",\n      \"source_span\": \"d(v) \\\\leftarrow \\\\min\\\\{d(v),\\\\, d(u)+w(u,v)\\\\}\"\n    },\n    {\n      \"id\": \"a_star_search\",\n      \"name\": \"A* Search\",\n      \"type\": \"Method\",\n      \"aliases\": [],\n      \"short_definition\": \"Extension of Dijkstra's algorithm that uses a heuristic function to guide exploration.\",\n      \"source_span\": \"A* search extends Dijkstra's algorithm by using a heuristic function \\\\(h(v)\\\\) to guide which vertex is explored next.\"\n    },\n    {\n      \"id\": \"heuristic_function\",\n      \"name\": \"Heuristic Function\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"Function h(v) that estimates the cost from vertex v to the goal.\",\n      \"source_span\": \"heuristic function \\\\(h(v)\\\\)\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 739,
+    "completion_tokens": 869,
+    "total_tokens": 1608,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 739
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

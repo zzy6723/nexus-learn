@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_holdout_024",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "ko_slot_020"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "ko_slot_027"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "When this equation has no closed-form solution, Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically."
+        }
+      ],
+      "rationale": "The lecture explicitly states that Newton's method is applied within maximum likelihood estimation to solve the score equation, establishing an APPLIED_IN relation from Newton's method to Maximum Likelihood Estimation."
+    }
+  ]
+}

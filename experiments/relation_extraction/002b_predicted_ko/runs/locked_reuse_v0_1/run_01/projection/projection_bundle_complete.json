@@ -1,0 +1,18 @@
+{
+  "artifact_type": "predicted_ko_projection_bundle_complete",
+  "artifacts": {
+    "batch_plan.json": "ad0773597b9021e9ca0ce6d5cb9efd5d15893608aafcbe605135e00a4c8beab6",
+    "matched_knowledge_objects.json": "da1c72233bc4aed28039cf98c4f6771a11f9225188256b55814ada619d9e5ace",
+    "matched_relation_ground_truth.json": "06068ccee14650ac65b2de52abd6843bb73216966ed15825fadcf78492820fea",
+    "oracle_normalized_input.json": "6ee828f55e2b1f3d3cbab3125300bf0d507b1a1a1a9a3e032cede344f6caeb04",
+    "predicted_normalized_input.json": "172c018bde83813115cc3f7a8a3c8980971cce9f0a12888c4ac7f0ee05b0d696",
+    "projection_errors.json": "2b5e9270ef2a00015e6454715db0fc8940c18fda209ad711ef275cb7c19d21d2",
+    "recoverable_ko_manifest.json": "598cfff40af7d9e36f00c6fa05d2c7dbe72f362011a3e2521f1dd495c3bec505",
+    "recoverable_pair_manifest.json": "8ac25e5b514593d9ad604f490ce7df8aa50fb70f810e68b7e121aa6112fcca0b"
+  },
+  "evaluation_status": "final",
+  "upstream": {
+    "alignment_bundle_complete_sha256": "dfc3b44b97fee135f621d6373d30aa3c990fda3f57812ce7493f1cce5ba7743b"
+  },
+  "version": "v0.1"
+}

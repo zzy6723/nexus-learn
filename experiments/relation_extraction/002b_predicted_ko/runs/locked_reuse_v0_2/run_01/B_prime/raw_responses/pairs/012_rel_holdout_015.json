@@ -1,0 +1,28 @@
+{
+  "id": "84699633-00eb-4b43-9018-e1d6e0474192",
+  "object": "chat.completion",
+  "created": 1784138035,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_holdout_015\",\n      \"source\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"ko_slot_001\"\n      },\n      \"target\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"ko_slot_002\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"y_{n+1} = y_n + hF(t_n,y_n)\"\n        },\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope. Its update is\"\n        }\n      ],\n      \"rationale\": \"The formula 'Forward Euler Update' explicitly defines the update step of the 'Forward Euler Method', as indicated by the lecture text stating 'Its update is' followed by the formula.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2324,
+    "completion_tokens": 249,
+    "total_tokens": 2573,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 276
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

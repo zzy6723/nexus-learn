@@ -1,0 +1,28 @@
+{
+  "id": "73351f2e-b4c3-437d-b519-d8cec8f68808",
+  "object": "chat.completion",
+  "created": 1784138020,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_holdout_007\",\n      \"source\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"ko_slot_010\"\n      },\n      \"target\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"ko_slot_016\"\n      },\n      \"relation_type\": \"APPLIED_IN\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"graph_algorithms_001\",\n          \"span\": \"Dijkstra's algorithm is applied to this problem when all edge weights are nonnegative.\"\n        }\n      ],\n      \"rationale\": \"The lecture states that Dijkstra's algorithm is applied to the single-source shortest-path problem, establishing an APPLIED_IN relation where the algorithm is the tool used in the problem context.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2286,
+    "completion_tokens": 191,
+    "total_tokens": 2477,
+    "prompt_tokens_details": {
+      "cached_tokens": 2176
+    },
+    "prompt_cache_hit_tokens": 2176,
+    "prompt_cache_miss_tokens": 110
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

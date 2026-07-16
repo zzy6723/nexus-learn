@@ -1,0 +1,28 @@
+{
+  "id": "cc9cb3b4-ca35-4a3e-bf2f-f08eb51acf9a",
+  "object": "chat.completion",
+  "created": 1784133187,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"lecture_id\": \"statistics_estimation_001\",\n  \"knowledge_objects\": [\n    {\n      \"id\": \"statistical_model\",\n      \"name\": \"Statistical Model\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"A family of probability distributions indexed by an unknown parameter.\",\n      \"source_span\": \"A statistical model is a family of probability distributions indexed by an unknown parameter \\\\(\\\\theta\\\\).\"\n    },\n    {\n      \"id\": \"likelihood\",\n      \"name\": \"Likelihood\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"A function defined from the statistical model by treating observations as fixed and comparing possible parameter values.\",\n      \"source_span\": \"The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values.\"\n    },\n    {\n      \"id\": \"likelihood_function\",\n      \"name\": \"Likelihood Function\",\n      \"type\": \"Formula\",\n      \"aliases\": [],\n      \"short_definition\": \"For independent observations, the product of the densities evaluated at each observation.\",\n      \"source_span\": \"L(\\\\theta; x_{1:n}) = \\\\prod_{i=1}^{n} p(x_i \\\\mid \\\\theta).\"\n    },\n    {\n      \"id\": \"log_likelihood\",\n      \"name\": \"Log-Likelihood\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"The logarithm of the likelihood.\",\n      \"source_span\": \"The log-likelihood is obtained by taking the logarithm of the likelihood.\"\n    },\n    {\n      \"id\": \"log_likelihood_function\",\n      \"name\": \"Log-Likelihood Function\",\n      \"type\": \"Formula\",\n      \"aliases\": [],\n      \"short_definition\": \"Sum of log-densities for independent observations.\",\n      \"source_span\": \"\\\\ell(\\\\theta) = \\\\log L(\\\\theta; x_{1:n}) = \\\\sum_{i=1}^{n} \\\\log p(x_i \\\\mid \\\\theta).\"\n    },\n    {\n      \"id\": \"maximum_likelihood_estimation\",\n      \"name\": \"Maximum Likelihood Estimation\",\n      \"type\": \"Method\",\n      \"aliases\": [\"MLE\"],\n      \"short_definition\": \"A method that selects a parameter value maximizing the log-likelihood.\",\n      \"source_span\": \"Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it\"\n    },\n    {\n      \"id\": \"mle_estimator\",\n      \"name\": \"MLE Estimator\",\n      \"type\": \"Formula\",\n      \"aliases\": [],\n      \"short_definition\": \"The parameter value that maximizes the log-likelihood.\",\n      \"source_span\": \"\\\\widehat{\\\\theta}_{\\\\mathrm{MLE}} = \\\\operatorname*{arg\\\\,max}_{\\\\theta}\\\\, \\\\ell(\\\\theta).\"\n    },\n    {\n      \"id\": \"score_function\",\n      \"name\": \"Score Function\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"The derivative of the log-likelihood with respect to the parameter.\",\n      \"source_span\": \"The score function is the derivative of the log-likelihood with respect to the parameter\"\n    },\n    {\n      \"id\": \"score_function_formula\",\n      \"name\": \"Score Function Formula\",\n      \"type\": \"Formula\",\n      \"aliases\": [],\n      \"short_definition\": \"Gradient of the log-likelihood.\",\n      \"source_span\": \"s(\\\\theta) = \\\\nabla_{\\\\theta}\\\\ell(\\\\theta).\"\n    },\n    {\n      \"id\": \"score_equation\",\n      \"name\": \"Score Equation\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"Equation s(θ)=0 that an MLE candidate satisfies at an interior differentiable optimum.\",\n      \"source_span\": \"At an interior differentiable optimum, an MLE candidate satisfies the score equation \\\\(s(\\\\theta)=0\\\\).\"\n    },\n    {\n      \"id\": \"newtons_method\",\n      \"name\": \"Newton's Method\",\n      \"type\": \"Method\",\n      \"aliases\": [],\n      \"short_definition\": \"An iterative numerical method applied to compute an MLE candidate when the score equation has no closed-form solution.\",\n      \"source_span\": \"Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 780,
+    "completion_tokens": 978,
+    "total_tokens": 1758,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 780
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

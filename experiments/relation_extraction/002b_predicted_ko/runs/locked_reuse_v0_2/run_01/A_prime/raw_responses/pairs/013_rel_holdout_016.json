@@ -1,0 +1,28 @@
+{
+  "id": "627172bd-e573-4fb2-9df0-1a8ced024b48",
+  "object": "chat.completion",
+  "created": 1784137410,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_holdout_016\",\n      \"source\": {\n        \"lecture_id\": \"numerical_root_finding_001\",\n        \"ko_id\": \"ko_slot_017\"\n      },\n      \"target\": {\n        \"lecture_id\": \"numerical_root_finding_001\",\n        \"ko_id\": \"ko_slot_020\"\n      },\n      \"relation_type\": \"CONTRASTS_WITH\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"numerical_root_finding_001\",\n          \"span\": \"Newton's method and the bisection method contrast in the information they use: Newton's method requires derivative values and can converge rapidly near a root, whereas bisection uses only function signs and preserves a bracket at every iteration.\"\n        }\n      ],\n      \"rationale\": \"The lecture explicitly contrasts Newton's method and the bisection method in terms of the information they use and their convergence behavior.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2287,
+    "completion_tokens": 213,
+    "total_tokens": 2500,
+    "prompt_tokens_details": {
+      "cached_tokens": 1664
+    },
+    "prompt_cache_hit_tokens": 1664,
+    "prompt_cache_miss_tokens": 623
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

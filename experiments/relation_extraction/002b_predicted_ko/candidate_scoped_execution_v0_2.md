@@ -3,6 +3,8 @@
 **Scope:** `locked_reuse_v0_2`
 **Request partitioning:** `one_candidate_pair_per_request_v0_1`
 **Claim boundary:** execution-method revision on previously evaluated material
+**Execution status:** Complete
+**Evaluation status:** Final
 
 ## Purpose
 
@@ -99,3 +101,13 @@ A-prime aggregate metadata first. Do not use `--overwrite`.
 
 The final report must retain the v0.1 failure and describe v0.2 as a revised
 execution diagnostic, not as an untouched holdout result.
+
+## Outcome
+
+All required gates completed. A-prime and B-prime each produced 33 valid
+candidate-scoped predictions with no retries or endpoint substitutions. The
+pipeline evaluation is final with 33/40 recoverable pairs and 26/40 end-to-end
+strict successes.
+
+See `locked_reuse_v0_2_results.md` for denominators, paired transitions, error
+analysis, and the claim boundary.

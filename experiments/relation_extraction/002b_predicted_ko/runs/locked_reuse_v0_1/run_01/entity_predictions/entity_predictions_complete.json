@@ -1,0 +1,20 @@
+{
+  "artifact_type": "entity_predictions_completion_marker",
+  "version": "v0.1",
+  "status": "final",
+  "completed_at": "2026-07-15T16:35:28.761473+00:00",
+  "method_commit": "38395faaf3ff36ca1bb178b843d659cb908497f1",
+  "execution_manifest_sha256": "782b2340080aaef48291e3075cbe81d1869b970db9f82b586243d90a9c403959",
+  "source_manifest_sha256": "abf6a8d19fe0653e2292f7af027deda599eecf708ba5b639318dcdc7e097a7be",
+  "entity_source_bundle": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/entity_source_bundle.json",
+  "entity_source_bundle_sha256": "8243acb8f81aeaed7a7261c778ae2eea245f1189e49dfe28eeff9801f5f3d070",
+  "artifact_set_sha256": "74988b75fba4e0337ff6bfb846aefb1083b62a611b9335d16b79d8665d5d68a1",
+  "counts": {
+    "lectures": 4,
+    "reused": 0,
+    "new_reruns": 4,
+    "missing": 0,
+    "invalid": 0,
+    "plan_violations": 0
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "artifact_type": "predicted_ko_projection_diagnostics",
+  "diagnostic_pairs": [],
+  "evaluation_status": "final",
+  "pair_recoverability": {
+    "denominator": 40,
+    "numerator": 33,
+    "value": 0.825
+  },
+  "recoverable_slot_quality_flags": [
+    {
+      "flags": [
+        "predicted_source_span_invalid"
+      ],
+      "oracle_ref": {
+        "ko_id": "initial_value_problem",
+        "lecture_id": "differential_equations_001"
+      },
+      "predicted_ref": {
+        "ko_id": "initial_value_problem",
+        "lecture_id": "differential_equations_001"
+      },
+      "slot_id": "ko_slot_005"
+    },
+    {
+      "flags": [
+        "predicted_source_span_invalid"
+      ],
+      "oracle_ref": {
+        "ko_id": "step_size",
+        "lecture_id": "differential_equations_001"
+      },
+      "predicted_ref": {
+        "ko_id": "step_size",
+        "lecture_id": "differential_equations_001"
+      },
+      "slot_id": "ko_slot_007"
+    },
+    {
+      "flags": [
+        "predicted_source_span_invalid"
+      ],
+      "oracle_ref": {
+        "ko_id": "vector_field",
+        "lecture_id": "differential_equations_001"
+      },
+      "predicted_ref": {
+        "ko_id": "vector_field",
+        "lecture_id": "differential_equations_001"
+      },
+      "slot_id": "ko_slot_008"
+    }
+  ],
+  "unmatched_extra_predicted_kos": [
+    {
+      "ko_id": "discretization_error",
+      "lecture_id": "differential_equations_001"
+    },
+    {
+      "ko_id": "newtons_method",
+      "lecture_id": "statistics_estimation_001"
+    },
+    {
+      "ko_id": "score_equation",
+      "lecture_id": "statistics_estimation_001"
+    }
+  ],
+  "unrecoverable_primary_pairs": [
+    {
+      "category": "positive",
+      "pair_id": "rel_holdout_005",
+      "pair_status": "unrecoverable",
+      "unrecoverable_reasons": [
+        "missing_endpoint"
+      ]
+    },
+    {
+      "category": "positive",
+      "pair_id": "rel_holdout_011",
+      "pair_status": "unrecoverable",
+      "unrecoverable_reasons": [
+        "missing_endpoint"
+      ]
+    },
+    {
+      "category": "positive",
+      "pair_id": "rel_holdout_012",
+      "pair_status": "unrecoverable",
+      "unrecoverable_reasons": [
+        "missing_endpoint"
+      ]
+    },
+    {
+      "category": "hard_negative",
+      "pair_id": "rel_holdout_022",
+      "pair_status": "unrecoverable",
+      "unrecoverable_reasons": [
+        "missing_endpoint"
+      ]
+    },
+    {
+      "category": "positive",
+      "pair_id": "rel_holdout_026",
+      "pair_status": "unrecoverable",
+      "unrecoverable_reasons": [
+        "missing_endpoint"
+      ]
+    },
+    {
+      "category": "hard_negative",
+      "pair_id": "rel_holdout_027",
+      "pair_status": "unrecoverable",
+      "unrecoverable_reasons": [
+        "missing_endpoint"
+      ]
+    },
+    {
+      "category": "hard_negative",
+      "pair_id": "rel_holdout_038",
+      "pair_status": "unrecoverable",
+      "unrecoverable_reasons": [
+        "missing_endpoint"
+      ]
+    }
+  ],
+  "version": "v0.1"
+}

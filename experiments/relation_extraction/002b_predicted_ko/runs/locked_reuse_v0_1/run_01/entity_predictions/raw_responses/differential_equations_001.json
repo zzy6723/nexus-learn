@@ -1,0 +1,28 @@
+{
+  "id": "40f794a0-4aa1-4784-afa6-ee59cc9ac26c",
+  "object": "chat.completion",
+  "created": 1784133201,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"lecture_id\": \"differential_equations_001\",\n  \"knowledge_objects\": [\n    {\n      \"id\": \"ordinary_differential_equation\",\n      \"name\": \"Ordinary Differential Equation\",\n      \"type\": \"Concept\",\n      \"aliases\": [\"ODE\"],\n      \"short_definition\": \"An equation that relates an unknown function of one variable to its derivatives.\",\n      \"source_span\": \"An ordinary differential equation relates an unknown function of one variable to its derivatives.\"\n    },\n    {\n      \"id\": \"first_order_equation\",\n      \"name\": \"First-Order Equation\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"A differential equation that can be written as y'(t) = F(t, y(t)).\",\n      \"source_span\": \"A first-order equation can be written as y'(t) = F(t,y(t)).\"\n    },\n    {\n      \"id\": \"initial_value_problem\",\n      \"name\": \"Initial Value Problem\",\n      \"type\": \"Concept\",\n      \"aliases\": [\"IVP\"],\n      \"short_definition\": \"An ordinary differential equation combined with an initial condition such as y(t0)=y0.\",\n      \"source_span\": \"An initial value problem combines an ordinary differential equation with an initial condition such as y(t_0)=y_0.\"\n    },\n    {\n      \"id\": \"vector_field\",\n      \"name\": \"Vector Field\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"The function F that specifies the slope that the solution should follow at each state.\",\n      \"source_span\": \"The vector field F specifies the slope that the solution should follow at each state.\"\n    },\n    {\n      \"id\": \"forward_euler_method\",\n      \"name\": \"Forward Euler Method\",\n      \"type\": \"Method\",\n      \"aliases\": [\"Euler's method\"],\n      \"short_definition\": \"A method that advances from the current approximation along the current vector-field slope.\",\n      \"source_span\": \"The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope.\"\n    },\n    {\n      \"id\": \"step_size\",\n      \"name\": \"Step Size\",\n      \"type\": \"Concept\",\n      \"aliases\": [\"h\"],\n      \"short_definition\": \"The spacing between consecutive numerical time points.\",\n      \"source_span\": \"The step size h sets the spacing between consecutive numerical time points.\"\n    },\n    {\n      \"id\": \"discretization_error\",\n      \"name\": \"Discretization Error\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"Error that is reduced by smaller steps but requires more updates.\",\n      \"source_span\": \"Smaller steps usually reduce discretization error but require more updates over a fixed time interval.\"\n    },\n    {\n      \"id\": \"heuns_method\",\n      \"name\": \"Heun's Method\",\n      \"type\": \"Method\",\n      \"aliases\": [\"predictor-corrector method\"],\n      \"short_definition\": \"A method that extends forward Euler with a predictor-corrector step.\",\n      \"source_span\": \"Heun's method extends the forward Euler method with a predictor-corrector step.\"\n    },\n    {\n      \"id\": \"euler_predictor\",\n      \"name\": \"Euler Predictor\",\n      \"type\": \"Concept\",\n      \"aliases\": [],\n      \"short_definition\": \"The predictor step in Heun's method, given by y_{n+1} = y_n + h F(t_n, y_n).\",\n      \"source_span\": \"It first forms the Euler predictor y_{n+1} = y_n + hF(t_n,y_n)\"\n    },\n    {\n      \"id\": \"forward_euler_update\",\n      \"name\": \"Forward Euler Update\",\n      \"type\": \"Formula\",\n      \"aliases\": [],\n      \"short_definition\": \"The update formula y_{n+1} = y_n + h F(t_n, y_n).\",\n      \"source_span\": \"y_{n+1} = y_n + hF(t_n,y_n)\"\n    },\n    {\n      \"id\": \"heuns_update\",\n      \"name\": \"Heun's Update\",\n      \"type\": \"Formula\",\n      \"aliases\": [],\n      \"short_definition\": \"The corrected update formula y_{n+1} = y_n + (h/2)(F(t_n,y_n)+F(t_n+h, y_{n+1})).\",\n      \"source_span\": \"y_{n+1} = y_n + \\\\frac{h}{2}\\\\left(F(t_n,y_n)+F(t_n+h,\\\\widetilde{y}_{n+1})\\\\right)\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 773,
+    "completion_tokens": 1027,
+    "total_tokens": 1800,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 773
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

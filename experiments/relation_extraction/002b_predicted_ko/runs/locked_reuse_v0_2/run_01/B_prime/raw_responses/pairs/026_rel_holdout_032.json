@@ -1,0 +1,28 @@
+{
+  "id": "cc96b361-7363-44dd-9630-b0d0a334cb71",
+  "object": "chat.completion",
+  "created": 1784138071,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_holdout_032\",\n      \"source\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"ko_slot_002\"\n      },\n      \"target\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"ko_slot_008\"\n      },\n      \"relation_type\": \"REQUIRES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope.\"\n        },\n        {\n          \"lecture_id\": \"differential_equations_001\",\n          \"span\": \"Its update is y_{n+1} = y_n + hF(t_n,y_n).\"\n        }\n      ],\n      \"rationale\": \"The forward Euler method requires the vector field F to compute its update, as the method advances along the slope specified by F.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2322,
+    "completion_tokens": 238,
+    "total_tokens": 2560,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 274
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,244 @@
+{
+  "decisions": [
+    {
+      "pair_id": "rel_holdout_003",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "ko_slot_014"
+        },
+        "target": {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "ko_slot_013"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Its path cost is the sum of their edge weights:\n\n\\[\nC(v_0,\\ldots,v_k) = \\sum_{i=0}^{k-1} w(v_i,v_{i+1}).\n\\]"
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The span explicitly names path cost and gives the sum-of-edge-weights equation that formalizes it."
+    },
+    {
+      "pair_id": "rel_holdout_004",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "ko_slot_005"
+        },
+        "target": {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "ko_slot_006"
+        },
+        "relation_type": "REQUIRES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "An initial value problem combines an ordinary differential equation with an initial condition such as y(t_0)=y_0."
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The span explicitly states that an Initial Value Problem combines an Ordinary Differential Equation with an initial condition."
+    },
+    {
+      "pair_id": "rel_holdout_007",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "ko_slot_010"
+        },
+        "target": {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "ko_slot_016"
+        },
+        "relation_type": "APPLIED_IN"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Dijkstra's algorithm is applied to this problem when all edge weights are nonnegative."
+        }
+      ],
+      "decision": "not_supported",
+      "rationale": "The selected span names Dijkstra's Algorithm but refers only to \"this problem\"; no selected span resolves that reference as the Single-Source Shortest-Path Problem."
+    },
+    {
+      "pair_id": "rel_holdout_015",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "ko_slot_001"
+        },
+        "target": {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "ko_slot_002"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y_{n+1} = y_n + hF(t_n,y_n)"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope. Its update is"
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The selected prose names the Forward Euler Method and resolves \"Its update\" within the same span; the second span supplies that update formula."
+    },
+    {
+      "pair_id": "rel_holdout_017",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "ko_slot_016"
+        },
+        "target": {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "ko_slot_013"
+        },
+        "relation_type": "REQUIRES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex."
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Its path cost is the sum of their edge weights"
+        }
+      ],
+      "decision": "supported",
+      "rationale": "Read together, the spans define the shortest-path objective in terms of minimum path cost and state how path cost is computed, establishing the required dependency."
+    },
+    {
+      "pair_id": "rel_holdout_023",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "numerical_root_finding_001",
+          "ko_id": "ko_slot_021"
+        },
+        "target": {
+          "lecture_id": "numerical_root_finding_001",
+          "ko_id": "ko_slot_020"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "Newton's method uses the derivative to replace the function locally by its tangent line. Provided \\(f'(x_k)\\neq 0\\), its update is\n\n\\[\nx_{k+1} = x_k - \\frac{f(x_k)}{f'(x_k)}.\n\\]"
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The span names Newton's Method and directly presents its update equation."
+    },
+    {
+      "pair_id": "rel_holdout_025",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "ko_slot_015"
+        },
+        "target": {
+          "lecture_id": "graph_algorithms_001",
+          "ko_id": "ko_slot_011"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Relaxation is formalized by the update\n\nd(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}."
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The span explicitly states that relaxation is formalized by the displayed update."
+    },
+    {
+      "pair_id": "rel_holdout_033",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "ko_slot_028"
+        },
+        "target": {
+          "lecture_id": "statistics_estimation_001",
+          "ko_id": "ko_slot_027"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta)."
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The selected evidence names Maximum Likelihood Estimation and gives the estimator equation that formalizes its parameter choice."
+    },
+    {
+      "pair_id": "rel_holdout_037",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "ko_slot_004"
+        },
+        "target": {
+          "lecture_id": "differential_equations_001",
+          "ko_id": "ko_slot_003"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right)"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+        }
+      ],
+      "decision": "not_supported",
+      "rationale": "The selected sentence only states that Heun's Method extends Forward Euler with a predictor-corrector step. The separate formula span is not identified as Heun's corrected update because the linking phrase \"The corrected update is\" was omitted."
+    },
+    {
+      "pair_id": "rel_holdout_039",
+      "predicted_edge": {
+        "source": {
+          "lecture_id": "numerical_root_finding_001",
+          "ko_id": "ko_slot_019"
+        },
+        "target": {
+          "lecture_id": "numerical_root_finding_001",
+          "ko_id": "ko_slot_017"
+        },
+        "relation_type": "FORMALIZES"
+      },
+      "predicted_evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "m = \\frac{a+b}{2}"
+        },
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "The bisection method begins with a sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\). It evaluates the midpoint\n\n\\[\nm = \\frac{a+b}{2}\n\\]\n\nand retains the half-interval whose endpoints still have opposite signs."
+        }
+      ],
+      "decision": "supported",
+      "rationale": "The full paragraph names the Bisection Method, identifies its midpoint operation, and gives the midpoint formula."
+    }
+  ]
+}

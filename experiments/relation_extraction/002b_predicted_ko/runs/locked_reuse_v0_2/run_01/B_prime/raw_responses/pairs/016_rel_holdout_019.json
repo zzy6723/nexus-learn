@@ -1,0 +1,28 @@
+{
+  "id": "8c390fd1-034e-4386-b2e6-5a4da42eb2ce",
+  "object": "chat.completion",
+  "created": 1784138046,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_holdout_019\",\n      \"source\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"ko_slot_024\"\n      },\n      \"target\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"ko_slot_023\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values.\"\n        },\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"L(\\\\theta; x_{1:n}) = \\\\prod_{i=1}^{n} p(x_i \\\\mid \\\\theta).\"\n        }\n      ],\n      \"rationale\": \"The Likelihood Function formula explicitly defines the Likelihood concept, so the formula formalizes the concept.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2355,
+    "completion_tokens": 237,
+    "total_tokens": 2592,
+    "prompt_tokens_details": {
+      "cached_tokens": 2176
+    },
+    "prompt_cache_hit_tokens": 2176,
+    "prompt_cache_miss_tokens": 179
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

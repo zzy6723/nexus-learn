@@ -1,0 +1,28 @@
+{
+  "id": "3688503d-5782-4b5f-96d9-4b74f74d0c3a",
+  "object": "chat.completion",
+  "created": 1784137448,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_holdout_033\",\n      \"source\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"ko_slot_028\"\n      },\n      \"target\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"ko_slot_027\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:\\n\\n\\\\[\\n\\\\widehat{\\\\theta}_{\\\\mathrm{MLE}} = \\\\operatorname*{arg\\\\,max}_{\\\\theta}\\\\, \\\\ell(\\\\theta).\\n\\\\]\"\n        }\n      ],\n      \"rationale\": \"The Maximum Likelihood Estimator Formula explicitly defines the parameter value selected by Maximum Likelihood Estimation, thus formalizing the method.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2365,
+    "completion_tokens": 231,
+    "total_tokens": 2596,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 317
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

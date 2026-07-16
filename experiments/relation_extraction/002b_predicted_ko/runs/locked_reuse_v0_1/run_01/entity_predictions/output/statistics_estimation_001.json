@@ -1,0 +1,95 @@
+{
+  "lecture_id": "statistics_estimation_001",
+  "knowledge_objects": [
+    {
+      "id": "statistical_model",
+      "name": "Statistical Model",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "A family of probability distributions indexed by an unknown parameter.",
+      "source_span": "A statistical model is a family of probability distributions indexed by an unknown parameter \\(\\theta\\)."
+    },
+    {
+      "id": "likelihood",
+      "name": "Likelihood",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "A function defined from the statistical model by treating observations as fixed and comparing possible parameter values.",
+      "source_span": "The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values."
+    },
+    {
+      "id": "likelihood_function",
+      "name": "Likelihood Function",
+      "type": "Formula",
+      "aliases": [],
+      "short_definition": "For independent observations, the product of the densities evaluated at each observation.",
+      "source_span": "L(\\theta; x_{1:n}) = \\prod_{i=1}^{n} p(x_i \\mid \\theta)."
+    },
+    {
+      "id": "log_likelihood",
+      "name": "Log-Likelihood",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "The logarithm of the likelihood.",
+      "source_span": "The log-likelihood is obtained by taking the logarithm of the likelihood."
+    },
+    {
+      "id": "log_likelihood_function",
+      "name": "Log-Likelihood Function",
+      "type": "Formula",
+      "aliases": [],
+      "short_definition": "Sum of log-densities for independent observations.",
+      "source_span": "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta)."
+    },
+    {
+      "id": "maximum_likelihood_estimation",
+      "name": "Maximum Likelihood Estimation",
+      "type": "Method",
+      "aliases": [
+        "MLE"
+      ],
+      "short_definition": "A method that selects a parameter value maximizing the log-likelihood.",
+      "source_span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it"
+    },
+    {
+      "id": "mle_estimator",
+      "name": "MLE Estimator",
+      "type": "Formula",
+      "aliases": [],
+      "short_definition": "The parameter value that maximizes the log-likelihood.",
+      "source_span": "\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta)."
+    },
+    {
+      "id": "score_function",
+      "name": "Score Function",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "The derivative of the log-likelihood with respect to the parameter.",
+      "source_span": "The score function is the derivative of the log-likelihood with respect to the parameter"
+    },
+    {
+      "id": "score_function_formula",
+      "name": "Score Function Formula",
+      "type": "Formula",
+      "aliases": [],
+      "short_definition": "Gradient of the log-likelihood.",
+      "source_span": "s(\\theta) = \\nabla_{\\theta}\\ell(\\theta)."
+    },
+    {
+      "id": "score_equation",
+      "name": "Score Equation",
+      "type": "Concept",
+      "aliases": [],
+      "short_definition": "Equation s(θ)=0 that an MLE candidate satisfies at an interior differentiable optimum.",
+      "source_span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\)."
+    },
+    {
+      "id": "newtons_method",
+      "name": "Newton's Method",
+      "type": "Method",
+      "aliases": [],
+      "short_definition": "An iterative numerical method applied to compute an MLE candidate when the score equation has no closed-form solution.",
+      "source_span": "Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "artifact_type": "predicted_ko_pipeline_evaluation_complete",
+  "artifacts": {
+    "pair_transitions.json": "60a690032c2500e2385904f735a095561b3a1d753ad1cf6a8b77de37b0306040",
+    "pipeline_errors.json": "e798a31f2216847368ee8063760471648dd36307f20b90a4e3e77221789ab923",
+    "pipeline_metrics.json": "569b4752b1e3eea5cf2354fda4ac279a5e794992337c6e7116af96d942dc2bc5"
+  },
+  "evaluation_status": "final",
+  "upstream": {
+    "A0_evaluation_sha256": "f02427b04aa2e827f0d920559c8e4d80b7409de792a8e4501bd9ce0eefc55a8f",
+    "A_prime_evaluation_sha256": "186bdcba729c47dc31dd5cc0427fa168c9d03cf50c0a3f00200cc1778ed6eb0c",
+    "A_prime_input_sha256": "91b9078b8118b9dd3fb3d4b19480bb374778d7f076c6edaa3160dab97a6f2572",
+    "A_prime_prediction_sha256": "eca906e16efe942ae3bb651d180d3a3e8ced804166b8c80bb823c438af18f70a",
+    "A_prime_run_metadata_sha256": "d3e09e16c02f482c2de7d34fb5847a1ad69b8c7790b1413274294ee52285063b",
+    "B_prime_evaluation_sha256": "7ff40ae5653e9127b6c248ca2d764d1a232845b00f0c13dd0b8865acc7280b2e",
+    "B_prime_input_sha256": "b03f92ac00ce35bb0c07cffae47223a06134d85d9e3f85f26513c9055b06ba9e",
+    "B_prime_prediction_sha256": "117fd90d6a7bbc581a73fc6f6ecba8d6ab19e3b192035cfe37f6b3d84d6b53e5",
+    "B_prime_run_metadata_sha256": "234ba613b0883570ddb820d459c5be1f0bd25cc6ca00d72b1f07bcae4cc32e7a",
+    "alignment_bundle_complete_sha256": "d3dba418de7f436616062ad64a0d8d7472a8574a2afa8cb3a337b9b2cf29f4f7",
+    "alignment_sha256": "9d9770bc0a33b73284dd54e2f9b9c03433855db8ed96019188a548626891f075",
+    "batch_plan_sha256": "1e5f1851ec1ce14329ffc828052390ab8e29344de9486c88b94d815276a9177e",
+    "ko_manifest_sha256": "ce23e9e3bfdb6fbdc85ce6f688fab1586e095eb61e49aeb2cd87ed8adc4110c4",
+    "matched_ground_truth_sha256": "d949b240c937a2c637a96ea30c03384d1e48791dea640f7b851094efb9e154f6",
+    "original_ground_truth_sha256": "20cf7a8b2aeb76f372e103c59c453bfa15c43732885b6c621af26f5edd427a6f",
+    "pair_manifest_sha256": "9454970f63f9403a6fbee2b93a7f005c20bf8a4530887b5de6d2c234392ba2dd",
+    "projection_bundle_complete_sha256": "93ff5d79453124a161f88cefc33732f1599dc0ea5b7e0df5e525e32cad2520a6"
+  },
+  "version": "v0.1"
+}

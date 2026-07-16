@@ -1,0 +1,28 @@
+{
+  "id": "1df3e451-92e1-427e-bca8-5d16175de43f",
+  "object": "chat.completion",
+  "created": 1784137394,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_holdout_008\",\n      \"source\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"ko_slot_026\"\n      },\n      \"target\": {\n        \"lecture_id\": \"statistics_estimation_001\",\n        \"ko_id\": \"ko_slot_025\"\n      },\n      \"relation_type\": \"FORMALIZES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"statistics_estimation_001\",\n          \"span\": \"\\\\ell(\\\\theta) = \\\\log L(\\\\theta; x_{1:n}) = \\\\sum_{i=1}^{n} \\\\log p(x_i \\\\mid \\\\theta).\"\n        }\n      ],\n      \"rationale\": \"The Log-Likelihood Formula explicitly defines the Log-Likelihood concept, so it formalizes it.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2365,
+    "completion_tokens": 205,
+    "total_tokens": 2570,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 317
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

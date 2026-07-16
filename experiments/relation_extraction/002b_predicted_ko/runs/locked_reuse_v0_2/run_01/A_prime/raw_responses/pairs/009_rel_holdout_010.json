@@ -1,0 +1,28 @@
+{
+  "id": "c1a74b13-4515-466b-bd3f-22d137bceefa",
+  "object": "chat.completion",
+  "created": 1784137399,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_holdout_010\",\n      \"source\": {\n        \"lecture_id\": \"graph_algorithms_001\",\n        \"ko_id\": \"ko_slot_010\"\n      },\n      \"target\": {\n        \"lecture_id\": \"numerical_root_finding_001\",\n        \"ko_id\": \"ko_slot_017\"\n      },\n      \"relation_type\": \"NO_RELATION\",\n      \"evidence_spans\": [],\n      \"rationale\": \"The two lectures discuss different topics (graph algorithms vs. root-finding) and no evidence connects Dijkstra's Algorithm to the Bisection Method.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2576,
+    "completion_tokens": 145,
+    "total_tokens": 2721,
+    "prompt_tokens_details": {
+      "cached_tokens": 1920
+    },
+    "prompt_cache_hit_tokens": 1920,
+    "prompt_cache_miss_tokens": 656
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,574 @@
+{
+  "artifact_type": "predicted_ko_normalized_inventory",
+  "input_files": [
+    {
+      "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/differential_equations_001.json",
+      "sha256": "53b3338a82d50f93ef623de9065b57294e384cf9bc49691ec4b353ac19c6ac37"
+    },
+    {
+      "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/graph_algorithms_001.json",
+      "sha256": "bee17666c0ce917d96b7f9cd41c41de2fe49ea53e9be3436d7a8172d34cd5325"
+    },
+    {
+      "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/numerical_root_finding_001.json",
+      "sha256": "6328bde3dfe6eb5e6d94a45caa00cb1a230b0cf3686811e1da3189bbfbdd5530"
+    },
+    {
+      "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/statistics_estimation_001.json",
+      "sha256": "981dc3a171e6458a631d7114a9aa95a3dda76b0ab654dc9dd3f074f83eff3c24"
+    }
+  ],
+  "input_set_sha256": "80da2125f94d6d5f15e865346368b48e323f455cdb22d405baab4a1705105286",
+  "knowledge_objects": [
+    {
+      "lecture_id": "differential_equations_001",
+      "name": "Discretization Error",
+      "predicted_ko_id": "discretization_error",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/differential_equations_001.json",
+        "source_object_index": 6,
+        "source_prediction_id": "discretization_error"
+      },
+      "source_spans": [
+        "Smaller steps usually reduce discretization error but require more updates over a fixed time interval."
+      ],
+      "type": "Concept"
+    },
+    {
+      "lecture_id": "differential_equations_001",
+      "name": "Euler Predictor",
+      "predicted_ko_id": "euler_predictor",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/differential_equations_001.json",
+        "source_object_index": 8,
+        "source_prediction_id": "euler_predictor"
+      },
+      "source_spans": [
+        "It first forms the Euler predictor y_{n+1} = y_n + hF(t_n,y_n)"
+      ],
+      "type": "Concept"
+    },
+    {
+      "lecture_id": "differential_equations_001",
+      "name": "First-Order Equation",
+      "predicted_ko_id": "first_order_equation",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/differential_equations_001.json",
+        "source_object_index": 1,
+        "source_prediction_id": "first_order_equation"
+      },
+      "source_spans": [
+        "A first-order equation can be written as y'(t) = F(t,y(t))."
+      ],
+      "type": "Concept"
+    },
+    {
+      "lecture_id": "differential_equations_001",
+      "name": "Forward Euler Method",
+      "predicted_ko_id": "forward_euler_method",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/differential_equations_001.json",
+        "source_object_index": 4,
+        "source_prediction_id": "forward_euler_method"
+      },
+      "source_spans": [
+        "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope."
+      ],
+      "type": "Method"
+    },
+    {
+      "lecture_id": "differential_equations_001",
+      "name": "Forward Euler Update",
+      "predicted_ko_id": "forward_euler_update",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/differential_equations_001.json",
+        "source_object_index": 9,
+        "source_prediction_id": "forward_euler_update"
+      },
+      "source_spans": [
+        "y_{n+1} = y_n + hF(t_n,y_n)"
+      ],
+      "type": "Formula"
+    },
+    {
+      "lecture_id": "differential_equations_001",
+      "name": "Heun's Method",
+      "predicted_ko_id": "heuns_method",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/differential_equations_001.json",
+        "source_object_index": 7,
+        "source_prediction_id": "heuns_method"
+      },
+      "source_spans": [
+        "Heun's method extends the forward Euler method with a predictor-corrector step."
+      ],
+      "type": "Method"
+    },
+    {
+      "lecture_id": "differential_equations_001",
+      "name": "Heun's Update",
+      "predicted_ko_id": "heuns_update",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/differential_equations_001.json",
+        "source_object_index": 10,
+        "source_prediction_id": "heuns_update"
+      },
+      "source_spans": [
+        "y_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right)"
+      ],
+      "type": "Formula"
+    },
+    {
+      "lecture_id": "differential_equations_001",
+      "name": "Initial Value Problem",
+      "predicted_ko_id": "initial_value_problem",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/differential_equations_001.json",
+        "source_object_index": 2,
+        "source_prediction_id": "initial_value_problem"
+      },
+      "source_spans": [
+        "An initial value problem combines an ordinary differential equation with an initial condition such as y(t_0)=y_0."
+      ],
+      "type": "Concept"
+    },
+    {
+      "lecture_id": "differential_equations_001",
+      "name": "Ordinary Differential Equation",
+      "predicted_ko_id": "ordinary_differential_equation",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/differential_equations_001.json",
+        "source_object_index": 0,
+        "source_prediction_id": "ordinary_differential_equation"
+      },
+      "source_spans": [
+        "An ordinary differential equation relates an unknown function of one variable to its derivatives."
+      ],
+      "type": "Concept"
+    },
+    {
+      "lecture_id": "differential_equations_001",
+      "name": "Step Size",
+      "predicted_ko_id": "step_size",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/differential_equations_001.json",
+        "source_object_index": 5,
+        "source_prediction_id": "step_size"
+      },
+      "source_spans": [
+        "The step size h sets the spacing between consecutive numerical time points."
+      ],
+      "type": "Concept"
+    },
+    {
+      "lecture_id": "differential_equations_001",
+      "name": "Vector Field",
+      "predicted_ko_id": "vector_field",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/differential_equations_001.json",
+        "source_object_index": 3,
+        "source_prediction_id": "vector_field"
+      },
+      "source_spans": [
+        "The vector field F specifies the slope that the solution should follow at each state."
+      ],
+      "type": "Concept"
+    },
+    {
+      "lecture_id": "graph_algorithms_001",
+      "name": "A* Search",
+      "predicted_ko_id": "a_star_search",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/graph_algorithms_001.json",
+        "source_object_index": 8,
+        "source_prediction_id": "a_star_search"
+      },
+      "source_spans": [
+        "A* search extends Dijkstra's algorithm by using a heuristic function \\(h(v)\\) to guide which vertex is explored next."
+      ],
+      "type": "Method"
+    },
+    {
+      "lecture_id": "graph_algorithms_001",
+      "name": "Dijkstra's Algorithm",
+      "predicted_ko_id": "dijkstras_algorithm",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/graph_algorithms_001.json",
+        "source_object_index": 5,
+        "source_prediction_id": "dijkstras_algorithm"
+      },
+      "source_spans": [
+        "Dijkstra's algorithm is applied to this problem when all edge weights are nonnegative."
+      ],
+      "type": "Method"
+    },
+    {
+      "lecture_id": "graph_algorithms_001",
+      "name": "Edge Relaxation",
+      "predicted_ko_id": "edge_relaxation",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/graph_algorithms_001.json",
+        "source_object_index": 6,
+        "source_prediction_id": "edge_relaxation"
+      },
+      "source_spans": [
+        "it applies edge relaxation to each outgoing edge."
+      ],
+      "type": "Method"
+    },
+    {
+      "lecture_id": "graph_algorithms_001",
+      "name": "Heuristic Function",
+      "predicted_ko_id": "heuristic_function",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/graph_algorithms_001.json",
+        "source_object_index": 9,
+        "source_prediction_id": "heuristic_function"
+      },
+      "source_spans": [
+        "heuristic function \\(h(v)\\)"
+      ],
+      "type": "Concept"
+    },
+    {
+      "lecture_id": "graph_algorithms_001",
+      "name": "Path",
+      "predicted_ko_id": "path",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/graph_algorithms_001.json",
+        "source_object_index": 1,
+        "source_prediction_id": "path"
+      },
+      "source_spans": [
+        "A path is a sequence of compatible directed edges."
+      ],
+      "type": "Concept"
+    },
+    {
+      "lecture_id": "graph_algorithms_001",
+      "name": "Path Cost",
+      "predicted_ko_id": "path_cost",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/graph_algorithms_001.json",
+        "source_object_index": 2,
+        "source_prediction_id": "path_cost"
+      },
+      "source_spans": [
+        "Its path cost is the sum of their edge weights"
+      ],
+      "type": "Concept"
+    },
+    {
+      "lecture_id": "graph_algorithms_001",
+      "name": "Path Cost Formula",
+      "predicted_ko_id": "path_cost_formula",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/graph_algorithms_001.json",
+        "source_object_index": 3,
+        "source_prediction_id": "path_cost_formula"
+      },
+      "source_spans": [
+        "C(v_0,\\ldots,v_k) = \\sum_{i=0}^{k-1} w(v_i,v_{i+1})"
+      ],
+      "type": "Formula"
+    },
+    {
+      "lecture_id": "graph_algorithms_001",
+      "name": "Relaxation Update",
+      "predicted_ko_id": "relaxation_update",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/graph_algorithms_001.json",
+        "source_object_index": 7,
+        "source_prediction_id": "relaxation_update"
+      },
+      "source_spans": [
+        "d(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}"
+      ],
+      "type": "Formula"
+    },
+    {
+      "lecture_id": "graph_algorithms_001",
+      "name": "Single-Source Shortest-Path Problem",
+      "predicted_ko_id": "single_source_shortest_path_problem",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/graph_algorithms_001.json",
+        "source_object_index": 4,
+        "source_prediction_id": "single_source_shortest_path_problem"
+      },
+      "source_spans": [
+        "The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex."
+      ],
+      "type": "Concept"
+    },
+    {
+      "lecture_id": "graph_algorithms_001",
+      "name": "Weighted Directed Graph",
+      "predicted_ko_id": "weighted_directed_graph",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/graph_algorithms_001.json",
+        "source_object_index": 0,
+        "source_prediction_id": "weighted_directed_graph"
+      },
+      "source_spans": [
+        "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\)."
+      ],
+      "type": "Concept"
+    },
+    {
+      "lecture_id": "numerical_root_finding_001",
+      "name": "Bisection method",
+      "predicted_ko_id": "bisection_method",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/numerical_root_finding_001.json",
+        "source_object_index": 4,
+        "source_prediction_id": "bisection_method"
+      },
+      "source_spans": [
+        "The bisection method begins with a sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\)."
+      ],
+      "type": "Method"
+    },
+    {
+      "lecture_id": "numerical_root_finding_001",
+      "name": "Damped Newton method",
+      "predicted_ko_id": "damped_newton_method",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/numerical_root_finding_001.json",
+        "source_object_index": 3,
+        "source_prediction_id": "damped_newton_method"
+      },
+      "source_spans": [
+        "The damped Newton method extends Newton's method by scaling the Newton correction with a factor between zero and one."
+      ],
+      "type": "Method"
+    },
+    {
+      "lecture_id": "numerical_root_finding_001",
+      "name": "Midpoint formula",
+      "predicted_ko_id": "midpoint_formula",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/numerical_root_finding_001.json",
+        "source_object_index": 5,
+        "source_prediction_id": "midpoint_formula"
+      },
+      "source_spans": [
+        "m = \\frac{a+b}{2}"
+      ],
+      "type": "Formula"
+    },
+    {
+      "lecture_id": "numerical_root_finding_001",
+      "name": "Newton update formula",
+      "predicted_ko_id": "newton_update_formula",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/numerical_root_finding_001.json",
+        "source_object_index": 2,
+        "source_prediction_id": "newton_update_formula"
+      },
+      "source_spans": [
+        "x_{k+1} = x_k - \\frac{f(x_k)}{f'(x_k)}"
+      ],
+      "type": "Formula"
+    },
+    {
+      "lecture_id": "numerical_root_finding_001",
+      "name": "Newton's method",
+      "predicted_ko_id": "newtons_method",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/numerical_root_finding_001.json",
+        "source_object_index": 1,
+        "source_prediction_id": "newtons_method"
+      },
+      "source_spans": [
+        "Newton's method uses the derivative to replace the function locally by its tangent line."
+      ],
+      "type": "Method"
+    },
+    {
+      "lecture_id": "numerical_root_finding_001",
+      "name": "Root-finding problem",
+      "predicted_ko_id": "root_finding_problem",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/numerical_root_finding_001.json",
+        "source_object_index": 0,
+        "source_prediction_id": "root_finding_problem"
+      },
+      "source_spans": [
+        "A root-finding problem asks for a value \\(x^*\\) at which a scalar function is zero"
+      ],
+      "type": "Concept"
+    },
+    {
+      "lecture_id": "numerical_root_finding_001",
+      "name": "Sign-changing bracket",
+      "predicted_ko_id": "sign_changing_bracket",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/numerical_root_finding_001.json",
+        "source_object_index": 6,
+        "source_prediction_id": "sign_changing_bracket"
+      },
+      "source_spans": [
+        "sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\)"
+      ],
+      "type": "Concept"
+    },
+    {
+      "lecture_id": "statistics_estimation_001",
+      "name": "Likelihood",
+      "predicted_ko_id": "likelihood",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/statistics_estimation_001.json",
+        "source_object_index": 1,
+        "source_prediction_id": "likelihood"
+      },
+      "source_spans": [
+        "The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values."
+      ],
+      "type": "Concept"
+    },
+    {
+      "lecture_id": "statistics_estimation_001",
+      "name": "Likelihood Function",
+      "predicted_ko_id": "likelihood_function",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/statistics_estimation_001.json",
+        "source_object_index": 2,
+        "source_prediction_id": "likelihood_function"
+      },
+      "source_spans": [
+        "L(\\theta; x_{1:n}) = \\prod_{i=1}^{n} p(x_i \\mid \\theta)."
+      ],
+      "type": "Formula"
+    },
+    {
+      "lecture_id": "statistics_estimation_001",
+      "name": "Log-Likelihood",
+      "predicted_ko_id": "log_likelihood",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/statistics_estimation_001.json",
+        "source_object_index": 3,
+        "source_prediction_id": "log_likelihood"
+      },
+      "source_spans": [
+        "The log-likelihood is obtained by taking the logarithm of the likelihood."
+      ],
+      "type": "Concept"
+    },
+    {
+      "lecture_id": "statistics_estimation_001",
+      "name": "Log-Likelihood Function",
+      "predicted_ko_id": "log_likelihood_function",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/statistics_estimation_001.json",
+        "source_object_index": 4,
+        "source_prediction_id": "log_likelihood_function"
+      },
+      "source_spans": [
+        "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta)."
+      ],
+      "type": "Formula"
+    },
+    {
+      "lecture_id": "statistics_estimation_001",
+      "name": "Maximum Likelihood Estimation",
+      "predicted_ko_id": "maximum_likelihood_estimation",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/statistics_estimation_001.json",
+        "source_object_index": 5,
+        "source_prediction_id": "maximum_likelihood_estimation"
+      },
+      "source_spans": [
+        "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it"
+      ],
+      "type": "Method"
+    },
+    {
+      "lecture_id": "statistics_estimation_001",
+      "name": "MLE Estimator",
+      "predicted_ko_id": "mle_estimator",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/statistics_estimation_001.json",
+        "source_object_index": 6,
+        "source_prediction_id": "mle_estimator"
+      },
+      "source_spans": [
+        "\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta)."
+      ],
+      "type": "Formula"
+    },
+    {
+      "lecture_id": "statistics_estimation_001",
+      "name": "Newton's Method",
+      "predicted_ko_id": "newtons_method",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/statistics_estimation_001.json",
+        "source_object_index": 10,
+        "source_prediction_id": "newtons_method"
+      },
+      "source_spans": [
+        "Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically."
+      ],
+      "type": "Method"
+    },
+    {
+      "lecture_id": "statistics_estimation_001",
+      "name": "Score Equation",
+      "predicted_ko_id": "score_equation",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/statistics_estimation_001.json",
+        "source_object_index": 9,
+        "source_prediction_id": "score_equation"
+      },
+      "source_spans": [
+        "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\)."
+      ],
+      "type": "Concept"
+    },
+    {
+      "lecture_id": "statistics_estimation_001",
+      "name": "Score Function",
+      "predicted_ko_id": "score_function",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/statistics_estimation_001.json",
+        "source_object_index": 7,
+        "source_prediction_id": "score_function"
+      },
+      "source_spans": [
+        "The score function is the derivative of the log-likelihood with respect to the parameter"
+      ],
+      "type": "Concept"
+    },
+    {
+      "lecture_id": "statistics_estimation_001",
+      "name": "Score Function Formula",
+      "predicted_ko_id": "score_function_formula",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/statistics_estimation_001.json",
+        "source_object_index": 8,
+        "source_prediction_id": "score_function_formula"
+      },
+      "source_spans": [
+        "s(\\theta) = \\nabla_{\\theta}\\ell(\\theta)."
+      ],
+      "type": "Formula"
+    },
+    {
+      "lecture_id": "statistics_estimation_001",
+      "name": "Statistical Model",
+      "predicted_ko_id": "statistical_model",
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions/output/statistics_estimation_001.json",
+        "source_object_index": 0,
+        "source_prediction_id": "statistical_model"
+      },
+      "source_spans": [
+        "A statistical model is a family of probability distributions indexed by an unknown parameter \\(\\theta\\)."
+      ],
+      "type": "Concept"
+    }
+  ],
+  "normalized_content_sha256": "8dccada9a6846cd20f4bebf06622cb3b949b1efcb17b860801c8c8c629b32377",
+  "split": "holdout",
+  "structural_normalization_version": "predicted_ko_structural_normalization_v0_1",
+  "version": "v0.1"
+}

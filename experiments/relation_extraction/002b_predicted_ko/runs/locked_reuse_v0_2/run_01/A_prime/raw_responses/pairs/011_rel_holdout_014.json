@@ -1,0 +1,28 @@
+{
+  "id": "a37b6b30-63ef-4706-80b5-40a41bd184e9",
+  "object": "chat.completion",
+  "created": 1784137404,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_holdout_014\",\n      \"source\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"ko_slot_005\"\n      },\n      \"target\": {\n        \"lecture_id\": \"differential_equations_001\",\n        \"ko_id\": \"ko_slot_007\"\n      },\n      \"relation_type\": \"NO_RELATION\",\n      \"evidence_spans\": [],\n      \"rationale\": \"The lecture text does not establish a direct educational relation between Initial Value Problem and Step Size. Step size is introduced in the context of numerical methods, but no evidence connects it specifically to the concept of an initial value problem.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2327,
+    "completion_tokens": 162,
+    "total_tokens": 2489,
+    "prompt_tokens_details": {
+      "cached_tokens": 2048
+    },
+    "prompt_cache_hit_tokens": 2048,
+    "prompt_cache_miss_tokens": 279
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,274 @@
+{
+  "artifact_type": "predicted_ko_pipeline_errors",
+  "evaluation_status": "final",
+  "fatal_errors": [],
+  "nonfatal_errors": [
+    {
+      "affected_pair_ids": [
+        "rel_holdout_005"
+      ],
+      "error_code": "missing_endpoint",
+      "message": "The primary pair is correctly recorded as upstream unrecoverable.",
+      "pair_id": "rel_holdout_005"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_holdout_011"
+      ],
+      "error_code": "missing_endpoint",
+      "message": "The primary pair is correctly recorded as upstream unrecoverable.",
+      "pair_id": "rel_holdout_011"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_holdout_012"
+      ],
+      "error_code": "missing_endpoint",
+      "message": "The primary pair is correctly recorded as upstream unrecoverable.",
+      "pair_id": "rel_holdout_012"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_holdout_022"
+      ],
+      "error_code": "missing_endpoint",
+      "message": "The primary pair is correctly recorded as upstream unrecoverable.",
+      "pair_id": "rel_holdout_022"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_holdout_026"
+      ],
+      "error_code": "missing_endpoint",
+      "message": "The primary pair is correctly recorded as upstream unrecoverable.",
+      "pair_id": "rel_holdout_026"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_holdout_027"
+      ],
+      "error_code": "missing_endpoint",
+      "message": "The primary pair is correctly recorded as upstream unrecoverable.",
+      "pair_id": "rel_holdout_027"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_holdout_038"
+      ],
+      "error_code": "missing_endpoint",
+      "message": "The primary pair is correctly recorded as upstream unrecoverable.",
+      "pair_id": "rel_holdout_038"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_holdout_004",
+        "rel_holdout_014",
+        "rel_holdout_020"
+      ],
+      "error_code": "predicted_source_span_invalid",
+      "message": "A nonfatal predicted-KO quality observation is propagated descriptively.",
+      "oracle_ref": {
+        "ko_id": "initial_value_problem",
+        "lecture_id": "differential_equations_001"
+      },
+      "pair_id": null,
+      "predicted_ref": {
+        "ko_id": "initial_value_problem",
+        "lecture_id": "differential_equations_001"
+      }
+    },
+    {
+      "affected_pair_ids": [
+        "rel_holdout_014"
+      ],
+      "error_code": "predicted_source_span_invalid",
+      "message": "A nonfatal predicted-KO quality observation is propagated descriptively.",
+      "oracle_ref": {
+        "ko_id": "step_size",
+        "lecture_id": "differential_equations_001"
+      },
+      "pair_id": null,
+      "predicted_ref": {
+        "ko_id": "step_size",
+        "lecture_id": "differential_equations_001"
+      }
+    },
+    {
+      "affected_pair_ids": [
+        "rel_holdout_032"
+      ],
+      "error_code": "predicted_source_span_invalid",
+      "message": "A nonfatal predicted-KO quality observation is propagated descriptively.",
+      "oracle_ref": {
+        "ko_id": "vector_field",
+        "lecture_id": "differential_equations_001"
+      },
+      "pair_id": null,
+      "predicted_ref": {
+        "ko_id": "vector_field",
+        "lecture_id": "differential_equations_001"
+      }
+    },
+    {
+      "affected_pair_ids": [],
+      "error_code": "unmatched_extra_predicted_ko",
+      "message": "The unmatched prediction is excluded from matched Relation inputs.",
+      "pair_id": null,
+      "predicted_ref": {
+        "ko_id": "discretization_error",
+        "lecture_id": "differential_equations_001"
+      }
+    },
+    {
+      "affected_pair_ids": [],
+      "error_code": "unmatched_extra_predicted_ko",
+      "message": "The unmatched prediction is excluded from matched Relation inputs.",
+      "pair_id": null,
+      "predicted_ref": {
+        "ko_id": "newtons_method",
+        "lecture_id": "statistics_estimation_001"
+      }
+    },
+    {
+      "affected_pair_ids": [],
+      "error_code": "unmatched_extra_predicted_ko",
+      "message": "The unmatched prediction is excluded from matched Relation inputs.",
+      "pair_id": null,
+      "predicted_ref": {
+        "ko_id": "score_equation",
+        "lecture_id": "statistics_estimation_001"
+      }
+    },
+    {
+      "affected_pair_ids": [
+        "rel_holdout_004"
+      ],
+      "error_code": "b_prime_invalid_evidence_span",
+      "message": "This Relation-evaluator observation occurred under B-prime.",
+      "pair_id": "rel_holdout_004"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_holdout_006"
+      ],
+      "error_code": "b_prime_false_positive_relation",
+      "message": "This Relation-evaluator observation occurred under B-prime.",
+      "pair_id": "rel_holdout_006"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_holdout_006"
+      ],
+      "error_code": "b_prime_wrong_relation_type",
+      "message": "This Relation-evaluator observation occurred under B-prime.",
+      "pair_id": "rel_holdout_006"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_holdout_007"
+      ],
+      "error_code": "b_prime_evidence_does_not_support_relation",
+      "message": "This Relation-evaluator observation occurred under B-prime.",
+      "pair_id": "rel_holdout_007"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_holdout_013"
+      ],
+      "error_code": "b_prime_wrong_direction",
+      "message": "This Relation-evaluator observation occurred under B-prime.",
+      "pair_id": "rel_holdout_013"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_holdout_025"
+      ],
+      "error_code": "b_prime_invalid_evidence_span",
+      "message": "This Relation-evaluator observation occurred under B-prime.",
+      "pair_id": "rel_holdout_025"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_holdout_029"
+      ],
+      "error_code": "b_prime_wrong_relation_type",
+      "message": "This Relation-evaluator observation occurred under B-prime.",
+      "pair_id": "rel_holdout_029"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_holdout_030"
+      ],
+      "error_code": "b_prime_wrong_relation_type",
+      "message": "This Relation-evaluator observation occurred under B-prime.",
+      "pair_id": "rel_holdout_030"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_holdout_031"
+      ],
+      "error_code": "b_prime_false_positive_relation",
+      "message": "This Relation-evaluator observation occurred under B-prime.",
+      "pair_id": "rel_holdout_031"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_holdout_031"
+      ],
+      "error_code": "b_prime_wrong_relation_type",
+      "message": "This Relation-evaluator observation occurred under B-prime.",
+      "pair_id": "rel_holdout_031"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_holdout_032"
+      ],
+      "error_code": "b_prime_invalid_evidence_span",
+      "message": "This Relation-evaluator observation occurred under B-prime.",
+      "pair_id": "rel_holdout_032"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_holdout_032"
+      ],
+      "error_code": "b_prime_wrong_relation_type",
+      "message": "This Relation-evaluator observation occurred under B-prime.",
+      "pair_id": "rel_holdout_032"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_holdout_036"
+      ],
+      "error_code": "b_prime_wrong_direction",
+      "message": "This Relation-evaluator observation occurred under B-prime.",
+      "pair_id": "rel_holdout_036"
+    },
+    {
+      "affected_pair_ids": [
+        "rel_holdout_037"
+      ],
+      "error_code": "b_prime_evidence_does_not_support_relation",
+      "message": "This Relation-evaluator observation occurred under B-prime.",
+      "pair_id": "rel_holdout_037"
+    }
+  ],
+  "pending_items": [],
+  "provenance": {
+    "A0_evaluation_sha256": "f02427b04aa2e827f0d920559c8e4d80b7409de792a8e4501bd9ce0eefc55a8f",
+    "A_prime_evaluation_sha256": "186bdcba729c47dc31dd5cc0427fa168c9d03cf50c0a3f00200cc1778ed6eb0c",
+    "A_prime_input_sha256": "91b9078b8118b9dd3fb3d4b19480bb374778d7f076c6edaa3160dab97a6f2572",
+    "A_prime_prediction_sha256": "eca906e16efe942ae3bb651d180d3a3e8ced804166b8c80bb823c438af18f70a",
+    "A_prime_run_metadata_sha256": "d3e09e16c02f482c2de7d34fb5847a1ad69b8c7790b1413274294ee52285063b",
+    "B_prime_evaluation_sha256": "7ff40ae5653e9127b6c248ca2d764d1a232845b00f0c13dd0b8865acc7280b2e",
+    "B_prime_input_sha256": "b03f92ac00ce35bb0c07cffae47223a06134d85d9e3f85f26513c9055b06ba9e",
+    "B_prime_prediction_sha256": "117fd90d6a7bbc581a73fc6f6ecba8d6ab19e3b192035cfe37f6b3d84d6b53e5",
+    "B_prime_run_metadata_sha256": "234ba613b0883570ddb820d459c5be1f0bd25cc6ca00d72b1f07bcae4cc32e7a",
+    "alignment_sha256": "9d9770bc0a33b73284dd54e2f9b9c03433855db8ed96019188a548626891f075",
+    "batch_plan_sha256": "1e5f1851ec1ce14329ffc828052390ab8e29344de9486c88b94d815276a9177e",
+    "ko_manifest_sha256": "ce23e9e3bfdb6fbdc85ce6f688fab1586e095eb61e49aeb2cd87ed8adc4110c4",
+    "matched_ground_truth_sha256": "d949b240c937a2c637a96ea30c03384d1e48791dea640f7b851094efb9e154f6",
+    "original_ground_truth_sha256": "20cf7a8b2aeb76f372e103c59c453bfa15c43732885b6c621af26f5edd427a6f",
+    "pair_manifest_sha256": "9454970f63f9403a6fbee2b93a7f005c20bf8a4530887b5de6d2c234392ba2dd"
+  },
+  "version": "v0.1"
+}

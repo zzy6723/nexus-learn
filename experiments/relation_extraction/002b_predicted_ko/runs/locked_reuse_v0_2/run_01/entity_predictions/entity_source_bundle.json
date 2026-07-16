@@ -1,0 +1,155 @@
+{
+  "artifact_type": "entity_prediction_source_bundle",
+  "version": "v0.1",
+  "status": "final",
+  "experiment": "002B-1",
+  "split": "locked_reuse_v0_2",
+  "method_commit": "3c8606d9243465a8a15639a628db80ea79155f96",
+  "execution_manifest": {
+    "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/execution_manifest.json",
+    "sha256": "ae44d16312dc254a0c4c0fae26d2f1007ac8ff3fed5e84c1633b82ab0bb1304d"
+  },
+  "source_plan": {
+    "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/entity_predictions/source_manifest.json",
+    "sha256": "b6ab926d480b07a265d9c332b1e841c73b0ac3cf3bd0be7e94908e68246f0f59"
+  },
+  "entity_prompt": {
+    "path": "experiments/entity_extraction/002_prompt_refinement/prompt.md",
+    "sha256": "12d85ea9b3ed66b751b637d7ce2e459c69368b9685bbc39c4713c24ff69feeeb"
+  },
+  "entity_execution": {
+    "provider": "deepseek",
+    "model": "deepseek-v4-flash",
+    "request_parameters": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "max_tokens": 4096,
+      "stream": false,
+      "response_format": {
+        "type": "json_object"
+      },
+      "thinking": {
+        "type": "disabled"
+      }
+    }
+  },
+  "counts": {
+    "lectures": 4,
+    "reused": 4,
+    "new_reruns": 0,
+    "missing": 0,
+    "invalid": 0,
+    "plan_violations": 0
+  },
+  "artifact_set_sha256": "afff88ae0b4f00ac2c88ab644ad1d355108cdb88768e07f194164253ec192a7d",
+  "lectures": [
+    {
+      "lecture_id": "statistics_estimation_001",
+      "provenance": "reused",
+      "source_run": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions",
+      "artifacts": {
+        "output": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/entity_predictions/output/statistics_estimation_001.json",
+          "sha256": "981dc3a171e6458a631d7114a9aa95a3dda76b0ab654dc9dd3f074f83eff3c24"
+        },
+        "metadata": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/entity_predictions/metadata/statistics_estimation_001.json",
+          "sha256": "3ee98a17634e331597a85273a04fb5c552c58dd3aa85a2afd9c619873717e2ef"
+        },
+        "raw_response": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/entity_predictions/raw_responses/statistics_estimation_001.json",
+          "sha256": "8c5b9fed8be5e95cc59e29f525ed5f8ad5151eb955dfc56ee22624ed97e6ac4f"
+        },
+        "rendered_input": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/entity_predictions/rendered_inputs/statistics_estimation_001.json",
+          "sha256": "97ae20cfb29299302ea857a0adaab156b6e6009e6bf96ae787404e6f84850ae6"
+        }
+      },
+      "request_id": "cc9cb3b4-ca35-4a3e-bf2f-f08eb51acf9a",
+      "run_timestamp": "2026-07-15T16:33:04.889750+00:00",
+      "model_returned": "deepseek-v4-flash",
+      "finish_reason": "stop"
+    },
+    {
+      "lecture_id": "numerical_root_finding_001",
+      "provenance": "reused",
+      "source_run": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions",
+      "artifacts": {
+        "output": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/entity_predictions/output/numerical_root_finding_001.json",
+          "sha256": "6328bde3dfe6eb5e6d94a45caa00cb1a230b0cf3686811e1da3189bbfbdd5530"
+        },
+        "metadata": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/entity_predictions/metadata/numerical_root_finding_001.json",
+          "sha256": "fa853440e0ac32ebde6c2168705108e2d934e433550a70232ee86b2e44246a46"
+        },
+        "raw_response": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/entity_predictions/raw_responses/numerical_root_finding_001.json",
+          "sha256": "e667c7b9fe3a871a35b27769e46daf9d73e2e3aba13e542e210d6771caf60157"
+        },
+        "rendered_input": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/entity_predictions/rendered_inputs/numerical_root_finding_001.json",
+          "sha256": "855040dac000acb8f81009bdc99126184e698b75b6ade613c7e9d2f69d08a8fd"
+        }
+      },
+      "request_id": "07df8210-e0e0-4b5b-999b-9a9f01eee2c0",
+      "run_timestamp": "2026-07-15T16:33:13.623116+00:00",
+      "model_returned": "deepseek-v4-flash",
+      "finish_reason": "stop"
+    },
+    {
+      "lecture_id": "differential_equations_001",
+      "provenance": "reused",
+      "source_run": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions",
+      "artifacts": {
+        "output": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/entity_predictions/output/differential_equations_001.json",
+          "sha256": "53b3338a82d50f93ef623de9065b57294e384cf9bc49691ec4b353ac19c6ac37"
+        },
+        "metadata": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/entity_predictions/metadata/differential_equations_001.json",
+          "sha256": "a99e4b365c97e26bf92d16087fdffce4e097528fe6056d2ca99d6b991d9ddade"
+        },
+        "raw_response": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/entity_predictions/raw_responses/differential_equations_001.json",
+          "sha256": "a0b946d9279a447169b2d0b139ccc02067e284d325181292ec289c673d53d9b7"
+        },
+        "rendered_input": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/entity_predictions/rendered_inputs/differential_equations_001.json",
+          "sha256": "0afbca427988f582519f91a5aa632125c81c90d5b3560f601992faba7f6a3d6b"
+        }
+      },
+      "request_id": "40f794a0-4aa1-4784-afa6-ee59cc9ac26c",
+      "run_timestamp": "2026-07-15T16:33:20.909756+00:00",
+      "model_returned": "deepseek-v4-flash",
+      "finish_reason": "stop"
+    },
+    {
+      "lecture_id": "graph_algorithms_001",
+      "provenance": "reused",
+      "source_run": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_1/run_01/entity_predictions",
+      "artifacts": {
+        "output": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/entity_predictions/output/graph_algorithms_001.json",
+          "sha256": "bee17666c0ce917d96b7f9cd41c41de2fe49ea53e9be3436d7a8172d34cd5325"
+        },
+        "metadata": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/entity_predictions/metadata/graph_algorithms_001.json",
+          "sha256": "808b36df72429f7189d60ab622d211e8ae73e9bde519f28e87a61d57ffec20a1"
+        },
+        "raw_response": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/entity_predictions/raw_responses/graph_algorithms_001.json",
+          "sha256": "5674d844e4fbc8c040bd4e287c956f6ed30b31b3f7916c97abbf4582f4ee7a3b"
+        },
+        "rendered_input": {
+          "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/entity_predictions/rendered_inputs/graph_algorithms_001.json",
+          "sha256": "2f7150aecef1b31a871b1feb96762eff029ef9d9287b94e772e9fc1761238e48"
+        }
+      },
+      "request_id": "44968f15-d393-4e7f-b9b6-222c4d03886e",
+      "run_timestamp": "2026-07-15T16:33:28.383028+00:00",
+      "model_returned": "deepseek-v4-flash",
+      "finish_reason": "stop"
+    }
+  ]
+}

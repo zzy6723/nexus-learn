@@ -1,0 +1,28 @@
+{
+  "id": "fc8c3704-e70f-458c-ad74-7a3949409f0a",
+  "object": "chat.completion",
+  "created": 1784138009,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_holdout_002\",\n      \"source\": {\n        \"lecture_id\": \"numerical_root_finding_001\",\n        \"ko_id\": \"ko_slot_021\"\n      },\n      \"target\": {\n        \"lecture_id\": \"numerical_root_finding_001\",\n        \"ko_id\": \"ko_slot_022\"\n      },\n      \"relation_type\": \"NO_RELATION\",\n      \"evidence_spans\": [],\n      \"rationale\": \"The lecture text describes Newton's method and the bisection method separately, but does not establish any direct relation between the Newton update formula and the sign-changing bracket. They are used in different methods and no evidence connects them.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2285,
+    "completion_tokens": 162,
+    "total_tokens": 2447,
+    "prompt_tokens_details": {
+      "cached_tokens": 1920
+    },
+    "prompt_cache_hit_tokens": 1920,
+    "prompt_cache_miss_tokens": 365
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

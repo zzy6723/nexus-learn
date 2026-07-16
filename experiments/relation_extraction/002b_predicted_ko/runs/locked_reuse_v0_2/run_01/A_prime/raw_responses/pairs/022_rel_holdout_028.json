@@ -1,0 +1,28 @@
+{
+  "id": "c724e27a-13fe-48e1-bcb8-16ef28a42db9",
+  "object": "chat.completion",
+  "created": 1784137434,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"results\": [\n    {\n      \"pair_id\": \"rel_holdout_028\",\n      \"source\": {\n        \"lecture_id\": \"numerical_root_finding_001\",\n        \"ko_id\": \"ko_slot_017\"\n      },\n      \"target\": {\n        \"lecture_id\": \"numerical_root_finding_001\",\n        \"ko_id\": \"ko_slot_022\"\n      },\n      \"relation_type\": \"REQUIRES\",\n      \"evidence_spans\": [\n        {\n          \"lecture_id\": \"numerical_root_finding_001\",\n          \"span\": \"The bisection method begins with a sign-changing bracket \\\\([a,b]\\\\) satisfying \\\\(f(a)f(b)<0\\\\).\"\n        }\n      ],\n      \"rationale\": \"The bisection method requires a sign-changing bracket as its starting condition, so the method depends on the concept.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2302,
+    "completion_tokens": 195,
+    "total_tokens": 2497,
+    "prompt_tokens_details": {
+      "cached_tokens": 1920
+    },
+    "prompt_cache_hit_tokens": 1920,
+    "prompt_cache_miss_tokens": 382
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

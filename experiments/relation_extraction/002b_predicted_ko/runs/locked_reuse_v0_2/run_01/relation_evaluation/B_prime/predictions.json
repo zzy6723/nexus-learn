@@ -1,0 +1,633 @@
+{
+  "results": [
+    {
+      "pair_id": "rel_holdout_001",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "ko_slot_023"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "ko_slot_030"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values."
+        }
+      ],
+      "rationale": "The likelihood is defined from the statistical model, so the likelihood requires the statistical model as a prerequisite."
+    },
+    {
+      "pair_id": "rel_holdout_002",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "ko_slot_021"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "ko_slot_022"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The lecture text describes Newton's method and the bisection method separately, but does not establish any direct relation between the Newton update formula and the sign-changing bracket. They are used in different methods and no evidence connects them."
+    },
+    {
+      "pair_id": "rel_holdout_003",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "ko_slot_014"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "ko_slot_013"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Its path cost is the sum of their edge weights:\n\n\\[\nC(v_0,\\ldots,v_k) = \\sum_{i=0}^{k-1} w(v_i,v_{i+1}).\n\\]"
+        }
+      ],
+      "rationale": "The Path Cost Formula explicitly defines the Path Cost concept, satisfying the FORMALIZES relation where the formula is the source and the concept is the target."
+    },
+    {
+      "pair_id": "rel_holdout_004",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ko_slot_005"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ko_slot_006"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "An initial value problem combines an ordinary differential equation with an initial condition such as y(t_0)=y_0."
+        }
+      ],
+      "rationale": "The Initial Value Problem requires an Ordinary Differential Equation as a component, as stated in the evidence."
+    },
+    {
+      "pair_id": "rel_holdout_006",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "ko_slot_028"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "ko_slot_024"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it:\n\n\\[\n\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta).\n\\]"
+        }
+      ],
+      "rationale": "The MLE Estimator formula explicitly defines the estimator as the argmax of the log-likelihood, which is derived from the Likelihood Function. Thus, the MLE Estimator formalizes the Likelihood Function by providing the solution condition for estimation."
+    },
+    {
+      "pair_id": "rel_holdout_007",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "ko_slot_010"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "ko_slot_016"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Dijkstra's algorithm is applied to this problem when all edge weights are nonnegative."
+        }
+      ],
+      "rationale": "The lecture states that Dijkstra's algorithm is applied to the single-source shortest-path problem, establishing an APPLIED_IN relation where the algorithm is the tool used in the problem context."
+    },
+    {
+      "pair_id": "rel_holdout_008",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "ko_slot_026"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "ko_slot_025"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The log-likelihood is obtained by taking the logarithm of the likelihood."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta)."
+        }
+      ],
+      "rationale": "The Formula 'Log-Likelihood Function' explicitly defines the concept 'Log-Likelihood' by providing its mathematical expression, thus FORMALIZES is appropriate."
+    },
+    {
+      "pair_id": "rel_holdout_009",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ko_slot_003"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ko_slot_002"
+      },
+      "relation_type": "EXTENDS",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+        }
+      ],
+      "rationale": "The lecture explicitly states that Heun's method extends the forward Euler method, indicating that Heun's method is a more specific development of the forward Euler method."
+    },
+    {
+      "pair_id": "rel_holdout_010",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "ko_slot_010"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "ko_slot_017"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The two lectures discuss different topics (graph algorithms vs. root-finding) and no evidence connects Dijkstra's Algorithm to the Bisection method."
+    },
+    {
+      "pair_id": "rel_holdout_013",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "ko_slot_027"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "ko_slot_025"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Maximum likelihood estimation uses the log-likelihood as its objective"
+        }
+      ],
+      "rationale": "The log-likelihood is used as the objective function within the maximum likelihood estimation method."
+    },
+    {
+      "pair_id": "rel_holdout_014",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ko_slot_005"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ko_slot_007"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The lecture text does not directly establish a relation between Initial Value Problem and Step Size. Step size is discussed in the context of numerical methods, but no evidence connects it specifically to the concept of an initial value problem."
+    },
+    {
+      "pair_id": "rel_holdout_015",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ko_slot_001"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ko_slot_002"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y_{n+1} = y_n + hF(t_n,y_n)"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope. Its update is"
+        }
+      ],
+      "rationale": "The formula 'Forward Euler Update' explicitly defines the update step of the 'Forward Euler Method', as indicated by the lecture text stating 'Its update is' followed by the formula."
+    },
+    {
+      "pair_id": "rel_holdout_016",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "ko_slot_017"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "ko_slot_020"
+      },
+      "relation_type": "CONTRASTS_WITH",
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "Newton's method and the bisection method contrast in the information they use: Newton's method requires derivative values and can converge rapidly near a root, whereas bisection uses only function signs and preserves a bracket at every iteration."
+        }
+      ],
+      "rationale": "The lecture explicitly contrasts Newton's method and the bisection method in terms of the information they use and their convergence behavior."
+    },
+    {
+      "pair_id": "rel_holdout_017",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "ko_slot_016"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "ko_slot_013"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex."
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Its path cost is the sum of their edge weights"
+        }
+      ],
+      "rationale": "The single-source shortest-path problem requires the concept of path cost to define the objective of minimizing cost."
+    },
+    {
+      "pair_id": "rel_holdout_018",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "ko_slot_013"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "ko_slot_023"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The two knowledge objects come from different lectures and there is no evidence in the provided text that establishes any meaningful educational relation between Path Cost and Likelihood."
+    },
+    {
+      "pair_id": "rel_holdout_019",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "ko_slot_024"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "ko_slot_023"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "L(\\theta; x_{1:n}) = \\prod_{i=1}^{n} p(x_i \\mid \\theta)."
+        }
+      ],
+      "rationale": "The Likelihood Function formula explicitly defines the Likelihood concept, so the formula formalizes the concept."
+    },
+    {
+      "pair_id": "rel_holdout_020",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ko_slot_002"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ko_slot_005"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope."
+        }
+      ],
+      "rationale": "The lecture explicitly states that the forward Euler method is applied to an initial value problem, establishing an APPLIED_IN relation where the method is used in the context of the concept."
+    },
+    {
+      "pair_id": "rel_holdout_021",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "ko_slot_009"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "ko_slot_010"
+      },
+      "relation_type": "EXTENDS",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A* search extends Dijkstra's algorithm by using a heuristic function \\(h(v)\\) to guide which vertex is explored next."
+        }
+      ],
+      "rationale": "The lecture explicitly states that A* search extends Dijkstra's algorithm, indicating that A* is a more specific development built upon Dijkstra's algorithm as its conceptual base."
+    },
+    {
+      "pair_id": "rel_holdout_023",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "ko_slot_021"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "ko_slot_020"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "Newton's method uses the derivative to replace the function locally by its tangent line. Provided \\(f'(x_k)\\neq 0\\), its update is\n\n\\[\nx_{k+1} = x_k - \\frac{f(x_k)}{f'(x_k)}.\n\\]"
+        }
+      ],
+      "rationale": "The Newton update formula explicitly defines the update step of Newton's method, thus formalizing the method."
+    },
+    {
+      "pair_id": "rel_holdout_024",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "ko_slot_020"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "ko_slot_027"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "When this equation has no closed-form solution, Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically."
+        }
+      ],
+      "rationale": "The lecture explicitly states that Newton's method is applied within maximum likelihood estimation to solve the score equation, establishing an APPLIED_IN relation from Newton's method to Maximum Likelihood Estimation."
+    },
+    {
+      "pair_id": "rel_holdout_025",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "ko_slot_015"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "ko_slot_011"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "Relaxation is formalized by the update\n\nd(v) \\leftarrow \\min\\{d(v),\\, d(u)+w(u,v)\\}."
+        }
+      ],
+      "rationale": "The lecture explicitly states that the relaxation update formula formalizes the edge relaxation method, establishing a direct FORMALIZES relation from the Formula to the Method."
+    },
+    {
+      "pair_id": "rel_holdout_028",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "ko_slot_017"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "ko_slot_022"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "The bisection method begins with a sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\)."
+        }
+      ],
+      "rationale": "The bisection method requires a sign-changing bracket as its starting condition; the bracket is a prerequisite for the method to operate."
+    },
+    {
+      "pair_id": "rel_holdout_029",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "ko_slot_025"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "ko_slot_023"
+      },
+      "relation_type": "EXTENDS",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The log-likelihood is obtained by taking the logarithm of the likelihood."
+        }
+      ],
+      "rationale": "The log-likelihood is a more specific development of the likelihood by applying the logarithm, preserving the likelihood as its conceptual base."
+    },
+    {
+      "pair_id": "rel_holdout_030",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "ko_slot_010"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "ko_slot_011"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "it applies edge relaxation to each outgoing edge."
+        }
+      ],
+      "rationale": "Dijkstra's algorithm applies edge relaxation as a step, so edge relaxation is a prerequisite for the algorithm."
+    },
+    {
+      "pair_id": "rel_holdout_031",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "ko_slot_018"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "ko_slot_017"
+      },
+      "relation_type": "CONTRASTS_WITH",
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "Newton's method and the bisection method contrast in the information they use: Newton's method requires derivative values and can converge rapidly near a root, whereas bisection uses only function signs and preserves a bracket at every iteration."
+        }
+      ],
+      "rationale": "The lecture explicitly contrasts Newton's method (which damped Newton method extends) with the bisection method, establishing a meaningful contrast between the two methods."
+    },
+    {
+      "pair_id": "rel_holdout_032",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ko_slot_002"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ko_slot_008"
+      },
+      "relation_type": "REQUIRES",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "The forward Euler method is applied to an initial value problem by advancing from the current approximation along the current vector-field slope."
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Its update is y_{n+1} = y_n + hF(t_n,y_n)."
+        }
+      ],
+      "rationale": "The forward Euler method requires the vector field F to compute its update, as the method advances along the slope specified by F."
+    },
+    {
+      "pair_id": "rel_holdout_033",
+      "source": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "ko_slot_028"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "ko_slot_027"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "Maximum likelihood estimation uses the log-likelihood as its objective and selects a parameter value that maximizes it"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta}\\, \\ell(\\theta)."
+        }
+      ],
+      "rationale": "The formula for the MLE estimator explicitly defines the result of the maximum likelihood estimation method, thus formalizing it."
+    },
+    {
+      "pair_id": "rel_holdout_034",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ko_slot_001"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "ko_slot_026"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The two formulas appear in different lectures with no shared context or direct connection. The lecture texts do not establish any meaningful educational relation between the Forward Euler Update and the Log-Likelihood Function."
+    },
+    {
+      "pair_id": "rel_holdout_035",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "ko_slot_018"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "ko_slot_020"
+      },
+      "relation_type": "EXTENDS",
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "The damped Newton method extends Newton's method by scaling the Newton correction with a factor between zero and one."
+        }
+      ],
+      "rationale": "The lecture explicitly states that the damped Newton method extends Newton's method, indicating a more specific development that preserves Newton's method as its conceptual base."
+    },
+    {
+      "pair_id": "rel_holdout_036",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "ko_slot_009"
+      },
+      "target": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "ko_slot_012"
+      },
+      "relation_type": "APPLIED_IN",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A* search extends Dijkstra's algorithm by using a heuristic function \\(h(v)\\) to guide which vertex is explored next."
+        }
+      ],
+      "rationale": "The heuristic function is used by A* search to guide exploration, establishing an APPLIED_IN relation from the heuristic function to A* search."
+    },
+    {
+      "pair_id": "rel_holdout_037",
+      "source": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ko_slot_004"
+      },
+      "target": {
+        "lecture_id": "differential_equations_001",
+        "ko_id": "ko_slot_003"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "y_{n+1} = y_n + \\frac{h}{2}\\left(F(t_n,y_n)+F(t_n+h,\\widetilde{y}_{n+1})\\right)"
+        },
+        {
+          "lecture_id": "differential_equations_001",
+          "span": "Heun's method extends the forward Euler method with a predictor-corrector step."
+        }
+      ],
+      "rationale": "The formula is the update rule that defines Heun's method, so it formalizes the method."
+    },
+    {
+      "pair_id": "rel_holdout_039",
+      "source": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "ko_slot_019"
+      },
+      "target": {
+        "lecture_id": "numerical_root_finding_001",
+        "ko_id": "ko_slot_017"
+      },
+      "relation_type": "FORMALIZES",
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "m = \\frac{a+b}{2}"
+        },
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "The bisection method begins with a sign-changing bracket \\([a,b]\\) satisfying \\(f(a)f(b)<0\\). It evaluates the midpoint\n\n\\[\nm = \\frac{a+b}{2}\n\\]\n\nand retains the half-interval whose endpoints still have opposite signs."
+        }
+      ],
+      "rationale": "The midpoint formula explicitly defines the midpoint used in the bisection method, thus formalizing the method's step."
+    },
+    {
+      "pair_id": "rel_holdout_040",
+      "source": {
+        "lecture_id": "graph_algorithms_001",
+        "ko_id": "ko_slot_011"
+      },
+      "target": {
+        "lecture_id": "statistics_estimation_001",
+        "ko_id": "ko_slot_029"
+      },
+      "relation_type": "NO_RELATION",
+      "evidence_spans": [],
+      "rationale": "The two knowledge objects come from different lectures and there is no evidence in the provided text that establishes any meaningful educational relation between Edge Relaxation and Score Function."
+    }
+  ]
+}
