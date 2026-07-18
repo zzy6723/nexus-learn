@@ -1,0 +1,17 @@
+{
+  "candidate_id": "ko_identity_candidate_002",
+  "mention_a": "ko_mention_dev_003",
+  "mention_b": "ko_mention_dev_007",
+  "decision": "SAME_OBJECT",
+  "evidence_spans": [
+    {
+      "lecture_id": "econometrics_mle_challenge_001",
+      "span": "The likelihood is viewed as a function of the model parameters with the sample held fixed."
+    },
+    {
+      "lecture_id": "machine_learning_mle_challenge_001",
+      "span": "The likelihood function assigns each candidate parameter value a score determined by the fixed observations."
+    }
+  ],
+  "rationale": "Both mentions refer to the same statistical concept: the likelihood function in maximum likelihood estimation. The first uses 'Likelihood' as a shorthand for 'Likelihood Function', and both describe it as a function of parameters given fixed data. The contexts are from different lectures but both discuss MLE, and the definitions are semantically identical."
+}

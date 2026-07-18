@@ -1,0 +1,197 @@
+{
+  "artifact_type": "ko_context_decision_audit",
+  "version": "v0.1",
+  "prediction_sha256": "0ea1e99811fcd8a616ae374cb5fcea06b9e313ea5a745b7627a6477bb852e71b",
+  "adjudicated_decision_count": 0,
+  "unresolved_count": 0,
+  "inconsistent_component_count": 0,
+  "decisions": [
+    {
+      "candidate_id": "ko_identity_candidate_001",
+      "mention_a": "ko_mention_dev_001",
+      "mention_b": "ko_mention_dev_016",
+      "decision": "SAME_OBJECT",
+      "evidence_spans": [
+        {
+          "lecture_id": "calculus_gradient_challenge_001",
+          "span": "The gradient of a differentiable scalar function is the vector of its partial derivatives."
+        },
+        {
+          "lecture_id": "optimisation_gradient_challenge_001",
+          "span": "The gradient vector points in the direction of steepest local increase of a differentiable objective."
+        }
+      ],
+      "rationale": "Both mentions refer to the same mathematical concept: the gradient (or gradient vector) of a differentiable function. The first defines it as the vector of partial derivatives, and the second describes its directional property. The names 'Gradient' and 'Gradient Vector' are synonymous in this context, and both are of type Concept."
+    },
+    {
+      "candidate_id": "ko_identity_candidate_002",
+      "mention_a": "ko_mention_dev_003",
+      "mention_b": "ko_mention_dev_007",
+      "decision": "SAME_OBJECT",
+      "evidence_spans": [
+        {
+          "lecture_id": "econometrics_mle_challenge_001",
+          "span": "The likelihood is viewed as a function of the model parameters with the sample held fixed."
+        },
+        {
+          "lecture_id": "machine_learning_mle_challenge_001",
+          "span": "The likelihood function assigns each candidate parameter value a score determined by the fixed observations."
+        }
+      ],
+      "rationale": "Both mentions refer to the same statistical concept: the likelihood function in maximum likelihood estimation. The first uses 'Likelihood' as a shorthand for 'Likelihood Function', and both describe it as a function of parameters given fixed data. The contexts are from different lectures but both discuss MLE, and the definitions are semantically identical."
+    },
+    {
+      "candidate_id": "ko_identity_candidate_003",
+      "mention_a": "ko_mention_dev_003",
+      "mention_b": "ko_mention_dev_019",
+      "decision": "SAME_OBJECT",
+      "evidence_spans": [
+        {
+          "lecture_id": "econometrics_mle_challenge_001",
+          "span": "The likelihood is viewed as a function of the model parameters with the sample held fixed."
+        },
+        {
+          "lecture_id": "statistics_mle_challenge_001",
+          "span": "The likelihood compares parameter values after the observed data are held fixed."
+        }
+      ],
+      "rationale": "Both mentions refer to the same statistical concept of likelihood used in maximum likelihood estimation, defined as a function of parameters given fixed data. The definitions are semantically equivalent despite different wording."
+    },
+    {
+      "candidate_id": "ko_identity_candidate_004",
+      "mention_a": "ko_mention_dev_004",
+      "mention_b": "ko_mention_dev_008",
+      "decision": "SAME_OBJECT",
+      "evidence_spans": [
+        {
+          "lecture_id": "econometrics_mle_challenge_001",
+          "span": "Maximum-Likelihood Estimation estimates an econometric model by maximizing the likelihood of the observed sample."
+        },
+        {
+          "lecture_id": "machine_learning_mle_challenge_001",
+          "span": "MLE is used to fit a probabilistic model by maximizing its likelihood function on observed training data."
+        }
+      ],
+      "rationale": "Both mentions refer to the same statistical method (Maximum Likelihood Estimation) with the same core definition: maximizing a likelihood function to estimate model parameters. 'MLE' is a standard abbreviation for 'Maximum-Likelihood Estimation'. The slight difference in domain (econometrics vs. machine learning) does not change the identity of the method."
+    },
+    {
+      "candidate_id": "ko_identity_candidate_005",
+      "mention_a": "ko_mention_dev_004",
+      "mention_b": "ko_mention_dev_020",
+      "decision": "SAME_OBJECT",
+      "evidence_spans": [
+        {
+          "lecture_id": "econometrics_mle_challenge_001",
+          "span": "Maximum-Likelihood Estimation estimates an econometric model by maximizing the likelihood of the observed sample."
+        },
+        {
+          "lecture_id": "statistics_mle_challenge_001",
+          "span": "Maximum Likelihood Estimation selects parameter values that maximize the likelihood."
+        }
+      ],
+      "rationale": "Both mentions refer to the same statistical method (Maximum Likelihood Estimation) with only a hyphenation difference. Both definitions describe maximizing the likelihood function, and the type is Method in both cases."
+    },
+    {
+      "candidate_id": "ko_identity_candidate_006",
+      "mention_a": "ko_mention_dev_005",
+      "mention_b": "ko_mention_dev_017",
+      "decision": "DISTINCT_OBJECT",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_degree_challenge_001",
+          "span": "The degree of a vertex is the number of edges incident to that vertex in an undirected graph."
+        },
+        {
+          "lecture_id": "polynomial_degree_challenge_001",
+          "span": "The degree of a nonzero polynomial is the largest exponent whose coefficient is nonzero."
+        }
+      ],
+      "rationale": "Both mentions refer to the concept 'Degree' but in different domains: graph theory vs. polynomial algebra. The definitions are distinct and the objects are different, despite sharing the same name and type."
+    },
+    {
+      "candidate_id": "ko_identity_candidate_007",
+      "mention_a": "ko_mention_dev_007",
+      "mention_b": "ko_mention_dev_019",
+      "decision": "SAME_OBJECT",
+      "evidence_spans": [
+        {
+          "lecture_id": "machine_learning_mle_challenge_001",
+          "span": "The likelihood function assigns each candidate parameter value a score determined by the fixed observations."
+        },
+        {
+          "lecture_id": "statistics_mle_challenge_001",
+          "span": "The likelihood compares parameter values after the observed data are held fixed."
+        }
+      ],
+      "rationale": "Both mentions refer to the same concept: the likelihood function used in maximum likelihood estimation. The definitions are semantically identical: a function that scores parameter values given fixed data. The names 'Likelihood Function' and 'Likelihood' are synonymous in this context."
+    },
+    {
+      "candidate_id": "ko_identity_candidate_008",
+      "mention_a": "ko_mention_dev_008",
+      "mention_b": "ko_mention_dev_020",
+      "decision": "SAME_OBJECT",
+      "evidence_spans": [
+        {
+          "lecture_id": "machine_learning_mle_challenge_001",
+          "span": "MLE is used to fit a probabilistic model by maximizing its likelihood function on observed training data."
+        },
+        {
+          "lecture_id": "statistics_mle_challenge_001",
+          "span": "Maximum Likelihood Estimation selects parameter values that maximize the likelihood."
+        }
+      ],
+      "rationale": "Both mentions refer to the same statistical method: 'MLE' is the abbreviation of 'Maximum Likelihood Estimation'. The definitions are consistent: maximizing the likelihood function to fit a model or select parameters."
+    },
+    {
+      "candidate_id": "ko_identity_candidate_009",
+      "mention_a": "ko_mention_dev_009",
+      "mention_b": "ko_mention_dev_012",
+      "decision": "SAME_OBJECT",
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_ode_challenge_001",
+          "span": "Euler's Method approximates its solution by repeatedly applying\n\n\\[\ny_{n+1}=y_n+h f(t_n,y_n).\n\\]"
+        },
+        {
+          "lecture_id": "ode_theory_challenge_001",
+          "span": "The Forward Euler Method advances an approximate solution using the current slope. Its update is\n\n\\[\ny_{n+1}=y_n+h f(t_n,y_n).\n\\]"
+        }
+      ],
+      "rationale": "Both mentions refer to the same numerical method for solving ODEs, as evidenced by the identical update formula y_{n+1}=y_n+h f(t_n,y_n) and the same conceptual description of approximating the solution using the current slope."
+    },
+    {
+      "candidate_id": "ko_identity_candidate_010",
+      "mention_a": "ko_mention_dev_010",
+      "mention_b": "ko_mention_dev_014",
+      "decision": "SAME_OBJECT",
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_ode_challenge_001",
+          "span": "An ODE describes a function through derivatives with respect to one independent variable."
+        },
+        {
+          "lecture_id": "ode_theory_challenge_001",
+          "span": "An ordinary differential equation relates an unknown function of one variable to its derivatives."
+        }
+      ],
+      "rationale": "Both mentions refer to the same concept: an ordinary differential equation (ODE). The first uses the abbreviation 'ODE', the second the full name. Both definitions describe the same mathematical object, and the lectures discuss the same numerical method (Euler's Method) in the same context."
+    },
+    {
+      "candidate_id": "ko_identity_candidate_011",
+      "mention_a": "ko_mention_dev_011",
+      "mention_b": "ko_mention_dev_013",
+      "decision": "SAME_OBJECT",
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_ode_challenge_001",
+          "span": "y_{n+1}=y_n+h f(t_n,y_n)"
+        },
+        {
+          "lecture_id": "ode_theory_challenge_001",
+          "span": "y_{n+1}=y_n+h f(t_n,y_n)"
+        }
+      ],
+      "rationale": "Both mentions refer to the same formula for the Forward Euler method, as evidenced by the identical mathematical expression and the context describing Euler's Method."
+    }
+  ]
+}

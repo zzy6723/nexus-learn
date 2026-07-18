@@ -1,6 +1,6 @@
 # Experiment 002C-3: End-to-End Canonicalization And Locked Reuse
 
-**Status:** Locked-reuse benchmark frozen; pending selected-method freeze
+**Status:** Completed with locked-reuse execution failure
 
 ## Question
 
@@ -54,3 +54,10 @@ is an upstream diagnostic and must not be presented as a canonicalizer repair.
 
 002C-3 does not run cross-lecture Relation classification, Connection ranking,
 or learner-facing explanation.
+
+## Outcome
+
+Two formal attempts failed the exact-evidence schema on the first candidate.
+The model copied a nonexact Unicode Entity span while the lecture contained a
+LaTeX representation. No aggregate predictions, clusters, or pipeline metrics
+were produced. See `locked_reuse_results.md` and `conclusion.md`.

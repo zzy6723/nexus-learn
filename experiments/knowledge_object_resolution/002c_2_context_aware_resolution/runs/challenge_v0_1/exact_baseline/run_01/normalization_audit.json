@@ -1,0 +1,239 @@
+{
+  "artifact_type": "ko_name_normalization_audit",
+  "version": "v0.1",
+  "benchmark_split": "development",
+  "method_id": "exact_name_same_type_v0_1",
+  "records": [
+    {
+      "mention_id": "ko_mention_dev_001",
+      "original_name": "Gradient",
+      "normalized_name": "gradient",
+      "identity_key": "gradient",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_8f1319e799c547ae"
+    },
+    {
+      "mention_id": "ko_mention_dev_002",
+      "original_name": "Gradient Coordinate Formula",
+      "normalized_name": "gradient coordinate formula",
+      "identity_key": "gradient coordinate formula",
+      "type": "Formula",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_8367644f6061099c"
+    },
+    {
+      "mention_id": "ko_mention_dev_003",
+      "original_name": "Likelihood",
+      "normalized_name": "likelihood",
+      "identity_key": "likelihood",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_da29ca2ccd248b6a"
+    },
+    {
+      "mention_id": "ko_mention_dev_004",
+      "original_name": "Maximum-Likelihood Estimation",
+      "normalized_name": "maximum-likelihood estimation",
+      "identity_key": "maximum-likelihood estimation",
+      "type": "Method",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_5d055328f6e4308c"
+    },
+    {
+      "mention_id": "ko_mention_dev_005",
+      "original_name": "Degree",
+      "normalized_name": "degree",
+      "identity_key": "degree",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_c55a2e7a7d17e6e7"
+    },
+    {
+      "mention_id": "ko_mention_dev_006",
+      "original_name": "Vertex",
+      "normalized_name": "vertex",
+      "identity_key": "vertex",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_d7ca377a453dad5b"
+    },
+    {
+      "mention_id": "ko_mention_dev_007",
+      "original_name": "Likelihood Function",
+      "normalized_name": "likelihood function",
+      "identity_key": "likelihood function",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_f148c511041e4a43"
+    },
+    {
+      "mention_id": "ko_mention_dev_008",
+      "original_name": "MLE",
+      "normalized_name": "mle",
+      "identity_key": "mle",
+      "type": "Method",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_b7fc978b93da6ad5"
+    },
+    {
+      "mention_id": "ko_mention_dev_009",
+      "original_name": "Euler's Method",
+      "normalized_name": "euler's method",
+      "identity_key": "euler's method",
+      "type": "Method",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_ec55f48abdba5d3b"
+    },
+    {
+      "mention_id": "ko_mention_dev_010",
+      "original_name": "ODE",
+      "normalized_name": "ode",
+      "identity_key": "ode",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_2b3f07ca780c3435"
+    },
+    {
+      "mention_id": "ko_mention_dev_011",
+      "original_name": "$y_{n+1}=y_n+h f(t_n,y_n)$",
+      "normalized_name": "y_{n+1}=y_n+h f(t_n,y_n)",
+      "identity_key": "y_{n+1}=y_n+h f(t_n,y_n)",
+      "type": "Formula",
+      "normalization_operations": [
+        "outer_wrapper_removed:latex_inline_dollar"
+      ],
+      "assigned_cluster_id": "canonical_pred_50e53513e7dff30c"
+    },
+    {
+      "mention_id": "ko_mention_dev_012",
+      "original_name": "Forward Euler Method",
+      "normalized_name": "forward euler method",
+      "identity_key": "forward euler method",
+      "type": "Method",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_e290def951dac225"
+    },
+    {
+      "mention_id": "ko_mention_dev_013",
+      "original_name": "Forward Euler Update",
+      "normalized_name": "forward euler update",
+      "identity_key": "forward euler update",
+      "type": "Formula",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_778f24a4c52c8554"
+    },
+    {
+      "mention_id": "ko_mention_dev_014",
+      "original_name": "Ordinary Differential Equation",
+      "normalized_name": "ordinary differential equation",
+      "identity_key": "ordinary differential equation",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_c1e2e2db9b876ca9"
+    },
+    {
+      "mention_id": "ko_mention_dev_015",
+      "original_name": "Gradient Descent",
+      "normalized_name": "gradient descent",
+      "identity_key": "gradient descent",
+      "type": "Method",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_2a653db2020b66ec"
+    },
+    {
+      "mention_id": "ko_mention_dev_016",
+      "original_name": "Gradient Vector",
+      "normalized_name": "gradient vector",
+      "identity_key": "gradient vector",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_8e6a520e4adbf236"
+    },
+    {
+      "mention_id": "ko_mention_dev_017",
+      "original_name": "Degree",
+      "normalized_name": "degree",
+      "identity_key": "degree",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_c55a2e7a7d17e6e7"
+    },
+    {
+      "mention_id": "ko_mention_dev_018",
+      "original_name": "Polynomial",
+      "normalized_name": "polynomial",
+      "identity_key": "polynomial",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_ec0a143be551cea6"
+    },
+    {
+      "mention_id": "ko_mention_dev_019",
+      "original_name": "Likelihood",
+      "normalized_name": "likelihood",
+      "identity_key": "likelihood",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_da29ca2ccd248b6a"
+    },
+    {
+      "mention_id": "ko_mention_dev_020",
+      "original_name": "Maximum Likelihood Estimation",
+      "normalized_name": "maximum likelihood estimation",
+      "identity_key": "maximum likelihood estimation",
+      "type": "Method",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_b4a347c2a6ee0ce6"
+    },
+    {
+      "mention_id": "ko_mention_dev_021",
+      "original_name": "MLE Estimator",
+      "normalized_name": "mle estimator",
+      "identity_key": "mle estimator",
+      "type": "Formula",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_facec7b6bd967b5b"
+    }
+  ]
+}

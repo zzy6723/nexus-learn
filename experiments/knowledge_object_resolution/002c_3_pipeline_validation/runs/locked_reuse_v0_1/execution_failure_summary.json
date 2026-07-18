@@ -1,0 +1,44 @@
+{
+  "artifact_type": "ko_context_resolution_execution_failure_summary",
+  "version": "v0.1",
+  "status": "execution_failed",
+  "data_role": "locked_reuse",
+  "method_id": "candidate_scoped_context_resolution_v0_1",
+  "method_commit": "98ddd710cd4dd1f4c1034dc4a05dd24034676ac2",
+  "failed_candidate_id": "ko_identity_candidate_001",
+  "failure_type": "nonexact_evidence_span",
+  "failure_locus": "evidence_serialization_contract",
+  "attempts": [
+    {
+      "run_id": "run_01",
+      "metadata": {
+        "path": "experiments/knowledge_object_resolution/002c_3_pipeline_validation/runs/locked_reuse_v0_1/context/run_01/metadata/run_metadata.json",
+        "sha256": "849dcd48c5278d734b65be151aed67ea8b083495c39c25fd76220be58bc6edb7"
+      },
+      "failed_prediction": {
+        "path": "experiments/knowledge_object_resolution/002c_3_pipeline_validation/runs/locked_reuse_v0_1/context/run_01/output/pairs/ko_identity_candidate_001.json",
+        "sha256": "ec9f3c80891ac657f408693dfbaf89d0fc702653e3fca29f4b11827bce5a93ee"
+      }
+    },
+    {
+      "run_id": "run_02",
+      "metadata": {
+        "path": "experiments/knowledge_object_resolution/002c_3_pipeline_validation/runs/locked_reuse_v0_1/context/run_02/metadata/run_metadata.json",
+        "sha256": "ef03ff26fb9233c2342998c2078258e8ba83be9d3586fff81509711d69b7b9bd"
+      },
+      "failed_prediction": {
+        "path": "experiments/knowledge_object_resolution/002c_3_pipeline_validation/runs/locked_reuse_v0_1/context/run_02/output/pairs/ko_identity_candidate_001.json",
+        "sha256": "4c57d348e9af84cffe17c126b61c49701e2a10383685651f149be9fc3ff0eb82"
+      }
+    }
+  ],
+  "request_payload_set_sha256": "04232b9f8dbd93df580410745b2c66444bb86726bc2628aafbdd925c2975ad98",
+  "source_condition": {
+    "mention_ids": ["ko_mention_dev_003", "ko_mention_dev_010"],
+    "source_span_exact_flags": [false, false],
+    "observed_unicode_form": "The gradient ∇f(x) collects these partial derivatives into a vector.",
+    "required_lecture_form": "The gradient \\(\\nabla f(x)\\) collects these partial derivatives into a vector."
+  },
+  "decision": "Stop after two attempts because the same candidate and exact-evidence violation repeated under an identical frozen payload. No cluster or evaluation metrics are produced.",
+  "interpretation": "The failure does not establish whether the semantic identity decision is correct or incorrect. It establishes that v0.1 did not satisfy its frozen end-to-end grounding contract on this locked-reuse input."
+}

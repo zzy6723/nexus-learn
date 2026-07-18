@@ -1,0 +1,167 @@
+{
+  "artifact_type": "ko_identity_candidate_bundle",
+  "version": "v0.1",
+  "benchmark_split": "development",
+  "candidate_order": "ascending_unordered_mention_inventory_pair",
+  "generation_rules": [
+    "exact_normalized_name",
+    "frozen_alias_identity",
+    "name_token_equivalence",
+    "initialism_name_match",
+    "name_token_containment",
+    "exact_source_span"
+  ],
+  "counts": {
+    "mentions": 49,
+    "all_unordered_pairs": 1176,
+    "same_type_pairs": 616,
+    "selected_candidates": 6,
+    "rejected_pairs": 1170
+  },
+  "candidates": [
+    {
+      "candidate_id": "ko_identity_candidate_001",
+      "mention_a": {
+        "mention_id": "ko_mention_dev_003",
+        "lecture_id": "calculus_001",
+        "name": "Gradient",
+        "type": "Concept",
+        "source_spans": [
+          "The gradient ∇f(x) collects these partial derivatives into a vector."
+        ]
+      },
+      "mention_b": {
+        "mention_id": "ko_mention_dev_010",
+        "lecture_id": "calculus_002",
+        "name": "Gradient",
+        "type": "Concept",
+        "source_spans": [
+          "∇h(x) = J_g(x)^⊤ ∇f(g(x))."
+        ]
+      },
+      "selection_reasons": [
+        "exact_normalized_name"
+      ]
+    },
+    {
+      "candidate_id": "ko_identity_candidate_002",
+      "mention_a": {
+        "mention_id": "ko_mention_dev_003",
+        "lecture_id": "calculus_001",
+        "name": "Gradient",
+        "type": "Concept",
+        "source_spans": [
+          "The gradient ∇f(x) collects these partial derivatives into a vector."
+        ]
+      },
+      "mention_b": {
+        "mention_id": "ko_mention_dev_032",
+        "lecture_id": "optimisation_001",
+        "name": "Gradient",
+        "type": "Concept",
+        "source_spans": [
+          "gradient \\(\\nabla f(x)\\) describes local change"
+        ]
+      },
+      "selection_reasons": [
+        "exact_normalized_name"
+      ]
+    },
+    {
+      "candidate_id": "ko_identity_candidate_003",
+      "mention_a": {
+        "mention_id": "ko_mention_dev_004",
+        "lecture_id": "calculus_001",
+        "name": "Hessian Matrix",
+        "type": "Concept",
+        "source_spans": [
+          "the Hessian matrix, which describes local curvature."
+        ]
+      },
+      "mention_b": {
+        "mention_id": "ko_mention_dev_020",
+        "lecture_id": "linear_algebra_001",
+        "name": "Matrix",
+        "type": "Concept",
+        "source_spans": [
+          "A matrix is a rectangular array of numbers that can represent a linear transformation once bases have been chosen for the input and output spaces."
+        ]
+      },
+      "selection_reasons": [
+        "name_token_containment"
+      ]
+    },
+    {
+      "candidate_id": "ko_identity_candidate_004",
+      "mention_a": {
+        "mention_id": "ko_mention_dev_006",
+        "lecture_id": "calculus_001",
+        "name": "Stationary Point",
+        "type": "Concept",
+        "source_spans": [
+          "A point where the gradient is the zero vector is called a stationary point."
+        ]
+      },
+      "mention_b": {
+        "mention_id": "ko_mention_dev_038",
+        "lecture_id": "optimisation_001",
+        "name": "Stationary Point",
+        "type": "Concept",
+        "source_spans": [
+          "stationary point is a point where the gradient is zero"
+        ]
+      },
+      "selection_reasons": [
+        "exact_normalized_name"
+      ]
+    },
+    {
+      "candidate_id": "ko_identity_candidate_005",
+      "mention_a": {
+        "mention_id": "ko_mention_dev_010",
+        "lecture_id": "calculus_002",
+        "name": "Gradient",
+        "type": "Concept",
+        "source_spans": [
+          "∇h(x) = J_g(x)^⊤ ∇f(g(x))."
+        ]
+      },
+      "mention_b": {
+        "mention_id": "ko_mention_dev_032",
+        "lecture_id": "optimisation_001",
+        "name": "Gradient",
+        "type": "Concept",
+        "source_spans": [
+          "gradient \\(\\nabla f(x)\\) describes local change"
+        ]
+      },
+      "selection_reasons": [
+        "exact_normalized_name"
+      ]
+    },
+    {
+      "candidate_id": "ko_identity_candidate_006",
+      "mention_a": {
+        "mention_id": "ko_mention_dev_011",
+        "lecture_id": "calculus_002",
+        "name": "Jacobian Matrix",
+        "type": "Concept",
+        "source_spans": [
+          "the Jacobian matrix J_g(x) collects all first-order partial derivatives of the output components of g."
+        ]
+      },
+      "mention_b": {
+        "mention_id": "ko_mention_dev_020",
+        "lecture_id": "linear_algebra_001",
+        "name": "Matrix",
+        "type": "Concept",
+        "source_spans": [
+          "A matrix is a rectangular array of numbers that can represent a linear transformation once bases have been chosen for the input and output spaces."
+        ]
+      },
+      "selection_reasons": [
+        "name_token_containment"
+      ]
+    }
+  ]
+}

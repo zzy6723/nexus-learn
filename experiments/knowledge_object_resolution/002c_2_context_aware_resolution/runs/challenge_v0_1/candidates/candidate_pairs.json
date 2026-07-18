@@ -1,0 +1,289 @@
+{
+  "artifact_type": "ko_identity_candidate_bundle",
+  "version": "v0.1",
+  "benchmark_split": "development",
+  "candidate_order": "ascending_unordered_mention_inventory_pair",
+  "generation_rules": [
+    "exact_normalized_name",
+    "frozen_alias_identity",
+    "name_token_equivalence",
+    "initialism_name_match",
+    "name_token_containment",
+    "exact_source_span"
+  ],
+  "counts": {
+    "mentions": 21,
+    "all_unordered_pairs": 210,
+    "same_type_pairs": 76,
+    "selected_candidates": 11,
+    "rejected_pairs": 199
+  },
+  "candidates": [
+    {
+      "candidate_id": "ko_identity_candidate_001",
+      "mention_a": {
+        "mention_id": "ko_mention_dev_001",
+        "lecture_id": "calculus_gradient_challenge_001",
+        "name": "Gradient",
+        "type": "Concept",
+        "source_spans": [
+          "The gradient of a differentiable scalar function is the vector of its partial derivatives."
+        ]
+      },
+      "mention_b": {
+        "mention_id": "ko_mention_dev_016",
+        "lecture_id": "optimisation_gradient_challenge_001",
+        "name": "Gradient Vector",
+        "type": "Concept",
+        "source_spans": [
+          "The gradient vector points in the direction of steepest local increase of a differentiable objective."
+        ]
+      },
+      "selection_reasons": [
+        "name_token_containment"
+      ]
+    },
+    {
+      "candidate_id": "ko_identity_candidate_002",
+      "mention_a": {
+        "mention_id": "ko_mention_dev_003",
+        "lecture_id": "econometrics_mle_challenge_001",
+        "name": "Likelihood",
+        "type": "Concept",
+        "source_spans": [
+          "The likelihood is viewed as a function of the model parameters with the sample held fixed."
+        ]
+      },
+      "mention_b": {
+        "mention_id": "ko_mention_dev_007",
+        "lecture_id": "machine_learning_mle_challenge_001",
+        "name": "Likelihood Function",
+        "type": "Concept",
+        "source_spans": [
+          "The likelihood function assigns each candidate parameter value a score determined by the fixed observations."
+        ]
+      },
+      "selection_reasons": [
+        "name_token_containment"
+      ]
+    },
+    {
+      "candidate_id": "ko_identity_candidate_003",
+      "mention_a": {
+        "mention_id": "ko_mention_dev_003",
+        "lecture_id": "econometrics_mle_challenge_001",
+        "name": "Likelihood",
+        "type": "Concept",
+        "source_spans": [
+          "The likelihood is viewed as a function of the model parameters with the sample held fixed."
+        ]
+      },
+      "mention_b": {
+        "mention_id": "ko_mention_dev_019",
+        "lecture_id": "statistics_mle_challenge_001",
+        "name": "Likelihood",
+        "type": "Concept",
+        "source_spans": [
+          "The likelihood compares parameter values after the observed data are held fixed."
+        ]
+      },
+      "selection_reasons": [
+        "exact_normalized_name"
+      ]
+    },
+    {
+      "candidate_id": "ko_identity_candidate_004",
+      "mention_a": {
+        "mention_id": "ko_mention_dev_004",
+        "lecture_id": "econometrics_mle_challenge_001",
+        "name": "Maximum-Likelihood Estimation",
+        "type": "Method",
+        "source_spans": [
+          "Maximum-Likelihood Estimation estimates an econometric model by maximizing the likelihood of the observed sample."
+        ]
+      },
+      "mention_b": {
+        "mention_id": "ko_mention_dev_008",
+        "lecture_id": "machine_learning_mle_challenge_001",
+        "name": "MLE",
+        "type": "Method",
+        "source_spans": [
+          "MLE is used to fit a probabilistic model by maximizing its likelihood function on observed training data."
+        ]
+      },
+      "selection_reasons": [
+        "initialism_name_match"
+      ]
+    },
+    {
+      "candidate_id": "ko_identity_candidate_005",
+      "mention_a": {
+        "mention_id": "ko_mention_dev_004",
+        "lecture_id": "econometrics_mle_challenge_001",
+        "name": "Maximum-Likelihood Estimation",
+        "type": "Method",
+        "source_spans": [
+          "Maximum-Likelihood Estimation estimates an econometric model by maximizing the likelihood of the observed sample."
+        ]
+      },
+      "mention_b": {
+        "mention_id": "ko_mention_dev_020",
+        "lecture_id": "statistics_mle_challenge_001",
+        "name": "Maximum Likelihood Estimation",
+        "type": "Method",
+        "source_spans": [
+          "Maximum Likelihood Estimation selects parameter values that maximize the likelihood."
+        ]
+      },
+      "selection_reasons": [
+        "name_token_equivalence"
+      ]
+    },
+    {
+      "candidate_id": "ko_identity_candidate_006",
+      "mention_a": {
+        "mention_id": "ko_mention_dev_005",
+        "lecture_id": "graph_degree_challenge_001",
+        "name": "Degree",
+        "type": "Concept",
+        "source_spans": [
+          "The degree of a vertex is the number of edges incident to that vertex in an undirected graph."
+        ]
+      },
+      "mention_b": {
+        "mention_id": "ko_mention_dev_017",
+        "lecture_id": "polynomial_degree_challenge_001",
+        "name": "Degree",
+        "type": "Concept",
+        "source_spans": [
+          "The degree of a nonzero polynomial is the largest exponent whose coefficient is nonzero."
+        ]
+      },
+      "selection_reasons": [
+        "exact_normalized_name"
+      ]
+    },
+    {
+      "candidate_id": "ko_identity_candidate_007",
+      "mention_a": {
+        "mention_id": "ko_mention_dev_007",
+        "lecture_id": "machine_learning_mle_challenge_001",
+        "name": "Likelihood Function",
+        "type": "Concept",
+        "source_spans": [
+          "The likelihood function assigns each candidate parameter value a score determined by the fixed observations."
+        ]
+      },
+      "mention_b": {
+        "mention_id": "ko_mention_dev_019",
+        "lecture_id": "statistics_mle_challenge_001",
+        "name": "Likelihood",
+        "type": "Concept",
+        "source_spans": [
+          "The likelihood compares parameter values after the observed data are held fixed."
+        ]
+      },
+      "selection_reasons": [
+        "name_token_containment"
+      ]
+    },
+    {
+      "candidate_id": "ko_identity_candidate_008",
+      "mention_a": {
+        "mention_id": "ko_mention_dev_008",
+        "lecture_id": "machine_learning_mle_challenge_001",
+        "name": "MLE",
+        "type": "Method",
+        "source_spans": [
+          "MLE is used to fit a probabilistic model by maximizing its likelihood function on observed training data."
+        ]
+      },
+      "mention_b": {
+        "mention_id": "ko_mention_dev_020",
+        "lecture_id": "statistics_mle_challenge_001",
+        "name": "Maximum Likelihood Estimation",
+        "type": "Method",
+        "source_spans": [
+          "Maximum Likelihood Estimation selects parameter values that maximize the likelihood."
+        ]
+      },
+      "selection_reasons": [
+        "frozen_alias_identity",
+        "initialism_name_match"
+      ]
+    },
+    {
+      "candidate_id": "ko_identity_candidate_009",
+      "mention_a": {
+        "mention_id": "ko_mention_dev_009",
+        "lecture_id": "numerical_ode_challenge_001",
+        "name": "Euler's Method",
+        "type": "Method",
+        "source_spans": [
+          "Euler's Method approximates its solution by repeatedly applying"
+        ]
+      },
+      "mention_b": {
+        "mention_id": "ko_mention_dev_012",
+        "lecture_id": "ode_theory_challenge_001",
+        "name": "Forward Euler Method",
+        "type": "Method",
+        "source_spans": [
+          "The Forward Euler Method advances an approximate solution using the current slope."
+        ]
+      },
+      "selection_reasons": [
+        "name_token_containment"
+      ]
+    },
+    {
+      "candidate_id": "ko_identity_candidate_010",
+      "mention_a": {
+        "mention_id": "ko_mention_dev_010",
+        "lecture_id": "numerical_ode_challenge_001",
+        "name": "ODE",
+        "type": "Concept",
+        "source_spans": [
+          "An ODE describes a function through derivatives with respect to one independent variable."
+        ]
+      },
+      "mention_b": {
+        "mention_id": "ko_mention_dev_014",
+        "lecture_id": "ode_theory_challenge_001",
+        "name": "Ordinary Differential Equation",
+        "type": "Concept",
+        "source_spans": [
+          "An ordinary differential equation relates an unknown function of one variable to its derivatives."
+        ]
+      },
+      "selection_reasons": [
+        "frozen_alias_identity",
+        "initialism_name_match"
+      ]
+    },
+    {
+      "candidate_id": "ko_identity_candidate_011",
+      "mention_a": {
+        "mention_id": "ko_mention_dev_011",
+        "lecture_id": "numerical_ode_challenge_001",
+        "name": "$y_{n+1}=y_n+h f(t_n,y_n)$",
+        "type": "Formula",
+        "source_spans": [
+          "y_{n+1}=y_n+h f(t_n,y_n)"
+        ]
+      },
+      "mention_b": {
+        "mention_id": "ko_mention_dev_013",
+        "lecture_id": "ode_theory_challenge_001",
+        "name": "Forward Euler Update",
+        "type": "Formula",
+        "source_spans": [
+          "y_{n+1}=y_n+h f(t_n,y_n)"
+        ]
+      },
+      "selection_reasons": [
+        "exact_source_span"
+      ]
+    }
+  ]
+}

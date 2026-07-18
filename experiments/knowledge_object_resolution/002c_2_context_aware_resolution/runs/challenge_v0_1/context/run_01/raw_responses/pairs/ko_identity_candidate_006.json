@@ -1,0 +1,28 @@
+{
+  "id": "b123b64b-5eb8-496b-978f-5ca3c4ccee38",
+  "object": "chat.completion",
+  "created": 1784392666,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"candidate_id\": \"ko_identity_candidate_006\",\n  \"mention_a\": \"ko_mention_dev_005\",\n  \"mention_b\": \"ko_mention_dev_017\",\n  \"decision\": \"DISTINCT_OBJECT\",\n  \"evidence_spans\": [\n    {\n      \"lecture_id\": \"graph_degree_challenge_001\",\n      \"span\": \"The degree of a vertex is the number of edges incident to that vertex in an undirected graph.\"\n    },\n    {\n      \"lecture_id\": \"polynomial_degree_challenge_001\",\n      \"span\": \"The degree of a nonzero polynomial is the largest exponent whose coefficient is nonzero.\"\n    }\n  ],\n  \"rationale\": \"Both mentions refer to the concept 'Degree' but in different domains: graph theory vs. polynomial algebra. The definitions are distinct and the objects are different, despite sharing the same name and type.\"\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 695,
+    "completion_tokens": 192,
+    "total_tokens": 887,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 311
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

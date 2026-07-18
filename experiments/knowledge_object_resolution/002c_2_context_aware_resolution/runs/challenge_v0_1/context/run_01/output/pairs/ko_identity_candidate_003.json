@@ -1,0 +1,17 @@
+{
+  "candidate_id": "ko_identity_candidate_003",
+  "mention_a": "ko_mention_dev_003",
+  "mention_b": "ko_mention_dev_019",
+  "decision": "SAME_OBJECT",
+  "evidence_spans": [
+    {
+      "lecture_id": "econometrics_mle_challenge_001",
+      "span": "The likelihood is viewed as a function of the model parameters with the sample held fixed."
+    },
+    {
+      "lecture_id": "statistics_mle_challenge_001",
+      "span": "The likelihood compares parameter values after the observed data are held fixed."
+    }
+  ],
+  "rationale": "Both mentions refer to the same statistical concept of likelihood used in maximum likelihood estimation, defined as a function of parameters given fixed data. The definitions are semantically equivalent despite different wording."
+}

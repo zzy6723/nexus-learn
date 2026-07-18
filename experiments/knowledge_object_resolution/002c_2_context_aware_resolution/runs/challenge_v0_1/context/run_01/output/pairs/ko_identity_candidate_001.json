@@ -1,0 +1,17 @@
+{
+  "candidate_id": "ko_identity_candidate_001",
+  "mention_a": "ko_mention_dev_001",
+  "mention_b": "ko_mention_dev_016",
+  "decision": "SAME_OBJECT",
+  "evidence_spans": [
+    {
+      "lecture_id": "calculus_gradient_challenge_001",
+      "span": "The gradient of a differentiable scalar function is the vector of its partial derivatives."
+    },
+    {
+      "lecture_id": "optimisation_gradient_challenge_001",
+      "span": "The gradient vector points in the direction of steepest local increase of a differentiable objective."
+    }
+  ],
+  "rationale": "Both mentions refer to the same mathematical concept: the gradient (or gradient vector) of a differentiable function. The first defines it as the vector of partial derivatives, and the second describes its directional property. The names 'Gradient' and 'Gradient Vector' are synonymous in this context, and both are of type Concept."
+}

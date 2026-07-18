@@ -1,0 +1,28 @@
+{
+  "id": "cd9af0f2-7460-42fa-83fa-cd8198e885bd",
+  "object": "chat.completion",
+  "created": 1784392650,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"candidate_id\": \"ko_identity_candidate_001\",\n  \"mention_a\": \"ko_mention_dev_001\",\n  \"mention_b\": \"ko_mention_dev_016\",\n  \"decision\": \"SAME_OBJECT\",\n  \"evidence_spans\": [\n    {\n      \"lecture_id\": \"calculus_gradient_challenge_001\",\n      \"span\": \"The gradient of a differentiable scalar function is the vector of its partial derivatives.\"\n    },\n    {\n      \"lecture_id\": \"optimisation_gradient_challenge_001\",\n      \"span\": \"The gradient vector points in the direction of steepest local increase of a differentiable objective.\"\n    }\n  ],\n  \"rationale\": \"Both mentions refer to the same mathematical concept: the gradient (or gradient vector) of a differentiable function. The first defines it as the vector of partial derivatives, and the second describes its directional property. The names 'Gradient' and 'Gradient Vector' are synonymous in this context, and both are of type Concept.\"\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 762,
+    "completion_tokens": 215,
+    "total_tokens": 977,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 762
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

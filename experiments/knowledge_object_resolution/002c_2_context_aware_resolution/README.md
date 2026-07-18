@@ -1,6 +1,6 @@
 # Experiment 002C-2: Context-Aware KO Resolution
 
-**Status:** Method implementation and synthetic validation completed; formal run pending
+**Status:** Completed; context v0.1 passed the authored development challenge
 
 ## Question
 
@@ -75,3 +75,6 @@ The frozen execution and retry rules are recorded in
 `method_contract_v0_1.md`. Synthetic tests cover complete success, endpoint
 substitution, nonexact evidence, unresolved decisions, inconsistent identity
 triangles, no-overwrite behavior, and artifact hash binding.
+
+Formal results are recorded in `development_results.md`. The context method
+passed every challenge criterion and was selected for 002C-3 locked reuse.

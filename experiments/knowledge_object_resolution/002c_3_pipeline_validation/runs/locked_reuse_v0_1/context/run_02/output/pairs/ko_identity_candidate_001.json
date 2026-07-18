@@ -1,0 +1,17 @@
+{
+  "candidate_id": "ko_identity_candidate_001",
+  "mention_a": "ko_mention_dev_003",
+  "mention_b": "ko_mention_dev_010",
+  "decision": "SAME_OBJECT",
+  "evidence_spans": [
+    {
+      "lecture_id": "calculus_001",
+      "span": "The gradient ∇f(x) collects these partial derivatives into a vector."
+    },
+    {
+      "lecture_id": "calculus_002",
+      "span": "∇h(x) = J_g(x)^⊤ ∇f(g(x))."
+    }
+  ],
+  "rationale": "Both mentions refer to the gradient of a scalar-valued function, a fundamental concept in multivariable calculus. The first defines the gradient, and the second uses it in the chain rule. They denote the same mathematical object at the same granularity."
+}

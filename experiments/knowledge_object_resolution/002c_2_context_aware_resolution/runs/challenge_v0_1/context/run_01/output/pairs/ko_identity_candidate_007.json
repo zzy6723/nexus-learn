@@ -1,0 +1,17 @@
+{
+  "candidate_id": "ko_identity_candidate_007",
+  "mention_a": "ko_mention_dev_007",
+  "mention_b": "ko_mention_dev_019",
+  "decision": "SAME_OBJECT",
+  "evidence_spans": [
+    {
+      "lecture_id": "machine_learning_mle_challenge_001",
+      "span": "The likelihood function assigns each candidate parameter value a score determined by the fixed observations."
+    },
+    {
+      "lecture_id": "statistics_mle_challenge_001",
+      "span": "The likelihood compares parameter values after the observed data are held fixed."
+    }
+  ],
+  "rationale": "Both mentions refer to the same concept: the likelihood function used in maximum likelihood estimation. The definitions are semantically identical: a function that scores parameter values given fixed data. The names 'Likelihood Function' and 'Likelihood' are synonymous in this context."
+}

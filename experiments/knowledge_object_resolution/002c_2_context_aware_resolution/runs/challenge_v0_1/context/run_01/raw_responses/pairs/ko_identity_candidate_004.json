@@ -1,0 +1,28 @@
+{
+  "id": "c02f67ed-7ca1-4a5c-9f53-231648488756",
+  "object": "chat.completion",
+  "created": 1784392659,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"candidate_id\": \"ko_identity_candidate_004\",\n  \"mention_a\": \"ko_mention_dev_004\",\n  \"mention_b\": \"ko_mention_dev_008\",\n  \"decision\": \"SAME_OBJECT\",\n  \"evidence_spans\": [\n    {\n      \"lecture_id\": \"econometrics_mle_challenge_001\",\n      \"span\": \"Maximum-Likelihood Estimation estimates an econometric model by maximizing the likelihood of the observed sample.\"\n    },\n    {\n      \"lecture_id\": \"machine_learning_mle_challenge_001\",\n      \"span\": \"MLE is used to fit a probabilistic model by maximizing its likelihood function on observed training data.\"\n    }\n  ],\n  \"rationale\": \"Both mentions refer to the same statistical method (Maximum Likelihood Estimation) with the same core definition: maximizing a likelihood function to estimate model parameters. 'MLE' is a standard abbreviation for 'Maximum-Likelihood Estimation'. The slight difference in domain (econometrics vs. machine learning) does not change the identity of the method.\"\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 715,
+    "completion_tokens": 224,
+    "total_tokens": 939,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 331
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

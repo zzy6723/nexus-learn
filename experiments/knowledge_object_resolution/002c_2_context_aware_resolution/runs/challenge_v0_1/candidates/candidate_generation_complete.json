@@ -1,0 +1,19 @@
+{
+  "artifact_type": "ko_identity_candidate_generation_complete",
+  "version": "v0.1",
+  "status": "final",
+  "artifacts": {
+    "candidates": {
+      "path": "experiments/knowledge_object_resolution/002c_2_context_aware_resolution/runs/challenge_v0_1/candidates/candidate_pairs.json",
+      "sha256": "3b7229cf7c188820f7528165ee0b2e31dba3f15484d849dfd8e4d34be863a469"
+    },
+    "audit": {
+      "path": "experiments/knowledge_object_resolution/002c_2_context_aware_resolution/runs/challenge_v0_1/candidates/candidate_generation_audit.json",
+      "sha256": "64a8e413ec9bb5818bd0dd15d2d89155dc31beee2829d7ab5ec3daf9da84ac4c"
+    },
+    "metadata": {
+      "path": "experiments/knowledge_object_resolution/002c_2_context_aware_resolution/runs/challenge_v0_1/candidates/metadata.json",
+      "sha256": "8d9aa9d4d0aa4ca661abb799f5b19227f1b2a26af5c1f16c7234a802b5ea77ac"
+    }
+  }
+}

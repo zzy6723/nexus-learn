@@ -1,0 +1,17 @@
+{
+  "candidate_id": "ko_identity_candidate_010",
+  "mention_a": "ko_mention_dev_010",
+  "mention_b": "ko_mention_dev_014",
+  "decision": "SAME_OBJECT",
+  "evidence_spans": [
+    {
+      "lecture_id": "numerical_ode_challenge_001",
+      "span": "An ODE describes a function through derivatives with respect to one independent variable."
+    },
+    {
+      "lecture_id": "ode_theory_challenge_001",
+      "span": "An ordinary differential equation relates an unknown function of one variable to its derivatives."
+    }
+  ],
+  "rationale": "Both mentions refer to the same concept: an ordinary differential equation (ODE). The first uses the abbreviation 'ODE', the second the full name. Both definitions describe the same mathematical object, and the lectures discuss the same numerical method (Euler's Method) in the same context."
+}

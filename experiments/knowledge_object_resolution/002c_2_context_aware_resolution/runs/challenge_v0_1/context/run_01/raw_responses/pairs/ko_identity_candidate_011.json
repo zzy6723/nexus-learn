@@ -1,0 +1,28 @@
+{
+  "id": "9298c9cc-8f7a-43cd-9bed-47afeb5506fa",
+  "object": "chat.completion",
+  "created": 1784392680,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"candidate_id\": \"ko_identity_candidate_011\",\n  \"mention_a\": \"ko_mention_dev_011\",\n  \"mention_b\": \"ko_mention_dev_013\",\n  \"decision\": \"SAME_OBJECT\",\n  \"evidence_spans\": [\n    {\n      \"lecture_id\": \"numerical_ode_challenge_001\",\n      \"span\": \"y_{n+1}=y_n+h f(t_n,y_n)\"\n    },\n    {\n      \"lecture_id\": \"ode_theory_challenge_001\",\n      \"span\": \"y_{n+1}=y_n+h f(t_n,y_n)\"\n    }\n  ],\n  \"rationale\": \"Both mentions refer to the same formula for the Forward Euler method, as evidenced by the identical mathematical expression and the context describing Euler's Method.\"\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 745,
+    "completion_tokens": 175,
+    "total_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 361
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

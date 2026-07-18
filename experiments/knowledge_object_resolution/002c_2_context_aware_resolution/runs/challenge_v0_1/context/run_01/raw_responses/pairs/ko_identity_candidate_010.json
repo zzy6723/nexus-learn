@@ -1,0 +1,28 @@
+{
+  "id": "c3a07cb6-cb83-4cd2-9e89-3acba528b6b8",
+  "object": "chat.completion",
+  "created": 1784392677,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"candidate_id\": \"ko_identity_candidate_010\",\n  \"mention_a\": \"ko_mention_dev_010\",\n  \"mention_b\": \"ko_mention_dev_014\",\n  \"decision\": \"SAME_OBJECT\",\n  \"evidence_spans\": [\n    {\n      \"lecture_id\": \"numerical_ode_challenge_001\",\n      \"span\": \"An ODE describes a function through derivatives with respect to one independent variable.\"\n    },\n    {\n      \"lecture_id\": \"ode_theory_challenge_001\",\n      \"span\": \"An ordinary differential equation relates an unknown function of one variable to its derivatives.\"\n    }\n  ],\n  \"rationale\": \"Both mentions refer to the same concept: an ordinary differential equation (ODE). The first uses the abbreviation 'ODE', the second the full name. Both definitions describe the same mathematical object, and the lectures discuss the same numerical method (Euler's Method) in the same context.\"\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 732,
+    "completion_tokens": 203,
+    "total_tokens": 935,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 348
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

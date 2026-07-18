@@ -1,0 +1,17 @@
+{
+  "candidate_id": "ko_identity_candidate_005",
+  "mention_a": "ko_mention_dev_004",
+  "mention_b": "ko_mention_dev_020",
+  "decision": "SAME_OBJECT",
+  "evidence_spans": [
+    {
+      "lecture_id": "econometrics_mle_challenge_001",
+      "span": "Maximum-Likelihood Estimation estimates an econometric model by maximizing the likelihood of the observed sample."
+    },
+    {
+      "lecture_id": "statistics_mle_challenge_001",
+      "span": "Maximum Likelihood Estimation selects parameter values that maximize the likelihood."
+    }
+  ],
+  "rationale": "Both mentions refer to the same statistical method (Maximum Likelihood Estimation) with only a hyphenation difference. Both definitions describe maximizing the likelihood function, and the type is Method in both cases."
+}

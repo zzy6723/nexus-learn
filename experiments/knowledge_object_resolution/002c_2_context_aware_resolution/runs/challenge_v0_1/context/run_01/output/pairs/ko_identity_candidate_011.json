@@ -1,0 +1,17 @@
+{
+  "candidate_id": "ko_identity_candidate_011",
+  "mention_a": "ko_mention_dev_011",
+  "mention_b": "ko_mention_dev_013",
+  "decision": "SAME_OBJECT",
+  "evidence_spans": [
+    {
+      "lecture_id": "numerical_ode_challenge_001",
+      "span": "y_{n+1}=y_n+h f(t_n,y_n)"
+    },
+    {
+      "lecture_id": "ode_theory_challenge_001",
+      "span": "y_{n+1}=y_n+h f(t_n,y_n)"
+    }
+  ],
+  "rationale": "Both mentions refer to the same formula for the Forward Euler method, as evidenced by the identical mathematical expression and the context describing Euler's Method."
+}

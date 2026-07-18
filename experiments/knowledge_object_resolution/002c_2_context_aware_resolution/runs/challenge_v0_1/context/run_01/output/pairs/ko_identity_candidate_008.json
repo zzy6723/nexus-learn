@@ -1,0 +1,17 @@
+{
+  "candidate_id": "ko_identity_candidate_008",
+  "mention_a": "ko_mention_dev_008",
+  "mention_b": "ko_mention_dev_020",
+  "decision": "SAME_OBJECT",
+  "evidence_spans": [
+    {
+      "lecture_id": "machine_learning_mle_challenge_001",
+      "span": "MLE is used to fit a probabilistic model by maximizing its likelihood function on observed training data."
+    },
+    {
+      "lecture_id": "statistics_mle_challenge_001",
+      "span": "Maximum Likelihood Estimation selects parameter values that maximize the likelihood."
+    }
+  ],
+  "rationale": "Both mentions refer to the same statistical method: 'MLE' is the abbreviation of 'Maximum Likelihood Estimation'. The definitions are consistent: maximizing the likelihood function to fit a model or select parameters."
+}

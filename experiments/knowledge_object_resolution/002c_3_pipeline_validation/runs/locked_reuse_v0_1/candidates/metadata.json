@@ -1,0 +1,39 @@
+{
+  "artifact_type": "ko_identity_candidate_generation_metadata",
+  "version": "v0.1",
+  "status": "completed",
+  "generator": {
+    "path": "scripts/generate_ko_identity_candidates.py",
+    "sha256": "10e08c67a91d4ca6872eca101cb453db0cec1dd42193e66fe59a118dccb42d76",
+    "version": "ko_identity_candidate_generator_v0.1"
+  },
+  "inputs": {
+    "mention_inventory": {
+      "path": "benchmark/ko_canonicalization/locked_reuse_v0_1/mention_inventory.json",
+      "sha256": "17939bc24ae1df16ab36cc34ac00562218e10f5891718bd6186ae691c0545501"
+    },
+    "lecture_inventory": {
+      "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/lecture_inventory.json",
+      "sha256": "195b8523b00652d98d79866f4807993e1359f857577210c9b62ab970f5f41422"
+    },
+    "normalization_config": {
+      "path": "benchmark/ko_name_normalization_v0_1.json",
+      "sha256": "fad01c399f4ef3f3147f136c76579b253f563965a299c1003a91e79baadc3d9e"
+    },
+    "alias_resource": {
+      "path": "benchmark/ko_aliases_v0_1.json",
+      "sha256": "4fa8d455eeb9bdbc1cf6c0ba8a3d08ac7c5266d0ad0a4f2efe3bf1e93af50bea"
+    },
+    "challenge_marker": {
+      "path": "benchmark/ko_canonicalization/locked_reuse_v0_1/benchmark_complete.json",
+      "sha256": "e39f819072f44e32595a59d0b647967cfb9067dec09af18fcf0f040561761180"
+    }
+  },
+  "counts": {
+    "mentions": 49,
+    "all_unordered_pairs": 1176,
+    "same_type_pairs": 616,
+    "selected_candidates": 6,
+    "rejected_pairs": 1170
+  }
+}

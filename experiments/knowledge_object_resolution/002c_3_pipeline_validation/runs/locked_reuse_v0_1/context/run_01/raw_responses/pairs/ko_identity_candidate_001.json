@@ -1,0 +1,28 @@
+{
+  "id": "faa6489e-3e6b-4879-9770-099281ff211d",
+  "object": "chat.completion",
+  "created": 1784393177,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"candidate_id\": \"ko_identity_candidate_001\",\n  \"mention_a\": \"ko_mention_dev_003\",\n  \"mention_b\": \"ko_mention_dev_010\",\n  \"decision\": \"SAME_OBJECT\",\n  \"evidence_spans\": [\n    {\n      \"lecture_id\": \"calculus_001\",\n      \"span\": \"The gradient ∇f(x) collects these partial derivatives into a vector.\"\n    },\n    {\n      \"lecture_id\": \"calculus_002\",\n      \"span\": \"∇h(x) = J_g(x)^⊤ ∇f(g(x)).\"\n    }\n  ],\n  \"rationale\": \"Both mentions refer to the gradient of a scalar-valued function, a fundamental concept in multivariable calculus. The first defines the gradient as a vector of partial derivatives, and the second uses the gradient in the chain rule formula. They denote the same mathematical object at the same granularity.\"\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1108,
+    "completion_tokens": 197,
+    "total_tokens": 1305,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 724
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,19 @@
+{
+  "artifact_type": "ko_identity_candidate_generation_complete",
+  "version": "v0.1",
+  "status": "final",
+  "artifacts": {
+    "candidates": {
+      "path": "experiments/knowledge_object_resolution/002c_3_pipeline_validation/runs/locked_reuse_v0_1/candidates/candidate_pairs.json",
+      "sha256": "0a68d3f287a53f48ba33df493dda023755d91b30b0afe28d665c707b58e46309"
+    },
+    "audit": {
+      "path": "experiments/knowledge_object_resolution/002c_3_pipeline_validation/runs/locked_reuse_v0_1/candidates/candidate_generation_audit.json",
+      "sha256": "b96d34cd2266be4036d120fb413344feb8cdc4e20082ebecfd2a3a62d2551572"
+    },
+    "metadata": {
+      "path": "experiments/knowledge_object_resolution/002c_3_pipeline_validation/runs/locked_reuse_v0_1/candidates/metadata.json",
+      "sha256": "71f61265a5a665cd218ba55be5bc360ffe78ff8e758ce8df08dd273f93103472"
+    }
+  }
+}

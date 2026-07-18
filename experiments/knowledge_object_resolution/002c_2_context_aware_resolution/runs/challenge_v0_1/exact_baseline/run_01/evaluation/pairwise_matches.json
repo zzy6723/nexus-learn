@@ -1,0 +1,1475 @@
+{
+  "evaluation_status": "final",
+  "pairs": [
+    {
+      "mention_a": "ko_mention_dev_001",
+      "mention_b": "ko_mention_dev_002",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_001",
+      "mention_b": "ko_mention_dev_003",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_001",
+      "mention_b": "ko_mention_dev_004",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_001",
+      "mention_b": "ko_mention_dev_005",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_001",
+      "mention_b": "ko_mention_dev_006",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_001",
+      "mention_b": "ko_mention_dev_007",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_001",
+      "mention_b": "ko_mention_dev_008",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_001",
+      "mention_b": "ko_mention_dev_009",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_001",
+      "mention_b": "ko_mention_dev_010",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_001",
+      "mention_b": "ko_mention_dev_011",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_001",
+      "mention_b": "ko_mention_dev_012",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_001",
+      "mention_b": "ko_mention_dev_013",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_001",
+      "mention_b": "ko_mention_dev_014",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_001",
+      "mention_b": "ko_mention_dev_015",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_001",
+      "mention_b": "ko_mention_dev_016",
+      "gold_identity": "SAME_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "false_split"
+    },
+    {
+      "mention_a": "ko_mention_dev_001",
+      "mention_b": "ko_mention_dev_017",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_001",
+      "mention_b": "ko_mention_dev_018",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_001",
+      "mention_b": "ko_mention_dev_019",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_001",
+      "mention_b": "ko_mention_dev_020",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_001",
+      "mention_b": "ko_mention_dev_021",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_002",
+      "mention_b": "ko_mention_dev_003",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_002",
+      "mention_b": "ko_mention_dev_004",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_002",
+      "mention_b": "ko_mention_dev_005",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_002",
+      "mention_b": "ko_mention_dev_006",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_002",
+      "mention_b": "ko_mention_dev_007",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_002",
+      "mention_b": "ko_mention_dev_008",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_002",
+      "mention_b": "ko_mention_dev_009",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_002",
+      "mention_b": "ko_mention_dev_010",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_002",
+      "mention_b": "ko_mention_dev_011",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_002",
+      "mention_b": "ko_mention_dev_012",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_002",
+      "mention_b": "ko_mention_dev_013",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_002",
+      "mention_b": "ko_mention_dev_014",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_002",
+      "mention_b": "ko_mention_dev_015",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_002",
+      "mention_b": "ko_mention_dev_016",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_002",
+      "mention_b": "ko_mention_dev_017",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_002",
+      "mention_b": "ko_mention_dev_018",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_002",
+      "mention_b": "ko_mention_dev_019",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_002",
+      "mention_b": "ko_mention_dev_020",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_002",
+      "mention_b": "ko_mention_dev_021",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_003",
+      "mention_b": "ko_mention_dev_004",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_003",
+      "mention_b": "ko_mention_dev_005",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_003",
+      "mention_b": "ko_mention_dev_006",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_003",
+      "mention_b": "ko_mention_dev_007",
+      "gold_identity": "SAME_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "false_split"
+    },
+    {
+      "mention_a": "ko_mention_dev_003",
+      "mention_b": "ko_mention_dev_008",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_003",
+      "mention_b": "ko_mention_dev_009",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_003",
+      "mention_b": "ko_mention_dev_010",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_003",
+      "mention_b": "ko_mention_dev_011",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_003",
+      "mention_b": "ko_mention_dev_012",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_003",
+      "mention_b": "ko_mention_dev_013",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_003",
+      "mention_b": "ko_mention_dev_014",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_003",
+      "mention_b": "ko_mention_dev_015",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_003",
+      "mention_b": "ko_mention_dev_016",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_003",
+      "mention_b": "ko_mention_dev_017",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_003",
+      "mention_b": "ko_mention_dev_018",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_003",
+      "mention_b": "ko_mention_dev_019",
+      "gold_identity": "SAME_OBJECT",
+      "predicted_identity": "SAME_OBJECT",
+      "outcome": "true_positive"
+    },
+    {
+      "mention_a": "ko_mention_dev_003",
+      "mention_b": "ko_mention_dev_020",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_003",
+      "mention_b": "ko_mention_dev_021",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_004",
+      "mention_b": "ko_mention_dev_005",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_004",
+      "mention_b": "ko_mention_dev_006",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_004",
+      "mention_b": "ko_mention_dev_007",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_004",
+      "mention_b": "ko_mention_dev_008",
+      "gold_identity": "SAME_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "false_split"
+    },
+    {
+      "mention_a": "ko_mention_dev_004",
+      "mention_b": "ko_mention_dev_009",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_004",
+      "mention_b": "ko_mention_dev_010",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_004",
+      "mention_b": "ko_mention_dev_011",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_004",
+      "mention_b": "ko_mention_dev_012",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_004",
+      "mention_b": "ko_mention_dev_013",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_004",
+      "mention_b": "ko_mention_dev_014",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_004",
+      "mention_b": "ko_mention_dev_015",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_004",
+      "mention_b": "ko_mention_dev_016",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_004",
+      "mention_b": "ko_mention_dev_017",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_004",
+      "mention_b": "ko_mention_dev_018",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_004",
+      "mention_b": "ko_mention_dev_019",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_004",
+      "mention_b": "ko_mention_dev_020",
+      "gold_identity": "SAME_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "false_split"
+    },
+    {
+      "mention_a": "ko_mention_dev_004",
+      "mention_b": "ko_mention_dev_021",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_005",
+      "mention_b": "ko_mention_dev_006",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_005",
+      "mention_b": "ko_mention_dev_007",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_005",
+      "mention_b": "ko_mention_dev_008",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_005",
+      "mention_b": "ko_mention_dev_009",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_005",
+      "mention_b": "ko_mention_dev_010",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_005",
+      "mention_b": "ko_mention_dev_011",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_005",
+      "mention_b": "ko_mention_dev_012",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_005",
+      "mention_b": "ko_mention_dev_013",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_005",
+      "mention_b": "ko_mention_dev_014",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_005",
+      "mention_b": "ko_mention_dev_015",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_005",
+      "mention_b": "ko_mention_dev_016",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_005",
+      "mention_b": "ko_mention_dev_017",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "SAME_OBJECT",
+      "outcome": "false_merge"
+    },
+    {
+      "mention_a": "ko_mention_dev_005",
+      "mention_b": "ko_mention_dev_018",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_005",
+      "mention_b": "ko_mention_dev_019",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_005",
+      "mention_b": "ko_mention_dev_020",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_005",
+      "mention_b": "ko_mention_dev_021",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_006",
+      "mention_b": "ko_mention_dev_007",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_006",
+      "mention_b": "ko_mention_dev_008",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_006",
+      "mention_b": "ko_mention_dev_009",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_006",
+      "mention_b": "ko_mention_dev_010",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_006",
+      "mention_b": "ko_mention_dev_011",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_006",
+      "mention_b": "ko_mention_dev_012",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_006",
+      "mention_b": "ko_mention_dev_013",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_006",
+      "mention_b": "ko_mention_dev_014",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_006",
+      "mention_b": "ko_mention_dev_015",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_006",
+      "mention_b": "ko_mention_dev_016",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_006",
+      "mention_b": "ko_mention_dev_017",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_006",
+      "mention_b": "ko_mention_dev_018",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_006",
+      "mention_b": "ko_mention_dev_019",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_006",
+      "mention_b": "ko_mention_dev_020",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_006",
+      "mention_b": "ko_mention_dev_021",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_007",
+      "mention_b": "ko_mention_dev_008",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_007",
+      "mention_b": "ko_mention_dev_009",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_007",
+      "mention_b": "ko_mention_dev_010",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_007",
+      "mention_b": "ko_mention_dev_011",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_007",
+      "mention_b": "ko_mention_dev_012",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_007",
+      "mention_b": "ko_mention_dev_013",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_007",
+      "mention_b": "ko_mention_dev_014",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_007",
+      "mention_b": "ko_mention_dev_015",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_007",
+      "mention_b": "ko_mention_dev_016",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_007",
+      "mention_b": "ko_mention_dev_017",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_007",
+      "mention_b": "ko_mention_dev_018",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_007",
+      "mention_b": "ko_mention_dev_019",
+      "gold_identity": "SAME_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "false_split"
+    },
+    {
+      "mention_a": "ko_mention_dev_007",
+      "mention_b": "ko_mention_dev_020",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_007",
+      "mention_b": "ko_mention_dev_021",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_008",
+      "mention_b": "ko_mention_dev_009",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_008",
+      "mention_b": "ko_mention_dev_010",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_008",
+      "mention_b": "ko_mention_dev_011",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_008",
+      "mention_b": "ko_mention_dev_012",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_008",
+      "mention_b": "ko_mention_dev_013",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_008",
+      "mention_b": "ko_mention_dev_014",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_008",
+      "mention_b": "ko_mention_dev_015",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_008",
+      "mention_b": "ko_mention_dev_016",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_008",
+      "mention_b": "ko_mention_dev_017",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_008",
+      "mention_b": "ko_mention_dev_018",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_008",
+      "mention_b": "ko_mention_dev_019",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_008",
+      "mention_b": "ko_mention_dev_020",
+      "gold_identity": "SAME_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "false_split"
+    },
+    {
+      "mention_a": "ko_mention_dev_008",
+      "mention_b": "ko_mention_dev_021",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_009",
+      "mention_b": "ko_mention_dev_010",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_009",
+      "mention_b": "ko_mention_dev_011",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_009",
+      "mention_b": "ko_mention_dev_012",
+      "gold_identity": "SAME_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "false_split"
+    },
+    {
+      "mention_a": "ko_mention_dev_009",
+      "mention_b": "ko_mention_dev_013",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_009",
+      "mention_b": "ko_mention_dev_014",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_009",
+      "mention_b": "ko_mention_dev_015",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_009",
+      "mention_b": "ko_mention_dev_016",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_009",
+      "mention_b": "ko_mention_dev_017",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_009",
+      "mention_b": "ko_mention_dev_018",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_009",
+      "mention_b": "ko_mention_dev_019",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_009",
+      "mention_b": "ko_mention_dev_020",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_009",
+      "mention_b": "ko_mention_dev_021",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_010",
+      "mention_b": "ko_mention_dev_011",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_010",
+      "mention_b": "ko_mention_dev_012",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_010",
+      "mention_b": "ko_mention_dev_013",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_010",
+      "mention_b": "ko_mention_dev_014",
+      "gold_identity": "SAME_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "false_split"
+    },
+    {
+      "mention_a": "ko_mention_dev_010",
+      "mention_b": "ko_mention_dev_015",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_010",
+      "mention_b": "ko_mention_dev_016",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_010",
+      "mention_b": "ko_mention_dev_017",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_010",
+      "mention_b": "ko_mention_dev_018",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_010",
+      "mention_b": "ko_mention_dev_019",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_010",
+      "mention_b": "ko_mention_dev_020",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_010",
+      "mention_b": "ko_mention_dev_021",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_011",
+      "mention_b": "ko_mention_dev_012",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_011",
+      "mention_b": "ko_mention_dev_013",
+      "gold_identity": "SAME_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "false_split"
+    },
+    {
+      "mention_a": "ko_mention_dev_011",
+      "mention_b": "ko_mention_dev_014",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_011",
+      "mention_b": "ko_mention_dev_015",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_011",
+      "mention_b": "ko_mention_dev_016",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_011",
+      "mention_b": "ko_mention_dev_017",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_011",
+      "mention_b": "ko_mention_dev_018",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_011",
+      "mention_b": "ko_mention_dev_019",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_011",
+      "mention_b": "ko_mention_dev_020",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_011",
+      "mention_b": "ko_mention_dev_021",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_012",
+      "mention_b": "ko_mention_dev_013",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_012",
+      "mention_b": "ko_mention_dev_014",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_012",
+      "mention_b": "ko_mention_dev_015",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_012",
+      "mention_b": "ko_mention_dev_016",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_012",
+      "mention_b": "ko_mention_dev_017",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_012",
+      "mention_b": "ko_mention_dev_018",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_012",
+      "mention_b": "ko_mention_dev_019",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_012",
+      "mention_b": "ko_mention_dev_020",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_012",
+      "mention_b": "ko_mention_dev_021",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_013",
+      "mention_b": "ko_mention_dev_014",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_013",
+      "mention_b": "ko_mention_dev_015",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_013",
+      "mention_b": "ko_mention_dev_016",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_013",
+      "mention_b": "ko_mention_dev_017",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_013",
+      "mention_b": "ko_mention_dev_018",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_013",
+      "mention_b": "ko_mention_dev_019",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_013",
+      "mention_b": "ko_mention_dev_020",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_013",
+      "mention_b": "ko_mention_dev_021",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_014",
+      "mention_b": "ko_mention_dev_015",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_014",
+      "mention_b": "ko_mention_dev_016",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_014",
+      "mention_b": "ko_mention_dev_017",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_014",
+      "mention_b": "ko_mention_dev_018",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_014",
+      "mention_b": "ko_mention_dev_019",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_014",
+      "mention_b": "ko_mention_dev_020",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_014",
+      "mention_b": "ko_mention_dev_021",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_015",
+      "mention_b": "ko_mention_dev_016",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_015",
+      "mention_b": "ko_mention_dev_017",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_015",
+      "mention_b": "ko_mention_dev_018",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_015",
+      "mention_b": "ko_mention_dev_019",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_015",
+      "mention_b": "ko_mention_dev_020",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_015",
+      "mention_b": "ko_mention_dev_021",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_016",
+      "mention_b": "ko_mention_dev_017",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_016",
+      "mention_b": "ko_mention_dev_018",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_016",
+      "mention_b": "ko_mention_dev_019",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_016",
+      "mention_b": "ko_mention_dev_020",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_016",
+      "mention_b": "ko_mention_dev_021",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_017",
+      "mention_b": "ko_mention_dev_018",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_017",
+      "mention_b": "ko_mention_dev_019",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_017",
+      "mention_b": "ko_mention_dev_020",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_017",
+      "mention_b": "ko_mention_dev_021",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_018",
+      "mention_b": "ko_mention_dev_019",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_018",
+      "mention_b": "ko_mention_dev_020",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_018",
+      "mention_b": "ko_mention_dev_021",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_019",
+      "mention_b": "ko_mention_dev_020",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_019",
+      "mention_b": "ko_mention_dev_021",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "mention_a": "ko_mention_dev_020",
+      "mention_b": "ko_mention_dev_021",
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    }
+  ]
+}

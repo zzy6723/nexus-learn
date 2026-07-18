@@ -1,0 +1,140 @@
+{
+  "evaluation_status": "final",
+  "fatal_errors": [],
+  "quality_errors": [
+    {
+      "error_type": "alias_false_split",
+      "mention_ids": [
+        "ko_mention_dev_001",
+        "ko_mention_dev_016"
+      ],
+      "predicted_canonical_ids": [
+        "canonical_pred_8f1319e799c547ae",
+        "canonical_pred_8e6a520e4adbf236"
+      ],
+      "gold_canonical_id": "canonical_ko_dev_001"
+    },
+    {
+      "error_type": "alias_false_split",
+      "mention_ids": [
+        "ko_mention_dev_003",
+        "ko_mention_dev_007"
+      ],
+      "predicted_canonical_ids": [
+        "canonical_pred_da29ca2ccd248b6a",
+        "canonical_pred_f148c511041e4a43"
+      ],
+      "gold_canonical_id": "canonical_ko_dev_003"
+    },
+    {
+      "error_type": "alias_false_split",
+      "mention_ids": [
+        "ko_mention_dev_004",
+        "ko_mention_dev_008"
+      ],
+      "predicted_canonical_ids": [
+        "canonical_pred_5d055328f6e4308c",
+        "canonical_pred_b7fc978b93da6ad5"
+      ],
+      "gold_canonical_id": "canonical_ko_dev_004"
+    },
+    {
+      "error_type": "alias_false_split",
+      "mention_ids": [
+        "ko_mention_dev_004",
+        "ko_mention_dev_020"
+      ],
+      "predicted_canonical_ids": [
+        "canonical_pred_5d055328f6e4308c",
+        "canonical_pred_b4a347c2a6ee0ce6"
+      ],
+      "gold_canonical_id": "canonical_ko_dev_004"
+    },
+    {
+      "error_type": "same_name_false_merge",
+      "mention_ids": [
+        "ko_mention_dev_005",
+        "ko_mention_dev_017"
+      ],
+      "predicted_canonical_id": "canonical_pred_c55a2e7a7d17e6e7",
+      "gold_canonical_ids": [
+        "canonical_ko_dev_005",
+        "canonical_ko_dev_011"
+      ]
+    },
+    {
+      "error_type": "alias_false_split",
+      "mention_ids": [
+        "ko_mention_dev_007",
+        "ko_mention_dev_019"
+      ],
+      "predicted_canonical_ids": [
+        "canonical_pred_f148c511041e4a43",
+        "canonical_pred_da29ca2ccd248b6a"
+      ],
+      "gold_canonical_id": "canonical_ko_dev_003"
+    },
+    {
+      "error_type": "alias_false_split",
+      "mention_ids": [
+        "ko_mention_dev_008",
+        "ko_mention_dev_020"
+      ],
+      "predicted_canonical_ids": [
+        "canonical_pred_b7fc978b93da6ad5",
+        "canonical_pred_b4a347c2a6ee0ce6"
+      ],
+      "gold_canonical_id": "canonical_ko_dev_004"
+    },
+    {
+      "error_type": "alias_false_split",
+      "mention_ids": [
+        "ko_mention_dev_009",
+        "ko_mention_dev_012"
+      ],
+      "predicted_canonical_ids": [
+        "canonical_pred_ec55f48abdba5d3b",
+        "canonical_pred_e290def951dac225"
+      ],
+      "gold_canonical_id": "canonical_ko_dev_007"
+    },
+    {
+      "error_type": "alias_false_split",
+      "mention_ids": [
+        "ko_mention_dev_010",
+        "ko_mention_dev_014"
+      ],
+      "predicted_canonical_ids": [
+        "canonical_pred_2b3f07ca780c3435",
+        "canonical_pred_c1e2e2db9b876ca9"
+      ],
+      "gold_canonical_id": "canonical_ko_dev_008"
+    },
+    {
+      "error_type": "alias_false_split",
+      "mention_ids": [
+        "ko_mention_dev_011",
+        "ko_mention_dev_013"
+      ],
+      "predicted_canonical_ids": [
+        "canonical_pred_50e53513e7dff30c",
+        "canonical_pred_778f24a4c52c8554"
+      ],
+      "gold_canonical_id": "canonical_ko_dev_009"
+    },
+    {
+      "error_type": "singleton_absorbed",
+      "mention_ids": [
+        "ko_mention_dev_005"
+      ],
+      "predicted_canonical_id": "canonical_pred_c55a2e7a7d17e6e7"
+    },
+    {
+      "error_type": "singleton_absorbed",
+      "mention_ids": [
+        "ko_mention_dev_017"
+      ],
+      "predicted_canonical_id": "canonical_pred_c55a2e7a7d17e6e7"
+    }
+  ]
+}

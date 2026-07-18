@@ -1,0 +1,39 @@
+{
+  "artifact_type": "ko_identity_candidate_generation_metadata",
+  "version": "v0.1",
+  "status": "completed",
+  "generator": {
+    "path": "scripts/generate_ko_identity_candidates.py",
+    "sha256": "10e08c67a91d4ca6872eca101cb453db0cec1dd42193e66fe59a118dccb42d76",
+    "version": "ko_identity_candidate_generator_v0.1"
+  },
+  "inputs": {
+    "mention_inventory": {
+      "path": "benchmark/ko_canonicalization/challenge_v0_1/mention_inventory.json",
+      "sha256": "438632b45ca8cbab452f1c9191e138a0a779298b91a9a315674f8efb1cc8a570"
+    },
+    "lecture_inventory": {
+      "path": "benchmark/ko_canonicalization/challenge_v0_1/lecture_inventory.json",
+      "sha256": "f11c7bb26338d00b0ac740ac213355e723c00c2d589d743c84f7b2e33dc11e1f"
+    },
+    "normalization_config": {
+      "path": "benchmark/ko_name_normalization_v0_1.json",
+      "sha256": "fad01c399f4ef3f3147f136c76579b253f563965a299c1003a91e79baadc3d9e"
+    },
+    "alias_resource": {
+      "path": "benchmark/ko_aliases_v0_1.json",
+      "sha256": "4fa8d455eeb9bdbc1cf6c0ba8a3d08ac7c5266d0ad0a4f2efe3bf1e93af50bea"
+    },
+    "challenge_marker": {
+      "path": "benchmark/ko_canonicalization/challenge_v0_1/challenge_complete.json",
+      "sha256": "6b33fa228a6083861fe07d4c158878f90cfdf2d3cfa56d88f76c9e9e99cf02ef"
+    }
+  },
+  "counts": {
+    "mentions": 21,
+    "all_unordered_pairs": 210,
+    "same_type_pairs": 76,
+    "selected_candidates": 11,
+    "rejected_pairs": 199
+  }
+}

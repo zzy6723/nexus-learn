@@ -1,0 +1,2131 @@
+{
+  "artifact_type": "ko_identity_candidate_generation_audit",
+  "version": "v0.1",
+  "candidate_bundle_sha256": "c3320e6722c17546dd13c2cbf13fed9d9d45be5686243af7167c7d661f27a956",
+  "decisions": [
+    {
+      "pair_key": "ko_pair_001",
+      "mention_ids": [
+        "ko_mention_dev_001",
+        "ko_mention_dev_002"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_002",
+      "mention_ids": [
+        "ko_mention_dev_001",
+        "ko_mention_dev_003"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_003",
+      "mention_ids": [
+        "ko_mention_dev_001",
+        "ko_mention_dev_004"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_004",
+      "mention_ids": [
+        "ko_mention_dev_001",
+        "ko_mention_dev_005"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_005",
+      "mention_ids": [
+        "ko_mention_dev_001",
+        "ko_mention_dev_006"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_006",
+      "mention_ids": [
+        "ko_mention_dev_001",
+        "ko_mention_dev_007"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_007",
+      "mention_ids": [
+        "ko_mention_dev_001",
+        "ko_mention_dev_008"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_008",
+      "mention_ids": [
+        "ko_mention_dev_001",
+        "ko_mention_dev_009"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_009",
+      "mention_ids": [
+        "ko_mention_dev_001",
+        "ko_mention_dev_010"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_010",
+      "mention_ids": [
+        "ko_mention_dev_001",
+        "ko_mention_dev_011"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_011",
+      "mention_ids": [
+        "ko_mention_dev_001",
+        "ko_mention_dev_012"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_012",
+      "mention_ids": [
+        "ko_mention_dev_001",
+        "ko_mention_dev_013"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_013",
+      "mention_ids": [
+        "ko_mention_dev_001",
+        "ko_mention_dev_014"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_014",
+      "mention_ids": [
+        "ko_mention_dev_001",
+        "ko_mention_dev_015"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_015",
+      "mention_ids": [
+        "ko_mention_dev_001",
+        "ko_mention_dev_016"
+      ],
+      "same_type": true,
+      "selected": true,
+      "reasons": [
+        "name_token_containment"
+      ]
+    },
+    {
+      "pair_key": "ko_pair_016",
+      "mention_ids": [
+        "ko_mention_dev_001",
+        "ko_mention_dev_017"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_017",
+      "mention_ids": [
+        "ko_mention_dev_001",
+        "ko_mention_dev_018"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_018",
+      "mention_ids": [
+        "ko_mention_dev_001",
+        "ko_mention_dev_019"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_019",
+      "mention_ids": [
+        "ko_mention_dev_001",
+        "ko_mention_dev_020"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_020",
+      "mention_ids": [
+        "ko_mention_dev_001",
+        "ko_mention_dev_021"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_021",
+      "mention_ids": [
+        "ko_mention_dev_002",
+        "ko_mention_dev_003"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_022",
+      "mention_ids": [
+        "ko_mention_dev_002",
+        "ko_mention_dev_004"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_023",
+      "mention_ids": [
+        "ko_mention_dev_002",
+        "ko_mention_dev_005"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_024",
+      "mention_ids": [
+        "ko_mention_dev_002",
+        "ko_mention_dev_006"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_025",
+      "mention_ids": [
+        "ko_mention_dev_002",
+        "ko_mention_dev_007"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_026",
+      "mention_ids": [
+        "ko_mention_dev_002",
+        "ko_mention_dev_008"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_027",
+      "mention_ids": [
+        "ko_mention_dev_002",
+        "ko_mention_dev_009"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_028",
+      "mention_ids": [
+        "ko_mention_dev_002",
+        "ko_mention_dev_010"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_029",
+      "mention_ids": [
+        "ko_mention_dev_002",
+        "ko_mention_dev_011"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_030",
+      "mention_ids": [
+        "ko_mention_dev_002",
+        "ko_mention_dev_012"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_031",
+      "mention_ids": [
+        "ko_mention_dev_002",
+        "ko_mention_dev_013"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_032",
+      "mention_ids": [
+        "ko_mention_dev_002",
+        "ko_mention_dev_014"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_033",
+      "mention_ids": [
+        "ko_mention_dev_002",
+        "ko_mention_dev_015"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_034",
+      "mention_ids": [
+        "ko_mention_dev_002",
+        "ko_mention_dev_016"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_035",
+      "mention_ids": [
+        "ko_mention_dev_002",
+        "ko_mention_dev_017"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_036",
+      "mention_ids": [
+        "ko_mention_dev_002",
+        "ko_mention_dev_018"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_037",
+      "mention_ids": [
+        "ko_mention_dev_002",
+        "ko_mention_dev_019"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_038",
+      "mention_ids": [
+        "ko_mention_dev_002",
+        "ko_mention_dev_020"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_039",
+      "mention_ids": [
+        "ko_mention_dev_002",
+        "ko_mention_dev_021"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_040",
+      "mention_ids": [
+        "ko_mention_dev_003",
+        "ko_mention_dev_004"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_041",
+      "mention_ids": [
+        "ko_mention_dev_003",
+        "ko_mention_dev_005"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_042",
+      "mention_ids": [
+        "ko_mention_dev_003",
+        "ko_mention_dev_006"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_043",
+      "mention_ids": [
+        "ko_mention_dev_003",
+        "ko_mention_dev_007"
+      ],
+      "same_type": true,
+      "selected": true,
+      "reasons": [
+        "name_token_containment"
+      ]
+    },
+    {
+      "pair_key": "ko_pair_044",
+      "mention_ids": [
+        "ko_mention_dev_003",
+        "ko_mention_dev_008"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_045",
+      "mention_ids": [
+        "ko_mention_dev_003",
+        "ko_mention_dev_009"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_046",
+      "mention_ids": [
+        "ko_mention_dev_003",
+        "ko_mention_dev_010"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_047",
+      "mention_ids": [
+        "ko_mention_dev_003",
+        "ko_mention_dev_011"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_048",
+      "mention_ids": [
+        "ko_mention_dev_003",
+        "ko_mention_dev_012"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_049",
+      "mention_ids": [
+        "ko_mention_dev_003",
+        "ko_mention_dev_013"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_050",
+      "mention_ids": [
+        "ko_mention_dev_003",
+        "ko_mention_dev_014"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_051",
+      "mention_ids": [
+        "ko_mention_dev_003",
+        "ko_mention_dev_015"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_052",
+      "mention_ids": [
+        "ko_mention_dev_003",
+        "ko_mention_dev_016"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_053",
+      "mention_ids": [
+        "ko_mention_dev_003",
+        "ko_mention_dev_017"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_054",
+      "mention_ids": [
+        "ko_mention_dev_003",
+        "ko_mention_dev_018"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_055",
+      "mention_ids": [
+        "ko_mention_dev_003",
+        "ko_mention_dev_019"
+      ],
+      "same_type": true,
+      "selected": true,
+      "reasons": [
+        "exact_normalized_name"
+      ]
+    },
+    {
+      "pair_key": "ko_pair_056",
+      "mention_ids": [
+        "ko_mention_dev_003",
+        "ko_mention_dev_020"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_057",
+      "mention_ids": [
+        "ko_mention_dev_003",
+        "ko_mention_dev_021"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_058",
+      "mention_ids": [
+        "ko_mention_dev_004",
+        "ko_mention_dev_005"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_059",
+      "mention_ids": [
+        "ko_mention_dev_004",
+        "ko_mention_dev_006"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_060",
+      "mention_ids": [
+        "ko_mention_dev_004",
+        "ko_mention_dev_007"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_061",
+      "mention_ids": [
+        "ko_mention_dev_004",
+        "ko_mention_dev_008"
+      ],
+      "same_type": true,
+      "selected": true,
+      "reasons": [
+        "initialism_name_match"
+      ]
+    },
+    {
+      "pair_key": "ko_pair_062",
+      "mention_ids": [
+        "ko_mention_dev_004",
+        "ko_mention_dev_009"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_063",
+      "mention_ids": [
+        "ko_mention_dev_004",
+        "ko_mention_dev_010"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_064",
+      "mention_ids": [
+        "ko_mention_dev_004",
+        "ko_mention_dev_011"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_065",
+      "mention_ids": [
+        "ko_mention_dev_004",
+        "ko_mention_dev_012"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_066",
+      "mention_ids": [
+        "ko_mention_dev_004",
+        "ko_mention_dev_013"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_067",
+      "mention_ids": [
+        "ko_mention_dev_004",
+        "ko_mention_dev_014"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_068",
+      "mention_ids": [
+        "ko_mention_dev_004",
+        "ko_mention_dev_015"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_069",
+      "mention_ids": [
+        "ko_mention_dev_004",
+        "ko_mention_dev_016"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_070",
+      "mention_ids": [
+        "ko_mention_dev_004",
+        "ko_mention_dev_017"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_071",
+      "mention_ids": [
+        "ko_mention_dev_004",
+        "ko_mention_dev_018"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_072",
+      "mention_ids": [
+        "ko_mention_dev_004",
+        "ko_mention_dev_019"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_073",
+      "mention_ids": [
+        "ko_mention_dev_004",
+        "ko_mention_dev_020"
+      ],
+      "same_type": true,
+      "selected": true,
+      "reasons": [
+        "name_token_equivalence"
+      ]
+    },
+    {
+      "pair_key": "ko_pair_074",
+      "mention_ids": [
+        "ko_mention_dev_004",
+        "ko_mention_dev_021"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_075",
+      "mention_ids": [
+        "ko_mention_dev_005",
+        "ko_mention_dev_006"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_076",
+      "mention_ids": [
+        "ko_mention_dev_005",
+        "ko_mention_dev_007"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_077",
+      "mention_ids": [
+        "ko_mention_dev_005",
+        "ko_mention_dev_008"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_078",
+      "mention_ids": [
+        "ko_mention_dev_005",
+        "ko_mention_dev_009"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_079",
+      "mention_ids": [
+        "ko_mention_dev_005",
+        "ko_mention_dev_010"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_080",
+      "mention_ids": [
+        "ko_mention_dev_005",
+        "ko_mention_dev_011"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_081",
+      "mention_ids": [
+        "ko_mention_dev_005",
+        "ko_mention_dev_012"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_082",
+      "mention_ids": [
+        "ko_mention_dev_005",
+        "ko_mention_dev_013"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_083",
+      "mention_ids": [
+        "ko_mention_dev_005",
+        "ko_mention_dev_014"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_084",
+      "mention_ids": [
+        "ko_mention_dev_005",
+        "ko_mention_dev_015"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_085",
+      "mention_ids": [
+        "ko_mention_dev_005",
+        "ko_mention_dev_016"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_086",
+      "mention_ids": [
+        "ko_mention_dev_005",
+        "ko_mention_dev_017"
+      ],
+      "same_type": true,
+      "selected": true,
+      "reasons": [
+        "exact_normalized_name"
+      ]
+    },
+    {
+      "pair_key": "ko_pair_087",
+      "mention_ids": [
+        "ko_mention_dev_005",
+        "ko_mention_dev_018"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_088",
+      "mention_ids": [
+        "ko_mention_dev_005",
+        "ko_mention_dev_019"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_089",
+      "mention_ids": [
+        "ko_mention_dev_005",
+        "ko_mention_dev_020"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_090",
+      "mention_ids": [
+        "ko_mention_dev_005",
+        "ko_mention_dev_021"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_091",
+      "mention_ids": [
+        "ko_mention_dev_006",
+        "ko_mention_dev_007"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_092",
+      "mention_ids": [
+        "ko_mention_dev_006",
+        "ko_mention_dev_008"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_093",
+      "mention_ids": [
+        "ko_mention_dev_006",
+        "ko_mention_dev_009"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_094",
+      "mention_ids": [
+        "ko_mention_dev_006",
+        "ko_mention_dev_010"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_095",
+      "mention_ids": [
+        "ko_mention_dev_006",
+        "ko_mention_dev_011"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_096",
+      "mention_ids": [
+        "ko_mention_dev_006",
+        "ko_mention_dev_012"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_097",
+      "mention_ids": [
+        "ko_mention_dev_006",
+        "ko_mention_dev_013"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_098",
+      "mention_ids": [
+        "ko_mention_dev_006",
+        "ko_mention_dev_014"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_099",
+      "mention_ids": [
+        "ko_mention_dev_006",
+        "ko_mention_dev_015"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_100",
+      "mention_ids": [
+        "ko_mention_dev_006",
+        "ko_mention_dev_016"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_101",
+      "mention_ids": [
+        "ko_mention_dev_006",
+        "ko_mention_dev_017"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_102",
+      "mention_ids": [
+        "ko_mention_dev_006",
+        "ko_mention_dev_018"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_103",
+      "mention_ids": [
+        "ko_mention_dev_006",
+        "ko_mention_dev_019"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_104",
+      "mention_ids": [
+        "ko_mention_dev_006",
+        "ko_mention_dev_020"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_105",
+      "mention_ids": [
+        "ko_mention_dev_006",
+        "ko_mention_dev_021"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_106",
+      "mention_ids": [
+        "ko_mention_dev_007",
+        "ko_mention_dev_008"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_107",
+      "mention_ids": [
+        "ko_mention_dev_007",
+        "ko_mention_dev_009"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_108",
+      "mention_ids": [
+        "ko_mention_dev_007",
+        "ko_mention_dev_010"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_109",
+      "mention_ids": [
+        "ko_mention_dev_007",
+        "ko_mention_dev_011"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_110",
+      "mention_ids": [
+        "ko_mention_dev_007",
+        "ko_mention_dev_012"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_111",
+      "mention_ids": [
+        "ko_mention_dev_007",
+        "ko_mention_dev_013"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_112",
+      "mention_ids": [
+        "ko_mention_dev_007",
+        "ko_mention_dev_014"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_113",
+      "mention_ids": [
+        "ko_mention_dev_007",
+        "ko_mention_dev_015"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_114",
+      "mention_ids": [
+        "ko_mention_dev_007",
+        "ko_mention_dev_016"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_115",
+      "mention_ids": [
+        "ko_mention_dev_007",
+        "ko_mention_dev_017"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_116",
+      "mention_ids": [
+        "ko_mention_dev_007",
+        "ko_mention_dev_018"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_117",
+      "mention_ids": [
+        "ko_mention_dev_007",
+        "ko_mention_dev_019"
+      ],
+      "same_type": true,
+      "selected": true,
+      "reasons": [
+        "name_token_containment"
+      ]
+    },
+    {
+      "pair_key": "ko_pair_118",
+      "mention_ids": [
+        "ko_mention_dev_007",
+        "ko_mention_dev_020"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_119",
+      "mention_ids": [
+        "ko_mention_dev_007",
+        "ko_mention_dev_021"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_120",
+      "mention_ids": [
+        "ko_mention_dev_008",
+        "ko_mention_dev_009"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_121",
+      "mention_ids": [
+        "ko_mention_dev_008",
+        "ko_mention_dev_010"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_122",
+      "mention_ids": [
+        "ko_mention_dev_008",
+        "ko_mention_dev_011"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_123",
+      "mention_ids": [
+        "ko_mention_dev_008",
+        "ko_mention_dev_012"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_124",
+      "mention_ids": [
+        "ko_mention_dev_008",
+        "ko_mention_dev_013"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_125",
+      "mention_ids": [
+        "ko_mention_dev_008",
+        "ko_mention_dev_014"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_126",
+      "mention_ids": [
+        "ko_mention_dev_008",
+        "ko_mention_dev_015"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_127",
+      "mention_ids": [
+        "ko_mention_dev_008",
+        "ko_mention_dev_016"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_128",
+      "mention_ids": [
+        "ko_mention_dev_008",
+        "ko_mention_dev_017"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_129",
+      "mention_ids": [
+        "ko_mention_dev_008",
+        "ko_mention_dev_018"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_130",
+      "mention_ids": [
+        "ko_mention_dev_008",
+        "ko_mention_dev_019"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_131",
+      "mention_ids": [
+        "ko_mention_dev_008",
+        "ko_mention_dev_020"
+      ],
+      "same_type": true,
+      "selected": true,
+      "reasons": [
+        "frozen_alias_identity",
+        "initialism_name_match"
+      ]
+    },
+    {
+      "pair_key": "ko_pair_132",
+      "mention_ids": [
+        "ko_mention_dev_008",
+        "ko_mention_dev_021"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_133",
+      "mention_ids": [
+        "ko_mention_dev_009",
+        "ko_mention_dev_010"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_134",
+      "mention_ids": [
+        "ko_mention_dev_009",
+        "ko_mention_dev_011"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_135",
+      "mention_ids": [
+        "ko_mention_dev_009",
+        "ko_mention_dev_012"
+      ],
+      "same_type": true,
+      "selected": true,
+      "reasons": [
+        "name_token_containment"
+      ]
+    },
+    {
+      "pair_key": "ko_pair_136",
+      "mention_ids": [
+        "ko_mention_dev_009",
+        "ko_mention_dev_013"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_137",
+      "mention_ids": [
+        "ko_mention_dev_009",
+        "ko_mention_dev_014"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_138",
+      "mention_ids": [
+        "ko_mention_dev_009",
+        "ko_mention_dev_015"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_139",
+      "mention_ids": [
+        "ko_mention_dev_009",
+        "ko_mention_dev_016"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_140",
+      "mention_ids": [
+        "ko_mention_dev_009",
+        "ko_mention_dev_017"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_141",
+      "mention_ids": [
+        "ko_mention_dev_009",
+        "ko_mention_dev_018"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_142",
+      "mention_ids": [
+        "ko_mention_dev_009",
+        "ko_mention_dev_019"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_143",
+      "mention_ids": [
+        "ko_mention_dev_009",
+        "ko_mention_dev_020"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_144",
+      "mention_ids": [
+        "ko_mention_dev_009",
+        "ko_mention_dev_021"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_145",
+      "mention_ids": [
+        "ko_mention_dev_010",
+        "ko_mention_dev_011"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_146",
+      "mention_ids": [
+        "ko_mention_dev_010",
+        "ko_mention_dev_012"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_147",
+      "mention_ids": [
+        "ko_mention_dev_010",
+        "ko_mention_dev_013"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_148",
+      "mention_ids": [
+        "ko_mention_dev_010",
+        "ko_mention_dev_014"
+      ],
+      "same_type": true,
+      "selected": true,
+      "reasons": [
+        "frozen_alias_identity",
+        "initialism_name_match"
+      ]
+    },
+    {
+      "pair_key": "ko_pair_149",
+      "mention_ids": [
+        "ko_mention_dev_010",
+        "ko_mention_dev_015"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_150",
+      "mention_ids": [
+        "ko_mention_dev_010",
+        "ko_mention_dev_016"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_151",
+      "mention_ids": [
+        "ko_mention_dev_010",
+        "ko_mention_dev_017"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_152",
+      "mention_ids": [
+        "ko_mention_dev_010",
+        "ko_mention_dev_018"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_153",
+      "mention_ids": [
+        "ko_mention_dev_010",
+        "ko_mention_dev_019"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_154",
+      "mention_ids": [
+        "ko_mention_dev_010",
+        "ko_mention_dev_020"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_155",
+      "mention_ids": [
+        "ko_mention_dev_010",
+        "ko_mention_dev_021"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_156",
+      "mention_ids": [
+        "ko_mention_dev_011",
+        "ko_mention_dev_012"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_157",
+      "mention_ids": [
+        "ko_mention_dev_011",
+        "ko_mention_dev_013"
+      ],
+      "same_type": true,
+      "selected": true,
+      "reasons": [
+        "exact_source_span"
+      ]
+    },
+    {
+      "pair_key": "ko_pair_158",
+      "mention_ids": [
+        "ko_mention_dev_011",
+        "ko_mention_dev_014"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_159",
+      "mention_ids": [
+        "ko_mention_dev_011",
+        "ko_mention_dev_015"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_160",
+      "mention_ids": [
+        "ko_mention_dev_011",
+        "ko_mention_dev_016"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_161",
+      "mention_ids": [
+        "ko_mention_dev_011",
+        "ko_mention_dev_017"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_162",
+      "mention_ids": [
+        "ko_mention_dev_011",
+        "ko_mention_dev_018"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_163",
+      "mention_ids": [
+        "ko_mention_dev_011",
+        "ko_mention_dev_019"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_164",
+      "mention_ids": [
+        "ko_mention_dev_011",
+        "ko_mention_dev_020"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_165",
+      "mention_ids": [
+        "ko_mention_dev_011",
+        "ko_mention_dev_021"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_166",
+      "mention_ids": [
+        "ko_mention_dev_012",
+        "ko_mention_dev_013"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_167",
+      "mention_ids": [
+        "ko_mention_dev_012",
+        "ko_mention_dev_014"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_168",
+      "mention_ids": [
+        "ko_mention_dev_012",
+        "ko_mention_dev_015"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_169",
+      "mention_ids": [
+        "ko_mention_dev_012",
+        "ko_mention_dev_016"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_170",
+      "mention_ids": [
+        "ko_mention_dev_012",
+        "ko_mention_dev_017"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_171",
+      "mention_ids": [
+        "ko_mention_dev_012",
+        "ko_mention_dev_018"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_172",
+      "mention_ids": [
+        "ko_mention_dev_012",
+        "ko_mention_dev_019"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_173",
+      "mention_ids": [
+        "ko_mention_dev_012",
+        "ko_mention_dev_020"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_174",
+      "mention_ids": [
+        "ko_mention_dev_012",
+        "ko_mention_dev_021"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_175",
+      "mention_ids": [
+        "ko_mention_dev_013",
+        "ko_mention_dev_014"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_176",
+      "mention_ids": [
+        "ko_mention_dev_013",
+        "ko_mention_dev_015"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_177",
+      "mention_ids": [
+        "ko_mention_dev_013",
+        "ko_mention_dev_016"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_178",
+      "mention_ids": [
+        "ko_mention_dev_013",
+        "ko_mention_dev_017"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_179",
+      "mention_ids": [
+        "ko_mention_dev_013",
+        "ko_mention_dev_018"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_180",
+      "mention_ids": [
+        "ko_mention_dev_013",
+        "ko_mention_dev_019"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_181",
+      "mention_ids": [
+        "ko_mention_dev_013",
+        "ko_mention_dev_020"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_182",
+      "mention_ids": [
+        "ko_mention_dev_013",
+        "ko_mention_dev_021"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_183",
+      "mention_ids": [
+        "ko_mention_dev_014",
+        "ko_mention_dev_015"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_184",
+      "mention_ids": [
+        "ko_mention_dev_014",
+        "ko_mention_dev_016"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_185",
+      "mention_ids": [
+        "ko_mention_dev_014",
+        "ko_mention_dev_017"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_186",
+      "mention_ids": [
+        "ko_mention_dev_014",
+        "ko_mention_dev_018"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_187",
+      "mention_ids": [
+        "ko_mention_dev_014",
+        "ko_mention_dev_019"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_188",
+      "mention_ids": [
+        "ko_mention_dev_014",
+        "ko_mention_dev_020"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_189",
+      "mention_ids": [
+        "ko_mention_dev_014",
+        "ko_mention_dev_021"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_190",
+      "mention_ids": [
+        "ko_mention_dev_015",
+        "ko_mention_dev_016"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_191",
+      "mention_ids": [
+        "ko_mention_dev_015",
+        "ko_mention_dev_017"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_192",
+      "mention_ids": [
+        "ko_mention_dev_015",
+        "ko_mention_dev_018"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_193",
+      "mention_ids": [
+        "ko_mention_dev_015",
+        "ko_mention_dev_019"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_194",
+      "mention_ids": [
+        "ko_mention_dev_015",
+        "ko_mention_dev_020"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_195",
+      "mention_ids": [
+        "ko_mention_dev_015",
+        "ko_mention_dev_021"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_196",
+      "mention_ids": [
+        "ko_mention_dev_016",
+        "ko_mention_dev_017"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_197",
+      "mention_ids": [
+        "ko_mention_dev_016",
+        "ko_mention_dev_018"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_198",
+      "mention_ids": [
+        "ko_mention_dev_016",
+        "ko_mention_dev_019"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_199",
+      "mention_ids": [
+        "ko_mention_dev_016",
+        "ko_mention_dev_020"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_200",
+      "mention_ids": [
+        "ko_mention_dev_016",
+        "ko_mention_dev_021"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_201",
+      "mention_ids": [
+        "ko_mention_dev_017",
+        "ko_mention_dev_018"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_202",
+      "mention_ids": [
+        "ko_mention_dev_017",
+        "ko_mention_dev_019"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_203",
+      "mention_ids": [
+        "ko_mention_dev_017",
+        "ko_mention_dev_020"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_204",
+      "mention_ids": [
+        "ko_mention_dev_017",
+        "ko_mention_dev_021"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_205",
+      "mention_ids": [
+        "ko_mention_dev_018",
+        "ko_mention_dev_019"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_206",
+      "mention_ids": [
+        "ko_mention_dev_018",
+        "ko_mention_dev_020"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_207",
+      "mention_ids": [
+        "ko_mention_dev_018",
+        "ko_mention_dev_021"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_208",
+      "mention_ids": [
+        "ko_mention_dev_019",
+        "ko_mention_dev_020"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_209",
+      "mention_ids": [
+        "ko_mention_dev_019",
+        "ko_mention_dev_021"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_210",
+      "mention_ids": [
+        "ko_mention_dev_020",
+        "ko_mention_dev_021"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    }
+  ]
+}

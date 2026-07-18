@@ -66,11 +66,27 @@ Costs and limitations:
 - conservative splitting may leave duplicates unresolved;
 - canonical ID lifecycle and cluster revision need explicit versioning.
 
+## Validation Evidence
+
+Experiment 002C-2 supports the cluster model and candidate-scoped resolution
+architecture on an authored development challenge. Context resolution achieved
+complete identity-pair recall and precision with no provenance loss, while
+Exact Name produced both false merges and false splits.
+
+Experiment 002C-3 did not pass locked reuse. The selected resolver repeatedly
+returned a Unicode evidence span that was not an exact substring of the bound
+LaTeX lecture text. The strict runner rejected the response before clusters or
+metrics were produced.
+
+This failure does not reverse the identity-model decision. It prevents the
+current resolver implementation from becoming the product default.
+
 ## Scope
 
-ADR-005 authorizes Experiment 002C-1 controlled canonicalization. It does not
-authorize cross-course Relation extraction, learner-facing Connection ranking,
-or production identity resolution.
+ADR-005 authorizes the canonical mention/identity data model and continued
+technical validation. It does not authorize the v0.1 resolver as a production
+default, cross-course Relation extraction over canonical endpoints,
+learner-facing Connection ranking, or production identity resolution.
 
 ## References
 

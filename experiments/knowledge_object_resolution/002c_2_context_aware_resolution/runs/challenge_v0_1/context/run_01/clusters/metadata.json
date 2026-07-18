@@ -1,0 +1,41 @@
+{
+  "artifact_type": "ko_canonicalization_run_metadata",
+  "version": "v0.1",
+  "run_status": "completed",
+  "method_id": "candidate_scoped_context_resolution_v0_1",
+  "method_commit": "98ddd710cd4dd1f4c1034dc4a05dd24034676ac2",
+  "git_commit_at_start": "98ddd710cd4dd1f4c1034dc4a05dd24034676ac2",
+  "git_dirty_at_start": false,
+  "mention_inventory": {
+    "path": "benchmark/ko_canonicalization/challenge_v0_1/mention_inventory.json",
+    "sha256": "438632b45ca8cbab452f1c9191e138a0a779298b91a9a315674f8efb1cc8a570"
+  },
+  "normalization_config": {
+    "path": "benchmark/ko_name_normalization_v0_1.json",
+    "sha256": "fad01c399f4ef3f3147f136c76579b253f563965a299c1003a91e79baadc3d9e"
+  },
+  "alias_resource": null,
+  "runner": {
+    "path": "scripts/finalize_context_ko_clusters.py",
+    "sha256": "3378a99820c328b305db0c2527106e6fa1de55ca1fbaf99817d684ede16efeed",
+    "version": "context_ko_cluster_finalizer_v0.1"
+  },
+  "source_resolution": {
+    "path": "experiments/knowledge_object_resolution/002c_2_context_aware_resolution/runs/challenge_v0_1/context/run_01/output/identity_decisions.json",
+    "sha256": "0ea1e99811fcd8a616ae374cb5fcea06b9e313ea5a745b7627a6477bb852e71b"
+  },
+  "candidate_bundle": {
+    "path": "experiments/knowledge_object_resolution/002c_2_context_aware_resolution/runs/challenge_v0_1/candidates/candidate_pairs.json",
+    "sha256": "3b7229cf7c188820f7528165ee0b2e31dba3f15484d849dfd8e4d34be863a469"
+  },
+  "decision_audit": {
+    "path": "experiments/knowledge_object_resolution/002c_2_context_aware_resolution/runs/challenge_v0_1/context/run_01/clusters/decision_audit.json",
+    "sha256": "29c168247fc4fe441b1a3a3a3199b271a4bd68ac23da5ca4707afb6c052dc005"
+  },
+  "counts": {
+    "mentions": 21,
+    "clusters": 13,
+    "singleton_clusters": 7,
+    "multi_mention_clusters": 6
+  }
+}

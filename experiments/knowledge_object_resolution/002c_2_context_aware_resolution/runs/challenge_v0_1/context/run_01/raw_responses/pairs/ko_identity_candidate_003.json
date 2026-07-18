@@ -1,0 +1,28 @@
+{
+  "id": "c5d356a0-8413-4bbe-a938-c27871d44471",
+  "object": "chat.completion",
+  "created": 1784392656,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"candidate_id\": \"ko_identity_candidate_003\",\n  \"mention_a\": \"ko_mention_dev_003\",\n  \"mention_b\": \"ko_mention_dev_019\",\n  \"decision\": \"SAME_OBJECT\",\n  \"evidence_spans\": [\n    {\n      \"lecture_id\": \"econometrics_mle_challenge_001\",\n      \"span\": \"The likelihood is viewed as a function of the model parameters with the sample held fixed.\"\n    },\n    {\n      \"lecture_id\": \"statistics_mle_challenge_001\",\n      \"span\": \"The likelihood compares parameter values after the observed data are held fixed.\"\n    }\n  ],\n  \"rationale\": \"Both mentions refer to the same statistical concept of likelihood used in maximum likelihood estimation, defined as a function of parameters given fixed data. The definitions are semantically equivalent despite different wording.\"\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 740,
+    "completion_tokens": 183,
+    "total_tokens": 923,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 356
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

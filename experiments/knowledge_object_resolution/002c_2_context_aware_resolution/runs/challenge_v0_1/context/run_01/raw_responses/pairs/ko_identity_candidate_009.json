@@ -1,0 +1,28 @@
+{
+  "id": "f5df9b47-8d45-4468-af70-3d164733c35d",
+  "object": "chat.completion",
+  "created": 1784392674,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"candidate_id\": \"ko_identity_candidate_009\",\n  \"mention_a\": \"ko_mention_dev_009\",\n  \"mention_b\": \"ko_mention_dev_012\",\n  \"decision\": \"SAME_OBJECT\",\n  \"evidence_spans\": [\n    {\n      \"lecture_id\": \"numerical_ode_challenge_001\",\n      \"span\": \"Euler's Method approximates its solution by repeatedly applying\\n\\n\\\\[\\ny_{n+1}=y_n+h f(t_n,y_n).\\n\\\\]\"\n    },\n    {\n      \"lecture_id\": \"ode_theory_challenge_001\",\n      \"span\": \"The Forward Euler Method advances an approximate solution using the current slope. Its update is\\n\\n\\\\[\\ny_{n+1}=y_n+h f(t_n,y_n).\\n\\\\]\"\n    }\n  ],\n  \"rationale\": \"Both mentions refer to the same numerical method for solving ODEs, as evidenced by the identical update formula y_{n+1}=y_n+h f(t_n,y_n) and the same conceptual description of approximating the solution using the current slope.\"\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 729,
+    "completion_tokens": 243,
+    "total_tokens": 972,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 345
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

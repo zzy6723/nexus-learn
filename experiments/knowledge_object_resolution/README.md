@@ -8,7 +8,7 @@ Knowledge Object Resolution is separate from Relation Extraction:
 - identity asks whether two mentions denote the same educational object;
 - a Relation asks how two distinct Knowledge Objects are connected.
 
-## Current Stage
+## Final Status
 
 Experiment 002C-0 has frozen its controlled canonicalization benchmark and
 strict artifact checks. The first benchmark reuses the inspected four-lecture,
@@ -31,12 +31,18 @@ The completed preparation milestone is documented in
 - `002c_2_context_aware_resolution/`;
 - `002c_3_pipeline_validation/`.
 
-The authored 002C-2 development challenge is now complete and hash-bound. It
-contains 21 mentions in 13 clusters, including aliases, abbreviations,
-same-name homonyms, formula variants, and a three-mention identity cluster.
-The next gate is its repository-level freeze before context-resolver
-implementation. The previously inspected 002C-3 locked-reuse source has also
-been selected and hash-bound in advance.
+The authored 002C-2 challenge selected context-aware identity resolution after
+it achieved perfect candidate, resolver, cluster, and provenance metrics. The
+Exact baseline produced one false merge and nine false splits.
+
+The selected v0.1 method then failed the 002C-3 locked-reuse execution gate in
+two attempts. A nonexact Unicode Entity span was not an exact substring of the
+LaTeX lecture text, and the model repeatedly copied that span as evidence. The
+strict runner rejected both attempts before cluster generation.
+
+Experiment 002C is therefore complete with partial feasibility. The identity
+architecture is retained, but no production canonicalizer is selected. The
+full interpretation and next validation boundary are in `conclusion.md`.
 
 ## Programme Boundary
 

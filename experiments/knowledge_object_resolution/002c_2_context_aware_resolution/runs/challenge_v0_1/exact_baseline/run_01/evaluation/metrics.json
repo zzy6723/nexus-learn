@@ -1,0 +1,53 @@
+{
+  "evaluation_status": "final",
+  "benchmark_counts": {
+    "mentions": 21,
+    "gold_clusters": 13,
+    "gold_same_object_pairs": 10,
+    "gold_distinct_object_pairs": 200
+  },
+  "prediction_counts": {
+    "clusters": 19,
+    "singleton_clusters": 17,
+    "multi_mention_clusters": 2
+  },
+  "integrity": {
+    "mention_coverage": 1.0,
+    "duplicate_assignments": 0,
+    "orphan_mentions": 0,
+    "cross_type_clusters": 0,
+    "lost_provenance_mentions": 0
+  },
+  "pairwise_identity": {
+    "true_positive_same_object": 1,
+    "false_positive_same_object": 1,
+    "false_negative_same_object": 9,
+    "same_object_precision": 0.5,
+    "same_object_recall": 0.1,
+    "same_object_f1": 0.16666666666666669
+  },
+  "cluster_quality": {
+    "b_cubed_precision": 0.9523809523809523,
+    "b_cubed_recall": 0.6507936507936508,
+    "b_cubed_f1": 0.7732201791607731,
+    "exact_gold_cluster_matches": 5,
+    "exact_gold_cluster_match_rate": 0.38461538461538464,
+    "singleton_precision": 0.29411764705882354,
+    "singleton_recall": 0.7142857142857143
+  },
+  "error_counts": {
+    "alias_false_split": 9,
+    "same_name_false_merge": 1,
+    "singleton_absorbed": 2
+  },
+  "interpretation_warning": "Pairwise accuracy is intentionally omitted from primary metrics because DISTINCT_OBJECT pairs dominate this benchmark.",
+  "success_criteria": {
+    "passed": false,
+    "failures": [
+      "quality:same_object_precision expected >= 1.0, got 0.5",
+      "quality:same_object_recall expected >= 1.0, got 0.1",
+      "quality:b_cubed_f1 expected >= 1.0, got 0.7732201791607731",
+      "quality:exact_gold_cluster_match_rate expected >= 1.0, got 0.38461538461538464"
+    ]
+  }
+}

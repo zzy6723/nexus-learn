@@ -1,0 +1,104 @@
+{
+  "evaluation_status": "final",
+  "clusters": [
+    {
+      "gold_canonical_id": "canonical_ko_dev_001",
+      "gold_mention_ids": [
+        "ko_mention_dev_001",
+        "ko_mention_dev_016"
+      ],
+      "exact_predicted_cluster_match": false
+    },
+    {
+      "gold_canonical_id": "canonical_ko_dev_002",
+      "gold_mention_ids": [
+        "ko_mention_dev_002"
+      ],
+      "exact_predicted_cluster_match": true
+    },
+    {
+      "gold_canonical_id": "canonical_ko_dev_003",
+      "gold_mention_ids": [
+        "ko_mention_dev_003",
+        "ko_mention_dev_007",
+        "ko_mention_dev_019"
+      ],
+      "exact_predicted_cluster_match": false
+    },
+    {
+      "gold_canonical_id": "canonical_ko_dev_004",
+      "gold_mention_ids": [
+        "ko_mention_dev_004",
+        "ko_mention_dev_008",
+        "ko_mention_dev_020"
+      ],
+      "exact_predicted_cluster_match": false
+    },
+    {
+      "gold_canonical_id": "canonical_ko_dev_005",
+      "gold_mention_ids": [
+        "ko_mention_dev_005"
+      ],
+      "exact_predicted_cluster_match": false
+    },
+    {
+      "gold_canonical_id": "canonical_ko_dev_006",
+      "gold_mention_ids": [
+        "ko_mention_dev_006"
+      ],
+      "exact_predicted_cluster_match": true
+    },
+    {
+      "gold_canonical_id": "canonical_ko_dev_007",
+      "gold_mention_ids": [
+        "ko_mention_dev_009",
+        "ko_mention_dev_012"
+      ],
+      "exact_predicted_cluster_match": false
+    },
+    {
+      "gold_canonical_id": "canonical_ko_dev_008",
+      "gold_mention_ids": [
+        "ko_mention_dev_010",
+        "ko_mention_dev_014"
+      ],
+      "exact_predicted_cluster_match": false
+    },
+    {
+      "gold_canonical_id": "canonical_ko_dev_009",
+      "gold_mention_ids": [
+        "ko_mention_dev_011",
+        "ko_mention_dev_013"
+      ],
+      "exact_predicted_cluster_match": false
+    },
+    {
+      "gold_canonical_id": "canonical_ko_dev_010",
+      "gold_mention_ids": [
+        "ko_mention_dev_015"
+      ],
+      "exact_predicted_cluster_match": true
+    },
+    {
+      "gold_canonical_id": "canonical_ko_dev_011",
+      "gold_mention_ids": [
+        "ko_mention_dev_017"
+      ],
+      "exact_predicted_cluster_match": false
+    },
+    {
+      "gold_canonical_id": "canonical_ko_dev_012",
+      "gold_mention_ids": [
+        "ko_mention_dev_018"
+      ],
+      "exact_predicted_cluster_match": true
+    },
+    {
+      "gold_canonical_id": "canonical_ko_dev_013",
+      "gold_mention_ids": [
+        "ko_mention_dev_021"
+      ],
+      "exact_predicted_cluster_match": true
+    }
+  ]
+}

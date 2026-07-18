@@ -1,0 +1,28 @@
+{
+  "id": "6e07aa57-7000-40fe-99a7-5b4dbcdc9f00",
+  "object": "chat.completion",
+  "created": 1784392672,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"candidate_id\": \"ko_identity_candidate_008\",\n  \"mention_a\": \"ko_mention_dev_008\",\n  \"mention_b\": \"ko_mention_dev_020\",\n  \"decision\": \"SAME_OBJECT\",\n  \"evidence_spans\": [\n    {\n      \"lecture_id\": \"machine_learning_mle_challenge_001\",\n      \"span\": \"MLE is used to fit a probabilistic model by maximizing its likelihood function on observed training data.\"\n    },\n    {\n      \"lecture_id\": \"statistics_mle_challenge_001\",\n      \"span\": \"Maximum Likelihood Estimation selects parameter values that maximize the likelihood.\"\n    }\n  ],\n  \"rationale\": \"Both mentions refer to the same statistical method: 'MLE' is the abbreviation of 'Maximum Likelihood Estimation'. The definitions are consistent: maximizing the likelihood function to fit a model or select parameters.\"\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 744,
+    "completion_tokens": 190,
+    "total_tokens": 934,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 360
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}
