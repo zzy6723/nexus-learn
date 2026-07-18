@@ -1,0 +1,64 @@
+{
+  "artifact_type": "ko_canonicalization_locked_reuse_annotation_plan",
+  "version": "v0.1",
+  "status": "final_pre_method_execution",
+  "data_role": "locked_reuse",
+  "claim_boundary": "Previously inspected development Entity outputs; not unseen evidence.",
+  "annotation_policy": {
+    "all_mentions_reviewed": true,
+    "unlisted_mentions": "explicit_singleton_clusters",
+    "cross_type_merge": "forbidden",
+    "same_name_not_sufficient_without_same_referent": true
+  },
+  "multi_mention_clusters": [
+    {
+      "canonical_name": "Gradient",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_003",
+        "ko_mention_dev_010",
+        "ko_mention_dev_032"
+      ],
+      "aliases": [],
+      "identity_rationale": "All three mentions denote the gradient Concept as the vector of first-order partial derivatives used to describe local change; the calculus composition context and optimisation context do not change the object identity.",
+      "notes": "Cross-lecture identity spanning two calculus lectures and one optimisation lecture."
+    },
+    {
+      "canonical_name": "Stationary Point",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_006",
+        "ko_mention_dev_038"
+      ],
+      "aliases": [],
+      "identity_rationale": "Both mentions denote a point at which the gradient is zero, at the same Concept granularity.",
+      "notes": "Cross-lecture identity between calculus and optimisation."
+    }
+  ],
+  "reviewed_distinct_cases": [
+    {
+      "mention_ids": ["ko_mention_dev_002", "ko_mention_dev_007"],
+      "rationale": "The Formula is a specific first-order expression; the Concept is the broader Taylor approximation idea."
+    },
+    {
+      "mention_ids": ["ko_mention_dev_009", "ko_mention_dev_008"],
+      "rationale": "A composite function is the object differentiated; Chain Rule is a Method applied to it."
+    },
+    {
+      "mention_ids": ["ko_mention_dev_010", "ko_mention_dev_012"],
+      "rationale": "The Gradient Concept is distinct from the Multivariable Chain Rule Formula in which it appears."
+    },
+    {
+      "mention_ids": ["ko_mention_dev_023", "ko_mention_dev_024"],
+      "rationale": "The dot product is the standard coordinate instance of an inner product, not the same general Concept."
+    },
+    {
+      "mention_ids": ["ko_mention_dev_033", "ko_mention_dev_034"],
+      "rationale": "Gradient Descent is a Method; its update is a Formula that formalizes the Method."
+    },
+    {
+      "mention_ids": ["ko_mention_dev_041", "ko_mention_dev_043"],
+      "rationale": "Bayes' Rule and the conditional-probability definition are distinct Formula objects."
+    }
+  ]
+}

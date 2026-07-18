@@ -1,0 +1,38 @@
+{
+  "artifact_type": "ko_mention_inventory_complete",
+  "version": "v0.1",
+  "status": "final",
+  "mention_inventory": {
+    "path": "benchmark/ko_canonicalization/locked_reuse_v0_1/mention_inventory.json",
+    "sha256": "17939bc24ae1df16ab36cc34ac00562218e10f5891718bd6186ae691c0545501"
+  },
+  "source_inventory": {
+    "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/normalization/normalized_predicted_kos.json",
+    "sha256": "a82fc1b083920860532384994f8836bf13999d4d54e7ab449acb64cc2a5c390e"
+  },
+  "lecture_inventory": {
+    "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/lecture_inventory.json",
+    "sha256": "195b8523b00652d98d79866f4807993e1359f857577210c9b62ab970f5f41422"
+  },
+  "schema": {
+    "path": "benchmark/schema/ko_mention_inventory.schema.json",
+    "sha256": "a30b05a5c4857fa14cfd9e9966082c632da300491cbc21c333f49b974a7ffb5d"
+  },
+  "generator": {
+    "path": "scripts/create_ko_mention_inventory.py",
+    "sha256": "0b8410a4006f8f8d0556e57058c7f3ad14e182ddbb36c1ec84c241f3fceeefbe",
+    "version": "ko_mention_inventory_generator_v0.1"
+  },
+  "counts": {
+    "lectures": 6,
+    "mentions": 49,
+    "source_spans": 49,
+    "exact_source_spans": 35,
+    "nonexact_source_spans": 14,
+    "types": {
+      "Concept": 34,
+      "Method": 5,
+      "Formula": 10
+    }
+  }
+}

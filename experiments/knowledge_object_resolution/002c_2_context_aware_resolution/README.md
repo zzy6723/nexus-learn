@@ -1,6 +1,6 @@
 # Experiment 002C-2: Context-Aware KO Resolution
 
-**Status:** Challenge benchmark completed; pending repository-level freeze
+**Status:** Method implementation and synthetic validation completed; formal run pending
 
 ## Question
 
@@ -60,3 +60,18 @@ committed unchanged.
 Any contradictory identity component fails closed and enters adjudication. The
 context-aware method may be omitted from the selected v0.1 pipeline only after
 the frozen challenge evidence shows that deterministic resolution is adequate.
+
+## Implemented Method
+
+- `scripts/generate_ko_identity_candidates.py` creates an auditable,
+  Ground-Truth-blind candidate bundle;
+- `scripts/run_context_ko_resolution.py` performs one candidate per request;
+- `scripts/finalize_context_ko_clusters.py` checks unresolved and contradictory
+  decisions before producing clusters;
+- `scripts/evaluate_context_ko_resolution.py` separates candidate, resolver,
+  and final-cluster metrics.
+
+The frozen execution and retry rules are recorded in
+`method_contract_v0_1.md`. Synthetic tests cover complete success, endpoint
+substitution, nonexact evidence, unresolved decisions, inconsistent identity
+triangles, no-overwrite behavior, and artifact hash binding.

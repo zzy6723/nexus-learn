@@ -1,0 +1,38 @@
+{
+  "artifact_type": "ko_context_resolution_success_criteria",
+  "version": "v0.1",
+  "scope": "002C-3 locked_reuse_v0_1",
+  "candidate_gates": {
+    "gold_same_object_pair_recall_min": 1.0,
+    "required_candidate_decisions": [
+      {
+        "case": "hessian_matrix_vs_matrix",
+        "mention_ids": ["ko_mention_dev_004", "ko_mention_dev_020"],
+        "decision": "DISTINCT_OBJECT"
+      },
+      {
+        "case": "jacobian_matrix_vs_matrix",
+        "mention_ids": ["ko_mention_dev_011", "ko_mention_dev_020"],
+        "decision": "DISTINCT_OBJECT"
+      }
+    ]
+  },
+  "resolver_gates": {
+    "same_object_precision_min": 1.0,
+    "same_object_recall_min": 1.0,
+    "unresolved_rate_max": 0.0,
+    "inconsistent_component_count_max": 0
+  },
+  "cluster_gates": {
+    "b_cubed_f1_min": 1.0,
+    "mention_coverage": 1.0,
+    "lost_provenance_mentions": 0,
+    "cross_type_clusters": 0
+  },
+  "upstream_diagnostic": {
+    "exact_source_spans": 35,
+    "nonexact_source_spans": 14,
+    "canonicalizer_must_not_claim_to_repair_upstream_grounding": true
+  },
+  "interpretation_limit": "Passing supports locked reuse on previously inspected Entity outputs, not unseen generalization."
+}

@@ -1,6 +1,6 @@
 # Experiment 002C-3: End-to-End Canonicalization And Locked Reuse
 
-**Status:** Locked-reuse source predeclared; pending selected-method freeze
+**Status:** Locked-reuse benchmark frozen; pending selected-method freeze
 
 ## Question
 
@@ -34,6 +34,12 @@ benchmark/ko_canonicalization/locked_reuse_v0_1/source_manifest.json
 The source was selected before any 002C-2 context-resolver execution. This
 prevents resolver behavior from influencing which downstream bundle is reused.
 It does not make the data unseen.
+
+The source has now been materialized as a 49-mention, 46-cluster evaluation
+benchmark under `benchmark/ko_canonicalization/locked_reuse_v0_1/`. It contains
+4 positive identity pairs and 1,172 distinct pairs. Upstream Entity grounding
+is retained exactly as received: 35 spans are exact and 14 are nonexact. This
+is an upstream diagnostic and must not be presented as a canonicalizer repair.
 
 ## Required Audits
 

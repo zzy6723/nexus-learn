@@ -1,0 +1,601 @@
+{
+  "artifact_type": "ko_canonicalization_ground_truth",
+  "version": "v0.1",
+  "benchmark_split": "development",
+  "status": "frozen",
+  "mention_inventory": {
+    "path": "benchmark/ko_canonicalization/locked_reuse_v0_1/mention_inventory.json",
+    "sha256": "17939bc24ae1df16ab36cc34ac00562218e10f5891718bd6186ae691c0545501"
+  },
+  "annotation_guidelines": {
+    "path": "benchmark/ko_canonicalization_annotation_guidelines.md",
+    "sha256": "ae88452fbe9ae7bb8ab41c79776d6277105a2f15242d46f43a6495a9ea5b1493",
+    "version": "ko_canonicalization_annotation_v0.1"
+  },
+  "evaluation_protocol": {
+    "path": "benchmark/ko_canonicalization_protocol.md",
+    "sha256": "adcca6ce6962500da7427a7b247d76abddb0dd32fb3ef12e2ac9023597ad3b55",
+    "version": "ko_canonicalization_protocol_v0.1"
+  },
+  "schema_bindings": {
+    "mention_inventory": {
+      "path": "benchmark/schema/ko_mention_inventory.schema.json",
+      "sha256": "a30b05a5c4857fa14cfd9e9966082c632da300491cbc21c333f49b974a7ffb5d",
+      "version": "v0.1"
+    },
+    "ground_truth": {
+      "path": "benchmark/schema/ko_canonicalization_ground_truth.schema.json",
+      "sha256": "4958a8b0078bd5e2dfeb095140a135568d57679e4f7d4c4e7775622606dbff46",
+      "version": "v0.1"
+    }
+  },
+  "identity_policy": {
+    "cluster_annotation": "authoritative",
+    "canonical_id_scheme": "opaque_sequential_in_first_mention_order",
+    "cross_type_merge": "forbidden",
+    "singleton_records": "required",
+    "provenance_retention": "through_complete_mention_membership"
+  },
+  "allowed_types": [
+    "Concept",
+    "Method",
+    "Formula"
+  ],
+  "clusters": [
+    {
+      "canonical_id": "canonical_ko_dev_001",
+      "canonical_name": "Directional Derivative",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_001"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_002",
+      "canonical_name": "First-Order Taylor Approximation",
+      "canonical_type": "Formula",
+      "mention_ids": [
+        "ko_mention_dev_002"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_003",
+      "canonical_name": "Gradient",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_003",
+        "ko_mention_dev_010",
+        "ko_mention_dev_032"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "All three mentions denote the gradient Concept as the vector of first-order partial derivatives used to describe local change; the calculus composition context and optimisation context do not change the object identity.",
+      "notes": "Cross-lecture identity spanning two calculus lectures and one optimisation lecture."
+    },
+    {
+      "canonical_id": "canonical_ko_dev_004",
+      "canonical_name": "Hessian Matrix",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_004"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_005",
+      "canonical_name": "Partial Derivative",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_005"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_006",
+      "canonical_name": "Stationary Point",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_006",
+        "ko_mention_dev_038"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "Both mentions denote a point at which the gradient is zero, at the same Concept granularity.",
+      "notes": "Cross-lecture identity between calculus and optimisation."
+    },
+    {
+      "canonical_id": "canonical_ko_dev_007",
+      "canonical_name": "Taylor Approximation",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_007"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_008",
+      "canonical_name": "Chain Rule",
+      "canonical_type": "Method",
+      "mention_ids": [
+        "ko_mention_dev_008"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_009",
+      "canonical_name": "Composite Function",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_009"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_010",
+      "canonical_name": "Jacobian Matrix",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_011"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_011",
+      "canonical_name": "Multivariable Chain Rule Formula",
+      "canonical_type": "Formula",
+      "mention_ids": [
+        "ko_mention_dev_012"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_012",
+      "canonical_name": "Basis",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_013"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_013",
+      "canonical_name": "Characteristic Polynomial",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_014"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_014",
+      "canonical_name": "Dimension",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_015"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_015",
+      "canonical_name": "Eigenvalue",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_016"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_016",
+      "canonical_name": "Eigenvalue Equation",
+      "canonical_type": "Formula",
+      "mention_ids": [
+        "ko_mention_dev_017"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_017",
+      "canonical_name": "Eigenvector",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_018"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_018",
+      "canonical_name": "Linear Transformation",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_019"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_019",
+      "canonical_name": "Matrix",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_020"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_020",
+      "canonical_name": "Matrix Multiplication",
+      "canonical_type": "Method",
+      "mention_ids": [
+        "ko_mention_dev_021"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_021",
+      "canonical_name": "Vector Space",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_022"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_022",
+      "canonical_name": "Dot Product",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_023"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_023",
+      "canonical_name": "Inner Product",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_024"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_024",
+      "canonical_name": "Least Squares Problem",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_025"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_025",
+      "canonical_name": "Normal Equations",
+      "canonical_type": "Formula",
+      "mention_ids": [
+        "ko_mention_dev_026"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_026",
+      "canonical_name": "Orthogonal Projection",
+      "canonical_type": "Method",
+      "mention_ids": [
+        "ko_mention_dev_027"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_027",
+      "canonical_name": "Orthogonal Vectors",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_028"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_028",
+      "canonical_name": "Projection Formula",
+      "canonical_type": "Formula",
+      "mention_ids": [
+        "ko_mention_dev_029"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_029",
+      "canonical_name": "Convex Function",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_030"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_030",
+      "canonical_name": "Descent Direction",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_031"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_031",
+      "canonical_name": "Gradient Descent",
+      "canonical_type": "Method",
+      "mention_ids": [
+        "ko_mention_dev_033"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_032",
+      "canonical_name": "Gradient Descent Update",
+      "canonical_type": "Formula",
+      "mention_ids": [
+        "ko_mention_dev_034"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_033",
+      "canonical_name": "Line Search",
+      "canonical_type": "Method",
+      "mention_ids": [
+        "ko_mention_dev_035"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_034",
+      "canonical_name": "Objective Function",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_036"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_035",
+      "canonical_name": "Optimisation Problem",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_037"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_036",
+      "canonical_name": "Step Size",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_039"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_037",
+      "canonical_name": "Unconstrained Minimisation Problem",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_040"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_038",
+      "canonical_name": "Bayes' Rule",
+      "canonical_type": "Formula",
+      "mention_ids": [
+        "ko_mention_dev_041"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_039",
+      "canonical_name": "Conditional Probability",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_042"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_040",
+      "canonical_name": "Conditional Probability Formula",
+      "canonical_type": "Formula",
+      "mention_ids": [
+        "ko_mention_dev_043"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_041",
+      "canonical_name": "Expected Value",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_044"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_042",
+      "canonical_name": "Expected Value Formula",
+      "canonical_type": "Formula",
+      "mention_ids": [
+        "ko_mention_dev_045"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_043",
+      "canonical_name": "Probability Distribution",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_046"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_044",
+      "canonical_name": "Random Variable",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_047"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_045",
+      "canonical_name": "Variance",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_048"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_046",
+      "canonical_name": "Variance Formula",
+      "canonical_type": "Formula",
+      "mention_ids": [
+        "ko_mention_dev_049"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed locked-reuse inventory denotes the same Knowledge Object at the same educational granularity.",
+      "notes": ""
+    }
+  ]
+}

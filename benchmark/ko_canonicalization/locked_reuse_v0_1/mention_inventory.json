@@ -1,0 +1,963 @@
+{
+  "artifact_type": "ko_mention_inventory",
+  "version": "v0.1",
+  "benchmark_split": "development",
+  "source_data_role": "development_reuse",
+  "mention_order": "ascending_lecture_then_predicted_ko_id",
+  "source_inventory": {
+    "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/normalization/normalized_predicted_kos.json",
+    "sha256": "a82fc1b083920860532384994f8836bf13999d4d54e7ab449acb64cc2a5c390e",
+    "normalized_content_sha256": "26276b5912955299bc7c31963d3281e4a109e143d1fad415be6ed56198302839",
+    "source_declared_split": "development",
+    "structural_normalization_version": "predicted_ko_structural_normalization_v0_1"
+  },
+  "lecture_inventory": {
+    "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/lecture_inventory.json",
+    "sha256": "195b8523b00652d98d79866f4807993e1359f857577210c9b62ab970f5f41422"
+  },
+  "counts": {
+    "lectures": 6,
+    "mentions": 49,
+    "source_spans": 49,
+    "exact_source_spans": 35,
+    "nonexact_source_spans": 14,
+    "types": {
+      "Concept": 34,
+      "Method": 5,
+      "Formula": 10
+    }
+  },
+  "mentions": [
+    {
+      "mention_id": "ko_mention_dev_001",
+      "source_inventory_index": 0,
+      "lecture_id": "calculus_001",
+      "predicted_ko_id": "directional_derivative",
+      "name": "Directional Derivative",
+      "type": "Concept",
+      "source_spans": [
+        "For a unit direction u, the directional derivative is ∇f(x)·u, so the gradient points in the direction of steepest local increase."
+      ],
+      "source_span_exact_flags": [
+        false
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/calculus_001.json",
+        "source_object_index": 2,
+        "source_prediction_id": "directional_derivative"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_002",
+      "source_inventory_index": 1,
+      "lecture_id": "calculus_001",
+      "predicted_ko_id": "first_order_taylor_approximation",
+      "name": "First-Order Taylor Approximation",
+      "type": "Formula",
+      "source_spans": [
+        "f(a+h) ≈ f(a) + ∇f(a)·h."
+      ],
+      "source_span_exact_flags": [
+        false
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/calculus_001.json",
+        "source_object_index": 5,
+        "source_prediction_id": "first_order_taylor_approximation"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_003",
+      "source_inventory_index": 2,
+      "lecture_id": "calculus_001",
+      "predicted_ko_id": "gradient",
+      "name": "Gradient",
+      "type": "Concept",
+      "source_spans": [
+        "The gradient ∇f(x) collects these partial derivatives into a vector."
+      ],
+      "source_span_exact_flags": [
+        false
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/calculus_001.json",
+        "source_object_index": 1,
+        "source_prediction_id": "gradient"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_004",
+      "source_inventory_index": 3,
+      "lecture_id": "calculus_001",
+      "predicted_ko_id": "hessian_matrix",
+      "name": "Hessian Matrix",
+      "type": "Concept",
+      "source_spans": [
+        "the Hessian matrix, which describes local curvature."
+      ],
+      "source_span_exact_flags": [
+        true
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/calculus_001.json",
+        "source_object_index": 6,
+        "source_prediction_id": "hessian_matrix"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_005",
+      "source_inventory_index": 4,
+      "lecture_id": "calculus_001",
+      "predicted_ko_id": "partial_derivative",
+      "name": "Partial Derivative",
+      "type": "Concept",
+      "source_spans": [
+        "A partial derivative measures how f changes when one coordinate changes while the other coordinates are held fixed."
+      ],
+      "source_span_exact_flags": [
+        false
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/calculus_001.json",
+        "source_object_index": 0,
+        "source_prediction_id": "partial_derivative"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_006",
+      "source_inventory_index": 5,
+      "lecture_id": "calculus_001",
+      "predicted_ko_id": "stationary_point",
+      "name": "Stationary Point",
+      "type": "Concept",
+      "source_spans": [
+        "A point where the gradient is the zero vector is called a stationary point."
+      ],
+      "source_span_exact_flags": [
+        true
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/calculus_001.json",
+        "source_object_index": 3,
+        "source_prediction_id": "stationary_point"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_007",
+      "source_inventory_index": 6,
+      "lecture_id": "calculus_001",
+      "predicted_ko_id": "taylor_approximation",
+      "name": "Taylor Approximation",
+      "type": "Concept",
+      "source_spans": [
+        "Taylor approximation describes the local behavior of a differentiable function near a point."
+      ],
+      "source_span_exact_flags": [
+        true
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/calculus_001.json",
+        "source_object_index": 4,
+        "source_prediction_id": "taylor_approximation"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_008",
+      "source_inventory_index": 7,
+      "lecture_id": "calculus_002",
+      "predicted_ko_id": "chain_rule",
+      "name": "Chain Rule",
+      "type": "Method",
+      "source_spans": [
+        "The chain rule describes how the derivative of the composite function depends on the derivatives of f and g."
+      ],
+      "source_span_exact_flags": [
+        false
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/calculus_002.json",
+        "source_object_index": 1,
+        "source_prediction_id": "chain_rule"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_009",
+      "source_inventory_index": 8,
+      "lecture_id": "calculus_002",
+      "predicted_ko_id": "composite_function",
+      "name": "Composite Function",
+      "type": "Concept",
+      "source_spans": [
+        "The composite function h = f ∘ g maps an input x ∈ ℝ^m to f(g(x))."
+      ],
+      "source_span_exact_flags": [
+        false
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/calculus_002.json",
+        "source_object_index": 0,
+        "source_prediction_id": "composite_function"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_010",
+      "source_inventory_index": 9,
+      "lecture_id": "calculus_002",
+      "predicted_ko_id": "gradient",
+      "name": "Gradient",
+      "type": "Concept",
+      "source_spans": [
+        "∇h(x) = J_g(x)^⊤ ∇f(g(x))."
+      ],
+      "source_span_exact_flags": [
+        false
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/calculus_002.json",
+        "source_object_index": 3,
+        "source_prediction_id": "gradient"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_011",
+      "source_inventory_index": 10,
+      "lecture_id": "calculus_002",
+      "predicted_ko_id": "jacobian_matrix",
+      "name": "Jacobian Matrix",
+      "type": "Concept",
+      "source_spans": [
+        "the Jacobian matrix J_g(x) collects all first-order partial derivatives of the output components of g."
+      ],
+      "source_span_exact_flags": [
+        false
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/calculus_002.json",
+        "source_object_index": 2,
+        "source_prediction_id": "jacobian_matrix"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_012",
+      "source_inventory_index": 11,
+      "lecture_id": "calculus_002",
+      "predicted_ko_id": "multivariable_chain_rule_formula",
+      "name": "Multivariable Chain Rule Formula",
+      "type": "Formula",
+      "source_spans": [
+        "∇h(x) = J_g(x)^⊤ ∇f(g(x))."
+      ],
+      "source_span_exact_flags": [
+        false
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/calculus_002.json",
+        "source_object_index": 4,
+        "source_prediction_id": "multivariable_chain_rule_formula"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_013",
+      "source_inventory_index": 12,
+      "lecture_id": "linear_algebra_001",
+      "predicted_ko_id": "basis",
+      "name": "Basis",
+      "type": "Concept",
+      "source_spans": [
+        "A basis is a set of independent vectors that can represent every vector in the space through linear combinations."
+      ],
+      "source_span_exact_flags": [
+        true
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/linear_algebra_001.json",
+        "source_object_index": 1,
+        "source_prediction_id": "basis"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_014",
+      "source_inventory_index": 13,
+      "lecture_id": "linear_algebra_001",
+      "predicted_ko_id": "characteristic_polynomial",
+      "name": "Characteristic Polynomial",
+      "type": "Concept",
+      "source_spans": [
+        "the characteristic polynomial det(λI - A)"
+      ],
+      "source_span_exact_flags": [
+        false
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/linear_algebra_001.json",
+        "source_object_index": 8,
+        "source_prediction_id": "characteristic_polynomial"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_015",
+      "source_inventory_index": 14,
+      "lecture_id": "linear_algebra_001",
+      "predicted_ko_id": "dimension",
+      "name": "Dimension",
+      "type": "Concept",
+      "source_spans": [
+        "The number of vectors in a basis is the dimension of the vector space."
+      ],
+      "source_span_exact_flags": [
+        true
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/linear_algebra_001.json",
+        "source_object_index": 2,
+        "source_prediction_id": "dimension"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_016",
+      "source_inventory_index": 15,
+      "lecture_id": "linear_algebra_001",
+      "predicted_ko_id": "eigenvalue",
+      "name": "Eigenvalue",
+      "type": "Concept",
+      "source_spans": [
+        "The corresponding eigenvalue λ satisfies Av = λ v."
+      ],
+      "source_span_exact_flags": [
+        false
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/linear_algebra_001.json",
+        "source_object_index": 7,
+        "source_prediction_id": "eigenvalue"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_017",
+      "source_inventory_index": 16,
+      "lecture_id": "linear_algebra_001",
+      "predicted_ko_id": "eigenvalue_equation",
+      "name": "Eigenvalue Equation",
+      "type": "Formula",
+      "source_spans": [
+        "Av = λ v"
+      ],
+      "source_span_exact_flags": [
+        false
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/linear_algebra_001.json",
+        "source_object_index": 9,
+        "source_prediction_id": "eigenvalue_equation"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_018",
+      "source_inventory_index": 17,
+      "lecture_id": "linear_algebra_001",
+      "predicted_ko_id": "eigenvector",
+      "name": "Eigenvector",
+      "type": "Concept",
+      "source_spans": [
+        "an eigenvector is a nonzero vector v whose direction is preserved by the transformation represented by A"
+      ],
+      "source_span_exact_flags": [
+        false
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/linear_algebra_001.json",
+        "source_object_index": 6,
+        "source_prediction_id": "eigenvector"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_019",
+      "source_inventory_index": 18,
+      "lecture_id": "linear_algebra_001",
+      "predicted_ko_id": "linear_transformation",
+      "name": "Linear Transformation",
+      "type": "Concept",
+      "source_spans": [
+        "a linear transformation"
+      ],
+      "source_span_exact_flags": [
+        true
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/linear_algebra_001.json",
+        "source_object_index": 4,
+        "source_prediction_id": "linear_transformation"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_020",
+      "source_inventory_index": 19,
+      "lecture_id": "linear_algebra_001",
+      "predicted_ko_id": "matrix",
+      "name": "Matrix",
+      "type": "Concept",
+      "source_spans": [
+        "A matrix is a rectangular array of numbers that can represent a linear transformation once bases have been chosen for the input and output spaces."
+      ],
+      "source_span_exact_flags": [
+        true
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/linear_algebra_001.json",
+        "source_object_index": 3,
+        "source_prediction_id": "matrix"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_021",
+      "source_inventory_index": 20,
+      "lecture_id": "linear_algebra_001",
+      "predicted_ko_id": "matrix_multiplication",
+      "name": "Matrix Multiplication",
+      "type": "Method",
+      "source_spans": [
+        "Matrix multiplication corresponds to composing linear transformations"
+      ],
+      "source_span_exact_flags": [
+        true
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/linear_algebra_001.json",
+        "source_object_index": 5,
+        "source_prediction_id": "matrix_multiplication"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_022",
+      "source_inventory_index": 21,
+      "lecture_id": "linear_algebra_001",
+      "predicted_ko_id": "vector_space",
+      "name": "Vector Space",
+      "type": "Concept",
+      "source_spans": [
+        "A vector space is a set of objects called vectors that can be added together and multiplied by scalars while satisfying the vector space axioms."
+      ],
+      "source_span_exact_flags": [
+        true
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/linear_algebra_001.json",
+        "source_object_index": 0,
+        "source_prediction_id": "vector_space"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_023",
+      "source_inventory_index": 22,
+      "lecture_id": "linear_algebra_002",
+      "predicted_ko_id": "dot_product",
+      "name": "Dot Product",
+      "type": "Concept",
+      "source_spans": [
+        "the standard inner product is the dot product"
+      ],
+      "source_span_exact_flags": [
+        true
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/linear_algebra_002.json",
+        "source_object_index": 1,
+        "source_prediction_id": "dot_product"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_024",
+      "source_inventory_index": 23,
+      "lecture_id": "linear_algebra_002",
+      "predicted_ko_id": "inner_product",
+      "name": "Inner Product",
+      "type": "Concept",
+      "source_spans": [
+        "An inner product is an operation that takes two vectors and returns a scalar."
+      ],
+      "source_span_exact_flags": [
+        true
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/linear_algebra_002.json",
+        "source_object_index": 0,
+        "source_prediction_id": "inner_product"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_025",
+      "source_inventory_index": 24,
+      "lecture_id": "linear_algebra_002",
+      "predicted_ko_id": "least_squares_problem",
+      "name": "Least Squares Problem",
+      "type": "Concept",
+      "source_spans": [
+        "Least squares problems use projection ideas to solve inconsistent systems."
+      ],
+      "source_span_exact_flags": [
+        true
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/linear_algebra_002.json",
+        "source_object_index": 5,
+        "source_prediction_id": "least_squares_problem"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_026",
+      "source_inventory_index": 25,
+      "lecture_id": "linear_algebra_002",
+      "predicted_ko_id": "normal_equations",
+      "name": "Normal Equations",
+      "type": "Formula",
+      "source_spans": [
+        "A^\\top A x = A^\\top b."
+      ],
+      "source_span_exact_flags": [
+        true
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/linear_algebra_002.json",
+        "source_object_index": 6,
+        "source_prediction_id": "normal_equations"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_027",
+      "source_inventory_index": 26,
+      "lecture_id": "linear_algebra_002",
+      "predicted_ko_id": "orthogonal_projection",
+      "name": "Orthogonal Projection",
+      "type": "Method",
+      "source_spans": [
+        "Orthogonal projection is a method for finding the closest point in a subspace to a given vector."
+      ],
+      "source_span_exact_flags": [
+        true
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/linear_algebra_002.json",
+        "source_object_index": 3,
+        "source_prediction_id": "orthogonal_projection"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_028",
+      "source_inventory_index": 27,
+      "lecture_id": "linear_algebra_002",
+      "predicted_ko_id": "orthogonal_vectors",
+      "name": "Orthogonal Vectors",
+      "type": "Concept",
+      "source_spans": [
+        "Two vectors are orthogonal when their inner product is zero."
+      ],
+      "source_span_exact_flags": [
+        true
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/linear_algebra_002.json",
+        "source_object_index": 2,
+        "source_prediction_id": "orthogonal_vectors"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_029",
+      "source_inventory_index": 28,
+      "lecture_id": "linear_algebra_002",
+      "predicted_ko_id": "projection_formula",
+      "name": "Projection Formula",
+      "type": "Formula",
+      "source_spans": [
+        "\\operatorname{proj}_u(v) = \\frac{v \\cdot u}{u \\cdot u}u."
+      ],
+      "source_span_exact_flags": [
+        true
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/linear_algebra_002.json",
+        "source_object_index": 4,
+        "source_prediction_id": "projection_formula"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_030",
+      "source_inventory_index": 29,
+      "lecture_id": "optimisation_001",
+      "predicted_ko_id": "convex_function",
+      "name": "Convex Function",
+      "type": "Concept",
+      "source_spans": [
+        "convex functions"
+      ],
+      "source_span_exact_flags": [
+        true
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/optimisation_001.json",
+        "source_object_index": 8,
+        "source_prediction_id": "convex_function"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_031",
+      "source_inventory_index": 30,
+      "lecture_id": "optimisation_001",
+      "predicted_ko_id": "descent_direction",
+      "name": "Descent Direction",
+      "type": "Concept",
+      "source_spans": [
+        "negative gradient \\(-\\nabla f(x)\\) is a descent direction"
+      ],
+      "source_span_exact_flags": [
+        true
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/optimisation_001.json",
+        "source_object_index": 4,
+        "source_prediction_id": "descent_direction"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_032",
+      "source_inventory_index": 31,
+      "lecture_id": "optimisation_001",
+      "predicted_ko_id": "gradient",
+      "name": "Gradient",
+      "type": "Concept",
+      "source_spans": [
+        "gradient \\(\\nabla f(x)\\) describes local change"
+      ],
+      "source_span_exact_flags": [
+        true
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/optimisation_001.json",
+        "source_object_index": 3,
+        "source_prediction_id": "gradient"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_033",
+      "source_inventory_index": 32,
+      "lecture_id": "optimisation_001",
+      "predicted_ko_id": "gradient_descent",
+      "name": "Gradient Descent",
+      "type": "Method",
+      "source_spans": [
+        "Gradient descent is a first-order iterative method that repeatedly moves in this direction"
+      ],
+      "source_span_exact_flags": [
+        true
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/optimisation_001.json",
+        "source_object_index": 5,
+        "source_prediction_id": "gradient_descent"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_034",
+      "source_inventory_index": 33,
+      "lecture_id": "optimisation_001",
+      "predicted_ko_id": "gradient_descent_update",
+      "name": "Gradient Descent Update",
+      "type": "Formula",
+      "source_spans": [
+        "\\[ x_{k+1} = x_k - \\alpha_k \\nabla f(x_k). \\]"
+      ],
+      "source_span_exact_flags": [
+        false
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/optimisation_001.json",
+        "source_object_index": 10,
+        "source_prediction_id": "gradient_descent_update"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_035",
+      "source_inventory_index": 34,
+      "lecture_id": "optimisation_001",
+      "predicted_ko_id": "line_search",
+      "name": "Line Search",
+      "type": "Method",
+      "source_spans": [
+        "A line search is a method for choosing a step size that gives sufficient decrease in the objective function"
+      ],
+      "source_span_exact_flags": [
+        true
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/optimisation_001.json",
+        "source_object_index": 7,
+        "source_prediction_id": "line_search"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_036",
+      "source_inventory_index": 35,
+      "lecture_id": "optimisation_001",
+      "predicted_ko_id": "objective_function",
+      "name": "Objective Function",
+      "type": "Concept",
+      "source_spans": [
+        "an objective function assigns a real value to each feasible input"
+      ],
+      "source_span_exact_flags": [
+        true
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/optimisation_001.json",
+        "source_object_index": 0,
+        "source_prediction_id": "objective_function"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_037",
+      "source_inventory_index": 36,
+      "lecture_id": "optimisation_001",
+      "predicted_ko_id": "optimisation_problem",
+      "name": "Optimisation Problem",
+      "type": "Concept",
+      "source_spans": [
+        "An optimisation problem asks for an input that makes the objective function as small or as large as possible"
+      ],
+      "source_span_exact_flags": [
+        true
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/optimisation_001.json",
+        "source_object_index": 1,
+        "source_prediction_id": "optimisation_problem"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_038",
+      "source_inventory_index": 37,
+      "lecture_id": "optimisation_001",
+      "predicted_ko_id": "stationary_point",
+      "name": "Stationary Point",
+      "type": "Concept",
+      "source_spans": [
+        "stationary point is a point where the gradient is zero"
+      ],
+      "source_span_exact_flags": [
+        true
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/optimisation_001.json",
+        "source_object_index": 9,
+        "source_prediction_id": "stationary_point"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_039",
+      "source_inventory_index": 38,
+      "lecture_id": "optimisation_001",
+      "predicted_ko_id": "step_size",
+      "name": "Step Size",
+      "type": "Concept",
+      "source_spans": [
+        "scalar \\(\\alpha_k\\) is the step size"
+      ],
+      "source_span_exact_flags": [
+        true
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/optimisation_001.json",
+        "source_object_index": 6,
+        "source_prediction_id": "step_size"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_040",
+      "source_inventory_index": 39,
+      "lecture_id": "optimisation_001",
+      "predicted_ko_id": "unconstrained_minimisation_problem",
+      "name": "Unconstrained Minimisation Problem",
+      "type": "Concept",
+      "source_spans": [
+        "unconstrained minimisation problem"
+      ],
+      "source_span_exact_flags": [
+        true
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/optimisation_001.json",
+        "source_object_index": 2,
+        "source_prediction_id": "unconstrained_minimisation_problem"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_041",
+      "source_inventory_index": 40,
+      "lecture_id": "probability_001",
+      "predicted_ko_id": "bayes_rule",
+      "name": "Bayes' Rule",
+      "type": "Formula",
+      "source_spans": [
+        "P(A \\mid B) = \\frac{P(B \\mid A)P(A)}{P(B)}."
+      ],
+      "source_span_exact_flags": [
+        true
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/probability_001.json",
+        "source_object_index": 8,
+        "source_prediction_id": "bayes_rule"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_042",
+      "source_inventory_index": 41,
+      "lecture_id": "probability_001",
+      "predicted_ko_id": "conditional_probability",
+      "name": "Conditional Probability",
+      "type": "Concept",
+      "source_spans": [
+        "Conditional probability measures the probability of an event given that another event has occurred."
+      ],
+      "source_span_exact_flags": [
+        true
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/probability_001.json",
+        "source_object_index": 6,
+        "source_prediction_id": "conditional_probability"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_043",
+      "source_inventory_index": 42,
+      "lecture_id": "probability_001",
+      "predicted_ko_id": "conditional_probability_formula",
+      "name": "Conditional Probability Formula",
+      "type": "Formula",
+      "source_spans": [
+        "P(A \\mid B) = \\frac{P(A \\cap B)}{P(B)}."
+      ],
+      "source_span_exact_flags": [
+        true
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/probability_001.json",
+        "source_object_index": 7,
+        "source_prediction_id": "conditional_probability_formula"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_044",
+      "source_inventory_index": 43,
+      "lecture_id": "probability_001",
+      "predicted_ko_id": "expected_value",
+      "name": "Expected Value",
+      "type": "Concept",
+      "source_spans": [
+        "The expected value of a random variable is a weighted average of its possible values."
+      ],
+      "source_span_exact_flags": [
+        true
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/probability_001.json",
+        "source_object_index": 2,
+        "source_prediction_id": "expected_value"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_045",
+      "source_inventory_index": 44,
+      "lecture_id": "probability_001",
+      "predicted_ko_id": "expected_value_formula",
+      "name": "Expected Value Formula",
+      "type": "Formula",
+      "source_spans": [
+        "\\mathbb{E}[X] = \\sum_x x P(X=x)."
+      ],
+      "source_span_exact_flags": [
+        true
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/probability_001.json",
+        "source_object_index": 3,
+        "source_prediction_id": "expected_value_formula"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_046",
+      "source_inventory_index": 45,
+      "lecture_id": "probability_001",
+      "predicted_ko_id": "probability_distribution",
+      "name": "Probability Distribution",
+      "type": "Concept",
+      "source_spans": [
+        "The probability distribution of a random variable describes how probability is assigned to its possible values."
+      ],
+      "source_span_exact_flags": [
+        true
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/probability_001.json",
+        "source_object_index": 1,
+        "source_prediction_id": "probability_distribution"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_047",
+      "source_inventory_index": 46,
+      "lecture_id": "probability_001",
+      "predicted_ko_id": "random_variable",
+      "name": "Random Variable",
+      "type": "Concept",
+      "source_spans": [
+        "A random variable is a function that assigns a numerical value to each outcome of a random experiment."
+      ],
+      "source_span_exact_flags": [
+        true
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/probability_001.json",
+        "source_object_index": 0,
+        "source_prediction_id": "random_variable"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_048",
+      "source_inventory_index": 47,
+      "lecture_id": "probability_001",
+      "predicted_ko_id": "variance",
+      "name": "Variance",
+      "type": "Concept",
+      "source_spans": [
+        "Variance measures how far a random variable typically is from its expected value."
+      ],
+      "source_span_exact_flags": [
+        true
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/probability_001.json",
+        "source_object_index": 4,
+        "source_prediction_id": "variance"
+      }
+    },
+    {
+      "mention_id": "ko_mention_dev_049",
+      "source_inventory_index": 48,
+      "lecture_id": "probability_001",
+      "predicted_ko_id": "variance_formula",
+      "name": "Variance Formula",
+      "type": "Formula",
+      "source_spans": [
+        "\\operatorname{Var}(X) = \\mathbb{E}[(X-\\mathbb{E}[X])^2]."
+      ],
+      "source_span_exact_flags": [
+        true
+      ],
+      "provenance": {
+        "source_file": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/probability_001.json",
+        "source_object_index": 5,
+        "source_prediction_id": "variance_formula"
+      }
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "artifact_type": "ko_canonicalization_locked_reuse_benchmark_complete",
+  "version": "v0.1",
+  "status": "final",
+  "data_role": "locked_reuse",
+  "claim_boundary": "Previously inspected 002B-1 development outputs; not unseen evidence.",
+  "artifacts": {
+    "source_manifest": {
+      "path": "benchmark/ko_canonicalization/locked_reuse_v0_1/source_manifest.json",
+      "sha256": "13174ff3e655f61dc8de9a8a87864c28d1a583e5527d1f0e7902d4d3e49c29d9"
+    },
+    "mention_inventory": {
+      "path": "benchmark/ko_canonicalization/locked_reuse_v0_1/mention_inventory.json",
+      "sha256": "17939bc24ae1df16ab36cc34ac00562218e10f5891718bd6186ae691c0545501"
+    },
+    "mention_inventory_completion_marker": {
+      "path": "benchmark/ko_canonicalization/locked_reuse_v0_1/mention_inventory_complete.json",
+      "sha256": "430f62b2374f8c8d3c813aa2b8c82aefe6207166708610b1da07f8ea90d11eb6"
+    },
+    "ground_truth_annotation_plan": {
+      "path": "benchmark/ko_canonicalization/locked_reuse_v0_1/ground_truth_annotation_plan.json",
+      "sha256": "426b8f41f9409990ba4e0a31b42e1750bb95469a87b87e5dfff6fd2857f9573b"
+    },
+    "ground_truth": {
+      "path": "benchmark/ko_canonicalization/locked_reuse_v0_1/ground_truth.json",
+      "sha256": "64f90caf82f9263bc86f0f4af7d2110a266a240733c1ceda7fb4431fcee4c1aa"
+    },
+    "ground_truth_completion_marker": {
+      "path": "benchmark/ko_canonicalization/locked_reuse_v0_1/ground_truth_complete.json",
+      "sha256": "06b5927d3aa37e6d3c4df2c041831246c004cd3a42aeb6c359d1e9bf903094ea"
+    },
+    "success_criteria": {
+      "path": "benchmark/ko_canonicalization/locked_reuse_v0_1/success_criteria.json",
+      "sha256": "8383bf5740bc2696bc99bf6386c029319471e2ee574022f0b06026012e46352a"
+    },
+    "ground_truth_generator": {
+      "path": "scripts/create_ko_locked_reuse_ground_truth.py",
+      "sha256": "95a556c21ba65179c24715ca43923967f84db168cc441fa6efb75750d65c2974"
+    }
+  },
+  "lecture_inventory": {
+    "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/lecture_inventory.json",
+    "sha256": "195b8523b00652d98d79866f4807993e1359f857577210c9b62ab970f5f41422"
+  },
+  "counts": {
+    "mentions": 49,
+    "canonical_clusters": 46,
+    "singleton_clusters": 44,
+    "multi_mention_clusters": 2,
+    "same_object_pairs": 4,
+    "distinct_object_pairs": 1172,
+    "lectures": 6,
+    "exact_source_spans": 35,
+    "nonexact_source_spans": 14
+  },
+  "finalizer": {
+    "path": "scripts/finalize_ko_locked_reuse_benchmark.py",
+    "sha256": "3289f652ad096df93ff2245b6295a8598c206b565bf0eb6916f5afd80add8a4d",
+    "version": "ko_locked_reuse_benchmark_finalizer_v0.1"
+  }
+}
