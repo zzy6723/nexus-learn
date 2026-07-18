@@ -41,7 +41,7 @@ Connection Discovery is the central AI capability of the project.
 | 002A | Classify typed Relations for supplied Oracle-KO pairs | Completed |
 | 002B-1 | Measure predicted-KO error propagation on supplied gold pair candidates | Completed |
 | 002B-2 | Generate Relation candidate pairs from predicted KOs | Completed with partial feasibility |
-| 002C | Resolve lecture-local KO mentions into canonical objects | Pending |
+| 002C | Resolve lecture-local KO mentions into canonical objects | Benchmark frozen; baseline pending |
 | 003 | Discover and rank learner-relevant Connections | Not started |
 | 004 | Generate learner-facing evidence-supported explanations | Not started |
 
@@ -53,3 +53,7 @@ v0.1 remains the current lecture-local safety fallback.
 The alignment used in Experiment 002B-1 is an evaluation scaffold against an
 Oracle inventory. It is not the product canonicalization layer planned for
 Experiment 002C.
+
+Experiment 002C-1 now has a frozen cluster-level development benchmark over 39
+predicted KO mentions. Its next gate is deterministic exact-name
+canonicalization without API calls.

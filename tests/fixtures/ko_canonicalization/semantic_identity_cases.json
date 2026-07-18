@@ -1,0 +1,95 @@
+{
+  "artifact_type": "ko_canonicalization_semantic_fixture",
+  "version": "v0.1",
+  "description": "Synthetic identity cases for alias, same-name ambiguity, and cross-type separation tests.",
+  "mentions": [
+    {
+      "mention_id": "ko_mention_dev_001",
+      "lecture_id": "root_finding_fixture_001",
+      "name": "Newton's Method",
+      "type": "Method",
+      "context": "Newton's Method updates an estimate using the derivative."
+    },
+    {
+      "mention_id": "ko_mention_dev_002",
+      "lecture_id": "statistics_fixture_001",
+      "name": "Newton Method",
+      "type": "Method",
+      "context": "Newton Method can solve the likelihood score equation."
+    },
+    {
+      "mention_id": "ko_mention_dev_003",
+      "lecture_id": "root_finding_fixture_001",
+      "name": "Newton Update Formula",
+      "type": "Formula",
+      "context": "x_(k+1) = x_k - f(x_k) / f'(x_k)."
+    },
+    {
+      "mention_id": "ko_mention_dev_004",
+      "lecture_id": "graph_fixture_001",
+      "name": "Degree",
+      "type": "Concept",
+      "context": "The degree of a vertex counts its incident edges."
+    },
+    {
+      "mention_id": "ko_mention_dev_005",
+      "lecture_id": "polynomial_fixture_001",
+      "name": "Degree",
+      "type": "Concept",
+      "context": "The degree of a polynomial is its largest nonzero exponent."
+    },
+    {
+      "mention_id": "ko_mention_dev_006",
+      "lecture_id": "statistics_fixture_001",
+      "name": "Maximum Likelihood Estimation",
+      "type": "Method",
+      "context": "Maximum Likelihood Estimation chooses parameters that maximize likelihood."
+    },
+    {
+      "mention_id": "ko_mention_dev_007",
+      "lecture_id": "machine_learning_fixture_001",
+      "name": "MLE",
+      "type": "Method",
+      "context": "MLE estimates model parameters by maximizing the likelihood."
+    }
+  ],
+  "gold_clusters": [
+    {
+      "canonical_id": "canonical_ko_dev_001",
+      "mention_ids": [
+        "ko_mention_dev_001",
+        "ko_mention_dev_002"
+      ],
+      "case": "alias_same_object"
+    },
+    {
+      "canonical_id": "canonical_ko_dev_002",
+      "mention_ids": [
+        "ko_mention_dev_003"
+      ],
+      "case": "cross_type_distinct"
+    },
+    {
+      "canonical_id": "canonical_ko_dev_003",
+      "mention_ids": [
+        "ko_mention_dev_004"
+      ],
+      "case": "same_name_distinct"
+    },
+    {
+      "canonical_id": "canonical_ko_dev_004",
+      "mention_ids": [
+        "ko_mention_dev_005"
+      ],
+      "case": "same_name_distinct"
+    },
+    {
+      "canonical_id": "canonical_ko_dev_005",
+      "mention_ids": [
+        "ko_mention_dev_006",
+        "ko_mention_dev_007"
+      ],
+      "case": "abbreviation_same_object"
+    }
+  ]
+}

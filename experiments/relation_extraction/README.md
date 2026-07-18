@@ -17,10 +17,11 @@ Experiment status:
 - Experiment 002B-1, controlled predicted-KO pipeline coupling: completed;
 - Experiment 002B-2, Candidate Pair Generation under predicted KOs: completed
   with a failed Rule-Filtered recall gate and All-Pairs safety fallback;
-- Experiment 002C, KO Resolution / Canonicalization: pending.
+- Experiment 002C-1, controlled KO Resolution / Canonicalization: benchmark
+  frozen; deterministic baseline pending.
 
-The next implementation focus is Experiment 002C. The completed 002B-2 records
-are in:
+The next implementation focus is the Experiment 002C-1 deterministic baseline.
+The completed 002B-2 records are in:
 
 - `experiments/relation_extraction/002b_candidate_discovery/README.md`;
 - `experiments/relation_extraction/002b_candidate_discovery/conclusion.md`;

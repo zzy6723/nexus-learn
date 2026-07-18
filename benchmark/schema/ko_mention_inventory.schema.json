@@ -1,0 +1,250 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ko_mention_inventory.schema.json",
+  "title": "Knowledge Object Mention Inventory",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_type",
+    "version",
+    "benchmark_split",
+    "source_data_role",
+    "mention_order",
+    "source_inventory",
+    "lecture_inventory",
+    "counts",
+    "mentions"
+  ],
+  "properties": {
+    "artifact_type": {
+      "const": "ko_mention_inventory"
+    },
+    "version": {
+      "const": "v0.1"
+    },
+    "benchmark_split": {
+      "enum": [
+        "development",
+        "holdout"
+      ]
+    },
+    "source_data_role": {
+      "enum": [
+        "development_reuse",
+        "fresh_holdout"
+      ]
+    },
+    "mention_order": {
+      "const": "ascending_lecture_then_predicted_ko_id"
+    },
+    "source_inventory": {
+      "$ref": "#/$defs/source_inventory_binding"
+    },
+    "lecture_inventory": {
+      "$ref": "#/$defs/artifact_binding"
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "lectures",
+        "mentions",
+        "source_spans",
+        "exact_source_spans",
+        "nonexact_source_spans",
+        "types"
+      ],
+      "properties": {
+        "lectures": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "mentions": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "source_spans": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "exact_source_spans": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "nonexact_source_spans": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "types": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "Concept",
+            "Method",
+            "Formula"
+          ],
+          "properties": {
+            "Concept": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "Method": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "Formula": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        }
+      }
+    },
+    "mentions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/mention"
+      }
+    }
+  },
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "artifact_binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    },
+    "source_inventory_binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256",
+        "normalized_content_sha256",
+        "source_declared_split",
+        "structural_normalization_version"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "normalized_content_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "source_declared_split": {
+          "type": "string",
+          "minLength": 1
+        },
+        "structural_normalization_version": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_prediction_id",
+        "source_file",
+        "source_object_index"
+      ],
+      "properties": {
+        "source_prediction_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_file": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_object_index": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "mention": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mention_id",
+        "source_inventory_index",
+        "lecture_id",
+        "predicted_ko_id",
+        "name",
+        "type",
+        "source_spans",
+        "source_span_exact_flags",
+        "provenance"
+      ],
+      "properties": {
+        "mention_id": {
+          "type": "string",
+          "pattern": "^ko_mention_(dev|holdout)_[0-9]{3}$"
+        },
+        "source_inventory_index": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "lecture_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "predicted_ko_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "enum": [
+            "Concept",
+            "Method",
+            "Formula"
+          ]
+        },
+        "source_spans": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "source_span_exact_flags": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "boolean"
+          }
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
+        }
+      }
+    }
+  }
+}

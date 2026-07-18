@@ -1,0 +1,53 @@
+{
+  "artifact_type": "ko_canonicalization_ground_truth_complete",
+  "version": "v0.1",
+  "status": "final",
+  "ground_truth": {
+    "path": "benchmark/ground_truth/ko_canonicalization_development_v0_1.json",
+    "sha256": "2f94edf3f417c436ffef1f8eadb532bda8741ec0f51ba2d0d5f5711384d84905"
+  },
+  "mention_inventory": {
+    "path": "benchmark/ko_mentions/development_v0_1/mention_inventory.json",
+    "sha256": "50fbcae61235346805d37ddaf9715965209ae64aed46789d302cd49015b1615f"
+  },
+  "annotation_guidelines": {
+    "path": "benchmark/ko_canonicalization_annotation_guidelines.md",
+    "sha256": "ae88452fbe9ae7bb8ab41c79776d6277105a2f15242d46f43a6495a9ea5b1493"
+  },
+  "evaluation_protocol": {
+    "path": "benchmark/ko_canonicalization_protocol.md",
+    "sha256": "adcca6ce6962500da7427a7b247d76abddb0dd32fb3ef12e2ac9023597ad3b55"
+  },
+  "schema_bindings": {
+    "mention_inventory": {
+      "path": "benchmark/schema/ko_mention_inventory.schema.json",
+      "sha256": "a30b05a5c4857fa14cfd9e9966082c632da300491cbc21c333f49b974a7ffb5d"
+    },
+    "ground_truth": {
+      "path": "benchmark/schema/ko_canonicalization_ground_truth.schema.json",
+      "sha256": "4958a8b0078bd5e2dfeb095140a135568d57679e4f7d4c4e7775622606dbff46"
+    }
+  },
+  "checker": {
+    "path": "scripts/check_ko_canonicalization_ground_truth.py",
+    "sha256": "97af76fef9e95fef2ff6dbfb24f89fa091fd20a2b3e5b4a35d296573c8ebb4fd",
+    "version": "ko_canonicalization_ground_truth_checker_v0.1"
+  },
+  "counts": {
+    "multi_mention_clusters": 1,
+    "types": {
+      "Concept": 19,
+      "Method": 9,
+      "Formula": 10
+    },
+    "mentions": 39,
+    "cross_lecture_distinct_object_pairs": 564,
+    "distinct_object_pairs": 740,
+    "same_object_pairs": 1,
+    "singleton_clusters": 37,
+    "canonical_clusters": 38,
+    "all_mention_pairs": 741,
+    "cross_lecture_pairs": 565,
+    "cross_lecture_same_object_pairs": 1
+  }
+}

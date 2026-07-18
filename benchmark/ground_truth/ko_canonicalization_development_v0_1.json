@@ -1,0 +1,503 @@
+{
+  "artifact_type": "ko_canonicalization_ground_truth",
+  "version": "v0.1",
+  "benchmark_split": "development",
+  "status": "frozen",
+  "mention_inventory": {
+    "path": "benchmark/ko_mentions/development_v0_1/mention_inventory.json",
+    "sha256": "50fbcae61235346805d37ddaf9715965209ae64aed46789d302cd49015b1615f"
+  },
+  "annotation_guidelines": {
+    "path": "benchmark/ko_canonicalization_annotation_guidelines.md",
+    "version": "ko_canonicalization_annotation_v0.1",
+    "sha256": "ae88452fbe9ae7bb8ab41c79776d6277105a2f15242d46f43a6495a9ea5b1493"
+  },
+  "evaluation_protocol": {
+    "path": "benchmark/ko_canonicalization_protocol.md",
+    "version": "ko_canonicalization_protocol_v0.1",
+    "sha256": "adcca6ce6962500da7427a7b247d76abddb0dd32fb3ef12e2ac9023597ad3b55"
+  },
+  "schema_bindings": {
+    "mention_inventory": {
+      "path": "benchmark/schema/ko_mention_inventory.schema.json",
+      "version": "v0.1",
+      "sha256": "a30b05a5c4857fa14cfd9e9966082c632da300491cbc21c333f49b974a7ffb5d"
+    },
+    "ground_truth": {
+      "path": "benchmark/schema/ko_canonicalization_ground_truth.schema.json",
+      "version": "v0.1",
+      "sha256": "4958a8b0078bd5e2dfeb095140a135568d57679e4f7d4c4e7775622606dbff46"
+    }
+  },
+  "identity_policy": {
+    "cluster_annotation": "authoritative",
+    "canonical_id_scheme": "opaque_sequential_in_first_mention_order",
+    "cross_type_merge": "forbidden",
+    "singleton_records": "required",
+    "provenance_retention": "through_complete_mention_membership"
+  },
+  "allowed_types": [
+    "Concept",
+    "Method",
+    "Formula"
+  ],
+  "clusters": [
+    {
+      "canonical_id": "canonical_ko_dev_001",
+      "canonical_name": "Discretization Error",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_001"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Concept at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_002",
+      "canonical_name": "Euler Predictor",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_002"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Concept at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_003",
+      "canonical_name": "First-Order Equation",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_003"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Concept at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_004",
+      "canonical_name": "Forward Euler Method",
+      "canonical_type": "Method",
+      "mention_ids": [
+        "ko_mention_dev_004"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Method at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_005",
+      "canonical_name": "Forward Euler Update",
+      "canonical_type": "Formula",
+      "mention_ids": [
+        "ko_mention_dev_005"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Formula at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_006",
+      "canonical_name": "Heun's Method",
+      "canonical_type": "Method",
+      "mention_ids": [
+        "ko_mention_dev_006"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Method at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_007",
+      "canonical_name": "Heun's Update",
+      "canonical_type": "Formula",
+      "mention_ids": [
+        "ko_mention_dev_007"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Formula at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_008",
+      "canonical_name": "Initial Value Problem",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_008"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Concept at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_009",
+      "canonical_name": "Ordinary Differential Equation",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_009"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Concept at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_010",
+      "canonical_name": "Step Size",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_010"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Concept at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_011",
+      "canonical_name": "Vector Field",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_011"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Concept at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_012",
+      "canonical_name": "A* Search",
+      "canonical_type": "Method",
+      "mention_ids": [
+        "ko_mention_dev_012"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Method at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_013",
+      "canonical_name": "Dijkstra's Algorithm",
+      "canonical_type": "Method",
+      "mention_ids": [
+        "ko_mention_dev_013"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Method at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_014",
+      "canonical_name": "Edge Relaxation",
+      "canonical_type": "Method",
+      "mention_ids": [
+        "ko_mention_dev_014"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Method at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_015",
+      "canonical_name": "Heuristic Function",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_015"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Concept at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_016",
+      "canonical_name": "Path",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_016"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Concept at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_017",
+      "canonical_name": "Path Cost",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_017"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Concept at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_018",
+      "canonical_name": "Path Cost Formula",
+      "canonical_type": "Formula",
+      "mention_ids": [
+        "ko_mention_dev_018"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Formula at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_019",
+      "canonical_name": "Relaxation Update",
+      "canonical_type": "Formula",
+      "mention_ids": [
+        "ko_mention_dev_019"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Formula at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_020",
+      "canonical_name": "Single-Source Shortest-Path Problem",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_020"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Concept at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_021",
+      "canonical_name": "Weighted Directed Graph",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_021"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Concept at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_022",
+      "canonical_name": "Bisection method",
+      "canonical_type": "Method",
+      "mention_ids": [
+        "ko_mention_dev_022"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Method at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_023",
+      "canonical_name": "Damped Newton method",
+      "canonical_type": "Method",
+      "mention_ids": [
+        "ko_mention_dev_023"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Method at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_024",
+      "canonical_name": "Midpoint formula",
+      "canonical_type": "Formula",
+      "mention_ids": [
+        "ko_mention_dev_024"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Formula at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_025",
+      "canonical_name": "Newton update formula",
+      "canonical_type": "Formula",
+      "mention_ids": [
+        "ko_mention_dev_025"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Formula at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_026",
+      "canonical_name": "Newton's method",
+      "canonical_type": "Method",
+      "mention_ids": [
+        "ko_mention_dev_026",
+        "ko_mention_dev_035"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "Both mentions denote Newton's Method as the same iterative Method: the numerical root-finding lecture defines its root update, while the statistics lecture applies that Method to solve the likelihood score equation.",
+      "notes": "The capitalization difference does not change identity."
+    },
+    {
+      "canonical_id": "canonical_ko_dev_027",
+      "canonical_name": "Root-finding problem",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_027"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Concept at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_028",
+      "canonical_name": "Sign-changing bracket",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_028"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Concept at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_029",
+      "canonical_name": "Likelihood",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_029"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Concept at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_030",
+      "canonical_name": "Likelihood Function",
+      "canonical_type": "Formula",
+      "mention_ids": [
+        "ko_mention_dev_030"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Formula at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_031",
+      "canonical_name": "Log-Likelihood",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_031"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Concept at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_032",
+      "canonical_name": "Log-Likelihood Function",
+      "canonical_type": "Formula",
+      "mention_ids": [
+        "ko_mention_dev_032"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Formula at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_033",
+      "canonical_name": "Maximum Likelihood Estimation",
+      "canonical_type": "Method",
+      "mention_ids": [
+        "ko_mention_dev_033"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Method at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_034",
+      "canonical_name": "MLE Estimator",
+      "canonical_type": "Formula",
+      "mention_ids": [
+        "ko_mention_dev_034"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Formula at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_035",
+      "canonical_name": "Score Equation",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_036"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Concept at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_036",
+      "canonical_name": "Score Function",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_037"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Concept at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_037",
+      "canonical_name": "Score Function Formula",
+      "canonical_type": "Formula",
+      "mention_ids": [
+        "ko_mention_dev_038"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Formula at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_038",
+      "canonical_name": "Statistical Model",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_039"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Concept at the same educational granularity.",
+      "notes": ""
+    }
+  ]
+}

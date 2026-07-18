@@ -71,7 +71,7 @@ Technical Validation currently has the following experiment status:
 | 002A | Oracle-KO Typed Relation Extraction | Completed |
 | 002B-1 | Controlled predicted-KO pipeline coupling | Completed |
 | 002B-2 | Candidate Pair Generation under predicted KOs | Completed with partial feasibility |
-| 002C | Knowledge Object Resolution / Canonicalization | Pending |
+| 002C | Knowledge Object Resolution / Canonicalization | Benchmark frozen; baseline pending |
 | 003 | Learner-relevant Connection Discovery | Not started |
 | 004 | Learner-facing Connection Explanation | Not started |
 
@@ -80,9 +80,10 @@ All-Pairs candidate generation because the deterministic Rule-Filtered v0.1
 method reduced workload but failed its frozen positive-recall gate. This is a
 Technical Validation fallback, not a scalable production design.
 
-The next engineering focus is Experiment 002C, which will resolve
-lecture-local Knowledge Object mentions into provenance-preserving canonical
-objects. Learner-facing Connection discovery and ranking remain Experiment 003.
+Experiment 002C-1 now has a frozen 39-mention cluster-level development
+benchmark and strict completion checks. The next engineering gate is a
+deterministic exact-normalized-name baseline; learner-facing Connection
+discovery and ranking remain Experiment 003.
 
 The user interface is intentionally postponed until the core AI pipeline has been validated.
 

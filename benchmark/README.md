@@ -21,9 +21,17 @@ benchmark/
 ├── candidate_pair_generation_protocol.md
 ├── candidate_pair_generation_success_criteria_v0_1.json
 ├── candidate_pair_annotation_guidelines.md
+├── ko_canonicalization_protocol.md
+├── ko_canonicalization_annotation_guidelines.md
 ├── schema/
 │   ├── candidate_pair_universe.schema.json
-│   └── candidate_pair_ground_truth.schema.json
+│   ├── candidate_pair_ground_truth.schema.json
+│   ├── ko_mention_inventory.schema.json
+│   └── ko_canonicalization_ground_truth.schema.json
+├── ko_mentions/
+│   └── development_v0_1/
+│       ├── mention_inventory.json
+│       └── mention_inventory_complete.json
 ├── candidate_pairs/
 │   └── development_v0_1/
 │       ├── pair_universe.json
@@ -49,7 +57,9 @@ benchmark/
 │   ├── relations_development_v0_1.json
 │   ├── relations_holdout_v0_1.json
 │   ├── candidate_pairs_development_v0_1.json
-│   └── candidate_pairs_development_v0_1_complete.json
+│   ├── candidate_pairs_development_v0_1_complete.json
+│   ├── ko_canonicalization_development_v0_1.json
+│   └── ko_canonicalization_development_v0_1_complete.json
 └── results/
 ```
 
@@ -199,7 +209,38 @@ as `NO_RELATION`, and candidate precision, reduction, or all-pairs edge recall
 must not be calculated from that selected benchmark. Experiment 002B-2 requires
 a separately versioned complete pair universe. That development universe and
 its exhaustive semantic annotation are now complete and frozen. Candidate
-Generator implementation and evaluation are the next gates.
+Generator implementation and evaluation were completed in Experiment 002B-2;
+All-Pairs v0.1 remains the lecture-local recall-preserving fallback because
+Rule-Filtered v0.1 failed its frozen positive-recall gate.
+
+---
+
+# Knowledge Object Canonicalization Benchmark
+
+Experiment 002C-1 treats lecture-local predicted KOs as mentions and evaluates
+their assignment to provenance-preserving canonical identity clusters.
+
+The controlled development-reuse benchmark contains:
+
+- four previously inspected lectures;
+- 39 predicted KO mentions;
+- 38 canonical clusters;
+- 37 explicit singleton clusters;
+- one cross-lecture two-mention cluster for Newton's Method.
+
+The mention inventory and cluster Ground Truth are deterministic and
+hash-bound through separate completion markers. Pairwise identity labels are
+derived from cluster membership rather than manually annotated. Because the
+benchmark contains only one positive identity pair, pairwise accuracy is not a
+primary metric and no general alias-resolution claim is permitted.
+
+Validation is implemented in:
+
+- `scripts/create_ko_mention_inventory.py`;
+- `scripts/create_ko_canonicalization_ground_truth.py`;
+- `scripts/check_ko_canonicalization_ground_truth.py`;
+- `tests/test_ko_canonicalization_ground_truth.py`;
+- `tests/fixtures/ko_canonicalization/`.
 
 ---
 
