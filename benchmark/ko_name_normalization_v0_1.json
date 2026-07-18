@@ -1,0 +1,52 @@
+{
+  "artifact_type": "ko_name_normalization_config",
+  "version": "v0.1",
+  "protocol_version": "ko_name_normalization_protocol_v0.1",
+  "unicode_form": "NFKC",
+  "ordered_operations": [
+    "unicode_normalization",
+    "apostrophe_normalization",
+    "dash_normalization",
+    "trim_whitespace",
+    "balanced_outer_wrapper_removal",
+    "collapse_whitespace",
+    "casefold"
+  ],
+  "outer_wrappers": [
+    {
+      "name": "markdown_bold",
+      "open": "**",
+      "close": "**"
+    },
+    {
+      "name": "markdown_inline_code",
+      "open": "`",
+      "close": "`"
+    },
+    {
+      "name": "latex_inline_dollar",
+      "open": "$",
+      "close": "$"
+    },
+    {
+      "name": "latex_inline_parenthesis",
+      "open": "\\(",
+      "close": "\\)"
+    },
+    {
+      "name": "latex_display_bracket",
+      "open": "\\[",
+      "close": "\\]"
+    }
+  ],
+  "prohibited_operations": [
+    "stemming",
+    "lemmatization",
+    "singular_plural_folding",
+    "abbreviation_expansion",
+    "semantic_token_deletion",
+    "fuzzy_string_matching",
+    "ground_truth_derived_aliases",
+    "mention_specific_rules"
+  ]
+}

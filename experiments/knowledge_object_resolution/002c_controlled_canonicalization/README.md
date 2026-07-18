@@ -1,6 +1,6 @@
-# Experiment 002C-1: Controlled KO Canonicalization
+# Experiment 002C-0: Benchmark And Evaluation Preparation
 
-**Status:** Benchmark frozen; deterministic baseline pending
+**Status:** Completed
 **Stage:** Technical Validation
 **Predecessor:** Experiment 002B completed with partial feasibility
 
@@ -23,7 +23,7 @@ The source artifact still declares `split = holdout` because it originated in
 the 002A Relation holdout. It has already been inspected repeatedly and is
 therefore assigned the explicit 002C role `development_reuse`.
 
-## Controlled Baselines
+## Downstream Baseline Boundary
 
 The planned deterministic sequence is:
 
@@ -80,7 +80,7 @@ python3 scripts/check_ko_canonicalization_ground_truth.py
 python3 -m unittest tests.test_ko_canonicalization_ground_truth -v
 ```
 
-## Initial Gates
+## Completion Gates
 
 1. Generate a deterministic mention inventory from frozen predicted-KO
    artifacts.
@@ -89,10 +89,8 @@ python3 -m unittest tests.test_ko_canonicalization_ground_truth -v
 4. Annotate every mention into exactly one canonical cluster.
 5. Include every singleton as a canonical record.
 6. Validate Ground Truth with a strict checker and completion marker.
-7. Implement and evaluate the exact-name baseline without API calls. Pending.
-
-Gates 1-6 are complete. Gate 7 must run only after the benchmark and checker
-milestone is frozen in repository history.
+All six preparation gates are complete. Deterministic method implementation and
+evaluation continue in `../002c_1_deterministic_canonicalization/`.
 
 ## Out Of Scope
 

@@ -23,6 +23,10 @@ benchmark/
 ├── candidate_pair_annotation_guidelines.md
 ├── ko_canonicalization_protocol.md
 ├── ko_canonicalization_annotation_guidelines.md
+├── ko_name_normalization_protocol.md
+├── ko_name_normalization_v0_1.json
+├── ko_aliases_v0_1.json
+├── ko_canonicalization_success_criteria_v0_1.json
 ├── schema/
 │   ├── candidate_pair_universe.schema.json
 │   ├── candidate_pair_ground_truth.schema.json
@@ -239,8 +243,18 @@ Validation is implemented in:
 - `scripts/create_ko_mention_inventory.py`;
 - `scripts/create_ko_canonicalization_ground_truth.py`;
 - `scripts/check_ko_canonicalization_ground_truth.py`;
+- `scripts/run_deterministic_ko_canonicalization.py`;
+- `scripts/evaluate_ko_canonicalization.py`;
 - `tests/test_ko_canonicalization_ground_truth.py`;
+- `tests/test_exact_name_canonicalizer.py`;
+- `tests/test_ko_canonicalization_evaluator.py`;
 - `tests/fixtures/ko_canonicalization/`.
+
+002C-1 compares a conservative Exact Normalized Name + Same Type method with a
+separate Frozen Alias Map + Same Type method. Both implementations are API-free
+and Ground Truth blind. Synthetic validation deliberately preserves a
+same-name homonym false merge, establishing why a context-aware challenge is a
+separate experiment rather than a hidden deterministic special case.
 
 ---
 

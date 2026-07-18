@@ -1,0 +1,51 @@
+{
+  "artifact_type": "ko_alias_equivalence_resource",
+  "version": "v0.1",
+  "status": "frozen_pre_evaluation",
+  "scope": "conservative_named_method_and_concept_aliases",
+  "ground_truth_independent": true,
+  "entries": [
+    {
+      "type": "Method",
+      "canonical_name": "Newton's Method",
+      "aliases": [
+        "Newton Method",
+        "Newton-Raphson Method"
+      ],
+      "source_note": "Conventional mathematical method names declared before deterministic evaluation."
+    },
+    {
+      "type": "Method",
+      "canonical_name": "Maximum Likelihood Estimation",
+      "aliases": [
+        "MLE"
+      ],
+      "source_note": "Standard abbreviation declared before deterministic evaluation."
+    },
+    {
+      "type": "Concept",
+      "canonical_name": "Ordinary Differential Equation",
+      "aliases": [
+        "ODE"
+      ],
+      "source_note": "Standard abbreviation declared before deterministic evaluation."
+    },
+    {
+      "type": "Method",
+      "canonical_name": "A* Search",
+      "aliases": [
+        "A-Star Search",
+        "A Star Search"
+      ],
+      "source_note": "Orthographic variants declared before deterministic evaluation."
+    },
+    {
+      "type": "Method",
+      "canonical_name": "Dijkstra's Algorithm",
+      "aliases": [
+        "Dijkstra Algorithm"
+      ],
+      "source_note": "Possessive-name variant declared before deterministic evaluation."
+    }
+  ]
+}

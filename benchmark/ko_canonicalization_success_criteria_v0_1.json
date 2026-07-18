@@ -1,0 +1,26 @@
+{
+  "artifact_type": "ko_canonicalization_success_criteria",
+  "version": "v0.1",
+  "scope": "002C-1 development_reuse",
+  "integrity_gates": {
+    "evaluation_status": "final",
+    "mention_coverage": 1.0,
+    "duplicate_assignments": 0,
+    "orphan_mentions": 0,
+    "cross_type_clusters": 0,
+    "lost_provenance_mentions": 0
+  },
+  "quality_gates": {
+    "same_object_pairwise_precision_min": 1.0,
+    "same_object_pairwise_recall_min": 1.0,
+    "b_cubed_f1_min": 1.0,
+    "exact_gold_cluster_match_rate_min": 1.0
+  },
+  "selection_priority": [
+    "avoid_false_merge",
+    "preserve_provenance",
+    "recover_same_object_pairs",
+    "prefer_simpler_method_when_metrics_tie"
+  ],
+  "interpretation_limit": "Passing applies only to identities represented in the current 39-mention development-reuse benchmark."
+}

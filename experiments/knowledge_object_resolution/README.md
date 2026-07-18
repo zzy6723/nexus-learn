@@ -10,10 +10,11 @@ Knowledge Object Resolution is separate from Relation Extraction:
 
 ## Current Stage
 
-Experiment 002C-1 has frozen its controlled canonicalization benchmark and
+Experiment 002C-0 has frozen its controlled canonicalization benchmark and
 strict artifact checks. The first benchmark reuses the inspected four-lecture,
 39-mention inventory from Experiment 002B as development data. It is not unseen
-evidence.
+evidence. Experiment 002C-1 has completed method implementation and synthetic
+validation; clean-state formal development runs are pending.
 
 ```text
 predicted lecture-local KO mentions
@@ -22,11 +23,15 @@ predicted lecture-local KO mentions
 -> provenance-preserving mention membership
 ```
 
-The active experiment is documented in
-`002c_controlled_canonicalization/README.md`.
+The completed preparation milestone is documented in
+`002c_controlled_canonicalization/README.md`. The formal validation sequence is:
 
-The next gate is the exact-normalized-name deterministic baseline. No API-based
-resolver is authorized at this stage.
+- `002c_1_deterministic_canonicalization/`;
+- `002c_2_context_aware_resolution/`;
+- `002c_3_pipeline_validation/`.
+
+The next gate is the paired formal evaluation of Exact and Alias-Aware
+deterministic baselines. No API-based resolver is authorized at this stage.
 
 ## Programme Boundary
 
