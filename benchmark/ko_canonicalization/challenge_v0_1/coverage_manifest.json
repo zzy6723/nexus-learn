@@ -1,0 +1,53 @@
+{
+  "artifact_type": "ko_resolution_challenge_coverage",
+  "version": "v0.1",
+  "multi_mention_cases": [
+    {
+      "case": "descriptive_alias",
+      "canonical_id": "canonical_ko_dev_001"
+    },
+    {
+      "case": "qualified_name_alias",
+      "canonical_id": "canonical_ko_dev_003"
+    },
+    {
+      "case": "abbreviation_and_orthography_three_mentions",
+      "canonical_id": "canonical_ko_dev_004"
+    },
+    {
+      "case": "method_alias",
+      "canonical_id": "canonical_ko_dev_007"
+    },
+    {
+      "case": "abbreviation",
+      "canonical_id": "canonical_ko_dev_008"
+    },
+    {
+      "case": "symbol_and_natural_language_formula",
+      "canonical_id": "canonical_ko_dev_009"
+    }
+  ],
+  "hard_negative_cases": [
+    {
+      "case": "same_name_same_type_different_referent",
+      "mention_ids": [
+        "ko_mention_dev_005",
+        "ko_mention_dev_017"
+      ]
+    },
+    {
+      "case": "concept_vs_formula_related_but_distinct",
+      "mention_ids": [
+        "ko_mention_dev_001",
+        "ko_mention_dev_002"
+      ]
+    },
+    {
+      "case": "method_vs_formula_related_but_distinct",
+      "mention_ids": [
+        "ko_mention_dev_012",
+        "ko_mention_dev_013"
+      ]
+    }
+  ]
+}

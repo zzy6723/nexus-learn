@@ -1,0 +1,18 @@
+{
+  "lecture_id": "calculus_gradient_challenge_001",
+  "split": "development",
+  "knowledge_objects": [
+    {
+      "id": "gradient",
+      "name": "Gradient",
+      "type": "Concept",
+      "source_span": "The gradient of a differentiable scalar function is the vector of its partial derivatives."
+    },
+    {
+      "id": "gradient_coordinate_formula",
+      "name": "Gradient Coordinate Formula",
+      "type": "Formula",
+      "source_span": "\\nabla f(x) = \\left(\\frac{\\partial f}{\\partial x_1},\\ldots,\\frac{\\partial f}{\\partial x_d}\\right)"
+    }
+  ]
+}

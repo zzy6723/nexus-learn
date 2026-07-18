@@ -1,0 +1,24 @@
+{
+  "lecture_id": "statistics_mle_challenge_001",
+  "split": "development",
+  "knowledge_objects": [
+    {
+      "id": "maximum_likelihood_estimation",
+      "name": "Maximum Likelihood Estimation",
+      "type": "Method",
+      "source_span": "Maximum Likelihood Estimation selects parameter values that maximize the likelihood."
+    },
+    {
+      "id": "likelihood",
+      "name": "Likelihood",
+      "type": "Concept",
+      "source_span": "The likelihood compares parameter values after the observed data are held fixed."
+    },
+    {
+      "id": "mle_estimator",
+      "name": "MLE Estimator",
+      "type": "Formula",
+      "source_span": "\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta} L(\\theta;x)"
+    }
+  ]
+}

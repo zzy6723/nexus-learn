@@ -1,0 +1,31 @@
+{
+  "artifact_type": "ko_context_resolution_success_criteria",
+  "version": "v0.1",
+  "candidate_gates": {
+    "gold_same_object_pair_recall_min": 1.0,
+    "required_homonym_candidate": [
+      "ko_mention_dev_005",
+      "ko_mention_dev_017"
+    ]
+  },
+  "resolver_gates": {
+    "same_object_precision_min": 1.0,
+    "same_object_recall_min": 0.9,
+    "unresolved_rate_max": 0.1,
+    "inconsistent_component_count_max": 0,
+    "homonym_decision": "DISTINCT_OBJECT"
+  },
+  "cluster_gates": {
+    "b_cubed_f1_min": 0.98,
+    "mention_coverage": 1.0,
+    "lost_provenance_mentions": 0,
+    "cross_type_clusters": 0
+  },
+  "selection_priority": [
+    "zero_false_merges",
+    "zero_inconsistent_components",
+    "complete_provenance",
+    "higher_same_object_recall",
+    "lower_unresolved_rate"
+  ]
+}

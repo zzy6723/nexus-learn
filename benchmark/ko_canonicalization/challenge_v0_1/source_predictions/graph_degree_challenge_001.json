@@ -1,0 +1,18 @@
+{
+  "lecture_id": "graph_degree_challenge_001",
+  "split": "development",
+  "knowledge_objects": [
+    {
+      "id": "degree",
+      "name": "Degree",
+      "type": "Concept",
+      "source_span": "The degree of a vertex is the number of edges incident to that vertex in an undirected graph."
+    },
+    {
+      "id": "vertex",
+      "name": "Vertex",
+      "type": "Concept",
+      "source_span": "A vertex is an element of the graph's vertex set."
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Experiment 002C-3: End-to-End Canonicalization And Locked Reuse
 
-**Status:** Pending selected-method freeze
+**Status:** Locked-reuse source predeclared; pending selected-method freeze
 
 ## Question
 
@@ -21,6 +21,19 @@ lecture artifacts
 Previously inspected data must be labelled `locked_reuse`, not unseen holdout.
 A true holdout requires new lectures that did not influence normalization,
 aliases, candidate rules, context resolution, or success criteria.
+
+## Predeclared Source
+
+The 002C-3 source is the final Entity output bundle from the previously
+inspected 002B-1 development `run_03`. Its artifact bindings are frozen in:
+
+```text
+benchmark/ko_canonicalization/locked_reuse_v0_1/source_manifest.json
+```
+
+The source was selected before any 002C-2 context-resolver execution. This
+prevents resolver behavior from influencing which downstream bundle is reused.
+It does not make the data unseen.
 
 ## Required Audits
 

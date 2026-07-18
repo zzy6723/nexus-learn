@@ -1,0 +1,24 @@
+{
+  "lecture_id": "ode_theory_challenge_001",
+  "split": "development",
+  "knowledge_objects": [
+    {
+      "id": "ordinary_differential_equation",
+      "name": "Ordinary Differential Equation",
+      "type": "Concept",
+      "source_span": "An ordinary differential equation relates an unknown function of one variable to its derivatives."
+    },
+    {
+      "id": "forward_euler_method",
+      "name": "Forward Euler Method",
+      "type": "Method",
+      "source_span": "The Forward Euler Method advances an approximate solution using the current slope."
+    },
+    {
+      "id": "forward_euler_update",
+      "name": "Forward Euler Update",
+      "type": "Formula",
+      "source_span": "y_{n+1}=y_n+h f(t_n,y_n)"
+    }
+  ]
+}

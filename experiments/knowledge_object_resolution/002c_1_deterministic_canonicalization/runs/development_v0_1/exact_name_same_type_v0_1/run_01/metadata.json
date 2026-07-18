@@ -1,0 +1,48 @@
+{
+  "artifact_type": "ko_canonicalization_run_metadata",
+  "version": "v0.1",
+  "run_id": "run_01",
+  "run_status": "completed",
+  "method_id": "exact_name_same_type_v0_1",
+  "method_commit": "645e3cfa415f1f53aa1dd668ac84663c32830c7d",
+  "git_commit_at_start": "645e3cfa415f1f53aa1dd668ac84663c32830c7d",
+  "git_dirty_at_start": false,
+  "mention_inventory": {
+    "path": "benchmark/ko_mentions/development_v0_1/mention_inventory.json",
+    "sha256": "50fbcae61235346805d37ddaf9715965209ae64aed46789d302cd49015b1615f"
+  },
+  "mention_inventory_completion_marker": {
+    "path": "benchmark/ko_mentions/development_v0_1/mention_inventory_complete.json",
+    "sha256": "52403f3f110e9fa0a6f9665b4e82d5cf0c52542e4b81fcb18fd37c1cc1c9a1ea"
+  },
+  "normalization_config": {
+    "path": "benchmark/ko_name_normalization_v0_1.json",
+    "sha256": "fad01c399f4ef3f3147f136c76579b253f563965a299c1003a91e79baadc3d9e"
+  },
+  "alias_resource": null,
+  "runner": {
+    "path": "scripts/run_deterministic_ko_canonicalization.py",
+    "sha256": "cbdb6cd0084e4e5bb5c3e44694361f6998068fb92c8697265698c6461194e44c",
+    "version": "deterministic_ko_canonicalizer_v0.1"
+  },
+  "outputs": {
+    "canonical_clusters": {
+      "path": "experiments/knowledge_object_resolution/002c_1_deterministic_canonicalization/runs/development_v0_1/exact_name_same_type_v0_1/run_01/canonical_clusters.json",
+      "sha256": "cceaf096c047e07c22656d2c9293ce37127de9087725658c1a02219eb741164f"
+    },
+    "mention_assignments": {
+      "path": "experiments/knowledge_object_resolution/002c_1_deterministic_canonicalization/runs/development_v0_1/exact_name_same_type_v0_1/run_01/mention_assignments.json",
+      "sha256": "3e5f8b439069ee419ec8d56ae05dee5955a87a441d69d5acb41748dae5971193"
+    },
+    "normalization_audit": {
+      "path": "experiments/knowledge_object_resolution/002c_1_deterministic_canonicalization/runs/development_v0_1/exact_name_same_type_v0_1/run_01/normalization_audit.json",
+      "sha256": "647c7bd99dc705fd485ecfdef99a6ca32f3bb7a1281d8369ce0255972c7f5dc0"
+    }
+  },
+  "counts": {
+    "mentions": 39,
+    "clusters": 38,
+    "singleton_clusters": 37,
+    "multi_mention_clusters": 1
+  }
+}

@@ -1,0 +1,223 @@
+{
+  "artifact_type": "ko_canonicalization_ground_truth",
+  "version": "v0.1",
+  "benchmark_split": "development",
+  "status": "frozen",
+  "mention_inventory": {
+    "path": "benchmark/ko_canonicalization/challenge_v0_1/mention_inventory.json",
+    "sha256": "438632b45ca8cbab452f1c9191e138a0a779298b91a9a315674f8efb1cc8a570"
+  },
+  "annotation_guidelines": {
+    "path": "benchmark/ko_canonicalization_annotation_guidelines.md",
+    "version": "ko_canonicalization_annotation_v0.1",
+    "sha256": "ae88452fbe9ae7bb8ab41c79776d6277105a2f15242d46f43a6495a9ea5b1493"
+  },
+  "evaluation_protocol": {
+    "path": "benchmark/ko_canonicalization_protocol.md",
+    "version": "ko_canonicalization_protocol_v0.1",
+    "sha256": "adcca6ce6962500da7427a7b247d76abddb0dd32fb3ef12e2ac9023597ad3b55"
+  },
+  "schema_bindings": {
+    "mention_inventory": {
+      "path": "benchmark/schema/ko_mention_inventory.schema.json",
+      "version": "v0.1",
+      "sha256": "a30b05a5c4857fa14cfd9e9966082c632da300491cbc21c333f49b974a7ffb5d"
+    },
+    "ground_truth": {
+      "path": "benchmark/schema/ko_canonicalization_ground_truth.schema.json",
+      "version": "v0.1",
+      "sha256": "4958a8b0078bd5e2dfeb095140a135568d57679e4f7d4c4e7775622606dbff46"
+    }
+  },
+  "identity_policy": {
+    "cluster_annotation": "authoritative",
+    "canonical_id_scheme": "opaque_sequential_in_first_mention_order",
+    "cross_type_merge": "forbidden",
+    "singleton_records": "required",
+    "provenance_retention": "through_complete_mention_membership"
+  },
+  "allowed_types": [
+    "Concept",
+    "Method",
+    "Formula"
+  ],
+  "clusters": [
+    {
+      "canonical_id": "canonical_ko_dev_001",
+      "canonical_name": "Gradient",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_001",
+        "ko_mention_dev_016"
+      ],
+      "aliases": [
+        "Gradient Vector"
+      ],
+      "annotation_status": "final",
+      "identity_rationale": "Both mentions denote the gradient of a scalar objective as the vector of partial derivatives; 'vector' is an explicit descriptive qualifier, not a different object.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_002",
+      "canonical_name": "Gradient Coordinate Formula",
+      "canonical_type": "Formula",
+      "mention_ids": [
+        "ko_mention_dev_002"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Formula at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_003",
+      "canonical_name": "Likelihood",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_003",
+        "ko_mention_dev_007",
+        "ko_mention_dev_019"
+      ],
+      "aliases": [
+        "Likelihood Function"
+      ],
+      "annotation_status": "final",
+      "identity_rationale": "All three mentions denote likelihood as a function of model parameters with observations held fixed.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_004",
+      "canonical_name": "Maximum Likelihood Estimation",
+      "canonical_type": "Method",
+      "mention_ids": [
+        "ko_mention_dev_004",
+        "ko_mention_dev_008",
+        "ko_mention_dev_020"
+      ],
+      "aliases": [
+        "MLE",
+        "Maximum-Likelihood Estimation"
+      ],
+      "annotation_status": "final",
+      "identity_rationale": "The abbreviation and hyphenated spelling denote the same parameter-estimation Method that maximizes likelihood.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_005",
+      "canonical_name": "Degree",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_005"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Concept at the same educational granularity.",
+      "notes": "This Degree is graph-theoretic vertex degree and is distinct from polynomial degree."
+    },
+    {
+      "canonical_id": "canonical_ko_dev_006",
+      "canonical_name": "Vertex",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_006"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Concept at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_007",
+      "canonical_name": "Euler's Method",
+      "canonical_type": "Method",
+      "mention_ids": [
+        "ko_mention_dev_009",
+        "ko_mention_dev_012"
+      ],
+      "aliases": [
+        "Forward Euler Method"
+      ],
+      "annotation_status": "final",
+      "identity_rationale": "Euler's Method and Forward Euler Method denote the same explicit one-step ODE integration Method in these contexts.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_008",
+      "canonical_name": "Ordinary Differential Equation",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_010",
+        "ko_mention_dev_014"
+      ],
+      "aliases": [
+        "ODE"
+      ],
+      "annotation_status": "final",
+      "identity_rationale": "ODE is the standard abbreviation for the same ordinary differential equation Concept defined in the second lecture.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_009",
+      "canonical_name": "Forward Euler Update",
+      "canonical_type": "Formula",
+      "mention_ids": [
+        "ko_mention_dev_011",
+        "ko_mention_dev_013"
+      ],
+      "aliases": [
+        "$y_{n+1}=y_n+h f(t_n,y_n)$"
+      ],
+      "annotation_status": "final",
+      "identity_rationale": "The symbolic name and the natural-language name refer to the identical Forward Euler update Formula copied in both lectures.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_010",
+      "canonical_name": "Gradient Descent",
+      "canonical_type": "Method",
+      "mention_ids": [
+        "ko_mention_dev_015"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Method at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_011",
+      "canonical_name": "Degree",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_017"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Concept at the same educational granularity.",
+      "notes": "This Degree is polynomial degree and is distinct from graph-theoretic vertex degree."
+    },
+    {
+      "canonical_id": "canonical_ko_dev_012",
+      "canonical_name": "Polynomial",
+      "canonical_type": "Concept",
+      "mention_ids": [
+        "ko_mention_dev_018"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Concept at the same educational granularity.",
+      "notes": ""
+    },
+    {
+      "canonical_id": "canonical_ko_dev_013",
+      "canonical_name": "MLE Estimator",
+      "canonical_type": "Formula",
+      "mention_ids": [
+        "ko_mention_dev_021"
+      ],
+      "aliases": [],
+      "annotation_status": "final",
+      "identity_rationale": "No other mention in the reviewed inventory denotes the same Formula at the same educational granularity.",
+      "notes": ""
+    }
+  ]
+}

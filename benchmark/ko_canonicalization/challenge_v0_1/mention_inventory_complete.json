@@ -1,0 +1,38 @@
+{
+  "artifact_type": "ko_mention_inventory_complete",
+  "version": "v0.1",
+  "status": "final",
+  "mention_inventory": {
+    "path": "benchmark/ko_canonicalization/challenge_v0_1/mention_inventory.json",
+    "sha256": "438632b45ca8cbab452f1c9191e138a0a779298b91a9a315674f8efb1cc8a570"
+  },
+  "source_inventory": {
+    "path": "benchmark/ko_canonicalization/challenge_v0_1/normalized_predicted_kos.json",
+    "sha256": "d34e8f9fb236b18118a86cdc43123b8f313f8adc0ceb0e63aca2fad7b56b01a5"
+  },
+  "lecture_inventory": {
+    "path": "benchmark/ko_canonicalization/challenge_v0_1/lecture_inventory.json",
+    "sha256": "f11c7bb26338d00b0ac740ac213355e723c00c2d589d743c84f7b2e33dc11e1f"
+  },
+  "schema": {
+    "path": "benchmark/schema/ko_mention_inventory.schema.json",
+    "sha256": "a30b05a5c4857fa14cfd9e9966082c632da300491cbc21c333f49b974a7ffb5d"
+  },
+  "generator": {
+    "path": "scripts/create_ko_mention_inventory.py",
+    "sha256": "0b8410a4006f8f8d0556e57058c7f3ad14e182ddbb36c1ec84c241f3fceeefbe",
+    "version": "ko_mention_inventory_generator_v0.1"
+  },
+  "counts": {
+    "lectures": 9,
+    "mentions": 21,
+    "source_spans": 21,
+    "exact_source_spans": 21,
+    "nonexact_source_spans": 0,
+    "types": {
+      "Concept": 11,
+      "Method": 6,
+      "Formula": 4
+    }
+  }
+}

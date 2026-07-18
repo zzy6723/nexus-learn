@@ -1,0 +1,18 @@
+{
+  "lecture_id": "econometrics_mle_challenge_001",
+  "split": "development",
+  "knowledge_objects": [
+    {
+      "id": "maximum_likelihood_estimation",
+      "name": "Maximum-Likelihood Estimation",
+      "type": "Method",
+      "source_span": "Maximum-Likelihood Estimation estimates an econometric model by maximizing the likelihood of the observed sample."
+    },
+    {
+      "id": "likelihood",
+      "name": "Likelihood",
+      "type": "Concept",
+      "source_span": "The likelihood is viewed as a function of the model parameters with the sample held fixed."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "lecture_id": "numerical_ode_challenge_001",
+  "split": "development",
+  "knowledge_objects": [
+    {
+      "id": "ode",
+      "name": "ODE",
+      "type": "Concept",
+      "source_span": "An ODE describes a function through derivatives with respect to one independent variable."
+    },
+    {
+      "id": "eulers_method",
+      "name": "Euler's Method",
+      "type": "Method",
+      "source_span": "Euler's Method approximates its solution by repeatedly applying"
+    },
+    {
+      "id": "symbolic_euler_update",
+      "name": "$y_{n+1}=y_n+h f(t_n,y_n)$",
+      "type": "Formula",
+      "source_span": "y_{n+1}=y_n+h f(t_n,y_n)"
+    }
+  ]
+}

@@ -13,8 +13,9 @@ Knowledge Object Resolution is separate from Relation Extraction:
 Experiment 002C-0 has frozen its controlled canonicalization benchmark and
 strict artifact checks. The first benchmark reuses the inspected four-lecture,
 39-mention inventory from Experiment 002B as development data. It is not unseen
-evidence. Experiment 002C-1 has completed method implementation and synthetic
-validation; clean-state formal development runs are pending.
+evidence. Experiment 002C-1 completed its clean-state formal comparison; both
+deterministic methods passed, and Exact Name was selected by the frozen
+simplicity tie-breaker.
 
 ```text
 predicted lecture-local KO mentions
@@ -30,8 +31,12 @@ The completed preparation milestone is documented in
 - `002c_2_context_aware_resolution/`;
 - `002c_3_pipeline_validation/`.
 
-The next gate is the paired formal evaluation of Exact and Alias-Aware
-deterministic baselines. No API-based resolver is authorized at this stage.
+The authored 002C-2 development challenge is now complete and hash-bound. It
+contains 21 mentions in 13 clusters, including aliases, abbreviations,
+same-name homonyms, formula variants, and a three-mention identity cluster.
+The next gate is its repository-level freeze before context-resolver
+implementation. The previously inspected 002C-3 locked-reuse source has also
+been selected and hash-bound in advance.
 
 ## Programme Boundary
 

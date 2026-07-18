@@ -1,6 +1,6 @@
 # Experiment 002C-2: Context-Aware KO Resolution
 
-**Status:** Protocol boundary predeclared; challenge benchmark pending 002C-1 closure
+**Status:** Challenge benchmark completed; pending repository-level freeze
 
 ## Question
 
@@ -33,6 +33,18 @@ natural or authored educational contexts covering:
 - explicit singleton mentions.
 
 Synthetic fixtures alone cannot establish feasibility.
+
+The completed authored development challenge is stored at:
+
+```text
+benchmark/ko_canonicalization/challenge_v0_1/
+```
+
+Its final marker binds 9 lectures, 21 mentions, 13 gold clusters, 10
+`SAME_OBJECT` pairs, 200 `DISTINCT_OBJECT` pairs, the challenge protocol, and
+the success criteria. The challenge is development data, not an unseen
+holdout. Context-resolver implementation starts only after this bundle is
+committed unchanged.
 
 ## Required Metrics
 

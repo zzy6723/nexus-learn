@@ -1,0 +1,18 @@
+{
+  "lecture_id": "polynomial_degree_challenge_001",
+  "split": "development",
+  "knowledge_objects": [
+    {
+      "id": "degree",
+      "name": "Degree",
+      "type": "Concept",
+      "source_span": "The degree of a nonzero polynomial is the largest exponent whose coefficient is nonzero."
+    },
+    {
+      "id": "polynomial",
+      "name": "Polynomial",
+      "type": "Concept",
+      "source_span": "A polynomial is a finite linear combination of nonnegative integer powers of its variable."
+    }
+  ]
+}

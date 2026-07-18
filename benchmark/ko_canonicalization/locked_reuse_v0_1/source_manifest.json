@@ -1,0 +1,80 @@
+{
+  "artifact_type": "ko_canonicalization_locked_reuse_source_manifest",
+  "version": "v0.1",
+  "status": "final",
+  "data_role": "locked_reuse",
+  "claim_boundary": "Previously inspected 002B-1 development Entity outputs; this source is not an unseen holdout.",
+  "selection_order": {
+    "selected_before_context_resolver_execution": true,
+    "selected_without_context_resolver_predictions": true
+  },
+  "source_experiment": "002B-1",
+  "source_run": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03",
+  "source_method_commit": "6295652ceee8c30a84808363b0c85e87322e1b36",
+  "artifacts": {
+    "execution_manifest": {
+      "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/execution_manifest.json",
+      "sha256": "73e927357e7e7466e4ca2dd7d98e0405e3c46a8aeee61c04ff49d4f8504608ae"
+    },
+    "lecture_inventory": {
+      "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/lecture_inventory.json",
+      "sha256": "195b8523b00652d98d79866f4807993e1359f857577210c9b62ab970f5f41422"
+    },
+    "normalized_predicted_kos": {
+      "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/normalization/normalized_predicted_kos.json",
+      "sha256": "a82fc1b083920860532384994f8836bf13999d4d54e7ab449acb64cc2a5c390e"
+    },
+    "entity_source_bundle": {
+      "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/entity_source_bundle.json",
+      "sha256": "db5b7a9a97d9124d8688a972618f933a0f00dbe23116a36afb97f64552d91393"
+    },
+    "entity_predictions_completion_marker": {
+      "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/entity_predictions_complete.json",
+      "sha256": "477e5c8fed5af204c6a81252df3835ea04694f5b8f0669c599b0f8ac46b2a1ed"
+    }
+  },
+  "entity_output_artifacts": [
+    {
+      "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/calculus_001.json",
+      "sha256": "84b6a0150d23c4078e2df772eec4f6a8bb54db51d223816ca29c6775f5ab4c3f"
+    },
+    {
+      "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/calculus_002.json",
+      "sha256": "8410ae22acc165bb77035f4d65ce2e2b95e9fae98a0d9a6ccf403ab1ca462a82"
+    },
+    {
+      "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/linear_algebra_001.json",
+      "sha256": "320f9825356a3b1d5cb804c95dcadfe5b2b2397db38914680ab1ce69f452be9d"
+    },
+    {
+      "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/linear_algebra_002.json",
+      "sha256": "291045bab2199dfb9016e2addcbf9a299bffac3ad527df55ec4d1ed23731124b"
+    },
+    {
+      "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/optimisation_001.json",
+      "sha256": "658486dc7088d077441414e0aae928c8a68e9557bb2df1fec329bde1c7955cfa"
+    },
+    {
+      "path": "experiments/relation_extraction/002b_predicted_ko/runs/development_v0_1/run_03/entity_predictions/output/probability_001.json",
+      "sha256": "cfd4f18c782c2abfc67f6162a9481d50e9fe804eaea55e7fe34549b4659e71f7"
+    }
+  ],
+  "lecture_ids": [
+    "calculus_001",
+    "linear_algebra_001",
+    "optimisation_001",
+    "calculus_002",
+    "linear_algebra_002",
+    "probability_001"
+  ],
+  "counts": {
+    "lectures": 6,
+    "knowledge_object_mentions": 49,
+    "entity_outputs": 6
+  },
+  "generator": {
+    "path": "scripts/create_ko_locked_reuse_source_manifest.py",
+    "sha256": "c0d04df7a43341c43d36582e6d90104fd83dbd8512c596b575f9d1c4869a2e47",
+    "version": "ko_locked_reuse_source_manifest_v0.1"
+  }
+}

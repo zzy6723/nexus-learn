@@ -1,6 +1,6 @@
 # Experiment 002C-1: Deterministic KO Canonicalization
 
-**Status:** Implementation and synthetic validation passed; formal development runs pending
+**Status:** Formal development comparison completed; Exact method selected for 002C-2
 **API usage:** None
 **Frozen input:** 002C-0 development-reuse mention inventory v0.1
 
@@ -79,9 +79,9 @@ natural homonym case. Even a perfect formal result can establish only that the
 method handles identities represented in that development benchmark. It cannot
 establish general alias resolution or contextual disambiguation.
 
-## Next Gate
+## Decision And Next Gate
 
-Freeze this method milestone, then run both methods from the same clean commit
-and evaluate them with the frozen evaluator. If both tie on the real benchmark,
-the simpler method is preferred there, while the synthetic homonym failure
-still motivates an independent 002C-2 challenge evaluation.
+Both methods passed every formal development criterion and produced the same
+partition. `exact_name_same_type_v0_1` is selected under the frozen simplicity
+tie-breaker. The independent 002C-2 challenge remains required because the real
+benchmark does not cover homonym or alias resolution.

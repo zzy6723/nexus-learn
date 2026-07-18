@@ -1,0 +1,100 @@
+{
+  "artifact_type": "predicted_ko_relation_lecture_inventory",
+  "version": "v0.1",
+  "split": "development",
+  "scope": "002C-2_authored_development_challenge",
+  "sources": [
+    {
+      "lecture_id": "calculus_gradient_challenge_001",
+      "path": "benchmark/ko_canonicalization/challenge_v0_1/lectures/calculus_gradient_challenge_001.md",
+      "markdown_sha256": "899330fee437b087c078d7739f68b400d4fc9a9a1c83fb93e2f59a241d5cee00",
+      "model_text_sha256": "eedae2297c69dd0da4ba81709d47bddd90be2b0bfbe1d6639666978c82fa21a0"
+    },
+    {
+      "lecture_id": "econometrics_mle_challenge_001",
+      "path": "benchmark/ko_canonicalization/challenge_v0_1/lectures/econometrics_mle_challenge_001.md",
+      "markdown_sha256": "3a272f34bfe8d0c449b31e062454ee3c818be5297113918caa46892f83f4ab22",
+      "model_text_sha256": "c323cdd842f9ed6734621e3dcaacaaf4c7654c34ddd0e6e5fca4cee675ca830a"
+    },
+    {
+      "lecture_id": "graph_degree_challenge_001",
+      "path": "benchmark/ko_canonicalization/challenge_v0_1/lectures/graph_degree_challenge_001.md",
+      "markdown_sha256": "e75b4205bb5dc720c7fdff3742173bb7af6a8470cedd3c7059653d47dcb7d1e3",
+      "model_text_sha256": "ac7db0cf48d59fb0a94bf9ab60532750c21b1af827d76cb88ae435965e5ed680"
+    },
+    {
+      "lecture_id": "machine_learning_mle_challenge_001",
+      "path": "benchmark/ko_canonicalization/challenge_v0_1/lectures/machine_learning_mle_challenge_001.md",
+      "markdown_sha256": "f9bace1472139d5d75be8abdac7267951a0d075c70f602621c4345051bbf9eb2",
+      "model_text_sha256": "29e29ec8150f54852c1cec612335d79c14815eb2c18cb4acdf2fa2c21153ac75"
+    },
+    {
+      "lecture_id": "numerical_ode_challenge_001",
+      "path": "benchmark/ko_canonicalization/challenge_v0_1/lectures/numerical_ode_challenge_001.md",
+      "markdown_sha256": "6efee3b81bad78171126906c89eb03171bcdd8dffd470b2b74408b392cdac7ce",
+      "model_text_sha256": "6bd9e65f304d5cca8a7a15b415704636dd2d638fae6f3f2d41bd6a15980dc84c"
+    },
+    {
+      "lecture_id": "ode_theory_challenge_001",
+      "path": "benchmark/ko_canonicalization/challenge_v0_1/lectures/ode_theory_challenge_001.md",
+      "markdown_sha256": "5ae778b50ea74c30386c83a06096aac8acb7d11921cbd90323aa2c4cb5f49677",
+      "model_text_sha256": "4b06c6bd0e07453b395a508eb21b045100c8fa33979552be4693c3e1fa3918a7"
+    },
+    {
+      "lecture_id": "optimisation_gradient_challenge_001",
+      "path": "benchmark/ko_canonicalization/challenge_v0_1/lectures/optimisation_gradient_challenge_001.md",
+      "markdown_sha256": "f86f316a5ff38cfaee4f23e44cdf0410b55d46c74fef18dbcac3d11a5f0e7522",
+      "model_text_sha256": "92fed144312ece05c2cbc792813060025f01ec443e6ed2c777d5e3d145db16f1"
+    },
+    {
+      "lecture_id": "polynomial_degree_challenge_001",
+      "path": "benchmark/ko_canonicalization/challenge_v0_1/lectures/polynomial_degree_challenge_001.md",
+      "markdown_sha256": "7af3789821d55d6098f053830cc8a2ce19fe3f5a2cb48c1c61a99fd2322e4fa6",
+      "model_text_sha256": "e54ea4ae82fe613c37215b2ae2c5880040ca0db2faedf16ac81046af4050608f"
+    },
+    {
+      "lecture_id": "statistics_mle_challenge_001",
+      "path": "benchmark/ko_canonicalization/challenge_v0_1/lectures/statistics_mle_challenge_001.md",
+      "markdown_sha256": "6f15404bd1bc912cb6ded0910fb5de69fdee0975d0d51993a26ac1a6e4574439",
+      "model_text_sha256": "c31f76e1581610679c5f7f270664d347d4347f20504e5578c1425993203aabac"
+    }
+  ],
+  "lectures": [
+    {
+      "lecture_id": "calculus_gradient_challenge_001",
+      "text": "The gradient of a differentiable scalar function is the vector of its partial derivatives. In coordinates, the gradient formula is\n\n\\[\n\\nabla f(x) = \\left(\\frac{\\partial f}{\\partial x_1},\\ldots,\\frac{\\partial f}{\\partial x_d}\\right).\n\\]\n\nThe gradient is a mathematical concept, while the coordinate expression is a Formula that formalizes it.\n"
+    },
+    {
+      "lecture_id": "econometrics_mle_challenge_001",
+      "text": "Maximum-Likelihood Estimation estimates an econometric model by maximizing the likelihood of the observed sample. The likelihood is viewed as a function of the model parameters with the sample held fixed.\n"
+    },
+    {
+      "lecture_id": "graph_degree_challenge_001",
+      "text": "The degree of a vertex is the number of edges incident to that vertex in an undirected graph. A vertex is an element of the graph's vertex set.\n"
+    },
+    {
+      "lecture_id": "machine_learning_mle_challenge_001",
+      "text": "MLE is used to fit a probabilistic model by maximizing its likelihood function on observed training data. The likelihood function assigns each candidate parameter value a score determined by the fixed observations.\n"
+    },
+    {
+      "lecture_id": "numerical_ode_challenge_001",
+      "text": "An ODE describes a function through derivatives with respect to one independent variable. Euler's Method approximates its solution by repeatedly applying\n\n\\[\ny_{n+1}=y_n+h f(t_n,y_n).\n\\]\n"
+    },
+    {
+      "lecture_id": "ode_theory_challenge_001",
+      "text": "An ordinary differential equation relates an unknown function of one variable to its derivatives. The Forward Euler Method advances an approximate solution using the current slope. Its update is\n\n\\[\ny_{n+1}=y_n+h f(t_n,y_n).\n\\]\n"
+    },
+    {
+      "lecture_id": "optimisation_gradient_challenge_001",
+      "text": "The gradient vector points in the direction of steepest local increase of a differentiable objective. Gradient descent is an iterative Method that moves in the opposite direction of this gradient vector to reduce the objective.\n"
+    },
+    {
+      "lecture_id": "polynomial_degree_challenge_001",
+      "text": "The degree of a nonzero polynomial is the largest exponent whose coefficient is nonzero. A polynomial is a finite linear combination of nonnegative integer powers of its variable.\n"
+    },
+    {
+      "lecture_id": "statistics_mle_challenge_001",
+      "text": "Maximum Likelihood Estimation selects parameter values that maximize the likelihood. The likelihood compares parameter values after the observed data are held fixed. An MLE estimator may be written as\n\n\\[\n\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta} L(\\theta;x).\n\\]\n"
+    }
+  ]
+}

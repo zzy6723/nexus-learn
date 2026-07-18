@@ -1,0 +1,25 @@
+{
+  "artifact_type": "ko_canonicalization_generation_complete",
+  "version": "v0.1",
+  "status": "final",
+  "method_id": "exact_name_same_type_v0_1",
+  "method_commit": "645e3cfa415f1f53aa1dd668ac84663c32830c7d",
+  "artifacts": {
+    "canonical_clusters": {
+      "path": "experiments/knowledge_object_resolution/002c_1_deterministic_canonicalization/runs/development_v0_1/exact_name_same_type_v0_1/run_01/canonical_clusters.json",
+      "sha256": "cceaf096c047e07c22656d2c9293ce37127de9087725658c1a02219eb741164f"
+    },
+    "mention_assignments": {
+      "path": "experiments/knowledge_object_resolution/002c_1_deterministic_canonicalization/runs/development_v0_1/exact_name_same_type_v0_1/run_01/mention_assignments.json",
+      "sha256": "3e5f8b439069ee419ec8d56ae05dee5955a87a441d69d5acb41748dae5971193"
+    },
+    "normalization_audit": {
+      "path": "experiments/knowledge_object_resolution/002c_1_deterministic_canonicalization/runs/development_v0_1/exact_name_same_type_v0_1/run_01/normalization_audit.json",
+      "sha256": "647c7bd99dc705fd485ecfdef99a6ca32f3bb7a1281d8369ce0255972c7f5dc0"
+    },
+    "metadata": {
+      "path": "experiments/knowledge_object_resolution/002c_1_deterministic_canonicalization/runs/development_v0_1/exact_name_same_type_v0_1/run_01/metadata.json",
+      "sha256": "e44e31fa58845a087ca2345c432eb7434e47e2848f7a7026a8e08ff9158461f1"
+    }
+  }
+}

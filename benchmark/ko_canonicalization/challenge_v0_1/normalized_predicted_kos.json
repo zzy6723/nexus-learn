@@ -1,0 +1,342 @@
+{
+  "artifact_type": "predicted_ko_normalized_inventory",
+  "input_files": [
+    {
+      "path": "benchmark/ko_canonicalization/challenge_v0_1/source_predictions/calculus_gradient_challenge_001.json",
+      "sha256": "f8a29353c628a3fccb1c07524a458488fcad33f4957d2d83ae9b6d74657bc817"
+    },
+    {
+      "path": "benchmark/ko_canonicalization/challenge_v0_1/source_predictions/econometrics_mle_challenge_001.json",
+      "sha256": "0f5a64ec2a90854a05ce932d3630e80690310e9236b5e1b0ff170e609520aea0"
+    },
+    {
+      "path": "benchmark/ko_canonicalization/challenge_v0_1/source_predictions/graph_degree_challenge_001.json",
+      "sha256": "fb0c5a643d3fc45197bd8eda49c465c6101a51369e08c98e3fae8fba33d5b199"
+    },
+    {
+      "path": "benchmark/ko_canonicalization/challenge_v0_1/source_predictions/machine_learning_mle_challenge_001.json",
+      "sha256": "cecc1e99618bdd2f8a5da440fc2a495fd191170bfc62738e8253fe4f758416db"
+    },
+    {
+      "path": "benchmark/ko_canonicalization/challenge_v0_1/source_predictions/numerical_ode_challenge_001.json",
+      "sha256": "31fd3f01a26965fefe13a824115a4843d5a2ad957d3b5459bfcee70a3d4583f0"
+    },
+    {
+      "path": "benchmark/ko_canonicalization/challenge_v0_1/source_predictions/ode_theory_challenge_001.json",
+      "sha256": "dfb9c645a4d9480a30fdc046b48bdce1c22d67bb7701b285aa3a95dfe855ac62"
+    },
+    {
+      "path": "benchmark/ko_canonicalization/challenge_v0_1/source_predictions/optimisation_gradient_challenge_001.json",
+      "sha256": "89eaae69b5c2d5366bf7425b225a73a438754078380dba181f80c4806e244a8a"
+    },
+    {
+      "path": "benchmark/ko_canonicalization/challenge_v0_1/source_predictions/polynomial_degree_challenge_001.json",
+      "sha256": "8da1fbd8d5c3d7f18e16643d02fc81fbdc4923505535a47578c067d4ee9b9084"
+    },
+    {
+      "path": "benchmark/ko_canonicalization/challenge_v0_1/source_predictions/statistics_mle_challenge_001.json",
+      "sha256": "2a547a53137ceef98156d6444a5c88ecd0cd801f1898f8fef2145ba18760ad82"
+    }
+  ],
+  "input_set_sha256": "52a40ec3e8631f5f10c58256c2c71c3a46a479f46db40ed15598cfa66ff8e0a9",
+  "knowledge_objects": [
+    {
+      "lecture_id": "calculus_gradient_challenge_001",
+      "name": "Gradient",
+      "predicted_ko_id": "gradient",
+      "provenance": {
+        "source_file": "benchmark/ko_canonicalization/challenge_v0_1/source_predictions/calculus_gradient_challenge_001.json",
+        "source_object_index": 0,
+        "source_prediction_id": "gradient"
+      },
+      "source_spans": [
+        "The gradient of a differentiable scalar function is the vector of its partial derivatives."
+      ],
+      "type": "Concept"
+    },
+    {
+      "lecture_id": "calculus_gradient_challenge_001",
+      "name": "Gradient Coordinate Formula",
+      "predicted_ko_id": "gradient_coordinate_formula",
+      "provenance": {
+        "source_file": "benchmark/ko_canonicalization/challenge_v0_1/source_predictions/calculus_gradient_challenge_001.json",
+        "source_object_index": 1,
+        "source_prediction_id": "gradient_coordinate_formula"
+      },
+      "source_spans": [
+        "\\nabla f(x) = \\left(\\frac{\\partial f}{\\partial x_1},\\ldots,\\frac{\\partial f}{\\partial x_d}\\right)"
+      ],
+      "type": "Formula"
+    },
+    {
+      "lecture_id": "econometrics_mle_challenge_001",
+      "name": "Likelihood",
+      "predicted_ko_id": "likelihood",
+      "provenance": {
+        "source_file": "benchmark/ko_canonicalization/challenge_v0_1/source_predictions/econometrics_mle_challenge_001.json",
+        "source_object_index": 1,
+        "source_prediction_id": "likelihood"
+      },
+      "source_spans": [
+        "The likelihood is viewed as a function of the model parameters with the sample held fixed."
+      ],
+      "type": "Concept"
+    },
+    {
+      "lecture_id": "econometrics_mle_challenge_001",
+      "name": "Maximum-Likelihood Estimation",
+      "predicted_ko_id": "maximum_likelihood_estimation",
+      "provenance": {
+        "source_file": "benchmark/ko_canonicalization/challenge_v0_1/source_predictions/econometrics_mle_challenge_001.json",
+        "source_object_index": 0,
+        "source_prediction_id": "maximum_likelihood_estimation"
+      },
+      "source_spans": [
+        "Maximum-Likelihood Estimation estimates an econometric model by maximizing the likelihood of the observed sample."
+      ],
+      "type": "Method"
+    },
+    {
+      "lecture_id": "graph_degree_challenge_001",
+      "name": "Degree",
+      "predicted_ko_id": "degree",
+      "provenance": {
+        "source_file": "benchmark/ko_canonicalization/challenge_v0_1/source_predictions/graph_degree_challenge_001.json",
+        "source_object_index": 0,
+        "source_prediction_id": "degree"
+      },
+      "source_spans": [
+        "The degree of a vertex is the number of edges incident to that vertex in an undirected graph."
+      ],
+      "type": "Concept"
+    },
+    {
+      "lecture_id": "graph_degree_challenge_001",
+      "name": "Vertex",
+      "predicted_ko_id": "vertex",
+      "provenance": {
+        "source_file": "benchmark/ko_canonicalization/challenge_v0_1/source_predictions/graph_degree_challenge_001.json",
+        "source_object_index": 1,
+        "source_prediction_id": "vertex"
+      },
+      "source_spans": [
+        "A vertex is an element of the graph's vertex set."
+      ],
+      "type": "Concept"
+    },
+    {
+      "lecture_id": "machine_learning_mle_challenge_001",
+      "name": "Likelihood Function",
+      "predicted_ko_id": "likelihood_function",
+      "provenance": {
+        "source_file": "benchmark/ko_canonicalization/challenge_v0_1/source_predictions/machine_learning_mle_challenge_001.json",
+        "source_object_index": 1,
+        "source_prediction_id": "likelihood_function"
+      },
+      "source_spans": [
+        "The likelihood function assigns each candidate parameter value a score determined by the fixed observations."
+      ],
+      "type": "Concept"
+    },
+    {
+      "lecture_id": "machine_learning_mle_challenge_001",
+      "name": "MLE",
+      "predicted_ko_id": "mle",
+      "provenance": {
+        "source_file": "benchmark/ko_canonicalization/challenge_v0_1/source_predictions/machine_learning_mle_challenge_001.json",
+        "source_object_index": 0,
+        "source_prediction_id": "mle"
+      },
+      "source_spans": [
+        "MLE is used to fit a probabilistic model by maximizing its likelihood function on observed training data."
+      ],
+      "type": "Method"
+    },
+    {
+      "lecture_id": "numerical_ode_challenge_001",
+      "name": "Euler's Method",
+      "predicted_ko_id": "eulers_method",
+      "provenance": {
+        "source_file": "benchmark/ko_canonicalization/challenge_v0_1/source_predictions/numerical_ode_challenge_001.json",
+        "source_object_index": 1,
+        "source_prediction_id": "eulers_method"
+      },
+      "source_spans": [
+        "Euler's Method approximates its solution by repeatedly applying"
+      ],
+      "type": "Method"
+    },
+    {
+      "lecture_id": "numerical_ode_challenge_001",
+      "name": "ODE",
+      "predicted_ko_id": "ode",
+      "provenance": {
+        "source_file": "benchmark/ko_canonicalization/challenge_v0_1/source_predictions/numerical_ode_challenge_001.json",
+        "source_object_index": 0,
+        "source_prediction_id": "ode"
+      },
+      "source_spans": [
+        "An ODE describes a function through derivatives with respect to one independent variable."
+      ],
+      "type": "Concept"
+    },
+    {
+      "lecture_id": "numerical_ode_challenge_001",
+      "name": "$y_{n+1}=y_n+h f(t_n,y_n)$",
+      "predicted_ko_id": "symbolic_euler_update",
+      "provenance": {
+        "source_file": "benchmark/ko_canonicalization/challenge_v0_1/source_predictions/numerical_ode_challenge_001.json",
+        "source_object_index": 2,
+        "source_prediction_id": "symbolic_euler_update"
+      },
+      "source_spans": [
+        "y_{n+1}=y_n+h f(t_n,y_n)"
+      ],
+      "type": "Formula"
+    },
+    {
+      "lecture_id": "ode_theory_challenge_001",
+      "name": "Forward Euler Method",
+      "predicted_ko_id": "forward_euler_method",
+      "provenance": {
+        "source_file": "benchmark/ko_canonicalization/challenge_v0_1/source_predictions/ode_theory_challenge_001.json",
+        "source_object_index": 1,
+        "source_prediction_id": "forward_euler_method"
+      },
+      "source_spans": [
+        "The Forward Euler Method advances an approximate solution using the current slope."
+      ],
+      "type": "Method"
+    },
+    {
+      "lecture_id": "ode_theory_challenge_001",
+      "name": "Forward Euler Update",
+      "predicted_ko_id": "forward_euler_update",
+      "provenance": {
+        "source_file": "benchmark/ko_canonicalization/challenge_v0_1/source_predictions/ode_theory_challenge_001.json",
+        "source_object_index": 2,
+        "source_prediction_id": "forward_euler_update"
+      },
+      "source_spans": [
+        "y_{n+1}=y_n+h f(t_n,y_n)"
+      ],
+      "type": "Formula"
+    },
+    {
+      "lecture_id": "ode_theory_challenge_001",
+      "name": "Ordinary Differential Equation",
+      "predicted_ko_id": "ordinary_differential_equation",
+      "provenance": {
+        "source_file": "benchmark/ko_canonicalization/challenge_v0_1/source_predictions/ode_theory_challenge_001.json",
+        "source_object_index": 0,
+        "source_prediction_id": "ordinary_differential_equation"
+      },
+      "source_spans": [
+        "An ordinary differential equation relates an unknown function of one variable to its derivatives."
+      ],
+      "type": "Concept"
+    },
+    {
+      "lecture_id": "optimisation_gradient_challenge_001",
+      "name": "Gradient Descent",
+      "predicted_ko_id": "gradient_descent",
+      "provenance": {
+        "source_file": "benchmark/ko_canonicalization/challenge_v0_1/source_predictions/optimisation_gradient_challenge_001.json",
+        "source_object_index": 1,
+        "source_prediction_id": "gradient_descent"
+      },
+      "source_spans": [
+        "Gradient descent is an iterative Method that moves in the opposite direction of this gradient vector to reduce the objective."
+      ],
+      "type": "Method"
+    },
+    {
+      "lecture_id": "optimisation_gradient_challenge_001",
+      "name": "Gradient Vector",
+      "predicted_ko_id": "gradient_vector",
+      "provenance": {
+        "source_file": "benchmark/ko_canonicalization/challenge_v0_1/source_predictions/optimisation_gradient_challenge_001.json",
+        "source_object_index": 0,
+        "source_prediction_id": "gradient_vector"
+      },
+      "source_spans": [
+        "The gradient vector points in the direction of steepest local increase of a differentiable objective."
+      ],
+      "type": "Concept"
+    },
+    {
+      "lecture_id": "polynomial_degree_challenge_001",
+      "name": "Degree",
+      "predicted_ko_id": "degree",
+      "provenance": {
+        "source_file": "benchmark/ko_canonicalization/challenge_v0_1/source_predictions/polynomial_degree_challenge_001.json",
+        "source_object_index": 0,
+        "source_prediction_id": "degree"
+      },
+      "source_spans": [
+        "The degree of a nonzero polynomial is the largest exponent whose coefficient is nonzero."
+      ],
+      "type": "Concept"
+    },
+    {
+      "lecture_id": "polynomial_degree_challenge_001",
+      "name": "Polynomial",
+      "predicted_ko_id": "polynomial",
+      "provenance": {
+        "source_file": "benchmark/ko_canonicalization/challenge_v0_1/source_predictions/polynomial_degree_challenge_001.json",
+        "source_object_index": 1,
+        "source_prediction_id": "polynomial"
+      },
+      "source_spans": [
+        "A polynomial is a finite linear combination of nonnegative integer powers of its variable."
+      ],
+      "type": "Concept"
+    },
+    {
+      "lecture_id": "statistics_mle_challenge_001",
+      "name": "Likelihood",
+      "predicted_ko_id": "likelihood",
+      "provenance": {
+        "source_file": "benchmark/ko_canonicalization/challenge_v0_1/source_predictions/statistics_mle_challenge_001.json",
+        "source_object_index": 1,
+        "source_prediction_id": "likelihood"
+      },
+      "source_spans": [
+        "The likelihood compares parameter values after the observed data are held fixed."
+      ],
+      "type": "Concept"
+    },
+    {
+      "lecture_id": "statistics_mle_challenge_001",
+      "name": "Maximum Likelihood Estimation",
+      "predicted_ko_id": "maximum_likelihood_estimation",
+      "provenance": {
+        "source_file": "benchmark/ko_canonicalization/challenge_v0_1/source_predictions/statistics_mle_challenge_001.json",
+        "source_object_index": 0,
+        "source_prediction_id": "maximum_likelihood_estimation"
+      },
+      "source_spans": [
+        "Maximum Likelihood Estimation selects parameter values that maximize the likelihood."
+      ],
+      "type": "Method"
+    },
+    {
+      "lecture_id": "statistics_mle_challenge_001",
+      "name": "MLE Estimator",
+      "predicted_ko_id": "mle_estimator",
+      "provenance": {
+        "source_file": "benchmark/ko_canonicalization/challenge_v0_1/source_predictions/statistics_mle_challenge_001.json",
+        "source_object_index": 2,
+        "source_prediction_id": "mle_estimator"
+      },
+      "source_spans": [
+        "\\widehat{\\theta}_{\\mathrm{MLE}} = \\operatorname*{arg\\,max}_{\\theta} L(\\theta;x)"
+      ],
+      "type": "Formula"
+    }
+  ],
+  "normalized_content_sha256": "9f2ba95b076a23b7deadce79e5d96e33a0a90fa1ec982476659c4cc7ee4f77b7",
+  "split": "development",
+  "structural_normalization_version": "predicted_ko_structural_normalization_v0_1",
+  "version": "v0.1"
+}

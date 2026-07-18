@@ -1,0 +1,60 @@
+{
+  "artifact_type": "ko_resolution_challenge_complete",
+  "version": "v0.1",
+  "status": "final",
+  "data_role": "authored_development_challenge",
+  "artifacts": {
+    "lecture_inventory": {
+      "path": "benchmark/ko_canonicalization/challenge_v0_1/lecture_inventory.json",
+      "sha256": "f11c7bb26338d00b0ac740ac213355e723c00c2d589d743c84f7b2e33dc11e1f"
+    },
+    "normalized_predicted_kos": {
+      "path": "benchmark/ko_canonicalization/challenge_v0_1/normalized_predicted_kos.json",
+      "sha256": "d34e8f9fb236b18118a86cdc43123b8f313f8adc0ceb0e63aca2fad7b56b01a5"
+    },
+    "mention_inventory": {
+      "path": "benchmark/ko_canonicalization/challenge_v0_1/mention_inventory.json",
+      "sha256": "438632b45ca8cbab452f1c9191e138a0a779298b91a9a315674f8efb1cc8a570"
+    },
+    "mention_inventory_completion_marker": {
+      "path": "benchmark/ko_canonicalization/challenge_v0_1/mention_inventory_complete.json",
+      "sha256": "360a8c5ba901ecd6a7497b9bef2e12644899947360dfa2547352fdf908896634"
+    },
+    "ground_truth": {
+      "path": "benchmark/ko_canonicalization/challenge_v0_1/ground_truth.json",
+      "sha256": "49d9f1394b9c6913f1158b04003969a0460dae20ffb48b3fed14b5045d2948a9"
+    },
+    "ground_truth_completion_marker": {
+      "path": "benchmark/ko_canonicalization/challenge_v0_1/ground_truth_complete.json",
+      "sha256": "4d0b57abc101f59796ffcbe5be52aee48254657bd5b2cca9cf03695570a18f3a"
+    },
+    "coverage_manifest": {
+      "path": "benchmark/ko_canonicalization/challenge_v0_1/coverage_manifest.json",
+      "sha256": "e262b774a11bc6d021cd4d897cf1ca42f63a3c2e511d217753e6b957de1af1a5"
+    },
+    "challenge_protocol": {
+      "path": "benchmark/ko_canonicalization/challenge_v0_1/challenge_protocol.md",
+      "sha256": "48b49dab8ca0044143f267813f2ea7a88c637a698dda489dce7b42ecc3f247c9"
+    },
+    "success_criteria": {
+      "path": "benchmark/ko_canonicalization/challenge_v0_1/success_criteria.json",
+      "sha256": "320a0d03631108e4d1104773c842341b5003fa70ef004c1b5a7ce129cc8b1a4d"
+    }
+  },
+  "finalizer": {
+    "path": "scripts/finalize_ko_resolution_challenge.py",
+    "sha256": "26c8e330f5962433b7df3b0bd994f35f5547636c96fbedc757995f1202b3e42c",
+    "version": "ko_resolution_challenge_finalizer_v0.1"
+  },
+  "counts": {
+    "mentions": 21,
+    "canonical_clusters": 13,
+    "singleton_clusters": 7,
+    "multi_mention_clusters": 6,
+    "same_object_pairs": 10,
+    "distinct_object_pairs": 200,
+    "multi_mention_coverage_cases": 6,
+    "hard_negative_coverage_cases": 3,
+    "exact_source_spans": 21
+  }
+}

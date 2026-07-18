@@ -1,0 +1,437 @@
+{
+  "artifact_type": "ko_name_normalization_audit",
+  "version": "v0.1",
+  "benchmark_split": "development",
+  "method_id": "exact_name_same_type_v0_1",
+  "records": [
+    {
+      "mention_id": "ko_mention_dev_001",
+      "original_name": "Discretization Error",
+      "normalized_name": "discretization error",
+      "identity_key": "discretization error",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_6f1a3a36b8475d32"
+    },
+    {
+      "mention_id": "ko_mention_dev_002",
+      "original_name": "Euler Predictor",
+      "normalized_name": "euler predictor",
+      "identity_key": "euler predictor",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_166df84dad3e6e5c"
+    },
+    {
+      "mention_id": "ko_mention_dev_003",
+      "original_name": "First-Order Equation",
+      "normalized_name": "first-order equation",
+      "identity_key": "first-order equation",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_54b0b2fe8f3d9a6c"
+    },
+    {
+      "mention_id": "ko_mention_dev_004",
+      "original_name": "Forward Euler Method",
+      "normalized_name": "forward euler method",
+      "identity_key": "forward euler method",
+      "type": "Method",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_c57d89a6cc04723e"
+    },
+    {
+      "mention_id": "ko_mention_dev_005",
+      "original_name": "Forward Euler Update",
+      "normalized_name": "forward euler update",
+      "identity_key": "forward euler update",
+      "type": "Formula",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_14d5da78527f3497"
+    },
+    {
+      "mention_id": "ko_mention_dev_006",
+      "original_name": "Heun's Method",
+      "normalized_name": "heun's method",
+      "identity_key": "heun's method",
+      "type": "Method",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_0cf310489ac37451"
+    },
+    {
+      "mention_id": "ko_mention_dev_007",
+      "original_name": "Heun's Update",
+      "normalized_name": "heun's update",
+      "identity_key": "heun's update",
+      "type": "Formula",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_8ddb0cf4d042f074"
+    },
+    {
+      "mention_id": "ko_mention_dev_008",
+      "original_name": "Initial Value Problem",
+      "normalized_name": "initial value problem",
+      "identity_key": "initial value problem",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_8c18cb5721e55cc3"
+    },
+    {
+      "mention_id": "ko_mention_dev_009",
+      "original_name": "Ordinary Differential Equation",
+      "normalized_name": "ordinary differential equation",
+      "identity_key": "ordinary differential equation",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_618dbcf14167e94b"
+    },
+    {
+      "mention_id": "ko_mention_dev_010",
+      "original_name": "Step Size",
+      "normalized_name": "step size",
+      "identity_key": "step size",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_bffe40cfe74b1920"
+    },
+    {
+      "mention_id": "ko_mention_dev_011",
+      "original_name": "Vector Field",
+      "normalized_name": "vector field",
+      "identity_key": "vector field",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_ee2f23e618c6c362"
+    },
+    {
+      "mention_id": "ko_mention_dev_012",
+      "original_name": "A* Search",
+      "normalized_name": "a* search",
+      "identity_key": "a* search",
+      "type": "Method",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_94ad3f411c07595c"
+    },
+    {
+      "mention_id": "ko_mention_dev_013",
+      "original_name": "Dijkstra's Algorithm",
+      "normalized_name": "dijkstra's algorithm",
+      "identity_key": "dijkstra's algorithm",
+      "type": "Method",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_90f2b184b2ab1bab"
+    },
+    {
+      "mention_id": "ko_mention_dev_014",
+      "original_name": "Edge Relaxation",
+      "normalized_name": "edge relaxation",
+      "identity_key": "edge relaxation",
+      "type": "Method",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_4ef8f8eabaf23d51"
+    },
+    {
+      "mention_id": "ko_mention_dev_015",
+      "original_name": "Heuristic Function",
+      "normalized_name": "heuristic function",
+      "identity_key": "heuristic function",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_1195cbd798bf5b5a"
+    },
+    {
+      "mention_id": "ko_mention_dev_016",
+      "original_name": "Path",
+      "normalized_name": "path",
+      "identity_key": "path",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_0eb26bd9ec765010"
+    },
+    {
+      "mention_id": "ko_mention_dev_017",
+      "original_name": "Path Cost",
+      "normalized_name": "path cost",
+      "identity_key": "path cost",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_28ae2758de3bde71"
+    },
+    {
+      "mention_id": "ko_mention_dev_018",
+      "original_name": "Path Cost Formula",
+      "normalized_name": "path cost formula",
+      "identity_key": "path cost formula",
+      "type": "Formula",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_dd077e4b97449ba2"
+    },
+    {
+      "mention_id": "ko_mention_dev_019",
+      "original_name": "Relaxation Update",
+      "normalized_name": "relaxation update",
+      "identity_key": "relaxation update",
+      "type": "Formula",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_72eb4f11dfa26d75"
+    },
+    {
+      "mention_id": "ko_mention_dev_020",
+      "original_name": "Single-Source Shortest-Path Problem",
+      "normalized_name": "single-source shortest-path problem",
+      "identity_key": "single-source shortest-path problem",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_a045396184acc069"
+    },
+    {
+      "mention_id": "ko_mention_dev_021",
+      "original_name": "Weighted Directed Graph",
+      "normalized_name": "weighted directed graph",
+      "identity_key": "weighted directed graph",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_08c5bd5fdbda353e"
+    },
+    {
+      "mention_id": "ko_mention_dev_022",
+      "original_name": "Bisection method",
+      "normalized_name": "bisection method",
+      "identity_key": "bisection method",
+      "type": "Method",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_b1bcc5e1b72703fc"
+    },
+    {
+      "mention_id": "ko_mention_dev_023",
+      "original_name": "Damped Newton method",
+      "normalized_name": "damped newton method",
+      "identity_key": "damped newton method",
+      "type": "Method",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_7fd27b632e91ebef"
+    },
+    {
+      "mention_id": "ko_mention_dev_024",
+      "original_name": "Midpoint formula",
+      "normalized_name": "midpoint formula",
+      "identity_key": "midpoint formula",
+      "type": "Formula",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_5c66ab383f6ee1ac"
+    },
+    {
+      "mention_id": "ko_mention_dev_025",
+      "original_name": "Newton update formula",
+      "normalized_name": "newton update formula",
+      "identity_key": "newton update formula",
+      "type": "Formula",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_1c5cc2337ceedada"
+    },
+    {
+      "mention_id": "ko_mention_dev_026",
+      "original_name": "Newton's method",
+      "normalized_name": "newton's method",
+      "identity_key": "newton's method",
+      "type": "Method",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_aa23e4a1261a6211"
+    },
+    {
+      "mention_id": "ko_mention_dev_027",
+      "original_name": "Root-finding problem",
+      "normalized_name": "root-finding problem",
+      "identity_key": "root-finding problem",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_bd069ecdaafe0650"
+    },
+    {
+      "mention_id": "ko_mention_dev_028",
+      "original_name": "Sign-changing bracket",
+      "normalized_name": "sign-changing bracket",
+      "identity_key": "sign-changing bracket",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_f14bdeaca3590589"
+    },
+    {
+      "mention_id": "ko_mention_dev_029",
+      "original_name": "Likelihood",
+      "normalized_name": "likelihood",
+      "identity_key": "likelihood",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_8feeb5aad961602d"
+    },
+    {
+      "mention_id": "ko_mention_dev_030",
+      "original_name": "Likelihood Function",
+      "normalized_name": "likelihood function",
+      "identity_key": "likelihood function",
+      "type": "Formula",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_1057f4f6066a0fb5"
+    },
+    {
+      "mention_id": "ko_mention_dev_031",
+      "original_name": "Log-Likelihood",
+      "normalized_name": "log-likelihood",
+      "identity_key": "log-likelihood",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_bbb0475f6d4580dd"
+    },
+    {
+      "mention_id": "ko_mention_dev_032",
+      "original_name": "Log-Likelihood Function",
+      "normalized_name": "log-likelihood function",
+      "identity_key": "log-likelihood function",
+      "type": "Formula",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_929d22359916561c"
+    },
+    {
+      "mention_id": "ko_mention_dev_033",
+      "original_name": "Maximum Likelihood Estimation",
+      "normalized_name": "maximum likelihood estimation",
+      "identity_key": "maximum likelihood estimation",
+      "type": "Method",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_841fbe3386633dcb"
+    },
+    {
+      "mention_id": "ko_mention_dev_034",
+      "original_name": "MLE Estimator",
+      "normalized_name": "mle estimator",
+      "identity_key": "mle estimator",
+      "type": "Formula",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_93ea96df43027e6f"
+    },
+    {
+      "mention_id": "ko_mention_dev_035",
+      "original_name": "Newton's Method",
+      "normalized_name": "newton's method",
+      "identity_key": "newton's method",
+      "type": "Method",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_aa23e4a1261a6211"
+    },
+    {
+      "mention_id": "ko_mention_dev_036",
+      "original_name": "Score Equation",
+      "normalized_name": "score equation",
+      "identity_key": "score equation",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_9d751867a818492e"
+    },
+    {
+      "mention_id": "ko_mention_dev_037",
+      "original_name": "Score Function",
+      "normalized_name": "score function",
+      "identity_key": "score function",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_a051a8357800dcc1"
+    },
+    {
+      "mention_id": "ko_mention_dev_038",
+      "original_name": "Score Function Formula",
+      "normalized_name": "score function formula",
+      "identity_key": "score function formula",
+      "type": "Formula",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_d6a1f1f922c2d8f3"
+    },
+    {
+      "mention_id": "ko_mention_dev_039",
+      "original_name": "Statistical Model",
+      "normalized_name": "statistical model",
+      "identity_key": "statistical model",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_f259e9495a4fec88"
+    }
+  ]
+}

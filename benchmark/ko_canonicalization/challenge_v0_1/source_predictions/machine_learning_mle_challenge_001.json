@@ -1,0 +1,18 @@
+{
+  "lecture_id": "machine_learning_mle_challenge_001",
+  "split": "development",
+  "knowledge_objects": [
+    {
+      "id": "mle",
+      "name": "MLE",
+      "type": "Method",
+      "source_span": "MLE is used to fit a probabilistic model by maximizing its likelihood function on observed training data."
+    },
+    {
+      "id": "likelihood_function",
+      "name": "Likelihood Function",
+      "type": "Concept",
+      "source_span": "The likelihood function assigns each candidate parameter value a score determined by the fixed observations."
+    }
+  ]
+}
