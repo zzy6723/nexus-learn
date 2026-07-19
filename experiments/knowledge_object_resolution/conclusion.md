@@ -38,3 +38,14 @@ The next iteration should be narrowly scoped to evidence transport:
 
 This is an engineering interface correction, not a reason to weaken source
 grounding or reinterpret the failed run as a semantic success.
+
+## Remediation Status
+
+002C-4 implements this interface correction as a separate v0.2 method
+candidate. Candidate-scoped lecture blocks receive opaque evidence IDs; the
+model selects IDs, and the runner mechanically restores exact lecture spans.
+Static, regression, challenge dry-run, and former-failure dry-run checks pass.
+
+The method has not yet completed a formal API run. Even if it passes the
+authored challenge and the former failure case, those results are development
+evidence only. Production selection still requires a newly frozen source.

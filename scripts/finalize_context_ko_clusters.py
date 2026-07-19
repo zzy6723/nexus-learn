@@ -26,7 +26,7 @@ from scripts.run_deterministic_ko_canonicalization import (
 
 
 FINALIZER_VERSION = "context_ko_cluster_finalizer_v0.1"
-METHOD_ID = "candidate_scoped_context_resolution_v0_1"
+DEFAULT_METHOD_ID = "candidate_scoped_context_resolution_v0_1"
 
 
 class ClusterFinalizationError(ValueError):
@@ -192,7 +192,8 @@ def provisional_components(
 
 
 def build_cluster_artifacts(
-    inventory: dict[str, Any], groups: dict[str, list[str]], normalization: dict[str, Any]
+    inventory: dict[str, Any], groups: dict[str, list[str]], normalization: dict[str, Any],
+    *, method_id: str = DEFAULT_METHOD_ID, method_version: str = "v0.1",
 ) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
     mentions = inventory["mentions"]
     mention_by_id = {item["mention_id"]: item for item in mentions}
@@ -243,17 +244,17 @@ def build_cluster_artifacts(
         "artifact_type": "ko_canonicalization_prediction", "version": "v0.1",
         "benchmark_split": inventory["benchmark_split"],
         "cluster_order": "ascending_first_mention_inventory_index",
-        "method": {"method_id": METHOD_ID, "version": "v0.1", "merge_rule": "same_object_connected_components", "uses_alias_resource": False},
+        "method": {"method_id": method_id, "version": method_version, "merge_rule": "same_object_connected_components", "uses_alias_resource": False},
         "counts": counts, "clusters": clusters,
     }
     assignment_artifact = {
         "artifact_type": "ko_canonicalization_assignments", "version": "v0.1",
-        "benchmark_split": inventory["benchmark_split"], "method_id": METHOD_ID,
+        "benchmark_split": inventory["benchmark_split"], "method_id": method_id,
         "assignments": assignments,
     }
     audit = {
         "artifact_type": "ko_name_normalization_audit", "version": "v0.1",
-        "benchmark_split": inventory["benchmark_split"], "method_id": METHOD_ID,
+        "benchmark_split": inventory["benchmark_split"], "method_id": method_id,
         "records": audit_records,
     }
     return prediction, assignment_artifact, audit
@@ -307,7 +308,16 @@ def main(argv: list[str] | None = None) -> int:
             atomic_write(paths["pending"], pending)
             print("Cluster finalization pending adjudication.")
             return 2
-        prediction, assignments, audit = build_cluster_artifacts(inventory, groups, normalization)
+        method_id = resolution_metadata.get("method_id", DEFAULT_METHOD_ID)
+        if not isinstance(method_id, str) or not method_id.strip():
+            raise ClusterFinalizationError("Resolution metadata has no valid method_id.")
+        method_version = resolution_metadata.get("version", "v0.1")
+        if not isinstance(method_version, str) or not method_version.strip():
+            raise ClusterFinalizationError("Resolution metadata has no valid version.")
+        prediction, assignments, audit = build_cluster_artifacts(
+            inventory, groups, normalization,
+            method_id=method_id, method_version=method_version,
+        )
         atomic_write(paths["prediction"], prediction)
         atomic_write(paths["assignments"], assignments)
         atomic_write(paths["audit"], audit)
@@ -323,7 +333,7 @@ def main(argv: list[str] | None = None) -> int:
         )
         metadata = {
             "artifact_type": "ko_canonicalization_run_metadata", "version": "v0.1",
-            "run_status": "completed", "method_id": METHOD_ID,
+            "run_status": "completed", "method_id": method_id,
             "method_commit": resolution_metadata["method_commit"],
             "git_commit_at_start": resolution_metadata["git_commit_at_start"],
             "git_dirty_at_start": resolution_metadata["git_dirty_at_start"],
@@ -338,7 +348,7 @@ def main(argv: list[str] | None = None) -> int:
         atomic_write(paths["metadata"], metadata)
         marker = {
             "artifact_type": "ko_canonicalization_generation_complete", "version": "v0.1",
-            "status": "final", "method_id": METHOD_ID,
+            "status": "final", "method_id": method_id,
             "method_commit": resolution_metadata["method_commit"],
             "artifacts": {
                 "canonical_clusters": binding(paths["prediction"]),

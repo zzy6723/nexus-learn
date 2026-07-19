@@ -44,6 +44,11 @@ Experiment 002C is therefore complete with partial feasibility. The identity
 architecture is retained, but no production canonicalizer is selected. The
 full interpretation and next validation boundary are in `conclusion.md`.
 
+An evidence-transport remediation is now implemented under
+`002c_4_evidence_id_resolution/`. It is a new development method candidate,
+not a reinterpretation of the failed 002C-3 run. Formal API execution and a
+newly frozen validation source remain pending.
+
 ## Programme Boundary
 
 Experiment 002C does not classify typed Relations, generate candidate edges, or
