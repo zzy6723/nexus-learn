@@ -1,6 +1,12 @@
-# Evidence-ID Context Resolution Contract v0.2
+# Evidence-ID Context Resolution Contract v0.2.1
 
 **Status:** Development method candidate
+
+v0.2.1 corrects the paragraph partitioner so that a final block followed by a
+single trailing newline remains available in the catalog. The first v0.2
+development run exposed this implementation defect when two Forward Euler
+formula blocks were omitted. Identity labels and prompt semantics are
+unchanged.
 
 ## Purpose
 

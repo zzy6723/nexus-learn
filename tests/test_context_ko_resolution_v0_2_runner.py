@@ -55,7 +55,7 @@ class ContextKOResolutionV02RunnerTest(unittest.TestCase):
         }
 
     def test_exact_block_catalog_preserves_latex_source_bytes(self) -> None:
-        text = "The gradient \\(\\nabla f(x)\\) is exact.\n\n\\[x_{k+1}=x_k\\]"
+        text = "The gradient \\(\\nabla f(x)\\) is exact.\n\n\\[\nx_{k+1}=x_k\n\\]\n"
         candidate = {
             "mention_a": {"lecture_id": "lecture_1"},
             "mention_b": {"lecture_id": "lecture_1"},
@@ -65,6 +65,7 @@ class ContextKOResolutionV02RunnerTest(unittest.TestCase):
         self.assertEqual(len(catalog), 2)
         self.assertEqual(catalog[0]["evidence_id"], "evidence_001")
         self.assertIn(r"\(\nabla f(x)\)", catalog[0]["span"])
+        self.assertEqual(catalog[1]["span"], "\\[\nx_{k+1}=x_k\n\\]")
         self.assertTrue(all(item["span"] in text for item in catalog))
 
     def test_dry_run_exposes_catalog_and_not_free_form_output_contract(self) -> None:
@@ -103,7 +104,7 @@ class ContextKOResolutionV02RunnerTest(unittest.TestCase):
                 self.assertIn(evidence["span"], lecture_by_id[evidence["lecture_id"]])
         metadata = json.loads((run_dir / "metadata" / "run_metadata.json").read_text())
         self.assertEqual(metadata["method_id"], runner.METHOD_ID)
-        self.assertEqual(metadata["evidence_transport"], "candidate_scoped_opaque_ids_v0_2")
+        self.assertEqual(metadata["evidence_transport"], "candidate_scoped_opaque_ids_v0_2_1")
 
     def test_unknown_evidence_id_fails_closed(self) -> None:
         def unknown_id(*, api_key, payload):
@@ -155,7 +156,7 @@ class ContextKOResolutionV02RunnerTest(unittest.TestCase):
         clusters = json.loads((cluster_dir / "canonical_clusters.json").read_text())
         metadata = json.loads((cluster_dir / "metadata.json").read_text())
         self.assertEqual(clusters["method"]["method_id"], runner.METHOD_ID)
-        self.assertEqual(clusters["method"]["version"], "v0.2")
+        self.assertEqual(clusters["method"]["version"], "v0.2.1")
         self.assertEqual(metadata["method_id"], runner.METHOD_ID)
 
 

@@ -1,6 +1,6 @@
 # Experiment 002C-4: Evidence-ID Remediation
 
-**Status:** Infrastructure implemented; formal development execution pending
+**Status:** v0.2.1 implementation ready for a new formal development run
 
 ## Question
 
@@ -26,4 +26,17 @@ free-form Unicode/LaTeX evidence-copy failures?
 5. The former 002C-3 failure case can complete as a development diagnostic.
 
 Passing these gates does not validate generalization. A new source must be
-frozen before v0.2 can become the selected canonicalization method.
+frozen before v0.2.1 can become the selected canonicalization method.
+
+## v0.2 Development Finding
+
+The first formal v0.2 runs completed and fixed the original Unicode/LaTeX copy
+failure. Post-run evidence review found that the deterministic partitioner had
+omitted display-math blocks at end of file when the source ended with a single
+newline. The formula identity decision remained correct, but its selected
+evidence was not self-contained because the required formula blocks were not
+available to the model.
+
+The failed catalog assumption is retained as development evidence. v0.2.1
+fixes the partitioner and requires a new method commit and new run directories;
+the v0.2 artifacts must not be overwritten.

@@ -45,8 +45,8 @@ DEFAULT_PROMPT = (
     / "prompt.md"
 )
 DEFAULT_MODEL = "deepseek-v4-flash"
-RUNNER_VERSION = "context_ko_resolution_runner_v0.2"
-METHOD_ID = "candidate_scoped_context_resolution_evidence_ids_v0_2"
+RUNNER_VERSION = "context_ko_resolution_runner_v0.2.1"
+METHOD_ID = "candidate_scoped_context_resolution_evidence_ids_v0_2_1"
 DECISIONS = {"SAME_OBJECT", "DISTINCT_OBJECT", "UNRESOLVED"}
 
 
@@ -70,14 +70,19 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
 def exact_text_blocks(text: str) -> list[str]:
     """Return non-empty paragraph blocks without changing their source bytes."""
     blocks = []
-    for match in re.finditer(r"\S(?:.*?\S)?(?=\n[ \t]*\n|\Z)", text, re.DOTALL):
-        span = match.group(0)
-        if span and span not in blocks:
-            blocks.append(span)
-    if not blocks and text.strip():
-        start = len(text) - len(text.lstrip())
-        end = len(text.rstrip())
-        blocks.append(text[start:end])
+    start = 0
+    separators = list(re.finditer(r"\n[ \t]*\n", text))
+    for separator in [*separators, None]:
+        end = separator.start() if separator is not None else len(text)
+        raw_block = text[start:end]
+        left = len(raw_block) - len(raw_block.lstrip())
+        right = len(raw_block.rstrip())
+        if left < right:
+            span = raw_block[left:right]
+            if span not in blocks:
+                blocks.append(span)
+        if separator is not None:
+            start = separator.end()
     return blocks
 
 
@@ -252,7 +257,7 @@ def run(
             )
         aggregate_metadata = {
             "artifact_type": "ko_context_resolution_run_metadata",
-            "version": "v0.2",
+            "version": "v0.2.1",
             "run_id": args.run_id,
             "run_status": "dry_run_complete" if args.dry_run else "running",
             "method_id": METHOD_ID,
@@ -260,7 +265,7 @@ def run(
             "git_commit_at_start": commit,
             "git_dirty_at_start": dirty,
             "request_partitioning": "one_identity_candidate_per_request_v0_1",
-            "evidence_transport": "candidate_scoped_opaque_ids_v0_2",
+            "evidence_transport": "candidate_scoped_opaque_ids_v0_2_1",
             "request_parameters": {
                 "model": args.model, "temperature": args.temperature, "top_p": args.top_p,
                 "max_tokens": args.max_tokens, "response_format": {"type": "json_object"},
@@ -339,7 +344,7 @@ def run(
             write_json(targets["metadata"], pair_metadata)
             results.append(materialized)
         output = {
-            "artifact_type": "ko_context_identity_decisions", "version": "v0.2",
+            "artifact_type": "ko_context_identity_decisions", "version": "v0.2.1",
             "method_id": METHOD_ID, "results": results,
         }
         write_json(aggregate_paths["output"], output)
@@ -356,7 +361,7 @@ def run(
         write_json(
             aggregate_paths["completion"],
             {
-                "artifact_type": "ko_context_resolution_complete", "version": "v0.2",
+                "artifact_type": "ko_context_resolution_complete", "version": "v0.2.1",
                 "status": "final", "method_id": METHOD_ID,
                 "method_commit": args.method_commit,
                 "artifacts": {

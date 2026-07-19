@@ -41,11 +41,18 @@ grounding or reinterpret the failed run as a semantic success.
 
 ## Remediation Status
 
-002C-4 implements this interface correction as a separate v0.2 method
-candidate. Candidate-scoped lecture blocks receive opaque evidence IDs; the
-model selects IDs, and the runner mechanically restores exact lecture spans.
-Static, regression, challenge dry-run, and former-failure dry-run checks pass.
+002C-4 implements this interface correction as a separate evidence-ID method
+candidate. Candidate-scoped lecture blocks receive opaque IDs; the model
+selects IDs, and the runner mechanically restores exact lecture spans.
 
-The method has not yet completed a formal API run. Even if it passes the
-authored challenge and the former failure case, those results are development
-evidence only. Production selection still requires a newly frozen source.
+Formal v0.2 development runs completed both the authored challenge and the
+former 002C-3 failure bundle. Identity and cluster metrics passed, and the
+Unicode/LaTeX copying failure disappeared. Post-run semantic evidence review
+then found that the partitioner omitted final display-math blocks when a
+lecture ended with a single trailing newline. One Formula identity decision
+was correct but its available evidence could not be self-contained.
+
+v0.2.1 fixes that implementation defect and is pending a new formal
+development run. The earlier runs remain diagnostic history and must not be
+overwritten. Even after development passes, production selection requires a
+newly frozen source.
