@@ -1,0 +1,28 @@
+{
+  "id": "0fb566af-29a4-4506-a705-dd1de1329f77",
+  "object": "chat.completion",
+  "created": 1784469619,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"candidate_id\": \"ko_identity_candidate_004\",\n  \"mention_a\": \"ko_mention_dev_004\",\n  \"mention_b\": \"ko_mention_dev_008\",\n  \"decision\": \"SAME_OBJECT\",\n  \"evidence_ids\": [\"evidence_001\", \"evidence_002\"],\n  \"rationale\": \"Both mentions refer to the same statistical method (Maximum Likelihood Estimation) used to estimate model parameters by maximizing the likelihood function. The first uses the full name, the second uses the abbreviation MLE. Both are of type Method and describe the same core concept.\"\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 736,
+    "completion_tokens": 126,
+    "total_tokens": 862,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 96
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

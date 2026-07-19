@@ -1,0 +1,33 @@
+{
+  "artifact_type": "ko_resolution_evidence_semantic_audit",
+  "version": "v0.1",
+  "status": "final",
+  "data_role": "development_challenge",
+  "method_id": "candidate_scoped_context_resolution_evidence_ids_v0_2",
+  "prediction_sha256": "c9ed23a2a2775cd59f9c4aff422d8eb937d635fbd7bf087033db4eeb10b292b2",
+  "review_rule": "Selected materialized spans, read together, must identify both mentions or make the identity decision unambiguous without omitted text.",
+  "counts": {
+    "reviewed_candidates": 11,
+    "supported": 10,
+    "not_supported": 1,
+    "pending": 0
+  },
+  "supported_candidate_ids": [
+    "ko_identity_candidate_001",
+    "ko_identity_candidate_002",
+    "ko_identity_candidate_003",
+    "ko_identity_candidate_004",
+    "ko_identity_candidate_005",
+    "ko_identity_candidate_006",
+    "ko_identity_candidate_007",
+    "ko_identity_candidate_008",
+    "ko_identity_candidate_009",
+    "ko_identity_candidate_010"
+  ],
+  "not_supported": [
+    {
+      "candidate_id": "ko_identity_candidate_011",
+      "rationale": "The identity decision is correct, but the catalog omitted both final display-math blocks. The selected narrative spans end with 'applying' and 'update is' and do not contain the formula needed to support Formula identity."
+    }
+  ]
+}

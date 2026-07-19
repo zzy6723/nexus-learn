@@ -1,0 +1,21 @@
+{
+  "candidate_id": "ko_identity_candidate_001",
+  "mention_a": "ko_mention_dev_003",
+  "mention_b": "ko_mention_dev_010",
+  "decision": "SAME_OBJECT",
+  "evidence_ids": [
+    "evidence_001",
+    "evidence_008"
+  ],
+  "rationale": "Both mentions refer to the gradient of a scalar-valued function, a fundamental concept in multivariable calculus. Evidence_001 defines the gradient as a vector of partial derivatives, and evidence_008 expresses the gradient of a composite function using the chain rule. The concept is identical across lectures.",
+  "evidence_spans": [
+    {
+      "lecture_id": "calculus_001",
+      "span": "Let \\(f:\\mathbb{R}^n \\to \\mathbb{R}\\) be a differentiable scalar-valued function. A partial derivative measures how \\(f\\) changes when one coordinate changes while the other coordinates are held fixed. The gradient \\(\\nabla f(x)\\) collects these partial derivatives into a vector. For a unit direction \\(u\\), the directional derivative is \\(\\nabla f(x)\\cdot u\\), so the gradient points in the direction of steepest local increase. A point where the gradient is the zero vector is called a stationary point."
+    },
+    {
+      "lecture_id": "calculus_002",
+      "span": "\\[\n\\nabla h(x) = J_g(x)^\\top \\nabla f(g(x)).\n\\]"
+    }
+  ]
+}

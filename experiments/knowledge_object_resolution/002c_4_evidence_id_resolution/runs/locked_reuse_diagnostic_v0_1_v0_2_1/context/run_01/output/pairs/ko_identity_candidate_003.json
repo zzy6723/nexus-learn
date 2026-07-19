@@ -1,0 +1,21 @@
+{
+  "candidate_id": "ko_identity_candidate_003",
+  "mention_a": "ko_mention_dev_004",
+  "mention_b": "ko_mention_dev_020",
+  "decision": "DISTINCT_OBJECT",
+  "evidence_ids": [
+    "evidence_004",
+    "evidence_006"
+  ],
+  "rationale": "Hessian Matrix is a specific matrix of second-order partial derivatives used in calculus to describe curvature, while Matrix in linear algebra is a general rectangular array representing linear transformations. They are different concepts at different granularities and contexts.",
+  "evidence_spans": [
+    {
+      "lecture_id": "calculus_001",
+      "span": "For twice differentiable functions, a second-order approximation also includes the Hessian matrix, which describes local curvature. These approximations are useful because they turn a complicated function into a local linear or quadratic model. In optimization, this local model helps explain why the gradient gives a useful direction for changing the input."
+    },
+    {
+      "lecture_id": "linear_algebra_001",
+      "span": "A matrix is a rectangular array of numbers that can represent a linear transformation once bases have been chosen for the input and output spaces. Matrix multiplication corresponds to composing linear transformations, and changing a basis changes the matrix representation without changing the underlying transformation."
+    }
+  ]
+}

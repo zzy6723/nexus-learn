@@ -1,0 +1,21 @@
+{
+  "candidate_id": "ko_identity_candidate_002",
+  "mention_a": "ko_mention_dev_003",
+  "mention_b": "ko_mention_dev_032",
+  "decision": "SAME_OBJECT",
+  "evidence_ids": [
+    "evidence_001",
+    "evidence_006"
+  ],
+  "rationale": "Both mentions refer to the gradient of a differentiable function, defined as a vector of partial derivatives, used in calculus and optimization contexts. Evidence shows identical mathematical definition and notation.",
+  "evidence_spans": [
+    {
+      "lecture_id": "calculus_001",
+      "span": "Let \\(f:\\mathbb{R}^n \\to \\mathbb{R}\\) be a differentiable scalar-valued function. A partial derivative measures how \\(f\\) changes when one coordinate changes while the other coordinates are held fixed. The gradient \\(\\nabla f(x)\\) collects these partial derivatives into a vector. For a unit direction \\(u\\), the directional derivative is \\(\\nabla f(x)\\cdot u\\), so the gradient points in the direction of steepest local increase. A point where the gradient is the zero vector is called a stationary point."
+    },
+    {
+      "lecture_id": "optimisation_001",
+      "span": "If \\(f\\) is differentiable, the gradient \\(\\nabla f(x)\\) describes local change. The negative gradient \\(-\\nabla f(x)\\) is a descent direction because it points toward the direction of steepest local decrease. Gradient descent is a first-order iterative method that repeatedly moves in this direction:"
+    }
+  ]
+}

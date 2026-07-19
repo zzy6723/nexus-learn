@@ -1,0 +1,25 @@
+{
+  "artifact_type": "ko_canonicalization_generation_complete",
+  "version": "v0.1",
+  "status": "final",
+  "method_id": "candidate_scoped_context_resolution_evidence_ids_v0_2",
+  "method_commit": "57c23bd2e088e60f6d530d1bb6ba38dcacae78b0",
+  "artifacts": {
+    "canonical_clusters": {
+      "path": "experiments/knowledge_object_resolution/002c_4_evidence_id_resolution/runs/locked_reuse_diagnostic_v0_1/clusters/run_01/canonical_clusters.json",
+      "sha256": "fba58c966d745715dde7187accf9bb09df2c939890d3c7a4f347922b5191f947"
+    },
+    "mention_assignments": {
+      "path": "experiments/knowledge_object_resolution/002c_4_evidence_id_resolution/runs/locked_reuse_diagnostic_v0_1/clusters/run_01/mention_assignments.json",
+      "sha256": "e0a3c96dc39957a4ef5bc233d2f04893451fd6ff5de686b71b55850cbebfe19a"
+    },
+    "normalization_audit": {
+      "path": "experiments/knowledge_object_resolution/002c_4_evidence_id_resolution/runs/locked_reuse_diagnostic_v0_1/clusters/run_01/normalization_audit.json",
+      "sha256": "3b6b804a9a28ddc57dc963b5e0fce3998036930d1cefa872d189124abf2c5a31"
+    },
+    "metadata": {
+      "path": "experiments/knowledge_object_resolution/002c_4_evidence_id_resolution/runs/locked_reuse_diagnostic_v0_1/clusters/run_01/metadata.json",
+      "sha256": "5e21646aa1bd170615c58a308440f0852ec5f0db5d69b3f8f35d5f22bb77f646"
+    }
+  }
+}

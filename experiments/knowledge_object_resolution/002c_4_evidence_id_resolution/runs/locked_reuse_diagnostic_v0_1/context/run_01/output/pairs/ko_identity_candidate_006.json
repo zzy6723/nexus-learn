@@ -1,0 +1,21 @@
+{
+  "candidate_id": "ko_identity_candidate_006",
+  "mention_a": "ko_mention_dev_011",
+  "mention_b": "ko_mention_dev_020",
+  "decision": "DISTINCT_OBJECT",
+  "evidence_ids": [
+    "evidence_002",
+    "evidence_006"
+  ],
+  "rationale": "Jacobian Matrix is a specific type of matrix used in calculus to represent derivatives, while Matrix in linear algebra is a general rectangular array representing linear transformations. They differ in type and context, and are not the same educational object.",
+  "evidence_spans": [
+    {
+      "lecture_id": "calculus_002",
+      "span": "For a differentiable vector-valued function \\(g\\), the Jacobian matrix \\(J_g(x)\\) collects all first-order partial derivatives of the output components of \\(g\\). It gives the best local linear approximation to \\(g\\) near \\(x\\)."
+    },
+    {
+      "lecture_id": "linear_algebra_001",
+      "span": "A matrix is a rectangular array of numbers that can represent a linear transformation once bases have been chosen for the input and output spaces. Matrix multiplication corresponds to composing linear transformations, and changing a basis changes the matrix representation without changing the underlying transformation."
+    }
+  ]
+}

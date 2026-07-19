@@ -1,0 +1,23 @@
+{
+  "model": "deepseek-v4-flash",
+  "messages": [
+    {
+      "role": "system",
+      "content": "# Context-Aware Knowledge Object Identity Resolver v0.2\n\nDecide whether two lecture-local Knowledge Object mentions denote the same\neducational object at the same granularity.\n\nThe candidate pair is unordered. Use both names, Knowledge Object types,\nupstream source spans, and the supplied evidence catalog. Return exactly one\nJSON object with:\n\n```json\n{\n  \"candidate_id\": \"copy exactly\",\n  \"mention_a\": \"copy exactly\",\n  \"mention_b\": \"copy exactly\",\n  \"decision\": \"SAME_OBJECT | DISTINCT_OBJECT | UNRESOLVED\",\n  \"evidence_ids\": [\"copy one or more supplied evidence IDs\"],\n  \"rationale\": \"short semantic identity explanation\"\n}\n```\n\nDecision rules:\n\n- `SAME_OBJECT`: both mentions denote the same educational object and have the\n  same granularity. Abbreviations, orthographic variants, descriptive\n  qualifiers, and symbolic/natural-language names may still be the same.\n- `DISTINCT_OBJECT`: the mentions denote different objects, even if their names\n  are identical or they are closely related in the subject.\n- `UNRESOLVED`: the supplied evidence is insufficient to make either decision\n  safely. Prefer this over an unsupported merge.\n\nIdentity is stricter than topical relatedness. A Method and its Formula, a\nConcept and its formal expression, or two domain-specific senses of the same\nword are not the same object. Matching type alone is not evidence of identity.\n\nFor a resolved decision, select only IDs present in `evidence_catalog`. Read\nthe selected entries together: they must make the identity decision\nunderstandable. Do not copy evidence text into the response and do not invent\nIDs. For `UNRESOLVED`, an empty evidence list is allowed. Return JSON only.\n"
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"candidate_id\": \"ko_identity_candidate_005\",\n  \"unordered_mentions\": [\n    {\n      \"mention_id\": \"ko_mention_dev_004\",\n      \"lecture_id\": \"econometrics_mle_challenge_001\",\n      \"name\": \"Maximum-Likelihood Estimation\",\n      \"type\": \"Method\",\n      \"upstream_source_spans\": [\n        \"Maximum-Likelihood Estimation estimates an econometric model by maximizing the likelihood of the observed sample.\"\n      ]\n    },\n    {\n      \"mention_id\": \"ko_mention_dev_020\",\n      \"lecture_id\": \"statistics_mle_challenge_001\",\n      \"name\": \"Maximum Likelihood Estimation\",\n      \"type\": \"Method\",\n      \"upstream_source_spans\": [\n        \"Maximum Likelihood Estimation selects parameter values that maximize the likelihood.\"\n      ]\n    }\n  ],\n  \"evidence_catalog\": [\n    {\n      \"evidence_id\": \"evidence_001\",\n      \"lecture_id\": \"econometrics_mle_challenge_001\",\n      \"span\": \"Maximum-Likelihood Estimation estimates an econometric model by maximizing the likelihood of the observed sample. The likelihood is viewed as a function of the model parameters with the sample held fixed.\"\n    },\n    {\n      \"evidence_id\": \"evidence_002\",\n      \"lecture_id\": \"statistics_mle_challenge_001\",\n      \"span\": \"Maximum Likelihood Estimation selects parameter values that maximize the likelihood. The likelihood compares parameter values after the observed data are held fixed. An MLE estimator may be written as\"\n    },\n    {\n      \"evidence_id\": \"evidence_003\",\n      \"lecture_id\": \"statistics_mle_challenge_001\",\n      \"span\": \"\\\\[\\n\\\\widehat{\\\\theta}_{\\\\mathrm{MLE}} = \\\\operatorname*{arg\\\\,max}_{\\\\theta} L(\\\\theta;x).\\n\\\\]\"\n    }\n  ]\n}"
+    }
+  ],
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "max_tokens": 1200,
+  "stream": false,
+  "response_format": {
+    "type": "json_object"
+  },
+  "thinking": {
+    "type": "disabled"
+  }
+}

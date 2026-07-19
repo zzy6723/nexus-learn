@@ -1,0 +1,146 @@
+{
+  "artifact_type": "ko_context_decision_audit",
+  "version": "v0.1",
+  "prediction_sha256": "7cefe60a22c340de445cae69a5c1e676e951688653a999cb8f292473d9598640",
+  "adjudicated_decision_count": 0,
+  "unresolved_count": 0,
+  "inconsistent_component_count": 0,
+  "decisions": [
+    {
+      "candidate_id": "ko_identity_candidate_001",
+      "mention_a": "ko_mention_dev_003",
+      "mention_b": "ko_mention_dev_010",
+      "decision": "SAME_OBJECT",
+      "evidence_ids": [
+        "evidence_001",
+        "evidence_004",
+        "evidence_007"
+      ],
+      "rationale": "Both mentions refer to the gradient of a scalar-valued function, a fundamental concept in multivariable calculus. Evidence shows the gradient is defined in lecture 1 and used in the chain rule in lecture 2, confirming the same object.",
+      "evidence_spans": [
+        {
+          "lecture_id": "calculus_001",
+          "span": "Let \\(f:\\mathbb{R}^n \\to \\mathbb{R}\\) be a differentiable scalar-valued function. A partial derivative measures how \\(f\\) changes when one coordinate changes while the other coordinates are held fixed. The gradient \\(\\nabla f(x)\\) collects these partial derivatives into a vector. For a unit direction \\(u\\), the directional derivative is \\(\\nabla f(x)\\cdot u\\), so the gradient points in the direction of steepest local increase. A point where the gradient is the zero vector is called a stationary point."
+        },
+        {
+          "lecture_id": "calculus_002",
+          "span": "Let \\(g:\\mathbb{R}^m \\to \\mathbb{R}^n\\) and \\(f:\\mathbb{R}^n \\to \\mathbb{R}\\) be differentiable functions. The composite function \\(h = f \\circ g\\) maps an input \\(x \\in \\mathbb{R}^m\\) to \\(f(g(x))\\). The chain rule describes how the derivative of the composite function depends on the derivatives of \\(f\\) and \\(g\\)."
+        },
+        {
+          "lecture_id": "calculus_002",
+          "span": "\\[\n\\nabla h(x) = J_g(x)^\\top \\nabla f(g(x)).\n\\]"
+        }
+      ]
+    },
+    {
+      "candidate_id": "ko_identity_candidate_002",
+      "mention_a": "ko_mention_dev_003",
+      "mention_b": "ko_mention_dev_032",
+      "decision": "SAME_OBJECT",
+      "evidence_ids": [
+        "evidence_001",
+        "evidence_005"
+      ],
+      "rationale": "Both mentions refer to the gradient of a differentiable function, defined as a vector of partial derivatives, used in calculus and optimization contexts. The evidence shows identical mathematical definition and notation (∇f(x)).",
+      "evidence_spans": [
+        {
+          "lecture_id": "calculus_001",
+          "span": "Let \\(f:\\mathbb{R}^n \\to \\mathbb{R}\\) be a differentiable scalar-valued function. A partial derivative measures how \\(f\\) changes when one coordinate changes while the other coordinates are held fixed. The gradient \\(\\nabla f(x)\\) collects these partial derivatives into a vector. For a unit direction \\(u\\), the directional derivative is \\(\\nabla f(x)\\cdot u\\), so the gradient points in the direction of steepest local increase. A point where the gradient is the zero vector is called a stationary point."
+        },
+        {
+          "lecture_id": "optimisation_001",
+          "span": "If \\(f\\) is differentiable, the gradient \\(\\nabla f(x)\\) describes local change. The negative gradient \\(-\\nabla f(x)\\) is a descent direction because it points toward the direction of steepest local decrease. Gradient descent is a first-order iterative method that repeatedly moves in this direction:"
+        }
+      ]
+    },
+    {
+      "candidate_id": "ko_identity_candidate_003",
+      "mention_a": "ko_mention_dev_004",
+      "mention_b": "ko_mention_dev_020",
+      "decision": "DISTINCT_OBJECT",
+      "evidence_ids": [
+        "evidence_001",
+        "evidence_005"
+      ],
+      "rationale": "Hessian Matrix is a specific matrix of second-order partial derivatives used in calculus, while Matrix is a general rectangular array representing linear transformations in linear algebra. They are different concepts at different granularities.",
+      "evidence_spans": [
+        {
+          "lecture_id": "calculus_001",
+          "span": "Let \\(f:\\mathbb{R}^n \\to \\mathbb{R}\\) be a differentiable scalar-valued function. A partial derivative measures how \\(f\\) changes when one coordinate changes while the other coordinates are held fixed. The gradient \\(\\nabla f(x)\\) collects these partial derivatives into a vector. For a unit direction \\(u\\), the directional derivative is \\(\\nabla f(x)\\cdot u\\), so the gradient points in the direction of steepest local increase. A point where the gradient is the zero vector is called a stationary point."
+        },
+        {
+          "lecture_id": "linear_algebra_001",
+          "span": "A matrix is a rectangular array of numbers that can represent a linear transformation once bases have been chosen for the input and output spaces. Matrix multiplication corresponds to composing linear transformations, and changing a basis changes the matrix representation without changing the underlying transformation."
+        }
+      ]
+    },
+    {
+      "candidate_id": "ko_identity_candidate_004",
+      "mention_a": "ko_mention_dev_006",
+      "mention_b": "ko_mention_dev_038",
+      "decision": "SAME_OBJECT",
+      "evidence_ids": [
+        "evidence_001",
+        "evidence_004",
+        "evidence_005"
+      ],
+      "rationale": "Both mentions define 'Stationary Point' as a point where the gradient is zero, and the evidence shows they refer to the same concept in calculus and optimisation contexts.",
+      "evidence_spans": [
+        {
+          "lecture_id": "calculus_001",
+          "span": "Let \\(f:\\mathbb{R}^n \\to \\mathbb{R}\\) be a differentiable scalar-valued function. A partial derivative measures how \\(f\\) changes when one coordinate changes while the other coordinates are held fixed. The gradient \\(\\nabla f(x)\\) collects these partial derivatives into a vector. For a unit direction \\(u\\), the directional derivative is \\(\\nabla f(x)\\cdot u\\), so the gradient points in the direction of steepest local increase. A point where the gradient is the zero vector is called a stationary point."
+        },
+        {
+          "lecture_id": "optimisation_001",
+          "span": "In mathematical optimisation, an objective function assigns a real value to each feasible input. An optimisation problem asks for an input that makes the objective function as small or as large as possible. In an unconstrained minimisation problem, the feasible inputs are usually all points in a space such as \\(\\mathbb{R}^n\\), and the goal is to minimise a differentiable function \\(f(x)\\)."
+        },
+        {
+          "lecture_id": "optimisation_001",
+          "span": "If \\(f\\) is differentiable, the gradient \\(\\nabla f(x)\\) describes local change. The negative gradient \\(-\\nabla f(x)\\) is a descent direction because it points toward the direction of steepest local decrease. Gradient descent is a first-order iterative method that repeatedly moves in this direction:"
+        }
+      ]
+    },
+    {
+      "candidate_id": "ko_identity_candidate_005",
+      "mention_a": "ko_mention_dev_010",
+      "mention_b": "ko_mention_dev_032",
+      "decision": "SAME_OBJECT",
+      "evidence_ids": [
+        "evidence_004",
+        "evidence_006"
+      ],
+      "rationale": "Both mentions refer to the gradient of a scalar-valued function, a fundamental concept in multivariable calculus and optimization. Evidence_004 defines the gradient in the chain rule context, and evidence_006 defines it in optimization, both as the vector of partial derivatives describing local change.",
+      "evidence_spans": [
+        {
+          "lecture_id": "calculus_002",
+          "span": "\\[\n\\nabla h(x) = J_g(x)^\\top \\nabla f(g(x)).\n\\]"
+        },
+        {
+          "lecture_id": "optimisation_001",
+          "span": "If \\(f\\) is differentiable, the gradient \\(\\nabla f(x)\\) describes local change. The negative gradient \\(-\\nabla f(x)\\) is a descent direction because it points toward the direction of steepest local decrease. Gradient descent is a first-order iterative method that repeatedly moves in this direction:"
+        }
+      ]
+    },
+    {
+      "candidate_id": "ko_identity_candidate_006",
+      "mention_a": "ko_mention_dev_011",
+      "mention_b": "ko_mention_dev_020",
+      "decision": "DISTINCT_OBJECT",
+      "evidence_ids": [
+        "evidence_002",
+        "evidence_006"
+      ],
+      "rationale": "Jacobian Matrix is a specific type of matrix used in calculus to represent derivatives, while Matrix in linear algebra is a general rectangular array representing linear transformations. They differ in type and context, and are not the same educational object.",
+      "evidence_spans": [
+        {
+          "lecture_id": "calculus_002",
+          "span": "For a differentiable vector-valued function \\(g\\), the Jacobian matrix \\(J_g(x)\\) collects all first-order partial derivatives of the output components of \\(g\\). It gives the best local linear approximation to \\(g\\) near \\(x\\)."
+        },
+        {
+          "lecture_id": "linear_algebra_001",
+          "span": "A matrix is a rectangular array of numbers that can represent a linear transformation once bases have been chosen for the input and output spaces. Matrix multiplication corresponds to composing linear transformations, and changing a basis changes the matrix representation without changing the underlying transformation."
+        }
+      ]
+    }
+  ]
+}

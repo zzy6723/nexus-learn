@@ -1,0 +1,28 @@
+{
+  "id": "312783e6-3b57-4177-919e-18bd514c90ab",
+  "object": "chat.completion",
+  "created": 1784444185,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"candidate_id\": \"ko_identity_candidate_005\",\n  \"mention_a\": \"ko_mention_dev_004\",\n  \"mention_b\": \"ko_mention_dev_020\",\n  \"decision\": \"SAME_OBJECT\",\n  \"evidence_ids\": [\"evidence_001\", \"evidence_002\"],\n  \"rationale\": \"Both mentions refer to the same statistical method (Maximum Likelihood Estimation) with identical type (Method) and consistent definitions across lectures.\"\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 728,
+    "completion_tokens": 100,
+    "total_tokens": 828,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 344
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

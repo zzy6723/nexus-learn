@@ -1,0 +1,21 @@
+{
+  "candidate_id": "ko_identity_candidate_006",
+  "mention_a": "ko_mention_dev_005",
+  "mention_b": "ko_mention_dev_017",
+  "decision": "DISTINCT_OBJECT",
+  "evidence_ids": [
+    "evidence_001",
+    "evidence_002"
+  ],
+  "rationale": "Both mentions refer to 'Degree' as a Concept, but in different domains: graph theory vs. polynomial algebra. The definitions are distinct and unrelated, so they denote different educational objects.",
+  "evidence_spans": [
+    {
+      "lecture_id": "graph_degree_challenge_001",
+      "span": "The degree of a vertex is the number of edges incident to that vertex in an undirected graph. A vertex is an element of the graph's vertex set."
+    },
+    {
+      "lecture_id": "polynomial_degree_challenge_001",
+      "span": "The degree of a nonzero polynomial is the largest exponent whose coefficient is nonzero. A polynomial is a finite linear combination of nonnegative integer powers of its variable."
+    }
+  ]
+}

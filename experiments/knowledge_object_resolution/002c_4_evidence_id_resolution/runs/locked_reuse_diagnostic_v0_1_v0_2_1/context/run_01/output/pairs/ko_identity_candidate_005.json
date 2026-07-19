@@ -1,0 +1,21 @@
+{
+  "candidate_id": "ko_identity_candidate_005",
+  "mention_a": "ko_mention_dev_010",
+  "mention_b": "ko_mention_dev_032",
+  "decision": "SAME_OBJECT",
+  "evidence_ids": [
+    "evidence_004",
+    "evidence_007"
+  ],
+  "rationale": "Both mentions refer to the gradient of a scalar-valued function, a fundamental concept in multivariable calculus and optimisation. The evidence shows the gradient defined in the context of the chain rule (calculus_002) and as a local change descriptor in optimisation (optimisation_001), which are the same mathematical object.",
+  "evidence_spans": [
+    {
+      "lecture_id": "calculus_002",
+      "span": "\\[\n\\nabla h(x) = J_g(x)^\\top \\nabla f(g(x)).\n\\]"
+    },
+    {
+      "lecture_id": "optimisation_001",
+      "span": "If \\(f\\) is differentiable, the gradient \\(\\nabla f(x)\\) describes local change. The negative gradient \\(-\\nabla f(x)\\) is a descent direction because it points toward the direction of steepest local decrease. Gradient descent is a first-order iterative method that repeatedly moves in this direction:"
+    }
+  ]
+}

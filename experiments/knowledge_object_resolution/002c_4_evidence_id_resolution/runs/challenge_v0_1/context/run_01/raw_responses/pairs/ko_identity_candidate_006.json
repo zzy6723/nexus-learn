@@ -1,0 +1,28 @@
+{
+  "id": "1719cf77-e4ae-4cf9-bafd-5dfc96cb13b0",
+  "object": "chat.completion",
+  "created": 1784444187,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"candidate_id\": \"ko_identity_candidate_006\",\n  \"mention_a\": \"ko_mention_dev_005\",\n  \"mention_b\": \"ko_mention_dev_017\",\n  \"decision\": \"DISTINCT_OBJECT\",\n  \"evidence_ids\": [\"evidence_001\", \"evidence_002\"],\n  \"rationale\": \"Both mentions refer to 'Degree' as a Concept, but in different domains: graph theory vs. polynomial algebra. The definitions are distinct and unrelated, so they denote different educational objects.\"\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 716,
+    "completion_tokens": 112,
+    "total_tokens": 828,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 332
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

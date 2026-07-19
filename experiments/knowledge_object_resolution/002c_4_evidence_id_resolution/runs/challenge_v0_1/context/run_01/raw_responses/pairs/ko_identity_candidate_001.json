@@ -1,0 +1,28 @@
+{
+  "id": "2a9c3450-2905-4f93-b3fe-0c6798e27702",
+  "object": "chat.completion",
+  "created": 1784444174,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"candidate_id\": \"ko_identity_candidate_001\",\n  \"mention_a\": \"ko_mention_dev_001\",\n  \"mention_b\": \"ko_mention_dev_016\",\n  \"decision\": \"SAME_OBJECT\",\n  \"evidence_ids\": [\"evidence_001\", \"evidence_002\", \"evidence_003\"],\n  \"rationale\": \"Both mentions refer to the same mathematical concept: the gradient vector of a differentiable function. Evidence shows identical definition and notation across lectures.\"\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 798,
+    "completion_tokens": 105,
+    "total_tokens": 903,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 798
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

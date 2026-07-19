@@ -1,0 +1,28 @@
+{
+  "id": "6392ca24-a454-4040-b5de-1f1b45d99555",
+  "object": "chat.completion",
+  "created": 1784469632,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"candidate_id\": \"ko_identity_candidate_007\",\n  \"mention_a\": \"ko_mention_dev_007\",\n  \"mention_b\": \"ko_mention_dev_019\",\n  \"decision\": \"SAME_OBJECT\",\n  \"evidence_ids\": [\"evidence_001\", \"evidence_002\"],\n  \"rationale\": \"Both mentions refer to the same statistical concept: the likelihood function used in maximum likelihood estimation. The definitions in the evidence are consistent: 'assigns each candidate parameter value a score' and 'compares parameter values after the observed data are held fixed' describe the same function. The type is Concept in both cases.\"\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 797,
+    "completion_tokens": 137,
+    "total_tokens": 934,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 157
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

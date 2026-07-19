@@ -1,0 +1,21 @@
+{
+  "candidate_id": "ko_identity_candidate_008",
+  "mention_a": "ko_mention_dev_008",
+  "mention_b": "ko_mention_dev_020",
+  "decision": "SAME_OBJECT",
+  "evidence_ids": [
+    "evidence_001",
+    "evidence_002"
+  ],
+  "rationale": "Both mentions refer to the same statistical method: MLE (Maximum Likelihood Estimation). Evidence shows they both involve maximizing the likelihood function to estimate parameters.",
+  "evidence_spans": [
+    {
+      "lecture_id": "machine_learning_mle_challenge_001",
+      "span": "MLE is used to fit a probabilistic model by maximizing its likelihood function on observed training data. The likelihood function assigns each candidate parameter value a score determined by the fixed observations."
+    },
+    {
+      "lecture_id": "statistics_mle_challenge_001",
+      "span": "Maximum Likelihood Estimation selects parameter values that maximize the likelihood. The likelihood compares parameter values after the observed data are held fixed. An MLE estimator may be written as"
+    }
+  ]
+}

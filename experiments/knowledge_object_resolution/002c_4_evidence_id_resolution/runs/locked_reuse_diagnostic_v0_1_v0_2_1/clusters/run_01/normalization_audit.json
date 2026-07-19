@@ -1,0 +1,547 @@
+{
+  "artifact_type": "ko_name_normalization_audit",
+  "version": "v0.1",
+  "benchmark_split": "development",
+  "method_id": "candidate_scoped_context_resolution_evidence_ids_v0_2_1",
+  "records": [
+    {
+      "mention_id": "ko_mention_dev_001",
+      "original_name": "Directional Derivative",
+      "normalized_name": "directional derivative",
+      "identity_key": "context_identity_component",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_4c2ea996c28a8c4e"
+    },
+    {
+      "mention_id": "ko_mention_dev_002",
+      "original_name": "First-Order Taylor Approximation",
+      "normalized_name": "first-order taylor approximation",
+      "identity_key": "context_identity_component",
+      "type": "Formula",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_3ed502b901425782"
+    },
+    {
+      "mention_id": "ko_mention_dev_003",
+      "original_name": "Gradient",
+      "normalized_name": "gradient",
+      "identity_key": "context_identity_component",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_f28779eabae7350d"
+    },
+    {
+      "mention_id": "ko_mention_dev_004",
+      "original_name": "Hessian Matrix",
+      "normalized_name": "hessian matrix",
+      "identity_key": "context_identity_component",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_ce081b1bc247a1fc"
+    },
+    {
+      "mention_id": "ko_mention_dev_005",
+      "original_name": "Partial Derivative",
+      "normalized_name": "partial derivative",
+      "identity_key": "context_identity_component",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_57ad7c99435241ab"
+    },
+    {
+      "mention_id": "ko_mention_dev_006",
+      "original_name": "Stationary Point",
+      "normalized_name": "stationary point",
+      "identity_key": "context_identity_component",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_dcf2336638378786"
+    },
+    {
+      "mention_id": "ko_mention_dev_007",
+      "original_name": "Taylor Approximation",
+      "normalized_name": "taylor approximation",
+      "identity_key": "context_identity_component",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_ee78f25507f3d923"
+    },
+    {
+      "mention_id": "ko_mention_dev_008",
+      "original_name": "Chain Rule",
+      "normalized_name": "chain rule",
+      "identity_key": "context_identity_component",
+      "type": "Method",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_a38ef2e11ace97f7"
+    },
+    {
+      "mention_id": "ko_mention_dev_009",
+      "original_name": "Composite Function",
+      "normalized_name": "composite function",
+      "identity_key": "context_identity_component",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_6973a18070686498"
+    },
+    {
+      "mention_id": "ko_mention_dev_010",
+      "original_name": "Gradient",
+      "normalized_name": "gradient",
+      "identity_key": "context_identity_component",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_f28779eabae7350d"
+    },
+    {
+      "mention_id": "ko_mention_dev_011",
+      "original_name": "Jacobian Matrix",
+      "normalized_name": "jacobian matrix",
+      "identity_key": "context_identity_component",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_6ab18726ec7d9a7b"
+    },
+    {
+      "mention_id": "ko_mention_dev_012",
+      "original_name": "Multivariable Chain Rule Formula",
+      "normalized_name": "multivariable chain rule formula",
+      "identity_key": "context_identity_component",
+      "type": "Formula",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_605d583f25c8dfd7"
+    },
+    {
+      "mention_id": "ko_mention_dev_013",
+      "original_name": "Basis",
+      "normalized_name": "basis",
+      "identity_key": "context_identity_component",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_043460e472d48dcc"
+    },
+    {
+      "mention_id": "ko_mention_dev_014",
+      "original_name": "Characteristic Polynomial",
+      "normalized_name": "characteristic polynomial",
+      "identity_key": "context_identity_component",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_5b31a34eeaf1e0bb"
+    },
+    {
+      "mention_id": "ko_mention_dev_015",
+      "original_name": "Dimension",
+      "normalized_name": "dimension",
+      "identity_key": "context_identity_component",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_95aefa5f4b0cd051"
+    },
+    {
+      "mention_id": "ko_mention_dev_016",
+      "original_name": "Eigenvalue",
+      "normalized_name": "eigenvalue",
+      "identity_key": "context_identity_component",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_984a774e61166898"
+    },
+    {
+      "mention_id": "ko_mention_dev_017",
+      "original_name": "Eigenvalue Equation",
+      "normalized_name": "eigenvalue equation",
+      "identity_key": "context_identity_component",
+      "type": "Formula",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_d2a6911ba2ccd001"
+    },
+    {
+      "mention_id": "ko_mention_dev_018",
+      "original_name": "Eigenvector",
+      "normalized_name": "eigenvector",
+      "identity_key": "context_identity_component",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_f7ca1a46cb89c202"
+    },
+    {
+      "mention_id": "ko_mention_dev_019",
+      "original_name": "Linear Transformation",
+      "normalized_name": "linear transformation",
+      "identity_key": "context_identity_component",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_f50a4c8af41fd553"
+    },
+    {
+      "mention_id": "ko_mention_dev_020",
+      "original_name": "Matrix",
+      "normalized_name": "matrix",
+      "identity_key": "context_identity_component",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_013f65405934ac89"
+    },
+    {
+      "mention_id": "ko_mention_dev_021",
+      "original_name": "Matrix Multiplication",
+      "normalized_name": "matrix multiplication",
+      "identity_key": "context_identity_component",
+      "type": "Method",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_68e073697099e50d"
+    },
+    {
+      "mention_id": "ko_mention_dev_022",
+      "original_name": "Vector Space",
+      "normalized_name": "vector space",
+      "identity_key": "context_identity_component",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_4207ad4f76fe1e29"
+    },
+    {
+      "mention_id": "ko_mention_dev_023",
+      "original_name": "Dot Product",
+      "normalized_name": "dot product",
+      "identity_key": "context_identity_component",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_6e7d4cae7d151e03"
+    },
+    {
+      "mention_id": "ko_mention_dev_024",
+      "original_name": "Inner Product",
+      "normalized_name": "inner product",
+      "identity_key": "context_identity_component",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_202398e08053855c"
+    },
+    {
+      "mention_id": "ko_mention_dev_025",
+      "original_name": "Least Squares Problem",
+      "normalized_name": "least squares problem",
+      "identity_key": "context_identity_component",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_a61370d43a7dfc23"
+    },
+    {
+      "mention_id": "ko_mention_dev_026",
+      "original_name": "Normal Equations",
+      "normalized_name": "normal equations",
+      "identity_key": "context_identity_component",
+      "type": "Formula",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_eb138067cb6f72e9"
+    },
+    {
+      "mention_id": "ko_mention_dev_027",
+      "original_name": "Orthogonal Projection",
+      "normalized_name": "orthogonal projection",
+      "identity_key": "context_identity_component",
+      "type": "Method",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_1d0d993d579107bd"
+    },
+    {
+      "mention_id": "ko_mention_dev_028",
+      "original_name": "Orthogonal Vectors",
+      "normalized_name": "orthogonal vectors",
+      "identity_key": "context_identity_component",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_67901637048d53c4"
+    },
+    {
+      "mention_id": "ko_mention_dev_029",
+      "original_name": "Projection Formula",
+      "normalized_name": "projection formula",
+      "identity_key": "context_identity_component",
+      "type": "Formula",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_24184540a7392cbd"
+    },
+    {
+      "mention_id": "ko_mention_dev_030",
+      "original_name": "Convex Function",
+      "normalized_name": "convex function",
+      "identity_key": "context_identity_component",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_21fa3dab2c9fcaa8"
+    },
+    {
+      "mention_id": "ko_mention_dev_031",
+      "original_name": "Descent Direction",
+      "normalized_name": "descent direction",
+      "identity_key": "context_identity_component",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_0b069c1fbeeeb393"
+    },
+    {
+      "mention_id": "ko_mention_dev_032",
+      "original_name": "Gradient",
+      "normalized_name": "gradient",
+      "identity_key": "context_identity_component",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_f28779eabae7350d"
+    },
+    {
+      "mention_id": "ko_mention_dev_033",
+      "original_name": "Gradient Descent",
+      "normalized_name": "gradient descent",
+      "identity_key": "context_identity_component",
+      "type": "Method",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_f2946c1db3befb67"
+    },
+    {
+      "mention_id": "ko_mention_dev_034",
+      "original_name": "Gradient Descent Update",
+      "normalized_name": "gradient descent update",
+      "identity_key": "context_identity_component",
+      "type": "Formula",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_d086256ce5d1be9e"
+    },
+    {
+      "mention_id": "ko_mention_dev_035",
+      "original_name": "Line Search",
+      "normalized_name": "line search",
+      "identity_key": "context_identity_component",
+      "type": "Method",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_af5e6f0acddaddc5"
+    },
+    {
+      "mention_id": "ko_mention_dev_036",
+      "original_name": "Objective Function",
+      "normalized_name": "objective function",
+      "identity_key": "context_identity_component",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_f58486bd83d7a4a5"
+    },
+    {
+      "mention_id": "ko_mention_dev_037",
+      "original_name": "Optimisation Problem",
+      "normalized_name": "optimisation problem",
+      "identity_key": "context_identity_component",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_e1df1732d8ba7c41"
+    },
+    {
+      "mention_id": "ko_mention_dev_038",
+      "original_name": "Stationary Point",
+      "normalized_name": "stationary point",
+      "identity_key": "context_identity_component",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_dcf2336638378786"
+    },
+    {
+      "mention_id": "ko_mention_dev_039",
+      "original_name": "Step Size",
+      "normalized_name": "step size",
+      "identity_key": "context_identity_component",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_2ffd59014af14b75"
+    },
+    {
+      "mention_id": "ko_mention_dev_040",
+      "original_name": "Unconstrained Minimisation Problem",
+      "normalized_name": "unconstrained minimisation problem",
+      "identity_key": "context_identity_component",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_4f5d21b19c880223"
+    },
+    {
+      "mention_id": "ko_mention_dev_041",
+      "original_name": "Bayes' Rule",
+      "normalized_name": "bayes' rule",
+      "identity_key": "context_identity_component",
+      "type": "Formula",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_0fd0d32071569a18"
+    },
+    {
+      "mention_id": "ko_mention_dev_042",
+      "original_name": "Conditional Probability",
+      "normalized_name": "conditional probability",
+      "identity_key": "context_identity_component",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_e074110852ccd84a"
+    },
+    {
+      "mention_id": "ko_mention_dev_043",
+      "original_name": "Conditional Probability Formula",
+      "normalized_name": "conditional probability formula",
+      "identity_key": "context_identity_component",
+      "type": "Formula",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_86ea8e409ae3910c"
+    },
+    {
+      "mention_id": "ko_mention_dev_044",
+      "original_name": "Expected Value",
+      "normalized_name": "expected value",
+      "identity_key": "context_identity_component",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_f3670e22bee9030f"
+    },
+    {
+      "mention_id": "ko_mention_dev_045",
+      "original_name": "Expected Value Formula",
+      "normalized_name": "expected value formula",
+      "identity_key": "context_identity_component",
+      "type": "Formula",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_7c3fecca8897de1d"
+    },
+    {
+      "mention_id": "ko_mention_dev_046",
+      "original_name": "Probability Distribution",
+      "normalized_name": "probability distribution",
+      "identity_key": "context_identity_component",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_8336818dd7eda5a0"
+    },
+    {
+      "mention_id": "ko_mention_dev_047",
+      "original_name": "Random Variable",
+      "normalized_name": "random variable",
+      "identity_key": "context_identity_component",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_80c508f76ae8e87a"
+    },
+    {
+      "mention_id": "ko_mention_dev_048",
+      "original_name": "Variance",
+      "normalized_name": "variance",
+      "identity_key": "context_identity_component",
+      "type": "Concept",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_cc9b66ff67d375c9"
+    },
+    {
+      "mention_id": "ko_mention_dev_049",
+      "original_name": "Variance Formula",
+      "normalized_name": "variance formula",
+      "identity_key": "context_identity_component",
+      "type": "Formula",
+      "normalization_operations": [
+        "casefold"
+      ],
+      "assigned_cluster_id": "canonical_pred_7dd3856693d168e9"
+    }
+  ]
+}

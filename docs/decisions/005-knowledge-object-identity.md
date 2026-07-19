@@ -78,15 +78,23 @@ returned a Unicode evidence span that was not an exact substring of the bound
 LaTeX lecture text. The strict runner rejected the response before clusters or
 metrics were produced.
 
-This failure does not reverse the identity-model decision. It prevents the
-current resolver implementation from becoming the product default.
+Experiment 002C-4 replaced copied evidence with candidate-scoped opaque IDs.
+The v0.2.1 development method passed the authored challenge and the former
+failure bundle with complete identity precision and recall, exact cluster
+matches, no integrity or provenance failures, and semantically supported exact
+evidence sets. The former failure bundle is development diagnostic data, not an
+unseen holdout.
+
+This evidence supports v0.2.1 as the candidate for independent validation. It
+does not authorize it as the product default.
 
 ## Scope
 
-ADR-005 authorizes the canonical mention/identity data model and continued
-technical validation. It does not authorize the v0.1 resolver as a production
-default, cross-course Relation extraction over canonical endpoints,
-learner-facing Connection ranking, or production identity resolution.
+ADR-005 authorizes the canonical mention/identity data model, the evidence-ID
+transport contract, and continued independent validation. It does not authorize
+v0.1 or v0.2.1 as a production default, cross-course Relation extraction over
+canonical endpoints, learner-facing Connection ranking, or production identity
+resolution.
 
 ## References
 

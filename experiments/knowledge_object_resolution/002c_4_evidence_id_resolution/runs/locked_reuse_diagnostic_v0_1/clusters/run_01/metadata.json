@@ -1,0 +1,41 @@
+{
+  "artifact_type": "ko_canonicalization_run_metadata",
+  "version": "v0.1",
+  "run_status": "completed",
+  "method_id": "candidate_scoped_context_resolution_evidence_ids_v0_2",
+  "method_commit": "57c23bd2e088e60f6d530d1bb6ba38dcacae78b0",
+  "git_commit_at_start": "57c23bd2e088e60f6d530d1bb6ba38dcacae78b0",
+  "git_dirty_at_start": false,
+  "mention_inventory": {
+    "path": "benchmark/ko_canonicalization/locked_reuse_v0_1/mention_inventory.json",
+    "sha256": "17939bc24ae1df16ab36cc34ac00562218e10f5891718bd6186ae691c0545501"
+  },
+  "normalization_config": {
+    "path": "benchmark/ko_name_normalization_v0_1.json",
+    "sha256": "fad01c399f4ef3f3147f136c76579b253f563965a299c1003a91e79baadc3d9e"
+  },
+  "alias_resource": null,
+  "runner": {
+    "path": "scripts/finalize_context_ko_clusters.py",
+    "sha256": "a8e76d2b16c2c142032b5454e28d0c5c64f003de39ae03e2273679e03964d908",
+    "version": "context_ko_cluster_finalizer_v0.1"
+  },
+  "source_resolution": {
+    "path": "experiments/knowledge_object_resolution/002c_4_evidence_id_resolution/runs/locked_reuse_diagnostic_v0_1/context/run_01/output/identity_decisions.json",
+    "sha256": "7cefe60a22c340de445cae69a5c1e676e951688653a999cb8f292473d9598640"
+  },
+  "candidate_bundle": {
+    "path": "experiments/knowledge_object_resolution/002c_3_pipeline_validation/runs/locked_reuse_v0_1/candidates/candidate_pairs.json",
+    "sha256": "0a68d3f287a53f48ba33df493dda023755d91b30b0afe28d665c707b58e46309"
+  },
+  "decision_audit": {
+    "path": "experiments/knowledge_object_resolution/002c_4_evidence_id_resolution/runs/locked_reuse_diagnostic_v0_1/clusters/run_01/decision_audit.json",
+    "sha256": "04b9a239a588fd928c504c935c6168d0a567b49d1c633b091c1778c4a841b56c"
+  },
+  "counts": {
+    "mentions": 49,
+    "clusters": 46,
+    "singleton_clusters": 44,
+    "multi_mention_clusters": 2
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "938ce7ef-6d56-4d21-86c0-898e95dc0359",
+  "object": "chat.completion",
+  "created": 1784470185,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"candidate_id\": \"ko_identity_candidate_004\",\n  \"mention_a\": \"ko_mention_dev_006\",\n  \"mention_b\": \"ko_mention_dev_038\",\n  \"decision\": \"SAME_OBJECT\",\n  \"evidence_ids\": [\"evidence_001\", \"evidence_009\"],\n  \"rationale\": \"Both mentions define 'Stationary Point' as a point where the gradient is zero, and the type is Concept in both lectures. Evidence_001 from calculus_001 and evidence_009 from optimisation_001 provide identical definitions, confirming the same educational object at the same granularity.\"\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1342,
+    "completion_tokens": 130,
+    "total_tokens": 1472,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 958
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

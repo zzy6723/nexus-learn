@@ -1,0 +1,21 @@
+{
+  "candidate_id": "ko_identity_candidate_002",
+  "mention_a": "ko_mention_dev_003",
+  "mention_b": "ko_mention_dev_007",
+  "decision": "SAME_OBJECT",
+  "evidence_ids": [
+    "evidence_001",
+    "evidence_002"
+  ],
+  "rationale": "Both mentions refer to the same concept of likelihood in the context of maximum likelihood estimation, with 'Likelihood' and 'Likelihood Function' being synonymous. The evidence shows they are defined similarly as functions of parameters given fixed data.",
+  "evidence_spans": [
+    {
+      "lecture_id": "econometrics_mle_challenge_001",
+      "span": "Maximum-Likelihood Estimation estimates an econometric model by maximizing the likelihood of the observed sample. The likelihood is viewed as a function of the model parameters with the sample held fixed."
+    },
+    {
+      "lecture_id": "machine_learning_mle_challenge_001",
+      "span": "MLE is used to fit a probabilistic model by maximizing its likelihood function on observed training data. The likelihood function assigns each candidate parameter value a score determined by the fixed observations."
+    }
+  ]
+}

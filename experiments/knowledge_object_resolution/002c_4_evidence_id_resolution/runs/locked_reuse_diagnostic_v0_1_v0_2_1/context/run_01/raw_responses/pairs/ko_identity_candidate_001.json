@@ -1,0 +1,28 @@
+{
+  "id": "d57ed849-95d7-443a-ab8e-b6a85e7576a9",
+  "object": "chat.completion",
+  "created": 1784470175,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"candidate_id\": \"ko_identity_candidate_001\",\n  \"mention_a\": \"ko_mention_dev_003\",\n  \"mention_b\": \"ko_mention_dev_010\",\n  \"decision\": \"SAME_OBJECT\",\n  \"evidence_ids\": [\"evidence_001\", \"evidence_008\"],\n  \"rationale\": \"Both mentions refer to the gradient of a scalar-valued function, a fundamental concept in multivariable calculus. Evidence_001 defines the gradient as a vector of partial derivatives, and evidence_008 expresses the gradient of a composite function using the chain rule. The concept is identical across lectures.\"\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1336,
+    "completion_tokens": 130,
+    "total_tokens": 1466,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 952
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

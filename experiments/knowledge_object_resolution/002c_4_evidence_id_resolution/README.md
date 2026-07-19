@@ -1,6 +1,6 @@
 # Experiment 002C-4: Evidence-ID Remediation
 
-**Status:** v0.2.1 implementation ready for a new formal development run
+**Status:** Development validation completed; independent validation pending
 
 ## Question
 
@@ -40,3 +40,19 @@ available to the model.
 The failed catalog assumption is retained as development evidence. v0.2.1
 fixes the partitioner and requires a new method commit and new run directories;
 the v0.2 artifacts must not be overwritten.
+
+## v0.2.1 Outcome
+
+Formal v0.2.1 challenge and locked-reuse diagnostic runs both passed their
+frozen structural criteria. All identity decisions, clusters, integrity checks,
+exact span materializations, and manual semantic-evidence reviews passed.
+
+The selected development candidate is:
+
+```text
+candidate_scoped_context_resolution_evidence_ids_v0_2_1
+```
+
+See `development_results.md` and `conclusion.md`. Independent validation on a
+newly frozen source remains outside the completed 002C development programme.
+The snapshot-bound completion record is `development_validation_complete.json`.

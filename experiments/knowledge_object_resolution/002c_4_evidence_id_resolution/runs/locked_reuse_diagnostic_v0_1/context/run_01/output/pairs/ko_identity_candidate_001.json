@@ -1,0 +1,26 @@
+{
+  "candidate_id": "ko_identity_candidate_001",
+  "mention_a": "ko_mention_dev_003",
+  "mention_b": "ko_mention_dev_010",
+  "decision": "SAME_OBJECT",
+  "evidence_ids": [
+    "evidence_001",
+    "evidence_004",
+    "evidence_007"
+  ],
+  "rationale": "Both mentions refer to the gradient of a scalar-valued function, a fundamental concept in multivariable calculus. Evidence shows the gradient is defined in lecture 1 and used in the chain rule in lecture 2, confirming the same object.",
+  "evidence_spans": [
+    {
+      "lecture_id": "calculus_001",
+      "span": "Let \\(f:\\mathbb{R}^n \\to \\mathbb{R}\\) be a differentiable scalar-valued function. A partial derivative measures how \\(f\\) changes when one coordinate changes while the other coordinates are held fixed. The gradient \\(\\nabla f(x)\\) collects these partial derivatives into a vector. For a unit direction \\(u\\), the directional derivative is \\(\\nabla f(x)\\cdot u\\), so the gradient points in the direction of steepest local increase. A point where the gradient is the zero vector is called a stationary point."
+    },
+    {
+      "lecture_id": "calculus_002",
+      "span": "Let \\(g:\\mathbb{R}^m \\to \\mathbb{R}^n\\) and \\(f:\\mathbb{R}^n \\to \\mathbb{R}\\) be differentiable functions. The composite function \\(h = f \\circ g\\) maps an input \\(x \\in \\mathbb{R}^m\\) to \\(f(g(x))\\). The chain rule describes how the derivative of the composite function depends on the derivatives of \\(f\\) and \\(g\\)."
+    },
+    {
+      "lecture_id": "calculus_002",
+      "span": "\\[\n\\nabla h(x) = J_g(x)^\\top \\nabla f(g(x)).\n\\]"
+    }
+  ]
+}

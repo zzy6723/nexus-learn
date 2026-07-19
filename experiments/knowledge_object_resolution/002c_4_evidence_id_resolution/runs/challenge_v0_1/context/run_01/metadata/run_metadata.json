@@ -1,0 +1,57 @@
+{
+  "artifact_type": "ko_context_resolution_run_metadata",
+  "version": "v0.2",
+  "run_id": "run_01",
+  "run_status": "completed",
+  "method_id": "candidate_scoped_context_resolution_evidence_ids_v0_2",
+  "method_commit": "57c23bd2e088e60f6d530d1bb6ba38dcacae78b0",
+  "git_commit_at_start": "57c23bd2e088e60f6d530d1bb6ba38dcacae78b0",
+  "git_dirty_at_start": false,
+  "request_partitioning": "one_identity_candidate_per_request_v0_1",
+  "evidence_transport": "candidate_scoped_opaque_ids_v0_2",
+  "request_parameters": {
+    "model": "deepseek-v4-flash",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 1200,
+    "response_format": {
+      "type": "json_object"
+    },
+    "thinking": {
+      "type": "disabled"
+    }
+  },
+  "inputs": {
+    "candidate_bundle": {
+      "path": "experiments/knowledge_object_resolution/002c_2_context_aware_resolution/runs/challenge_v0_1/candidates/candidate_pairs.json",
+      "sha256": "3b7229cf7c188820f7528165ee0b2e31dba3f15484d849dfd8e4d34be863a469"
+    },
+    "candidate_completion_marker": {
+      "path": "experiments/knowledge_object_resolution/002c_2_context_aware_resolution/runs/challenge_v0_1/candidates/candidate_generation_complete.json",
+      "sha256": "15608a0c01a0df1d5022f35d3304c753549685843ee336dc3e26366383cdeda9"
+    },
+    "lecture_inventory": {
+      "path": "benchmark/ko_canonicalization/challenge_v0_1/lecture_inventory.json",
+      "sha256": "f11c7bb26338d00b0ac740ac213355e723c00c2d589d743c84f7b2e33dc11e1f"
+    },
+    "prompt": {
+      "path": "experiments/knowledge_object_resolution/002c_4_evidence_id_resolution/prompt.md",
+      "sha256": "11531eff52fa8b0e76c05cb7f33eabe5cfc06b9b4c394452ab6929989c329b1d"
+    }
+  },
+  "runner": {
+    "path": "scripts/run_context_ko_resolution_v0_2.py",
+    "sha256": "604c16d5b1561e8393e1fe061ead8ff6d1635209191cf16e96fedf7b09f53dda",
+    "version": "context_ko_resolution_runner_v0.2"
+  },
+  "candidate_count": 11,
+  "request_payload_set_sha256": "005bce32632bdb40bc98e5dddc315558c635039db8821b656378383351a15bf5",
+  "evidence_catalog_set_sha256": "fa0bd0f1da49bab0d8ae91b1d61bfca0fe28d753905150b5066edd5d1c14267c",
+  "request_success": true,
+  "json_parse_success": true,
+  "prediction_schema_valid": true,
+  "finish_reason": "stop",
+  "completed_candidate_count": 11,
+  "latency_ms": 29242,
+  "prediction_sha256": "c9ed23a2a2775cd59f9c4aff422d8eb937d635fbd7bf087033db4eeb10b292b2"
+}

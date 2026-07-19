@@ -1,0 +1,28 @@
+{
+  "id": "d1310d8f-daf6-41cf-a97f-9e7ef13b615d",
+  "object": "chat.completion",
+  "created": 1784444192,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"candidate_id\": \"ko_identity_candidate_008\",\n  \"mention_a\": \"ko_mention_dev_008\",\n  \"mention_b\": \"ko_mention_dev_020\",\n  \"decision\": \"SAME_OBJECT\",\n  \"evidence_ids\": [\"evidence_001\", \"evidence_002\"],\n  \"rationale\": \"Both mentions refer to the same statistical method: MLE is the abbreviation for Maximum Likelihood Estimation. The evidence shows they both involve maximizing the likelihood function to estimate parameters.\"\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 726,
+    "completion_tokens": 108,
+    "total_tokens": 834,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 342
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

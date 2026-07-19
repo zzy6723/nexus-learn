@@ -1,0 +1,28 @@
+{
+  "id": "b35f87f7-9fa1-498f-aa3c-8c81375a3f72",
+  "object": "chat.completion",
+  "created": 1784446001,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"candidate_id\": \"ko_identity_candidate_002\",\n  \"mention_a\": \"ko_mention_dev_003\",\n  \"mention_b\": \"ko_mention_dev_032\",\n  \"decision\": \"SAME_OBJECT\",\n  \"evidence_ids\": [\"evidence_001\", \"evidence_005\"],\n  \"rationale\": \"Both mentions refer to the gradient of a differentiable function, defined as a vector of partial derivatives, used in calculus and optimization contexts. The evidence shows identical mathematical definition and notation (∇f(x)).\"\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1178,
+    "completion_tokens": 114,
+    "total_tokens": 1292,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 794
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -40,17 +40,16 @@ two attempts. A nonexact Unicode Entity span was not an exact substring of the
 LaTeX lecture text, and the model repeatedly copied that span as evidence. The
 strict runner rejected both attempts before cluster generation.
 
-Experiment 002C is therefore complete with partial feasibility. The identity
-architecture is retained, but no production canonicalizer is selected. The
-full interpretation and next validation boundary are in `conclusion.md`.
+Experiment 002C is complete at the development-validation level. The identity
+architecture is retained, and evidence-ID context resolution v0.2.1 is selected
+as the candidate for independent validation. No production canonicalizer is
+selected.
 
-An evidence-transport remediation is now under development in
-`002c_4_evidence_id_resolution/`. Formal v0.2 runs completed the authored
-challenge and former failure bundle, but post-run review found that its
-catalog omitted final display-math blocks followed by a trailing newline.
-v0.2.1 fixes that partitioning defect and awaits a new formal development run.
-Neither result reinterprets 002C-3 as unseen validation; an independently
-frozen source remains required.
+The remediation is documented in `002c_4_evidence_id_resolution/`. v0.2 fixed
+the original Unicode/LaTeX copying failure but exposed a trailing display-math
+catalog defect. v0.2.1 corrected that defect and passed the authored challenge
+and former failure bundle, including manual semantic-evidence review. Both are
+development datasets; an independently frozen source remains required.
 
 ## Programme Boundary
 

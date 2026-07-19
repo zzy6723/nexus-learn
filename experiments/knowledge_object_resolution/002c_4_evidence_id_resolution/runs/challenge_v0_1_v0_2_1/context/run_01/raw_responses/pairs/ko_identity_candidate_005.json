@@ -1,0 +1,28 @@
+{
+  "id": "4409fb6b-c731-43e6-abf4-a988a98758f0",
+  "object": "chat.completion",
+  "created": 1784469622,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"candidate_id\": \"ko_identity_candidate_005\",\n  \"mention_a\": \"ko_mention_dev_004\",\n  \"mention_b\": \"ko_mention_dev_020\",\n  \"decision\": \"SAME_OBJECT\",\n  \"evidence_ids\": [\"evidence_001\", \"evidence_002\"],\n  \"rationale\": \"Both mentions refer to the same statistical method (Maximum Likelihood Estimation) with identical core definition: maximizing the likelihood function given observed data. The slight orthographic variation (hyphen vs. no hyphen) does not indicate distinct objects.\"\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 802,
+    "completion_tokens": 120,
+    "total_tokens": 922,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 162
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "32573a1d-58f3-41c2-98d7-4345dbc64ef9",
+  "object": "chat.completion",
+  "created": 1784469610,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"candidate_id\": \"ko_identity_candidate_002\",\n  \"mention_a\": \"ko_mention_dev_003\",\n  \"mention_b\": \"ko_mention_dev_007\",\n  \"decision\": \"SAME_OBJECT\",\n  \"evidence_ids\": [\"evidence_001\", \"evidence_002\"],\n  \"rationale\": \"Both mentions refer to the same concept of likelihood in the context of maximum likelihood estimation, with 'Likelihood' and 'Likelihood Function' being synonymous. The evidence shows they are defined similarly as functions of parameters given fixed data.\"\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 729,
+    "completion_tokens": 120,
+    "total_tokens": 849,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 89
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

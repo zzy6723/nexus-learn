@@ -1,0 +1,26 @@
+{
+  "candidate_id": "ko_identity_candidate_004",
+  "mention_a": "ko_mention_dev_006",
+  "mention_b": "ko_mention_dev_038",
+  "decision": "SAME_OBJECT",
+  "evidence_ids": [
+    "evidence_001",
+    "evidence_004",
+    "evidence_005"
+  ],
+  "rationale": "Both mentions define 'Stationary Point' as a point where the gradient is zero, and the evidence shows they refer to the same concept in calculus and optimisation contexts.",
+  "evidence_spans": [
+    {
+      "lecture_id": "calculus_001",
+      "span": "Let \\(f:\\mathbb{R}^n \\to \\mathbb{R}\\) be a differentiable scalar-valued function. A partial derivative measures how \\(f\\) changes when one coordinate changes while the other coordinates are held fixed. The gradient \\(\\nabla f(x)\\) collects these partial derivatives into a vector. For a unit direction \\(u\\), the directional derivative is \\(\\nabla f(x)\\cdot u\\), so the gradient points in the direction of steepest local increase. A point where the gradient is the zero vector is called a stationary point."
+    },
+    {
+      "lecture_id": "optimisation_001",
+      "span": "In mathematical optimisation, an objective function assigns a real value to each feasible input. An optimisation problem asks for an input that makes the objective function as small or as large as possible. In an unconstrained minimisation problem, the feasible inputs are usually all points in a space such as \\(\\mathbb{R}^n\\), and the goal is to minimise a differentiable function \\(f(x)\\)."
+    },
+    {
+      "lecture_id": "optimisation_001",
+      "span": "If \\(f\\) is differentiable, the gradient \\(\\nabla f(x)\\) describes local change. The negative gradient \\(-\\nabla f(x)\\) is a descent direction because it points toward the direction of steepest local decrease. Gradient descent is a first-order iterative method that repeatedly moves in this direction:"
+    }
+  ]
+}

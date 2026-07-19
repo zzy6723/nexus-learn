@@ -1,0 +1,28 @@
+{
+  "id": "d76548f9-b403-4966-ae6d-8255bc683646",
+  "object": "chat.completion",
+  "created": 1784444194,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"candidate_id\": \"ko_identity_candidate_009\",\n  \"mention_a\": \"ko_mention_dev_009\",\n  \"mention_b\": \"ko_mention_dev_012\",\n  \"decision\": \"SAME_OBJECT\",\n  \"evidence_ids\": [\"evidence_001\", \"evidence_002\"],\n  \"rationale\": \"Both mentions refer to the same numerical method for solving ODEs: Euler's Method, also known as Forward Euler. The evidence shows they are both described as approximating solutions of ODEs using current slope, and the type is Method in both cases.\"\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 706,
+    "completion_tokens": 126,
+    "total_tokens": 832,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 322
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

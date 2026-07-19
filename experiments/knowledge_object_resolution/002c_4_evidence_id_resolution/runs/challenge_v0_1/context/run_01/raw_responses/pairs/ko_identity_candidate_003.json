@@ -1,0 +1,28 @@
+{
+  "id": "8a76e236-60f4-4019-90c4-b719e71d885a",
+  "object": "chat.completion",
+  "created": 1784444180,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"candidate_id\": \"ko_identity_candidate_003\",\n  \"mention_a\": \"ko_mention_dev_003\",\n  \"mention_b\": \"ko_mention_dev_019\",\n  \"decision\": \"SAME_OBJECT\",\n  \"evidence_ids\": [\"evidence_001\", \"evidence_002\"],\n  \"rationale\": \"Both mentions refer to the same statistical concept of likelihood used in maximum likelihood estimation, with consistent definitions across lectures.\"\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 722,
+    "completion_tokens": 96,
+    "total_tokens": 818,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 338
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

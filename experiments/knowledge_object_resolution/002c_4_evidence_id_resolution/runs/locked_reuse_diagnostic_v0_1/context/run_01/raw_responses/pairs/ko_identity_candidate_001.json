@@ -1,0 +1,28 @@
+{
+  "id": "e35506af-8b0e-457e-b73d-682e18b8c527",
+  "object": "chat.completion",
+  "created": 1784445998,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"candidate_id\": \"ko_identity_candidate_001\",\n  \"mention_a\": \"ko_mention_dev_003\",\n  \"mention_b\": \"ko_mention_dev_010\",\n  \"decision\": \"SAME_OBJECT\",\n  \"evidence_ids\": [\"evidence_001\", \"evidence_004\", \"evidence_007\"],\n  \"rationale\": \"Both mentions refer to the gradient of a scalar-valued function, a fundamental concept in multivariable calculus. Evidence shows the gradient is defined in lecture 1 and used in the chain rule in lecture 2, confirming the same object.\"\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1173,
+    "completion_tokens": 125,
+    "total_tokens": 1298,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 789
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

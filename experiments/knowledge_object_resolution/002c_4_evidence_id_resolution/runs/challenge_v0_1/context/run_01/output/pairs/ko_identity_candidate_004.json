@@ -1,0 +1,21 @@
+{
+  "candidate_id": "ko_identity_candidate_004",
+  "mention_a": "ko_mention_dev_004",
+  "mention_b": "ko_mention_dev_008",
+  "decision": "SAME_OBJECT",
+  "evidence_ids": [
+    "evidence_001",
+    "evidence_002"
+  ],
+  "rationale": "Both mentions refer to the same statistical method (Maximum Likelihood Estimation) that estimates model parameters by maximizing the likelihood function given observed data. The first uses the full name, the second uses the abbreviation MLE, and both are of type Method. The evidence spans describe the same core concept.",
+  "evidence_spans": [
+    {
+      "lecture_id": "econometrics_mle_challenge_001",
+      "span": "Maximum-Likelihood Estimation estimates an econometric model by maximizing the likelihood of the observed sample. The likelihood is viewed as a function of the model parameters with the sample held fixed."
+    },
+    {
+      "lecture_id": "machine_learning_mle_challenge_001",
+      "span": "MLE is used to fit a probabilistic model by maximizing its likelihood function on observed training data. The likelihood function assigns each candidate parameter value a score determined by the fixed observations."
+    }
+  ]
+}

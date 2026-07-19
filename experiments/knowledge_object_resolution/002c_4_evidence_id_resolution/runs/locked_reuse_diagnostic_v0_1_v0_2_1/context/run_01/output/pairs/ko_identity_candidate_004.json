@@ -1,0 +1,21 @@
+{
+  "candidate_id": "ko_identity_candidate_004",
+  "mention_a": "ko_mention_dev_006",
+  "mention_b": "ko_mention_dev_038",
+  "decision": "SAME_OBJECT",
+  "evidence_ids": [
+    "evidence_001",
+    "evidence_009"
+  ],
+  "rationale": "Both mentions define 'Stationary Point' as a point where the gradient is zero, and the type is Concept in both lectures. Evidence_001 from calculus_001 and evidence_009 from optimisation_001 provide identical definitions, confirming the same educational object at the same granularity.",
+  "evidence_spans": [
+    {
+      "lecture_id": "calculus_001",
+      "span": "Let \\(f:\\mathbb{R}^n \\to \\mathbb{R}\\) be a differentiable scalar-valued function. A partial derivative measures how \\(f\\) changes when one coordinate changes while the other coordinates are held fixed. The gradient \\(\\nabla f(x)\\) collects these partial derivatives into a vector. For a unit direction \\(u\\), the directional derivative is \\(\\nabla f(x)\\cdot u\\), so the gradient points in the direction of steepest local increase. A point where the gradient is the zero vector is called a stationary point."
+    },
+    {
+      "lecture_id": "optimisation_001",
+      "span": "For convex functions, every local minimum is also a global minimum. A stationary point is a point where the gradient is zero. In smooth optimisation, stationary points are important because they describe candidates for local optima."
+    }
+  ]
+}

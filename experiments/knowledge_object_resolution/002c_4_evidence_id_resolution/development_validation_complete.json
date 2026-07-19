@@ -1,0 +1,46 @@
+{
+  "artifact_type": "ko_evidence_id_development_validation_complete",
+  "version": "v0.1",
+  "status": "final",
+  "selected_method_id": "candidate_scoped_context_resolution_evidence_ids_v0_2_1",
+  "selected_method_commit": "46d5a2937f0a33a3c7eb157da8c8d58bd4451a14",
+  "claim_boundary": {
+    "development_validation_completed": true,
+    "independent_validation_completed": false,
+    "production_method_selected": false
+  },
+  "artifacts": {
+    "challenge_metrics": {
+      "path": "experiments/knowledge_object_resolution/002c_4_evidence_id_resolution/runs/challenge_v0_1_v0_2_1/evaluation/run_01/metrics.json",
+      "sha256": "e03ffb3e2b1cd1aa3aff5499fc0f7c0c043b303c21720ab92a81e38b6c022f9c"
+    },
+    "challenge_evaluation_complete": {
+      "path": "experiments/knowledge_object_resolution/002c_4_evidence_id_resolution/runs/challenge_v0_1_v0_2_1/evaluation/run_01/evaluation_complete.json",
+      "sha256": "3f24860572ce1d38f74767d1077b7d26441b96b0efa4fcc5ee7549aad99ee2e3"
+    },
+    "challenge_evidence_audit": {
+      "path": "experiments/knowledge_object_resolution/002c_4_evidence_id_resolution/runs/challenge_v0_1_v0_2_1/evaluation/run_01/evidence_semantic_audit.json",
+      "sha256": "05e17da47331ad741d1aab075bd5f8e07b5f8c7291835e06f6362a1164826b28"
+    },
+    "diagnostic_metrics": {
+      "path": "experiments/knowledge_object_resolution/002c_4_evidence_id_resolution/runs/locked_reuse_diagnostic_v0_1_v0_2_1/evaluation/run_01/metrics.json",
+      "sha256": "f73433f41b24fa574cbc59c55ce953b1a47610e9cfcdf446666cec81cc60eca2"
+    },
+    "diagnostic_evaluation_complete": {
+      "path": "experiments/knowledge_object_resolution/002c_4_evidence_id_resolution/runs/locked_reuse_diagnostic_v0_1_v0_2_1/evaluation/run_01/evaluation_complete.json",
+      "sha256": "d1580e287317667cffbbde76b87b2d6ab09abeb33e28b76429d37faa6894760c"
+    },
+    "diagnostic_evidence_audit": {
+      "path": "experiments/knowledge_object_resolution/002c_4_evidence_id_resolution/runs/locked_reuse_diagnostic_v0_1_v0_2_1/evaluation/run_01/evidence_semantic_audit.json",
+      "sha256": "0444d78f2749733da84d5b58e0ca125edf68b0bc91d3e669cd8f6640d884191e"
+    },
+    "development_results": {
+      "path": "experiments/knowledge_object_resolution/002c_4_evidence_id_resolution/development_results.md",
+      "sha256": "8bf4b7450dc9f4b65a56adbb66e36b547aa29aa72a1bb41702716303992fae9a"
+    },
+    "conclusion": {
+      "path": "experiments/knowledge_object_resolution/002c_4_evidence_id_resolution/conclusion.md",
+      "sha256": "7ebcb6419b3cffd93761f299dcb59099721f3484fa9f0865ee8b92672c9d8950"
+    }
+  }
+}

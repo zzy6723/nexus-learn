@@ -1,0 +1,17 @@
+{
+  "artifact_type": "ko_context_resolution_complete",
+  "version": "v0.2",
+  "status": "final",
+  "method_id": "candidate_scoped_context_resolution_evidence_ids_v0_2",
+  "method_commit": "57c23bd2e088e60f6d530d1bb6ba38dcacae78b0",
+  "artifacts": {
+    "identity_decisions": {
+      "path": "experiments/knowledge_object_resolution/002c_4_evidence_id_resolution/runs/locked_reuse_diagnostic_v0_1/context/run_01/output/identity_decisions.json",
+      "sha256": "7cefe60a22c340de445cae69a5c1e676e951688653a999cb8f292473d9598640"
+    },
+    "metadata": {
+      "path": "experiments/knowledge_object_resolution/002c_4_evidence_id_resolution/runs/locked_reuse_diagnostic_v0_1/context/run_01/metadata/run_metadata.json",
+      "sha256": "40ad66847316966c32041876341eca93c3abc88349ec8fb1f6dbd82233d59839"
+    }
+  }
+}

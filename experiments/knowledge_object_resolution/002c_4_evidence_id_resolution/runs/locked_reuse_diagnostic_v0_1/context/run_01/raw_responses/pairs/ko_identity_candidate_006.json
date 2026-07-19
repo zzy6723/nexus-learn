@@ -1,0 +1,28 @@
+{
+  "id": "6d652ee6-ee75-4004-8e58-91d631305d62",
+  "object": "chat.completion",
+  "created": 1784446012,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"candidate_id\": \"ko_identity_candidate_006\",\n  \"mention_a\": \"ko_mention_dev_011\",\n  \"mention_b\": \"ko_mention_dev_020\",\n  \"decision\": \"DISTINCT_OBJECT\",\n  \"evidence_ids\": [\"evidence_002\", \"evidence_006\"],\n  \"rationale\": \"Jacobian Matrix is a specific type of matrix used in calculus to represent derivatives, while Matrix in linear algebra is a general rectangular array representing linear transformations. They differ in type and context, and are not the same educational object.\"\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1227,
+    "completion_tokens": 120,
+    "total_tokens": 1347,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 843
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,21 @@
+{
+  "candidate_id": "ko_identity_candidate_011",
+  "mention_a": "ko_mention_dev_011",
+  "mention_b": "ko_mention_dev_013",
+  "decision": "SAME_OBJECT",
+  "evidence_ids": [
+    "evidence_002",
+    "evidence_004"
+  ],
+  "rationale": "Both mentions refer to the same formula y_{n+1}=y_n+h f(t_n,y_n), which is the Forward Euler update. The evidence shows the identical mathematical expression in both lectures.",
+  "evidence_spans": [
+    {
+      "lecture_id": "numerical_ode_challenge_001",
+      "span": "\\[\ny_{n+1}=y_n+h f(t_n,y_n).\n\\]"
+    },
+    {
+      "lecture_id": "ode_theory_challenge_001",
+      "span": "\\[\ny_{n+1}=y_n+h f(t_n,y_n).\n\\]"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "artifact_type": "ko_resolution_evidence_semantic_audit",
+  "version": "v0.1",
+  "status": "final",
+  "data_role": "development_challenge",
+  "method_id": "candidate_scoped_context_resolution_evidence_ids_v0_2_1",
+  "prediction_sha256": "20f1232eb4710522fcd76959ef24e96b612e668f4b70f24ae2ccf268324bc06f",
+  "review_rule": "Selected materialized spans, read together, must identify both mentions or make the identity decision unambiguous without omitted text.",
+  "counts": {
+    "reviewed_candidates": 11,
+    "supported": 11,
+    "not_supported": 0,
+    "pending": 0
+  },
+  "supported_candidate_ids": [
+    "ko_identity_candidate_001",
+    "ko_identity_candidate_002",
+    "ko_identity_candidate_003",
+    "ko_identity_candidate_004",
+    "ko_identity_candidate_005",
+    "ko_identity_candidate_006",
+    "ko_identity_candidate_007",
+    "ko_identity_candidate_008",
+    "ko_identity_candidate_009",
+    "ko_identity_candidate_010",
+    "ko_identity_candidate_011"
+  ],
+  "not_supported": []
+}

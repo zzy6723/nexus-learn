@@ -1,0 +1,28 @@
+{
+  "id": "9fad226e-8c86-47fa-a4a8-60140e688b42",
+  "object": "chat.completion",
+  "created": 1784446008,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"candidate_id\": \"ko_identity_candidate_005\",\n  \"mention_a\": \"ko_mention_dev_010\",\n  \"mention_b\": \"ko_mention_dev_032\",\n  \"decision\": \"SAME_OBJECT\",\n  \"evidence_ids\": [\"evidence_004\", \"evidence_006\"],\n  \"rationale\": \"Both mentions refer to the gradient of a scalar-valued function, a fundamental concept in multivariable calculus and optimization. Evidence_004 defines the gradient in the chain rule context, and evidence_006 defines it in optimization, both as the vector of partial derivatives describing local change.\"\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1259,
+    "completion_tokens": 128,
+    "total_tokens": 1387,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 875
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}
