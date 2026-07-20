@@ -1,0 +1,85 @@
+{
+  "artifact_type": "connection_discovery_source_adequacy_audit",
+  "version": "v0.1",
+  "status": "structural_audit_complete",
+  "inputs": {
+    "canonical_clusters": "experiments/knowledge_object_resolution/002c_5_independent_validation/runs/independent_v0_1/clusters/run_01/canonical_clusters.json",
+    "source_manifest": "benchmark/ko_canonicalization/independent_v0_1/source_manifest.json"
+  },
+  "counts": {
+    "lectures": 4,
+    "canonical_knowledge_objects": 38,
+    "knowledge_object_mentions": 39,
+    "canonical_types": {
+      "Concept": 19,
+      "Formula": 10,
+      "Method": 9
+    },
+    "single_lecture_canonical_objects": 37,
+    "multi_lecture_canonical_objects": 1,
+    "source_spans": 39,
+    "exact_source_spans": 34,
+    "nonexact_source_spans": 5
+  },
+  "pair_universe": {
+    "all_unique_unordered_canonical_pairs": 703,
+    "eligible_cross_lecture_pairs": 543,
+    "disjoint_provenance_pairs": 527,
+    "overlap_bridge_pairs": 16,
+    "ineligible_same_lecture_only_pairs": 160,
+    "duplicate_pairs": 0,
+    "self_pairs": 0
+  },
+  "per_lecture": [
+    {
+      "lecture_id": "differential_equations_001",
+      "canonical_objects_with_provenance": 11,
+      "mentions": 11
+    },
+    {
+      "lecture_id": "graph_algorithms_001",
+      "canonical_objects_with_provenance": 10,
+      "mentions": 10
+    },
+    {
+      "lecture_id": "numerical_root_finding_001",
+      "canonical_objects_with_provenance": 7,
+      "mentions": 7
+    },
+    {
+      "lecture_id": "statistics_estimation_001",
+      "canonical_objects_with_provenance": 11,
+      "mentions": 11
+    }
+  ],
+  "metadata_coverage": {
+    "lecture_ids_declared": true,
+    "course_ids_declared": false,
+    "topic_ids_declared": false
+  },
+  "scale_assessment": {
+    "targets": {
+      "lectures": {
+        "minimum": 4,
+        "maximum": 8
+      },
+      "canonical_knowledge_objects": {
+        "minimum": 20,
+        "maximum": 35
+      },
+      "eligible_cross_lecture_pairs": {
+        "minimum": 150,
+        "maximum": 500
+      }
+    },
+    "checks": {
+      "lectures_within_target": true,
+      "canonical_knowledge_objects_within_target": false,
+      "eligible_cross_lecture_pairs_within_target": false
+    }
+  },
+  "semantic_assessment": {
+    "status": "manual_review_required",
+    "note": "Positive density, Relation-type coverage, hard-negative quality, and educational value cannot be inferred from provenance alone."
+  }
+}
