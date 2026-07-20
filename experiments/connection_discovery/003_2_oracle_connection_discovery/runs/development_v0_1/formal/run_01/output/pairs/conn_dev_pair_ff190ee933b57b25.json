@@ -1,0 +1,10 @@
+{
+  "canonical_pair_id": "conn_dev_pair_ff190ee933b57b25",
+  "source_canonical_ko_id": "conn_dev_ko_001",
+  "target_canonical_ko_id": "conn_dev_ko_006",
+  "relation_type": "REQUIRES",
+  "evidence_ids": [
+    "evidence_009"
+  ],
+  "rationale": "Evidence 009 states 'Gradient descent requires the gradient of the objective function', directly establishing that Gradient (ko_a) is a prerequisite for Gradient Descent (ko_b)."
+}

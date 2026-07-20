@@ -53,6 +53,16 @@ class ConnectionDiscoveryRunnerTests(unittest.TestCase):
                 set(item["endpoint_ids"]),
             )
 
+    def test_refined_prompt_is_distinct_and_pair_agnostic(self) -> None:
+        baseline = runner.DEFAULT_PROMPT.read_text()
+        refined_path = runner.EXPERIMENT_ROOT / "prompt_refinement_v0_2.md"
+        refined = refined_path.read_text()
+        self.assertNotEqual(runner.sha256_file(runner.DEFAULT_PROMPT), runner.sha256_file(refined_path))
+        self.assertNotIn("conn_dev_pair_", refined)
+        self.assertIn("Most candidate pairs may", refined)
+        self.assertIn("Formula source", refined)
+        self.assertIn("NO_RELATION", baseline)
+
     def test_subset_dry_run_writes_no_api_artifacts(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             run_dir = Path(temporary) / "dry"

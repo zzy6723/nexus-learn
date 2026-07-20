@@ -1,0 +1,10 @@
+{
+  "canonical_pair_id": "conn_dev_pair_079e85d9a20814b7",
+  "source_canonical_ko_id": "conn_dev_ko_020",
+  "target_canonical_ko_id": "conn_dev_ko_016",
+  "relation_type": "EXTENDS",
+  "evidence_ids": [
+    "evidence_010"
+  ],
+  "rationale": "Evidence 010 states that Ridge regression extends ordinary least squares by adding a penalty, and Linear regression is the base model fitted by ordinary least squares."
+}

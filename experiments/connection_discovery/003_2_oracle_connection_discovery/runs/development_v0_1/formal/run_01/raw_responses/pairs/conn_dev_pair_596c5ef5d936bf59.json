@@ -1,0 +1,28 @@
+{
+  "id": "d719b182-094c-4aac-aa4e-ad2d63c0c1e7",
+  "object": "chat.completion",
+  "created": 1784549094,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_596c5ef5d936bf59\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_013\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_018\",\n    \"relation_type\": \"FORMALIZES\",\n    \"evidence_ids\": [\"evidence_005\", \"evidence_011\"],\n    \"rationale\": \"Evidence 005 states that for Gaussian linear regression, maximizing the log-likelihood is equivalent to minimizing the least squares objective, and evidence 011 confirms that ordinary least squares has a maximum likelihood interpretation. The Mean Squared Error Formula formalizes the least squares objective, thus it formalizes the objective used in Maximum Likelihood Estimation under the Gaussian assumption.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1638,
+    "completion_tokens": 170,
+    "total_tokens": 1808,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 1126
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

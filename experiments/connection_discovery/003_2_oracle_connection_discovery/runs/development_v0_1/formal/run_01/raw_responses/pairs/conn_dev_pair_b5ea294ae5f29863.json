@@ -1,0 +1,28 @@
+{
+  "id": "ae7b30c8-e10c-4c3b-a16e-d498008bf9a1",
+  "object": "chat.completion",
+  "created": 1784549243,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_b5ea294ae5f29863\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_005\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_015\",\n    \"relation_type\": \"FORMALIZES\",\n    \"evidence_ids\": [\"evidence_009\", \"evidence_010\", \"evidence_011\"],\n    \"rationale\": \"Evidence 009 states that the score function is the gradient of the log-likelihood, which is treated as an objective function. Evidence 010 gives the formula for the score function, and evidence 011 defines the score equation as setting the score to zero, which formalizes the condition for a maximum of the objective function.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2103,
+    "completion_tokens": 169,
+    "total_tokens": 2272,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 1591
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

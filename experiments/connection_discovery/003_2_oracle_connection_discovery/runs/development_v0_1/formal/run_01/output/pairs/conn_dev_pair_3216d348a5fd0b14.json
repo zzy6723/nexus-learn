@@ -1,0 +1,10 @@
+{
+  "canonical_pair_id": "conn_dev_pair_3216d348a5fd0b14",
+  "source_canonical_ko_id": "conn_dev_ko_006",
+  "target_canonical_ko_id": "conn_dev_ko_016",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_016"
+  ],
+  "rationale": "Evidence 016 explicitly states that gradient descent can be applied to ordinary least squares, which is the optimization method for linear regression."
+}

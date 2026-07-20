@@ -1,0 +1,28 @@
+{
+  "id": "63088b10-a95d-407f-b012-6df72745d174",
+  "object": "chat.completion",
+  "created": 1784548976,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_079e85d9a20814b7\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_020\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_016\",\n    \"relation_type\": \"EXTENDS\",\n    \"evidence_ids\": [\"evidence_010\"],\n    \"rationale\": \"Evidence 010 states that Ridge regression extends ordinary least squares by adding a penalty, and Linear regression is the base model fitted by ordinary least squares.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1595,
+    "completion_tokens": 123,
+    "total_tokens": 1718,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 1083
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

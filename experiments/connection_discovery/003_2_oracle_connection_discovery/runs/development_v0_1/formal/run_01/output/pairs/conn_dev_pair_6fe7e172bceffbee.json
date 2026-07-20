@@ -1,0 +1,11 @@
+{
+  "canonical_pair_id": "conn_dev_pair_6fe7e172bceffbee",
+  "source_canonical_ko_id": "conn_dev_ko_003",
+  "target_canonical_ko_id": "conn_dev_ko_010",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_011",
+    "evidence_016"
+  ],
+  "rationale": "Evidence 011 shows that the first-order Taylor approximation is used to predict objective change in gradient descent, which involves step size. Evidence 016 shows that the first-order Taylor approximation is applied to derive the Forward Euler method, which uses step size h."
+}

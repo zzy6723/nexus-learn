@@ -1,0 +1,28 @@
+{
+  "id": "d23ddfc2-e536-4a69-8725-960ad23b7e40",
+  "object": "chat.completion",
+  "created": 1784549019,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_2bb1aeb7a750deb8\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_001\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_008\",\n    \"relation_type\": \"REQUIRES\",\n    \"evidence_ids\": [\"evidence_012\", \"evidence_013\"],\n    \"rationale\": \"Evidence_012 states that Newton optimisation method requires the Hessian matrix, and evidence_013 shows the update formula uses the gradient. The gradient is a prerequisite for computing the Newton step, establishing a REQUIRES relation from Gradient to Newton Optimisation Method.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2191,
+    "completion_tokens": 152,
+    "total_tokens": 2343,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 1679
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

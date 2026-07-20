@@ -1,0 +1,11 @@
+{
+  "canonical_pair_id": "conn_dev_pair_b0c235b2d349eff7",
+  "source_canonical_ko_id": "conn_dev_ko_018",
+  "target_canonical_ko_id": "conn_dev_ko_019",
+  "relation_type": "FORMALIZES",
+  "evidence_ids": [
+    "evidence_008",
+    "evidence_009"
+  ],
+  "rationale": "Evidence 008 provides the MSE formula, and evidence 009 states that this formula formalizes the least squares objective, which is the objective minimized by Ordinary Least Squares."
+}

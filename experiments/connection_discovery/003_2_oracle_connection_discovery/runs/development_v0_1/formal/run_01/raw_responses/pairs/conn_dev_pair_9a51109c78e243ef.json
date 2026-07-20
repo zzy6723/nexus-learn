@@ -1,0 +1,28 @@
+{
+  "id": "1cd4ce47-2bce-4e8c-bbdf-4ff1b6f08c85",
+  "object": "chat.completion",
+  "created": 1784549187,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_9a51109c78e243ef\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_022\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_025\",\n    \"relation_type\": \"REQUIRES\",\n    \"evidence_ids\": [\"evidence_006\"],\n    \"rationale\": \"Evidence 006 states that Newton's root-finding method requires the derivative of g, establishing a prerequisite dependency.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1565,
+    "completion_tokens": 117,
+    "total_tokens": 1682,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 1053
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

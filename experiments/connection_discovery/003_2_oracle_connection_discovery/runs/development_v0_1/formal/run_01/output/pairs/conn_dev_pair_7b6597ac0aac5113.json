@@ -1,0 +1,10 @@
+{
+  "canonical_pair_id": "conn_dev_pair_7b6597ac0aac5113",
+  "source_canonical_ko_id": "conn_dev_ko_021",
+  "target_canonical_ko_id": "conn_dev_ko_025",
+  "relation_type": "REQUIRES",
+  "evidence_ids": [
+    "evidence_006"
+  ],
+  "rationale": "Newton's root-finding method requires the derivative of the function, establishing a prerequisite relationship from Root-Finding Problem to Derivative."
+}

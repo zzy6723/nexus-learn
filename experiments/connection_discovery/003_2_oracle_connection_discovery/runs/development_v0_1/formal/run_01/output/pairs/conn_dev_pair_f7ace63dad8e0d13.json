@@ -1,0 +1,11 @@
+{
+  "canonical_pair_id": "conn_dev_pair_f7ace63dad8e0d13",
+  "source_canonical_ko_id": "conn_dev_ko_009",
+  "target_canonical_ko_id": "conn_dev_ko_005",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_005",
+    "evidence_006"
+  ],
+  "rationale": "Evidence 005 states that the Newton optimisation method requires the Hessian matrix and gives the update formula, which is applied to minimize an objective function. Evidence 006 provides the Newton update formula, which is used in the context of optimizing an objective function."
+}

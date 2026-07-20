@@ -1,0 +1,28 @@
+{
+  "id": "a16c66be-8f3b-41a8-8a0f-d92babadf899",
+  "object": "chat.completion",
+  "created": 1784549100,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_5c9b50da7757c423\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_012\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_016\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_005\"],\n    \"rationale\": \"Evidence 005 states that for a Gaussian linear regression model, maximizing the log-likelihood is equivalent to minimizing the least squares objective, indicating that log-likelihood is applied in the context of linear regression.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1591,
+    "completion_tokens": 137,
+    "total_tokens": 1728,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 1079
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

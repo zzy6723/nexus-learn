@@ -1,0 +1,12 @@
+{
+  "canonical_pair_id": "conn_dev_pair_9f008ddde3e426f0",
+  "source_canonical_ko_id": "conn_dev_ko_013",
+  "target_canonical_ko_id": "conn_dev_ko_015",
+  "relation_type": "FORMALIZES",
+  "evidence_ids": [
+    "evidence_002",
+    "evidence_003",
+    "evidence_004"
+  ],
+  "rationale": "Evidence shows that the score equation is the gradient of the log-likelihood, which is central to maximum likelihood estimation, and the score equation formalizes the condition for a maximum."
+}

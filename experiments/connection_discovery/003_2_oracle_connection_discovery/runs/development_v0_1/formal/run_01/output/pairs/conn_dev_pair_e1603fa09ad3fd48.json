@@ -1,0 +1,10 @@
+{
+  "canonical_pair_id": "conn_dev_pair_e1603fa09ad3fd48",
+  "source_canonical_ko_id": "conn_dev_ko_005",
+  "target_canonical_ko_id": "conn_dev_ko_021",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_011"
+  ],
+  "rationale": "Evidence 011 states that maximum likelihood estimation leads to a root-finding problem, showing that the objective function (log-likelihood) is used in the context of root-finding."
+}

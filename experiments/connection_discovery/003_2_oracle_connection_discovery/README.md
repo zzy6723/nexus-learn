@@ -1,6 +1,6 @@
 # 003-2: Oracle-Canonical Connection Discovery
 
-**Status:** Runner and evaluator implementation ready; method commit pending
+**Status:** Baseline failed; one development prompt refinement prepared
 
 ## Question
 
@@ -42,3 +42,13 @@ suppressed graph edges.
 Exact Evidence-ID materialization and semantic support are separate. Non-exact
 gold Evidence selections use the frozen snapshot-bound process in
 `evidence_adjudication_protocol.md`.
+
+## Baseline Status
+
+`formal/run_01` completed and was finalized after 106 Evidence adjudications.
+Both conditional and full-universe gates failed. See
+`001_baseline_error_analysis.md`.
+
+`prompt_refinement_v0_2.md` is a minimal response to observed overconnection,
+type, and direction errors. It changes no benchmark or evaluation artifact and
+must be committed before a refined formal run.

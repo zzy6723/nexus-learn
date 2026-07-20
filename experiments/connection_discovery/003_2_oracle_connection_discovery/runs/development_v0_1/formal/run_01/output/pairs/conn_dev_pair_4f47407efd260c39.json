@@ -1,0 +1,8 @@
+{
+  "canonical_pair_id": "conn_dev_pair_4f47407efd260c39",
+  "source_canonical_ko_id": "conn_dev_ko_010",
+  "target_canonical_ko_id": "conn_dev_ko_029",
+  "relation_type": "NO_RELATION",
+  "evidence_ids": [],
+  "rationale": "No evidence directly connects Step Size to Local Truncation Error; they appear in different contexts (optimization vs. ODEs) without explicit relation."
+}

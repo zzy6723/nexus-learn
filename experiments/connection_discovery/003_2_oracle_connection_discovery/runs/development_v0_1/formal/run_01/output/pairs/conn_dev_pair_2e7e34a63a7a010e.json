@@ -1,0 +1,10 @@
+{
+  "canonical_pair_id": "conn_dev_pair_2e7e34a63a7a010e",
+  "source_canonical_ko_id": "conn_dev_ko_005",
+  "target_canonical_ko_id": "conn_dev_ko_022",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_011"
+  ],
+  "rationale": "Evidence 011 states that Newton's root-finding method can be applied within maximum likelihood estimation, where the log-likelihood is treated as an objective function. This directly shows that the Objective Function (as used in MLE) is applied in Newton's Root-Finding Method."
+}

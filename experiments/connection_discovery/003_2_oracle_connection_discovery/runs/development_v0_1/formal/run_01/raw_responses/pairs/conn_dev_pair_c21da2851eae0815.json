@@ -1,0 +1,28 @@
+{
+  "id": "be72851b-5ca0-43e7-89c6-a81daa8ef2f5",
+  "object": "chat.completion",
+  "created": 1784549266,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_c21da2851eae0815\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_006\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_020\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_011\", \"evidence_012\"],\n    \"rationale\": \"Evidence 011 states that gradient descent can be applied to ordinary least squares, and evidence 012 states that ridge regression extends ordinary least squares. Together, they support that gradient descent is applied in ridge regression, as ridge regression is an extension of ordinary least squares.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1677,
+    "completion_tokens": 150,
+    "total_tokens": 1827,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 1165
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

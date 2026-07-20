@@ -1,0 +1,11 @@
+{
+  "canonical_pair_id": "conn_dev_pair_ef28d97312ee8970",
+  "source_canonical_ko_id": "conn_dev_ko_001",
+  "target_canonical_ko_id": "conn_dev_ko_009",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_012",
+    "evidence_013"
+  ],
+  "rationale": "The Newton optimisation update explicitly uses the gradient of the objective function, as shown in the update formula x_{k+1}=x_k-H_f(x_k)^{-1}\u2207f(x_k). Evidence 012 states that Newton's method requires the gradient, and evidence 013 provides the formula containing \u2207f(x_k)."
+}

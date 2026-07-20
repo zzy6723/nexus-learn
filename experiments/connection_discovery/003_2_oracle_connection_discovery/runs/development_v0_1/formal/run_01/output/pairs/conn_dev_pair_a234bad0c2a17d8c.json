@@ -1,0 +1,10 @@
+{
+  "canonical_pair_id": "conn_dev_pair_a234bad0c2a17d8c",
+  "source_canonical_ko_id": "conn_dev_ko_015",
+  "target_canonical_ko_id": "conn_dev_ko_017",
+  "relation_type": "FORMALIZES",
+  "evidence_ids": [
+    "evidence_005"
+  ],
+  "rationale": "Evidence 005 states that for Gaussian linear regression, maximizing the log-likelihood is equivalent to minimizing the least squares objective, indicating that the Score Equation (derived from log-likelihood) formalizes the Least Squares Objective under that model."
+}

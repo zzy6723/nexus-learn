@@ -1,0 +1,10 @@
+{
+  "canonical_pair_id": "conn_dev_pair_f04767c63a30f18a",
+  "source_canonical_ko_id": "conn_dev_ko_003",
+  "target_canonical_ko_id": "conn_dev_ko_007",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_011"
+  ],
+  "rationale": "Evidence 011 explicitly states that the first-order Taylor approximation predicts the objective change for a small displacement, which explains why gradient descent moves opposite to the gradient, directly showing the application of the approximation in the gradient descent update."
+}

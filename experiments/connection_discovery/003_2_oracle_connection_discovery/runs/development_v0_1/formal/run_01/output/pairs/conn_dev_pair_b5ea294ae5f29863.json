@@ -1,0 +1,12 @@
+{
+  "canonical_pair_id": "conn_dev_pair_b5ea294ae5f29863",
+  "source_canonical_ko_id": "conn_dev_ko_005",
+  "target_canonical_ko_id": "conn_dev_ko_015",
+  "relation_type": "FORMALIZES",
+  "evidence_ids": [
+    "evidence_009",
+    "evidence_010",
+    "evidence_011"
+  ],
+  "rationale": "Evidence 009 states that the score function is the gradient of the log-likelihood, which is treated as an objective function. Evidence 010 gives the formula for the score function, and evidence 011 defines the score equation as setting the score to zero, which formalizes the condition for a maximum of the objective function."
+}

@@ -1,0 +1,11 @@
+{
+  "canonical_pair_id": "conn_dev_pair_1191a92948ebd2d6",
+  "source_canonical_ko_id": "conn_dev_ko_001",
+  "target_canonical_ko_id": "conn_dev_ko_011",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_016",
+    "evidence_017"
+  ],
+  "rationale": "Evidence shows that the gradient (score function) is used in maximum likelihood estimation, which is a method applied to statistical models."
+}

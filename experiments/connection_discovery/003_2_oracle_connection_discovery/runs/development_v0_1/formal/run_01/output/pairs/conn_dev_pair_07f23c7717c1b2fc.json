@@ -1,0 +1,10 @@
+{
+  "canonical_pair_id": "conn_dev_pair_07f23c7717c1b2fc",
+  "source_canonical_ko_id": "conn_dev_ko_001",
+  "target_canonical_ko_id": "conn_dev_ko_002",
+  "relation_type": "REQUIRES",
+  "evidence_ids": [
+    "evidence_007"
+  ],
+  "rationale": "Evidence 007 states that the gradient supplies the local linear term while the Hessian supplies the curvature term, implying that understanding the gradient is a prerequisite for understanding the Hessian in the context of Taylor approximations."
+}

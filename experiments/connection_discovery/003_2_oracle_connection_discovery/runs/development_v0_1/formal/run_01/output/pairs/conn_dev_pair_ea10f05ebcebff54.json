@@ -1,0 +1,10 @@
+{
+  "canonical_pair_id": "conn_dev_pair_ea10f05ebcebff54",
+  "source_canonical_ko_id": "conn_dev_ko_013",
+  "target_canonical_ko_id": "conn_dev_ko_022",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_004"
+  ],
+  "rationale": "Evidence 004 states that Newton's root-finding method can be applied within maximum likelihood estimation to solve the score equation, indicating that MLE uses Newton's method as a tool."
+}

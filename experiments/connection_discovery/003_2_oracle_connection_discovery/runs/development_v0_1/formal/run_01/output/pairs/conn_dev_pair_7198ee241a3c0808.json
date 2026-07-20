@@ -1,0 +1,10 @@
+{
+  "canonical_pair_id": "conn_dev_pair_7198ee241a3c0808",
+  "source_canonical_ko_id": "conn_dev_ko_006",
+  "target_canonical_ko_id": "conn_dev_ko_008",
+  "relation_type": "CONTRASTS_WITH",
+  "evidence_ids": [
+    "evidence_007"
+  ],
+  "rationale": "Evidence 007 explicitly contrasts the two methods: Newton's method takes a full curvature-adjusted step, whereas gradient descent controls movement through an explicit step size."
+}

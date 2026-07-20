@@ -1,0 +1,10 @@
+{
+  "canonical_pair_id": "conn_dev_pair_c9d185b1eedd2c21",
+  "source_canonical_ko_id": "conn_dev_ko_003",
+  "target_canonical_ko_id": "conn_dev_ko_029",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_019"
+  ],
+  "rationale": "Evidence 019 states that the local truncation error for Forward Euler is governed by terms omitted after the first-order Taylor approximation, showing that the first-order Taylor approximation is used in the definition of local truncation error."
+}

@@ -1,0 +1,28 @@
+{
+  "id": "1b30f645-558d-4f63-ab7d-d2e68b1fd2c4",
+  "object": "chat.completion",
+  "created": 1784549110,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_63bb993a9e7b1d30\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_024\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_022\",\n    \"relation_type\": \"EXTENDS\",\n    \"evidence_ids\": [\"evidence_010\"],\n    \"rationale\": \"Evidence 010 states that the damped Newton method extends Newton's root-finding method by multiplying the correction by a factor, which directly supports the EXTENDS relation from the damped Newton method to Newton's root-finding method.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1587,
+    "completion_tokens": 141,
+    "total_tokens": 1728,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 1075
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,10 @@
+{
+  "canonical_pair_id": "conn_dev_pair_36ccbe1b2809f02f",
+  "source_canonical_ko_id": "conn_dev_ko_002",
+  "target_canonical_ko_id": "conn_dev_ko_005",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_012"
+  ],
+  "rationale": "Evidence 012 states that the Newton optimisation method requires the Hessian matrix to model local curvature, and the Newton method is applied to an objective function. Thus, the Hessian matrix is applied in the context of optimising an objective function."
+}

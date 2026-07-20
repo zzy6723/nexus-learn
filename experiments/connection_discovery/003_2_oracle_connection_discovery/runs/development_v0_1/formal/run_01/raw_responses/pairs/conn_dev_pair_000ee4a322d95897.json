@@ -1,0 +1,28 @@
+{
+  "id": "4149536a-abd3-43b6-9740-f713976db8b4",
+  "object": "chat.completion",
+  "created": 1784548964,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_000ee4a322d95897\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_011\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_021\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_004\"],\n    \"rationale\": \"Evidence 004 states that finding a candidate satisfying the score equation is a root-finding problem, indicating that the concept of a statistical model (via maximum likelihood estimation) applies root-finding methods.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 132,
+    "total_tokens": 1692,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1560
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

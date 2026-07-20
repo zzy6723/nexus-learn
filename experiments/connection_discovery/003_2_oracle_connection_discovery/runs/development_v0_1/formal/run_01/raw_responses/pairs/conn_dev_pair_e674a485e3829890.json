@@ -1,0 +1,28 @@
+{
+  "id": "942cac5f-4a9b-4494-b218-5d3283fa7f63",
+  "object": "chat.completion",
+  "created": 1784549328,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_e674a485e3829890\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_017\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_019\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_006\"],\n    \"rationale\": \"Evidence 006 states that Ordinary Least Squares fits a linear regression model by minimizing the least squares objective, indicating that the Least Squares Objective is applied in the Ordinary Least Squares method.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1658,
+    "completion_tokens": 127,
+    "total_tokens": 1785,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 1146
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

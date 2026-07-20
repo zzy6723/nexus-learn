@@ -1,0 +1,538 @@
+{
+  "artifact_type": "canonical_connection_evidence_adjudication",
+  "version": "v0.1",
+  "prediction_content_sha256": "f4c2fd9256b6eca28211c01a39e57e9e6772cda53d89478b4404773d32472fb7",
+  "pending_snapshot_sha256": "0bd005189d7570c4771f3edfadd110b16b593d9fea383bde2245791402ac3e1c",
+  "decisions": [
+    {
+      "canonical_pair_id": "conn_dev_pair_000ee4a322d95897",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_004a5d37e586342f",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_0640b65385629338",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_079e85d9a20814b7",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_07a48d5987f87d67",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_07f23c7717c1b2fc",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_0c89e22909d9eb04",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_1191a92948ebd2d6",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_1a40513a66e7f15d",
+      "decision": "supported",
+      "rationale": "The selected Forward Euler description and update explicitly show the step size h used by the method."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_203435522ae7fc94",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_222c986cd9853739",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_225420587c4177f5",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted source-target direction under the frozen Relation definition."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_260ec70c43c90b5d",
+      "decision": "not_supported",
+      "rationale": "The blocks describe linear regression as a statistical-model instance; they do not establish the predicted APPLIED_IN direction."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_263db2f07078bcd1",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_2653269d6960cfb8",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_2bb1aeb7a750deb8",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted Relation type under the frozen schema definition."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_2cebee9063b290e6",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_2e7e34a63a7a010e",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_2e86bae906db9729",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_31fa9b658289ed76",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_3216d348a5fd0b14",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_334f084a05ae5d26",
+      "decision": "supported",
+      "rationale": "The selected block explicitly states that Newton root finding is applied to a root-finding problem."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_36ccbe1b2809f02f",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_3b005c7a79510244",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_3c1d300edac20859",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_4a578fe32126af5d",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_4bc5d12d0482885f",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_4e14b70508e9162e",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_5377d9a990974fd5",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_56bf2cab52cf025c",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_5729188da76c91ec",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted source-target direction under the frozen Relation definition."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_58cb2129cbbe96fd",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_596c5ef5d936bf59",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_5ad127da6345956c",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_5c9b50da7757c423",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_616b3cd5835de47d",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted Relation type under the frozen schema definition."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_623dc620447526e3",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted source-target direction under the frozen Relation definition."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_654033881f94fbf0",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted Relation type under the frozen schema definition."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_6aa4cd7ede0d0fd8",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted Relation type under the frozen schema definition."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_6c1b7aacdbb18827",
+      "decision": "not_supported",
+      "rationale": "Conditional equivalence between maximizing log-likelihood and minimizing least squares does not make Log-Likelihood a Formula that FORMALIZES the objective."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_6d5cf494bbd05db6",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_6e643548d9f9123a",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_6fe7e172bceffbee",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_799174f17022eacc",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted Relation type under the frozen schema definition."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7ae886fbc9be7241",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7b6597ac0aac5113",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7cd6620daef9af12",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7d14f554a3646ae6",
+      "decision": "not_supported",
+      "rationale": "The block treats log-likelihood as an objective function; it does not make Objective Function a Formula that FORMALIZES Log-Likelihood."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7f5ac4c6e2fe5268",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted source-target direction under the frozen Relation definition."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_81f4b77e0b280216",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_8404187bbee08589",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted Relation type under the frozen schema definition."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_855fc91eae345c72",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted Relation type under the frozen schema definition."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_88939b4d17cdfb3e",
+      "decision": "not_supported",
+      "rationale": "The blocks present least squares as a specific objective, not an EXTENDS relation under the frozen definition."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_8c981e7dd58feb47",
+      "decision": "not_supported",
+      "rationale": "Maximum Likelihood Estimation is a Method, not a Formula, and the equivalence blocks do not establish FORMALIZES."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_8fae4bf3dd480f71",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9411fb11503a6f0f",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9a51109c78e243ef",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted Relation type under the frozen schema definition."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9b1e66cc5876fb95",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9c6621685b9ef5e5",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted source-target direction under the frozen Relation definition."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9cd38efffcca81cd",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted Relation type under the frozen schema definition."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9f008ddde3e426f0",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted Relation type under the frozen schema definition."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a1259045b6b2d2c7",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted Relation type under the frozen schema definition."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a1e6b8f76fd16f4d",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a234bad0c2a17d8c",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a47be07419d8b917",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a8513031d82ba28e",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a92bdea086a3cd0c",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ac297f8e072816c0",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ad73d420644fe99f",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_b0c235b2d349eff7",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_b1a1609d22506ef6",
+      "decision": "supported",
+      "rationale": "The selected Gaussian linear-regression blocks directly connect maximum likelihood estimation with the linear-regression setting."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_b23eff47b6d29fb5",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted source-target direction under the frozen Relation definition."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_b5ea294ae5f29863",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_be2636a5d8bc8b4c",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_be5dff9ee6b32e1a",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c02b6a5def080df9",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c21da2851eae0815",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c862968c2f7bbf13",
+      "decision": "not_supported",
+      "rationale": "The score equation defines an instance of a root-finding problem; the block does not establish the predicted APPLIED_IN edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c9b55dc727622af1",
+      "decision": "supported",
+      "rationale": "The selected block explicitly states that the formula formalizes the least-squares objective."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c9d185b1eedd2c21",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted Relation type under the frozen schema definition."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c9da9f7c5ff3c1f6",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ce63516ba4c4f71d",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d28ab8d8057efb6a",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d4084502778d049d",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d6043a4c35e6c8b9",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted Relation type under the frozen schema definition."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d64d8e658f6dafd8",
+      "decision": "supported",
+      "rationale": "The selected block explicitly states that the Newton root update formalizes the root-finding method."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d7f55c9116fa3adf",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d88a461c47b9d32c",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_da1c18bdf793236f",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_dbc167d9bb7ce3f8",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_dcf07ffb792c61d7",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_dec2bec3d250fd3c",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_e1603fa09ad3fd48",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_e339035d075320bb",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted Relation type under the frozen schema definition."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_e848f855de939343",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted source-target direction under the frozen Relation definition."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ea10f05ebcebff54",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted source-target direction under the frozen Relation definition."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_edd5dd0dffb7131e",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ef28d97312ee8970",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted Relation type under the frozen schema definition."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_f04767c63a30f18a",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_f089c625fb64bde0",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted Relation type under the frozen schema definition."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_f7ace63dad8e0d13",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_fa0a79a76255633a",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_fac1350d8eb9227e",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted source-target direction under the frozen Relation definition."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_fb58022473834283",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted Relation type under the frozen schema definition."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_fb6ac84549809e7b",
+      "decision": "not_supported",
+      "rationale": "The selected blocks provide description, proximity, or shared context but do not directly establish the predicted graph edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ff190ee933b57b25",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted Relation type under the frozen schema definition."
+    }
+  ]
+}

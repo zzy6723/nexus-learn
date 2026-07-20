@@ -1,0 +1,28 @@
+{
+  "id": "1a75ca03-f4ca-4c3c-96bf-3b1464137200",
+  "object": "chat.completion",
+  "created": 1784549176,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_8c981e7dd58feb47\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_013\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_019\",\n    \"relation_type\": \"FORMALIZES\",\n    \"evidence_ids\": [\"evidence_005\", \"evidence_011\"],\n    \"rationale\": \"Evidence 005 states that for Gaussian linear regression, maximizing log-likelihood is equivalent to minimizing least squares, and OLS and MLE select the same coefficient vector. Evidence 011 confirms that OLS has an MLE interpretation under Gaussian noise. Thus, MLE formalizes the statistical foundation of OLS.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1669,
+    "completion_tokens": 164,
+    "total_tokens": 1833,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 1157
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "46138c7e-d3f1-460e-b0b2-eef7827e9c05",
+  "object": "chat.completion",
+  "created": 1784549230,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_ad73d420644fe99f\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_003\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_005\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_011\"],\n    \"rationale\": \"Evidence 011 explicitly states that the first-order Taylor approximation predicts the change in the objective function for a small displacement, directly showing that the method is applied to the concept.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 3067,
+    "completion_tokens": 126,
+    "total_tokens": 3193,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 2555
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

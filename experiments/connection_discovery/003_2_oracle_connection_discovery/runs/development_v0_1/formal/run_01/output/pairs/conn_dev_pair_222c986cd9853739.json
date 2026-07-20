@@ -1,0 +1,10 @@
+{
+  "canonical_pair_id": "conn_dev_pair_222c986cd9853739",
+  "source_canonical_ko_id": "conn_dev_ko_006",
+  "target_canonical_ko_id": "conn_dev_ko_017",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_016"
+  ],
+  "rationale": "Evidence 016 explicitly states that gradient descent can be applied to ordinary least squares by using the gradient of the least squares objective function, indicating that the method (Gradient Descent) is used in the context of the Least Squares Objective."
+}

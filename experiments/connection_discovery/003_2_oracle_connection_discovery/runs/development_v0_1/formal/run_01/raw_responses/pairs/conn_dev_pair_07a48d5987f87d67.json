@@ -1,0 +1,28 @@
+{
+  "id": "5d0512f8-937f-4c23-845e-a6aa66cfb394",
+  "object": "chat.completion",
+  "created": 1784548981,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_07a48d5987f87d67\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_001\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_016\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_023\"],\n    \"rationale\": \"Evidence 023 states that gradient descent can be applied to ordinary least squares, which is the optimization method for linear regression, indicating that the gradient is used in linear regression.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2623,
+    "completion_tokens": 129,
+    "total_tokens": 2752,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 2111
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

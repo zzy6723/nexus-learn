@@ -1,0 +1,10 @@
+{
+  "canonical_pair_id": "conn_dev_pair_ac297f8e072816c0",
+  "source_canonical_ko_id": "conn_dev_ko_001",
+  "target_canonical_ko_id": "conn_dev_ko_022",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_018"
+  ],
+  "rationale": "Evidence 018 states that Newton's root-finding method can be applied within maximum likelihood estimation, where the gradient (score function) is used to set up the root-finding problem."
+}

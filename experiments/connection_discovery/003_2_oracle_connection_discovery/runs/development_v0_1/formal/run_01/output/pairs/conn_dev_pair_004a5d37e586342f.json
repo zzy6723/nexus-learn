@@ -1,0 +1,11 @@
+{
+  "canonical_pair_id": "conn_dev_pair_004a5d37e586342f",
+  "source_canonical_ko_id": "conn_dev_ko_001",
+  "target_canonical_ko_id": "conn_dev_ko_010",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_009",
+    "evidence_010"
+  ],
+  "rationale": "Gradient descent uses the gradient to compute the update direction, and the step size scales the gradient to determine the actual displacement, as shown in the update formula x_{k+1}=x_k-\u03b1_k\u2207f(x_k)."
+}

@@ -1,0 +1,10 @@
+{
+  "canonical_pair_id": "conn_dev_pair_d4084502778d049d",
+  "source_canonical_ko_id": "conn_dev_ko_024",
+  "target_canonical_ko_id": "conn_dev_ko_021",
+  "relation_type": "EXTENDS",
+  "evidence_ids": [
+    "evidence_010"
+  ],
+  "rationale": "Evidence 010 states that the damped Newton method extends Newton's root-finding method, which is a method for solving root-finding problems, thus the damped Newton method extends the concept of root-finding problem."
+}

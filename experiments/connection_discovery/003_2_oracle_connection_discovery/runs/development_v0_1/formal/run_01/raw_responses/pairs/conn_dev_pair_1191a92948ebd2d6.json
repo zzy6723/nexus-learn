@@ -1,0 +1,28 @@
+{
+  "id": "8e49382a-6552-42fa-ac55-77e9e971a26e",
+  "object": "chat.completion",
+  "created": 1784548991,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_1191a92948ebd2d6\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_001\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_011\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_016\", \"evidence_017\"],\n    \"rationale\": \"Evidence shows that the gradient (score function) is used in maximum likelihood estimation, which is a method applied to statistical models.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2185,
+    "completion_tokens": 125,
+    "total_tokens": 2310,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 1673
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

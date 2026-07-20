@@ -1,0 +1,10 @@
+{
+  "canonical_pair_id": "conn_dev_pair_c9b55dc727622af1",
+  "source_canonical_ko_id": "conn_dev_ko_018",
+  "target_canonical_ko_id": "conn_dev_ko_017",
+  "relation_type": "FORMALIZES",
+  "evidence_ids": [
+    "evidence_009"
+  ],
+  "rationale": "Evidence 009 states that the MSE formula 'formalizes the least squares objective up to a positive constant scaling', directly establishing that the formula (ko_018) formalizes the concept (ko_017)."
+}

@@ -1,0 +1,75 @@
+{
+  "artifact_type": "canonical_connection_evaluation_complete",
+  "version": "v0.1",
+  "evaluation_status": "final",
+  "inputs": {
+    "predictions": {
+      "path": "experiments/connection_discovery/003_2_oracle_connection_discovery/runs/development_v0_1/formal/run_01/output/canonical_connection_predictions.json",
+      "sha256": "959d7a5c74c5306d694183325fc7547cdb707a26761709fb7bd14b84eef55e58"
+    },
+    "run_metadata": {
+      "path": "experiments/connection_discovery/003_2_oracle_connection_discovery/runs/development_v0_1/formal/run_01/metadata/run_metadata.json",
+      "sha256": "f973b99d9bacb781833535f3838da3c42112a3561ce6a1743e6d39f493955c87"
+    },
+    "candidate_selection": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/overlap_bridge/run_01/generation/candidate_selection.json",
+      "sha256": "70318d882755066b32017cb1c9188603060f8cd7237c70e7d7a0b14d339dee7a"
+    },
+    "ground_truth": {
+      "path": "benchmark/connection_discovery/development_v0_1/ground_truth.json",
+      "sha256": "1bbbd801b505dc2a1d410f50b605a600b9e2ae135471b5484dea63c76aebcba4"
+    },
+    "evidence_catalogs": {
+      "path": "benchmark/connection_discovery/development_v0_1/evidence_catalogs.json",
+      "sha256": "4b5549598dc2aa0250e6d5a688484d13f742d7a6372ba6f6ad6fd1a1ecf87cac"
+    },
+    "freeze_manifest": {
+      "path": "experiments/connection_discovery/003_0_benchmark_preparation/benchmark_freeze_manifest_v0_1.json",
+      "sha256": "73dfb238877395c1d57e63c4959f416834b3b30db56dd64abe8981b012f39f2c"
+    },
+    "success_criteria": {
+      "path": "benchmark/connection_discovery_success_criteria_v0_1.json",
+      "sha256": "44b55047bc2d17b63842cc140d0be74f93bb95be4fe12fb578022d87ffe080f8"
+    },
+    "adjudication": {
+      "path": "experiments/connection_discovery/003_2_oracle_connection_discovery/runs/development_v0_1/formal/run_01/evaluation/adjudication_resolved.json",
+      "sha256": "c49e668ee94efb157b0dada017a2b3f8c9dc1470156350a7ea37849ef0e5d6fb"
+    }
+  },
+  "outputs": {
+    "metrics": {
+      "path": "experiments/connection_discovery/003_2_oracle_connection_discovery/runs/development_v0_1/formal/run_01/evaluation/metrics.json",
+      "sha256": "d5c7617c11de34241e66095252b0c9d99e14acac100dfc60179049e2b97af292"
+    },
+    "matches": {
+      "path": "experiments/connection_discovery/003_2_oracle_connection_discovery/runs/development_v0_1/formal/run_01/evaluation/matches.json",
+      "sha256": "ef0470ea3a157bcf1965b4b6bd12bca784693ec063d0708f599e10eb4a33ced1"
+    },
+    "errors": {
+      "path": "experiments/connection_discovery/003_2_oracle_connection_discovery/runs/development_v0_1/formal/run_01/evaluation/errors.json",
+      "sha256": "cb4be9f6ca0254db5e18ba79754c1a122ead06074ae657becd22c5e5d4876f4e"
+    },
+    "materialized_predictions": {
+      "path": "experiments/connection_discovery/003_2_oracle_connection_discovery/runs/development_v0_1/formal/run_01/evaluation/materialized_predictions.json",
+      "sha256": "2abfb1ed84ad216444c45eac39834f72352607bd5c494a6e050bf84a426ab25c"
+    },
+    "per_relation_metrics": {
+      "path": "experiments/connection_discovery/003_2_oracle_connection_discovery/runs/development_v0_1/formal/run_01/evaluation/per_relation_metrics.json",
+      "sha256": "ee0db2185ec43fb85e6afbf883258bb6c9bb2ae8a671ebe9c5e5cf738034617a"
+    },
+    "stratum_metrics": {
+      "path": "experiments/connection_discovery/003_2_oracle_connection_discovery/runs/development_v0_1/formal/run_01/evaluation/stratum_metrics.json",
+      "sha256": "1c1327d8ca3cc1d50aba58f3ec2d396dbaf838135a6b8653c00da563eb2d2333"
+    },
+    "adjudication_pending": {
+      "path": "experiments/connection_discovery/003_2_oracle_connection_discovery/runs/development_v0_1/formal/run_01/evaluation/adjudication_pending.json",
+      "sha256": "4d051beeba1df095398d4c13e7bc2f54404ea2cef40118bbc29dc5dde8f63150"
+    }
+  },
+  "evaluator": {
+    "path": "scripts/evaluate_connection_discovery.py",
+    "sha256": "6b29c3d619d7aff9492cf1fa38eb918c925ea57968d1cb2884499489042a177a",
+    "version": "canonical_connection_evaluator_v0.1"
+  },
+  "gate_outcome": "failed"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "25452c0f-ab0c-410d-b2a4-84c25fa50345",
+  "object": "chat.completion",
+  "created": 1784549149,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_7cd6620daef9af12\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_009\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_003\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_012\", \"evidence_013\"],\n    \"rationale\": \"Evidence 012 states that the Newton optimisation method requires the Hessian matrix and gives the update formula, which is a second-order method. Evidence 013 provides the Newton update formula, which uses the gradient (from first-order Taylor approximation) and Hessian, showing that the first-order Taylor approximation is applied in the Newton update.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2201,
+    "completion_tokens": 164,
+    "total_tokens": 2365,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 1689
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

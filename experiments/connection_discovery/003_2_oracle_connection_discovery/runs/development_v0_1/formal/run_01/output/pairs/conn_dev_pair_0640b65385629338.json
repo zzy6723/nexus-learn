@@ -1,0 +1,10 @@
+{
+  "canonical_pair_id": "conn_dev_pair_0640b65385629338",
+  "source_canonical_ko_id": "conn_dev_ko_017",
+  "target_canonical_ko_id": "conn_dev_ko_021",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_004"
+  ],
+  "rationale": "Evidence 004 states that finding a candidate satisfying the score equation is a root-finding problem, indicating that the least squares objective (via maximum likelihood) leads to a root-finding problem."
+}

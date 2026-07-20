@@ -1,0 +1,28 @@
+{
+  "id": "2d9a755e-6deb-48f4-aac0-9067af8b7020",
+  "object": "chat.completion",
+  "created": 1784549269,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_c862968c2f7bbf13\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_015\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_021\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_004\"],\n    \"rationale\": \"Evidence 004 states that solving the score equation is a root-finding problem, indicating that the Score Equation is applied in the context of Root-Finding Problem.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 126,
+    "total_tokens": 1689,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 1051
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "761b809f-0030-4049-9eb9-4f8ddf6b3da1",
+  "object": "chat.completion",
+  "created": 1784549283,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_ce63516ba4c4f71d\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_005\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_011\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_009\"],\n    \"rationale\": \"Evidence 009 states that maximum likelihood estimation treats the log-likelihood as an objective function, showing that Objective Function is applied in the context of Statistical Model.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2103,
+    "completion_tokens": 127,
+    "total_tokens": 2230,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 1591
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

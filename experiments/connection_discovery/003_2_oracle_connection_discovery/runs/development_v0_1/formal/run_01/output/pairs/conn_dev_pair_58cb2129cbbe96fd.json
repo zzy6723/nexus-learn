@@ -1,0 +1,11 @@
+{
+  "canonical_pair_id": "conn_dev_pair_58cb2129cbbe96fd",
+  "source_canonical_ko_id": "conn_dev_ko_005",
+  "target_canonical_ko_id": "conn_dev_ko_019",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_013",
+    "evidence_016"
+  ],
+  "rationale": "Ordinary Least Squares (target) uses an objective function (source) to fit a linear regression model by minimizing the least squares objective, as stated in evidence_013 and evidence_016."
+}

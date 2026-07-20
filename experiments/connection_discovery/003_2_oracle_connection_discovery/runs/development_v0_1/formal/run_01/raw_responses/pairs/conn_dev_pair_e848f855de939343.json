@@ -1,0 +1,28 @@
+{
+  "id": "083f1d73-6208-460e-8093-deb112c7c29c",
+  "object": "chat.completion",
+  "created": 1784549331,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_e848f855de939343\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_019\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_020\",\n    \"relation_type\": \"EXTENDS\",\n    \"evidence_ids\": [\"evidence_010\"],\n    \"rationale\": \"Evidence 010 explicitly states that Ridge regression extends ordinary least squares by adding a penalty, indicating an EXTENDS relation from OLS to Ridge regression.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1614,
+    "completion_tokens": 119,
+    "total_tokens": 1733,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 1102
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

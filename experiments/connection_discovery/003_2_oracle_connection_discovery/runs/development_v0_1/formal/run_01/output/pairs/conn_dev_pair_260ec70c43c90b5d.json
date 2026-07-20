@@ -1,0 +1,11 @@
+{
+  "canonical_pair_id": "conn_dev_pair_260ec70c43c90b5d",
+  "source_canonical_ko_id": "conn_dev_ko_016",
+  "target_canonical_ko_id": "conn_dev_ko_011",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_005",
+    "evidence_011"
+  ],
+  "rationale": "Evidence states that linear regression is a specific instance of a statistical model, and that under Gaussian assumptions, ordinary least squares is equivalent to maximum likelihood estimation, which is a method applied within statistical models."
+}

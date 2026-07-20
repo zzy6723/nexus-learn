@@ -1,0 +1,28 @@
+{
+  "id": "0647930a-2b92-4eeb-afb6-27cfc91f5447",
+  "object": "chat.completion",
+  "created": 1784549200,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_9cd38efffcca81cd\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_020\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_017\",\n    \"relation_type\": \"EXTENDS\",\n    \"evidence_ids\": [\"evidence_010\"],\n    \"rationale\": \"Evidence 010 states that Ridge regression extends ordinary least squares by adding a penalty to the objective, and the least squares objective is the core of ordinary least squares, which is the target concept.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1603,
+    "completion_tokens": 130,
+    "total_tokens": 1733,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 1091
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

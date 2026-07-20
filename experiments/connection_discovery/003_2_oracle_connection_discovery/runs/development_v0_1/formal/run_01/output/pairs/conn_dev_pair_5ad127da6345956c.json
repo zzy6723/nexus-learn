@@ -1,0 +1,10 @@
+{
+  "canonical_pair_id": "conn_dev_pair_5ad127da6345956c",
+  "source_canonical_ko_id": "conn_dev_ko_011",
+  "target_canonical_ko_id": "conn_dev_ko_019",
+  "relation_type": "FORMALIZES",
+  "evidence_ids": [
+    "evidence_005"
+  ],
+  "rationale": "Evidence 005 states that for a Gaussian linear regression model, maximizing the log-likelihood (which defines a statistical model) is equivalent to minimizing the least squares objective, thus OLS formalizes the statistical model under specific assumptions."
+}

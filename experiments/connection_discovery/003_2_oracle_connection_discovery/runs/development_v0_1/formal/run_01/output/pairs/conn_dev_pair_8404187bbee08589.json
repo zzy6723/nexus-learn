@@ -1,0 +1,11 @@
+{
+  "canonical_pair_id": "conn_dev_pair_8404187bbee08589",
+  "source_canonical_ko_id": "conn_dev_ko_013",
+  "target_canonical_ko_id": "conn_dev_ko_011",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_002",
+    "evidence_005"
+  ],
+  "rationale": "Maximum Likelihood Estimation is a method applied to a Statistical Model to estimate its parameters, as shown by evidence that MLE uses the log-likelihood derived from the model and that for a Gaussian linear model, MLE is equivalent to least squares."
+}

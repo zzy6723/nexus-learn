@@ -1,0 +1,28 @@
+{
+  "id": "58e66f69-53ca-401f-a5c8-7e6ff8f72ebe",
+  "object": "chat.completion",
+  "created": 1784548974,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_0640b65385629338\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_017\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_021\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_004\"],\n    \"rationale\": \"Evidence 004 states that finding a candidate satisfying the score equation is a root-finding problem, indicating that the least squares objective (via maximum likelihood) leads to a root-finding problem.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2007,
+    "completion_tokens": 130,
+    "total_tokens": 2137,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 1495
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

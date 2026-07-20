@@ -1,0 +1,10 @@
+{
+  "canonical_pair_id": "conn_dev_pair_9b1e66cc5876fb95",
+  "source_canonical_ko_id": "conn_dev_ko_016",
+  "target_canonical_ko_id": "conn_dev_ko_021",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_004"
+  ],
+  "rationale": "Evidence 004 states that finding a candidate satisfying the score equation is a root-finding problem, and that Newton's root-finding method can be applied within maximum likelihood estimation, which is used for linear regression."
+}

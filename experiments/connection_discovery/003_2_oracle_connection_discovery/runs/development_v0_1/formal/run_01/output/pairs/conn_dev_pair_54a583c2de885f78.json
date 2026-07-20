@@ -1,0 +1,8 @@
+{
+  "canonical_pair_id": "conn_dev_pair_54a583c2de885f78",
+  "source_canonical_ko_id": "conn_dev_ko_019",
+  "target_canonical_ko_id": "conn_dev_ko_022",
+  "relation_type": "NO_RELATION",
+  "evidence_ids": [],
+  "rationale": "No evidence directly connects Ordinary Least Squares and Newton's Root-Finding Method. Evidence 004 mentions Newton's method applied to maximum likelihood estimation, but OLS is only related to MLE under Gaussian assumptions, and no evidence shows Newton's method being applied to OLS specifically."
+}

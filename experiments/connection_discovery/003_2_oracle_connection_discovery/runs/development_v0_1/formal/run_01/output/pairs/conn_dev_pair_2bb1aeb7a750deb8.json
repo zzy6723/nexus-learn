@@ -1,0 +1,11 @@
+{
+  "canonical_pair_id": "conn_dev_pair_2bb1aeb7a750deb8",
+  "source_canonical_ko_id": "conn_dev_ko_001",
+  "target_canonical_ko_id": "conn_dev_ko_008",
+  "relation_type": "REQUIRES",
+  "evidence_ids": [
+    "evidence_012",
+    "evidence_013"
+  ],
+  "rationale": "Evidence_012 states that Newton optimisation method requires the Hessian matrix, and evidence_013 shows the update formula uses the gradient. The gradient is a prerequisite for computing the Newton step, establishing a REQUIRES relation from Gradient to Newton Optimisation Method."
+}

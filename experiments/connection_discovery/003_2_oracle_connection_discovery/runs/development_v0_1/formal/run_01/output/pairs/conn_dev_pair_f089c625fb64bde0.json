@@ -1,0 +1,11 @@
+{
+  "canonical_pair_id": "conn_dev_pair_f089c625fb64bde0",
+  "source_canonical_ko_id": "conn_dev_ko_001",
+  "target_canonical_ko_id": "conn_dev_ko_003",
+  "relation_type": "REQUIRES",
+  "evidence_ids": [
+    "evidence_005",
+    "evidence_006"
+  ],
+  "rationale": "The first-order Taylor approximation explicitly uses the gradient in its formula, as shown in evidence_005 and evidence_006, indicating that understanding the gradient is a prerequisite for the approximation."
+}

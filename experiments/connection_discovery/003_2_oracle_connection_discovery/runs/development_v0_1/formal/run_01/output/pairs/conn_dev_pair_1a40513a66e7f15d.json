@@ -1,0 +1,12 @@
+{
+  "canonical_pair_id": "conn_dev_pair_1a40513a66e7f15d",
+  "source_canonical_ko_id": "conn_dev_ko_010",
+  "target_canonical_ko_id": "conn_dev_ko_027",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_009",
+    "evidence_010",
+    "evidence_011"
+  ],
+  "rationale": "Evidence shows that the Forward Euler method uses a step size h in its update formula, and the step size concept is explicitly applied in the method's definition."
+}

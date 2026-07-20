@@ -1,0 +1,11 @@
+{
+  "canonical_pair_id": "conn_dev_pair_d7f55c9116fa3adf",
+  "source_canonical_ko_id": "conn_dev_ko_003",
+  "target_canonical_ko_id": "conn_dev_ko_008",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_012",
+    "evidence_013"
+  ],
+  "rationale": "The Newton optimisation method uses the Hessian matrix, which is a second-order derivative, and its update formula involves the gradient and Hessian. The first-order Taylor approximation provides the gradient term used in the Newton update, as seen in the evidence where the Newton update is derived from a second-order Taylor expansion that includes the first-order term."
+}

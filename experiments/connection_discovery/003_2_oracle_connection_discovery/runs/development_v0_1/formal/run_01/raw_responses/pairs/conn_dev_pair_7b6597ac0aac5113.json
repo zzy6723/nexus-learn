@@ -1,0 +1,28 @@
+{
+  "id": "613b4c17-6bb6-45d4-9044-66d858e9f189",
+  "object": "chat.completion",
+  "created": 1784549145,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_7b6597ac0aac5113\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_021\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_025\",\n    \"relation_type\": \"REQUIRES\",\n    \"evidence_ids\": [\"evidence_006\"],\n    \"rationale\": \"Newton's root-finding method requires the derivative of the function, establishing a prerequisite relationship from Root-Finding Problem to Derivative.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 122,
+    "total_tokens": 1680,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 1046
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

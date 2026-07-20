@@ -1,0 +1,28 @@
+{
+  "id": "8dbf76c6-3b34-458c-85dc-560c15a7b821",
+  "object": "chat.completion",
+  "created": 1784549246,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_be2636a5d8bc8b4c\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_018\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_016\",\n    \"relation_type\": \"FORMALIZES\",\n    \"evidence_ids\": [\"evidence_006\", \"evidence_007\", \"evidence_008\", \"evidence_009\"],\n    \"rationale\": \"The Mean Squared Error Formula (ko_018) formalizes the least squares objective used in Linear Regression (ko_016), as stated in evidence_006 and evidence_009. Evidence_007 and evidence_008 provide the formula itself.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1622,
+    "completion_tokens": 161,
+    "total_tokens": 1783,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 1110
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

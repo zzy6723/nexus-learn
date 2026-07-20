@@ -1,0 +1,36 @@
+{
+  "artifact_type": "canonical_connection_per_relation_metrics",
+  "version": "v0.1",
+  "relations": [
+    {
+      "relation_type": "APPLIED_IN",
+      "support": 26,
+      "strict_correct": 9,
+      "recall": 0.34615384615384615
+    },
+    {
+      "relation_type": "CONTRASTS_WITH",
+      "support": 1,
+      "strict_correct": 1,
+      "recall": 1.0
+    },
+    {
+      "relation_type": "EXTENDS",
+      "support": 2,
+      "strict_correct": 1,
+      "recall": 0.5
+    },
+    {
+      "relation_type": "FORMALIZES",
+      "support": 4,
+      "strict_correct": 2,
+      "recall": 0.5
+    },
+    {
+      "relation_type": "REQUIRES",
+      "support": 8,
+      "strict_correct": 1,
+      "recall": 0.125
+    }
+  ]
+}

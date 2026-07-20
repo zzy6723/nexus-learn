@@ -1,0 +1,28 @@
+{
+  "id": "17871a1f-51da-410e-90dd-d05cc68bd1cc",
+  "object": "chat.completion",
+  "created": 1784549157,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_7f5ac4c6e2fe5268\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_001\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_007\",\n    \"relation_type\": \"REQUIRES\",\n    \"evidence_ids\": [\"evidence_009\", \"evidence_010\"],\n    \"rationale\": \"Evidence 009 states that gradient descent requires the gradient of the objective function, and evidence 010 provides the gradient descent update formula, which uses the gradient. Thus, the concept of gradient is a prerequisite for the gradient descent update formula.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2189,
+    "completion_tokens": 150,
+    "total_tokens": 2339,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 1677
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

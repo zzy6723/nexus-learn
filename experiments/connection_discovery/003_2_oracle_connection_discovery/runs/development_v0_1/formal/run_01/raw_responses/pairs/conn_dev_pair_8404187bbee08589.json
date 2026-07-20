@@ -1,0 +1,28 @@
+{
+  "id": "e991a90b-39c3-4f60-a308-ac575ecfdd3a",
+  "object": "chat.completion",
+  "created": 1784549164,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_8404187bbee08589\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_013\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_011\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_002\", \"evidence_005\"],\n    \"rationale\": \"Maximum Likelihood Estimation is a method applied to a Statistical Model to estimate its parameters, as shown by evidence that MLE uses the log-likelihood derived from the model and that for a Gaussian linear model, MLE is equivalent to least squares.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1610,
+    "completion_tokens": 147,
+    "total_tokens": 1757,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 1098
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

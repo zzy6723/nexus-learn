@@ -1,0 +1,28 @@
+{
+  "id": "d94e01a6-5b5c-426f-b76c-752faecf7a92",
+  "object": "chat.completion",
+  "created": 1784549263,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_c02b6a5def080df9\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_003\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_028\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_016\", \"evidence_017\"],\n    \"rationale\": \"Evidence 016 explicitly states that applying the first-order Taylor approximation over a step of length h gives the Forward Euler method, and evidence 017 provides the Forward Euler update formula, showing that the first-order Taylor approximation is used to derive the Forward Euler update.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2196,
+    "completion_tokens": 150,
+    "total_tokens": 2346,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 1684
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

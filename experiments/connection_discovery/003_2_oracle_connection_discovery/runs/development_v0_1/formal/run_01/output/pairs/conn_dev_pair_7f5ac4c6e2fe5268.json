@@ -1,0 +1,11 @@
+{
+  "canonical_pair_id": "conn_dev_pair_7f5ac4c6e2fe5268",
+  "source_canonical_ko_id": "conn_dev_ko_001",
+  "target_canonical_ko_id": "conn_dev_ko_007",
+  "relation_type": "REQUIRES",
+  "evidence_ids": [
+    "evidence_009",
+    "evidence_010"
+  ],
+  "rationale": "Evidence 009 states that gradient descent requires the gradient of the objective function, and evidence 010 provides the gradient descent update formula, which uses the gradient. Thus, the concept of gradient is a prerequisite for the gradient descent update formula."
+}

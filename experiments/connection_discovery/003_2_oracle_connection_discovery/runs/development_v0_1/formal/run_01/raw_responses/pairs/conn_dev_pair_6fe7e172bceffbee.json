@@ -1,0 +1,28 @@
+{
+  "id": "fe356f79-2215-4ed7-af03-b42733f0bcea",
+  "object": "chat.completion",
+  "created": 1784549133,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_6fe7e172bceffbee\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_003\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_010\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_011\", \"evidence_016\"],\n    \"rationale\": \"Evidence 011 shows that the first-order Taylor approximation is used to predict objective change in gradient descent, which involves step size. Evidence 016 shows that the first-order Taylor approximation is applied to derive the Forward Euler method, which uses step size h.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2246,
+    "completion_tokens": 149,
+    "total_tokens": 2395,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 1734
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

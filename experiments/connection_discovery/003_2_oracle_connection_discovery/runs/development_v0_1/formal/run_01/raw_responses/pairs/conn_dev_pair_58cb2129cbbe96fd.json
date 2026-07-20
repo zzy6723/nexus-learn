@@ -1,0 +1,28 @@
+{
+  "id": "8b07bff7-ec0c-4232-9385-2dbe15172adb",
+  "object": "chat.completion",
+  "created": 1784549092,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_58cb2129cbbe96fd\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_005\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_019\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_013\", \"evidence_016\"],\n    \"rationale\": \"Ordinary Least Squares (target) uses an objective function (source) to fit a linear regression model by minimizing the least squares objective, as stated in evidence_013 and evidence_016.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2157,
+    "completion_tokens": 136,
+    "total_tokens": 2293,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 1645
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

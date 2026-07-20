@@ -1,0 +1,11 @@
+{
+  "canonical_pair_id": "conn_dev_pair_c21da2851eae0815",
+  "source_canonical_ko_id": "conn_dev_ko_006",
+  "target_canonical_ko_id": "conn_dev_ko_020",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_011",
+    "evidence_012"
+  ],
+  "rationale": "Evidence 011 states that gradient descent can be applied to ordinary least squares, and evidence 012 states that ridge regression extends ordinary least squares. Together, they support that gradient descent is applied in ridge regression, as ridge regression is an extension of ordinary least squares."
+}

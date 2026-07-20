@@ -1,0 +1,13 @@
+{
+  "canonical_pair_id": "conn_dev_pair_be2636a5d8bc8b4c",
+  "source_canonical_ko_id": "conn_dev_ko_018",
+  "target_canonical_ko_id": "conn_dev_ko_016",
+  "relation_type": "FORMALIZES",
+  "evidence_ids": [
+    "evidence_006",
+    "evidence_007",
+    "evidence_008",
+    "evidence_009"
+  ],
+  "rationale": "The Mean Squared Error Formula (ko_018) formalizes the least squares objective used in Linear Regression (ko_016), as stated in evidence_006 and evidence_009. Evidence_007 and evidence_008 provide the formula itself."
+}

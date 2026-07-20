@@ -1,0 +1,11 @@
+{
+  "canonical_pair_id": "conn_dev_pair_2e86bae906db9729",
+  "source_canonical_ko_id": "conn_dev_ko_005",
+  "target_canonical_ko_id": "conn_dev_ko_016",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_013",
+    "evidence_016"
+  ],
+  "rationale": "Evidence 013 states that ordinary least squares minimizes the least squares objective, which is an objective function. Evidence 016 explicitly says gradient descent can be applied to ordinary least squares using the gradient of this objective function, showing that the concept of objective function is applied in linear regression."
+}

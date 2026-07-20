@@ -1,0 +1,10 @@
+{
+  "canonical_pair_id": "conn_dev_pair_263db2f07078bcd1",
+  "source_canonical_ko_id": "conn_dev_ko_003",
+  "target_canonical_ko_id": "conn_dev_ko_026",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_016"
+  ],
+  "rationale": "Evidence 016 explicitly states that applying the first-order Taylor approximation over a step gives the Forward Euler method, which is a numerical technique for solving initial value problems."
+}

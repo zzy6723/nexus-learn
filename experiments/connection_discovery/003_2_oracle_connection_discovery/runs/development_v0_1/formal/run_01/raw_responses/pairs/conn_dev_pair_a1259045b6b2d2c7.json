@@ -1,0 +1,28 @@
+{
+  "id": "0a2ecafc-ee73-4360-9333-dda5ac5e2cfd",
+  "object": "chat.completion",
+  "created": 1784549205,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_a1259045b6b2d2c7\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_001\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_004\",\n    \"relation_type\": \"FORMALIZES\",\n    \"evidence_ids\": [\"evidence_005\", \"evidence_006\"],\n    \"rationale\": \"Evidence 005 states that the first-order Taylor approximation uses the gradient, and evidence 006 provides the formula that explicitly includes the gradient, showing that the First-Order Taylor Formula formalizes the concept of Gradient.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2196,
+    "completion_tokens": 144,
+    "total_tokens": 2340,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 1684
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "dbfd7f9f-c043-46af-af42-123b63db21af",
+  "object": "chat.completion",
+  "created": 1784549126,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_6d5cf494bbd05db6\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_006\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_013\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_016\", \"evidence_018\"],\n    \"rationale\": \"Evidence 016 states that gradient descent can be applied to ordinary least squares, and evidence 018 notes that ordinary least squares has a maximum likelihood estimation interpretation, establishing that gradient descent is used in the context of maximum likelihood estimation.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2097,
+    "completion_tokens": 145,
+    "total_tokens": 2242,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 1585
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

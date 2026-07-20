@@ -1,0 +1,11 @@
+{
+  "canonical_pair_id": "conn_dev_pair_616b3cd5835de47d",
+  "source_canonical_ko_id": "conn_dev_ko_001",
+  "target_canonical_ko_id": "conn_dev_ko_014",
+  "relation_type": "FORMALIZES",
+  "evidence_ids": [
+    "evidence_016",
+    "evidence_017"
+  ],
+  "rationale": "Evidence 016 states that the score function is the gradient of the log-likelihood, and evidence 017 provides the formula s(\u03b8)=\u2207_\u03b8 \u2113(\u03b8), directly formalizing the Score Function as a specific instance of a Gradient."
+}

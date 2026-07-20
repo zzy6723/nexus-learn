@@ -1,0 +1,28 @@
+{
+  "id": "2ca3f9ca-4268-4326-b4f9-c12ecf222ff6",
+  "object": "chat.completion",
+  "created": 1784549016,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_2653269d6960cfb8\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_009\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_010\",\n    \"relation_type\": \"CONTRASTS_WITH\",\n    \"evidence_ids\": [\"evidence_007\"],\n    \"rationale\": \"Evidence 007 explicitly contrasts the Newton optimisation update (which takes a full curvature-adjusted step) with gradient descent (which controls movement through an explicit step size), thereby contrasting the two endpoints.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1625,
+    "completion_tokens": 133,
+    "total_tokens": 1758,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 1113
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "2406d34a-6589-4874-b3be-3acb356e8e7e",
+  "object": "chat.completion",
+  "created": 1784549249,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_be5dff9ee6b32e1a\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_020\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_005\",\n    \"relation_type\": \"EXTENDS\",\n    \"evidence_ids\": [\"evidence_017\"],\n    \"rationale\": \"Ridge regression extends ordinary least squares by adding a squared-coefficient penalty to the objective, which is a modification of the objective function concept.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2104,
+    "completion_tokens": 124,
+    "total_tokens": 2228,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 1592
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

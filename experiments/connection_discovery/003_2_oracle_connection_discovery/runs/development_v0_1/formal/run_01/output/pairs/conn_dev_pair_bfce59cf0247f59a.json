@@ -1,0 +1,11 @@
+{
+  "canonical_pair_id": "conn_dev_pair_bfce59cf0247f59a",
+  "source_canonical_ko_id": "conn_dev_ko_009",
+  "target_canonical_ko_id": "conn_dev_ko_002",
+  "relation_type": "REQUIRES",
+  "evidence_ids": [
+    "evidence_012",
+    "evidence_013"
+  ],
+  "rationale": "Evidence 012 states that the Newton optimisation method requires the Hessian matrix, and evidence 013 provides the update formula that uses the Hessian. Thus, the Newton Optimisation Update requires the Hessian Matrix."
+}
