@@ -1,0 +1,35 @@
+{
+  "artifact_type": "two_stage_connection_transport_failure_record",
+  "version": "v0.1",
+  "status": "incomplete_not_evaluable",
+  "method_id": "direct_edge_gate_then_relation_typing_v0.1.1",
+  "method_commit": "690d3c34a5ee2a1f6707faea2d66a9deb8c7b846",
+  "runner_version": "two_stage_connection_runner_v0.1.1",
+  "runner_sha256": "d069e2a6833bc1ae0a9bad5c92b51066afc24f593b28a045786598667be548fb",
+  "source_run": "experiments/connection_discovery/003_2b_direct_edge_gate/runs/development_v0_1/v0_1_1/formal/run_01",
+  "failure": {
+    "stage": "stage_b",
+    "error_type": "TimeoutError",
+    "message": "The read operation timed out",
+    "aggregate_failure_metadata_written": false
+  },
+  "artifact_counts": {
+    "stage_a_candidate_count": 125,
+    "stage_a_completed_count": 125,
+    "stage_a_positive_count": 83,
+    "stage_b_completed_count": 37,
+    "stage_b_schema_repair_count": 6,
+    "stage_b_raw_response_count": 43
+  },
+  "next_stage_b_pair_id": "conn_dev_pair_9a51109c78e243ef",
+  "bindings": {
+    "stage_a_prediction_sha256": "3aa9c01253e414633b95d8bec51f417167ac6420fe607696be085724d6b452d1",
+    "stage_a_artifact_set_sha256": "5f2abb63a30ba806d8e5da4731af6765c1797684d879df20ccf663ec43c1ddbf",
+    "stage_b_output_set_sha256": "de695043f1328b6df513b03cc0a7543485036fa4bf2512a780a20b0e32450abb",
+    "stage_b_metadata_set_sha256": "a1045f4f74651465fceae9772f834876090375083117882480818d9f5b7f186c",
+    "stage_b_raw_response_set_sha256": "fbc0d3aaa23f7c75ad3a08aab5ec46d32bb7dd75e21629610718e8d3e7ecc86e",
+    "validated_resume_artifact_set_sha256": "84d6eaf9bb46d3d00343b7ea0af3762212cc04267903c32ed3b79659522a769a"
+  },
+  "evaluation_eligible": false,
+  "recovery_method": "strict_prefix_validation_and_bounded_transport_retry_v0.1.2"
+}

@@ -35,7 +35,7 @@ class TwoStageConnectionRunnerTests(unittest.TestCase):
         ])
         _, cls.items = runner.load_items(args)
 
-    def invoke(self, run_dir: Path, *extra: str, responses: list[dict] | None = None):
+    def invoke(self, run_dir: Path, *extra: str, responses: list[object] | None = None):
         api = mock.Mock()
         if responses is None:
             api.side_effect = AssertionError("API must not be called")
@@ -294,6 +294,109 @@ class TwoStageConnectionRunnerTests(unittest.TestCase):
             )
             self.assertEqual(len(pair_metadata["attempts"]), 2)
             self.assertFalse(pair_metadata["prediction_schema_valid"])
+
+    def test_stage_b_transport_timeout_is_retried(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            run_dir = Path(temporary) / "transport_recovered"
+            item = self.items[0]
+            evidence_id = item["model_input"]["evidence_catalog"][0]["evidence_id"]
+            gate = self.gate_result(item, "DIRECT_CONNECTION", [evidence_id])
+            typed = self.typed_result(item, "APPLIED_IN", [evidence_id])
+            code, api = self.invoke(
+                run_dir,
+                "--only", item["canonical_pair_id"],
+                "--transport-retries", "1",
+                "--transport-retry-delay-seconds", "0",
+                responses=[api_response(gate), TimeoutError("read timed out"), api_response(typed)],
+            )
+            self.assertEqual(code, 0)
+            self.assertEqual(api.call_count, 3)
+            metadata = json.loads((run_dir / "metadata/run_metadata.json").read_text())
+            self.assertEqual(metadata["method_id"], "direct_edge_gate_then_relation_typing_v0.1.2")
+            self.assertEqual(metadata["transport_retry_count"], 1)
+            pair_metadata = json.loads(
+                (run_dir / f"stage_b/metadata/pairs/{item['canonical_pair_id']}.json").read_text()
+            )
+            attempt = pair_metadata["attempts"][0]
+            self.assertEqual(attempt["transport_retry_count"], 1)
+            self.assertFalse(attempt["transport_attempts"][0]["request_success"])
+            self.assertTrue(attempt["transport_attempts"][1]["request_success"])
+
+    def test_stage_b_transport_retry_exhaustion_is_recorded(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            run_dir = Path(temporary) / "transport_failed"
+            item = self.items[0]
+            evidence_id = item["model_input"]["evidence_catalog"][0]["evidence_id"]
+            gate = self.gate_result(item, "DIRECT_CONNECTION", [evidence_id])
+            code, api = self.invoke(
+                run_dir,
+                "--only", item["canonical_pair_id"],
+                "--transport-retries", "1",
+                "--transport-retry-delay-seconds", "0",
+                responses=[
+                    api_response(gate),
+                    TimeoutError("read timed out"),
+                    TimeoutError("read timed out again"),
+                ],
+            )
+            self.assertEqual(code, 1)
+            self.assertEqual(api.call_count, 3)
+            metadata = json.loads((run_dir / "metadata/run_metadata.json").read_text())
+            self.assertEqual(metadata["run_status"], "stage_b_failed")
+            self.assertEqual(metadata["transport_retry_count"], 1)
+            pair_metadata = json.loads(
+                (run_dir / f"stage_b/metadata/pairs/{item['canonical_pair_id']}.json").read_text()
+            )
+            self.assertEqual(len(pair_metadata["attempts"][0]["transport_attempts"]), 2)
+            self.assertFalse(pair_metadata["request_success"])
+
+    def test_resume_reuses_validated_stage_a_and_continues_stage_b(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            source_run = root / "source"
+            resumed_run = root / "resumed"
+            item = self.items[0]
+            evidence_id = item["model_input"]["evidence_catalog"][0]["evidence_id"]
+            gate = self.gate_result(item, "DIRECT_CONNECTION", [evidence_id])
+            typed = self.typed_result(item, "APPLIED_IN", [evidence_id])
+            source_code, _ = self.invoke(
+                source_run,
+                "--only", item["canonical_pair_id"],
+                responses=[api_response(gate), TimeoutError("read timed out")],
+            )
+            self.assertEqual(source_code, 1)
+
+            api = mock.Mock(side_effect=[api_response(typed)])
+            with (
+                mock.patch.object(runner.base, "git_commit", return_value=METHOD_COMMIT),
+                mock.patch.object(runner.base, "git_dirty", return_value=False),
+                mock.patch.object(runner.base, "call_deepseek", api),
+                mock.patch.object(
+                    runner,
+                    "load_items",
+                    return_value=(runner._paths(runner.parse_args([
+                        "--method-commit", METHOD_COMMIT,
+                        "--run-dir", "unused",
+                    ])), [item]),
+                ),
+                mock.patch.object(runner, "validate_resume_failure_record"),
+                mock.patch.dict("os.environ", {"DEEPSEEK_API_KEY": "test-key"}),
+            ):
+                code = runner.main([
+                    "--method-commit", METHOD_COMMIT,
+                    "--run-dir", str(resumed_run),
+                    "--resume-source-run", str(source_run),
+                    "--resume-source-method-commit", METHOD_COMMIT,
+                    "--transport-retries", "1",
+                    "--transport-retry-delay-seconds", "0",
+                ])
+            self.assertEqual(code, 0)
+            self.assertEqual(api.call_count, 1)
+            metadata = json.loads((resumed_run / "metadata/run_metadata.json").read_text())
+            self.assertEqual(metadata["resume"]["stage_a_reused_count"], 1)
+            self.assertEqual(metadata["resume"]["stage_b_reused_count"], 0)
+            self.assertEqual(metadata["run_status"], "completed")
+            self.assertTrue((resumed_run / "metadata/resume_manifest.json").is_file())
 
     def test_no_overwrite_and_dirty_state_fail_before_writes(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:

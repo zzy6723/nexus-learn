@@ -1,6 +1,6 @@
 # 003-2b: Two-Stage Direct-Edge Connection Discovery
 
-**Status:** v0.1 execution failed twice; v0.1.1 bounded schema repair prepared
+**Status:** v0.1.1 interrupted by a transport timeout; v0.1.2 recovery prepared
 
 ## Motivation
 
@@ -82,6 +82,30 @@ The two failed v0.1 attempts are bound in:
 
 - `v0_1_execution_failures.md`;
 - `v0_1_execution_failures.json`.
+
+The first v0.1.1 formal attempt completed all 125 Stage-A requests and 37 of
+83 Stage-B requests before a response read timed out. The timeout escaped the
+v0.1.1 exception boundary, so no aggregate run metadata or evaluable final
+prediction was produced. This is an infrastructure failure, not a model or
+evaluation result. Its immutable partial artifacts are described in:
+
+- `v0_1_1_transport_failure.md`;
+- `v0_1_1_transport_failure.json`.
+
+Runner v0.1.2 adds only execution reliability behavior:
+
+- prepared aggregate metadata is written before the first API request;
+- transport failures receive at most two bounded retries;
+- retry exhaustion is recorded and remains fail closed;
+- an interrupted run may be resumed only after every reused Stage-A result and
+  the exact Stage-B completion prefix are re-parsed, revalidated, and hash-bound;
+- no benchmark, prompt, Evidence, prediction, or schema rule is changed.
+
+For the recorded v0.1.1 interruption, local preflight validated 125 Stage-A
+results, 83 Stage-A positives, and the exact 37-result Stage-B prefix. The next
+eligible Stage-B pair is `conn_dev_pair_9a51109c78e243ef`. The resumed run must
+use a new directory and method commit; the source run remains unchanged and is
+never itself completed or evaluated.
 
 ## Interpretation
 

@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import os
+import shutil
 import time
 from datetime import datetime, timezone
 from pathlib import Path
@@ -22,7 +23,8 @@ EXPERIMENT_ROOT = (
 )
 DEFAULT_GATE_PROMPT = EXPERIMENT_ROOT / "direct_edge_prompt.md"
 DEFAULT_TYPE_PROMPT = EXPERIMENT_ROOT / "relation_typing_prompt.md"
-RUNNER_VERSION = "two_stage_connection_runner_v0.1.1"
+DEFAULT_TRANSPORT_FAILURE_RECORD = EXPERIMENT_ROOT / "v0_1_1_transport_failure.json"
+RUNNER_VERSION = "two_stage_connection_runner_v0.1.2"
 GATE_RESULT_KEYS = {
     "canonical_pair_id",
     "ko_a_id",
@@ -36,6 +38,14 @@ GATE_DECISIONS = {"DIRECT_CONNECTION", "NO_RELATION"}
 
 class TwoStageRunError(base.ConnectionRunError):
     """Raised when the two-stage execution contract is violated."""
+
+
+class TransportRequestError(RuntimeError):
+    """Raised after a bounded sequence of transport attempts is exhausted."""
+
+    def __init__(self, message: str, attempts: list[dict[str, Any]]) -> None:
+        super().__init__(message)
+        self.attempts = attempts
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
@@ -67,6 +77,32 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         choices=(0, 1),
         default=0,
         help="Maximum validator-guided repair attempts after a schema-invalid Stage-B JSON response.",
+    )
+    parser.add_argument(
+        "--transport-retries",
+        type=int,
+        choices=(0, 1, 2),
+        default=0,
+        help="Retries after transport failures only; model/schema failures are never retried here.",
+    )
+    parser.add_argument(
+        "--transport-retry-delay-seconds",
+        type=float,
+        default=1.0,
+        help="Delay between bounded transport attempts.",
+    )
+    parser.add_argument(
+        "--resume-source-run",
+        help="Strictly validated interrupted run whose deterministic prefix may be reused.",
+    )
+    parser.add_argument(
+        "--resume-source-method-commit",
+        help="Method commit asserted for the interrupted source run.",
+    )
+    parser.add_argument(
+        "--resume-source-failure-record",
+        default=str(DEFAULT_TRANSPORT_FAILURE_RECORD),
+        help="Frozen record binding the interrupted source artifacts.",
     )
     parser.add_argument("--only")
     parser.add_argument("--dry-run", action="store_true")
@@ -268,6 +304,367 @@ def _usage_total(usages: list[dict[str, Any]]) -> dict[str, int]:
     }
 
 
+def _method_id(args: argparse.Namespace) -> str:
+    if args.transport_retries or args.resume_source_run:
+        return "direct_edge_gate_then_relation_typing_v0.1.2"
+    if args.schema_repair_attempts == 1:
+        return "direct_edge_gate_then_relation_typing_v0.1.1"
+    return "direct_edge_gate_then_relation_typing_v0.1"
+
+
+def _is_transport_error(exc: Exception) -> bool:
+    if isinstance(exc, (TimeoutError, ConnectionError)):
+        return True
+    return isinstance(exc, RuntimeError) and str(exc).startswith(
+        "Failed to reach DeepSeek API:"
+    )
+
+
+def call_with_transport_retries(
+    *,
+    api_key: str,
+    payload: dict[str, Any],
+    retries: int,
+    delay_seconds: float,
+) -> tuple[dict[str, Any], list[dict[str, Any]]]:
+    attempts: list[dict[str, Any]] = []
+    for attempt_index in range(retries + 1):
+        started = time.monotonic()
+        try:
+            response = base.call_deepseek(api_key=api_key, payload=payload)
+        except Exception as exc:
+            if not _is_transport_error(exc):
+                raise
+            attempts.append(
+                {
+                    "transport_attempt_number": attempt_index + 1,
+                    "request_success": False,
+                    "latency_ms": round((time.monotonic() - started) * 1000),
+                    "error_type": type(exc).__name__,
+                    "error": str(exc),
+                }
+            )
+            if attempt_index >= retries:
+                raise TransportRequestError(str(exc), attempts) from exc
+            if delay_seconds > 0:
+                time.sleep(delay_seconds)
+            continue
+        attempts.append(
+            {
+                "transport_attempt_number": attempt_index + 1,
+                "request_success": True,
+                "latency_ms": round((time.monotonic() - started) * 1000),
+                "error_type": None,
+                "error": None,
+            }
+        )
+        return response, attempts
+    raise AssertionError("unreachable transport retry state")
+
+
+def _require_pair_files(
+    directory: Path,
+    expected_ids: list[str],
+    description: str,
+) -> None:
+    if not directory.is_dir():
+        raise TwoStageRunError(f"Resume source is missing {description}")
+    actual = {path.stem for path in directory.glob("*.json")}
+    expected = set(expected_ids)
+    if actual != expected:
+        missing = sorted(expected - actual)
+        extra = sorted(actual - expected)
+        raise TwoStageRunError(
+            f"Resume source {description} pair set mismatch; "
+            f"missing={missing[:3]}, extra={extra[:3]}"
+        )
+
+
+def _validate_reused_pair_metadata(
+    metadata: dict[str, Any],
+    *,
+    pair_id: str,
+    stage: str,
+) -> None:
+    expected = {
+        "canonical_pair_id": pair_id,
+        "stage": stage,
+        "request_success": True,
+        "json_parse_success": True,
+        "prediction_schema_valid": True,
+        "finish_reason": "stop",
+    }
+    for key, value in expected.items():
+        if metadata.get(key) != value:
+            raise TwoStageRunError(
+                f"Resume source {stage} metadata is invalid for {pair_id}: {key}"
+            )
+
+
+def _artifact_manifest(root: Path, paths: list[Path]) -> dict[str, Any]:
+    artifacts = [
+        {"path": str(path.relative_to(root)), "sha256": base.sha256_file(path)}
+        for path in sorted(set(paths))
+    ]
+    return {
+        "artifact_count": len(artifacts),
+        "artifacts": artifacts,
+        "artifact_set_sha256": base.sha256_json(artifacts),
+    }
+
+
+def validate_resume_failure_record(
+    *,
+    record: dict[str, Any],
+    source_run: Path,
+    source_method_commit: str,
+    resume_manifest: dict[str, Any],
+) -> None:
+    expected = {
+        "artifact_type": "two_stage_connection_transport_failure_record",
+        "status": "incomplete_not_evaluable",
+        "method_commit": source_method_commit,
+        "source_run": base.display_path(source_run),
+        "evaluation_eligible": False,
+    }
+    for key, value in expected.items():
+        if record.get(key) != value:
+            raise TwoStageRunError(f"Resume failure record mismatch: {key}")
+    counts = record.get("artifact_counts", {})
+    observed_counts = {
+        "stage_a_completed_count": resume_manifest["stage_a_reused_count"],
+        "stage_a_positive_count": resume_manifest["stage_a_positive_count"],
+        "stage_b_completed_count": resume_manifest["stage_b_reused_count"],
+    }
+    for key, value in observed_counts.items():
+        if counts.get(key) != value:
+            raise TwoStageRunError(f"Resume failure record count mismatch: {key}")
+    if record.get("next_stage_b_pair_id") != resume_manifest["next_stage_b_pair_id"]:
+        raise TwoStageRunError("Resume failure record next-pair mismatch")
+    expected_sha = record.get("bindings", {}).get(
+        "validated_resume_artifact_set_sha256"
+    )
+    if expected_sha != resume_manifest["artifact_set_sha256"]:
+        raise TwoStageRunError("Resume source artifact-set hash changed")
+
+
+def load_resume_prefix(
+    *,
+    source_run: Path,
+    destination_run: Path,
+    items: list[dict[str, Any]],
+    stage_a_payloads: list[dict[str, Any]],
+    args: argparse.Namespace,
+    type_prompt: str,
+    schema_repair_attempts: int,
+) -> dict[str, Any]:
+    if not source_run.is_dir():
+        raise TwoStageRunError("Resume source run does not exist")
+    if source_run.resolve() == destination_run.resolve():
+        raise TwoStageRunError("Resume source and destination run must differ")
+
+    pair_ids = [item["canonical_pair_id"] for item in items]
+    item_by_id = {item["canonical_pair_id"]: item for item in items}
+    source_a = source_run / "stage_a"
+    reused_paths: list[Path] = []
+    for relative, description in (
+        ("rendered_inputs/pairs", "Stage-A rendered inputs"),
+        ("raw_responses/pairs", "Stage-A raw responses"),
+        ("output/pairs", "Stage-A outputs"),
+        ("metadata/pairs", "Stage-A metadata"),
+    ):
+        _require_pair_files(source_a / relative, pair_ids, description)
+
+    gate_results: dict[str, dict[str, Any]] = {}
+    usages: list[dict[str, Any]] = []
+    finish_reasons: list[str | None] = []
+    for item, payload in zip(items, stage_a_payloads):
+        pair_id = item["canonical_pair_id"]
+        rendered = source_a / "rendered_inputs" / "pairs" / f"{pair_id}.json"
+        raw = source_a / "raw_responses" / "pairs" / f"{pair_id}.json"
+        output = source_a / "output" / "pairs" / f"{pair_id}.json"
+        pair_metadata_path = source_a / "metadata" / "pairs" / f"{pair_id}.json"
+        if base.load_json(rendered) != payload:
+            raise TwoStageRunError(f"Resume source Stage-A payload changed for {pair_id}")
+        response = base.load_json(raw)
+        parsed, finish_reason = base.extract_response(response)
+        result = validate_gate_prediction(parsed, item)
+        if base.load_json(output) != result:
+            raise TwoStageRunError(f"Resume source Stage-A output mismatch for {pair_id}")
+        pair_metadata = base.load_json(pair_metadata_path)
+        _validate_reused_pair_metadata(
+            pair_metadata, pair_id=pair_id, stage="direct_edge_gate"
+        )
+        gate_results[pair_id] = result
+        finish_reasons.append(finish_reason)
+        if isinstance(response.get("usage"), dict):
+            usages.append(response["usage"])
+        reused_paths.extend((rendered, raw, output, pair_metadata_path))
+
+    aggregate_path = source_a / "output" / "direct_gate_predictions.json"
+    expected_aggregate = {
+        "artifact_type": "canonical_direct_edge_gate_predictions",
+        "version": "v0.1",
+        "results": [gate_results[pair_id] for pair_id in pair_ids],
+    }
+    if base.load_json(aggregate_path) != expected_aggregate:
+        raise TwoStageRunError("Resume source Stage-A aggregate is inconsistent")
+    reused_paths.append(aggregate_path)
+
+    positive_items = [
+        item
+        for item in items
+        if gate_results[item["canonical_pair_id"]]["decision"] == "DIRECT_CONNECTION"
+    ]
+    stage_b_payloads = [
+        _payload(
+            args,
+            type_prompt,
+            typing_model_input(item, gate_results[item["canonical_pair_id"]]),
+            args.type_max_tokens,
+        )
+        for item in positive_items
+    ]
+    source_b = source_run / "stage_b"
+    positive_ids = [item["canonical_pair_id"] for item in positive_items]
+    _require_pair_files(
+        source_b / "rendered_inputs" / "pairs",
+        positive_ids,
+        "Stage-B rendered inputs",
+    )
+    for item, payload in zip(positive_items, stage_b_payloads):
+        rendered = source_b / "rendered_inputs" / "pairs" / f"{item['canonical_pair_id']}.json"
+        if base.load_json(rendered) != payload:
+            raise TwoStageRunError(
+                f"Resume source Stage-B payload changed for {item['canonical_pair_id']}"
+            )
+
+    output_dir = source_b / "output" / "pairs"
+    metadata_dir = source_b / "metadata" / "pairs"
+    completed_set = {path.stem for path in output_dir.glob("*.json")}
+    completed_ids = positive_ids[: len(completed_set)]
+    if completed_set != set(completed_ids):
+        raise TwoStageRunError("Resume source Stage-B results are not an exact execution prefix")
+    if len(completed_ids) >= len(positive_ids):
+        raise TwoStageRunError("Resume source is already complete")
+    metadata_set = {path.stem for path in metadata_dir.glob("*.json")}
+    allowed_metadata_set = set(completed_ids)
+    next_pair_id = positive_ids[len(completed_ids)]
+    if next_pair_id in metadata_set:
+        failed_metadata = base.load_json(metadata_dir / f"{next_pair_id}.json")
+        if (
+            failed_metadata.get("canonical_pair_id") != next_pair_id
+            or failed_metadata.get("stage") != "relation_typing"
+            or failed_metadata.get("request_success") is not False
+            or not failed_metadata.get("failure")
+        ):
+            raise TwoStageRunError("Resume source next-pair failure marker is invalid")
+        allowed_metadata_set.add(next_pair_id)
+    if metadata_set != allowed_metadata_set:
+        raise TwoStageRunError("Resume source Stage-B metadata is not a valid prefix")
+
+    typed_results: dict[str, dict[str, Any]] = {}
+    schema_repair_count = 0
+    expected_raw_names: set[str] = set()
+    expected_repair_names: set[str] = set()
+    for pair_id in completed_ids:
+        item = item_by_id[pair_id]
+        payload = stage_b_payloads[positive_ids.index(pair_id)]
+        gate_result = gate_results[pair_id]
+        primary_raw = source_b / "raw_responses" / "pairs" / f"{pair_id}.json"
+        primary_response = base.load_json(primary_raw)
+        parsed, finish_reason = base.extract_response(primary_response)
+        expected_raw_names.add(primary_raw.name)
+        reused_paths.append(primary_raw)
+        finish_reasons.append(finish_reason)
+        if isinstance(primary_response.get("usage"), dict):
+            usages.append(primary_response["usage"])
+        try:
+            result = validate_typed_prediction(parsed, item, gate_result)
+            expected_attempt_count = 1
+        except base.ConnectionRunError as exc:
+            if schema_repair_attempts != 1:
+                raise TwoStageRunError(
+                    f"Resume source requires disabled schema repair for {pair_id}"
+                ) from exc
+            repair_name = f"{pair_id}.repair_01.json"
+            repair_payload_path = source_b / "rendered_inputs" / "repairs" / repair_name
+            repair_raw = source_b / "raw_responses" / "pairs" / repair_name
+            expected_repair_payload = repair_payload(payload, primary_response, str(exc))
+            if base.load_json(repair_payload_path) != expected_repair_payload:
+                raise TwoStageRunError(
+                    f"Resume source repair payload mismatch for {pair_id}"
+                )
+            repair_response = base.load_json(repair_raw)
+            repair_parsed, repair_finish = base.extract_response(repair_response)
+            result = validate_typed_prediction(repair_parsed, item, gate_result)
+            expected_attempt_count = 2
+            schema_repair_count += 1
+            expected_raw_names.add(repair_raw.name)
+            expected_repair_names.add(repair_payload_path.name)
+            reused_paths.extend((repair_payload_path, repair_raw))
+            finish_reasons.append(repair_finish)
+            if isinstance(repair_response.get("usage"), dict):
+                usages.append(repair_response["usage"])
+
+        output_path = output_dir / f"{pair_id}.json"
+        metadata_path = metadata_dir / f"{pair_id}.json"
+        if base.load_json(output_path) != result:
+            raise TwoStageRunError(f"Resume source Stage-B output mismatch for {pair_id}")
+        pair_metadata = base.load_json(metadata_path)
+        _validate_reused_pair_metadata(
+            pair_metadata, pair_id=pair_id, stage="relation_typing"
+        )
+        if pair_metadata.get("attempt_count") != expected_attempt_count:
+            raise TwoStageRunError(
+                f"Resume source Stage-B attempt count mismatch for {pair_id}"
+            )
+        typed_results[pair_id] = result
+        reused_paths.extend((output_path, metadata_path))
+
+    raw_names = {path.name for path in (source_b / "raw_responses" / "pairs").glob("*.json")}
+    repair_names = {
+        path.name
+        for path in (source_b / "rendered_inputs" / "repairs").glob("*.json")
+    }
+    if raw_names != expected_raw_names or repair_names != expected_repair_names:
+        raise TwoStageRunError("Resume source contains unbound Stage-B attempt artifacts")
+
+    shutil.copytree(source_a, destination_run / "stage_a", dirs_exist_ok=True)
+    for relative in (
+        "raw_responses/pairs",
+        "output/pairs",
+        "metadata/pairs",
+        "rendered_inputs/repairs",
+    ):
+        source = source_b / relative
+        if source.exists():
+            shutil.copytree(source, destination_run / "stage_b" / relative, dirs_exist_ok=True)
+
+    manifest = _artifact_manifest(source_run, reused_paths)
+    manifest.update(
+        {
+            "artifact_type": "two_stage_transport_resume_manifest",
+            "version": "v0.1",
+            "source_run": base.display_path(source_run),
+            "stage_a_reused_count": len(items),
+            "stage_a_positive_count": len(positive_items),
+            "stage_b_reused_count": len(completed_ids),
+            "next_stage_b_pair_id": positive_ids[len(completed_ids)],
+        }
+    )
+    return {
+        "gate_results": gate_results,
+        "positive_items": positive_items,
+        "stage_b_payloads": stage_b_payloads,
+        "typed_results": typed_results,
+        "schema_repair_count": schema_repair_count,
+        "usages": usages,
+        "finish_reasons": finish_reasons,
+        "manifest": manifest,
+    }
+
+
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv)
     run_dir = base.resolve_path(args.run_dir)
@@ -276,6 +673,24 @@ def main(argv: list[str] | None = None) -> int:
         return 1
     if base.SHA1_RE.fullmatch(args.method_commit) is None:
         print("Two-stage Connection run failed: method_commit must be a 40-character SHA-1")
+        return 1
+    if args.transport_retry_delay_seconds < 0:
+        print("Two-stage Connection run failed: transport retry delay cannot be negative")
+        return 1
+    if args.resume_source_run:
+        if args.only or args.dry_run:
+            print("Two-stage Connection run failed: resume requires a full formal run")
+            return 1
+        if not args.resume_source_method_commit or base.SHA1_RE.fullmatch(
+            args.resume_source_method_commit
+        ) is None:
+            print(
+                "Two-stage Connection run failed: resume requires a 40-character "
+                "source method commit"
+            )
+            return 1
+    elif args.resume_source_method_commit:
+        print("Two-stage Connection run failed: source method commit requires a resume source")
         return 1
     commit = base.git_commit()
     dirty = base.git_dirty()
@@ -313,14 +728,10 @@ def main(argv: list[str] | None = None) -> int:
     started_at = datetime.now(timezone.utc).isoformat()
     metadata: dict[str, Any] = {
         "artifact_type": "two_stage_canonical_connection_run_metadata",
-        "version": "v0.1",
+        "version": "v0.1.2",
         "run_id": args.run_id,
         "run_status": "prepared",
-        "method_id": (
-            "direct_edge_gate_then_relation_typing_v0.1.1"
-            if args.schema_repair_attempts == 1
-            else "direct_edge_gate_then_relation_typing_v0.1"
-        ),
+        "method_id": _method_id(args),
         "method_commit": args.method_commit,
         "git_commit_at_start": commit,
         "git_dirty_at_start": dirty,
@@ -334,6 +745,8 @@ def main(argv: list[str] | None = None) -> int:
             "gate_max_tokens": args.gate_max_tokens,
             "type_max_tokens": args.type_max_tokens,
             "schema_repair_attempts": args.schema_repair_attempts,
+            "transport_retries": args.transport_retries,
+            "transport_retry_delay_seconds": args.transport_retry_delay_seconds,
             "response_format": {"type": "json_object"},
             "thinking": {"type": "disabled"},
         },
@@ -362,6 +775,8 @@ def main(argv: list[str] | None = None) -> int:
         "stage_a_positive_count": None,
         "stage_b_completed_count": 0,
         "stage_b_schema_repair_count": 0,
+        "transport_retry_count": 0,
+        "resume": None,
         "request_success": None,
         "json_parse_success": None,
         "prediction_schema_valid": None,
@@ -375,6 +790,7 @@ def main(argv: list[str] | None = None) -> int:
             stage_dirs["stage_a"]["rendered"] / f"{item['canonical_pair_id']}.json",
             payload,
         )
+    base.write_json(run_metadata_path, metadata)
     if args.dry_run:
         metadata["run_status"] = "dry_run_complete"
         base.write_json(run_metadata_path, metadata)
@@ -397,49 +813,131 @@ def main(argv: list[str] | None = None) -> int:
     usages: list[dict[str, Any]] = []
     finish_reasons: list[str | None] = []
     gate_results: dict[str, dict[str, Any]] = {}
+    typed_results: dict[str, dict[str, Any]] = {}
+    schema_repair_count = 0
+    reused_stage_b_count = 0
 
-    for item, payload in zip(items, stage_a_payloads):
-        pair_id = item["canonical_pair_id"]
-        pair_started = time.monotonic()
-        pair_metadata = _pair_metadata(pair_id, "direct_edge_gate")
+    if args.resume_source_run:
+        source_run = base.resolve_path(args.resume_source_run)
+        failure_record_path = base.resolve_path(args.resume_source_failure_record)
         try:
-            response = base.call_deepseek(api_key=api_key, payload=payload)
-            pair_metadata["request_success"] = True
-            base.write_json(stage_dirs["stage_a"]["raw"] / f"{pair_id}.json", response)
-            parsed, finish_reason = base.extract_response(response)
-            pair_metadata["json_parse_success"] = True
-            result = validate_gate_prediction(parsed, item)
-            pair_metadata["prediction_schema_valid"] = True
-            pair_metadata["finish_reason"] = finish_reason
-            pair_metadata["latency_ms"] = round((time.monotonic() - pair_started) * 1000)
-            base.write_json(stage_dirs["stage_a"]["output"] / f"{pair_id}.json", result)
-            base.write_json(stage_dirs["stage_a"]["metadata"] / f"{pair_id}.json", pair_metadata)
-            gate_results[pair_id] = result
-            finish_reasons.append(finish_reason)
-            if isinstance(response.get("usage"), dict):
-                usages.append(response["usage"])
-        except (RuntimeError, base.ConnectionRunError) as exc:
-            pair_metadata["failure"] = str(exc)
-            pair_metadata["latency_ms"] = round((time.monotonic() - pair_started) * 1000)
-            base.write_json(stage_dirs["stage_a"]["metadata"] / f"{pair_id}.json", pair_metadata)
-            metadata.update({
-                "run_status": "stage_a_failed",
-                "stage_a_completed_count": len(gate_results),
-                "request_success": pair_metadata["request_success"],
-                "json_parse_success": pair_metadata["json_parse_success"],
-                "prediction_schema_valid": pair_metadata["prediction_schema_valid"],
-                "latency_ms": round((time.monotonic() - started_clock) * 1000),
-                "failure": {"stage": "stage_a", "canonical_pair_id": pair_id, "message": str(exc)},
-            })
+            failure_record = base.load_json(failure_record_path)
+            resume = load_resume_prefix(
+                source_run=source_run,
+                destination_run=run_dir,
+                items=items,
+                stage_a_payloads=stage_a_payloads,
+                args=args,
+                type_prompt=type_prompt,
+                schema_repair_attempts=args.schema_repair_attempts,
+            )
+            validate_resume_failure_record(
+                record=failure_record,
+                source_run=source_run,
+                source_method_commit=args.resume_source_method_commit,
+                resume_manifest=resume["manifest"],
+            )
+        except (base.ConnectionRunError, OSError) as exc:
+            metadata.update(
+                {
+                    "run_status": "resume_validation_failed",
+                    "latency_ms": round((time.monotonic() - started_clock) * 1000),
+                    "failure": {"stage": "resume_validation", "message": str(exc)},
+                }
+            )
             base.write_json(run_metadata_path, metadata)
-            print(f"Two-stage Connection run failed at Stage A for {pair_id}: {exc}")
+            print(f"Two-stage Connection resume validation failed: {exc}")
             return 1
+        gate_results = resume["gate_results"]
+        positive_items = resume["positive_items"]
+        stage_b_payloads = resume["stage_b_payloads"]
+        typed_results = resume["typed_results"]
+        schema_repair_count = resume["schema_repair_count"]
+        usages.extend(resume["usages"])
+        finish_reasons.extend(resume["finish_reasons"])
+        reused_stage_b_count = len(typed_results)
+        resume_manifest_path = run_dir / "metadata" / "resume_manifest.json"
+        base.write_json(resume_manifest_path, resume["manifest"])
+        metadata["resume"] = {
+            "source_run": base.display_path(source_run),
+            "source_method_commit_assertion": args.resume_source_method_commit,
+            "source_failure_record": base.binding(failure_record_path),
+            "manifest": base.binding(resume_manifest_path),
+            "stage_a_reused_count": len(items),
+            "stage_b_reused_count": reused_stage_b_count,
+            "next_stage_b_pair_id": resume["manifest"]["next_stage_b_pair_id"],
+        }
+    else:
+        for item, payload in zip(items, stage_a_payloads):
+            pair_id = item["canonical_pair_id"]
+            pair_started = time.monotonic()
+            pair_metadata = _pair_metadata(pair_id, "direct_edge_gate")
+            try:
+                try:
+                    response, transport_attempts = call_with_transport_retries(
+                        api_key=api_key,
+                        payload=payload,
+                        retries=args.transport_retries,
+                        delay_seconds=args.transport_retry_delay_seconds,
+                    )
+                except TransportRequestError as exc:
+                    pair_metadata["transport_attempts"] = exc.attempts
+                    pair_metadata["transport_retry_count"] = max(
+                        0, len(exc.attempts) - 1
+                    )
+                    metadata["transport_retry_count"] += max(
+                        0, len(exc.attempts) - 1
+                    )
+                    raise
+                pair_metadata["transport_attempts"] = transport_attempts
+                pair_metadata["transport_retry_count"] = len(transport_attempts) - 1
+                metadata["transport_retry_count"] += len(transport_attempts) - 1
+                pair_metadata["request_success"] = True
+                base.write_json(stage_dirs["stage_a"]["raw"] / f"{pair_id}.json", response)
+                parsed, finish_reason = base.extract_response(response)
+                pair_metadata["json_parse_success"] = True
+                result = validate_gate_prediction(parsed, item)
+                pair_metadata["prediction_schema_valid"] = True
+                pair_metadata["finish_reason"] = finish_reason
+                pair_metadata["latency_ms"] = round((time.monotonic() - pair_started) * 1000)
+                base.write_json(stage_dirs["stage_a"]["output"] / f"{pair_id}.json", result)
+                base.write_json(stage_dirs["stage_a"]["metadata"] / f"{pair_id}.json", pair_metadata)
+                gate_results[pair_id] = result
+                finish_reasons.append(finish_reason)
+                if isinstance(response.get("usage"), dict):
+                    usages.append(response["usage"])
+            except (RuntimeError, base.ConnectionRunError) as exc:
+                pair_metadata["failure"] = str(exc)
+                pair_metadata["latency_ms"] = round((time.monotonic() - pair_started) * 1000)
+                base.write_json(stage_dirs["stage_a"]["metadata"] / f"{pair_id}.json", pair_metadata)
+                metadata.update({
+                    "run_status": "stage_a_failed",
+                    "stage_a_completed_count": len(gate_results),
+                    "request_success": pair_metadata["request_success"],
+                    "json_parse_success": pair_metadata["json_parse_success"],
+                    "prediction_schema_valid": pair_metadata["prediction_schema_valid"],
+                    "latency_ms": round((time.monotonic() - started_clock) * 1000),
+                    "failure": {"stage": "stage_a", "canonical_pair_id": pair_id, "message": str(exc)},
+                })
+                base.write_json(run_metadata_path, metadata)
+                print(f"Two-stage Connection run failed at Stage A for {pair_id}: {exc}")
+                return 1
 
-    positive_items = [
-        item
-        for item in items
-        if gate_results[item["canonical_pair_id"]]["decision"] == "DIRECT_CONNECTION"
-    ]
+        positive_items = [
+            item
+            for item in items
+            if gate_results[item["canonical_pair_id"]]["decision"] == "DIRECT_CONNECTION"
+        ]
+        stage_b_payloads = [
+            _payload(
+                args,
+                type_prompt,
+                typing_model_input(item, gate_results[item["canonical_pair_id"]]),
+                args.type_max_tokens,
+            )
+            for item in positive_items
+        ]
+
     gate_prediction = {
         "artifact_type": "canonical_direct_edge_gate_predictions",
         "version": "v0.1",
@@ -447,15 +945,6 @@ def main(argv: list[str] | None = None) -> int:
     }
     gate_prediction_path = run_dir / "stage_a" / "output" / "direct_gate_predictions.json"
     base.write_json(gate_prediction_path, gate_prediction)
-    stage_b_payloads = [
-        _payload(
-            args,
-            type_prompt,
-            typing_model_input(item, gate_results[item["canonical_pair_id"]]),
-            args.type_max_tokens,
-        )
-        for item in positive_items
-    ]
     metadata["stage_a_completed_count"] = len(items)
     metadata["stage_a_positive_count"] = len(positive_items)
     metadata["stage_b_request_payload_set_sha256"] = base.sha256_json(
@@ -467,10 +956,10 @@ def main(argv: list[str] | None = None) -> int:
             payload,
         )
 
-    typed_results: dict[str, dict[str, Any]] = {}
-    schema_repair_count = 0
     for item, payload in zip(positive_items, stage_b_payloads):
         pair_id = item["canonical_pair_id"]
+        if pair_id in typed_results:
+            continue
         pair_started = time.monotonic()
         pair_metadata = _pair_metadata(pair_id, "relation_typing")
         pair_metadata["attempts"] = []
@@ -481,7 +970,42 @@ def main(argv: list[str] | None = None) -> int:
             for attempt_index in range(args.schema_repair_attempts + 1):
                 attempt_number = attempt_index + 1
                 attempt_started = time.monotonic()
-                response = base.call_deepseek(api_key=api_key, payload=current_payload)
+                attempt_record = {
+                    "attempt_number": attempt_number,
+                    "request_success": False,
+                    "json_parse_success": False,
+                    "prediction_schema_valid": False,
+                    "finish_reason": None,
+                    "latency_ms": None,
+                    "validation_error": None,
+                    "transport_attempts": [],
+                    "transport_retry_count": 0,
+                }
+                try:
+                    response, transport_attempts = call_with_transport_retries(
+                        api_key=api_key,
+                        payload=current_payload,
+                        retries=args.transport_retries,
+                        delay_seconds=args.transport_retry_delay_seconds,
+                    )
+                except TransportRequestError as exc:
+                    attempt_record["transport_attempts"] = exc.attempts
+                    attempt_record["transport_retry_count"] = max(
+                        0, len(exc.attempts) - 1
+                    )
+                    attempt_record["latency_ms"] = round(
+                        (time.monotonic() - attempt_started) * 1000
+                    )
+                    attempt_record["validation_error"] = str(exc)
+                    pair_metadata["attempts"].append(attempt_record)
+                    metadata["transport_retry_count"] += max(
+                        0, len(exc.attempts) - 1
+                    )
+                    raise
+                attempt_record["transport_attempts"] = transport_attempts
+                attempt_record["transport_retry_count"] = len(transport_attempts) - 1
+                metadata["transport_retry_count"] += len(transport_attempts) - 1
+                attempt_record["request_success"] = True
                 pair_metadata["request_success"] = True
                 finish_reasons.append(
                     response.get("choices", [{}])[0].get("finish_reason")
@@ -498,15 +1022,8 @@ def main(argv: list[str] | None = None) -> int:
                 base.write_json(stage_dirs["stage_b"]["raw"] / raw_name, response)
                 parsed, finish_reason = base.extract_response(response)
                 pair_metadata["json_parse_success"] = True
-                attempt_record = {
-                    "attempt_number": attempt_number,
-                    "request_success": True,
-                    "json_parse_success": True,
-                    "prediction_schema_valid": False,
-                    "finish_reason": finish_reason,
-                    "latency_ms": None,
-                    "validation_error": None,
-                }
+                attempt_record["json_parse_success"] = True
+                attempt_record["finish_reason"] = finish_reason
                 try:
                     result = validate_typed_prediction(parsed, item, gate_results[pair_id])
                     attempt_record["prediction_schema_valid"] = True
@@ -543,6 +1060,10 @@ def main(argv: list[str] | None = None) -> int:
             typed_results[pair_id] = result
         except (RuntimeError, base.ConnectionRunError) as exc:
             pair_metadata["failure"] = str(exc)
+            pair_metadata["attempt_count"] = len(pair_metadata["attempts"])
+            pair_metadata["repair_count"] = max(
+                0, len(pair_metadata["attempts"]) - 1
+            )
             pair_metadata["latency_ms"] = round((time.monotonic() - pair_started) * 1000)
             base.write_json(stage_dirs["stage_b"]["metadata"] / f"{pair_id}.json", pair_metadata)
             metadata.update({
