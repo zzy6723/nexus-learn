@@ -1,0 +1,34 @@
+{
+  "artifact_type": "two_stage_connection_execution_failures",
+  "version": "v0.1",
+  "status": "closed_at_repeated_failure_ceiling",
+  "method_commit": "7fe5eab9f8f1b8b3e63c2931208c02fea9ed1b66",
+  "failed_pair_id": "conn_dev_pair_225420587c4177f5",
+  "failure": "FORMALIZES source must be Formula",
+  "attempts": [
+    {
+      "run_id": "run_01",
+      "run_metadata": {
+        "path": "experiments/connection_discovery/003_2b_direct_edge_gate/runs/development_v0_1/formal/run_01/metadata/run_metadata.json",
+        "sha256": "a537e7a34d034603a083bb12cfa6d80ed462f3368896b359ea2a87bccdfa1380"
+      },
+      "failing_raw_response": {
+        "path": "experiments/connection_discovery/003_2b_direct_edge_gate/runs/development_v0_1/formal/run_01/stage_b/raw_responses/pairs/conn_dev_pair_225420587c4177f5.json",
+        "sha256": "632b0cb1b9399f531a4547093bbabe5c928f7d897b807e4be697f3bb3ac25c82"
+      }
+    },
+    {
+      "run_id": "run_02",
+      "run_metadata": {
+        "path": "experiments/connection_discovery/003_2b_direct_edge_gate/runs/development_v0_1/formal/run_02/metadata/run_metadata.json",
+        "sha256": "895f623538be23d2a99be7200a43c8234c3a9844a5033fa2cba4c6a5854e8e83"
+      },
+      "failing_raw_response": {
+        "path": "experiments/connection_discovery/003_2b_direct_edge_gate/runs/development_v0_1/formal/run_02/stage_b/raw_responses/pairs/conn_dev_pair_225420587c4177f5.json",
+        "sha256": "d363043389ae16ac04c605231361f3a01aa88b092b0f8ed09c5b67fd1353fc8a"
+      }
+    }
+  ],
+  "metric_eligibility": false,
+  "next_method": "two_stage_connection_runner_v0.1.1_with_one_validator_guided_stage_b_schema_repair"
+}

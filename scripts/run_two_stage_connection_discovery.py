@@ -22,7 +22,7 @@ EXPERIMENT_ROOT = (
 )
 DEFAULT_GATE_PROMPT = EXPERIMENT_ROOT / "direct_edge_prompt.md"
 DEFAULT_TYPE_PROMPT = EXPERIMENT_ROOT / "relation_typing_prompt.md"
-RUNNER_VERSION = "two_stage_connection_runner_v0.1"
+RUNNER_VERSION = "two_stage_connection_runner_v0.1.1"
 GATE_RESULT_KEYS = {
     "canonical_pair_id",
     "ko_a_id",
@@ -61,6 +61,13 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--top-p", type=float, default=1.0)
     parser.add_argument("--gate-max-tokens", type=int, default=700)
     parser.add_argument("--type-max-tokens", type=int, default=900)
+    parser.add_argument(
+        "--schema-repair-attempts",
+        type=int,
+        choices=(0, 1),
+        default=0,
+        help="Maximum validator-guided repair attempts after a schema-invalid Stage-B JSON response.",
+    )
     parser.add_argument("--only")
     parser.add_argument("--dry-run", action="store_true")
     return parser.parse_args(argv)
@@ -207,6 +214,35 @@ def _payload(args: argparse.Namespace, prompt: str, model_input: dict[str, Any],
     )
 
 
+def repair_payload(
+    original_payload: dict[str, Any],
+    api_response: dict[str, Any],
+    validation_error: str,
+) -> dict[str, Any]:
+    try:
+        previous_content = api_response["choices"][0]["message"]["content"]
+    except (KeyError, IndexError, TypeError) as exc:
+        raise TwoStageRunError("Cannot construct schema repair from malformed response") from exc
+    if not isinstance(previous_content, str) or not previous_content.strip():
+        raise TwoStageRunError("Cannot construct schema repair from empty response")
+    return {
+        **original_payload,
+        "messages": [
+            *original_payload["messages"],
+            {"role": "assistant", "content": previous_content},
+            {
+                "role": "user",
+                "content": (
+                    "Your previous JSON response violated the output contract: "
+                    f"{validation_error}. Return one corrected JSON object only. "
+                    "Use the same candidate endpoints and supplied Evidence. Do not "
+                    "invent IDs or add outside knowledge."
+                ),
+            },
+        ],
+    }
+
+
 def _pair_metadata(pair_id: str, stage: str) -> dict[str, Any]:
     return {
         "canonical_pair_id": pair_id,
@@ -293,6 +329,7 @@ def main(argv: list[str] | None = None) -> int:
             "top_p": args.top_p,
             "gate_max_tokens": args.gate_max_tokens,
             "type_max_tokens": args.type_max_tokens,
+            "schema_repair_attempts": args.schema_repair_attempts,
             "response_format": {"type": "json_object"},
             "thinking": {"type": "disabled"},
         },
@@ -320,6 +357,7 @@ def main(argv: list[str] | None = None) -> int:
         "stage_a_completed_count": 0,
         "stage_a_positive_count": None,
         "stage_b_completed_count": 0,
+        "stage_b_schema_repair_count": 0,
         "request_success": None,
         "json_parse_success": None,
         "prediction_schema_valid": None,
@@ -426,26 +464,79 @@ def main(argv: list[str] | None = None) -> int:
         )
 
     typed_results: dict[str, dict[str, Any]] = {}
+    schema_repair_count = 0
     for item, payload in zip(positive_items, stage_b_payloads):
         pair_id = item["canonical_pair_id"]
         pair_started = time.monotonic()
         pair_metadata = _pair_metadata(pair_id, "relation_typing")
+        pair_metadata["attempts"] = []
+        current_payload = payload
         try:
-            response = base.call_deepseek(api_key=api_key, payload=payload)
-            pair_metadata["request_success"] = True
-            base.write_json(stage_dirs["stage_b"]["raw"] / f"{pair_id}.json", response)
-            parsed, finish_reason = base.extract_response(response)
-            pair_metadata["json_parse_success"] = True
-            result = validate_typed_prediction(parsed, item, gate_results[pair_id])
+            result: dict[str, Any] | None = None
+            finish_reason: str | None = None
+            for attempt_index in range(args.schema_repair_attempts + 1):
+                attempt_number = attempt_index + 1
+                attempt_started = time.monotonic()
+                response = base.call_deepseek(api_key=api_key, payload=current_payload)
+                pair_metadata["request_success"] = True
+                finish_reasons.append(
+                    response.get("choices", [{}])[0].get("finish_reason")
+                    if isinstance(response.get("choices"), list) and response["choices"]
+                    else None
+                )
+                if isinstance(response.get("usage"), dict):
+                    usages.append(response["usage"])
+                raw_name = (
+                    f"{pair_id}.json"
+                    if attempt_index == 0
+                    else f"{pair_id}.repair_{attempt_index:02d}.json"
+                )
+                base.write_json(stage_dirs["stage_b"]["raw"] / raw_name, response)
+                parsed, finish_reason = base.extract_response(response)
+                pair_metadata["json_parse_success"] = True
+                attempt_record = {
+                    "attempt_number": attempt_number,
+                    "request_success": True,
+                    "json_parse_success": True,
+                    "prediction_schema_valid": False,
+                    "finish_reason": finish_reason,
+                    "latency_ms": None,
+                    "validation_error": None,
+                }
+                try:
+                    result = validate_typed_prediction(parsed, item, gate_results[pair_id])
+                    attempt_record["prediction_schema_valid"] = True
+                    attempt_record["latency_ms"] = round(
+                        (time.monotonic() - attempt_started) * 1000
+                    )
+                    pair_metadata["attempts"].append(attempt_record)
+                    break
+                except base.ConnectionRunError as exc:
+                    attempt_record["validation_error"] = str(exc)
+                    attempt_record["latency_ms"] = round(
+                        (time.monotonic() - attempt_started) * 1000
+                    )
+                    pair_metadata["attempts"].append(attempt_record)
+                    if attempt_index >= args.schema_repair_attempts:
+                        raise
+                    current_payload = repair_payload(current_payload, response, str(exc))
+                    repair_dir = run_dir / "stage_b" / "rendered_inputs" / "repairs"
+                    repair_dir.mkdir(parents=True, exist_ok=True)
+                    base.write_json(
+                        repair_dir / f"{pair_id}.repair_{attempt_index + 1:02d}.json",
+                        current_payload,
+                    )
+                    schema_repair_count += 1
+            if result is None:
+                raise TwoStageRunError(f"{pair_id}: Stage-B result is unavailable")
             pair_metadata["prediction_schema_valid"] = True
             pair_metadata["finish_reason"] = finish_reason
+            pair_metadata["attempt_count"] = len(pair_metadata["attempts"])
+            pair_metadata["repair_count"] = len(pair_metadata["attempts"]) - 1
             pair_metadata["latency_ms"] = round((time.monotonic() - pair_started) * 1000)
             base.write_json(stage_dirs["stage_b"]["output"] / f"{pair_id}.json", result)
             base.write_json(stage_dirs["stage_b"]["metadata"] / f"{pair_id}.json", pair_metadata)
             typed_results[pair_id] = result
-            finish_reasons.append(finish_reason)
-            if isinstance(response.get("usage"), dict):
-                usages.append(response["usage"])
         except (RuntimeError, base.ConnectionRunError) as exc:
             pair_metadata["failure"] = str(exc)
             pair_metadata["latency_ms"] = round((time.monotonic() - pair_started) * 1000)
@@ -453,6 +544,7 @@ def main(argv: list[str] | None = None) -> int:
             metadata.update({
                 "run_status": "stage_b_failed",
                 "stage_b_completed_count": len(typed_results),
+                "stage_b_schema_repair_count": schema_repair_count,
                 "request_success": pair_metadata["request_success"],
                 "json_parse_success": pair_metadata["json_parse_success"],
                 "prediction_schema_valid": pair_metadata["prediction_schema_valid"],
@@ -496,6 +588,7 @@ def main(argv: list[str] | None = None) -> int:
     metadata.update({
         "run_status": "completed_subset" if args.only else "completed",
         "stage_b_completed_count": len(positive_items),
+        "stage_b_schema_repair_count": schema_repair_count,
         "request_success": True,
         "json_parse_success": True,
         "prediction_schema_valid": True,

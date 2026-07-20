@@ -1,6 +1,6 @@
 # 003-2b: Two-Stage Direct-Edge Connection Discovery
 
-**Status:** Method implementation prepared; no model run completed
+**Status:** v0.1 execution failed twice; v0.1.1 bounded schema repair prepared
 
 ## Motivation
 
@@ -57,6 +57,31 @@ and success criteria remain unchanged.
   retention;
 - fail-closed behavior for request, parse, or schema failures;
 - no pair-specific prompt rules.
+
+## Execution Reliability Revision
+
+The first two v0.1 formal attempts completed Stage A but failed at the same
+Stage-B candidate because the model returned `FORMALIZES` with a non-Formula
+source. The strict validator correctly rejected both attempts. Neither attempt
+produced an evaluable final bundle, and neither output may be manually repaired.
+
+Runner v0.1.1 permits at most one validator-guided repair after a Stage-B API
+request and JSON parse have succeeded but schema validation has failed. The
+repair request receives only:
+
+- the unchanged candidate and Stage-A-selected Evidence;
+- the model's original response;
+- the deterministic validator error.
+
+It receives no Ground Truth or scoring information. The original raw response
+and repair payload are retained. Request failures, JSON parse failures, and
+semantic evaluation errors are not retried. If the repair remains invalid, the
+whole run still fails closed.
+
+The two failed v0.1 attempts are bound in:
+
+- `v0_1_execution_failures.md`;
+- `v0_1_execution_failures.json`.
 
 ## Interpretation
 

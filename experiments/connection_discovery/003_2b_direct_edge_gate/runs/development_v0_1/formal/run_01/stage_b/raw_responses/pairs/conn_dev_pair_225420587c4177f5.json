@@ -1,0 +1,28 @@
+{
+  "id": "c59d5a57-5cc0-49fc-878d-caa4441f2421",
+  "object": "chat.completion",
+  "created": 1784554625,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_225420587c4177f5\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_006\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_007\",\n    \"relation_type\": \"FORMALIZES\",\n    \"evidence_ids\": [\"evidence_002\", \"evidence_003\"],\n    \"rationale\": \"The evidence states that gradient descent requires the gradient and then presents the update formula, which formally defines the update step of the method.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 898,
+    "completion_tokens": 125,
+    "total_tokens": 1023,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 514
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

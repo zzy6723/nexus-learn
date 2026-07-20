@@ -215,6 +215,82 @@ class TwoStageConnectionRunnerTests(unittest.TestCase):
             self.assertEqual(metadata["run_status"], "stage_b_failed")
             self.assertFalse(metadata["prediction_schema_valid"])
 
+    def test_stage_b_schema_failure_can_be_repaired_once(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            run_dir = Path(temporary) / "repaired"
+            item = next(
+                value
+                for value in self.items
+                if value["canonical_pair_id"] == "conn_dev_pair_225420587c4177f5"
+            )
+            evidence_ids = [
+                evidence["evidence_id"]
+                for evidence in item["model_input"]["evidence_catalog"]
+                if evidence["evidence_id"] in {"evidence_002", "evidence_003"}
+            ]
+            gate = self.gate_result(item, "DIRECT_CONNECTION", evidence_ids)
+            invalid = self.typed_result(item, "FORMALIZES", evidence_ids)
+            valid = {
+                **invalid,
+                "source_canonical_ko_id": item["endpoint_ids"][1],
+                "target_canonical_ko_id": item["endpoint_ids"][0],
+            }
+            code, api = self.invoke(
+                run_dir,
+                "--only", item["canonical_pair_id"],
+                "--schema-repair-attempts", "1",
+                responses=[api_response(gate), api_response(invalid), api_response(valid)],
+            )
+            self.assertEqual(code, 0)
+            self.assertEqual(api.call_count, 3)
+            metadata = json.loads((run_dir / "metadata/run_metadata.json").read_text())
+            self.assertEqual(metadata["stage_b_schema_repair_count"], 1)
+            self.assertEqual(metadata["usage"]["request_count"], 3)
+            pair_metadata = json.loads(
+                (run_dir / f"stage_b/metadata/pairs/{item['canonical_pair_id']}.json").read_text()
+            )
+            self.assertEqual(pair_metadata["attempt_count"], 2)
+            self.assertEqual(pair_metadata["repair_count"], 1)
+            self.assertFalse(pair_metadata["attempts"][0]["prediction_schema_valid"])
+            self.assertTrue(pair_metadata["attempts"][1]["prediction_schema_valid"])
+            repair_payload = json.loads(
+                next((run_dir / "stage_b/rendered_inputs/repairs").glob("*.json")).read_text()
+            )
+            self.assertIn("FORMALIZES source must be Formula", repair_payload["messages"][-1]["content"])
+            self.assertNotIn("gold", repair_payload["messages"][-1]["content"].lower())
+
+    def test_stage_b_second_schema_failure_still_fails_closed(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            run_dir = Path(temporary) / "repair_failed"
+            item = next(
+                value
+                for value in self.items
+                if value["canonical_pair_id"] == "conn_dev_pair_225420587c4177f5"
+            )
+            evidence_ids = [
+                evidence["evidence_id"]
+                for evidence in item["model_input"]["evidence_catalog"]
+                if evidence["evidence_id"] in {"evidence_002", "evidence_003"}
+            ]
+            gate = self.gate_result(item, "DIRECT_CONNECTION", evidence_ids)
+            invalid = self.typed_result(item, "FORMALIZES", evidence_ids)
+            code, api = self.invoke(
+                run_dir,
+                "--only", item["canonical_pair_id"],
+                "--schema-repair-attempts", "1",
+                responses=[api_response(gate), api_response(invalid), api_response(invalid)],
+            )
+            self.assertEqual(code, 1)
+            self.assertEqual(api.call_count, 3)
+            metadata = json.loads((run_dir / "metadata/run_metadata.json").read_text())
+            self.assertEqual(metadata["run_status"], "stage_b_failed")
+            self.assertEqual(metadata["stage_b_schema_repair_count"], 1)
+            pair_metadata = json.loads(
+                (run_dir / f"stage_b/metadata/pairs/{item['canonical_pair_id']}.json").read_text()
+            )
+            self.assertEqual(len(pair_metadata["attempts"]), 2)
+            self.assertFalse(pair_metadata["prediction_schema_valid"])
+
     def test_no_overwrite_and_dirty_state_fail_before_writes(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             existing = Path(temporary) / "existing"

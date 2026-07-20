@@ -1,0 +1,91 @@
+{
+  "artifact_type": "two_stage_canonical_connection_run_metadata",
+  "version": "v0.1",
+  "run_id": "run_01",
+  "run_status": "stage_b_failed",
+  "method_id": "direct_edge_gate_then_relation_typing_v0.1",
+  "method_commit": "7fe5eab9f8f1b8b3e63c2931208c02fea9ed1b66",
+  "git_commit_at_start": "7fe5eab9f8f1b8b3e63c2931208c02fea9ed1b66",
+  "git_dirty_at_start": false,
+  "provider": "deepseek",
+  "request_partitioning": "one_canonical_pair_per_request_per_stage_v0.1",
+  "execution_scope": "full_selected_candidate_set",
+  "request_parameters": {
+    "model": "deepseek-v4-flash",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "gate_max_tokens": 700,
+    "type_max_tokens": 900,
+    "response_format": {
+      "type": "json_object"
+    },
+    "thinking": {
+      "type": "disabled"
+    }
+  },
+  "inputs": {
+    "candidate_selection": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/overlap_bridge/run_01/generation/candidate_selection.json",
+      "sha256": "70318d882755066b32017cb1c9188603060f8cd7237c70e7d7a0b14d339dee7a"
+    },
+    "candidate_completion": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/overlap_bridge/run_01/generation/generation_complete.json",
+      "sha256": "a67aa156596f0a82d8622cf1f5c5d72ca3104b9a53b0118ea0ae06fec2fc3403"
+    },
+    "candidate_validation": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/development_validation_complete.json",
+      "sha256": "279ed77d56c665da3d79c602c6e3515be0b3771f978a1a930d3b281b09ecbc2c"
+    },
+    "canonical_inventory": {
+      "path": "benchmark/connection_discovery/development_v0_1/oracle_canonical_inventory.json",
+      "sha256": "682e0d0aa66398cc54128b5bba1b1fdc0a1512ec1c46a83e64463ac2403c34f7"
+    },
+    "evidence_catalogs": {
+      "path": "benchmark/connection_discovery/development_v0_1/evidence_catalogs.json",
+      "sha256": "4b5549598dc2aa0250e6d5a688484d13f742d7a6372ba6f6ad6fd1a1ecf87cac"
+    },
+    "freeze_manifest": {
+      "path": "experiments/connection_discovery/003_0_benchmark_preparation/benchmark_freeze_manifest_v0_1.json",
+      "sha256": "73dfb238877395c1d57e63c4959f416834b3b30db56dd64abe8981b012f39f2c"
+    }
+  },
+  "prompts": {
+    "direct_edge_gate": {
+      "path": "experiments/connection_discovery/003_2b_direct_edge_gate/direct_edge_prompt.md",
+      "sha256": "6c6fda7b3f691a88ef2d6c3972bdd16d4ee1b366b5feff809d8d3c4249ed43e0"
+    },
+    "relation_typing": {
+      "path": "experiments/connection_discovery/003_2b_direct_edge_gate/relation_typing_prompt.md",
+      "sha256": "0a4bdb7e6378c0e5ea6a42fe819b8327927049084d744c18d43f7e4b34b7210a"
+    }
+  },
+  "prediction_schema": {
+    "path": "benchmark/schema/connection_prediction.schema.json",
+    "sha256": "8ac6149f3a73401bdb37214b3e056180f8b319bd3772a76c06f9b3eda6b420dc"
+  },
+  "runner": {
+    "path": "scripts/run_two_stage_connection_discovery.py",
+    "sha256": "349f3898fe09d58e14b8ed0ebcd24e7e1ef633ef7eb6ea2ed4eef770f9faed28",
+    "version": "two_stage_connection_runner_v0.1"
+  },
+  "candidate_count": 125,
+  "candidate_pair_ids_sha256": "f0dc4fefc54c88d51f22feb298082149a66cbf4dafb371622e45e25636356ad7",
+  "stage_a_request_payload_set_sha256": "c09cf784f94f068978272d8722f7ac120be8a7720dc43cf909ad805b72dc75dc",
+  "stage_b_request_payload_set_sha256": "5a61eb8202eaa808ed542c038990665a941f4daff0186effc09f43e4c4c7c4a9",
+  "dry_run": false,
+  "started_at": "2026-07-20T13:29:58.556683+00:00",
+  "stage_a_completed_count": 125,
+  "stage_a_positive_count": 82,
+  "stage_b_completed_count": 6,
+  "request_success": true,
+  "json_parse_success": true,
+  "prediction_schema_valid": false,
+  "finish_reason": null,
+  "latency_ms": 427840,
+  "usage": null,
+  "failure": {
+    "stage": "stage_b",
+    "canonical_pair_id": "conn_dev_pair_225420587c4177f5",
+    "message": "conn_dev_pair_225420587c4177f5: FORMALIZES source must be Formula"
+  }
+}
