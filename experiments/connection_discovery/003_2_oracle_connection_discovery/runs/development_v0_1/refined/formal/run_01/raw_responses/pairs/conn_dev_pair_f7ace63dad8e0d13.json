@@ -1,0 +1,28 @@
+{
+  "id": "3db2c4ef-70e6-43a1-ab31-413b9c995564",
+  "object": "chat.completion",
+  "created": 1784550511,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_f7ace63dad8e0d13\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_009\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_005\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_005\", \"evidence_006\"],\n    \"rationale\": \"Evidence 005 states that the Newton optimisation method requires the Hessian matrix and the objective function, and evidence 006 provides the Newton update formula, which uses the gradient of the objective function. Thus, the Newton Optimisation Update is applied in the context of an Objective Function.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2256,
+    "completion_tokens": 154,
+    "total_tokens": 2410,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1616
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

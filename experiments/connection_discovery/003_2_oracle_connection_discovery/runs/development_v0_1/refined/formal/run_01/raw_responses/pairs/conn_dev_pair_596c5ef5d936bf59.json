@@ -1,0 +1,28 @@
+{
+  "id": "23ef7c19-c31c-4858-9d56-f5691d4efd0f",
+  "object": "chat.completion",
+  "created": 1784550229,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_596c5ef5d936bf59\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_013\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_018\",\n    \"relation_type\": \"NO_RELATION\",\n    \"evidence_ids\": [],\n    \"rationale\": \"No evidence directly states that Maximum Likelihood Estimation requires, applies, extends, contrasts with, or formalizes the Mean Squared Error Formula. Evidence 005 and 011 mention equivalence under Gaussian assumptions but do not establish a direct relation between the two canonical objects.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1789,
+    "completion_tokens": 143,
+    "total_tokens": 1932,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1149
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

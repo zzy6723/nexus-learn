@@ -1,0 +1,75 @@
+{
+  "artifact_type": "canonical_connection_evaluation_complete",
+  "version": "v0.1",
+  "evaluation_status": "final",
+  "inputs": {
+    "predictions": {
+      "path": "experiments/connection_discovery/003_2_oracle_connection_discovery/runs/development_v0_1/refined/formal/run_01/output/canonical_connection_predictions.json",
+      "sha256": "d91c0f69d42b58197c1199b1fd15d4f97500eefbf727c47fa5219de0a6a844e5"
+    },
+    "run_metadata": {
+      "path": "experiments/connection_discovery/003_2_oracle_connection_discovery/runs/development_v0_1/refined/formal/run_01/metadata/run_metadata.json",
+      "sha256": "e7fb7d3b4a4a0c6d4d0369b4f194f51d0d04e9d48350e9470e9a3dac2c7415ef"
+    },
+    "candidate_selection": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/overlap_bridge/run_01/generation/candidate_selection.json",
+      "sha256": "70318d882755066b32017cb1c9188603060f8cd7237c70e7d7a0b14d339dee7a"
+    },
+    "ground_truth": {
+      "path": "benchmark/connection_discovery/development_v0_1/ground_truth.json",
+      "sha256": "1bbbd801b505dc2a1d410f50b605a600b9e2ae135471b5484dea63c76aebcba4"
+    },
+    "evidence_catalogs": {
+      "path": "benchmark/connection_discovery/development_v0_1/evidence_catalogs.json",
+      "sha256": "4b5549598dc2aa0250e6d5a688484d13f742d7a6372ba6f6ad6fd1a1ecf87cac"
+    },
+    "freeze_manifest": {
+      "path": "experiments/connection_discovery/003_0_benchmark_preparation/benchmark_freeze_manifest_v0_1.json",
+      "sha256": "73dfb238877395c1d57e63c4959f416834b3b30db56dd64abe8981b012f39f2c"
+    },
+    "success_criteria": {
+      "path": "benchmark/connection_discovery_success_criteria_v0_1.json",
+      "sha256": "44b55047bc2d17b63842cc140d0be74f93bb95be4fe12fb578022d87ffe080f8"
+    },
+    "adjudication": {
+      "path": "experiments/connection_discovery/003_2_oracle_connection_discovery/runs/development_v0_1/refined/formal/run_01/evaluation/adjudication_resolved.json",
+      "sha256": "c3745d27b8fc45a60860e8f52bf29377e09c8f4552719ced644d73487bcf6b97"
+    }
+  },
+  "outputs": {
+    "metrics": {
+      "path": "experiments/connection_discovery/003_2_oracle_connection_discovery/runs/development_v0_1/refined/formal/run_01/evaluation/metrics.json",
+      "sha256": "b48181860360e15bfb313e9ac7a1e15b6431c8b2efcead3c497a2323364e1fe3"
+    },
+    "matches": {
+      "path": "experiments/connection_discovery/003_2_oracle_connection_discovery/runs/development_v0_1/refined/formal/run_01/evaluation/matches.json",
+      "sha256": "66d3426b7b9c7b34c66dbb73ac66b1e942f8e7dc1febe262a513deda5e4aecdc"
+    },
+    "errors": {
+      "path": "experiments/connection_discovery/003_2_oracle_connection_discovery/runs/development_v0_1/refined/formal/run_01/evaluation/errors.json",
+      "sha256": "ecae147502555ee0550ff1835f8857ed3c088e637133b068e232a68e1e72aad5"
+    },
+    "materialized_predictions": {
+      "path": "experiments/connection_discovery/003_2_oracle_connection_discovery/runs/development_v0_1/refined/formal/run_01/evaluation/materialized_predictions.json",
+      "sha256": "ac8bafb0bdb08c40335ed9eb48b9c726beae54dbcec22aec7a721288e5d0bf1b"
+    },
+    "per_relation_metrics": {
+      "path": "experiments/connection_discovery/003_2_oracle_connection_discovery/runs/development_v0_1/refined/formal/run_01/evaluation/per_relation_metrics.json",
+      "sha256": "070928265d612ce53c52467e5c1bb7de276bc147c323fbb58b3552636e5c7388"
+    },
+    "stratum_metrics": {
+      "path": "experiments/connection_discovery/003_2_oracle_connection_discovery/runs/development_v0_1/refined/formal/run_01/evaluation/stratum_metrics.json",
+      "sha256": "6fdcad29e0e8f67057e596ed72b1cf1a6431c41cd20cd139186a9fd0fabebc5e"
+    },
+    "adjudication_pending": {
+      "path": "experiments/connection_discovery/003_2_oracle_connection_discovery/runs/development_v0_1/refined/formal/run_01/evaluation/adjudication_pending.json",
+      "sha256": "6ee31287c405020f5b030debaecb4ee26d4067f98cc8a84e8d1693268dc4e85c"
+    }
+  },
+  "evaluator": {
+    "path": "scripts/evaluate_connection_discovery.py",
+    "sha256": "6b29c3d619d7aff9492cf1fa38eb918c925ea57968d1cb2884499489042a177a",
+    "version": "canonical_connection_evaluator_v0.1"
+  },
+  "gate_outcome": "failed"
+}

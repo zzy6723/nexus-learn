@@ -1,0 +1,28 @@
+{
+  "id": "f5e7e139-02d6-4f24-8f9a-a2f643a568d7",
+  "object": "chat.completion",
+  "created": 1784550359,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_a8513031d82ba28e\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_015\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_019\",\n    \"relation_type\": \"NO_RELATION\",\n    \"evidence_ids\": [],\n    \"rationale\": \"The evidence states that under a Gaussian linear regression model, OLS and MLE select the same coefficient vector, but does not establish a direct dependency, application, extension, contrast, or formalization between the Score Equation and OLS. The Score Equation is a condition for MLE, not directly linked to OLS.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1769,
+    "completion_tokens": 154,
+    "total_tokens": 1923,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1129
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

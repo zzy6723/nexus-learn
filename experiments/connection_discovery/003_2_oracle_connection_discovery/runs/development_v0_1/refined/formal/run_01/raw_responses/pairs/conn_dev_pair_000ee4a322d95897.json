@@ -1,0 +1,28 @@
+{
+  "id": "696f72fa-3a6f-4ba2-9b52-9aa195e9faf2",
+  "object": "chat.completion",
+  "created": 1784550097,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_000ee4a322d95897\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_011\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_021\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_004\"],\n    \"rationale\": \"Evidence 004 states that finding a candidate for maximum likelihood estimation is a root-finding problem, indicating that the concept of a root-finding problem is applied in the context of statistical models.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1711,
+    "completion_tokens": 131,
+    "total_tokens": 1842,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1711
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

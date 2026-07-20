@@ -1,0 +1,10 @@
+{
+  "canonical_pair_id": "conn_dev_pair_63bb993a9e7b1d30",
+  "source_canonical_ko_id": "conn_dev_ko_024",
+  "target_canonical_ko_id": "conn_dev_ko_022",
+  "relation_type": "EXTENDS",
+  "evidence_ids": [
+    "evidence_010"
+  ],
+  "rationale": "Evidence 010 explicitly states that the damped Newton method extends Newton's root-finding method by multiplying the correction by a factor, establishing an EXTENDS relation."
+}

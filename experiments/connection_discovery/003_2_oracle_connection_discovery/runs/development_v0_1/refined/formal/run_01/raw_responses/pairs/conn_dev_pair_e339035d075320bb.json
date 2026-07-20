@@ -1,0 +1,28 @@
+{
+  "id": "003cbe9c-bc52-4985-9d6d-4f2e64a6a9e7",
+  "object": "chat.completion",
+  "created": 1784550473,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_e339035d075320bb\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_006\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_005\",\n    \"relation_type\": \"REQUIRES\",\n    \"evidence_ids\": [\"evidence_002\"],\n    \"rationale\": \"Evidence_002 explicitly states 'Gradient descent requires the gradient of the objective function', establishing that Gradient Descent depends on the Objective Function.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2292,
+    "completion_tokens": 120,
+    "total_tokens": 2412,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1652
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

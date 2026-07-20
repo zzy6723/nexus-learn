@@ -1,0 +1,28 @@
+{
+  "id": "dad5e82c-4148-406d-b1db-8a1f75262380",
+  "object": "chat.completion",
+  "created": 1784550299,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_8404187bbee08589\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_013\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_011\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_002\", \"evidence_004\"],\n    \"rationale\": \"Maximum likelihood estimation (MLE) is a method that operates on a statistical model by using the log-likelihood function derived from the model. Evidence 002 states that MLE treats the log-likelihood as an objective function, and evidence 004 describes solving the score equation within MLE, both of which apply the concept of a statistical model.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1761,
+    "completion_tokens": 168,
+    "total_tokens": 1929,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1121
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

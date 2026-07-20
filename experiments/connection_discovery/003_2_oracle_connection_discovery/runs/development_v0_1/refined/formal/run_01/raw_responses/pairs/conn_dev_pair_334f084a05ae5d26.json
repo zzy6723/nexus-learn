@@ -1,0 +1,28 @@
+{
+  "id": "8b605ffd-9be8-40a9-aab4-a9f1c12c04a3",
+  "object": "chat.completion",
+  "created": 1784550178,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_334f084a05ae5d26\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_021\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_022\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_004\"],\n    \"rationale\": \"Evidence 004 states that when the score equation has no closed-form solution, Newton's root-finding method can be applied within maximum likelihood estimation, indicating that the Root-Finding Problem is applied in Newton's Root-Finding Method.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1775,
+    "completion_tokens": 140,
+    "total_tokens": 1915,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1135
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

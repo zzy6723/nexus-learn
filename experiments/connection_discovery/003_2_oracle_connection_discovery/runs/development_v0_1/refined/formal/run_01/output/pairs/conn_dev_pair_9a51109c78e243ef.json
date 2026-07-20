@@ -1,0 +1,10 @@
+{
+  "canonical_pair_id": "conn_dev_pair_9a51109c78e243ef",
+  "source_canonical_ko_id": "conn_dev_ko_022",
+  "target_canonical_ko_id": "conn_dev_ko_025",
+  "relation_type": "REQUIRES",
+  "evidence_ids": [
+    "evidence_006"
+  ],
+  "rationale": "Newton's root-finding method requires the derivative of g, as stated in evidence_006."
+}

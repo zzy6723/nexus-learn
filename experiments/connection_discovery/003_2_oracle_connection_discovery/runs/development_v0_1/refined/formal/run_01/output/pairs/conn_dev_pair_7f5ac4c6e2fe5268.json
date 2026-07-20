@@ -1,0 +1,11 @@
+{
+  "canonical_pair_id": "conn_dev_pair_7f5ac4c6e2fe5268",
+  "source_canonical_ko_id": "conn_dev_ko_001",
+  "target_canonical_ko_id": "conn_dev_ko_007",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_009",
+    "evidence_010"
+  ],
+  "rationale": "Evidence 009 states that gradient descent requires the gradient of the objective function and that the gradient descent update moves opposite to the gradient. Evidence 010 provides the formula for the gradient descent update, which explicitly uses the gradient. Thus, the gradient is applied in the gradient descent update."
+}

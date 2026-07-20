@@ -1,0 +1,11 @@
+{
+  "canonical_pair_id": "conn_dev_pair_58cb2129cbbe96fd",
+  "source_canonical_ko_id": "conn_dev_ko_019",
+  "target_canonical_ko_id": "conn_dev_ko_005",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_013",
+    "evidence_016"
+  ],
+  "rationale": "Ordinary Least Squares minimizes the least squares objective, which is an instance of an objective function. Evidence 013 states OLS minimizes the least squares objective, and evidence 016 confirms that this objective is a specific objective function."
+}

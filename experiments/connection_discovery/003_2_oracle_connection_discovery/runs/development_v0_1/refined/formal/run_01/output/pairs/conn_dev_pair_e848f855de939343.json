@@ -1,0 +1,10 @@
+{
+  "canonical_pair_id": "conn_dev_pair_e848f855de939343",
+  "source_canonical_ko_id": "conn_dev_ko_019",
+  "target_canonical_ko_id": "conn_dev_ko_020",
+  "relation_type": "EXTENDS",
+  "evidence_ids": [
+    "evidence_010"
+  ],
+  "rationale": "Evidence 010 explicitly states that Ridge regression extends ordinary least squares by adding a penalty, establishing an EXTENDS relation."
+}

@@ -1,0 +1,28 @@
+{
+  "id": "645cda0f-ffaa-4f39-8800-bc8ba2fafcaf",
+  "object": "chat.completion",
+  "created": 1784550183,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_3b005c7a79510244\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_006\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_018\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_011\"],\n    \"rationale\": \"Evidence 011 states that gradient descent can be applied to ordinary least squares by using the gradient of the MSE objective function, which is formalized by the MSE formula.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1855,
+    "completion_tokens": 127,
+    "total_tokens": 1982,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1215
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

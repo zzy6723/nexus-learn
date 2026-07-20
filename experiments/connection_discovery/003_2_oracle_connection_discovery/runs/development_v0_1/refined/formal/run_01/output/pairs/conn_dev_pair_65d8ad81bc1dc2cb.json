@@ -1,0 +1,8 @@
+{
+  "canonical_pair_id": "conn_dev_pair_65d8ad81bc1dc2cb",
+  "source_canonical_ko_id": "conn_dev_ko_013",
+  "target_canonical_ko_id": "conn_dev_ko_020",
+  "relation_type": "NO_RELATION",
+  "evidence_ids": [],
+  "rationale": "No evidence directly connects Maximum Likelihood Estimation and Ridge Regression. Evidence 010 states Ridge Regression extends ordinary least squares, not MLE. Evidence 011 mentions OLS has an MLE interpretation under Gaussian noise, but this does not establish a direct relation between MLE and Ridge Regression."
+}

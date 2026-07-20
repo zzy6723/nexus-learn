@@ -1,0 +1,8 @@
+{
+  "canonical_pair_id": "conn_dev_pair_523107aa1d66d340",
+  "source_canonical_ko_id": "conn_dev_ko_022",
+  "target_canonical_ko_id": "conn_dev_ko_017",
+  "relation_type": "NO_RELATION",
+  "evidence_ids": [],
+  "rationale": "No evidence directly connects Newton's Root-Finding Method and Least Squares Objective. Evidence 004 mentions Newton's method applied to maximum likelihood estimation, and evidence 005 states equivalence between maximizing log-likelihood and minimizing least squares under Gaussian assumptions, but this requires an intermediate step (MLE) and does not establish a direct relation between the two endpoints."
+}

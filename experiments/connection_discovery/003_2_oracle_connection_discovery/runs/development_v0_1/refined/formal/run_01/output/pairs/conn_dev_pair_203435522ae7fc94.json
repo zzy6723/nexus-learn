@@ -1,0 +1,8 @@
+{
+  "canonical_pair_id": "conn_dev_pair_203435522ae7fc94",
+  "source_canonical_ko_id": "conn_dev_ko_015",
+  "target_canonical_ko_id": "conn_dev_ko_016",
+  "relation_type": "NO_RELATION",
+  "evidence_ids": [],
+  "rationale": "Evidence 005 states that for Gaussian linear regression, maximizing log-likelihood is equivalent to minimizing least squares, but this is an equivalence under specific assumptions, not an application of Score Equation in Linear Regression. No evidence explicitly connects Score Equation to Linear Regression as a dependency or application."
+}

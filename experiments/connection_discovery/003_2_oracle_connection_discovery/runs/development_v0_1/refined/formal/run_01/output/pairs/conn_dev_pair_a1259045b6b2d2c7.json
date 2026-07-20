@@ -1,0 +1,11 @@
+{
+  "canonical_pair_id": "conn_dev_pair_a1259045b6b2d2c7",
+  "source_canonical_ko_id": "conn_dev_ko_004",
+  "target_canonical_ko_id": "conn_dev_ko_001",
+  "relation_type": "FORMALIZES",
+  "evidence_ids": [
+    "evidence_005",
+    "evidence_006"
+  ],
+  "rationale": "The first-order Taylor formula (source) explicitly defines the gradient (target) as the linear term in the approximation, formalizing its role in local linear approximation."
+}

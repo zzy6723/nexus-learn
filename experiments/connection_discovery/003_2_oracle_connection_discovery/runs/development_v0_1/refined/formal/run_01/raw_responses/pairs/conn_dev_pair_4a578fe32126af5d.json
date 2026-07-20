@@ -1,0 +1,28 @@
+{
+  "id": "e224f76a-bd1d-4b0e-b97c-1b622c1d4c79",
+  "object": "chat.completion",
+  "created": 1784550189,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_4a578fe32126af5d\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_001\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_013\",\n    \"relation_type\": \"NO_RELATION\",\n    \"evidence_ids\": [],\n    \"rationale\": \"No evidence explicitly states that Gradient is used or applied in Maximum Likelihood Estimation, nor any other direct relation. The gradient appears in the score function, but the evidence does not connect the concept of Gradient to the method of MLE as a whole.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2791,
+    "completion_tokens": 141,
+    "total_tokens": 2932,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 2151
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "016139c5-8f32-4db6-a6e6-4eccf6e83f09",
+  "object": "chat.completion",
+  "created": 1784550491,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_ef28d97312ee8970\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_009\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_001\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_012\", \"evidence_013\"],\n    \"rationale\": \"The Newton optimisation update formula explicitly uses the gradient of the objective function, as shown in evidence_012 and evidence_013.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2337,
+    "completion_tokens": 123,
+    "total_tokens": 2460,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1697
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

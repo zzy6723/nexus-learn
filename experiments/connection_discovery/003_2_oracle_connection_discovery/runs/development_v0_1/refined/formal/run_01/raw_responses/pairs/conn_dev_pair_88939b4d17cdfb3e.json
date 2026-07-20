@@ -1,0 +1,28 @@
+{
+  "id": "158335e8-3751-4431-9bc7-9b07f94f7a55",
+  "object": "chat.completion",
+  "created": 1784550305,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_88939b4d17cdfb3e\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_005\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_017\",\n    \"relation_type\": \"RELATED_TO\",\n    \"evidence_ids\": [\"evidence_012\", \"evidence_016\"],\n    \"rationale\": \"Evidence 012 states that maximizing the log-likelihood is equivalent to minimizing the least squares objective under a Gaussian linear regression model, and evidence 016 states that the MSE formula formalizes the least squares objective. These establish a direct educational connection between Objective Function and Least Squares Objective without a stronger specific relation.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2298,
+    "completion_tokens": 162,
+    "total_tokens": 2460,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1658
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

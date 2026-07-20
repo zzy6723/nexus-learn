@@ -1,6 +1,6 @@
 # 003-2: Oracle-Canonical Connection Discovery
 
-**Status:** Baseline failed; one development prompt refinement prepared
+**Status:** Development comparison completed; frozen success gates failed
 
 ## Question
 
@@ -50,5 +50,21 @@ Both conditional and full-universe gates failed. See
 `001_baseline_error_analysis.md`.
 
 `prompt_refinement_v0_2.md` is a minimal response to observed overconnection,
-type, and direction errors. It changes no benchmark or evaluation artifact and
-must be committed before a refined formal run.
+type, and direction errors. It changes no benchmark or evaluation artifact.
+
+## Refined Status
+
+The refined formal run completed all 125 requests and reached final evaluation
+after 74 snapshot-bound Evidence decisions. It substantially reduces
+overconnection and unsupported Evidence, but both the conditional and
+full-universe frozen gates still fail. Positive recall, direction, and
+cross-course recall also decline.
+
+Prompt 002 is retained as the stronger development diagnostic condition. It is
+not a validated Connection method or production default.
+
+See:
+
+- `development_comparison.md`;
+- `conclusion.md`;
+- `development_validation_complete.json`.

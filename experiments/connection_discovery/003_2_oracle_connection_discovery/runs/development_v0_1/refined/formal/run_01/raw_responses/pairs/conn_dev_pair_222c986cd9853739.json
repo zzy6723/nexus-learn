@@ -1,0 +1,28 @@
+{
+  "id": "82fb5cce-5af2-4df3-a9f1-1a4539f01d24",
+  "object": "chat.completion",
+  "created": 1784550143,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_222c986cd9853739\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_006\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_017\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_016\"],\n    \"rationale\": \"Evidence 016 states that gradient descent can be applied to ordinary least squares by using the gradient of the least squares objective, establishing that Gradient Descent is applied in the context of the Least Squares Objective.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2237,
+    "completion_tokens": 132,
+    "total_tokens": 2369,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1597
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

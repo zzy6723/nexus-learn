@@ -1,0 +1,28 @@
+{
+  "id": "649d4429-ea18-4186-8671-b829475669ef",
+  "object": "chat.completion",
+  "created": 1784550434,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_d4084502778d049d\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_024\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_021\",\n    \"relation_type\": \"EXTENDS\",\n    \"evidence_ids\": [\"evidence_010\"],\n    \"rationale\": \"Evidence 010 explicitly states that the damped Newton method extends Newton's root-finding method, which is a method for solving the root-finding problem.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1726,
+    "completion_tokens": 122,
+    "total_tokens": 1848,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1086
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

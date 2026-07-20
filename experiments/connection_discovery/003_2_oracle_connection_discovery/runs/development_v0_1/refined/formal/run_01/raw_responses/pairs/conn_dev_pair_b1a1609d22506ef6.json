@@ -1,0 +1,28 @@
+{
+  "id": "c69bb8a0-58cf-469d-8d22-a2c7a7574a6a",
+  "object": "chat.completion",
+  "created": 1784550378,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_b1a1609d22506ef6\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_013\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_016\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_005\", \"evidence_011\"],\n    \"rationale\": \"Evidence states that maximum likelihood estimation is applied in linear regression under a Gaussian noise model, where maximizing the log-likelihood is equivalent to minimizing the least squares objective.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1796,
+    "completion_tokens": 132,
+    "total_tokens": 1928,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1156
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

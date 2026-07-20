@@ -1,0 +1,28 @@
+{
+  "id": "328554b3-9a47-462d-a6e9-95af613e0cd2",
+  "object": "chat.completion",
+  "created": 1784550125,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_1191a92948ebd2d6\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_001\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_011\",\n    \"relation_type\": \"NO_RELATION\",\n    \"evidence_ids\": [],\n    \"rationale\": \"No evidence explicitly connects Gradient to Statistical Model. Evidence 016 mentions the score function as the gradient of the log-likelihood, but this does not establish a direct relation between the concepts themselves.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2336,
+    "completion_tokens": 131,
+    "total_tokens": 2467,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1696
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,8 @@
+{
+  "canonical_pair_id": "conn_dev_pair_5c9b50da7757c423",
+  "source_canonical_ko_id": "conn_dev_ko_012",
+  "target_canonical_ko_id": "conn_dev_ko_016",
+  "relation_type": "NO_RELATION",
+  "evidence_ids": [],
+  "rationale": "Evidence 005 states that for a Gaussian linear regression model, maximizing log-likelihood is equivalent to minimizing least squares, but this is an equivalence under specific assumptions, not an application of Log-Likelihood in Linear Regression. No evidence explicitly states that Log-Likelihood is used or applied in Linear Regression."
+}

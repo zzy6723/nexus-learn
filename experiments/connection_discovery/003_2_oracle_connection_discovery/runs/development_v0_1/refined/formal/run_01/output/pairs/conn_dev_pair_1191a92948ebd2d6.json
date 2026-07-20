@@ -1,0 +1,8 @@
+{
+  "canonical_pair_id": "conn_dev_pair_1191a92948ebd2d6",
+  "source_canonical_ko_id": "conn_dev_ko_001",
+  "target_canonical_ko_id": "conn_dev_ko_011",
+  "relation_type": "NO_RELATION",
+  "evidence_ids": [],
+  "rationale": "No evidence explicitly connects Gradient to Statistical Model. Evidence 016 mentions the score function as the gradient of the log-likelihood, but this does not establish a direct relation between the concepts themselves."
+}

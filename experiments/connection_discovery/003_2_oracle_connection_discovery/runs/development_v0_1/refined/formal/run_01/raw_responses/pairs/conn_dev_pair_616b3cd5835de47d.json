@@ -1,0 +1,28 @@
+{
+  "id": "c6840f1b-4830-4fd1-affb-c63e52bc0dfa",
+  "object": "chat.completion",
+  "created": 1784550239,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_616b3cd5835de47d\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_001\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_014\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_016\"],\n    \"rationale\": \"Evidence 016 explicitly states that the score function is the gradient of the log-likelihood, indicating that the concept of gradient is applied to define the score function.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2332,
+    "completion_tokens": 127,
+    "total_tokens": 2459,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1692
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

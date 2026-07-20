@@ -1,0 +1,28 @@
+{
+  "id": "ddfe7957-b690-48ab-8c17-50626cf641e3",
+  "object": "chat.completion",
+  "created": 1784550344,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_a1259045b6b2d2c7\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_004\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_001\",\n    \"relation_type\": \"FORMALIZES\",\n    \"evidence_ids\": [\"evidence_005\", \"evidence_006\"],\n    \"rationale\": \"The first-order Taylor formula (source) explicitly defines the gradient (target) as the linear term in the approximation, formalizing its role in local linear approximation.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2347,
+    "completion_tokens": 134,
+    "total_tokens": 2481,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1707
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

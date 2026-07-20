@@ -1,0 +1,28 @@
+{
+  "id": "720a7178-513d-4b94-9251-44b6b3ee3db4",
+  "object": "chat.completion",
+  "created": 1784550321,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_9b1e66cc5876fb95\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_016\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_021\",\n    \"relation_type\": \"NO_RELATION\",\n    \"evidence_ids\": [],\n    \"rationale\": \"No evidence directly connects Linear Regression and Root-Finding Problem. Evidence 004 mentions root-finding in the context of maximum likelihood estimation, but not specifically for linear regression.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2151,
+    "completion_tokens": 126,
+    "total_tokens": 2277,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1511
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "93250c8c-4132-4e71-a81a-f5d6f2931691",
+  "object": "chat.completion",
+  "created": 1784550289,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_7d14f554a3646ae6\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_005\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_012\",\n    \"relation_type\": \"NO_RELATION\",\n    \"evidence_ids\": [],\n    \"rationale\": \"No evidence explicitly states a direct relation between Objective Function and Log-Likelihood. Evidence 009 mentions that log-likelihood is treated as an objective function in MLE, but this is an instance of log-likelihood being used as an objective function, not a relation between the two concepts as distinct canonical objects.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2250,
+    "completion_tokens": 156,
+    "total_tokens": 2406,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1610
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "2d3ccd64-67fa-4a3c-80a0-62c271ac742a",
+  "object": "chat.completion",
+  "created": 1784550161,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_2cebee9063b290e6\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_014\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_017\",\n    \"relation_type\": \"NO_RELATION\",\n    \"evidence_ids\": [],\n    \"rationale\": \"No evidence directly establishes a relation between Score Function and Least Squares Objective. Evidence 005 states equivalence under Gaussian assumptions but does not show dependency, application, extension, contrast, or formalization.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1752,
+    "completion_tokens": 129,
+    "total_tokens": 1881,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1112
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "a62c3b55-976a-4297-ae12-37cdd79513e3",
+  "object": "chat.completion",
+  "created": 1784550347,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_a1e6b8f76fd16f4d\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_023\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_021\",\n    \"relation_type\": \"FORMALIZES\",\n    \"evidence_ids\": [\"evidence_009\"],\n    \"rationale\": \"Evidence 009 explicitly states that the Newton root update formalizes Newton's root-finding method, which is a method for solving the root-finding problem.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1717,
+    "completion_tokens": 129,
+    "total_tokens": 1846,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1077
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

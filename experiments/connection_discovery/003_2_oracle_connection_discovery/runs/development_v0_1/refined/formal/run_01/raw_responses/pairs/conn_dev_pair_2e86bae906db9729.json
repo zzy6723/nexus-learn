@@ -1,0 +1,28 @@
+{
+  "id": "a7860859-7af5-4693-8b82-7c80cbe68d23",
+  "object": "chat.completion",
+  "created": 1784550170,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_2e86bae906db9729\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_005\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_016\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_013\", \"evidence_016\"],\n    \"rationale\": \"Evidence 013 states that ordinary least squares minimizes the least squares objective, and evidence 016 explicitly states that gradient descent can be applied to ordinary least squares using the gradient of this objective function, showing that the objective function is applied in linear regression.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2286,
+    "completion_tokens": 148,
+    "total_tokens": 2434,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1646
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

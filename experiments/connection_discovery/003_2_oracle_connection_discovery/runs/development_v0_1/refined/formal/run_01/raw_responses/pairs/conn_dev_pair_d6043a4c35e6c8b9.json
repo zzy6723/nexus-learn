@@ -1,0 +1,28 @@
+{
+  "id": "2990a79a-b579-4d9f-b470-0d46ceb5da7f",
+  "object": "chat.completion",
+  "created": 1784550437,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_d6043a4c35e6c8b9\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_016\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_017\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_005\", \"evidence_006\"],\n    \"rationale\": \"Evidence 005 states that for Gaussian linear regression, maximizing log-likelihood is equivalent to minimizing the least squares objective, and evidence 006 states that ordinary least squares fits a linear regression model by minimizing the least squares objective, showing that the least squares objective is applied in linear regression.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1791,
+    "completion_tokens": 159,
+    "total_tokens": 1950,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1151
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

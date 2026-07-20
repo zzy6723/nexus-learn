@@ -1,0 +1,8 @@
+{
+  "canonical_pair_id": "conn_dev_pair_4a578fe32126af5d",
+  "source_canonical_ko_id": "conn_dev_ko_001",
+  "target_canonical_ko_id": "conn_dev_ko_013",
+  "relation_type": "NO_RELATION",
+  "evidence_ids": [],
+  "rationale": "No evidence explicitly states that Gradient is used or applied in Maximum Likelihood Estimation, nor any other direct relation. The gradient appears in the score function, but the evidence does not connect the concept of Gradient to the method of MLE as a whole."
+}

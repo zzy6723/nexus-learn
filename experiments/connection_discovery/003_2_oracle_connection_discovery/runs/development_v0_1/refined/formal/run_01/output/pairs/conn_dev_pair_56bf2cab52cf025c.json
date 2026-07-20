@@ -1,0 +1,11 @@
+{
+  "canonical_pair_id": "conn_dev_pair_56bf2cab52cf025c",
+  "source_canonical_ko_id": "conn_dev_ko_001",
+  "target_canonical_ko_id": "conn_dev_ko_015",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_016",
+    "evidence_017"
+  ],
+  "rationale": "The score function is defined as the gradient of the log-likelihood, so the gradient is applied in the definition of the score equation."
+}

@@ -1,0 +1,28 @@
+{
+  "id": "67a59dca-d22e-4b25-ba2f-1bcca7ca6e59",
+  "object": "chat.completion",
+  "created": 1784550497,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_f04767c63a30f18a\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_003\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_007\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_011\"],\n    \"rationale\": \"Evidence 011 states that the first-order Taylor approximation predicts the objective change for a small displacement, which explains why gradient descent moves opposite to the gradient, establishing that the approximation is applied in the gradient descent update.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2351,
+    "completion_tokens": 136,
+    "total_tokens": 2487,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1711
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

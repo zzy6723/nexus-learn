@@ -1,0 +1,36 @@
+{
+  "artifact_type": "oracle_canonical_connection_development_validation_complete",
+  "version": "v0.1",
+  "status": "completed_failed_frozen_gates",
+  "selected_development_diagnostic": "prompt_refinement_v0_2",
+  "validated_default_selected": false,
+  "baseline": {
+    "method_commit": "4ae39785c447b7dc68f854a5314ab00a4451ac52",
+    "metrics": {
+      "path": "experiments/connection_discovery/003_2_oracle_connection_discovery/runs/development_v0_1/formal/run_01/evaluation/metrics.json",
+      "sha256": "d5c7617c11de34241e66095252b0c9d99e14acac100dfc60179049e2b97af292"
+    },
+    "evaluation_complete": {
+      "path": "experiments/connection_discovery/003_2_oracle_connection_discovery/runs/development_v0_1/formal/run_01/evaluation/evaluation_complete.json",
+      "sha256": "300b8018e1bb9aa9f5e444b7e51b5580d0105214debc671dedba65ab82fee976"
+    }
+  },
+  "refined": {
+    "method_commit": "b1b7374a5cb13e692e8953b97727634672bc0d19",
+    "metrics": {
+      "path": "experiments/connection_discovery/003_2_oracle_connection_discovery/runs/development_v0_1/refined/formal/run_01/evaluation/metrics.json",
+      "sha256": "b48181860360e15bfb313e9ac7a1e15b6431c8b2efcead3c497a2323364e1fe3"
+    },
+    "evaluation_complete": {
+      "path": "experiments/connection_discovery/003_2_oracle_connection_discovery/runs/development_v0_1/refined/formal/run_01/evaluation/evaluation_complete.json",
+      "sha256": "06a626f8483163704777dd63102856ca1e8e83d3fe2b3c1638d8206930feac7f"
+    }
+  },
+  "gate_outcomes": {
+    "baseline_conditional": "failed",
+    "baseline_full_universe": "failed",
+    "refined_conditional": "failed",
+    "refined_full_universe": "failed"
+  },
+  "next_gate": "Declare and freeze a revised Oracle-canonical decision method before any further model execution; do not treat 003-3 or 003-4 as product validation while 003-2 remains failed."
+}

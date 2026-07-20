@@ -1,0 +1,11 @@
+{
+  "canonical_pair_id": "conn_dev_pair_654033881f94fbf0",
+  "source_canonical_ko_id": "conn_dev_ko_007",
+  "target_canonical_ko_id": "conn_dev_ko_010",
+  "relation_type": "FORMALIZES",
+  "evidence_ids": [
+    "evidence_002",
+    "evidence_003"
+  ],
+  "rationale": "Evidence 002 states that gradient descent requires the gradient and uses step size, and evidence 003 provides the update formula. The formula explicitly defines the step size parameter \u03b1_k, thus formalizing the concept of step size within the gradient descent update."
+}

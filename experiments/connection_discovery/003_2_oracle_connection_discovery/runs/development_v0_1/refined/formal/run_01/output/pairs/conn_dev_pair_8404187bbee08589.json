@@ -1,0 +1,11 @@
+{
+  "canonical_pair_id": "conn_dev_pair_8404187bbee08589",
+  "source_canonical_ko_id": "conn_dev_ko_013",
+  "target_canonical_ko_id": "conn_dev_ko_011",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_002",
+    "evidence_004"
+  ],
+  "rationale": "Maximum likelihood estimation (MLE) is a method that operates on a statistical model by using the log-likelihood function derived from the model. Evidence 002 states that MLE treats the log-likelihood as an objective function, and evidence 004 describes solving the score equation within MLE, both of which apply the concept of a statistical model."
+}

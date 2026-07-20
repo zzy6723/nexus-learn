@@ -1,0 +1,28 @@
+{
+  "id": "7819f4a5-88f3-422b-9412-a4b90cc0d906",
+  "object": "chat.completion",
+  "created": 1784550506,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_f0bc752d2a70b1ce\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_016\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_019\",\n    \"relation_type\": \"NO_RELATION\",\n    \"evidence_ids\": [],\n    \"rationale\": \"Evidence shows equivalence under Gaussian assumptions but does not establish a directed dependency, application, extension, contrast, or formalization between Linear Regression and Ordinary Least Squares.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1802,
+    "completion_tokens": 123,
+    "total_tokens": 1925,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1162
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

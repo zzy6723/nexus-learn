@@ -1,0 +1,28 @@
+{
+  "id": "f72feac3-cdd7-45fd-8892-d93f91e5a6be",
+  "object": "chat.completion",
+  "created": 1784550293,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_7f5ac4c6e2fe5268\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_001\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_007\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_009\", \"evidence_010\"],\n    \"rationale\": \"Evidence 009 states that gradient descent requires the gradient of the objective function and that the gradient descent update moves opposite to the gradient. Evidence 010 provides the formula for the gradient descent update, which explicitly uses the gradient. Thus, the gradient is applied in the gradient descent update.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2340,
+    "completion_tokens": 158,
+    "total_tokens": 2498,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1700
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

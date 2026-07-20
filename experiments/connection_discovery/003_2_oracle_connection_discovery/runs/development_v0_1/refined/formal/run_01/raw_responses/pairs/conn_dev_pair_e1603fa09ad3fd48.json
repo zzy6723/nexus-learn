@@ -1,0 +1,28 @@
+{
+  "id": "18d04aff-7e9a-4e1f-8963-9a07ffc9adcc",
+  "object": "chat.completion",
+  "created": 1784550470,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_e1603fa09ad3fd48\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_005\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_021\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_011\"],\n    \"rationale\": \"Evidence 011 states that finding a candidate satisfying the score equation is a root-finding problem, indicating that the objective function (log-likelihood) is used in the context of root-finding.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2657,
+    "completion_tokens": 133,
+    "total_tokens": 2790,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 2017
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

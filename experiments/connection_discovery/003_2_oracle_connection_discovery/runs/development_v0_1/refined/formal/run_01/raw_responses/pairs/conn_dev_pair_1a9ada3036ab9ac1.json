@@ -1,0 +1,28 @@
+{
+  "id": "479089f3-472a-40d5-bf00-1e9f59b103be",
+  "object": "chat.completion",
+  "created": 1784550131,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_1a9ada3036ab9ac1\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_019\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_021\",\n    \"relation_type\": \"NO_RELATION\",\n    \"evidence_ids\": [],\n    \"rationale\": \"No evidence directly establishes a relation between Ordinary Least Squares and Root-Finding Problem. Evidence 004 mentions root-finding in the context of maximum likelihood estimation, but OLS is only mentioned as equivalent to MLE under Gaussian assumptions, not as requiring or applying root-finding.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2174,
+    "completion_tokens": 147,
+    "total_tokens": 2321,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1534
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

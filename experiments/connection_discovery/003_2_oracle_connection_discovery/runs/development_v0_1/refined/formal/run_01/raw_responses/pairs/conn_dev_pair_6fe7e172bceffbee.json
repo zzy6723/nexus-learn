@@ -1,0 +1,28 @@
+{
+  "id": "12108640-7eae-49ae-8d5d-e64a6f2b2996",
+  "object": "chat.completion",
+  "created": 1784550272,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_6fe7e172bceffbee\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_003\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_010\",\n    \"relation_type\": \"NO_RELATION\",\n    \"evidence_ids\": [],\n    \"rationale\": \"No evidence explicitly connects First-Order Taylor Approximation to Step Size as a prerequisite, application, extension, contrast, or formalization. The evidence mentions step size in separate contexts but does not establish a direct relation between the two concepts.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2397,
+    "completion_tokens": 137,
+    "total_tokens": 2534,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1757
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

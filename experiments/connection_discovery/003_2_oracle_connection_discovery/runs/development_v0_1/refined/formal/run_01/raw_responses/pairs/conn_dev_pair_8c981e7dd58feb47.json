@@ -1,0 +1,28 @@
+{
+  "id": "48948385-38ae-4b6f-a2f2-d0c39f973b72",
+  "object": "chat.completion",
+  "created": 1784550308,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_8c981e7dd58feb47\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_013\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_019\",\n    \"relation_type\": \"RELATED_TO\",\n    \"evidence_ids\": [\"evidence_005\", \"evidence_011\"],\n    \"rationale\": \"Evidence states that under a Gaussian linear regression model, maximum likelihood estimation and ordinary least squares select the same coefficient vector, and that OLS has an MLE interpretation under Gaussian noise. This establishes a direct connection but does not indicate a directional dependency, application, extension, or contrast.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1820,
+    "completion_tokens": 156,
+    "total_tokens": 1976,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1180
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

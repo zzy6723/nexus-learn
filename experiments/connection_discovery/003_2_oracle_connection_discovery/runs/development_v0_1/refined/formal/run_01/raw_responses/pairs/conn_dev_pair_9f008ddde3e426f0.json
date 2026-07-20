@@ -1,0 +1,28 @@
+{
+  "id": "bdd56024-f546-441b-b36e-59416b2d97d7",
+  "object": "chat.completion",
+  "created": 1784550342,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_9f008ddde3e426f0\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_013\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_015\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_002\", \"evidence_004\"],\n    \"rationale\": \"Maximum Likelihood Estimation uses the score function to define the score equation, which is solved to find the MLE.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1766,
+    "completion_tokens": 123,
+    "total_tokens": 1889,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1126
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

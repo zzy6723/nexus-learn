@@ -1,0 +1,28 @@
+{
+  "id": "5bc61929-25e2-4cb4-8af5-9a448465f2cf",
+  "object": "chat.completion",
+  "created": 1784550410,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_c862968c2f7bbf13\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_015\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_021\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_004\"],\n    \"rationale\": \"Evidence 004 states that finding a candidate satisfying the score equation is a root-finding problem, indicating that the Score Equation is applied in the context of a Root-Finding Problem.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1714,
+    "completion_tokens": 130,
+    "total_tokens": 1844,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1074
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

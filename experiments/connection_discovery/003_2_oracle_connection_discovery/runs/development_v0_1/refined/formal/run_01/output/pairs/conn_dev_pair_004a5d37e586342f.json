@@ -1,0 +1,8 @@
+{
+  "canonical_pair_id": "conn_dev_pair_004a5d37e586342f",
+  "source_canonical_ko_id": "conn_dev_ko_001",
+  "target_canonical_ko_id": "conn_dev_ko_010",
+  "relation_type": "NO_RELATION",
+  "evidence_ids": [],
+  "rationale": "No evidence explicitly states a direct relation between Gradient and Step Size. They co-occur in gradient descent but are not directly connected without an intermediate object like the gradient descent update."
+}

@@ -1,0 +1,28 @@
+{
+  "id": "38882fe9-7e96-4fcb-b040-21c49f73764f",
+  "object": "chat.completion",
+  "created": 1784550276,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_7198ee241a3c0808\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_006\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_008\",\n    \"relation_type\": \"CONTRASTS_WITH\",\n    \"evidence_ids\": [\"evidence_007\"],\n    \"rationale\": \"Evidence 007 explicitly contrasts gradient descent and Newton's method by stating that Newton's method takes a full curvature-adjusted step whereas gradient descent controls movement through an explicit step size.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1835,
+    "completion_tokens": 130,
+    "total_tokens": 1965,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1195
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

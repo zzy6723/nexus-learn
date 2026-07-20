@@ -1,0 +1,28 @@
+{
+  "id": "a25e2301-71b3-4f43-8615-3c06a11acfa1",
+  "object": "chat.completion",
+  "created": 1784550186,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_3c1d300edac20859\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_014\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_021\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_004\"],\n    \"rationale\": \"Evidence 004 states that finding a candidate satisfying the score equation s(\u03b8)=0 is a root-finding problem, indicating that the Score Function is applied in the context of a Root-Finding Problem.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1709,
+    "completion_tokens": 135,
+    "total_tokens": 1844,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1069
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

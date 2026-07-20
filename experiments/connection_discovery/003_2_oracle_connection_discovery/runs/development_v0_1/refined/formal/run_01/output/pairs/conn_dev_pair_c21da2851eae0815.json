@@ -1,0 +1,8 @@
+{
+  "canonical_pair_id": "conn_dev_pair_c21da2851eae0815",
+  "source_canonical_ko_id": "conn_dev_ko_006",
+  "target_canonical_ko_id": "conn_dev_ko_020",
+  "relation_type": "NO_RELATION",
+  "evidence_ids": [],
+  "rationale": "No evidence explicitly states or demonstrates that Gradient Descent is applied in Ridge Regression, or any other direct relation. Evidence 011 mentions gradient descent applied to ordinary least squares, but ridge regression is an extension of OLS, not a direct application of gradient descent."
+}

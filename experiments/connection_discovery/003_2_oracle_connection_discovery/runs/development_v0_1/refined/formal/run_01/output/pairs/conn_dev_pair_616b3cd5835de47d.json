@@ -1,0 +1,10 @@
+{
+  "canonical_pair_id": "conn_dev_pair_616b3cd5835de47d",
+  "source_canonical_ko_id": "conn_dev_ko_001",
+  "target_canonical_ko_id": "conn_dev_ko_014",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_016"
+  ],
+  "rationale": "Evidence 016 explicitly states that the score function is the gradient of the log-likelihood, indicating that the concept of gradient is applied to define the score function."
+}

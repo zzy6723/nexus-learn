@@ -1,0 +1,28 @@
+{
+  "id": "3ba960d2-e3a4-4ef6-b1da-65a31ea60427",
+  "object": "chat.completion",
+  "created": 1784550149,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_260ec70c43c90b5d\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_011\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_016\",\n    \"relation_type\": \"NO_RELATION\",\n    \"evidence_ids\": [],\n    \"rationale\": \"The evidence shows that linear regression is a specific instance of a statistical model under Gaussian assumptions, but no explicit dependency, application, extension, contrast, or formalization is stated between the two concepts as canonical endpoints.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1746,
+    "completion_tokens": 134,
+    "total_tokens": 1880,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1106
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

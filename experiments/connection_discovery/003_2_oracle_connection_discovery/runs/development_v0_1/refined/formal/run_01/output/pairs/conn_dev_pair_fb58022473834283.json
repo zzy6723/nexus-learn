@@ -1,0 +1,10 @@
+{
+  "canonical_pair_id": "conn_dev_pair_fb58022473834283",
+  "source_canonical_ko_id": "conn_dev_ko_006",
+  "target_canonical_ko_id": "conn_dev_ko_010",
+  "relation_type": "REQUIRES",
+  "evidence_ids": [
+    "evidence_002"
+  ],
+  "rationale": "Evidence 002 states 'Gradient descent requires the gradient of the objective function. With step size \u03b1_k>0, the method moves opposite to the gradient.' This explicitly shows that gradient descent depends on a step size parameter."
+}

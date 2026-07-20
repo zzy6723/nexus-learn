@@ -1,0 +1,28 @@
+{
+  "id": "03d8d21b-352b-490f-b1ea-06c00b382804",
+  "object": "chat.completion",
+  "created": 1784550219,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_5729188da76c91ec\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_008\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_005\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_005\", \"evidence_006\"],\n    \"rationale\": \"Newton Optimisation Method uses the Hessian of the objective function to compute its update step, as shown in evidence_005 and evidence_006.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2258,
+    "completion_tokens": 127,
+    "total_tokens": 2385,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1618
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

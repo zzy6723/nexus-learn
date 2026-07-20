@@ -1,0 +1,10 @@
+{
+  "canonical_pair_id": "conn_dev_pair_fac1350d8eb9227e",
+  "source_canonical_ko_id": "conn_dev_ko_015",
+  "target_canonical_ko_id": "conn_dev_ko_022",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_004"
+  ],
+  "rationale": "Evidence 004 states that when the score equation has no closed-form solution, Newton's root-finding method can be applied within maximum likelihood estimation, indicating that the Score Equation is used in the context of Newton's method."
+}

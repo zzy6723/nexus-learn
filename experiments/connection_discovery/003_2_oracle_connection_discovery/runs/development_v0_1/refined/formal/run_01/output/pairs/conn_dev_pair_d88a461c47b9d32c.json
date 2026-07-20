@@ -1,0 +1,11 @@
+{
+  "canonical_pair_id": "conn_dev_pair_d88a461c47b9d32c",
+  "source_canonical_ko_id": "conn_dev_ko_001",
+  "target_canonical_ko_id": "conn_dev_ko_005",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_009",
+    "evidence_023"
+  ],
+  "rationale": "Evidence 009 states that gradient descent requires the gradient of the objective function, and evidence 023 states that gradient descent can be applied to ordinary least squares by using the gradient of this objective function, showing that the gradient is applied in the context of an objective function."
+}

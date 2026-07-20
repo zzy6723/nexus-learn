@@ -1,0 +1,11 @@
+{
+  "canonical_pair_id": "conn_dev_pair_88939b4d17cdfb3e",
+  "source_canonical_ko_id": "conn_dev_ko_005",
+  "target_canonical_ko_id": "conn_dev_ko_017",
+  "relation_type": "RELATED_TO",
+  "evidence_ids": [
+    "evidence_012",
+    "evidence_016"
+  ],
+  "rationale": "Evidence 012 states that maximizing the log-likelihood is equivalent to minimizing the least squares objective under a Gaussian linear regression model, and evidence 016 states that the MSE formula formalizes the least squares objective. These establish a direct educational connection between Objective Function and Least Squares Objective without a stronger specific relation."
+}

@@ -1,0 +1,28 @@
+{
+  "id": "f0b42624-01b6-4b51-b6aa-1748d86895f9",
+  "object": "chat.completion",
+  "created": 1784550268,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_6e643548d9f9123a\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_014\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_016\",\n    \"relation_type\": \"NO_RELATION\",\n    \"evidence_ids\": [],\n    \"rationale\": \"No evidence explicitly states that Score Function is used in or requires Linear Regression, or that they are contrasted or extended. Evidence 005 mentions equivalence under Gaussian assumptions but does not establish a direct relation between the two concepts.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1743,
+    "completion_tokens": 135,
+    "total_tokens": 1878,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1103
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

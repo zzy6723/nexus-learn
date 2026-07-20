@@ -1,0 +1,10 @@
+{
+  "canonical_pair_id": "conn_dev_pair_855fc91eae345c72",
+  "source_canonical_ko_id": "conn_dev_ko_008",
+  "target_canonical_ko_id": "conn_dev_ko_002",
+  "relation_type": "REQUIRES",
+  "evidence_ids": [
+    "evidence_012"
+  ],
+  "rationale": "Evidence_012 explicitly states that the Newton optimisation method requires the Hessian matrix, establishing a prerequisite dependency."
+}

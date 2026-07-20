@@ -1,0 +1,28 @@
+{
+  "id": "44e9504a-91b0-440d-be67-b7a8509ee9d4",
+  "object": "chat.completion",
+  "created": 1784550515,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_fa0a79a76255633a\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_001\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_021\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_018\"],\n    \"rationale\": \"Evidence 018 states that finding a candidate satisfying the score equation (which involves the gradient of the log-likelihood) is a root-finding problem, indicating that the gradient is applied in the context of root-finding.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2740,
+    "completion_tokens": 139,
+    "total_tokens": 2879,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 2100
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

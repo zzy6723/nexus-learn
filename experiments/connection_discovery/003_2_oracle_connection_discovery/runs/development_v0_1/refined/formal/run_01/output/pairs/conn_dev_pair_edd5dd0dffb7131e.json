@@ -1,0 +1,11 @@
+{
+  "canonical_pair_id": "conn_dev_pair_edd5dd0dffb7131e",
+  "source_canonical_ko_id": "conn_dev_ko_013",
+  "target_canonical_ko_id": "conn_dev_ko_017",
+  "relation_type": "RELATED_TO",
+  "evidence_ids": [
+    "evidence_005",
+    "evidence_011"
+  ],
+  "rationale": "Evidence states that under Gaussian assumptions, MLE is equivalent to minimizing the least squares objective, but this is a conditional equivalence, not a direct dependency or application."
+}

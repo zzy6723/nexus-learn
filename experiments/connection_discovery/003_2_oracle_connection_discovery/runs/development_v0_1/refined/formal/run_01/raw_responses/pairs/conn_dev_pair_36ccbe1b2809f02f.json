@@ -1,0 +1,28 @@
+{
+  "id": "9c4958ca-ab3b-4ac7-97ed-3e6bf570909a",
+  "object": "chat.completion",
+  "created": 1784550180,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_36ccbe1b2809f02f\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_002\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_005\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_012\"],\n    \"rationale\": \"Evidence 012 states that the Newton optimisation method requires the Hessian matrix to model local curvature, and the Hessian is applied to the objective function in the Newton update.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2805,
+    "completion_tokens": 129,
+    "total_tokens": 2934,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 2165
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

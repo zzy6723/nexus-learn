@@ -1,0 +1,28 @@
+{
+  "id": "45a90dd6-2f47-4e34-b1e8-24ca1b1306b7",
+  "object": "chat.completion",
+  "created": 1784550280,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_7ae886fbc9be7241\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_018\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_005\",\n    \"relation_type\": \"FORMALIZES\",\n    \"evidence_ids\": [\"evidence_016\"],\n    \"rationale\": \"Evidence 016 states that the MSE formula formalizes the least squares objective, which is an instance of an objective function.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2279,
+    "completion_tokens": 119,
+    "total_tokens": 2398,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1639
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

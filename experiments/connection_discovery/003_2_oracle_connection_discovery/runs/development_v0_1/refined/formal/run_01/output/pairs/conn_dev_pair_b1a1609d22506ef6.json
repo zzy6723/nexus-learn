@@ -1,0 +1,11 @@
+{
+  "canonical_pair_id": "conn_dev_pair_b1a1609d22506ef6",
+  "source_canonical_ko_id": "conn_dev_ko_013",
+  "target_canonical_ko_id": "conn_dev_ko_016",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_005",
+    "evidence_011"
+  ],
+  "rationale": "Evidence states that maximum likelihood estimation is applied in linear regression under a Gaussian noise model, where maximizing the log-likelihood is equivalent to minimizing the least squares objective."
+}

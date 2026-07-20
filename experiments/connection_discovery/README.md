@@ -1,7 +1,7 @@
 # Experiment 003: Connection Discovery
 
-**Status:** In progress
-**Current stage:** 003-2 development prompt refinement freeze pending
+**Status:** In progress with a failed Oracle-classification gate
+**Current stage:** 003-2 development comparison completed; method revision required
 
 ## Objective
 
@@ -31,10 +31,10 @@ deferred to Experiment 004.
 | --- | --- | --- |
 | 003-0 | Benchmark and Evaluation Preparation | Completed and repository-frozen |
 | 003-1 | Oracle-Canonical Candidate Generation | Completed and repository-frozen |
-| 003-2 | Oracle-Canonical Connection Discovery | Baseline final; Prompt 002 prepared |
-| 003-3 | Predicted-Canonical End-to-End Discovery | Pending |
-| 003-4 | Connection Selection and Ranking | Pending |
-| 003-5 | Independent Validation | Pending |
+| 003-2 | Oracle-Canonical Connection Discovery | Completed; frozen gates failed |
+| 003-3 | Predicted-Canonical End-to-End Discovery | Blocked as product validation; diagnostic only |
+| 003-4 | Connection Selection and Ranking | Blocked as product validation; diagnostic only |
+| 003-5 | Independent Validation | Deferred until an Oracle method passes |
 
 No Connection model run is allowed before the 003-0 source, pair universe,
 Ground Truth, evaluation protocol, success criteria, and leakage audit are
@@ -59,6 +59,8 @@ both this manifest and the later candidate-method commit.
 
 - 003-0 status: `003_0_benchmark_preparation/README.md`
 - First source audit: `003_0_benchmark_preparation/source_adequacy_audit.md`
+- 003-2 comparison: `003_2_oracle_connection_discovery/development_comparison.md`
+- 003-2 conclusion: `003_2_oracle_connection_discovery/conclusion.md`
 - Draft protocol: `../../benchmark/connection_discovery_protocol.md`
 - Draft annotation rules:
   `../../benchmark/connection_discovery_annotation_guidelines.md`

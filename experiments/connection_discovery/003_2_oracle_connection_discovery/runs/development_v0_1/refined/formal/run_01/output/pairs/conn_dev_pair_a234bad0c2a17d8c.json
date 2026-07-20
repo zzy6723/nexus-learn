@@ -1,0 +1,8 @@
+{
+  "canonical_pair_id": "conn_dev_pair_a234bad0c2a17d8c",
+  "source_canonical_ko_id": "conn_dev_ko_015",
+  "target_canonical_ko_id": "conn_dev_ko_017",
+  "relation_type": "NO_RELATION",
+  "evidence_ids": [],
+  "rationale": "Evidence 005 states that maximizing log-likelihood is equivalent to minimizing the least squares objective under a Gaussian linear regression model, but this is an equivalence under specific assumptions, not a direct relation between the Score Equation and the Least Squares Objective. No evidence explicitly connects the Score Equation to the Least Squares Objective."
+}

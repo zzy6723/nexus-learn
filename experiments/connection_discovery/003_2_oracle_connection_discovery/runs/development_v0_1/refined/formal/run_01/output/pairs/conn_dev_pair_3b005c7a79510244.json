@@ -1,0 +1,10 @@
+{
+  "canonical_pair_id": "conn_dev_pair_3b005c7a79510244",
+  "source_canonical_ko_id": "conn_dev_ko_006",
+  "target_canonical_ko_id": "conn_dev_ko_018",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_011"
+  ],
+  "rationale": "Evidence 011 states that gradient descent can be applied to ordinary least squares by using the gradient of the MSE objective function, which is formalized by the MSE formula."
+}

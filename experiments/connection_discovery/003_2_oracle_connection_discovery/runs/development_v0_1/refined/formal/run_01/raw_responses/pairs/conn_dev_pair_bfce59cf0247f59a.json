@@ -1,0 +1,28 @@
+{
+  "id": "58644da7-ad86-42dd-9749-b237b056dd4e",
+  "object": "chat.completion",
+  "created": 1784550396,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_bfce59cf0247f59a\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_009\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_002\",\n    \"relation_type\": \"REQUIRES\",\n    \"evidence_ids\": [\"evidence_012\", \"evidence_013\"],\n    \"rationale\": \"Evidence_012 states that the Newton optimisation method requires the Hessian matrix, and evidence_013 provides the update formula that uses the Hessian. Thus, Newton Optimisation Update requires the Hessian Matrix.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1936,
+    "completion_tokens": 141,
+    "total_tokens": 2077,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1296
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

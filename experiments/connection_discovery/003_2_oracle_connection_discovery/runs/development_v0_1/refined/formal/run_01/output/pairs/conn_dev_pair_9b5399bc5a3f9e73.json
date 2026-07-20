@@ -1,0 +1,10 @@
+{
+  "canonical_pair_id": "conn_dev_pair_9b5399bc5a3f9e73",
+  "source_canonical_ko_id": "conn_dev_ko_022",
+  "target_canonical_ko_id": "conn_dev_ko_016",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_004"
+  ],
+  "rationale": "Evidence 004 states that Newton's root-finding method can be applied within maximum likelihood estimation, and maximum likelihood estimation is applied to linear regression (evidence 005). Thus Newton's method is applied in the context of linear regression."
+}

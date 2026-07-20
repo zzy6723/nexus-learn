@@ -1,0 +1,28 @@
+{
+  "id": "b43bb635-4bf0-452f-88bc-ece7568497e4",
+  "object": "chat.completion",
+  "created": 1784550122,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_0c89e22909d9eb04\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_022\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_011\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_004\"],\n    \"rationale\": \"Evidence 004 states that Newton's root-finding method can be applied within maximum likelihood estimation, which uses a statistical model.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1721,
+    "completion_tokens": 120,
+    "total_tokens": 1841,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1081
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "f5a7e5d7-d287-4c2d-bcd5-483f56657306",
+  "object": "chat.completion",
+  "created": 1784550488,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_edd5dd0dffb7131e\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_013\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_017\",\n    \"relation_type\": \"RELATED_TO\",\n    \"evidence_ids\": [\"evidence_005\", \"evidence_011\"],\n    \"rationale\": \"Evidence states that under Gaussian assumptions, MLE is equivalent to minimizing the least squares objective, but this is a conditional equivalence, not a direct dependency or application.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1807,
+    "completion_tokens": 132,
+    "total_tokens": 1939,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1167
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

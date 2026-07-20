@@ -1,0 +1,8 @@
+{
+  "canonical_pair_id": "conn_dev_pair_dbc167d9bb7ce3f8",
+  "source_canonical_ko_id": "conn_dev_ko_005",
+  "target_canonical_ko_id": "conn_dev_ko_014",
+  "relation_type": "NO_RELATION",
+  "evidence_ids": [],
+  "rationale": "No evidence explicitly states a relation between Objective Function and Score Function. Evidence 009 mentions both but only defines Score Function as the gradient of log-likelihood, which is a specific instance of an objective function; no direct connection is established."
+}

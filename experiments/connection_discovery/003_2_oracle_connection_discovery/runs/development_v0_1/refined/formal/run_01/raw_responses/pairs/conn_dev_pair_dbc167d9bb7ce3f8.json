@@ -1,0 +1,28 @@
+{
+  "id": "928bd432-de31-4a47-88d7-ecb38ba3f4a0",
+  "object": "chat.completion",
+  "created": 1784550454,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_dbc167d9bb7ce3f8\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_005\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_014\",\n    \"relation_type\": \"NO_RELATION\",\n    \"evidence_ids\": [],\n    \"rationale\": \"No evidence explicitly states a relation between Objective Function and Score Function. Evidence 009 mentions both but only defines Score Function as the gradient of log-likelihood, which is a specific instance of an objective function; no direct connection is established.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2251,
+    "completion_tokens": 140,
+    "total_tokens": 2391,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1611
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

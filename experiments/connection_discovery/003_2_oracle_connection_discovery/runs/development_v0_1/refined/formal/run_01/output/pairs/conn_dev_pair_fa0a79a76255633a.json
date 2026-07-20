@@ -1,0 +1,10 @@
+{
+  "canonical_pair_id": "conn_dev_pair_fa0a79a76255633a",
+  "source_canonical_ko_id": "conn_dev_ko_001",
+  "target_canonical_ko_id": "conn_dev_ko_021",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_018"
+  ],
+  "rationale": "Evidence 018 states that finding a candidate satisfying the score equation (which involves the gradient of the log-likelihood) is a root-finding problem, indicating that the gradient is applied in the context of root-finding."
+}

@@ -1,0 +1,28 @@
+{
+  "id": "ab7c31ad-8d1a-4b9c-a62d-79aa8b1841d7",
+  "object": "chat.completion",
+  "created": 1784550236,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_5c9b50da7757c423\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_012\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_016\",\n    \"relation_type\": \"NO_RELATION\",\n    \"evidence_ids\": [],\n    \"rationale\": \"Evidence 005 states that for a Gaussian linear regression model, maximizing log-likelihood is equivalent to minimizing least squares, but this is an equivalence under specific assumptions, not an application of Log-Likelihood in Linear Regression. No evidence explicitly states that Log-Likelihood is used or applied in Linear Regression.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1742,
+    "completion_tokens": 154,
+    "total_tokens": 1896,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1102
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

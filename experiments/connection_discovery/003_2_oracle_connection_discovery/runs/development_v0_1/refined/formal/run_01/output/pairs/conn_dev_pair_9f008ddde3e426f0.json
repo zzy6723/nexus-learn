@@ -1,0 +1,11 @@
+{
+  "canonical_pair_id": "conn_dev_pair_9f008ddde3e426f0",
+  "source_canonical_ko_id": "conn_dev_ko_013",
+  "target_canonical_ko_id": "conn_dev_ko_015",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_002",
+    "evidence_004"
+  ],
+  "rationale": "Maximum Likelihood Estimation uses the score function to define the score equation, which is solved to find the MLE."
+}

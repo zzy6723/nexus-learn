@@ -1,0 +1,11 @@
+{
+  "canonical_pair_id": "conn_dev_pair_ef28d97312ee8970",
+  "source_canonical_ko_id": "conn_dev_ko_009",
+  "target_canonical_ko_id": "conn_dev_ko_001",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_012",
+    "evidence_013"
+  ],
+  "rationale": "The Newton optimisation update formula explicitly uses the gradient of the objective function, as shown in evidence_012 and evidence_013."
+}

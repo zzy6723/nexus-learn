@@ -1,0 +1,11 @@
+{
+  "canonical_pair_id": "conn_dev_pair_5729188da76c91ec",
+  "source_canonical_ko_id": "conn_dev_ko_008",
+  "target_canonical_ko_id": "conn_dev_ko_005",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_005",
+    "evidence_006"
+  ],
+  "rationale": "Newton Optimisation Method uses the Hessian of the objective function to compute its update step, as shown in evidence_005 and evidence_006."
+}

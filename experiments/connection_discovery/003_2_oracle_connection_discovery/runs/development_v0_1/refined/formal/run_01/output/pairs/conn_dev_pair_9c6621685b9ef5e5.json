@@ -1,0 +1,10 @@
+{
+  "canonical_pair_id": "conn_dev_pair_9c6621685b9ef5e5",
+  "source_canonical_ko_id": "conn_dev_ko_012",
+  "target_canonical_ko_id": "conn_dev_ko_013",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_002"
+  ],
+  "rationale": "Evidence 002 states that maximum likelihood estimation treats the log-likelihood as an objective function, indicating that log-likelihood is applied within MLE."
+}

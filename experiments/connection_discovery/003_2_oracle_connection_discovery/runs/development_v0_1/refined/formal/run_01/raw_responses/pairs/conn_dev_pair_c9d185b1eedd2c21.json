@@ -1,0 +1,28 @@
+{
+  "id": "6190d9f5-9ae0-4848-a781-2d7e2bda1960",
+  "object": "chat.completion",
+  "created": 1784550418,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_c9d185b1eedd2c21\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_003\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_029\",\n    \"relation_type\": \"APPLIED_IN\",\n    \"evidence_ids\": [\"evidence_019\"],\n    \"rationale\": \"Evidence 019 states that the local truncation error for the Forward Euler method is governed by terms omitted after the first-order Taylor approximation, demonstrating that the first-order Taylor approximation is used in the definition of local truncation error.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2358,
+    "completion_tokens": 140,
+    "total_tokens": 2498,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1718
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

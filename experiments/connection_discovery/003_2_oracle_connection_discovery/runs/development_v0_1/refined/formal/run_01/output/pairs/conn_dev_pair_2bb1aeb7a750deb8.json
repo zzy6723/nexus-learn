@@ -1,0 +1,11 @@
+{
+  "canonical_pair_id": "conn_dev_pair_2bb1aeb7a750deb8",
+  "source_canonical_ko_id": "conn_dev_ko_001",
+  "target_canonical_ko_id": "conn_dev_ko_008",
+  "relation_type": "REQUIRES",
+  "evidence_ids": [
+    "evidence_012",
+    "evidence_013"
+  ],
+  "rationale": "Newton Optimisation Method explicitly requires the gradient (source) as part of its update formula, as shown in evidence_012 and evidence_013."
+}

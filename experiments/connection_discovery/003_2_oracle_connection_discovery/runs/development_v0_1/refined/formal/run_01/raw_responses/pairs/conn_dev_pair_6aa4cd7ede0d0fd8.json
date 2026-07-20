@@ -1,0 +1,28 @@
+{
+  "id": "12d0cd3b-5e83-4c04-96c8-abaab479b1ab",
+  "object": "chat.completion",
+  "created": 1784550258,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"result\": {\n    \"canonical_pair_id\": \"conn_dev_pair_6aa4cd7ede0d0fd8\",\n    \"source_canonical_ko_id\": \"conn_dev_ko_028\",\n    \"target_canonical_ko_id\": \"conn_dev_ko_010\",\n    \"relation_type\": \"FORMALIZES\",\n    \"evidence_ids\": [\"evidence_011\"],\n    \"rationale\": \"Evidence 011 states that the Forward Euler update formalizes how the Forward Euler method advances one step, and the step size is a key component of that update.\"\n  }\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1773,
+    "completion_tokens": 129,
+    "total_tokens": 1902,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 1133
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

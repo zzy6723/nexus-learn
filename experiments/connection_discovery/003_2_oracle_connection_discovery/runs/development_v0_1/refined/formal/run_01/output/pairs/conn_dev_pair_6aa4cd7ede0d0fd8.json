@@ -1,0 +1,10 @@
+{
+  "canonical_pair_id": "conn_dev_pair_6aa4cd7ede0d0fd8",
+  "source_canonical_ko_id": "conn_dev_ko_028",
+  "target_canonical_ko_id": "conn_dev_ko_010",
+  "relation_type": "FORMALIZES",
+  "evidence_ids": [
+    "evidence_011"
+  ],
+  "rationale": "Evidence 011 states that the Forward Euler update formalizes how the Forward Euler method advances one step, and the step size is a key component of that update."
+}

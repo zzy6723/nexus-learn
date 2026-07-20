@@ -1,0 +1,11 @@
+{
+  "canonical_pair_id": "conn_dev_pair_8c981e7dd58feb47",
+  "source_canonical_ko_id": "conn_dev_ko_013",
+  "target_canonical_ko_id": "conn_dev_ko_019",
+  "relation_type": "RELATED_TO",
+  "evidence_ids": [
+    "evidence_005",
+    "evidence_011"
+  ],
+  "rationale": "Evidence states that under a Gaussian linear regression model, maximum likelihood estimation and ordinary least squares select the same coefficient vector, and that OLS has an MLE interpretation under Gaussian noise. This establishes a direct connection but does not indicate a directional dependency, application, extension, or contrast."
+}

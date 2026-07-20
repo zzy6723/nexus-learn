@@ -1,0 +1,10 @@
+{
+  "canonical_pair_id": "conn_dev_pair_da1c18bdf793236f",
+  "source_canonical_ko_id": "conn_dev_ko_012",
+  "target_canonical_ko_id": "conn_dev_ko_021",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_004"
+  ],
+  "rationale": "Evidence 004 states that finding a candidate satisfying the score equation (derived from log-likelihood) is a root-finding problem, indicating that log-likelihood is used in the context of root-finding."
+}

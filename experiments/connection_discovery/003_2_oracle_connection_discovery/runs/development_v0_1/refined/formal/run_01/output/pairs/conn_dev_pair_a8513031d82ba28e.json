@@ -1,0 +1,8 @@
+{
+  "canonical_pair_id": "conn_dev_pair_a8513031d82ba28e",
+  "source_canonical_ko_id": "conn_dev_ko_015",
+  "target_canonical_ko_id": "conn_dev_ko_019",
+  "relation_type": "NO_RELATION",
+  "evidence_ids": [],
+  "rationale": "The evidence states that under a Gaussian linear regression model, OLS and MLE select the same coefficient vector, but does not establish a direct dependency, application, extension, contrast, or formalization between the Score Equation and OLS. The Score Equation is a condition for MLE, not directly linked to OLS."
+}

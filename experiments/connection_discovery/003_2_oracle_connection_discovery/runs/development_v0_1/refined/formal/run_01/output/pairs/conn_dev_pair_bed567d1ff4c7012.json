@@ -1,0 +1,10 @@
+{
+  "canonical_pair_id": "conn_dev_pair_bed567d1ff4c7012",
+  "source_canonical_ko_id": "conn_dev_ko_003",
+  "target_canonical_ko_id": "conn_dev_ko_027",
+  "relation_type": "APPLIED_IN",
+  "evidence_ids": [
+    "evidence_016"
+  ],
+  "rationale": "Evidence 016 explicitly states that applying the first-order Taylor approximation gives the Forward Euler method, establishing that the approximation is used in the method."
+}
