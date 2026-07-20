@@ -1,7 +1,7 @@
 # Experiment 003: Connection Discovery
 
 **Status:** In progress
-**Current stage:** 003-1 development result freeze pending
+**Current stage:** 003-2 method implementation freeze pending
 
 ## Objective
 
@@ -30,8 +30,8 @@ deferred to Experiment 004.
 | Stage | Name | Status |
 | --- | --- | --- |
 | 003-0 | Benchmark and Evaluation Preparation | Completed and repository-frozen |
-| 003-1 | Oracle-Canonical Candidate Generation | Evaluated; result commit pending |
-| 003-2 | Oracle-Canonical Connection Discovery | Pending |
+| 003-1 | Oracle-Canonical Candidate Generation | Completed and repository-frozen |
+| 003-2 | Oracle-Canonical Connection Discovery | Runner/evaluator ready; method commit pending |
 | 003-3 | Predicted-Canonical End-to-End Discovery | Pending |
 | 003-4 | Connection Selection and Ranking | Pending |
 | 003-5 | Independent Validation | Pending |

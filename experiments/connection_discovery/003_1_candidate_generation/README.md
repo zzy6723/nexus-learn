@@ -1,6 +1,6 @@
 # 003-1: Oracle-Canonical Candidate Generation
 
-**Status:** Development evaluation complete; repository freeze pending
+**Status:** Completed and repository-frozen
 **API calls:** None required
 
 ## Question
@@ -49,6 +49,9 @@ comparison selects `overlap_bridge_v0.1` for the limited 003-2 primary route:
 
 See `development_results.md`, `comparison.json`, and `conclusion.md`. The
 selection does not establish disjoint-provenance discovery.
+
+The development result and selected limited primary route were committed at
+`200b0d87d8a48077e6aa03da2cc6d87304512b0f`.
 
 ## Scope Warning
 
