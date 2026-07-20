@@ -1,0 +1,16 @@
+{
+  "candidate_id": "ko_identity_candidate_001",
+  "mention_a": "ko_mention_holdout_016",
+  "mention_b": "ko_mention_holdout_017",
+  "decision": "DISTINCT_OBJECT",
+  "evidence_ids": [
+    "evidence_001"
+  ],
+  "rationale": "Path is a sequence of edges, while Path Cost is a numerical value computed from edge weights. They are distinct concepts at different granularities.",
+  "evidence_spans": [
+    {
+      "lecture_id": "graph_algorithms_001",
+      "span": "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\). A path is a sequence of compatible directed edges. Its path cost is the sum of their edge weights:"
+    }
+  ]
+}

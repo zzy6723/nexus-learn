@@ -1,0 +1,23 @@
+{
+  "model": "deepseek-v4-flash",
+  "messages": [
+    {
+      "role": "system",
+      "content": "# Context-Aware Knowledge Object Identity Resolver v0.2\n\nDecide whether two lecture-local Knowledge Object mentions denote the same\neducational object at the same granularity.\n\nThe candidate pair is unordered. Use both names, Knowledge Object types,\nupstream source spans, and the supplied evidence catalog. Return exactly one\nJSON object with:\n\n```json\n{\n  \"candidate_id\": \"copy exactly\",\n  \"mention_a\": \"copy exactly\",\n  \"mention_b\": \"copy exactly\",\n  \"decision\": \"SAME_OBJECT | DISTINCT_OBJECT | UNRESOLVED\",\n  \"evidence_ids\": [\"copy one or more supplied evidence IDs\"],\n  \"rationale\": \"short semantic identity explanation\"\n}\n```\n\nDecision rules:\n\n- `SAME_OBJECT`: both mentions denote the same educational object and have the\n  same granularity. Abbreviations, orthographic variants, descriptive\n  qualifiers, and symbolic/natural-language names may still be the same.\n- `DISTINCT_OBJECT`: the mentions denote different objects, even if their names\n  are identical or they are closely related in the subject.\n- `UNRESOLVED`: the supplied evidence is insufficient to make either decision\n  safely. Prefer this over an unsupported merge.\n\nIdentity is stricter than topical relatedness. A Method and its Formula, a\nConcept and its formal expression, or two domain-specific senses of the same\nword are not the same object. Matching type alone is not evidence of identity.\n\nFor a resolved decision, select only IDs present in `evidence_catalog`. Read\nthe selected entries together: they must make the identity decision\nunderstandable. Do not copy evidence text into the response and do not invent\nIDs. For `UNRESOLVED`, an empty evidence list is allowed. Return JSON only.\n"
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"candidate_id\": \"ko_identity_candidate_002\",\n  \"unordered_mentions\": [\n    {\n      \"mention_id\": \"ko_mention_holdout_016\",\n      \"lecture_id\": \"graph_algorithms_001\",\n      \"name\": \"Path\",\n      \"type\": \"Concept\",\n      \"upstream_source_spans\": [\n        \"A path is a sequence of compatible directed edges.\"\n      ]\n    },\n    {\n      \"mention_id\": \"ko_mention_holdout_020\",\n      \"lecture_id\": \"graph_algorithms_001\",\n      \"name\": \"Single-Source Shortest-Path Problem\",\n      \"type\": \"Concept\",\n      \"upstream_source_spans\": [\n        \"The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex.\"\n      ]\n    }\n  ],\n  \"evidence_catalog\": [\n    {\n      \"evidence_id\": \"evidence_001\",\n      \"lecture_id\": \"graph_algorithms_001\",\n      \"span\": \"A weighted directed graph assigns a numerical weight \\\\(w(u,v)\\\\) to each directed edge \\\\((u,v)\\\\). A path is a sequence of compatible directed edges. Its path cost is the sum of their edge weights:\"\n    },\n    {\n      \"evidence_id\": \"evidence_002\",\n      \"lecture_id\": \"graph_algorithms_001\",\n      \"span\": \"\\\\[\\nC(v_0,\\\\ldots,v_k) = \\\\sum_{i=0}^{k-1} w(v_i,v_{i+1}).\\n\\\\]\"\n    },\n    {\n      \"evidence_id\": \"evidence_003\",\n      \"lecture_id\": \"graph_algorithms_001\",\n      \"span\": \"The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex. Dijkstra's algorithm is applied to this problem when all edge weights are nonnegative.\"\n    },\n    {\n      \"evidence_id\": \"evidence_004\",\n      \"lecture_id\": \"graph_algorithms_001\",\n      \"span\": \"Dijkstra's algorithm stores tentative distance estimates in a priority queue. After removing a vertex \\\\(u\\\\) with the smallest tentative distance, it applies edge relaxation to each outgoing edge. Relaxation is formalized by the update\"\n    },\n    {\n      \"evidence_id\": \"evidence_005\",\n      \"lecture_id\": \"graph_algorithms_001\",\n      \"span\": \"\\\\[\\nd(v) \\\\leftarrow \\\\min\\\\{d(v),\\\\, d(u)+w(u,v)\\\\}.\\n\\\\]\"\n    },\n    {\n      \"evidence_id\": \"evidence_006\",\n      \"lecture_id\": \"graph_algorithms_001\",\n      \"span\": \"A* search extends Dijkstra's algorithm by using a heuristic function \\\\(h(v)\\\\) to guide which vertex is explored next. Its queue priority combines the known path cost with the heuristic estimate, and setting \\\\(h(v)=0\\\\) recovers Dijkstra's ordering.\"\n    }\n  ]\n}"
+    }
+  ],
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "max_tokens": 1200,
+  "stream": false,
+  "response_format": {
+    "type": "json_object"
+  },
+  "thinking": {
+    "type": "disabled"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "evaluation_status": "final",
+  "matches": [
+    {
+      "candidate_id": "ko_identity_candidate_001",
+      "mention_ids": [
+        "ko_mention_holdout_016",
+        "ko_mention_holdout_017"
+      ],
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "candidate_id": "ko_identity_candidate_002",
+      "mention_ids": [
+        "ko_mention_holdout_016",
+        "ko_mention_holdout_020"
+      ],
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "candidate_id": "ko_identity_candidate_003",
+      "mention_ids": [
+        "ko_mention_holdout_023",
+        "ko_mention_holdout_026"
+      ],
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "candidate_id": "ko_identity_candidate_004",
+      "mention_ids": [
+        "ko_mention_holdout_023",
+        "ko_mention_holdout_035"
+      ],
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "candidate_id": "ko_identity_candidate_005",
+      "mention_ids": [
+        "ko_mention_holdout_026",
+        "ko_mention_holdout_035"
+      ],
+      "gold_identity": "SAME_OBJECT",
+      "predicted_identity": "SAME_OBJECT",
+      "outcome": "true_positive"
+    },
+    {
+      "candidate_id": "ko_identity_candidate_006",
+      "mention_ids": [
+        "ko_mention_holdout_029",
+        "ko_mention_holdout_031"
+      ],
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    },
+    {
+      "candidate_id": "ko_identity_candidate_007",
+      "mention_ids": [
+        "ko_mention_holdout_030",
+        "ko_mention_holdout_032"
+      ],
+      "gold_identity": "DISTINCT_OBJECT",
+      "predicted_identity": "DISTINCT_OBJECT",
+      "outcome": "true_negative"
+    }
+  ]
+}

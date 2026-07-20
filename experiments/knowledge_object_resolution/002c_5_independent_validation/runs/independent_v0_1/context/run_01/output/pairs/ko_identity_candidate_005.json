@@ -1,0 +1,26 @@
+{
+  "candidate_id": "ko_identity_candidate_005",
+  "mention_a": "ko_mention_holdout_026",
+  "mention_b": "ko_mention_holdout_035",
+  "decision": "SAME_OBJECT",
+  "evidence_ids": [
+    "evidence_003",
+    "evidence_004",
+    "evidence_018"
+  ],
+  "rationale": "Both mentions refer to Newton's method, a root-finding algorithm that uses derivative information. Evidence from the numerical root-finding lecture describes its update formula, and evidence from the statistics lecture confirms that the same method is applied in maximum likelihood estimation. The type (Method) and name match, and the contexts are consistent with the same algorithm.",
+  "evidence_spans": [
+    {
+      "lecture_id": "numerical_root_finding_001",
+      "span": "Newton's method uses the derivative to replace the function locally by its tangent line. Provided \\(f'(x_k)\\neq 0\\), its update is"
+    },
+    {
+      "lecture_id": "numerical_root_finding_001",
+      "span": "\\[\nx_{k+1} = x_k - \\frac{f(x_k)}{f'(x_k)}.\n\\]"
+    },
+    {
+      "lecture_id": "statistics_estimation_001",
+      "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\). When this equation has no closed-form solution, Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically."
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "artifact_type": "ko_identity_evidence_adjudication_diagnostic",
+  "version": "v0.1",
+  "status": "final_unblinded_diagnostic",
+  "protocol_compliant_blind_review": false,
+  "reviewer_context": "The reviewer had prior exposure to the benchmark Ground Truth and method-development context.",
+  "prediction_sha256": "4a96c41a66e028964a4e0d9e5404676bd6b3bdb0bc50ca1b89f3021be25a1dc1",
+  "review_set_sha256": "53bc5d93973f29cc76b5bec1522aa37519405ff640046c190a70cfe0f5d5ee52",
+  "counts": {
+    "reviewed": 7,
+    "supported": 7,
+    "not_supported": 0,
+    "pending": 0
+  },
+  "decisions": [
+    {
+      "review_item_id": "ko_evidence_review_001",
+      "decision": "supported",
+      "rationale": "The span defines a path as a sequence of edges and path cost as a numerical sum of edge weights, directly distinguishing the two concepts."
+    },
+    {
+      "review_item_id": "ko_evidence_review_002",
+      "decision": "supported",
+      "rationale": "The spans separately define a path and the single-source shortest-path problem, showing that the latter is a problem involving paths rather than the path concept itself."
+    },
+    {
+      "review_item_id": "ko_evidence_review_003",
+      "decision": "supported",
+      "rationale": "The evidence states that the damped method extends Newton's method by scaling its correction, which establishes a distinct modified method."
+    },
+    {
+      "review_item_id": "ko_evidence_review_004",
+      "decision": "supported",
+      "rationale": "One span identifies the damped variant and its scaling modification, while the other identifies standard Newton's method applied to an MLE score equation. Together they support distinct method identities."
+    },
+    {
+      "review_item_id": "ko_evidence_review_005",
+      "decision": "supported",
+      "rationale": "Both spans explicitly identify Newton's method; one supplies its root-finding update and the other applies that named method to the MLE score equation, supporting one method used in different contexts."
+    },
+    {
+      "review_item_id": "ko_evidence_review_006",
+      "decision": "supported",
+      "rationale": "The evidence defines likelihood and states that log-likelihood is obtained by taking its logarithm, directly supporting two related but distinct concepts."
+    },
+    {
+      "review_item_id": "ko_evidence_review_007",
+      "decision": "supported",
+      "rationale": "The two displayed formulas and connecting text show that the log-likelihood formula is the logarithmic transformation of the likelihood formula, so they are distinct Formula objects."
+    }
+  ]
+}

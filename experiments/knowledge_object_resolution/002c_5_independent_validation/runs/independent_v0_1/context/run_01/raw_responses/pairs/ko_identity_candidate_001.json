@@ -1,0 +1,28 @@
+{
+  "id": "3ec0f701-4a80-4648-8981-2a321921391a",
+  "object": "chat.completion",
+  "created": 1784539293,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"candidate_id\": \"ko_identity_candidate_001\",\n  \"mention_a\": \"ko_mention_holdout_016\",\n  \"mention_b\": \"ko_mention_holdout_017\",\n  \"decision\": \"DISTINCT_OBJECT\",\n  \"evidence_ids\": [\"evidence_001\"],\n  \"rationale\": \"Path is a sequence of edges, while Path Cost is a numerical value computed from edge weights. They are distinct concepts at different granularities.\"\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1022,
+    "completion_tokens": 102,
+    "total_tokens": 1124,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 638
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

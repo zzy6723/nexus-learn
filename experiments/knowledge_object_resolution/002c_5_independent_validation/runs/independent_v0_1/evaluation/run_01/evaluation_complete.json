@@ -1,0 +1,57 @@
+{
+  "artifact_type": "ko_context_resolution_evaluation_complete",
+  "version": "v0.1",
+  "status": "final",
+  "method_id": "candidate_scoped_context_resolution_evidence_ids_v0_2_1",
+  "method_commit": "7ab00e00a7ba64b8ce906eb31ee6512983e82a3b",
+  "evaluator": {
+    "path": "scripts/evaluate_context_ko_resolution.py",
+    "sha256": "0d580020d430ab06f95b260aa9e4ba8d143357e29492e2208d563e97d3627f4d",
+    "version": "context_ko_resolution_evaluator_v0.1"
+  },
+  "inputs": {
+    "mention_inventory": {
+      "path": "benchmark/ko_canonicalization/independent_v0_1/mention_inventory.json",
+      "sha256": "d63afa6b9e2ae9fe45e74ee5cffeb97b6db5e30c9e2aab699ec084878dfe1efb"
+    },
+    "ground_truth": {
+      "path": "benchmark/ko_canonicalization/independent_v0_1/ground_truth.json",
+      "sha256": "e9213ba0da956867555a2e4277eb9277054edbeb38af7b08a87735d4503398f0"
+    },
+    "ground_truth_marker": {
+      "path": "benchmark/ko_canonicalization/independent_v0_1/ground_truth_complete.json",
+      "sha256": "29c1dfb6301a7373aaeec0823e446380707cbde293392bf7365f76c211d99e2a"
+    },
+    "success_criteria": {
+      "path": "benchmark/ko_canonicalization/independent_v0_1/success_criteria.json",
+      "sha256": "1b35fed7ff4ff313ff62f6a9932a3d405333e5d2583427964d43cd65f05393af"
+    },
+    "candidate_completion": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/runs/independent_v0_1/candidates/candidate_generation_complete.json",
+      "sha256": "a11ff2d0567a51d47afe2e2090aa6b3c52d2f434d12b55ce37ad2f557a19342b"
+    },
+    "resolution_completion": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/runs/independent_v0_1/context/run_01/resolution_complete.json",
+      "sha256": "49c19732d06458605a56078efcd3a5c6dbbe00e852d31829f34d4e349e1e57eb"
+    },
+    "cluster_completion": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/runs/independent_v0_1/clusters/run_01/generation_complete.json",
+      "sha256": "8e27bd20f55de492bc7dd8d9c4c6209dfa3fbcab58b9e6fcc0c0f9a673a4f96e"
+    }
+  },
+  "outputs": {
+    "metrics": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/runs/independent_v0_1/evaluation/run_01/metrics.json",
+      "sha256": "31dcb2e32a7fea5aaf854ff05c6c9a1aa2bf3dafe6d0fa784274da4e255eb0f5"
+    },
+    "candidate_matches": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/runs/independent_v0_1/evaluation/run_01/candidate_matches.json",
+      "sha256": "fb88a6c6a62c2b66b59403bff68ab4cc21e354a506e8026fd0b8a8808db6cdb0"
+    },
+    "errors": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/runs/independent_v0_1/evaluation/run_01/errors.json",
+      "sha256": "439ac75cac2a5ed40503108b746195e941880f4758ef1875a02cede22aa9b24a"
+    }
+  },
+  "success_criteria_passed": true
+}

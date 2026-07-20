@@ -1,0 +1,21 @@
+{
+  "candidate_id": "ko_identity_candidate_003",
+  "mention_a": "ko_mention_holdout_023",
+  "mention_b": "ko_mention_holdout_026",
+  "decision": "DISTINCT_OBJECT",
+  "evidence_ids": [
+    "evidence_003",
+    "evidence_005"
+  ],
+  "rationale": "Damped Newton method is an extension of Newton's method with a scaling factor, making them distinct methods. Evidence shows they are different algorithms.",
+  "evidence_spans": [
+    {
+      "lecture_id": "numerical_root_finding_001",
+      "span": "Newton's method uses the derivative to replace the function locally by its tangent line. Provided \\(f'(x_k)\\neq 0\\), its update is"
+    },
+    {
+      "lecture_id": "numerical_root_finding_001",
+      "span": "The damped Newton method extends Newton's method by scaling the Newton correction with a factor between zero and one. This extra control can prevent a full Newton step from moving too far when the current iterate is not yet near a root."
+    }
+  ]
+}

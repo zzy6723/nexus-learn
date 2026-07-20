@@ -1,0 +1,21 @@
+{
+  "candidate_id": "ko_identity_candidate_002",
+  "mention_a": "ko_mention_holdout_016",
+  "mention_b": "ko_mention_holdout_020",
+  "decision": "DISTINCT_OBJECT",
+  "evidence_ids": [
+    "evidence_001",
+    "evidence_003"
+  ],
+  "rationale": "Mention A is the general concept of a path, while mention B is a specific problem (single-source shortest-path) that uses paths. They are at different granularities and denote distinct objects.",
+  "evidence_spans": [
+    {
+      "lecture_id": "graph_algorithms_001",
+      "span": "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\). A path is a sequence of compatible directed edges. Its path cost is the sum of their edge weights:"
+    },
+    {
+      "lecture_id": "graph_algorithms_001",
+      "span": "The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex. Dijkstra's algorithm is applied to this problem when all edge weights are nonnegative."
+    }
+  ]
+}

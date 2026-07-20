@@ -1,0 +1,28 @@
+{
+  "id": "6b0bbd18-194e-4966-8d6c-59ffd96471ae",
+  "object": "chat.completion",
+  "created": 1784539305,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"candidate_id\": \"ko_identity_candidate_004\",\n  \"mention_a\": \"ko_mention_holdout_023\",\n  \"mention_b\": \"ko_mention_holdout_035\",\n  \"decision\": \"DISTINCT_OBJECT\",\n  \"evidence_ids\": [\"evidence_005\", \"evidence_018\"],\n  \"rationale\": \"Mention A is 'Damped Newton method' from a root-finding lecture, which is a variant of Newton's method with a damping factor. Mention B is 'Newton's Method' from a statistics lecture, used as a numerical solver for MLE. They are different methods: damped Newton is a specific modification for root-finding, while Newton's method is the standard algorithm applied in a different context. The evidence shows they are distinct objects.\"\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1775,
+    "completion_tokens": 170,
+    "total_tokens": 1945,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 1391
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

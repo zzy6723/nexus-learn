@@ -1,0 +1,21 @@
+{
+  "candidate_id": "ko_identity_candidate_004",
+  "mention_a": "ko_mention_holdout_023",
+  "mention_b": "ko_mention_holdout_035",
+  "decision": "DISTINCT_OBJECT",
+  "evidence_ids": [
+    "evidence_005",
+    "evidence_018"
+  ],
+  "rationale": "Mention A is 'Damped Newton method' from a root-finding lecture, which is a variant of Newton's method with a damping factor. Mention B is 'Newton's Method' from a statistics lecture, used as a numerical solver for MLE. They are different methods: damped Newton is a specific modification for root-finding, while Newton's method is the standard algorithm applied in a different context. The evidence shows they are distinct objects.",
+  "evidence_spans": [
+    {
+      "lecture_id": "numerical_root_finding_001",
+      "span": "The damped Newton method extends Newton's method by scaling the Newton correction with a factor between zero and one. This extra control can prevent a full Newton step from moving too far when the current iterate is not yet near a root."
+    },
+    {
+      "lecture_id": "statistics_estimation_001",
+      "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\). When this equation has no closed-form solution, Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically."
+    }
+  ]
+}

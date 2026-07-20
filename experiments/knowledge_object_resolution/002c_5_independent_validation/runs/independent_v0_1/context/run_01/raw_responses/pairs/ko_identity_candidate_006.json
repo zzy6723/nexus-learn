@@ -1,0 +1,28 @@
+{
+  "id": "ae9d250e-be41-476e-97dc-4fc368765cdf",
+  "object": "chat.completion",
+  "created": 1784539312,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"candidate_id\": \"ko_identity_candidate_006\",\n  \"mention_a\": \"ko_mention_holdout_029\",\n  \"mention_b\": \"ko_mention_holdout_031\",\n  \"decision\": \"DISTINCT_OBJECT\",\n  \"evidence_ids\": [\"evidence_001\", \"evidence_003\"],\n  \"rationale\": \"Likelihood and Log-Likelihood are distinct concepts; the log-likelihood is a transformation of the likelihood, not the same object.\"\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1215,
+    "completion_tokens": 107,
+    "total_tokens": 1322,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 831
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

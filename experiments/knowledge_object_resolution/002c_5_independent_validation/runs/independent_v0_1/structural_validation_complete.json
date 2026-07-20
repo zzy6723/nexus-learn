@@ -1,0 +1,58 @@
+{
+  "artifact_type": "ko_independent_structural_validation_complete",
+  "version": "v0.1",
+  "status": "structural_final_evidence_blind_gate_pending",
+  "execution_commit": "7ab00e00a7ba64b8ce906eb31ee6512983e82a3b",
+  "structural_success_criteria_passed": true,
+  "determinism_passed": true,
+  "exact_evidence_materialization": {
+    "exact_spans": 15,
+    "total_spans": 15,
+    "rate": 1.0
+  },
+  "semantic_evidence": {
+    "unblinded_diagnostic_supported": 7,
+    "unblinded_diagnostic_reviewed": 7,
+    "project_owner_concurred": true,
+    "protocol_compliant_blind_review_completed": false
+  },
+  "claim_boundary": "Independent structural validation passed on the frozen source. The frozen blind semantic-Evidence gate remains pending, so Experiment 002C-5 is not fully final under its predeclared protocol.",
+  "artifacts": {
+    "preflight": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/preflight_complete.json",
+      "sha256": "4de945b6441a38158b44cfe9a97e171cacfeba8976a35b67431b200b66267188"
+    },
+    "resolution_completion": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/runs/independent_v0_1/context/run_01/resolution_complete.json",
+      "sha256": "49c19732d06458605a56078efcd3a5c6dbbe00e852d31829f34d4e349e1e57eb"
+    },
+    "cluster_completion": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/runs/independent_v0_1/clusters/run_01/generation_complete.json",
+      "sha256": "8e27bd20f55de492bc7dd8d9c4c6209dfa3fbcab58b9e6fcc0c0f9a673a4f96e"
+    },
+    "evaluation_completion": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/runs/independent_v0_1/evaluation/run_01/evaluation_complete.json",
+      "sha256": "c4db2d0970f6d5574b0d6155f42f33a3cd5ae9985a59b967cba0803f4fd92cea"
+    },
+    "metrics": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/runs/independent_v0_1/evaluation/run_01/metrics.json",
+      "sha256": "31dcb2e32a7fea5aaf854ff05c6c9a1aa2bf3dafe6d0fa784274da4e255eb0f5"
+    },
+    "errors": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/runs/independent_v0_1/evaluation/run_01/errors.json",
+      "sha256": "439ac75cac2a5ed40503108b746195e941880f4758ef1875a02cede22aa9b24a"
+    },
+    "determinism_report": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/runs/independent_v0_1/determinism/run_01/determinism_report.json",
+      "sha256": "8ba5f72a082b4cfdffb605bf55cd2a04234f4e431ffe061406b4f457f7ccc6dd"
+    },
+    "blind_review_set": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/runs/independent_v0_1/evidence_review/run_01/blind_review_set.json",
+      "sha256": "53bc5d93973f29cc76b5bec1522aa37519405ff640046c190a70cfe0f5d5ee52"
+    },
+    "unblinded_evidence_diagnostic": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/runs/independent_v0_1/evidence_review/run_01/adjudication_unblinded_diagnostic.json",
+      "sha256": "0f4908bdc09df7be97b5033f2b6f288d3318450854240d04961639f07745ddd5"
+    }
+  }
+}

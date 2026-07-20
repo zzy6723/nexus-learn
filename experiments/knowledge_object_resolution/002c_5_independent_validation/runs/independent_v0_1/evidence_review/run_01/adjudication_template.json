@@ -1,0 +1,45 @@
+{
+  "artifact_type": "ko_identity_evidence_adjudication_template",
+  "version": "v0.1",
+  "status": "template_not_final",
+  "prediction_sha256": "4a96c41a66e028964a4e0d9e5404676bd6b3bdb0bc50ca1b89f3021be25a1dc1",
+  "review_set_sha256": "53bc5d93973f29cc76b5bec1522aa37519405ff640046c190a70cfe0f5d5ee52",
+  "instructions": "Replace each placeholder with supported or not_supported. Judge only whether the selected Evidence supports the predicted decision. Do not inspect Ground Truth, method identity, run identity, or aggregate metrics.",
+  "decisions": [
+    {
+      "review_item_id": "ko_evidence_review_001",
+      "decision": "REPLACE_WITH_supported_OR_not_supported",
+      "rationale": ""
+    },
+    {
+      "review_item_id": "ko_evidence_review_002",
+      "decision": "REPLACE_WITH_supported_OR_not_supported",
+      "rationale": ""
+    },
+    {
+      "review_item_id": "ko_evidence_review_003",
+      "decision": "REPLACE_WITH_supported_OR_not_supported",
+      "rationale": ""
+    },
+    {
+      "review_item_id": "ko_evidence_review_004",
+      "decision": "REPLACE_WITH_supported_OR_not_supported",
+      "rationale": ""
+    },
+    {
+      "review_item_id": "ko_evidence_review_005",
+      "decision": "REPLACE_WITH_supported_OR_not_supported",
+      "rationale": ""
+    },
+    {
+      "review_item_id": "ko_evidence_review_006",
+      "decision": "REPLACE_WITH_supported_OR_not_supported",
+      "rationale": ""
+    },
+    {
+      "review_item_id": "ko_evidence_review_007",
+      "decision": "REPLACE_WITH_supported_OR_not_supported",
+      "rationale": ""
+    }
+  ]
+}

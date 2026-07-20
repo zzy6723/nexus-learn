@@ -1,0 +1,28 @@
+{
+  "id": "eb826e6d-71ac-4450-aa2c-ca9a9858e5f6",
+  "object": "chat.completion",
+  "created": 1784539301,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"candidate_id\": \"ko_identity_candidate_003\",\n  \"mention_a\": \"ko_mention_holdout_023\",\n  \"mention_b\": \"ko_mention_holdout_026\",\n  \"decision\": \"DISTINCT_OBJECT\",\n  \"evidence_ids\": [\"evidence_003\", \"evidence_005\"],\n  \"rationale\": \"Damped Newton method is an extension of Newton's method with a scaling factor, making them distinct methods. Evidence shows they are different algorithms.\"\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1151,
+    "completion_tokens": 107,
+    "total_tokens": 1258,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 767
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

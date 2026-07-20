@@ -1,0 +1,21 @@
+{
+  "candidate_id": "ko_identity_candidate_006",
+  "mention_a": "ko_mention_holdout_029",
+  "mention_b": "ko_mention_holdout_031",
+  "decision": "DISTINCT_OBJECT",
+  "evidence_ids": [
+    "evidence_001",
+    "evidence_003"
+  ],
+  "rationale": "Likelihood and Log-Likelihood are distinct concepts; the log-likelihood is a transformation of the likelihood, not the same object.",
+  "evidence_spans": [
+    {
+      "lecture_id": "statistics_estimation_001",
+      "span": "A statistical model is a family of probability distributions indexed by an unknown parameter \\(\\theta\\). The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values. For independent observations \\(x_1,\\ldots,x_n\\), it is"
+    },
+    {
+      "lecture_id": "statistics_estimation_001",
+      "span": "The log-likelihood is obtained by taking the logarithm of the likelihood. Independence turns the product into a sum:"
+    }
+  ]
+}

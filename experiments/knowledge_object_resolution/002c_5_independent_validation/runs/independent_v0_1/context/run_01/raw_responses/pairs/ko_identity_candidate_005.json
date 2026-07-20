@@ -1,0 +1,28 @@
+{
+  "id": "8262002e-6232-4297-9209-580c9d7945aa",
+  "object": "chat.completion",
+  "created": 1784539308,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"candidate_id\": \"ko_identity_candidate_005\",\n  \"mention_a\": \"ko_mention_holdout_026\",\n  \"mention_b\": \"ko_mention_holdout_035\",\n  \"decision\": \"SAME_OBJECT\",\n  \"evidence_ids\": [\"evidence_003\", \"evidence_004\", \"evidence_018\"],\n  \"rationale\": \"Both mentions refer to Newton's method, a root-finding algorithm that uses derivative information. Evidence from the numerical root-finding lecture describes its update formula, and evidence from the statistics lecture confirms that the same method is applied in maximum likelihood estimation. The type (Method) and name match, and the contexts are consistent with the same algorithm.\"\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1768,
+    "completion_tokens": 151,
+    "total_tokens": 1919,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 1384
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

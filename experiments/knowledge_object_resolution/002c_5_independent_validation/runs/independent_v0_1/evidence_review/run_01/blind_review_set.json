@@ -1,0 +1,235 @@
+{
+  "artifact_type": "ko_identity_evidence_blind_review_set",
+  "version": "v0.1",
+  "status": "ready_for_blind_review",
+  "prediction_sha256": "4a96c41a66e028964a4e0d9e5404676bd6b3bdb0bc50ca1b89f3021be25a1dc1",
+  "review_protocol": {
+    "path": "benchmark/ko_identity_evidence_review_protocol.md",
+    "sha256": "9d7521a2f7e839dc76d55fa37799cfc8d3c36e354d24e07983c210eb5622f9b7"
+  },
+  "blinding": {
+    "method_identity_removed": true,
+    "model_identity_removed": true,
+    "run_identity_removed": true,
+    "gold_identity_removed": true,
+    "aggregate_metrics_removed": true
+  },
+  "review_item_count": 7,
+  "items": [
+    {
+      "review_item_id": "ko_evidence_review_001",
+      "candidate_id": "ko_identity_candidate_001",
+      "mention_a": {
+        "mention_id": "ko_mention_holdout_016",
+        "lecture_id": "graph_algorithms_001",
+        "name": "Path",
+        "type": "Concept"
+      },
+      "mention_b": {
+        "mention_id": "ko_mention_holdout_017",
+        "lecture_id": "graph_algorithms_001",
+        "name": "Path Cost",
+        "type": "Concept"
+      },
+      "predicted_decision": "DISTINCT_OBJECT",
+      "selected_evidence": [
+        {
+          "evidence_id": "evidence_001",
+          "lecture_id": "graph_algorithms_001",
+          "span": "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\). A path is a sequence of compatible directed edges. Its path cost is the sum of their edge weights:"
+        }
+      ],
+      "rationale": "Path is a sequence of edges, while Path Cost is a numerical value computed from edge weights. They are distinct concepts at different granularities."
+    },
+    {
+      "review_item_id": "ko_evidence_review_002",
+      "candidate_id": "ko_identity_candidate_002",
+      "mention_a": {
+        "mention_id": "ko_mention_holdout_016",
+        "lecture_id": "graph_algorithms_001",
+        "name": "Path",
+        "type": "Concept"
+      },
+      "mention_b": {
+        "mention_id": "ko_mention_holdout_020",
+        "lecture_id": "graph_algorithms_001",
+        "name": "Single-Source Shortest-Path Problem",
+        "type": "Concept"
+      },
+      "predicted_decision": "DISTINCT_OBJECT",
+      "selected_evidence": [
+        {
+          "evidence_id": "evidence_001",
+          "lecture_id": "graph_algorithms_001",
+          "span": "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\). A path is a sequence of compatible directed edges. Its path cost is the sum of their edge weights:"
+        },
+        {
+          "evidence_id": "evidence_003",
+          "lecture_id": "graph_algorithms_001",
+          "span": "The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex. Dijkstra's algorithm is applied to this problem when all edge weights are nonnegative."
+        }
+      ],
+      "rationale": "Mention A is the general concept of a path, while mention B is a specific problem (single-source shortest-path) that uses paths. They are at different granularities and denote distinct objects."
+    },
+    {
+      "review_item_id": "ko_evidence_review_003",
+      "candidate_id": "ko_identity_candidate_003",
+      "mention_a": {
+        "mention_id": "ko_mention_holdout_023",
+        "lecture_id": "numerical_root_finding_001",
+        "name": "Damped Newton method",
+        "type": "Method"
+      },
+      "mention_b": {
+        "mention_id": "ko_mention_holdout_026",
+        "lecture_id": "numerical_root_finding_001",
+        "name": "Newton's method",
+        "type": "Method"
+      },
+      "predicted_decision": "DISTINCT_OBJECT",
+      "selected_evidence": [
+        {
+          "evidence_id": "evidence_003",
+          "lecture_id": "numerical_root_finding_001",
+          "span": "Newton's method uses the derivative to replace the function locally by its tangent line. Provided \\(f'(x_k)\\neq 0\\), its update is"
+        },
+        {
+          "evidence_id": "evidence_005",
+          "lecture_id": "numerical_root_finding_001",
+          "span": "The damped Newton method extends Newton's method by scaling the Newton correction with a factor between zero and one. This extra control can prevent a full Newton step from moving too far when the current iterate is not yet near a root."
+        }
+      ],
+      "rationale": "Damped Newton method is an extension of Newton's method with a scaling factor, making them distinct methods. Evidence shows they are different algorithms."
+    },
+    {
+      "review_item_id": "ko_evidence_review_004",
+      "candidate_id": "ko_identity_candidate_004",
+      "mention_a": {
+        "mention_id": "ko_mention_holdout_023",
+        "lecture_id": "numerical_root_finding_001",
+        "name": "Damped Newton method",
+        "type": "Method"
+      },
+      "mention_b": {
+        "mention_id": "ko_mention_holdout_035",
+        "lecture_id": "statistics_estimation_001",
+        "name": "Newton's Method",
+        "type": "Method"
+      },
+      "predicted_decision": "DISTINCT_OBJECT",
+      "selected_evidence": [
+        {
+          "evidence_id": "evidence_005",
+          "lecture_id": "numerical_root_finding_001",
+          "span": "The damped Newton method extends Newton's method by scaling the Newton correction with a factor between zero and one. This extra control can prevent a full Newton step from moving too far when the current iterate is not yet near a root."
+        },
+        {
+          "evidence_id": "evidence_018",
+          "lecture_id": "statistics_estimation_001",
+          "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\). When this equation has no closed-form solution, Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically."
+        }
+      ],
+      "rationale": "Mention A is 'Damped Newton method' from a root-finding lecture, which is a variant of Newton's method with a damping factor. Mention B is 'Newton's Method' from a statistics lecture, used as a numerical solver for MLE. They are different methods: damped Newton is a specific modification for root-finding, while Newton's method is the standard algorithm applied in a different context. The evidence shows they are distinct objects."
+    },
+    {
+      "review_item_id": "ko_evidence_review_005",
+      "candidate_id": "ko_identity_candidate_005",
+      "mention_a": {
+        "mention_id": "ko_mention_holdout_026",
+        "lecture_id": "numerical_root_finding_001",
+        "name": "Newton's method",
+        "type": "Method"
+      },
+      "mention_b": {
+        "mention_id": "ko_mention_holdout_035",
+        "lecture_id": "statistics_estimation_001",
+        "name": "Newton's Method",
+        "type": "Method"
+      },
+      "predicted_decision": "SAME_OBJECT",
+      "selected_evidence": [
+        {
+          "evidence_id": "evidence_003",
+          "lecture_id": "numerical_root_finding_001",
+          "span": "Newton's method uses the derivative to replace the function locally by its tangent line. Provided \\(f'(x_k)\\neq 0\\), its update is"
+        },
+        {
+          "evidence_id": "evidence_004",
+          "lecture_id": "numerical_root_finding_001",
+          "span": "\\[\nx_{k+1} = x_k - \\frac{f(x_k)}{f'(x_k)}.\n\\]"
+        },
+        {
+          "evidence_id": "evidence_018",
+          "lecture_id": "statistics_estimation_001",
+          "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\). When this equation has no closed-form solution, Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically."
+        }
+      ],
+      "rationale": "Both mentions refer to Newton's method, a root-finding algorithm that uses derivative information. Evidence from the numerical root-finding lecture describes its update formula, and evidence from the statistics lecture confirms that the same method is applied in maximum likelihood estimation. The type (Method) and name match, and the contexts are consistent with the same algorithm."
+    },
+    {
+      "review_item_id": "ko_evidence_review_006",
+      "candidate_id": "ko_identity_candidate_006",
+      "mention_a": {
+        "mention_id": "ko_mention_holdout_029",
+        "lecture_id": "statistics_estimation_001",
+        "name": "Likelihood",
+        "type": "Concept"
+      },
+      "mention_b": {
+        "mention_id": "ko_mention_holdout_031",
+        "lecture_id": "statistics_estimation_001",
+        "name": "Log-Likelihood",
+        "type": "Concept"
+      },
+      "predicted_decision": "DISTINCT_OBJECT",
+      "selected_evidence": [
+        {
+          "evidence_id": "evidence_001",
+          "lecture_id": "statistics_estimation_001",
+          "span": "A statistical model is a family of probability distributions indexed by an unknown parameter \\(\\theta\\). The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values. For independent observations \\(x_1,\\ldots,x_n\\), it is"
+        },
+        {
+          "evidence_id": "evidence_003",
+          "lecture_id": "statistics_estimation_001",
+          "span": "The log-likelihood is obtained by taking the logarithm of the likelihood. Independence turns the product into a sum:"
+        }
+      ],
+      "rationale": "Likelihood and Log-Likelihood are distinct concepts; the log-likelihood is a transformation of the likelihood, not the same object."
+    },
+    {
+      "review_item_id": "ko_evidence_review_007",
+      "candidate_id": "ko_identity_candidate_007",
+      "mention_a": {
+        "mention_id": "ko_mention_holdout_030",
+        "lecture_id": "statistics_estimation_001",
+        "name": "Likelihood Function",
+        "type": "Formula"
+      },
+      "mention_b": {
+        "mention_id": "ko_mention_holdout_032",
+        "lecture_id": "statistics_estimation_001",
+        "name": "Log-Likelihood Function",
+        "type": "Formula"
+      },
+      "predicted_decision": "DISTINCT_OBJECT",
+      "selected_evidence": [
+        {
+          "evidence_id": "evidence_002",
+          "lecture_id": "statistics_estimation_001",
+          "span": "\\[\nL(\\theta; x_{1:n}) = \\prod_{i=1}^{n} p(x_i \\mid \\theta).\n\\]"
+        },
+        {
+          "evidence_id": "evidence_003",
+          "lecture_id": "statistics_estimation_001",
+          "span": "The log-likelihood is obtained by taking the logarithm of the likelihood. Independence turns the product into a sum:"
+        },
+        {
+          "evidence_id": "evidence_004",
+          "lecture_id": "statistics_estimation_001",
+          "span": "\\[\n\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta).\n\\]"
+        }
+      ],
+      "rationale": "Likelihood Function and Log-Likelihood Function are distinct formulas; the log-likelihood is a transformation of the likelihood, not the same object."
+    }
+  ]
+}

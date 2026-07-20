@@ -1,0 +1,44 @@
+{
+  "artifact_type": "ko_context_resolution_determinism_report",
+  "version": "v0.1",
+  "status": "final",
+  "checks": {
+    "stored_output_matches_recomputed_semantics": true,
+    "canonical_assignment_invariant_to_mention_order": true,
+    "canonical_id_invariant_to_mention_order": true,
+    "cluster_identity_invariant_to_candidate_decision_order": true,
+    "cluster_identity_invariant_to_candidate_manifest_order": true
+  },
+  "counts": {
+    "mentions": 39,
+    "candidates": 7,
+    "canonical_clusters": 38
+  },
+  "inputs": {
+    "mention_inventory": {
+      "path": "benchmark/ko_canonicalization/independent_v0_1/mention_inventory.json",
+      "sha256": "d63afa6b9e2ae9fe45e74ee5cffeb97b6db5e30c9e2aab699ec084878dfe1efb"
+    },
+    "normalization_config": {
+      "path": "benchmark/ko_name_normalization_v0_1.json",
+      "sha256": "fad01c399f4ef3f3147f136c76579b253f563965a299c1003a91e79baadc3d9e"
+    },
+    "candidate_pairs": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/runs/independent_v0_1/candidates/candidate_pairs.json",
+      "sha256": "bf3d74b8479d03e7f5f3996ca6a8cb968cb09e93057067609307d179ede33d02"
+    },
+    "identity_decisions": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/runs/independent_v0_1/context/run_01/output/identity_decisions.json",
+      "sha256": "4a96c41a66e028964a4e0d9e5404676bd6b3bdb0bc50ca1b89f3021be25a1dc1"
+    },
+    "cluster_completion": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/runs/independent_v0_1/clusters/run_01/generation_complete.json",
+      "sha256": "8e27bd20f55de492bc7dd8d9c4c6209dfa3fbcab58b9e6fcc0c0f9a673a4f96e"
+    }
+  },
+  "checker": {
+    "path": "scripts/check_context_ko_resolution_determinism.py",
+    "sha256": "4e51675b558c3bba4f9324f55a69440e279b80cc579ac6fba735708ca58d52f8",
+    "version": "context_ko_resolution_determinism_checker_v0.1"
+  }
+}

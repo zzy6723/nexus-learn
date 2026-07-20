@@ -1,0 +1,145 @@
+{
+  "evaluation_status": "final",
+  "benchmark_counts": {
+    "mentions": 39,
+    "all_unordered_pairs": 741,
+    "gold_same_object_pairs": 1,
+    "gold_distinct_object_pairs": 740
+  },
+  "candidate_generation": {
+    "selected_candidates": 7,
+    "candidate_reduction_rate": 0.99055330634278,
+    "gold_same_object_pairs_selected": 1,
+    "gold_same_object_pair_recall": 1.0,
+    "selected_hard_negatives": 6,
+    "required_candidate_decisions": [
+      {
+        "case": "path_vs_path_cost",
+        "mention_ids": [
+          "ko_mention_holdout_016",
+          "ko_mention_holdout_017"
+        ],
+        "candidate_id": "ko_identity_candidate_001",
+        "selected": true,
+        "expected_decision": "DISTINCT_OBJECT",
+        "actual_decision": "DISTINCT_OBJECT",
+        "passed": true
+      },
+      {
+        "case": "path_vs_shortest_path_problem",
+        "mention_ids": [
+          "ko_mention_holdout_016",
+          "ko_mention_holdout_020"
+        ],
+        "candidate_id": "ko_identity_candidate_002",
+        "selected": true,
+        "expected_decision": "DISTINCT_OBJECT",
+        "actual_decision": "DISTINCT_OBJECT",
+        "passed": true
+      },
+      {
+        "case": "damped_newton_vs_root_newton",
+        "mention_ids": [
+          "ko_mention_holdout_023",
+          "ko_mention_holdout_026"
+        ],
+        "candidate_id": "ko_identity_candidate_003",
+        "selected": true,
+        "expected_decision": "DISTINCT_OBJECT",
+        "actual_decision": "DISTINCT_OBJECT",
+        "passed": true
+      },
+      {
+        "case": "damped_newton_vs_statistics_newton",
+        "mention_ids": [
+          "ko_mention_holdout_023",
+          "ko_mention_holdout_035"
+        ],
+        "candidate_id": "ko_identity_candidate_004",
+        "selected": true,
+        "expected_decision": "DISTINCT_OBJECT",
+        "actual_decision": "DISTINCT_OBJECT",
+        "passed": true
+      },
+      {
+        "case": "cross_lecture_newton_identity",
+        "mention_ids": [
+          "ko_mention_holdout_026",
+          "ko_mention_holdout_035"
+        ],
+        "candidate_id": "ko_identity_candidate_005",
+        "selected": true,
+        "expected_decision": "SAME_OBJECT",
+        "actual_decision": "SAME_OBJECT",
+        "passed": true
+      },
+      {
+        "case": "likelihood_vs_log_likelihood",
+        "mention_ids": [
+          "ko_mention_holdout_029",
+          "ko_mention_holdout_031"
+        ],
+        "candidate_id": "ko_identity_candidate_006",
+        "selected": true,
+        "expected_decision": "DISTINCT_OBJECT",
+        "actual_decision": "DISTINCT_OBJECT",
+        "passed": true
+      },
+      {
+        "case": "likelihood_formula_vs_log_likelihood_formula",
+        "mention_ids": [
+          "ko_mention_holdout_030",
+          "ko_mention_holdout_032"
+        ],
+        "candidate_id": "ko_identity_candidate_007",
+        "selected": true,
+        "expected_decision": "DISTINCT_OBJECT",
+        "actual_decision": "DISTINCT_OBJECT",
+        "passed": true
+      }
+    ],
+    "required_homonym_selected": null
+  },
+  "resolver": {
+    "true_positive_same_object": 1,
+    "false_positive_same_object": 0,
+    "false_negative_same_object": 0,
+    "same_object_precision": 1.0,
+    "same_object_recall_on_candidates": 1.0,
+    "same_object_recall_end_to_end": 1.0,
+    "same_object_f1_end_to_end": 1.0,
+    "true_negative_distinct_object": 6,
+    "distinct_object_accuracy_on_candidates": 1.0,
+    "unresolved_count": 0,
+    "unresolved_rate": 0.0,
+    "decision_counts": {
+      "DISTINCT_OBJECT": 6,
+      "SAME_OBJECT": 1
+    },
+    "homonym_decision": null,
+    "inconsistent_component_count": 0,
+    "manual_adjudication_count": 0,
+    "schema_failure_rate": 0.0
+  },
+  "cluster_quality": {
+    "b_cubed_precision": 1.0,
+    "b_cubed_recall": 1.0,
+    "b_cubed_f1": 1.0,
+    "exact_gold_cluster_matches": 38,
+    "exact_gold_cluster_match_rate": 1.0,
+    "singleton_precision": 1.0,
+    "singleton_recall": 1.0
+  },
+  "integrity": {
+    "mention_coverage": 1.0,
+    "duplicate_assignments": 0,
+    "orphan_mentions": 0,
+    "cross_type_clusters": 0,
+    "lost_provenance_mentions": 0
+  },
+  "cluster_error_counts": {},
+  "success_criteria": {
+    "passed": true,
+    "failures": []
+  }
+}

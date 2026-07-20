@@ -1,0 +1,159 @@
+{
+  "artifact_type": "ko_context_identity_decisions",
+  "version": "v0.2.1",
+  "method_id": "candidate_scoped_context_resolution_evidence_ids_v0_2_1",
+  "results": [
+    {
+      "candidate_id": "ko_identity_candidate_001",
+      "mention_a": "ko_mention_holdout_016",
+      "mention_b": "ko_mention_holdout_017",
+      "decision": "DISTINCT_OBJECT",
+      "evidence_ids": [
+        "evidence_001"
+      ],
+      "rationale": "Path is a sequence of edges, while Path Cost is a numerical value computed from edge weights. They are distinct concepts at different granularities.",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\). A path is a sequence of compatible directed edges. Its path cost is the sum of their edge weights:"
+        }
+      ]
+    },
+    {
+      "candidate_id": "ko_identity_candidate_002",
+      "mention_a": "ko_mention_holdout_016",
+      "mention_b": "ko_mention_holdout_020",
+      "decision": "DISTINCT_OBJECT",
+      "evidence_ids": [
+        "evidence_001",
+        "evidence_003"
+      ],
+      "rationale": "Mention A is the general concept of a path, while mention B is a specific problem (single-source shortest-path) that uses paths. They are at different granularities and denote distinct objects.",
+      "evidence_spans": [
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "A weighted directed graph assigns a numerical weight \\(w(u,v)\\) to each directed edge \\((u,v)\\). A path is a sequence of compatible directed edges. Its path cost is the sum of their edge weights:"
+        },
+        {
+          "lecture_id": "graph_algorithms_001",
+          "span": "The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex. Dijkstra's algorithm is applied to this problem when all edge weights are nonnegative."
+        }
+      ]
+    },
+    {
+      "candidate_id": "ko_identity_candidate_003",
+      "mention_a": "ko_mention_holdout_023",
+      "mention_b": "ko_mention_holdout_026",
+      "decision": "DISTINCT_OBJECT",
+      "evidence_ids": [
+        "evidence_003",
+        "evidence_005"
+      ],
+      "rationale": "Damped Newton method is an extension of Newton's method with a scaling factor, making them distinct methods. Evidence shows they are different algorithms.",
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "Newton's method uses the derivative to replace the function locally by its tangent line. Provided \\(f'(x_k)\\neq 0\\), its update is"
+        },
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "The damped Newton method extends Newton's method by scaling the Newton correction with a factor between zero and one. This extra control can prevent a full Newton step from moving too far when the current iterate is not yet near a root."
+        }
+      ]
+    },
+    {
+      "candidate_id": "ko_identity_candidate_004",
+      "mention_a": "ko_mention_holdout_023",
+      "mention_b": "ko_mention_holdout_035",
+      "decision": "DISTINCT_OBJECT",
+      "evidence_ids": [
+        "evidence_005",
+        "evidence_018"
+      ],
+      "rationale": "Mention A is 'Damped Newton method' from a root-finding lecture, which is a variant of Newton's method with a damping factor. Mention B is 'Newton's Method' from a statistics lecture, used as a numerical solver for MLE. They are different methods: damped Newton is a specific modification for root-finding, while Newton's method is the standard algorithm applied in a different context. The evidence shows they are distinct objects.",
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "The damped Newton method extends Newton's method by scaling the Newton correction with a factor between zero and one. This extra control can prevent a full Newton step from moving too far when the current iterate is not yet near a root."
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\). When this equation has no closed-form solution, Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically."
+        }
+      ]
+    },
+    {
+      "candidate_id": "ko_identity_candidate_005",
+      "mention_a": "ko_mention_holdout_026",
+      "mention_b": "ko_mention_holdout_035",
+      "decision": "SAME_OBJECT",
+      "evidence_ids": [
+        "evidence_003",
+        "evidence_004",
+        "evidence_018"
+      ],
+      "rationale": "Both mentions refer to Newton's method, a root-finding algorithm that uses derivative information. Evidence from the numerical root-finding lecture describes its update formula, and evidence from the statistics lecture confirms that the same method is applied in maximum likelihood estimation. The type (Method) and name match, and the contexts are consistent with the same algorithm.",
+      "evidence_spans": [
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "Newton's method uses the derivative to replace the function locally by its tangent line. Provided \\(f'(x_k)\\neq 0\\), its update is"
+        },
+        {
+          "lecture_id": "numerical_root_finding_001",
+          "span": "\\[\nx_{k+1} = x_k - \\frac{f(x_k)}{f'(x_k)}.\n\\]"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "At an interior differentiable optimum, an MLE candidate satisfies the score equation \\(s(\\theta)=0\\). When this equation has no closed-form solution, Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically."
+        }
+      ]
+    },
+    {
+      "candidate_id": "ko_identity_candidate_006",
+      "mention_a": "ko_mention_holdout_029",
+      "mention_b": "ko_mention_holdout_031",
+      "decision": "DISTINCT_OBJECT",
+      "evidence_ids": [
+        "evidence_001",
+        "evidence_003"
+      ],
+      "rationale": "Likelihood and Log-Likelihood are distinct concepts; the log-likelihood is a transformation of the likelihood, not the same object.",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "A statistical model is a family of probability distributions indexed by an unknown parameter \\(\\theta\\). The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values. For independent observations \\(x_1,\\ldots,x_n\\), it is"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The log-likelihood is obtained by taking the logarithm of the likelihood. Independence turns the product into a sum:"
+        }
+      ]
+    },
+    {
+      "candidate_id": "ko_identity_candidate_007",
+      "mention_a": "ko_mention_holdout_030",
+      "mention_b": "ko_mention_holdout_032",
+      "decision": "DISTINCT_OBJECT",
+      "evidence_ids": [
+        "evidence_002",
+        "evidence_003",
+        "evidence_004"
+      ],
+      "rationale": "Likelihood Function and Log-Likelihood Function are distinct formulas; the log-likelihood is a transformation of the likelihood, not the same object.",
+      "evidence_spans": [
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "\\[\nL(\\theta; x_{1:n}) = \\prod_{i=1}^{n} p(x_i \\mid \\theta).\n\\]"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "The log-likelihood is obtained by taking the logarithm of the likelihood. Independence turns the product into a sum:"
+        },
+        {
+          "lecture_id": "statistics_estimation_001",
+          "span": "\\[\n\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta).\n\\]"
+        }
+      ]
+    }
+  ]
+}
