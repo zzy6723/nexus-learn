@@ -1,0 +1,37 @@
+{
+  "artifact_type": "experiment_002c_completion",
+  "version": "v0.1",
+  "status": "final",
+  "result": "completed_with_limited_independent_validation",
+  "selected_pipeline_id": "ko_canonicalization_pipeline_v0_2_1",
+  "selected_method_id": "candidate_scoped_context_resolution_evidence_ids_v0_2_1",
+  "authorized_scope": "next_technical_validation_stage",
+  "production_readiness_established": false,
+  "claim_boundary": "The selected pipeline passed independent_v0_1, which contains 39 mentions, one positive identity pair, and six selected hard negatives. Broad generalization and run-to-run stability are not established.",
+  "artifacts": {
+    "development_completion": {
+      "path": "experiments/knowledge_object_resolution/002c_4_evidence_id_resolution/development_validation_complete.json",
+      "sha256": "8a3b718cf8a2ab3c62031c02376dbde2370966ad1796bda07dfa88b499134aac"
+    },
+    "independent_completion": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/runs/independent_v0_1/independent_validation_complete.json",
+      "sha256": "9138ad5c0d5d5529d5880103d5e09a90d3d37148287b03de0e94482db399dcaa"
+    },
+    "independent_results": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/final_results.md",
+      "sha256": "3f6ee6da9fa572a4dc4569289c5ed2f07e5442ae209389156ed4ce60de7f10c4"
+    },
+    "independent_conclusion": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/conclusion.md",
+      "sha256": "7750011ecc7ad99b505040492b500547507b465d109d98a54d4c3d2d24b4350b"
+    },
+    "programme_conclusion": {
+      "path": "experiments/knowledge_object_resolution/conclusion.md",
+      "sha256": "13fb6257088bcc8d1b81fc820bb386c94295d3974f9c741fd26c9c8de538c18d"
+    },
+    "adr_005": {
+      "path": "docs/decisions/005-knowledge-object-identity.md",
+      "sha256": "c6dc8486dd403956f8c6864fe4ece877af295b53f865ad394f958c1b338d0dce"
+    }
+  }
+}

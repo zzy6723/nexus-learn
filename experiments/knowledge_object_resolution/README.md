@@ -29,7 +29,9 @@ The completed preparation milestone is documented in
 
 - `002c_1_deterministic_canonicalization/`;
 - `002c_2_context_aware_resolution/`;
-- `002c_3_pipeline_validation/`.
+- `002c_3_pipeline_validation/`;
+- `002c_4_evidence_id_resolution/`;
+- `002c_5_independent_validation/`.
 
 The authored 002C-2 challenge selected context-aware identity resolution after
 it achieved perfect candidate, resolver, cluster, and provenance metrics. The
@@ -40,33 +42,33 @@ two attempts. A nonexact Unicode Entity span was not an exact substring of the
 LaTeX lecture text, and the model repeatedly copied that span as evidence. The
 strict runner rejected both attempts before cluster generation.
 
-Experiment 002C development validation is complete. Independent validation is
-pending. The identity architecture is retained, and evidence-ID context
-resolution v0.2.1 is selected as the development candidate for future
-independent validation. No production canonicalizer is selected.
+Experiment 002C is complete with limited independent validation. The identity
+architecture is retained, and evidence-ID context resolution v0.2.1 is
+selected as the canonicalization method for the next Technical Validation
+stage. No production canonicalizer is selected.
 
 The remediation is documented in `002c_4_evidence_id_resolution/`. v0.2 fixed
 the original Unicode/LaTeX copying failure but exposed a trailing display-math
 catalog defect. v0.2.1 corrected that defect and passed the authored challenge
 and former failure bundle, including manual semantic-evidence review. Both are
-development datasets; an independently frozen source remains required.
+development datasets; the subsequent 002C-5 source provides the limited
+independent result.
 
-The remaining stage is prepared but has not been executed:
+The final stage is complete:
 
 ```text
-002C-5 Independent Canonicalization Validation: Preflight complete; formal run pending
+002C-5 Independent Canonicalization Validation: Passed
 ```
 
-002C-5 freezes a pre-existing four-lecture Entity bundle that did not
+002C-5 froze a pre-existing four-lecture Entity bundle that did not
 participate in 002C method development. It contains 39 mentions, one positive
-identity pair, and six selected hard negatives. The benchmark, full-pipeline
-manifest, success criteria, blind Evidence protocol, and preflight completion
-marker are frozen locally. Passing will support only limited independent locked
-reuse on this source.
+identity pair, and six selected hard negatives. Every candidate, resolver,
+cluster, integrity, exact-Evidence, blind semantic-Evidence, and determinism
+gate passed. This supports limited independent locked reuse on this source,
+not production readiness or broad generalization.
 
-Formal Experiment 003 execution remains blocked on that result. Definition and
-benchmark planning for Experiment 003 may proceed without using predicted
-canonical endpoints as validated inputs.
+Experiment 003 Technical Validation may now use the selected canonicalization
+pipeline under this limited evidence boundary.
 
 ## Programme Boundary
 

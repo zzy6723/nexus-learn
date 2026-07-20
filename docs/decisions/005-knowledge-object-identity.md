@@ -1,8 +1,8 @@
 # ADR-005: Knowledge Object Identity And Mentions
 
 **Status:** Accepted
-**Version:** v0.1
-**Date:** 2026-07-18
+**Version:** v0.2
+**Date:** 2026-07-20
 **Owner:** Project
 
 ## Context
@@ -85,15 +85,21 @@ matches, no integrity or provenance failures, and semantically supported exact
 evidence sets. The former failure bundle is development diagnostic data, not an
 unseen holdout.
 
-This evidence supports v0.2.1 as the candidate for independent validation. It
-does not authorize it as the product default.
+This evidence supported v0.2.1 as the candidate for independent validation. It
+did not by itself authorize it as the product default.
 
 Experiment 002C-5 freezes the complete v0.2.1 canonicalization pipeline and a
 pre-existing four-lecture Entity bundle that did not participate in 002C method
 development. The source contains 39 mentions, one positive identity pair, and
 six selected hard-negative candidates. Benchmark, pipeline, success-criteria,
-determinism, and blind Evidence-review contracts are frozen, but formal model
-execution has not yet occurred.
+determinism, and blind Evidence-review contracts were frozen before formal
+execution.
+
+The unchanged pipeline then passed every independent gate: all seven required
+candidate decisions, 38/38 exact clusters, zero integrity failures, 15/15 exact
+Evidence materializations, 7/7 independently reviewed semantic Evidence sets,
+and all five determinism checks. The source is independent with respect to
+canonicalization method development, not a completely unseen corpus.
 
 Identity-decision Evidence and mention provenance remain separate. Opaque
 Evidence IDs preserve exact lecture spans selected for an identity decision;
@@ -102,10 +108,10 @@ they do not repair nonexact source spans inherited from Entity Extraction.
 ## Scope
 
 ADR-005 authorizes the canonical mention/identity data model, the evidence-ID
-transport contract, and continued independent validation. It does not authorize
-v0.1 or v0.2.1 as a production default, cross-course Relation extraction over
-canonical endpoints, learner-facing Connection ranking, or production identity
-resolution.
+transport contract, and v0.2.1 as the canonicalization method for the next
+Technical Validation stage, including Experiment 003 use of canonical
+endpoints. It does not authorize v0.2.1 as a production default,
+learner-facing Connection ranking, or production identity resolution.
 
 ## References
 
@@ -113,3 +119,4 @@ resolution.
 - `benchmark/ko_canonicalization_protocol.md`
 - `benchmark/ko_canonicalization_annotation_guidelines.md`
 - `experiments/knowledge_object_resolution/README.md`
+- `experiments/knowledge_object_resolution/002c_5_independent_validation/final_results.md`

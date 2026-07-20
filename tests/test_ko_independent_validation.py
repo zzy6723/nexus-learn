@@ -30,7 +30,7 @@ class KOIndependentValidationTest(unittest.TestCase):
 
     def test_full_pipeline_and_preflight_bind_the_same_frozen_artifacts(self) -> None:
         pipeline = pipeline_manifest.build_manifest()
-        preflight = preflight_finalizer.build_marker()
+        preflight = json.loads(preflight_finalizer.DEFAULT_OUTPUT.read_text())
         self.assertEqual(pipeline["pipeline_id"], "ko_canonicalization_pipeline_v0_2_1")
         self.assertEqual(pipeline["components"]["benchmark_completion"], preflight["artifacts"]["benchmark_completion"])
         self.assertEqual(pipeline["components"]["candidate_completion"], preflight["artifacts"]["candidate_completion"])

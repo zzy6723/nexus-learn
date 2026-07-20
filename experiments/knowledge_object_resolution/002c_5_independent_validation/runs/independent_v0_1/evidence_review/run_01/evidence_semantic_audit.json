@@ -1,0 +1,61 @@
+{
+  "artifact_type": "ko_resolution_evidence_semantic_audit",
+  "version": "v0.1",
+  "status": "final",
+  "prediction_sha256": "4a96c41a66e028964a4e0d9e5404676bd6b3bdb0bc50ca1b89f3021be25a1dc1",
+  "review_set_sha256": "53bc5d93973f29cc76b5bec1522aa37519405ff640046c190a70cfe0f5d5ee52",
+  "adjudication_sha256": "a9ec859df5c44b156b59adc0497416f66deddac92f07af5aa15d8f514ed3694b",
+  "reviewed_blind": true,
+  "counts": {
+    "reviewed_candidates": 7,
+    "supported": 7,
+    "not_supported": 0,
+    "pending": 0,
+    "stale_decisions": 0,
+    "unused_decisions": 0
+  },
+  "decisions": [
+    {
+      "review_item_id": "ko_evidence_review_001",
+      "candidate_id": "ko_identity_candidate_001",
+      "decision": "supported",
+      "rationale": ""
+    },
+    {
+      "review_item_id": "ko_evidence_review_002",
+      "candidate_id": "ko_identity_candidate_002",
+      "decision": "supported",
+      "rationale": ""
+    },
+    {
+      "review_item_id": "ko_evidence_review_003",
+      "candidate_id": "ko_identity_candidate_003",
+      "decision": "supported",
+      "rationale": ""
+    },
+    {
+      "review_item_id": "ko_evidence_review_004",
+      "candidate_id": "ko_identity_candidate_004",
+      "decision": "supported",
+      "rationale": ""
+    },
+    {
+      "review_item_id": "ko_evidence_review_005",
+      "candidate_id": "ko_identity_candidate_005",
+      "decision": "supported",
+      "rationale": ""
+    },
+    {
+      "review_item_id": "ko_evidence_review_006",
+      "candidate_id": "ko_identity_candidate_006",
+      "decision": "supported",
+      "rationale": ""
+    },
+    {
+      "review_item_id": "ko_evidence_review_007",
+      "candidate_id": "ko_identity_candidate_007",
+      "decision": "supported",
+      "rationale": ""
+    }
+  ]
+}

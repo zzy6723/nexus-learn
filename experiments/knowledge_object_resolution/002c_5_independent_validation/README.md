@@ -1,6 +1,6 @@
 # Experiment 002C-5: Independent Canonicalization Validation
 
-**Status:** Independent structural validation passed; blind Evidence gate pending
+**Status:** Completed; limited independent validation passed
 
 ## Question
 
@@ -79,15 +79,19 @@ Passing completes the limited independent-validation stage of 002C. It does
 not by itself select a production canonicalizer or establish run-to-run
 stability.
 
-## Current Result
+## Final Result
 
 The formal resolver, cluster finalizer, structural evaluator, and run-specific
 determinism checker completed successfully. All seven required identity
 decisions, all 38 clusters, all integrity gates, and all determinism checks
 passed. Fifteen of fifteen selected Evidence spans materialized exactly.
 
-The semantic Evidence review is currently an unblinded diagnostic with 7/7
-supported candidate sets and project-owner concurrence. Because the reviewer
-had prior Ground Truth exposure, the frozen blind Evidence gate remains
-pending. See `interim_results.md` and
-`runs/independent_v0_1/structural_validation_complete.json`.
+An independent reviewer assessed the frozen neutral review set without access
+to Ground Truth, metrics, cluster results, or the earlier diagnostic. All seven
+Evidence sets were supported. The snapshot-bound Evidence finalizer and overall
+independent-validation finalizer both returned `final`, with no stale, unused,
+pending, or failed gate.
+
+See `final_results.md`, `conclusion.md`, and
+`runs/independent_v0_1/independent_validation_complete.json`. The earlier
+`interim_results.md` and structural marker remain as audit history.

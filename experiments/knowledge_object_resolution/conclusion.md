@@ -2,8 +2,8 @@
 
 ## Result
 
-Experiment 002C is development-complete; independent validation remains
-pending. The development architecture is validated, but no production
+Experiment 002C is complete with limited independent validation. The selected
+pipeline may be used in the next Technical Validation stage, but no production
 canonicalizer is selected.
 
 - 002C-0 established a strict mention/identity/provenance contract.
@@ -18,6 +18,9 @@ canonicalizer is selected.
 - 002C-4 replaced copied spans with opaque evidence IDs. v0.2.1 passed the
   authored challenge and former failure diagnostic with perfect identity,
   cluster, integrity, exact-grounding, and semantic-evidence results.
+- 002C-5 ran the unchanged frozen pipeline on a canonicalization-independent
+  source. All structural, exact-Evidence, blind semantic-Evidence, and
+  determinism gates passed.
 
 ## Product Decision
 
@@ -25,27 +28,24 @@ The canonical identity model, cluster-level Ground Truth, conservative
 candidate generation, contradiction checks, and provenance-preserving cluster
 format are retained.
 
-Evidence-ID context resolution v0.2.1 is selected as the development candidate
-for future independent validation. No production canonicalization method is selected.
-Exact Name is insufficient on the challenge, context v0.1 failed end-to-end
-execution, and v0.2.1 has only been evaluated on data that influenced method
-development. Experiment 003 should not assume that canonical KO endpoints are
-generally ready.
+Evidence-ID context resolution v0.2.1 is selected as the canonicalization
+method for the next Technical Validation stage. No production canonicalization
+method is selected. Exact Name is insufficient on the challenge, and context
+v0.1 failed end-to-end execution. v0.2.1 subsequently passed a limited
+independent source, but Experiment 003 must retain the documented sample and
+generalization limits.
 
-## Next Validation
+## Independent Validation
 
-The next iteration uses an independently frozen validation source that did not
-drive candidate generation, identity behavior, evidence-ID transport, catalog
-partitioning, or success criteria. The frozen v0.2.1 method must run unchanged.
+The independently frozen source did not drive candidate generation, identity
+behavior, Evidence-ID transport, catalog partitioning, or success criteria.
+The unchanged v0.2.1 pipeline correctly resolved all seven candidates,
+produced 38/38 exact clusters, materialized 15/15 exact Evidence spans, passed
+7/7 blind semantic Evidence reviews, and passed all determinism checks.
 
-Its benchmark and full-pipeline preflight are complete. Formal API execution,
-blind Evidence adjudication, cluster evaluation, determinism checking, and the
-combined completion decision remain pending. The source has only one positive
-identity pair, so even a pass will be limited evidence rather than broad
-generalization or production readiness.
-
-This boundary prevents the successful development repair from being
-misrepresented as evidence of generalization.
+The source has only one positive identity pair. This is sufficient to close
+the planned technical experiment, not to claim broad generalization or
+production readiness.
 
 ## Remediation Status
 
@@ -65,8 +65,9 @@ challenge run produced 13/13 exact clusters and 11/11 semantically supported
 evidence sets. Its former-failure diagnostic produced 46/46 exact clusters and
 6/6 supported evidence sets. Both frozen success criteria passed.
 
-The earlier v0.2 runs remain diagnostic history and were not overwritten.
-Production selection still requires a newly frozen source.
+The earlier v0.2 runs remain diagnostic history and were not overwritten. The
+selected method is authorized for the next Technical Validation stage, not for
+production deployment.
 
 ## Programme Status
 
@@ -76,5 +77,5 @@ Production selection still requires a newly frozen source.
 002C-2 Context-aware resolution challenge: Completed
 002C-3 v0.1 locked-reuse execution: Failed exact-evidence transport
 002C-4 Evidence-ID v0.2.1: Development validation completed
-002C-5 Independent canonicalization validation: Preflight complete; formal run pending
+002C-5 Independent canonicalization validation: Completed; passed with limited scope
 ```

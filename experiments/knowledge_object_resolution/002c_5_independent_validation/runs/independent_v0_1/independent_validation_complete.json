@@ -1,0 +1,98 @@
+{
+  "artifact_type": "ko_independent_canonicalization_validation_complete",
+  "version": "v0.1",
+  "status": "final",
+  "validation_result": "passed",
+  "pipeline_id": "ko_canonicalization_pipeline_v0_2_1",
+  "execution_commit": "7ab00e00a7ba64b8ce906eb31ee6512983e82a3b",
+  "gate_failures": [],
+  "evidence_summary": {
+    "exact_materialized_spans": 15,
+    "total_materialized_spans": 15,
+    "exact_materialization_rate": 1.0,
+    "semantic_review": {
+      "reviewed_candidates": 7,
+      "supported": 7,
+      "not_supported": 0,
+      "pending": 0,
+      "stale_decisions": 0,
+      "unused_decisions": 0
+    }
+  },
+  "claim_boundary": "Passing supports independent locked reuse on this pre-existing four-lecture source. Its one positive identity pair does not establish broad generalization, run-to-run stability, or production readiness.",
+  "artifacts": {
+    "preflight": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/preflight_complete.json",
+      "sha256": "4de945b6441a38158b44cfe9a97e171cacfeba8976a35b67431b200b66267188"
+    },
+    "benchmark_completion": {
+      "path": "benchmark/ko_canonicalization/independent_v0_1/benchmark_complete.json",
+      "sha256": "338aa1c65aabdc71bc79682c721c966cad1ab61a92c40d4cc863654d8b91e46c"
+    },
+    "success_criteria": {
+      "path": "benchmark/ko_canonicalization/independent_v0_1/success_criteria.json",
+      "sha256": "1b35fed7ff4ff313ff62f6a9932a3d405333e5d2583427964d43cd65f05393af"
+    },
+    "pipeline_manifest": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/full_pipeline_manifest_v0_1.json",
+      "sha256": "947bee4957a212bb47706753fe28043d20376fd8c8c04fba723f885aa980ec7d"
+    },
+    "candidate_completion": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/runs/independent_v0_1/candidates/candidate_generation_complete.json",
+      "sha256": "a11ff2d0567a51d47afe2e2090aa6b3c52d2f434d12b55ce37ad2f557a19342b"
+    },
+    "resolution_completion": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/runs/independent_v0_1/context/run_01/resolution_complete.json",
+      "sha256": "49c19732d06458605a56078efcd3a5c6dbbe00e852d31829f34d4e349e1e57eb"
+    },
+    "identity_decisions": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/runs/independent_v0_1/context/run_01/output/identity_decisions.json",
+      "sha256": "4a96c41a66e028964a4e0d9e5404676bd6b3bdb0bc50ca1b89f3021be25a1dc1"
+    },
+    "resolution_metadata": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/runs/independent_v0_1/context/run_01/metadata/run_metadata.json",
+      "sha256": "f7e66929760d49eee2cfdb10b76b2e5d7b42d47c320f4777e6db86bfc9bb705c"
+    },
+    "cluster_completion": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/runs/independent_v0_1/clusters/run_01/generation_complete.json",
+      "sha256": "8e27bd20f55de492bc7dd8d9c4c6209dfa3fbcab58b9e6fcc0c0f9a673a4f96e"
+    },
+    "canonical_clusters": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/runs/independent_v0_1/clusters/run_01/canonical_clusters.json",
+      "sha256": "7303f7896e24663875fe067412a2364d587a2000efdb0259154045cd5f3633d7"
+    },
+    "mention_assignments": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/runs/independent_v0_1/clusters/run_01/mention_assignments.json",
+      "sha256": "e778ffa208cda4514ac3cbbda11f2d2f0dad9787afed7771d0d58461bd0617e1"
+    },
+    "metrics": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/runs/independent_v0_1/evaluation/run_01/metrics.json",
+      "sha256": "31dcb2e32a7fea5aaf854ff05c6c9a1aa2bf3dafe6d0fa784274da4e255eb0f5"
+    },
+    "evaluation_completion": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/runs/independent_v0_1/evaluation/run_01/evaluation_complete.json",
+      "sha256": "c4db2d0970f6d5574b0d6155f42f33a3cd5ae9985a59b967cba0803f4fd92cea"
+    },
+    "evidence_review_set": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/runs/independent_v0_1/evidence_review/run_01/blind_review_set.json",
+      "sha256": "53bc5d93973f29cc76b5bec1522aa37519405ff640046c190a70cfe0f5d5ee52"
+    },
+    "evidence_adjudication": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/runs/independent_v0_1/evidence_review/run_01/adjudication_resolved.json",
+      "sha256": "a9ec859df5c44b156b59adc0497416f66deddac92f07af5aa15d8f514ed3694b"
+    },
+    "evidence_audit": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/runs/independent_v0_1/evidence_review/run_01/evidence_semantic_audit.json",
+      "sha256": "3775ebe5660ad6b737a9e9285204310f7999eedeb04aa43eca3888837998b4cc"
+    },
+    "determinism_report": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/runs/independent_v0_1/determinism/run_01/determinism_report.json",
+      "sha256": "8ba5f72a082b4cfdffb605bf55cd2a04234f4e431ffe061406b4f457f7ccc6dd"
+    }
+  },
+  "finalizer": {
+    "path": "scripts/finalize_ko_independent_validation.py",
+    "sha256": "66d6313771f41f178eb93af3f6e557dab2797802db1b0384e50b2081979fc1f2",
+    "version": "ko_independent_validation_finalizer_v0.1"
+  }
+}

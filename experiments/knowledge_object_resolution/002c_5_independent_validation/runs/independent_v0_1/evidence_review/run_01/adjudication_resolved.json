@@ -1,0 +1,55 @@
+{
+  "artifact_type": "ko_identity_evidence_blind_adjudication",
+  "version": "v0.1",
+  "status": "final",
+  "protocol_version": "v0.1",
+  "reviewer_id": "blind_reviewer_01",
+  "review_date": "2026-07-20",
+  "reviewer_independence_attestation": {
+    "not_involved_in_ground_truth_annotation": true,
+    "not_involved_in_method_design": true,
+    "did_not_view_gold_identity_labels": true,
+    "did_not_view_aggregate_metrics_or_cluster_results": true,
+    "did_not_view_unblinded_adjudication": true,
+    "reviewed_only_frozen_protocol_and_blind_review_set": true
+  },
+  "prediction_sha256": "4a96c41a66e028964a4e0d9e5404676bd6b3bdb0bc50ca1b89f3021be25a1dc1",
+  "review_set_sha256": "53bc5d93973f29cc76b5bec1522aa37519405ff640046c190a70cfe0f5d5ee52",
+  "decisions": [
+    {
+      "review_item_id": "ko_evidence_review_001",
+      "decision": "supported",
+      "rationale": ""
+    },
+    {
+      "review_item_id": "ko_evidence_review_002",
+      "decision": "supported",
+      "rationale": ""
+    },
+    {
+      "review_item_id": "ko_evidence_review_003",
+      "decision": "supported",
+      "rationale": ""
+    },
+    {
+      "review_item_id": "ko_evidence_review_004",
+      "decision": "supported",
+      "rationale": ""
+    },
+    {
+      "review_item_id": "ko_evidence_review_005",
+      "decision": "supported",
+      "rationale": ""
+    },
+    {
+      "review_item_id": "ko_evidence_review_006",
+      "decision": "supported",
+      "rationale": ""
+    },
+    {
+      "review_item_id": "ko_evidence_review_007",
+      "decision": "supported",
+      "rationale": ""
+    }
+  ]
+}
