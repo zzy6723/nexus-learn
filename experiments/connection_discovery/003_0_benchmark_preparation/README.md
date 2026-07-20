@@ -1,6 +1,6 @@
 # 003-0: Benchmark and Evaluation Preparation
 
-**Status:** Ready for repository freeze
+**Status:** Freeze manifest prepared; repository commit pending
 **API calls:** None
 
 ## Purpose
@@ -60,8 +60,11 @@ All 387 eligible pairs are annotated. Candidate-scoped Evidence catalogs,
 schema gaps, explicit hard negatives, success criteria, schemas, and the
 annotation review audit are complete. See `annotation_summary.md`.
 
-The non-Git completion artifact is `completion.json`. It intentionally keeps
-model execution disabled until the repository freeze commit is recorded.
+The non-Git completion artifact is `completion.json`. The hash-bound
+`benchmark_freeze_manifest_v0_1.json` records benchmark content commit
+`6a941fabab27ba3cacfb502ee4f177cf4711dabb`. The freeze becomes effective only
+after that manifest and its validation test are committed. Model execution
+remains disabled until then.
 
 ## Completion Rule
 
