@@ -1,0 +1,4134 @@
+{
+  "artifact_type": "connection_candidate_selection",
+  "version": "v0.1",
+  "status": "final",
+  "split": "development",
+  "method": {
+    "id": "overlap_bridge_v0.1",
+    "name": "overlap_bridge",
+    "generator_version": "connection_candidate_generator_v0.1",
+    "config": {
+      "method": "overlap_bridge",
+      "retention_fraction": null,
+      "tie_breaker": "canonical_pair_id_ascending",
+      "lexical_normalization": "lowercase_alphanumeric_stop_tokens_idf_weighted_jaccard_v0.1"
+    },
+    "config_sha256": "1ba92921775bd930e8ffe57206f7c4933692f8e2fd6437a63bfe6d82d24daf29"
+  },
+  "inputs": {
+    "pair_universe": {
+      "path": "benchmark/connection_discovery/development_v0_1/pair_universe.json",
+      "sha256": "cb75b629321c33587de4f69ecc683de98565707249ddd5e714590fc90df70c09"
+    },
+    "canonical_inventory": {
+      "path": "benchmark/connection_discovery/development_v0_1/oracle_canonical_inventory.json",
+      "sha256": "682e0d0aa66398cc54128b5bba1b1fdc0a1512ec1c46a83e64463ac2403c34f7"
+    },
+    "source_manifest": {
+      "path": "benchmark/connection_discovery/development_v0_1/source_manifest.json",
+      "sha256": "a4448eec4c472127fd4b6015737364007bbed6914416dc6b6d55e6fd2a5f4ded"
+    }
+  },
+  "universe_pair_count": 387,
+  "selected_pair_count": 125,
+  "selected_pairs": [
+    {
+      "canonical_pair_id": "conn_dev_pair_000ee4a322d95897",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_011",
+        "canonical_name": "Statistical Model",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_021",
+        "canonical_name": "Root-Finding Problem",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "nonlinear_root_finding_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 1
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_004a5d37e586342f",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_001",
+        "canonical_name": "Gradient",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_010",
+        "canonical_name": "Step Size",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "explicit_ode_methods_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 2
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_0640b65385629338",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_017",
+        "canonical_name": "Least Squares Objective",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_021",
+        "canonical_name": "Root-Finding Problem",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "nonlinear_root_finding_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 3
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_079e85d9a20814b7",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_016",
+        "canonical_name": "Linear Regression",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_020",
+        "canonical_name": "Ridge Regression",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 4
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_07a48d5987f87d67",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_001",
+        "canonical_name": "Gradient",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_016",
+        "canonical_name": "Linear Regression",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 5
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_07f23c7717c1b2fc",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_001",
+        "canonical_name": "Gradient",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_002",
+        "canonical_name": "Hessian Matrix",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 6
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_0c89e22909d9eb04",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_011",
+        "canonical_name": "Statistical Model",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_022",
+        "canonical_name": "Newton's Root-Finding Method",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "nonlinear_root_finding_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 7
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_1191a92948ebd2d6",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_001",
+        "canonical_name": "Gradient",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_011",
+        "canonical_name": "Statistical Model",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 8
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_1a40513a66e7f15d",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_010",
+        "canonical_name": "Step Size",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "explicit_ode_methods_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_027",
+        "canonical_name": "Forward Euler Method",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "explicit_ode_methods_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 9
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_1a9ada3036ab9ac1",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_019",
+        "canonical_name": "Ordinary Least Squares",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_021",
+        "canonical_name": "Root-Finding Problem",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "nonlinear_root_finding_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 10
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_203435522ae7fc94",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_015",
+        "canonical_name": "Score Equation",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_016",
+        "canonical_name": "Linear Regression",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 11
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_207ca66121d45a58",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_001",
+        "canonical_name": "Gradient",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_019",
+        "canonical_name": "Ordinary Least Squares",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 12
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_222c986cd9853739",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_006",
+        "canonical_name": "Gradient Descent",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_017",
+        "canonical_name": "Least Squares Objective",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 13
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_225420587c4177f5",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_006",
+        "canonical_name": "Gradient Descent",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_007",
+        "canonical_name": "Gradient Descent Update",
+        "canonical_type": "Formula",
+        "lecture_ids": [
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 14
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_260ec70c43c90b5d",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_011",
+        "canonical_name": "Statistical Model",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_016",
+        "canonical_name": "Linear Regression",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 15
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_263db2f07078bcd1",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_003",
+        "canonical_name": "First-Order Taylor Approximation",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "explicit_ode_methods_001",
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_026",
+        "canonical_name": "Initial Value Problem",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "explicit_ode_methods_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 16
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_2653269d6960cfb8",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_009",
+        "canonical_name": "Newton Optimisation Update",
+        "canonical_type": "Formula",
+        "lecture_ids": [
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_010",
+        "canonical_name": "Step Size",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "explicit_ode_methods_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 17
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_2bb1aeb7a750deb8",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_001",
+        "canonical_name": "Gradient",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_008",
+        "canonical_name": "Newton Optimisation Method",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 18
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_2cebee9063b290e6",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_014",
+        "canonical_name": "Score Function",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_017",
+        "canonical_name": "Least Squares Objective",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 19
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_2e7e34a63a7a010e",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_005",
+        "canonical_name": "Objective Function",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_022",
+        "canonical_name": "Newton's Root-Finding Method",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "nonlinear_root_finding_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 20
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_2e86bae906db9729",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_005",
+        "canonical_name": "Objective Function",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_016",
+        "canonical_name": "Linear Regression",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 21
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_31fa9b658289ed76",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_013",
+        "canonical_name": "Maximum Likelihood Estimation",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_021",
+        "canonical_name": "Root-Finding Problem",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "nonlinear_root_finding_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 22
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_3216d348a5fd0b14",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_006",
+        "canonical_name": "Gradient Descent",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_016",
+        "canonical_name": "Linear Regression",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 23
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_334f084a05ae5d26",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_021",
+        "canonical_name": "Root-Finding Problem",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "nonlinear_root_finding_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_022",
+        "canonical_name": "Newton's Root-Finding Method",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "nonlinear_root_finding_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 24
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_36ccbe1b2809f02f",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_002",
+        "canonical_name": "Hessian Matrix",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_005",
+        "canonical_name": "Objective Function",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 25
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_3b005c7a79510244",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_006",
+        "canonical_name": "Gradient Descent",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_018",
+        "canonical_name": "Mean Squared Error Formula",
+        "canonical_type": "Formula",
+        "lecture_ids": [
+          "least_squares_learning_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 26
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_3c1d300edac20859",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_014",
+        "canonical_name": "Score Function",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_021",
+        "canonical_name": "Root-Finding Problem",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "nonlinear_root_finding_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 27
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_4a578fe32126af5d",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_001",
+        "canonical_name": "Gradient",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_013",
+        "canonical_name": "Maximum Likelihood Estimation",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 28
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_4bc5d12d0482885f",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_011",
+        "canonical_name": "Statistical Model",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_017",
+        "canonical_name": "Least Squares Objective",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 29
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_4e14b70508e9162e",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_001",
+        "canonical_name": "Gradient",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_017",
+        "canonical_name": "Least Squares Objective",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 30
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_4f47407efd260c39",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_010",
+        "canonical_name": "Step Size",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "explicit_ode_methods_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_029",
+        "canonical_name": "Local Truncation Error",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "explicit_ode_methods_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 31
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_523107aa1d66d340",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_017",
+        "canonical_name": "Least Squares Objective",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_022",
+        "canonical_name": "Newton's Root-Finding Method",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "nonlinear_root_finding_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 32
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_528c5bc99dfe3da3",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_002",
+        "canonical_name": "Hessian Matrix",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_006",
+        "canonical_name": "Gradient Descent",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 33
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_5377d9a990974fd5",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_005",
+        "canonical_name": "Objective Function",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_007",
+        "canonical_name": "Gradient Descent Update",
+        "canonical_type": "Formula",
+        "lecture_ids": [
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 34
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_54a583c2de885f78",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_019",
+        "canonical_name": "Ordinary Least Squares",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_022",
+        "canonical_name": "Newton's Root-Finding Method",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "nonlinear_root_finding_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 35
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_56bf2cab52cf025c",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_001",
+        "canonical_name": "Gradient",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_015",
+        "canonical_name": "Score Equation",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 36
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_5729188da76c91ec",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_005",
+        "canonical_name": "Objective Function",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_008",
+        "canonical_name": "Newton Optimisation Method",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 37
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_573cfcca7161b8cc",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_003",
+        "canonical_name": "First-Order Taylor Approximation",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "explicit_ode_methods_001",
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_006",
+        "canonical_name": "Gradient Descent",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 38
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_58cb2129cbbe96fd",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_005",
+        "canonical_name": "Objective Function",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_019",
+        "canonical_name": "Ordinary Least Squares",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 39
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_596c5ef5d936bf59",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_013",
+        "canonical_name": "Maximum Likelihood Estimation",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_018",
+        "canonical_name": "Mean Squared Error Formula",
+        "canonical_type": "Formula",
+        "lecture_ids": [
+          "least_squares_learning_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 40
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_5ad127da6345956c",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_011",
+        "canonical_name": "Statistical Model",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_019",
+        "canonical_name": "Ordinary Least Squares",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 41
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_5c9b50da7757c423",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_012",
+        "canonical_name": "Log-Likelihood",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_016",
+        "canonical_name": "Linear Regression",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 42
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_616b3cd5835de47d",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_001",
+        "canonical_name": "Gradient",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_014",
+        "canonical_name": "Score Function",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 43
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_623dc620447526e3",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_003",
+        "canonical_name": "First-Order Taylor Approximation",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "explicit_ode_methods_001",
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_004",
+        "canonical_name": "First-Order Taylor Formula",
+        "canonical_type": "Formula",
+        "lecture_ids": [
+          "multivariable_derivatives_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 44
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_63bb993a9e7b1d30",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_022",
+        "canonical_name": "Newton's Root-Finding Method",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "nonlinear_root_finding_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_024",
+        "canonical_name": "Damped Newton Method",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "nonlinear_root_finding_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 45
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_654033881f94fbf0",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_007",
+        "canonical_name": "Gradient Descent Update",
+        "canonical_type": "Formula",
+        "lecture_ids": [
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_010",
+        "canonical_name": "Step Size",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "explicit_ode_methods_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 46
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_65d8ad81bc1dc2cb",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_013",
+        "canonical_name": "Maximum Likelihood Estimation",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_020",
+        "canonical_name": "Ridge Regression",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 47
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_6aa4cd7ede0d0fd8",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_010",
+        "canonical_name": "Step Size",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "explicit_ode_methods_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_028",
+        "canonical_name": "Forward Euler Update",
+        "canonical_type": "Formula",
+        "lecture_ids": [
+          "explicit_ode_methods_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 48
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_6c1b7aacdbb18827",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_012",
+        "canonical_name": "Log-Likelihood",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_017",
+        "canonical_name": "Least Squares Objective",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 49
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_6d5cf494bbd05db6",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_006",
+        "canonical_name": "Gradient Descent",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_013",
+        "canonical_name": "Maximum Likelihood Estimation",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 50
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_6e643548d9f9123a",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_014",
+        "canonical_name": "Score Function",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_016",
+        "canonical_name": "Linear Regression",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 51
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_6fe7e172bceffbee",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_003",
+        "canonical_name": "First-Order Taylor Approximation",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "explicit_ode_methods_001",
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_010",
+        "canonical_name": "Step Size",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "explicit_ode_methods_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 52
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7198ee241a3c0808",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_006",
+        "canonical_name": "Gradient Descent",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_008",
+        "canonical_name": "Newton Optimisation Method",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 53
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_799174f17022eacc",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_013",
+        "canonical_name": "Maximum Likelihood Estimation",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_014",
+        "canonical_name": "Score Function",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 54
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7ae886fbc9be7241",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_005",
+        "canonical_name": "Objective Function",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_018",
+        "canonical_name": "Mean Squared Error Formula",
+        "canonical_type": "Formula",
+        "lecture_ids": [
+          "least_squares_learning_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 55
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7b6597ac0aac5113",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_021",
+        "canonical_name": "Root-Finding Problem",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "nonlinear_root_finding_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_025",
+        "canonical_name": "Derivative",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "nonlinear_root_finding_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 56
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7cd6620daef9af12",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_003",
+        "canonical_name": "First-Order Taylor Approximation",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "explicit_ode_methods_001",
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_009",
+        "canonical_name": "Newton Optimisation Update",
+        "canonical_type": "Formula",
+        "lecture_ids": [
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 57
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7d14f554a3646ae6",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_005",
+        "canonical_name": "Objective Function",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_012",
+        "canonical_name": "Log-Likelihood",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 58
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7f5ac4c6e2fe5268",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_001",
+        "canonical_name": "Gradient",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_007",
+        "canonical_name": "Gradient Descent Update",
+        "canonical_type": "Formula",
+        "lecture_ids": [
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 59
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_81f4b77e0b280216",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_008",
+        "canonical_name": "Newton Optimisation Method",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_010",
+        "canonical_name": "Step Size",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "explicit_ode_methods_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 60
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_8404187bbee08589",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_011",
+        "canonical_name": "Statistical Model",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_013",
+        "canonical_name": "Maximum Likelihood Estimation",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 61
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_855fc91eae345c72",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_002",
+        "canonical_name": "Hessian Matrix",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_008",
+        "canonical_name": "Newton Optimisation Method",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 62
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_88939b4d17cdfb3e",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_005",
+        "canonical_name": "Objective Function",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_017",
+        "canonical_name": "Least Squares Objective",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 63
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_8c981e7dd58feb47",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_013",
+        "canonical_name": "Maximum Likelihood Estimation",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_019",
+        "canonical_name": "Ordinary Least Squares",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 64
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_8fae4bf3dd480f71",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_001",
+        "canonical_name": "Gradient",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_012",
+        "canonical_name": "Log-Likelihood",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 65
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9411fb11503a6f0f",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_005",
+        "canonical_name": "Objective Function",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_010",
+        "canonical_name": "Step Size",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "explicit_ode_methods_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 66
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9a51109c78e243ef",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_022",
+        "canonical_name": "Newton's Root-Finding Method",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "nonlinear_root_finding_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_025",
+        "canonical_name": "Derivative",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "nonlinear_root_finding_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 67
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9b1e66cc5876fb95",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_016",
+        "canonical_name": "Linear Regression",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_021",
+        "canonical_name": "Root-Finding Problem",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "nonlinear_root_finding_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 68
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9b5399bc5a3f9e73",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_016",
+        "canonical_name": "Linear Regression",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_022",
+        "canonical_name": "Newton's Root-Finding Method",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "nonlinear_root_finding_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 69
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9c6621685b9ef5e5",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_012",
+        "canonical_name": "Log-Likelihood",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_013",
+        "canonical_name": "Maximum Likelihood Estimation",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 70
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9cd38efffcca81cd",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_017",
+        "canonical_name": "Least Squares Objective",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_020",
+        "canonical_name": "Ridge Regression",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 71
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9f008ddde3e426f0",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_013",
+        "canonical_name": "Maximum Likelihood Estimation",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_015",
+        "canonical_name": "Score Equation",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 72
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a1259045b6b2d2c7",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_001",
+        "canonical_name": "Gradient",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_004",
+        "canonical_name": "First-Order Taylor Formula",
+        "canonical_type": "Formula",
+        "lecture_ids": [
+          "multivariable_derivatives_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 73
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a1e6b8f76fd16f4d",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_021",
+        "canonical_name": "Root-Finding Problem",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "nonlinear_root_finding_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_023",
+        "canonical_name": "Newton Root Update",
+        "canonical_type": "Formula",
+        "lecture_ids": [
+          "nonlinear_root_finding_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 74
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a234bad0c2a17d8c",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_015",
+        "canonical_name": "Score Equation",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_017",
+        "canonical_name": "Least Squares Objective",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 75
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a47be07419d8b917",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_002",
+        "canonical_name": "Hessian Matrix",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_003",
+        "canonical_name": "First-Order Taylor Approximation",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "explicit_ode_methods_001",
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 76
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a8513031d82ba28e",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_015",
+        "canonical_name": "Score Equation",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_019",
+        "canonical_name": "Ordinary Least Squares",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 77
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a92bdea086a3cd0c",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_012",
+        "canonical_name": "Log-Likelihood",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_019",
+        "canonical_name": "Ordinary Least Squares",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 78
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ac297f8e072816c0",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_001",
+        "canonical_name": "Gradient",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_022",
+        "canonical_name": "Newton's Root-Finding Method",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "nonlinear_root_finding_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 79
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ad73d420644fe99f",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_003",
+        "canonical_name": "First-Order Taylor Approximation",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "explicit_ode_methods_001",
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_005",
+        "canonical_name": "Objective Function",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 80
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_b0c235b2d349eff7",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_018",
+        "canonical_name": "Mean Squared Error Formula",
+        "canonical_type": "Formula",
+        "lecture_ids": [
+          "least_squares_learning_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_019",
+        "canonical_name": "Ordinary Least Squares",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 81
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_b1a1609d22506ef6",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_013",
+        "canonical_name": "Maximum Likelihood Estimation",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_016",
+        "canonical_name": "Linear Regression",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 82
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_b23eff47b6d29fb5",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_005",
+        "canonical_name": "Objective Function",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_013",
+        "canonical_name": "Maximum Likelihood Estimation",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 83
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_b5ea294ae5f29863",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_005",
+        "canonical_name": "Objective Function",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_015",
+        "canonical_name": "Score Equation",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 84
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_be2636a5d8bc8b4c",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_016",
+        "canonical_name": "Linear Regression",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_018",
+        "canonical_name": "Mean Squared Error Formula",
+        "canonical_type": "Formula",
+        "lecture_ids": [
+          "least_squares_learning_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 85
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_be5dff9ee6b32e1a",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_005",
+        "canonical_name": "Objective Function",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_020",
+        "canonical_name": "Ridge Regression",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 86
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_bed567d1ff4c7012",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_003",
+        "canonical_name": "First-Order Taylor Approximation",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "explicit_ode_methods_001",
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_027",
+        "canonical_name": "Forward Euler Method",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "explicit_ode_methods_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 87
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_bfce59cf0247f59a",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_002",
+        "canonical_name": "Hessian Matrix",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_009",
+        "canonical_name": "Newton Optimisation Update",
+        "canonical_type": "Formula",
+        "lecture_ids": [
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 88
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c0111c22941b9e4b",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_002",
+        "canonical_name": "Hessian Matrix",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_010",
+        "canonical_name": "Step Size",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "explicit_ode_methods_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 89
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c02b6a5def080df9",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_003",
+        "canonical_name": "First-Order Taylor Approximation",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "explicit_ode_methods_001",
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_028",
+        "canonical_name": "Forward Euler Update",
+        "canonical_type": "Formula",
+        "lecture_ids": [
+          "explicit_ode_methods_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 90
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c21da2851eae0815",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_006",
+        "canonical_name": "Gradient Descent",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_020",
+        "canonical_name": "Ridge Regression",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 91
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c862968c2f7bbf13",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_015",
+        "canonical_name": "Score Equation",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_021",
+        "canonical_name": "Root-Finding Problem",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "nonlinear_root_finding_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 92
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c9b55dc727622af1",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_017",
+        "canonical_name": "Least Squares Objective",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_018",
+        "canonical_name": "Mean Squared Error Formula",
+        "canonical_type": "Formula",
+        "lecture_ids": [
+          "least_squares_learning_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 93
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c9d185b1eedd2c21",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_003",
+        "canonical_name": "First-Order Taylor Approximation",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "explicit_ode_methods_001",
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_029",
+        "canonical_name": "Local Truncation Error",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "explicit_ode_methods_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 94
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c9da9f7c5ff3c1f6",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_012",
+        "canonical_name": "Log-Likelihood",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_022",
+        "canonical_name": "Newton's Root-Finding Method",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "nonlinear_root_finding_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 95
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ca264bc4f8b65f3b",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_002",
+        "canonical_name": "Hessian Matrix",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_004",
+        "canonical_name": "First-Order Taylor Formula",
+        "canonical_type": "Formula",
+        "lecture_ids": [
+          "multivariable_derivatives_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 96
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ce63516ba4c4f71d",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_005",
+        "canonical_name": "Objective Function",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_011",
+        "canonical_name": "Statistical Model",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 97
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d28ab8d8057efb6a",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_006",
+        "canonical_name": "Gradient Descent",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_009",
+        "canonical_name": "Newton Optimisation Update",
+        "canonical_type": "Formula",
+        "lecture_ids": [
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 98
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d4084502778d049d",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_021",
+        "canonical_name": "Root-Finding Problem",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "nonlinear_root_finding_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_024",
+        "canonical_name": "Damped Newton Method",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "nonlinear_root_finding_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 99
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d6043a4c35e6c8b9",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_016",
+        "canonical_name": "Linear Regression",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_017",
+        "canonical_name": "Least Squares Objective",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 100
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d64d8e658f6dafd8",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_022",
+        "canonical_name": "Newton's Root-Finding Method",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "nonlinear_root_finding_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_023",
+        "canonical_name": "Newton Root Update",
+        "canonical_type": "Formula",
+        "lecture_ids": [
+          "nonlinear_root_finding_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 101
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d6c5b70637127bb4",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_010",
+        "canonical_name": "Step Size",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "explicit_ode_methods_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_026",
+        "canonical_name": "Initial Value Problem",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "explicit_ode_methods_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 102
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d7f55c9116fa3adf",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_003",
+        "canonical_name": "First-Order Taylor Approximation",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "explicit_ode_methods_001",
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_008",
+        "canonical_name": "Newton Optimisation Method",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 103
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d88a461c47b9d32c",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_001",
+        "canonical_name": "Gradient",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_005",
+        "canonical_name": "Objective Function",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 104
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_da1c18bdf793236f",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_012",
+        "canonical_name": "Log-Likelihood",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_021",
+        "canonical_name": "Root-Finding Problem",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "nonlinear_root_finding_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 105
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_dbc167d9bb7ce3f8",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_005",
+        "canonical_name": "Objective Function",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_014",
+        "canonical_name": "Score Function",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 106
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_dcf07ffb792c61d7",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_014",
+        "canonical_name": "Score Function",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_022",
+        "canonical_name": "Newton's Root-Finding Method",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "nonlinear_root_finding_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 107
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_dec2bec3d250fd3c",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_014",
+        "canonical_name": "Score Function",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_019",
+        "canonical_name": "Ordinary Least Squares",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 108
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_e1603fa09ad3fd48",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_005",
+        "canonical_name": "Objective Function",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_021",
+        "canonical_name": "Root-Finding Problem",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "nonlinear_root_finding_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 109
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_e339035d075320bb",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_005",
+        "canonical_name": "Objective Function",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_006",
+        "canonical_name": "Gradient Descent",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 110
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_e674a485e3829890",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_017",
+        "canonical_name": "Least Squares Objective",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_019",
+        "canonical_name": "Ordinary Least Squares",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 111
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_e848f855de939343",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_019",
+        "canonical_name": "Ordinary Least Squares",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_020",
+        "canonical_name": "Ridge Regression",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 112
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ea10f05ebcebff54",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_013",
+        "canonical_name": "Maximum Likelihood Estimation",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_022",
+        "canonical_name": "Newton's Root-Finding Method",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "nonlinear_root_finding_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 113
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_edd5dd0dffb7131e",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_013",
+        "canonical_name": "Maximum Likelihood Estimation",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_017",
+        "canonical_name": "Least Squares Objective",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 114
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ef28d97312ee8970",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_001",
+        "canonical_name": "Gradient",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_009",
+        "canonical_name": "Newton Optimisation Update",
+        "canonical_type": "Formula",
+        "lecture_ids": [
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 115
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_f04767c63a30f18a",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_003",
+        "canonical_name": "First-Order Taylor Approximation",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "explicit_ode_methods_001",
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_007",
+        "canonical_name": "Gradient Descent Update",
+        "canonical_type": "Formula",
+        "lecture_ids": [
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 116
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_f089c625fb64bde0",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_001",
+        "canonical_name": "Gradient",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_003",
+        "canonical_name": "First-Order Taylor Approximation",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "explicit_ode_methods_001",
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 117
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_f0bc752d2a70b1ce",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_016",
+        "canonical_name": "Linear Regression",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_019",
+        "canonical_name": "Ordinary Least Squares",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 118
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_f725fe54ec613340",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_006",
+        "canonical_name": "Gradient Descent",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_019",
+        "canonical_name": "Ordinary Least Squares",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 119
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_f7ace63dad8e0d13",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_005",
+        "canonical_name": "Objective Function",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "maximum_likelihood_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_009",
+        "canonical_name": "Newton Optimisation Update",
+        "canonical_type": "Formula",
+        "lecture_ids": [
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 120
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_fa0a79a76255633a",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_001",
+        "canonical_name": "Gradient",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_021",
+        "canonical_name": "Root-Finding Problem",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "nonlinear_root_finding_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 121
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_fac1350d8eb9227e",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_015",
+        "canonical_name": "Score Equation",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_022",
+        "canonical_name": "Newton's Root-Finding Method",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "nonlinear_root_finding_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 122
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_fb58022473834283",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_006",
+        "canonical_name": "Gradient Descent",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_010",
+        "canonical_name": "Step Size",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "explicit_ode_methods_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 123
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_fb6ac84549809e7b",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_002",
+        "canonical_name": "Hessian Matrix",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_007",
+        "canonical_name": "Gradient Descent Update",
+        "canonical_type": "Formula",
+        "lecture_ids": [
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 124
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ff190ee933b57b25",
+      "ko_a": {
+        "canonical_ko_id": "conn_dev_ko_001",
+        "canonical_name": "Gradient",
+        "canonical_type": "Concept",
+        "lecture_ids": [
+          "maximum_likelihood_001",
+          "multivariable_derivatives_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "ko_b": {
+        "canonical_ko_id": "conn_dev_ko_006",
+        "canonical_name": "Gradient Descent",
+        "canonical_type": "Method",
+        "lecture_ids": [
+          "least_squares_learning_001",
+          "unconstrained_optimisation_001"
+        ]
+      },
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "score": 1.0,
+      "features": {
+        "provenance_stratum": "overlap_bridge"
+      },
+      "rank": 125
+    }
+  ]
+}

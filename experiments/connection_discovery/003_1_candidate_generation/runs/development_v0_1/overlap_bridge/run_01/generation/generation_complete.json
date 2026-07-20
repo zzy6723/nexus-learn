@@ -1,0 +1,32 @@
+{
+  "artifact_type": "connection_candidate_generation_complete",
+  "version": "v0.1",
+  "status": "final",
+  "execution_commit_declared": "f8ba8291fdd9d71eb09ba3ab42f7b6198c64ccb7",
+  "artifacts": {
+    "selection": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/overlap_bridge/run_01/generation/candidate_selection.json",
+      "sha256": "70318d882755066b32017cb1c9188603060f8cd7237c70e7d7a0b14d339dee7a"
+    },
+    "metadata": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/overlap_bridge/run_01/generation/metadata.json",
+      "sha256": "c711773f5bb8f28be357fca05cbcc9ff2119aad6b9789fa25feb8a9d3c98964b"
+    }
+  },
+  "counts": {
+    "universe_pairs": 387,
+    "selected_pairs": 125
+  },
+  "method": {
+    "id": "overlap_bridge_v0.1",
+    "name": "overlap_bridge",
+    "generator_version": "connection_candidate_generator_v0.1",
+    "config": {
+      "method": "overlap_bridge",
+      "retention_fraction": null,
+      "tie_breaker": "canonical_pair_id_ascending",
+      "lexical_normalization": "lowercase_alphanumeric_stop_tokens_idf_weighted_jaccard_v0.1"
+    },
+    "config_sha256": "1ba92921775bd930e8ffe57206f7c4933692f8e2fd6437a63bfe6d82d24daf29"
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "artifact_type": "connection_candidate_development_comparison",
+  "version": "v0.1",
+  "evaluation_status": "final",
+  "method_commit": "f8ba8291fdd9d71eb09ba3ab42f7b6198c64ccb7",
+  "freeze_manifest": {
+    "path": "experiments/connection_discovery/003_0_benchmark_preparation/benchmark_freeze_manifest_v0_1.json",
+    "sha256": "73dfb238877395c1d57e63c4959f416834b3b30db56dd64abe8981b012f39f2c"
+  },
+  "methods": [
+    {
+      "method": "all_pairs",
+      "method_id": "all_pairs_v0.1",
+      "gate_outcome": "not_applicable_control",
+      "selected_pairs": 387,
+      "retrieved_primary_positive_pairs": 41,
+      "missed_primary_positive_pairs": 0,
+      "primary_positive_candidate_recall": 1.0,
+      "candidate_precision_primary": 0.10904255319148937,
+      "workload_reduction_total": 0.0,
+      "same_course_primary_positive_recall": 1.0,
+      "cross_course_primary_positive_recall": 1.0,
+      "diagnostic_compositional_positive_recall": 1.0,
+      "per_relation_primary_recall": {
+        "APPLIED_IN": 1.0,
+        "CONTRASTS_WITH": 1.0,
+        "EXTENDS": 1.0,
+        "FORMALIZES": 1.0,
+        "REQUIRES": 1.0
+      },
+      "duplicate_pairs": 0,
+      "self_pairs": 0,
+      "artifacts": {
+        "generation_complete": {
+          "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/all_pairs/run_01/generation/generation_complete.json",
+          "sha256": "cb4e508c3a60ee87a3f213947f7e502e4ea7200275a8174913a7b6dae48f399b"
+        },
+        "evaluation_complete": {
+          "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/all_pairs/run_01/evaluation/evaluation_complete.json",
+          "sha256": "0b2f9ded4d7e3e46bdcde3d8731a04c9043e004f2720f5469367e51a2c084705"
+        },
+        "metrics": {
+          "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/all_pairs/run_01/evaluation/metrics.json",
+          "sha256": "41af4297fb338af3e7b8f57f6e8b3001030860fe656f827ea00ffa25abe762ff"
+        }
+      }
+    },
+    {
+      "method": "overlap_bridge",
+      "method_id": "overlap_bridge_v0.1",
+      "gate_outcome": "passed",
+      "selected_pairs": 125,
+      "retrieved_primary_positive_pairs": 41,
+      "missed_primary_positive_pairs": 0,
+      "primary_positive_candidate_recall": 1.0,
+      "candidate_precision_primary": 0.3445378151260504,
+      "workload_reduction_total": 0.6770025839793281,
+      "same_course_primary_positive_recall": 1.0,
+      "cross_course_primary_positive_recall": 1.0,
+      "diagnostic_compositional_positive_recall": 0.0,
+      "per_relation_primary_recall": {
+        "APPLIED_IN": 1.0,
+        "CONTRASTS_WITH": 1.0,
+        "EXTENDS": 1.0,
+        "FORMALIZES": 1.0,
+        "REQUIRES": 1.0
+      },
+      "duplicate_pairs": 0,
+      "self_pairs": 0,
+      "artifacts": {
+        "generation_complete": {
+          "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/overlap_bridge/run_01/generation/generation_complete.json",
+          "sha256": "a67aa156596f0a82d8622cf1f5c5d72ca3104b9a53b0118ea0ae06fec2fc3403"
+        },
+        "evaluation_complete": {
+          "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/overlap_bridge/run_01/evaluation/evaluation_complete.json",
+          "sha256": "79b084666cd400c455658966e969f94dc20178d16cef4574d159c68d57d6eb0f"
+        },
+        "metrics": {
+          "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/overlap_bridge/run_01/evaluation/metrics.json",
+          "sha256": "76abf9f7fc0648336624cd5fde950a99374d91fdd3c56e9b28f861dac53b5be1"
+        }
+      }
+    },
+    {
+      "method": "lexical_only",
+      "method_id": "lexical_only_v0.1",
+      "gate_outcome": "passed",
+      "selected_pairs": 309,
+      "retrieved_primary_positive_pairs": 40,
+      "missed_primary_positive_pairs": 1,
+      "primary_positive_candidate_recall": 0.975609756097561,
+      "candidate_precision_primary": 0.13377926421404682,
+      "workload_reduction_total": 0.20155038759689925,
+      "same_course_primary_positive_recall": 0.9615384615384616,
+      "cross_course_primary_positive_recall": 0.9642857142857143,
+      "diagnostic_compositional_positive_recall": 0.8,
+      "per_relation_primary_recall": {
+        "APPLIED_IN": 1.0,
+        "CONTRASTS_WITH": 1.0,
+        "EXTENDS": 1.0,
+        "FORMALIZES": 1.0,
+        "REQUIRES": 0.875
+      },
+      "duplicate_pairs": 0,
+      "self_pairs": 0,
+      "artifacts": {
+        "generation_complete": {
+          "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/lexical_only/run_01/generation/generation_complete.json",
+          "sha256": "46a00d12b8c90c15737e2d3ed023729700f2446f2fe7e9ae978f763549341157"
+        },
+        "evaluation_complete": {
+          "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/lexical_only/run_01/evaluation/evaluation_complete.json",
+          "sha256": "c85eaf61517a6c9532e0de29f8b619f1a50ba9b0665918346e5ef5c8c0775498"
+        },
+        "metrics": {
+          "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/lexical_only/run_01/evaluation/metrics.json",
+          "sha256": "27530e8b98e2fbb2c8a90ca4b5b574037328e0dd51bfe2ed3256112d4ff8c5b7"
+        }
+      }
+    },
+    {
+      "method": "hybrid_provenance_lexical",
+      "method_id": "hybrid_provenance_lexical_v0.1",
+      "gate_outcome": "passed",
+      "selected_pairs": 309,
+      "retrieved_primary_positive_pairs": 41,
+      "missed_primary_positive_pairs": 0,
+      "primary_positive_candidate_recall": 1.0,
+      "candidate_precision_primary": 0.13666666666666666,
+      "workload_reduction_total": 0.20155038759689925,
+      "same_course_primary_positive_recall": 1.0,
+      "cross_course_primary_positive_recall": 1.0,
+      "diagnostic_compositional_positive_recall": 0.6,
+      "per_relation_primary_recall": {
+        "APPLIED_IN": 1.0,
+        "CONTRASTS_WITH": 1.0,
+        "EXTENDS": 1.0,
+        "FORMALIZES": 1.0,
+        "REQUIRES": 1.0
+      },
+      "duplicate_pairs": 0,
+      "self_pairs": 0,
+      "artifacts": {
+        "generation_complete": {
+          "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/hybrid_provenance_lexical/run_01/generation/generation_complete.json",
+          "sha256": "3df0b0b393150481e479478f1ac65a02c3388759ec0fd7de8708cbf922129836"
+        },
+        "evaluation_complete": {
+          "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/hybrid_provenance_lexical/run_01/evaluation/evaluation_complete.json",
+          "sha256": "8b6e081c0041e6518351b7803c0af9b5a5bf638491ddfaab9ef9b55e6dc630eb"
+        },
+        "metrics": {
+          "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/hybrid_provenance_lexical/run_01/evaluation/metrics.json",
+          "sha256": "682a5ed8619ff397163a9aa9a82695dafca79b1007efa3475aefed8e6ebd1d8c"
+        }
+      }
+    }
+  ],
+  "decision": {
+    "selected_method": "overlap_bridge_v0.1",
+    "selected_role": "experiment_003_2_v0_1_primary_route",
+    "selection_basis": [
+      "Retained all 41 primary positives.",
+      "Reduced the eligible classification workload by 67.70%.",
+      "Had the highest primary candidate precision among passing non-control methods.",
+      "Introduced no duplicate, self-pair, unknown-endpoint, or alignment errors."
+    ],
+    "scope_limit": "The policy is selected only for explicit overlap-bridge v0.1 classification. It is a provenance shortcut, not a validated implicit cross-document candidate method.",
+    "diagnostic_method": "lexical_only_v0.1",
+    "diagnostic_basis": "Lexical-only retrieval retained four of five disjoint-provenance compositional positives but missed one primary REQUIRES pair."
+  },
+  "next_stage": "003_2_oracle_canonical_connection_discovery"
+}

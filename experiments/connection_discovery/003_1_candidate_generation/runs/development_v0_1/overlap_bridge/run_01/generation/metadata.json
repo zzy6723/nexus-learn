@@ -1,0 +1,57 @@
+{
+  "artifact_type": "connection_candidate_generation_metadata",
+  "version": "v0.1",
+  "status": "final",
+  "execution_commit_declared": "f8ba8291fdd9d71eb09ba3ab42f7b6198c64ccb7",
+  "execution_commit_attestation": "supplied_by_operator",
+  "freeze_manifest": {
+    "path": "experiments/connection_discovery/003_0_benchmark_preparation/benchmark_freeze_manifest_v0_1.json",
+    "sha256": "73dfb238877395c1d57e63c4959f416834b3b30db56dd64abe8981b012f39f2c"
+  },
+  "inputs": {
+    "pair_universe": {
+      "path": "benchmark/connection_discovery/development_v0_1/pair_universe.json",
+      "sha256": "cb75b629321c33587de4f69ecc683de98565707249ddd5e714590fc90df70c09"
+    },
+    "canonical_inventory": {
+      "path": "benchmark/connection_discovery/development_v0_1/oracle_canonical_inventory.json",
+      "sha256": "682e0d0aa66398cc54128b5bba1b1fdc0a1512ec1c46a83e64463ac2403c34f7"
+    },
+    "source_manifest": {
+      "path": "benchmark/connection_discovery/development_v0_1/source_manifest.json",
+      "sha256": "a4448eec4c472127fd4b6015737364007bbed6914416dc6b6d55e6fd2a5f4ded"
+    }
+  },
+  "method": {
+    "id": "overlap_bridge_v0.1",
+    "name": "overlap_bridge",
+    "generator_version": "connection_candidate_generator_v0.1",
+    "config": {
+      "method": "overlap_bridge",
+      "retention_fraction": null,
+      "tie_breaker": "canonical_pair_id_ascending",
+      "lexical_normalization": "lowercase_alphanumeric_stop_tokens_idf_weighted_jaccard_v0.1"
+    },
+    "config_sha256": "1ba92921775bd930e8ffe57206f7c4933692f8e2fd6437a63bfe6d82d24daf29"
+  },
+  "counts": {
+    "universe_pairs": 387,
+    "selected_pairs": 125
+  },
+  "integrity": {
+    "gold_artifacts_read": false,
+    "duplicate_pair_count": 0,
+    "unknown_pair_count": 0,
+    "endpoint_mismatch_count": 0,
+    "self_pair_count": 0
+  },
+  "output": {
+    "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/overlap_bridge/run_01/generation/candidate_selection.json",
+    "sha256": "70318d882755066b32017cb1c9188603060f8cd7237c70e7d7a0b14d339dee7a"
+  },
+  "generator": {
+    "path": "scripts/generate_connection_candidates.py",
+    "sha256": "ce5c823e1bebf85b6f52f2cee8205a5d224abb0ff327867190ad0e3ad49e9abb",
+    "version": "connection_candidate_generator_v0.1"
+  }
+}

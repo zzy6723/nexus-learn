@@ -1,0 +1,32 @@
+{
+  "artifact_type": "connection_candidate_generation_complete",
+  "version": "v0.1",
+  "status": "final",
+  "execution_commit_declared": "f8ba8291fdd9d71eb09ba3ab42f7b6198c64ccb7",
+  "artifacts": {
+    "selection": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/lexical_only/run_01/generation/candidate_selection.json",
+      "sha256": "a12db5297dd01e177f2158dcb09c209e7fd62398c34e372353f627bfd25073e3"
+    },
+    "metadata": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/lexical_only/run_01/generation/metadata.json",
+      "sha256": "e991a3dd2ae1d0954144cab7965448dfc93d540cd02212899837d569abc40313"
+    }
+  },
+  "counts": {
+    "universe_pairs": 387,
+    "selected_pairs": 309
+  },
+  "method": {
+    "id": "lexical_only_v0.1",
+    "name": "lexical_only",
+    "generator_version": "connection_candidate_generator_v0.1",
+    "config": {
+      "method": "lexical_only",
+      "retention_fraction": 0.8,
+      "tie_breaker": "canonical_pair_id_ascending",
+      "lexical_normalization": "lowercase_alphanumeric_stop_tokens_idf_weighted_jaccard_v0.1"
+    },
+    "config_sha256": "360338be1898ad54a0aae164c8ee1d9b8f95d64614a8bb756f9bb281bd341ab8"
+  }
+}

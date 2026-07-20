@@ -1,0 +1,32 @@
+{
+  "artifact_type": "connection_candidate_generation_complete",
+  "version": "v0.1",
+  "status": "final",
+  "execution_commit_declared": "f8ba8291fdd9d71eb09ba3ab42f7b6198c64ccb7",
+  "artifacts": {
+    "selection": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/all_pairs/run_01/generation/candidate_selection.json",
+      "sha256": "b074b2feefb34b0ff6a03d8cfb1481100a0a6572391b486da182c769c04b824f"
+    },
+    "metadata": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/all_pairs/run_01/generation/metadata.json",
+      "sha256": "fee7200dfe6b76bf8cf070c6a048e7157bf1bce02ca845e71bad9a8bd49aae9e"
+    }
+  },
+  "counts": {
+    "universe_pairs": 387,
+    "selected_pairs": 387
+  },
+  "method": {
+    "id": "all_pairs_v0.1",
+    "name": "all_pairs",
+    "generator_version": "connection_candidate_generator_v0.1",
+    "config": {
+      "method": "all_pairs",
+      "retention_fraction": null,
+      "tie_breaker": "canonical_pair_id_ascending",
+      "lexical_normalization": "lowercase_alphanumeric_stop_tokens_idf_weighted_jaccard_v0.1"
+    },
+    "config_sha256": "928c36a937017c4a5fc214a88b00624e5a0b305426d1a14d80deeaaa3afe2b5a"
+  }
+}

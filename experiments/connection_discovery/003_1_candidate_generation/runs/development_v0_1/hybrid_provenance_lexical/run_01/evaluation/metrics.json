@@ -1,0 +1,101 @@
+{
+  "artifact_type": "connection_candidate_generation_metrics",
+  "version": "v0.1",
+  "evaluation_status": "final",
+  "method": {
+    "id": "hybrid_provenance_lexical_v0.1",
+    "name": "hybrid_provenance_lexical",
+    "generator_version": "connection_candidate_generator_v0.1",
+    "config": {
+      "method": "hybrid_provenance_lexical",
+      "retention_fraction": 0.8,
+      "tie_breaker": "canonical_pair_id_ascending",
+      "lexical_normalization": "lowercase_alphanumeric_stop_tokens_idf_weighted_jaccard_v0.1"
+    },
+    "config_sha256": "a18dec79831fdfed7d20a8d874e7f08cfb0b529fabd6ab1a46835315b428153e"
+  },
+  "counts": {
+    "eligible_pairs": 387,
+    "primary_scored_pairs": 376,
+    "primary_positive_pairs": 41,
+    "primary_negative_pairs": 335,
+    "diagnostic_pairs": 11,
+    "selected_pairs": 309,
+    "selected_primary_pairs": 300,
+    "retrieved_primary_positive_pairs": 41,
+    "missed_primary_positive_pairs": 0,
+    "retained_primary_negative_pairs": 259,
+    "filtered_primary_negative_pairs": 76,
+    "selected_diagnostic_pairs": 9,
+    "duplicate_pairs": 0,
+    "self_pairs": 0
+  },
+  "metrics": {
+    "primary_positive_candidate_recall": 1.0,
+    "candidate_precision_primary": 0.13666666666666666,
+    "workload_retention_total": 0.7984496124031008,
+    "workload_reduction_total": 0.20155038759689925,
+    "actionable_yield_total": 0.13268608414239483
+  },
+  "gate_assessment": {
+    "applicable": true,
+    "outcome": "passed",
+    "checks": {
+      "primary_positive_candidate_recall": {
+        "value": 1.0,
+        "operator": ">=",
+        "threshold": 0.95,
+        "passed": true
+      },
+      "missed_primary_positives": {
+        "value": 0,
+        "operator": "<=",
+        "threshold": 2,
+        "passed": true
+      },
+      "same_course_primary_positive_recall": {
+        "value": 1.0,
+        "operator": ">=",
+        "threshold": 0.9,
+        "passed": true
+      },
+      "cross_course_primary_positive_recall": {
+        "value": 1.0,
+        "operator": ">=",
+        "threshold": 0.9,
+        "passed": true
+      },
+      "per_relation_recall": {
+        "value": 1.0,
+        "operator": ">=",
+        "threshold": 0.75,
+        "included_relations": [
+          "APPLIED_IN",
+          "FORMALIZES",
+          "REQUIRES"
+        ],
+        "passed": true
+      },
+      "workload_reduction": {
+        "value": 0.20155038759689925,
+        "operator": ">=",
+        "threshold": 0.2,
+        "passed": true
+      },
+      "duplicate_pairs": {
+        "value": 0,
+        "operator": "<=",
+        "threshold": 0,
+        "passed": true
+      },
+      "self_pairs": {
+        "value": 0,
+        "operator": "<=",
+        "threshold": 0,
+        "passed": true
+      }
+    },
+    "selection_rule": "Candidate recall is the primary gate. Workload reduction cannot compensate for recall below the frozen threshold."
+  },
+  "claim_limit": "All primary positives are overlap_bridge; passing does not validate disjoint-provenance implicit discovery."
+}

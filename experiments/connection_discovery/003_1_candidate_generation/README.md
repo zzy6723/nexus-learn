@@ -1,6 +1,6 @@
 # 003-1: Oracle-Canonical Candidate Generation
 
-**Status:** Implementation ready; method commit pending
+**Status:** Development evaluation complete; repository freeze pending
 **API calls:** None required
 
 ## Question
@@ -36,6 +36,19 @@ the only 003-1 component authorized to read `ground_truth.json`.
 
 All methods are deterministic. Scores are diagnostic retrieval signals, not
 Connection probabilities.
+
+## Result
+
+All three non-control methods passed the frozen 003-1 gates. The formal
+comparison selects `overlap_bridge_v0.1` for the limited 003-2 primary route:
+
+- 41/41 primary positives retained;
+- 125/387 pairs selected;
+- 67.70% workload reduction;
+- zero structural integrity errors.
+
+See `development_results.md`, `comparison.json`, and `conclusion.md`. The
+selection does not establish disjoint-provenance discovery.
 
 ## Scope Warning
 

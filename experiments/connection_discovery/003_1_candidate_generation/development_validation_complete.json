@@ -1,0 +1,81 @@
+{
+  "artifact_type": "connection_candidate_development_validation_complete",
+  "version": "v0.1",
+  "status": "complete_with_scope_limitation",
+  "method_commit": "f8ba8291fdd9d71eb09ba3ab42f7b6198c64ccb7",
+  "freeze_manifest": {
+    "path": "experiments/connection_discovery/003_0_benchmark_preparation/benchmark_freeze_manifest_v0_1.json",
+    "sha256": "73dfb238877395c1d57e63c4959f416834b3b30db56dd64abe8981b012f39f2c"
+  },
+  "comparison": {
+    "path": "experiments/connection_discovery/003_1_candidate_generation/comparison.json",
+    "sha256": "90159d04299fc2ac9169faf960cb719b04388abc56d9cdbb24a549f0075f9de4"
+  },
+  "method_evaluations": {
+    "all_pairs": {
+      "generation_complete": {
+        "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/all_pairs/run_01/generation/generation_complete.json",
+        "sha256": "cb4e508c3a60ee87a3f213947f7e502e4ea7200275a8174913a7b6dae48f399b"
+      },
+      "evaluation_complete": {
+        "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/all_pairs/run_01/evaluation/evaluation_complete.json",
+        "sha256": "0b2f9ded4d7e3e46bdcde3d8731a04c9043e004f2720f5469367e51a2c084705"
+      },
+      "metrics": {
+        "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/all_pairs/run_01/evaluation/metrics.json",
+        "sha256": "41af4297fb338af3e7b8f57f6e8b3001030860fe656f827ea00ffa25abe762ff"
+      }
+    },
+    "overlap_bridge": {
+      "generation_complete": {
+        "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/overlap_bridge/run_01/generation/generation_complete.json",
+        "sha256": "a67aa156596f0a82d8622cf1f5c5d72ca3104b9a53b0118ea0ae06fec2fc3403"
+      },
+      "evaluation_complete": {
+        "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/overlap_bridge/run_01/evaluation/evaluation_complete.json",
+        "sha256": "79b084666cd400c455658966e969f94dc20178d16cef4574d159c68d57d6eb0f"
+      },
+      "metrics": {
+        "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/overlap_bridge/run_01/evaluation/metrics.json",
+        "sha256": "76abf9f7fc0648336624cd5fde950a99374d91fdd3c56e9b28f861dac53b5be1"
+      }
+    },
+    "lexical_only": {
+      "generation_complete": {
+        "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/lexical_only/run_01/generation/generation_complete.json",
+        "sha256": "46a00d12b8c90c15737e2d3ed023729700f2446f2fe7e9ae978f763549341157"
+      },
+      "evaluation_complete": {
+        "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/lexical_only/run_01/evaluation/evaluation_complete.json",
+        "sha256": "c85eaf61517a6c9532e0de29f8b619f1a50ba9b0665918346e5ef5c8c0775498"
+      },
+      "metrics": {
+        "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/lexical_only/run_01/evaluation/metrics.json",
+        "sha256": "27530e8b98e2fbb2c8a90ca4b5b574037328e0dd51bfe2ed3256112d4ff8c5b7"
+      }
+    },
+    "hybrid_provenance_lexical": {
+      "generation_complete": {
+        "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/hybrid_provenance_lexical/run_01/generation/generation_complete.json",
+        "sha256": "3df0b0b393150481e479478f1ac65a02c3388759ec0fd7de8708cbf922129836"
+      },
+      "evaluation_complete": {
+        "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/hybrid_provenance_lexical/run_01/evaluation/evaluation_complete.json",
+        "sha256": "8b6e081c0041e6518351b7803c0af9b5a5bf638491ddfaab9ef9b55e6dc630eb"
+      },
+      "metrics": {
+        "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/hybrid_provenance_lexical/run_01/evaluation/metrics.json",
+        "sha256": "682a5ed8619ff397163a9aa9a82695dafca79b1007efa3475aefed8e6ebd1d8c"
+      }
+    }
+  },
+  "selected_method": "overlap_bridge_v0.1",
+  "selected_role": "experiment_003_2_v0_1_primary_route",
+  "claim_limit": "The policy is selected only for explicit overlap-bridge v0.1 classification. It is a provenance shortcut, not a validated implicit cross-document candidate method.",
+  "next_stage": "003_2_oracle_canonical_connection_discovery",
+  "finalizer": {
+    "path": "scripts/finalize_connection_candidate_validation.py",
+    "sha256": "ab5dd89d21119049f9cde1d17d57c6c6f84c516a6bed998b0bc012ac636b17d2",
+    "version": "connection_candidate_validation_finalizer_v0.1"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "artifact_type": "connection_candidate_generation_metadata",
+  "version": "v0.1",
+  "status": "final",
+  "execution_commit_declared": "f8ba8291fdd9d71eb09ba3ab42f7b6198c64ccb7",
+  "execution_commit_attestation": "supplied_by_operator",
+  "freeze_manifest": {
+    "path": "experiments/connection_discovery/003_0_benchmark_preparation/benchmark_freeze_manifest_v0_1.json",
+    "sha256": "73dfb238877395c1d57e63c4959f416834b3b30db56dd64abe8981b012f39f2c"
+  },
+  "inputs": {
+    "pair_universe": {
+      "path": "benchmark/connection_discovery/development_v0_1/pair_universe.json",
+      "sha256": "cb75b629321c33587de4f69ecc683de98565707249ddd5e714590fc90df70c09"
+    },
+    "canonical_inventory": {
+      "path": "benchmark/connection_discovery/development_v0_1/oracle_canonical_inventory.json",
+      "sha256": "682e0d0aa66398cc54128b5bba1b1fdc0a1512ec1c46a83e64463ac2403c34f7"
+    },
+    "source_manifest": {
+      "path": "benchmark/connection_discovery/development_v0_1/source_manifest.json",
+      "sha256": "a4448eec4c472127fd4b6015737364007bbed6914416dc6b6d55e6fd2a5f4ded"
+    }
+  },
+  "method": {
+    "id": "hybrid_provenance_lexical_v0.1",
+    "name": "hybrid_provenance_lexical",
+    "generator_version": "connection_candidate_generator_v0.1",
+    "config": {
+      "method": "hybrid_provenance_lexical",
+      "retention_fraction": 0.8,
+      "tie_breaker": "canonical_pair_id_ascending",
+      "lexical_normalization": "lowercase_alphanumeric_stop_tokens_idf_weighted_jaccard_v0.1"
+    },
+    "config_sha256": "a18dec79831fdfed7d20a8d874e7f08cfb0b529fabd6ab1a46835315b428153e"
+  },
+  "counts": {
+    "universe_pairs": 387,
+    "selected_pairs": 309
+  },
+  "integrity": {
+    "gold_artifacts_read": false,
+    "duplicate_pair_count": 0,
+    "unknown_pair_count": 0,
+    "endpoint_mismatch_count": 0,
+    "self_pair_count": 0
+  },
+  "output": {
+    "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/hybrid_provenance_lexical/run_01/generation/candidate_selection.json",
+    "sha256": "10181095fea1e049c0cf184229a4a331c9999f8422a2448c28648019086da0ac"
+  },
+  "generator": {
+    "path": "scripts/generate_connection_candidates.py",
+    "sha256": "ce5c823e1bebf85b6f52f2cee8205a5d224abb0ff327867190ad0e3ad49e9abb",
+    "version": "connection_candidate_generator_v0.1"
+  }
+}

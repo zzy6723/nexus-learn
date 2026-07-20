@@ -1,0 +1,79 @@
+{
+  "artifact_type": "connection_candidate_evaluation_complete",
+  "version": "v0.1",
+  "evaluation_status": "final",
+  "inputs": {
+    "pair_universe": {
+      "path": "benchmark/connection_discovery/development_v0_1/pair_universe.json",
+      "sha256": "cb75b629321c33587de4f69ecc683de98565707249ddd5e714590fc90df70c09"
+    },
+    "ground_truth": {
+      "path": "benchmark/connection_discovery/development_v0_1/ground_truth.json",
+      "sha256": "1bbbd801b505dc2a1d410f50b605a600b9e2ae135471b5484dea63c76aebcba4"
+    },
+    "success_criteria": {
+      "path": "benchmark/connection_discovery_success_criteria_v0_1.json",
+      "sha256": "44b55047bc2d17b63842cc140d0be74f93bb95be4fe12fb578022d87ffe080f8"
+    },
+    "freeze_manifest": {
+      "path": "experiments/connection_discovery/003_0_benchmark_preparation/benchmark_freeze_manifest_v0_1.json",
+      "sha256": "73dfb238877395c1d57e63c4959f416834b3b30db56dd64abe8981b012f39f2c"
+    },
+    "candidate_selection": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/hybrid_provenance_lexical/run_01/generation/candidate_selection.json",
+      "sha256": "10181095fea1e049c0cf184229a4a331c9999f8422a2448c28648019086da0ac"
+    },
+    "candidate_metadata": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/hybrid_provenance_lexical/run_01/generation/metadata.json",
+      "sha256": "d4134f27c9d5f6c1ef860798b96fb6a7e3fc32d0249e97ce608d8d123857bc22"
+    },
+    "candidate_completion": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/hybrid_provenance_lexical/run_01/generation/generation_complete.json",
+      "sha256": "3df0b0b393150481e479478f1ac65a02c3388759ec0fd7de8708cbf922129836"
+    }
+  },
+  "evaluator": {
+    "path": "scripts/evaluate_connection_candidates.py",
+    "sha256": "497608eab613cddce78f75d68698d8575e2fa8f6ddb102f109dd2bbecfc9c7ff",
+    "version": "connection_candidate_evaluator_v0.1"
+  },
+  "outputs": {
+    "metrics": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/hybrid_provenance_lexical/run_01/evaluation/metrics.json",
+      "sha256": "682a5ed8619ff397163a9aa9a82695dafca79b1007efa3475aefed8e6ebd1d8c"
+    },
+    "matches": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/hybrid_provenance_lexical/run_01/evaluation/matches.json",
+      "sha256": "7a00704ab8aeb9502f4044e518c351fa14be18fbb7768948546a43a71dbafa06"
+    },
+    "errors": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/hybrid_provenance_lexical/run_01/evaluation/errors.json",
+      "sha256": "4eed1f1fdc76dd2bd5d7bf01c722282a52eb25624b333869b1686fd7fbbc4e22"
+    },
+    "per_relation_metrics": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/hybrid_provenance_lexical/run_01/evaluation/per_relation_metrics.json",
+      "sha256": "fc4a24805785ea7e3cf66c72ac57b7340e08f77609ea20f16ea57f45d35add6c"
+    },
+    "stratum_metrics": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/hybrid_provenance_lexical/run_01/evaluation/stratum_metrics.json",
+      "sha256": "2ff2e9ed45bc5aa7c5f513ee8dbd67c211b0352e0f96b6cc279d64459b1fcb32"
+    }
+  },
+  "counts": {
+    "eligible_pairs": 387,
+    "primary_scored_pairs": 376,
+    "primary_positive_pairs": 41,
+    "primary_negative_pairs": 335,
+    "diagnostic_pairs": 11,
+    "selected_pairs": 309,
+    "selected_primary_pairs": 300,
+    "retrieved_primary_positive_pairs": 41,
+    "missed_primary_positive_pairs": 0,
+    "retained_primary_negative_pairs": 259,
+    "filtered_primary_negative_pairs": 76,
+    "selected_diagnostic_pairs": 9,
+    "duplicate_pairs": 0,
+    "self_pairs": 0
+  },
+  "gate_outcome": "passed"
+}

@@ -1,0 +1,79 @@
+{
+  "artifact_type": "connection_candidate_evaluation_complete",
+  "version": "v0.1",
+  "evaluation_status": "final",
+  "inputs": {
+    "pair_universe": {
+      "path": "benchmark/connection_discovery/development_v0_1/pair_universe.json",
+      "sha256": "cb75b629321c33587de4f69ecc683de98565707249ddd5e714590fc90df70c09"
+    },
+    "ground_truth": {
+      "path": "benchmark/connection_discovery/development_v0_1/ground_truth.json",
+      "sha256": "1bbbd801b505dc2a1d410f50b605a600b9e2ae135471b5484dea63c76aebcba4"
+    },
+    "success_criteria": {
+      "path": "benchmark/connection_discovery_success_criteria_v0_1.json",
+      "sha256": "44b55047bc2d17b63842cc140d0be74f93bb95be4fe12fb578022d87ffe080f8"
+    },
+    "freeze_manifest": {
+      "path": "experiments/connection_discovery/003_0_benchmark_preparation/benchmark_freeze_manifest_v0_1.json",
+      "sha256": "73dfb238877395c1d57e63c4959f416834b3b30db56dd64abe8981b012f39f2c"
+    },
+    "candidate_selection": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/lexical_only/run_01/generation/candidate_selection.json",
+      "sha256": "a12db5297dd01e177f2158dcb09c209e7fd62398c34e372353f627bfd25073e3"
+    },
+    "candidate_metadata": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/lexical_only/run_01/generation/metadata.json",
+      "sha256": "e991a3dd2ae1d0954144cab7965448dfc93d540cd02212899837d569abc40313"
+    },
+    "candidate_completion": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/lexical_only/run_01/generation/generation_complete.json",
+      "sha256": "46a00d12b8c90c15737e2d3ed023729700f2446f2fe7e9ae978f763549341157"
+    }
+  },
+  "evaluator": {
+    "path": "scripts/evaluate_connection_candidates.py",
+    "sha256": "497608eab613cddce78f75d68698d8575e2fa8f6ddb102f109dd2bbecfc9c7ff",
+    "version": "connection_candidate_evaluator_v0.1"
+  },
+  "outputs": {
+    "metrics": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/lexical_only/run_01/evaluation/metrics.json",
+      "sha256": "27530e8b98e2fbb2c8a90ca4b5b574037328e0dd51bfe2ed3256112d4ff8c5b7"
+    },
+    "matches": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/lexical_only/run_01/evaluation/matches.json",
+      "sha256": "d090b0abca87809490e95ee34078e330bdfe6a7bebd9e21dcbecd75ce1472a9d"
+    },
+    "errors": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/lexical_only/run_01/evaluation/errors.json",
+      "sha256": "29cec7b4e63d6a6e0be27d694d740d1db455e829a8507bac99ecadd86600bb6d"
+    },
+    "per_relation_metrics": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/lexical_only/run_01/evaluation/per_relation_metrics.json",
+      "sha256": "110186075728cfbf8dd240a58664351d03f257628797a2efeca37695fa407afe"
+    },
+    "stratum_metrics": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/lexical_only/run_01/evaluation/stratum_metrics.json",
+      "sha256": "e1627e14abe6ba5a9ab0e492e25d0baab602f00f2bc81ad9c5d3062ed6a85115"
+    }
+  },
+  "counts": {
+    "eligible_pairs": 387,
+    "primary_scored_pairs": 376,
+    "primary_positive_pairs": 41,
+    "primary_negative_pairs": 335,
+    "diagnostic_pairs": 11,
+    "selected_pairs": 309,
+    "selected_primary_pairs": 299,
+    "retrieved_primary_positive_pairs": 40,
+    "missed_primary_positive_pairs": 1,
+    "retained_primary_negative_pairs": 259,
+    "filtered_primary_negative_pairs": 76,
+    "selected_diagnostic_pairs": 10,
+    "duplicate_pairs": 0,
+    "self_pairs": 0
+  },
+  "gate_outcome": "passed"
+}

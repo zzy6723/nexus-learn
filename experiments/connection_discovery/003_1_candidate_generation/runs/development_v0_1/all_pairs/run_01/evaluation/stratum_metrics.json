@@ -1,0 +1,70 @@
+{
+  "artifact_type": "connection_candidate_stratum_metrics",
+  "version": "v0.1",
+  "strata": [
+    {
+      "all_pairs": 330,
+      "selected_pairs": 330,
+      "primary_positive_pairs": 28,
+      "selected_primary_positive_pairs": 28,
+      "diagnostic_positive_pairs": 5,
+      "selected_diagnostic_positive_pairs": 5,
+      "stratum": "cross_course",
+      "primary_positive_candidate_recall": 1.0,
+      "diagnostic_positive_candidate_recall": 1.0,
+      "selection_rate": 1.0
+    },
+    {
+      "all_pairs": 387,
+      "selected_pairs": 387,
+      "primary_positive_pairs": 41,
+      "selected_primary_positive_pairs": 41,
+      "diagnostic_positive_pairs": 5,
+      "selected_diagnostic_positive_pairs": 5,
+      "stratum": "cross_topic",
+      "primary_positive_candidate_recall": 1.0,
+      "diagnostic_positive_candidate_recall": 1.0,
+      "selection_rate": 1.0
+    },
+    {
+      "all_pairs": 5,
+      "selected_pairs": 5,
+      "diagnostic_positive_pairs": 5,
+      "selected_diagnostic_positive_pairs": 5,
+      "stratum": "diagnostic_compositional_positive",
+      "primary_positive_candidate_recall": null,
+      "diagnostic_positive_candidate_recall": 1.0,
+      "selection_rate": 1.0
+    },
+    {
+      "all_pairs": 262,
+      "selected_pairs": 262,
+      "diagnostic_positive_pairs": 5,
+      "selected_diagnostic_positive_pairs": 5,
+      "stratum": "disjoint_provenance",
+      "primary_positive_candidate_recall": null,
+      "diagnostic_positive_candidate_recall": 1.0,
+      "selection_rate": 1.0
+    },
+    {
+      "all_pairs": 125,
+      "selected_pairs": 125,
+      "primary_positive_pairs": 41,
+      "selected_primary_positive_pairs": 41,
+      "stratum": "overlap_bridge",
+      "primary_positive_candidate_recall": 1.0,
+      "diagnostic_positive_candidate_recall": null,
+      "selection_rate": 1.0
+    },
+    {
+      "all_pairs": 139,
+      "selected_pairs": 139,
+      "primary_positive_pairs": 26,
+      "selected_primary_positive_pairs": 26,
+      "stratum": "same_course_cross_lecture",
+      "primary_positive_candidate_recall": 1.0,
+      "diagnostic_positive_candidate_recall": null,
+      "selection_rate": 1.0
+    }
+  ]
+}

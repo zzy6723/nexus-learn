@@ -1,0 +1,79 @@
+{
+  "artifact_type": "connection_candidate_evaluation_complete",
+  "version": "v0.1",
+  "evaluation_status": "final",
+  "inputs": {
+    "pair_universe": {
+      "path": "benchmark/connection_discovery/development_v0_1/pair_universe.json",
+      "sha256": "cb75b629321c33587de4f69ecc683de98565707249ddd5e714590fc90df70c09"
+    },
+    "ground_truth": {
+      "path": "benchmark/connection_discovery/development_v0_1/ground_truth.json",
+      "sha256": "1bbbd801b505dc2a1d410f50b605a600b9e2ae135471b5484dea63c76aebcba4"
+    },
+    "success_criteria": {
+      "path": "benchmark/connection_discovery_success_criteria_v0_1.json",
+      "sha256": "44b55047bc2d17b63842cc140d0be74f93bb95be4fe12fb578022d87ffe080f8"
+    },
+    "freeze_manifest": {
+      "path": "experiments/connection_discovery/003_0_benchmark_preparation/benchmark_freeze_manifest_v0_1.json",
+      "sha256": "73dfb238877395c1d57e63c4959f416834b3b30db56dd64abe8981b012f39f2c"
+    },
+    "candidate_selection": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/all_pairs/run_01/generation/candidate_selection.json",
+      "sha256": "b074b2feefb34b0ff6a03d8cfb1481100a0a6572391b486da182c769c04b824f"
+    },
+    "candidate_metadata": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/all_pairs/run_01/generation/metadata.json",
+      "sha256": "fee7200dfe6b76bf8cf070c6a048e7157bf1bce02ca845e71bad9a8bd49aae9e"
+    },
+    "candidate_completion": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/all_pairs/run_01/generation/generation_complete.json",
+      "sha256": "cb4e508c3a60ee87a3f213947f7e502e4ea7200275a8174913a7b6dae48f399b"
+    }
+  },
+  "evaluator": {
+    "path": "scripts/evaluate_connection_candidates.py",
+    "sha256": "497608eab613cddce78f75d68698d8575e2fa8f6ddb102f109dd2bbecfc9c7ff",
+    "version": "connection_candidate_evaluator_v0.1"
+  },
+  "outputs": {
+    "metrics": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/all_pairs/run_01/evaluation/metrics.json",
+      "sha256": "41af4297fb338af3e7b8f57f6e8b3001030860fe656f827ea00ffa25abe762ff"
+    },
+    "matches": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/all_pairs/run_01/evaluation/matches.json",
+      "sha256": "f6bef7797a3781682180bca9f5ef1c1c9da5f679ae9cd1c6505b070370c0d71a"
+    },
+    "errors": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/all_pairs/run_01/evaluation/errors.json",
+      "sha256": "b630acf62acca8766aabb053d7e9dbd57d57b995bbb69b12deb5a1033866ae49"
+    },
+    "per_relation_metrics": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/all_pairs/run_01/evaluation/per_relation_metrics.json",
+      "sha256": "fc4a24805785ea7e3cf66c72ac57b7340e08f77609ea20f16ea57f45d35add6c"
+    },
+    "stratum_metrics": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/all_pairs/run_01/evaluation/stratum_metrics.json",
+      "sha256": "5b32661fd3b5fa61370ea1c561adca5e5ba23ef2ffb90a7c89b79122f70e5e1c"
+    }
+  },
+  "counts": {
+    "eligible_pairs": 387,
+    "primary_scored_pairs": 376,
+    "primary_positive_pairs": 41,
+    "primary_negative_pairs": 335,
+    "diagnostic_pairs": 11,
+    "selected_pairs": 387,
+    "selected_primary_pairs": 376,
+    "retrieved_primary_positive_pairs": 41,
+    "missed_primary_positive_pairs": 0,
+    "retained_primary_negative_pairs": 335,
+    "filtered_primary_negative_pairs": 0,
+    "selected_diagnostic_pairs": 11,
+    "duplicate_pairs": 0,
+    "self_pairs": 0
+  },
+  "gate_outcome": "not_applicable_control"
+}

@@ -1,0 +1,42 @@
+{
+  "artifact_type": "connection_candidate_per_relation_metrics",
+  "version": "v0.1",
+  "relations": [
+    {
+      "relation_type": "APPLIED_IN",
+      "primary_positive_support": 26,
+      "retrieved_primary_positives": 26,
+      "candidate_recall": 1.0
+    },
+    {
+      "relation_type": "CONTRASTS_WITH",
+      "primary_positive_support": 1,
+      "retrieved_primary_positives": 1,
+      "candidate_recall": 1.0
+    },
+    {
+      "relation_type": "EXTENDS",
+      "primary_positive_support": 2,
+      "retrieved_primary_positives": 2,
+      "candidate_recall": 1.0
+    },
+    {
+      "relation_type": "FORMALIZES",
+      "primary_positive_support": 4,
+      "retrieved_primary_positives": 4,
+      "candidate_recall": 1.0
+    },
+    {
+      "relation_type": "RELATED_TO",
+      "primary_positive_support": 0,
+      "retrieved_primary_positives": 0,
+      "candidate_recall": null
+    },
+    {
+      "relation_type": "REQUIRES",
+      "primary_positive_support": 8,
+      "retrieved_primary_positives": 8,
+      "candidate_recall": 1.0
+    }
+  ]
+}
