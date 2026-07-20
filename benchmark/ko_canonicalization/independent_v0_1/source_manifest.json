@@ -1,0 +1,79 @@
+{
+  "artifact_type": "ko_canonicalization_independent_source_manifest",
+  "version": "v0.1",
+  "status": "final",
+  "data_role": "independent_canonicalization_validation",
+  "claim_boundary": "Pre-existing 002B Relation holdout Entity outputs that were not consumed by 002C-0 through 002C-4. The lectures were previously inspected for Relation work, so this is independent with respect to canonicalization method development, not a universally unseen source.",
+  "selection_order": {
+    "selected_after_v0_2_1_method_freeze": true,
+    "selected_before_002c_5_ground_truth_freeze": true,
+    "selected_before_002c_5_candidate_generation": true,
+    "selected_before_002c_5_resolver_execution": true
+  },
+  "source_experiment": "002B-1 locked_reuse_v0_2",
+  "source_run": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01",
+  "source_method_commit": "3c8606d9243465a8a15639a628db80ea79155f96",
+  "artifacts": {
+    "execution_manifest": {
+      "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/execution_manifest.json",
+      "sha256": "ae44d16312dc254a0c4c0fae26d2f1007ac8ff3fed5e84c1633b82ab0bb1304d"
+    },
+    "lecture_inventory": {
+      "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/lecture_inventory.json",
+      "sha256": "5b53aed0b1c793d47908d773d4e4a6b9ef9dd24e920307f71fa73bc71ec8b069"
+    },
+    "normalized_predicted_kos": {
+      "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/normalization/normalized_predicted_kos.json",
+      "sha256": "fe37cf7d77dd7304a090b21b206b6dd61621cdfedf75507f45edd09a2d8feda3"
+    },
+    "entity_source_bundle": {
+      "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/entity_predictions/entity_source_bundle.json",
+      "sha256": "36ffb632882eab1fbc4ab637cfd1f5b630fd156c9f0296c4a4cc1aa629001f32"
+    },
+    "entity_predictions_completion_marker": {
+      "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/entity_predictions/entity_predictions_complete.json",
+      "sha256": "e72e08662d4a3a75a4296371c9eab544bca71647617ec5e74b8fe183ea58dab0"
+    }
+  },
+  "entity_output_artifacts": [
+    {
+      "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/entity_predictions/output/differential_equations_001.json",
+      "sha256": "53b3338a82d50f93ef623de9065b57294e384cf9bc49691ec4b353ac19c6ac37"
+    },
+    {
+      "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/entity_predictions/output/graph_algorithms_001.json",
+      "sha256": "bee17666c0ce917d96b7f9cd41c41de2fe49ea53e9be3436d7a8172d34cd5325"
+    },
+    {
+      "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/entity_predictions/output/numerical_root_finding_001.json",
+      "sha256": "6328bde3dfe6eb5e6d94a45caa00cb1a230b0cf3686811e1da3189bbfbdd5530"
+    },
+    {
+      "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/entity_predictions/output/statistics_estimation_001.json",
+      "sha256": "981dc3a171e6458a631d7114a9aa95a3dda76b0ab654dc9dd3f074f83eff3c24"
+    }
+  ],
+  "lecture_ids": [
+    "statistics_estimation_001",
+    "numerical_root_finding_001",
+    "differential_equations_001",
+    "graph_algorithms_001"
+  ],
+  "counts": {
+    "lectures": 4,
+    "knowledge_object_mentions": 39,
+    "entity_outputs": 4
+  },
+  "generator": {
+    "path": "scripts/create_ko_independent_source_manifest.py",
+    "sha256": "d2cf2b56e289436aee7247947772e0b4453f4c90e74815d5b38b30b4c8882491",
+    "version": "ko_independent_source_manifest_v0.1"
+  },
+  "canonicalization_independence": {
+    "frozen_method_commit": "46d5a2937f0a33a3c7eb157da8c8d58bd4451a14",
+    "consumed_by_002c_0_through_002c_4": false,
+    "identity_ground_truth_previously_annotated": false,
+    "context_resolver_previously_run_on_source": false,
+    "method_changes_after_source_selection_allowed": false
+  }
+}

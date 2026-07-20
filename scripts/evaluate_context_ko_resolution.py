@@ -115,7 +115,7 @@ def evaluate(
     if set(result_by_id) != set(selected_by_id):
         raise ContextEvaluationError("Decision and candidate IDs do not align.")
     rows = []
-    tp = fp = fn = unresolved = 0
+    tp = fp = fn = tn = unresolved = 0
     decision_counts: Counter[str] = Counter()
     for candidate_id, candidate in selected_by_id.items():
         pair = frozenset((candidate["mention_a"]["mention_id"], candidate["mention_b"]["mention_id"]))
@@ -138,6 +138,7 @@ def evaluate(
             fn += 1
             outcome = "false_split"
         else:
+            tn += 1
             outcome = "true_negative"
         rows.append(
             {"candidate_id": candidate_id, "mention_ids": sorted(pair), "gold_identity": gold,
@@ -201,12 +202,17 @@ def evaluate(
             "same_object_recall_on_candidates": conditional_recall,
             "same_object_recall_end_to_end": end_to_end_recall,
             "same_object_f1_end_to_end": f1(precision, end_to_end_recall),
+            "true_negative_distinct_object": tn,
+            "distinct_object_accuracy_on_candidates": safe_ratio(
+                tn, len(selected_pairs - same_pairs)
+            ),
             "unresolved_count": unresolved,
             "unresolved_rate": safe_ratio(unresolved, len(selected_pairs)),
             "decision_counts": dict(sorted(decision_counts.items())),
             "homonym_decision": homonym_row["actual_decision"] if homonym_row else None,
             "inconsistent_component_count": decision_audit["inconsistent_component_count"],
             "manual_adjudication_count": decision_audit["adjudicated_decision_count"],
+            "schema_failure_rate": 0.0,
         },
         "cluster_quality": partition_metrics["cluster_quality"],
         "integrity": partition_metrics["integrity"],
@@ -215,6 +221,12 @@ def evaluate(
     failures = []
     if metrics["candidate_generation"]["gold_same_object_pair_recall"] < candidate_gates["gold_same_object_pair_recall_min"]:
         failures.append("candidate_same_object_recall")
+    selected_count_max = candidate_gates.get("selected_candidate_count_max")
+    if selected_count_max is not None and len(selected_pairs) > selected_count_max:
+        failures.append("selected_candidate_count")
+    hard_negative_min = candidate_gates.get("selected_hard_negative_count_min")
+    if hard_negative_min is not None and len(selected_pairs - same_pairs) < hard_negative_min:
+        failures.append("selected_hard_negative_count")
     if any(not item["selected"] for item in required_rows):
         failures.append("required_candidate_selection")
     checks = {
@@ -223,6 +235,18 @@ def evaluate(
         "unresolved_rate": (metrics["resolver"]["unresolved_rate"], resolver_gates["unresolved_rate_max"], "<="),
         "inconsistent_components": (metrics["resolver"]["inconsistent_component_count"], resolver_gates["inconsistent_component_count_max"], "<="),
     }
+    if "distinct_object_accuracy_min" in resolver_gates:
+        checks["distinct_object_accuracy"] = (
+            metrics["resolver"]["distinct_object_accuracy_on_candidates"],
+            resolver_gates["distinct_object_accuracy_min"],
+            ">=",
+        )
+    if "schema_failure_rate_max" in resolver_gates:
+        checks["schema_failure_rate"] = (
+            metrics["resolver"]["schema_failure_rate"],
+            resolver_gates["schema_failure_rate_max"],
+            "<=",
+        )
     for name, (actual, threshold, operator) in checks.items():
         if actual is None or (operator == ">=" and actual < threshold) or (operator == "<=" and actual > threshold):
             failures.append(name)
@@ -231,7 +255,39 @@ def evaluate(
     cluster_gates = criteria["cluster_gates"]
     if metrics["cluster_quality"]["b_cubed_f1"] < cluster_gates["b_cubed_f1_min"]:
         failures.append("b_cubed_f1")
-    for key in ("mention_coverage", "lost_provenance_mentions", "cross_type_clusters"):
+    optional_cluster_minimums = {
+        "b_cubed_precision": "b_cubed_precision_min",
+        "b_cubed_recall": "b_cubed_recall_min",
+        "exact_gold_cluster_match_rate": "exact_gold_cluster_match_rate_min",
+        "singleton_precision": "singleton_precision_min",
+        "singleton_recall": "singleton_recall_min",
+    }
+    for metric_name, gate_name in optional_cluster_minimums.items():
+        if (
+            gate_name in cluster_gates
+            and metrics["cluster_quality"].get(metric_name) is not None
+            and metrics["cluster_quality"][metric_name] < cluster_gates[gate_name]
+        ):
+            failures.append(metric_name)
+    optional_error_maximums = {
+        "false_merge": "false_merge_count_max",
+        "false_split": "false_split_count_max",
+    }
+    for error_name, gate_name in optional_error_maximums.items():
+        if (
+            gate_name in cluster_gates
+            and metrics["cluster_error_counts"].get(error_name, 0) > cluster_gates[gate_name]
+        ):
+            failures.append(error_name)
+    for key in (
+        "mention_coverage",
+        "duplicate_assignments",
+        "orphan_mentions",
+        "lost_provenance_mentions",
+        "cross_type_clusters",
+    ):
+        if key not in cluster_gates:
+            continue
         if metrics["integrity"][key] != cluster_gates[key]:
             failures.append(key)
     metrics["success_criteria"] = {"passed": not failures, "failures": failures}

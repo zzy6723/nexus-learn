@@ -79,10 +79,13 @@ def atomic_write(path: Path, value: Any) -> None:
 
 
 def build_ground_truth(
-    inventory: dict[str, Any], plan: dict[str, Any], inventory_path: Path
+    inventory: dict[str, Any], plan: dict[str, Any], inventory_path: Path,
+    *, expected_status: str = "final_pre_method_execution",
+    expected_data_role: str = "locked_reuse",
+    canonical_id_prefix: str = "canonical_ko_dev",
 ) -> dict[str, Any]:
-    if plan.get("status") != "final_pre_method_execution" or plan.get("data_role") != "locked_reuse":
-        raise GroundTruthCreationError("Annotation plan is not final locked reuse.")
+    if plan.get("status") != expected_status or plan.get("data_role") != expected_data_role:
+        raise GroundTruthCreationError("Annotation plan status or data role is invalid.")
     if plan.get("annotation_policy", {}).get("all_mentions_reviewed") is not True:
         raise GroundTruthCreationError("Annotation plan does not declare complete review.")
     mentions = inventory.get("mentions")
@@ -136,7 +139,7 @@ def build_ground_truth(
                 }
             )
     clusters = [
-        {"canonical_id": f"canonical_ko_dev_{index:03d}", **cluster}
+        {"canonical_id": f"{canonical_id_prefix}_{index:03d}", **cluster}
         for index, cluster in enumerate(raw_clusters, start=1)
     ]
     return {

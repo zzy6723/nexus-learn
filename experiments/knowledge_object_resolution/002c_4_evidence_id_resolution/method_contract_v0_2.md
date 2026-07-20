@@ -2,6 +2,9 @@
 
 **Status:** Development method candidate
 
+**Contract family:** v0.2  
+**Current implementation revision:** v0.2.1
+
 v0.2.1 corrects the paragraph partitioner so that a final block followed by a
 single trailing newline remains available in the catalog. The first v0.2
 development run exposed this implementation defect when two Forward Euler

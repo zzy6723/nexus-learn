@@ -1,0 +1,124 @@
+{
+  "artifact_type": "ko_resolution_full_pipeline_manifest",
+  "version": "v0.1",
+  "status": "frozen_pre_independent_execution",
+  "pipeline_id": "ko_canonicalization_pipeline_v0_2_1",
+  "selected_resolver": {
+    "method_id": "candidate_scoped_context_resolution_evidence_ids_v0_2_1",
+    "development_selection_commit": "46d5a2937f0a33a3c7eb157da8c8d58bd4451a14",
+    "runner_sha256": "30d7878f03af7b922f24d2359fdeb66fa2a8dcae30f5d4ca7217ff3dd11556ea",
+    "prompt_sha256": "11531eff52fa8b0e76c05cb7f33eabe5cfc06b9b4c394452ab6929989c329b1d"
+  },
+  "components": {
+    "benchmark_completion": {
+      "path": "benchmark/ko_canonicalization/independent_v0_1/benchmark_complete.json",
+      "sha256": "338aa1c65aabdc71bc79682c721c966cad1ab61a92c40d4cc863654d8b91e46c"
+    },
+    "success_criteria": {
+      "path": "benchmark/ko_canonicalization/independent_v0_1/success_criteria.json",
+      "sha256": "1b35fed7ff4ff313ff62f6a9932a3d405333e5d2583427964d43cd65f05393af"
+    },
+    "normalization_config": {
+      "path": "benchmark/ko_name_normalization_v0_1.json",
+      "sha256": "fad01c399f4ef3f3147f136c76579b253f563965a299c1003a91e79baadc3d9e"
+    },
+    "alias_resource": {
+      "path": "benchmark/ko_aliases_v0_1.json",
+      "sha256": "4fa8d455eeb9bdbc1cf6c0ba8a3d08ac7c5266d0ad0a4f2efe3bf1e93af50bea"
+    },
+    "candidate_generator": {
+      "path": "scripts/generate_ko_identity_candidates.py",
+      "sha256": "10e08c67a91d4ca6872eca101cb453db0cec1dd42193e66fe59a118dccb42d76"
+    },
+    "candidate_completion": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/runs/independent_v0_1/candidates/candidate_generation_complete.json",
+      "sha256": "a11ff2d0567a51d47afe2e2090aa6b3c52d2f434d12b55ce37ad2f557a19342b"
+    },
+    "resolver_runner": {
+      "path": "scripts/run_context_ko_resolution_v0_2.py",
+      "sha256": "30d7878f03af7b922f24d2359fdeb66fa2a8dcae30f5d4ca7217ff3dd11556ea"
+    },
+    "resolver_prompt": {
+      "path": "experiments/knowledge_object_resolution/002c_4_evidence_id_resolution/prompt.md",
+      "sha256": "11531eff52fa8b0e76c05cb7f33eabe5cfc06b9b4c394452ab6929989c329b1d"
+    },
+    "resolver_contract": {
+      "path": "experiments/knowledge_object_resolution/002c_4_evidence_id_resolution/method_contract_v0_2.md",
+      "sha256": "1a21ce8234a039d0fce09ce4699cfe29f1f836378081c0ed380cf524310dd0d2"
+    },
+    "cluster_finalizer": {
+      "path": "scripts/finalize_context_ko_clusters.py",
+      "sha256": "a8e76d2b16c2c142032b5454e28d0c5c64f003de39ae03e2273679e03964d908"
+    },
+    "stable_id_implementation": {
+      "path": "scripts/run_deterministic_ko_canonicalization.py",
+      "sha256": "cbdb6cd0084e4e5bb5c3e44694361f6998068fb92c8697265698c6461194e44c"
+    },
+    "pipeline_evaluator": {
+      "path": "scripts/evaluate_context_ko_resolution.py",
+      "sha256": "0d580020d430ab06f95b260aa9e4ba8d143357e29492e2208d563e97d3627f4d"
+    },
+    "determinism_checker": {
+      "path": "scripts/check_context_ko_resolution_determinism.py",
+      "sha256": "4e51675b558c3bba4f9324f55a69440e279b80cc579ac6fba735708ca58d52f8"
+    },
+    "evidence_review_protocol": {
+      "path": "benchmark/ko_identity_evidence_review_protocol.md",
+      "sha256": "9d7521a2f7e839dc76d55fa37799cfc8d3c36e354d24e07983c210eb5622f9b7"
+    },
+    "evidence_review_set_generator": {
+      "path": "scripts/create_ko_identity_evidence_review_set.py",
+      "sha256": "a78fb89bdf627812b669686e3980aaf7091726804209c3eb82f4826ad52a61d8"
+    },
+    "evidence_audit_finalizer": {
+      "path": "scripts/finalize_ko_identity_evidence_audit.py",
+      "sha256": "655e64356cc3bbdceac4da0e640b55a50506535b944a35c855ea1fd2cebadc8e"
+    },
+    "independent_validation_finalizer": {
+      "path": "scripts/finalize_ko_independent_validation.py",
+      "sha256": "66d6313771f41f178eb93af3f6e557dab2797802db1b0384e50b2081979fc1f2"
+    },
+    "annotation_guidelines": {
+      "path": "benchmark/ko_canonicalization_annotation_guidelines.md",
+      "sha256": "ae88452fbe9ae7bb8ab41c79776d6277105a2f15242d46f43a6495a9ea5b1493"
+    },
+    "evaluation_protocol": {
+      "path": "benchmark/ko_canonicalization_protocol.md",
+      "sha256": "adcca6ce6962500da7427a7b247d76abddb0dd32fb3ef12e2ac9023597ad3b55"
+    }
+  },
+  "model_request": {
+    "provider": "deepseek",
+    "model": "deepseek-v4-flash",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 1200,
+    "response_format": {
+      "type": "json_object"
+    },
+    "thinking": {
+      "type": "disabled"
+    },
+    "request_partitioning": "one_identity_candidate_per_request_v0_1"
+  },
+  "pipeline_contract": {
+    "normalization": "frozen deterministic normalization before candidate generation",
+    "candidate_generation": "Ground-Truth-blind frozen rules with no manual pair additions",
+    "evidence_catalog": "candidate-scoped exact paragraph blocks with opaque IDs",
+    "resolution": "SAME_OBJECT, DISTINCT_OBJECT, or UNRESOLVED under v0.2.1",
+    "clustering": "SAME_OBJECT connected components with DISTINCT_OBJECT contradiction checks",
+    "canonical_id": "SHA-256-derived from type, context identity key, and sorted mention IDs",
+    "provenance": "every mention assigned once with original upstream source spans retained",
+    "evidence_review": "snapshot-bound blind human review before aggregate metrics are opened"
+  },
+  "freeze_rules": {
+    "component_changes_after_independent_execution": "forbidden",
+    "failure_handling": "downgrade source to development and require a new independent source",
+    "production_claim_from_single_source": "forbidden"
+  },
+  "generator": {
+    "path": "scripts/create_ko_resolution_pipeline_manifest.py",
+    "sha256": "22f1f0cf8cb5ccb2a05881c9b3e8e0a43f0bedc8c7f0f3eaee7553cd78c98266",
+    "version": "ko_resolution_full_pipeline_manifest_v0.1"
+  }
+}

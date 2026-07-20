@@ -1,0 +1,7431 @@
+{
+  "artifact_type": "ko_identity_candidate_generation_audit",
+  "version": "v0.1",
+  "candidate_bundle_sha256": "fb1a684e7cf59f32606ac89dd18a7701d6941640aa9ec67f07ad1ffe78315fef",
+  "decisions": [
+    {
+      "pair_key": "ko_pair_001",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_002"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_002",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_003"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_003",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_004"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_004",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_005"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_005",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_006"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_006",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_007"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_007",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_008"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_008",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_009"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_009",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_010"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_010",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_011"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_011",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_012"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_012",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_013"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_013",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_014"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_014",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_015"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_015",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_016"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_016",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_017"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_017",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_018"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_018",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_019"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_019",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_020"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_020",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_021"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_021",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_022"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_022",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_023"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_023",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_024"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_024",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_025"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_025",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_026"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_026",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_027"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_027",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_028"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_028",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_029"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_029",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_030"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_030",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_031"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_031",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_032"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_032",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_033"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_033",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_034"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_034",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_035"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_035",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_036"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_036",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_037"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_037",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_038",
+      "mention_ids": [
+        "ko_mention_holdout_001",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_039",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_003"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_040",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_004"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_041",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_005"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_042",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_006"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_043",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_007"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_044",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_008"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_045",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_009"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_046",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_010"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_047",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_011"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_048",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_012"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_049",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_013"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_050",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_014"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_051",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_015"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_052",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_016"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_053",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_017"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_054",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_018"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_055",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_019"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_056",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_020"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_057",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_021"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_058",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_022"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_059",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_023"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_060",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_024"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_061",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_025"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_062",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_026"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_063",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_027"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_064",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_028"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_065",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_029"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_066",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_030"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_067",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_031"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_068",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_032"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_069",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_033"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_070",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_034"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_071",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_035"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_072",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_036"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_073",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_037"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_074",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_075",
+      "mention_ids": [
+        "ko_mention_holdout_002",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_076",
+      "mention_ids": [
+        "ko_mention_holdout_003",
+        "ko_mention_holdout_004"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_077",
+      "mention_ids": [
+        "ko_mention_holdout_003",
+        "ko_mention_holdout_005"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_078",
+      "mention_ids": [
+        "ko_mention_holdout_003",
+        "ko_mention_holdout_006"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_079",
+      "mention_ids": [
+        "ko_mention_holdout_003",
+        "ko_mention_holdout_007"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_080",
+      "mention_ids": [
+        "ko_mention_holdout_003",
+        "ko_mention_holdout_008"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_081",
+      "mention_ids": [
+        "ko_mention_holdout_003",
+        "ko_mention_holdout_009"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_082",
+      "mention_ids": [
+        "ko_mention_holdout_003",
+        "ko_mention_holdout_010"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_083",
+      "mention_ids": [
+        "ko_mention_holdout_003",
+        "ko_mention_holdout_011"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_084",
+      "mention_ids": [
+        "ko_mention_holdout_003",
+        "ko_mention_holdout_012"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_085",
+      "mention_ids": [
+        "ko_mention_holdout_003",
+        "ko_mention_holdout_013"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_086",
+      "mention_ids": [
+        "ko_mention_holdout_003",
+        "ko_mention_holdout_014"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_087",
+      "mention_ids": [
+        "ko_mention_holdout_003",
+        "ko_mention_holdout_015"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_088",
+      "mention_ids": [
+        "ko_mention_holdout_003",
+        "ko_mention_holdout_016"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_089",
+      "mention_ids": [
+        "ko_mention_holdout_003",
+        "ko_mention_holdout_017"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_090",
+      "mention_ids": [
+        "ko_mention_holdout_003",
+        "ko_mention_holdout_018"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_091",
+      "mention_ids": [
+        "ko_mention_holdout_003",
+        "ko_mention_holdout_019"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_092",
+      "mention_ids": [
+        "ko_mention_holdout_003",
+        "ko_mention_holdout_020"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_093",
+      "mention_ids": [
+        "ko_mention_holdout_003",
+        "ko_mention_holdout_021"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_094",
+      "mention_ids": [
+        "ko_mention_holdout_003",
+        "ko_mention_holdout_022"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_095",
+      "mention_ids": [
+        "ko_mention_holdout_003",
+        "ko_mention_holdout_023"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_096",
+      "mention_ids": [
+        "ko_mention_holdout_003",
+        "ko_mention_holdout_024"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_097",
+      "mention_ids": [
+        "ko_mention_holdout_003",
+        "ko_mention_holdout_025"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_098",
+      "mention_ids": [
+        "ko_mention_holdout_003",
+        "ko_mention_holdout_026"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_099",
+      "mention_ids": [
+        "ko_mention_holdout_003",
+        "ko_mention_holdout_027"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_100",
+      "mention_ids": [
+        "ko_mention_holdout_003",
+        "ko_mention_holdout_028"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_101",
+      "mention_ids": [
+        "ko_mention_holdout_003",
+        "ko_mention_holdout_029"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_102",
+      "mention_ids": [
+        "ko_mention_holdout_003",
+        "ko_mention_holdout_030"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_103",
+      "mention_ids": [
+        "ko_mention_holdout_003",
+        "ko_mention_holdout_031"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_104",
+      "mention_ids": [
+        "ko_mention_holdout_003",
+        "ko_mention_holdout_032"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_105",
+      "mention_ids": [
+        "ko_mention_holdout_003",
+        "ko_mention_holdout_033"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_106",
+      "mention_ids": [
+        "ko_mention_holdout_003",
+        "ko_mention_holdout_034"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_107",
+      "mention_ids": [
+        "ko_mention_holdout_003",
+        "ko_mention_holdout_035"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_108",
+      "mention_ids": [
+        "ko_mention_holdout_003",
+        "ko_mention_holdout_036"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_109",
+      "mention_ids": [
+        "ko_mention_holdout_003",
+        "ko_mention_holdout_037"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_110",
+      "mention_ids": [
+        "ko_mention_holdout_003",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_111",
+      "mention_ids": [
+        "ko_mention_holdout_003",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_112",
+      "mention_ids": [
+        "ko_mention_holdout_004",
+        "ko_mention_holdout_005"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_113",
+      "mention_ids": [
+        "ko_mention_holdout_004",
+        "ko_mention_holdout_006"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_114",
+      "mention_ids": [
+        "ko_mention_holdout_004",
+        "ko_mention_holdout_007"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_115",
+      "mention_ids": [
+        "ko_mention_holdout_004",
+        "ko_mention_holdout_008"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_116",
+      "mention_ids": [
+        "ko_mention_holdout_004",
+        "ko_mention_holdout_009"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_117",
+      "mention_ids": [
+        "ko_mention_holdout_004",
+        "ko_mention_holdout_010"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_118",
+      "mention_ids": [
+        "ko_mention_holdout_004",
+        "ko_mention_holdout_011"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_119",
+      "mention_ids": [
+        "ko_mention_holdout_004",
+        "ko_mention_holdout_012"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_120",
+      "mention_ids": [
+        "ko_mention_holdout_004",
+        "ko_mention_holdout_013"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_121",
+      "mention_ids": [
+        "ko_mention_holdout_004",
+        "ko_mention_holdout_014"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_122",
+      "mention_ids": [
+        "ko_mention_holdout_004",
+        "ko_mention_holdout_015"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_123",
+      "mention_ids": [
+        "ko_mention_holdout_004",
+        "ko_mention_holdout_016"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_124",
+      "mention_ids": [
+        "ko_mention_holdout_004",
+        "ko_mention_holdout_017"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_125",
+      "mention_ids": [
+        "ko_mention_holdout_004",
+        "ko_mention_holdout_018"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_126",
+      "mention_ids": [
+        "ko_mention_holdout_004",
+        "ko_mention_holdout_019"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_127",
+      "mention_ids": [
+        "ko_mention_holdout_004",
+        "ko_mention_holdout_020"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_128",
+      "mention_ids": [
+        "ko_mention_holdout_004",
+        "ko_mention_holdout_021"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_129",
+      "mention_ids": [
+        "ko_mention_holdout_004",
+        "ko_mention_holdout_022"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_130",
+      "mention_ids": [
+        "ko_mention_holdout_004",
+        "ko_mention_holdout_023"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_131",
+      "mention_ids": [
+        "ko_mention_holdout_004",
+        "ko_mention_holdout_024"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_132",
+      "mention_ids": [
+        "ko_mention_holdout_004",
+        "ko_mention_holdout_025"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_133",
+      "mention_ids": [
+        "ko_mention_holdout_004",
+        "ko_mention_holdout_026"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_134",
+      "mention_ids": [
+        "ko_mention_holdout_004",
+        "ko_mention_holdout_027"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_135",
+      "mention_ids": [
+        "ko_mention_holdout_004",
+        "ko_mention_holdout_028"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_136",
+      "mention_ids": [
+        "ko_mention_holdout_004",
+        "ko_mention_holdout_029"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_137",
+      "mention_ids": [
+        "ko_mention_holdout_004",
+        "ko_mention_holdout_030"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_138",
+      "mention_ids": [
+        "ko_mention_holdout_004",
+        "ko_mention_holdout_031"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_139",
+      "mention_ids": [
+        "ko_mention_holdout_004",
+        "ko_mention_holdout_032"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_140",
+      "mention_ids": [
+        "ko_mention_holdout_004",
+        "ko_mention_holdout_033"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_141",
+      "mention_ids": [
+        "ko_mention_holdout_004",
+        "ko_mention_holdout_034"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_142",
+      "mention_ids": [
+        "ko_mention_holdout_004",
+        "ko_mention_holdout_035"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_143",
+      "mention_ids": [
+        "ko_mention_holdout_004",
+        "ko_mention_holdout_036"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_144",
+      "mention_ids": [
+        "ko_mention_holdout_004",
+        "ko_mention_holdout_037"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_145",
+      "mention_ids": [
+        "ko_mention_holdout_004",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_146",
+      "mention_ids": [
+        "ko_mention_holdout_004",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_147",
+      "mention_ids": [
+        "ko_mention_holdout_005",
+        "ko_mention_holdout_006"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_148",
+      "mention_ids": [
+        "ko_mention_holdout_005",
+        "ko_mention_holdout_007"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_149",
+      "mention_ids": [
+        "ko_mention_holdout_005",
+        "ko_mention_holdout_008"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_150",
+      "mention_ids": [
+        "ko_mention_holdout_005",
+        "ko_mention_holdout_009"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_151",
+      "mention_ids": [
+        "ko_mention_holdout_005",
+        "ko_mention_holdout_010"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_152",
+      "mention_ids": [
+        "ko_mention_holdout_005",
+        "ko_mention_holdout_011"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_153",
+      "mention_ids": [
+        "ko_mention_holdout_005",
+        "ko_mention_holdout_012"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_154",
+      "mention_ids": [
+        "ko_mention_holdout_005",
+        "ko_mention_holdout_013"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_155",
+      "mention_ids": [
+        "ko_mention_holdout_005",
+        "ko_mention_holdout_014"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_156",
+      "mention_ids": [
+        "ko_mention_holdout_005",
+        "ko_mention_holdout_015"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_157",
+      "mention_ids": [
+        "ko_mention_holdout_005",
+        "ko_mention_holdout_016"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_158",
+      "mention_ids": [
+        "ko_mention_holdout_005",
+        "ko_mention_holdout_017"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_159",
+      "mention_ids": [
+        "ko_mention_holdout_005",
+        "ko_mention_holdout_018"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_160",
+      "mention_ids": [
+        "ko_mention_holdout_005",
+        "ko_mention_holdout_019"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_161",
+      "mention_ids": [
+        "ko_mention_holdout_005",
+        "ko_mention_holdout_020"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_162",
+      "mention_ids": [
+        "ko_mention_holdout_005",
+        "ko_mention_holdout_021"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_163",
+      "mention_ids": [
+        "ko_mention_holdout_005",
+        "ko_mention_holdout_022"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_164",
+      "mention_ids": [
+        "ko_mention_holdout_005",
+        "ko_mention_holdout_023"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_165",
+      "mention_ids": [
+        "ko_mention_holdout_005",
+        "ko_mention_holdout_024"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_166",
+      "mention_ids": [
+        "ko_mention_holdout_005",
+        "ko_mention_holdout_025"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_167",
+      "mention_ids": [
+        "ko_mention_holdout_005",
+        "ko_mention_holdout_026"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_168",
+      "mention_ids": [
+        "ko_mention_holdout_005",
+        "ko_mention_holdout_027"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_169",
+      "mention_ids": [
+        "ko_mention_holdout_005",
+        "ko_mention_holdout_028"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_170",
+      "mention_ids": [
+        "ko_mention_holdout_005",
+        "ko_mention_holdout_029"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_171",
+      "mention_ids": [
+        "ko_mention_holdout_005",
+        "ko_mention_holdout_030"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_172",
+      "mention_ids": [
+        "ko_mention_holdout_005",
+        "ko_mention_holdout_031"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_173",
+      "mention_ids": [
+        "ko_mention_holdout_005",
+        "ko_mention_holdout_032"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_174",
+      "mention_ids": [
+        "ko_mention_holdout_005",
+        "ko_mention_holdout_033"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_175",
+      "mention_ids": [
+        "ko_mention_holdout_005",
+        "ko_mention_holdout_034"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_176",
+      "mention_ids": [
+        "ko_mention_holdout_005",
+        "ko_mention_holdout_035"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_177",
+      "mention_ids": [
+        "ko_mention_holdout_005",
+        "ko_mention_holdout_036"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_178",
+      "mention_ids": [
+        "ko_mention_holdout_005",
+        "ko_mention_holdout_037"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_179",
+      "mention_ids": [
+        "ko_mention_holdout_005",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_180",
+      "mention_ids": [
+        "ko_mention_holdout_005",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_181",
+      "mention_ids": [
+        "ko_mention_holdout_006",
+        "ko_mention_holdout_007"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_182",
+      "mention_ids": [
+        "ko_mention_holdout_006",
+        "ko_mention_holdout_008"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_183",
+      "mention_ids": [
+        "ko_mention_holdout_006",
+        "ko_mention_holdout_009"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_184",
+      "mention_ids": [
+        "ko_mention_holdout_006",
+        "ko_mention_holdout_010"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_185",
+      "mention_ids": [
+        "ko_mention_holdout_006",
+        "ko_mention_holdout_011"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_186",
+      "mention_ids": [
+        "ko_mention_holdout_006",
+        "ko_mention_holdout_012"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_187",
+      "mention_ids": [
+        "ko_mention_holdout_006",
+        "ko_mention_holdout_013"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_188",
+      "mention_ids": [
+        "ko_mention_holdout_006",
+        "ko_mention_holdout_014"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_189",
+      "mention_ids": [
+        "ko_mention_holdout_006",
+        "ko_mention_holdout_015"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_190",
+      "mention_ids": [
+        "ko_mention_holdout_006",
+        "ko_mention_holdout_016"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_191",
+      "mention_ids": [
+        "ko_mention_holdout_006",
+        "ko_mention_holdout_017"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_192",
+      "mention_ids": [
+        "ko_mention_holdout_006",
+        "ko_mention_holdout_018"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_193",
+      "mention_ids": [
+        "ko_mention_holdout_006",
+        "ko_mention_holdout_019"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_194",
+      "mention_ids": [
+        "ko_mention_holdout_006",
+        "ko_mention_holdout_020"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_195",
+      "mention_ids": [
+        "ko_mention_holdout_006",
+        "ko_mention_holdout_021"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_196",
+      "mention_ids": [
+        "ko_mention_holdout_006",
+        "ko_mention_holdout_022"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_197",
+      "mention_ids": [
+        "ko_mention_holdout_006",
+        "ko_mention_holdout_023"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_198",
+      "mention_ids": [
+        "ko_mention_holdout_006",
+        "ko_mention_holdout_024"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_199",
+      "mention_ids": [
+        "ko_mention_holdout_006",
+        "ko_mention_holdout_025"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_200",
+      "mention_ids": [
+        "ko_mention_holdout_006",
+        "ko_mention_holdout_026"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_201",
+      "mention_ids": [
+        "ko_mention_holdout_006",
+        "ko_mention_holdout_027"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_202",
+      "mention_ids": [
+        "ko_mention_holdout_006",
+        "ko_mention_holdout_028"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_203",
+      "mention_ids": [
+        "ko_mention_holdout_006",
+        "ko_mention_holdout_029"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_204",
+      "mention_ids": [
+        "ko_mention_holdout_006",
+        "ko_mention_holdout_030"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_205",
+      "mention_ids": [
+        "ko_mention_holdout_006",
+        "ko_mention_holdout_031"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_206",
+      "mention_ids": [
+        "ko_mention_holdout_006",
+        "ko_mention_holdout_032"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_207",
+      "mention_ids": [
+        "ko_mention_holdout_006",
+        "ko_mention_holdout_033"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_208",
+      "mention_ids": [
+        "ko_mention_holdout_006",
+        "ko_mention_holdout_034"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_209",
+      "mention_ids": [
+        "ko_mention_holdout_006",
+        "ko_mention_holdout_035"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_210",
+      "mention_ids": [
+        "ko_mention_holdout_006",
+        "ko_mention_holdout_036"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_211",
+      "mention_ids": [
+        "ko_mention_holdout_006",
+        "ko_mention_holdout_037"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_212",
+      "mention_ids": [
+        "ko_mention_holdout_006",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_213",
+      "mention_ids": [
+        "ko_mention_holdout_006",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_214",
+      "mention_ids": [
+        "ko_mention_holdout_007",
+        "ko_mention_holdout_008"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_215",
+      "mention_ids": [
+        "ko_mention_holdout_007",
+        "ko_mention_holdout_009"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_216",
+      "mention_ids": [
+        "ko_mention_holdout_007",
+        "ko_mention_holdout_010"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_217",
+      "mention_ids": [
+        "ko_mention_holdout_007",
+        "ko_mention_holdout_011"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_218",
+      "mention_ids": [
+        "ko_mention_holdout_007",
+        "ko_mention_holdout_012"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_219",
+      "mention_ids": [
+        "ko_mention_holdout_007",
+        "ko_mention_holdout_013"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_220",
+      "mention_ids": [
+        "ko_mention_holdout_007",
+        "ko_mention_holdout_014"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_221",
+      "mention_ids": [
+        "ko_mention_holdout_007",
+        "ko_mention_holdout_015"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_222",
+      "mention_ids": [
+        "ko_mention_holdout_007",
+        "ko_mention_holdout_016"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_223",
+      "mention_ids": [
+        "ko_mention_holdout_007",
+        "ko_mention_holdout_017"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_224",
+      "mention_ids": [
+        "ko_mention_holdout_007",
+        "ko_mention_holdout_018"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_225",
+      "mention_ids": [
+        "ko_mention_holdout_007",
+        "ko_mention_holdout_019"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_226",
+      "mention_ids": [
+        "ko_mention_holdout_007",
+        "ko_mention_holdout_020"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_227",
+      "mention_ids": [
+        "ko_mention_holdout_007",
+        "ko_mention_holdout_021"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_228",
+      "mention_ids": [
+        "ko_mention_holdout_007",
+        "ko_mention_holdout_022"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_229",
+      "mention_ids": [
+        "ko_mention_holdout_007",
+        "ko_mention_holdout_023"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_230",
+      "mention_ids": [
+        "ko_mention_holdout_007",
+        "ko_mention_holdout_024"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_231",
+      "mention_ids": [
+        "ko_mention_holdout_007",
+        "ko_mention_holdout_025"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_232",
+      "mention_ids": [
+        "ko_mention_holdout_007",
+        "ko_mention_holdout_026"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_233",
+      "mention_ids": [
+        "ko_mention_holdout_007",
+        "ko_mention_holdout_027"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_234",
+      "mention_ids": [
+        "ko_mention_holdout_007",
+        "ko_mention_holdout_028"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_235",
+      "mention_ids": [
+        "ko_mention_holdout_007",
+        "ko_mention_holdout_029"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_236",
+      "mention_ids": [
+        "ko_mention_holdout_007",
+        "ko_mention_holdout_030"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_237",
+      "mention_ids": [
+        "ko_mention_holdout_007",
+        "ko_mention_holdout_031"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_238",
+      "mention_ids": [
+        "ko_mention_holdout_007",
+        "ko_mention_holdout_032"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_239",
+      "mention_ids": [
+        "ko_mention_holdout_007",
+        "ko_mention_holdout_033"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_240",
+      "mention_ids": [
+        "ko_mention_holdout_007",
+        "ko_mention_holdout_034"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_241",
+      "mention_ids": [
+        "ko_mention_holdout_007",
+        "ko_mention_holdout_035"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_242",
+      "mention_ids": [
+        "ko_mention_holdout_007",
+        "ko_mention_holdout_036"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_243",
+      "mention_ids": [
+        "ko_mention_holdout_007",
+        "ko_mention_holdout_037"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_244",
+      "mention_ids": [
+        "ko_mention_holdout_007",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_245",
+      "mention_ids": [
+        "ko_mention_holdout_007",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_246",
+      "mention_ids": [
+        "ko_mention_holdout_008",
+        "ko_mention_holdout_009"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_247",
+      "mention_ids": [
+        "ko_mention_holdout_008",
+        "ko_mention_holdout_010"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_248",
+      "mention_ids": [
+        "ko_mention_holdout_008",
+        "ko_mention_holdout_011"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_249",
+      "mention_ids": [
+        "ko_mention_holdout_008",
+        "ko_mention_holdout_012"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_250",
+      "mention_ids": [
+        "ko_mention_holdout_008",
+        "ko_mention_holdout_013"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_251",
+      "mention_ids": [
+        "ko_mention_holdout_008",
+        "ko_mention_holdout_014"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_252",
+      "mention_ids": [
+        "ko_mention_holdout_008",
+        "ko_mention_holdout_015"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_253",
+      "mention_ids": [
+        "ko_mention_holdout_008",
+        "ko_mention_holdout_016"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_254",
+      "mention_ids": [
+        "ko_mention_holdout_008",
+        "ko_mention_holdout_017"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_255",
+      "mention_ids": [
+        "ko_mention_holdout_008",
+        "ko_mention_holdout_018"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_256",
+      "mention_ids": [
+        "ko_mention_holdout_008",
+        "ko_mention_holdout_019"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_257",
+      "mention_ids": [
+        "ko_mention_holdout_008",
+        "ko_mention_holdout_020"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_258",
+      "mention_ids": [
+        "ko_mention_holdout_008",
+        "ko_mention_holdout_021"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_259",
+      "mention_ids": [
+        "ko_mention_holdout_008",
+        "ko_mention_holdout_022"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_260",
+      "mention_ids": [
+        "ko_mention_holdout_008",
+        "ko_mention_holdout_023"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_261",
+      "mention_ids": [
+        "ko_mention_holdout_008",
+        "ko_mention_holdout_024"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_262",
+      "mention_ids": [
+        "ko_mention_holdout_008",
+        "ko_mention_holdout_025"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_263",
+      "mention_ids": [
+        "ko_mention_holdout_008",
+        "ko_mention_holdout_026"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_264",
+      "mention_ids": [
+        "ko_mention_holdout_008",
+        "ko_mention_holdout_027"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_265",
+      "mention_ids": [
+        "ko_mention_holdout_008",
+        "ko_mention_holdout_028"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_266",
+      "mention_ids": [
+        "ko_mention_holdout_008",
+        "ko_mention_holdout_029"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_267",
+      "mention_ids": [
+        "ko_mention_holdout_008",
+        "ko_mention_holdout_030"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_268",
+      "mention_ids": [
+        "ko_mention_holdout_008",
+        "ko_mention_holdout_031"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_269",
+      "mention_ids": [
+        "ko_mention_holdout_008",
+        "ko_mention_holdout_032"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_270",
+      "mention_ids": [
+        "ko_mention_holdout_008",
+        "ko_mention_holdout_033"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_271",
+      "mention_ids": [
+        "ko_mention_holdout_008",
+        "ko_mention_holdout_034"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_272",
+      "mention_ids": [
+        "ko_mention_holdout_008",
+        "ko_mention_holdout_035"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_273",
+      "mention_ids": [
+        "ko_mention_holdout_008",
+        "ko_mention_holdout_036"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_274",
+      "mention_ids": [
+        "ko_mention_holdout_008",
+        "ko_mention_holdout_037"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_275",
+      "mention_ids": [
+        "ko_mention_holdout_008",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_276",
+      "mention_ids": [
+        "ko_mention_holdout_008",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_277",
+      "mention_ids": [
+        "ko_mention_holdout_009",
+        "ko_mention_holdout_010"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_278",
+      "mention_ids": [
+        "ko_mention_holdout_009",
+        "ko_mention_holdout_011"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_279",
+      "mention_ids": [
+        "ko_mention_holdout_009",
+        "ko_mention_holdout_012"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_280",
+      "mention_ids": [
+        "ko_mention_holdout_009",
+        "ko_mention_holdout_013"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_281",
+      "mention_ids": [
+        "ko_mention_holdout_009",
+        "ko_mention_holdout_014"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_282",
+      "mention_ids": [
+        "ko_mention_holdout_009",
+        "ko_mention_holdout_015"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_283",
+      "mention_ids": [
+        "ko_mention_holdout_009",
+        "ko_mention_holdout_016"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_284",
+      "mention_ids": [
+        "ko_mention_holdout_009",
+        "ko_mention_holdout_017"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_285",
+      "mention_ids": [
+        "ko_mention_holdout_009",
+        "ko_mention_holdout_018"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_286",
+      "mention_ids": [
+        "ko_mention_holdout_009",
+        "ko_mention_holdout_019"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_287",
+      "mention_ids": [
+        "ko_mention_holdout_009",
+        "ko_mention_holdout_020"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_288",
+      "mention_ids": [
+        "ko_mention_holdout_009",
+        "ko_mention_holdout_021"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_289",
+      "mention_ids": [
+        "ko_mention_holdout_009",
+        "ko_mention_holdout_022"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_290",
+      "mention_ids": [
+        "ko_mention_holdout_009",
+        "ko_mention_holdout_023"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_291",
+      "mention_ids": [
+        "ko_mention_holdout_009",
+        "ko_mention_holdout_024"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_292",
+      "mention_ids": [
+        "ko_mention_holdout_009",
+        "ko_mention_holdout_025"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_293",
+      "mention_ids": [
+        "ko_mention_holdout_009",
+        "ko_mention_holdout_026"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_294",
+      "mention_ids": [
+        "ko_mention_holdout_009",
+        "ko_mention_holdout_027"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_295",
+      "mention_ids": [
+        "ko_mention_holdout_009",
+        "ko_mention_holdout_028"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_296",
+      "mention_ids": [
+        "ko_mention_holdout_009",
+        "ko_mention_holdout_029"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_297",
+      "mention_ids": [
+        "ko_mention_holdout_009",
+        "ko_mention_holdout_030"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_298",
+      "mention_ids": [
+        "ko_mention_holdout_009",
+        "ko_mention_holdout_031"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_299",
+      "mention_ids": [
+        "ko_mention_holdout_009",
+        "ko_mention_holdout_032"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_300",
+      "mention_ids": [
+        "ko_mention_holdout_009",
+        "ko_mention_holdout_033"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_301",
+      "mention_ids": [
+        "ko_mention_holdout_009",
+        "ko_mention_holdout_034"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_302",
+      "mention_ids": [
+        "ko_mention_holdout_009",
+        "ko_mention_holdout_035"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_303",
+      "mention_ids": [
+        "ko_mention_holdout_009",
+        "ko_mention_holdout_036"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_304",
+      "mention_ids": [
+        "ko_mention_holdout_009",
+        "ko_mention_holdout_037"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_305",
+      "mention_ids": [
+        "ko_mention_holdout_009",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_306",
+      "mention_ids": [
+        "ko_mention_holdout_009",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_307",
+      "mention_ids": [
+        "ko_mention_holdout_010",
+        "ko_mention_holdout_011"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_308",
+      "mention_ids": [
+        "ko_mention_holdout_010",
+        "ko_mention_holdout_012"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_309",
+      "mention_ids": [
+        "ko_mention_holdout_010",
+        "ko_mention_holdout_013"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_310",
+      "mention_ids": [
+        "ko_mention_holdout_010",
+        "ko_mention_holdout_014"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_311",
+      "mention_ids": [
+        "ko_mention_holdout_010",
+        "ko_mention_holdout_015"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_312",
+      "mention_ids": [
+        "ko_mention_holdout_010",
+        "ko_mention_holdout_016"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_313",
+      "mention_ids": [
+        "ko_mention_holdout_010",
+        "ko_mention_holdout_017"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_314",
+      "mention_ids": [
+        "ko_mention_holdout_010",
+        "ko_mention_holdout_018"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_315",
+      "mention_ids": [
+        "ko_mention_holdout_010",
+        "ko_mention_holdout_019"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_316",
+      "mention_ids": [
+        "ko_mention_holdout_010",
+        "ko_mention_holdout_020"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_317",
+      "mention_ids": [
+        "ko_mention_holdout_010",
+        "ko_mention_holdout_021"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_318",
+      "mention_ids": [
+        "ko_mention_holdout_010",
+        "ko_mention_holdout_022"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_319",
+      "mention_ids": [
+        "ko_mention_holdout_010",
+        "ko_mention_holdout_023"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_320",
+      "mention_ids": [
+        "ko_mention_holdout_010",
+        "ko_mention_holdout_024"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_321",
+      "mention_ids": [
+        "ko_mention_holdout_010",
+        "ko_mention_holdout_025"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_322",
+      "mention_ids": [
+        "ko_mention_holdout_010",
+        "ko_mention_holdout_026"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_323",
+      "mention_ids": [
+        "ko_mention_holdout_010",
+        "ko_mention_holdout_027"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_324",
+      "mention_ids": [
+        "ko_mention_holdout_010",
+        "ko_mention_holdout_028"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_325",
+      "mention_ids": [
+        "ko_mention_holdout_010",
+        "ko_mention_holdout_029"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_326",
+      "mention_ids": [
+        "ko_mention_holdout_010",
+        "ko_mention_holdout_030"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_327",
+      "mention_ids": [
+        "ko_mention_holdout_010",
+        "ko_mention_holdout_031"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_328",
+      "mention_ids": [
+        "ko_mention_holdout_010",
+        "ko_mention_holdout_032"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_329",
+      "mention_ids": [
+        "ko_mention_holdout_010",
+        "ko_mention_holdout_033"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_330",
+      "mention_ids": [
+        "ko_mention_holdout_010",
+        "ko_mention_holdout_034"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_331",
+      "mention_ids": [
+        "ko_mention_holdout_010",
+        "ko_mention_holdout_035"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_332",
+      "mention_ids": [
+        "ko_mention_holdout_010",
+        "ko_mention_holdout_036"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_333",
+      "mention_ids": [
+        "ko_mention_holdout_010",
+        "ko_mention_holdout_037"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_334",
+      "mention_ids": [
+        "ko_mention_holdout_010",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_335",
+      "mention_ids": [
+        "ko_mention_holdout_010",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_336",
+      "mention_ids": [
+        "ko_mention_holdout_011",
+        "ko_mention_holdout_012"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_337",
+      "mention_ids": [
+        "ko_mention_holdout_011",
+        "ko_mention_holdout_013"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_338",
+      "mention_ids": [
+        "ko_mention_holdout_011",
+        "ko_mention_holdout_014"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_339",
+      "mention_ids": [
+        "ko_mention_holdout_011",
+        "ko_mention_holdout_015"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_340",
+      "mention_ids": [
+        "ko_mention_holdout_011",
+        "ko_mention_holdout_016"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_341",
+      "mention_ids": [
+        "ko_mention_holdout_011",
+        "ko_mention_holdout_017"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_342",
+      "mention_ids": [
+        "ko_mention_holdout_011",
+        "ko_mention_holdout_018"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_343",
+      "mention_ids": [
+        "ko_mention_holdout_011",
+        "ko_mention_holdout_019"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_344",
+      "mention_ids": [
+        "ko_mention_holdout_011",
+        "ko_mention_holdout_020"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_345",
+      "mention_ids": [
+        "ko_mention_holdout_011",
+        "ko_mention_holdout_021"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_346",
+      "mention_ids": [
+        "ko_mention_holdout_011",
+        "ko_mention_holdout_022"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_347",
+      "mention_ids": [
+        "ko_mention_holdout_011",
+        "ko_mention_holdout_023"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_348",
+      "mention_ids": [
+        "ko_mention_holdout_011",
+        "ko_mention_holdout_024"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_349",
+      "mention_ids": [
+        "ko_mention_holdout_011",
+        "ko_mention_holdout_025"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_350",
+      "mention_ids": [
+        "ko_mention_holdout_011",
+        "ko_mention_holdout_026"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_351",
+      "mention_ids": [
+        "ko_mention_holdout_011",
+        "ko_mention_holdout_027"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_352",
+      "mention_ids": [
+        "ko_mention_holdout_011",
+        "ko_mention_holdout_028"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_353",
+      "mention_ids": [
+        "ko_mention_holdout_011",
+        "ko_mention_holdout_029"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_354",
+      "mention_ids": [
+        "ko_mention_holdout_011",
+        "ko_mention_holdout_030"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_355",
+      "mention_ids": [
+        "ko_mention_holdout_011",
+        "ko_mention_holdout_031"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_356",
+      "mention_ids": [
+        "ko_mention_holdout_011",
+        "ko_mention_holdout_032"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_357",
+      "mention_ids": [
+        "ko_mention_holdout_011",
+        "ko_mention_holdout_033"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_358",
+      "mention_ids": [
+        "ko_mention_holdout_011",
+        "ko_mention_holdout_034"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_359",
+      "mention_ids": [
+        "ko_mention_holdout_011",
+        "ko_mention_holdout_035"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_360",
+      "mention_ids": [
+        "ko_mention_holdout_011",
+        "ko_mention_holdout_036"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_361",
+      "mention_ids": [
+        "ko_mention_holdout_011",
+        "ko_mention_holdout_037"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_362",
+      "mention_ids": [
+        "ko_mention_holdout_011",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_363",
+      "mention_ids": [
+        "ko_mention_holdout_011",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_364",
+      "mention_ids": [
+        "ko_mention_holdout_012",
+        "ko_mention_holdout_013"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_365",
+      "mention_ids": [
+        "ko_mention_holdout_012",
+        "ko_mention_holdout_014"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_366",
+      "mention_ids": [
+        "ko_mention_holdout_012",
+        "ko_mention_holdout_015"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_367",
+      "mention_ids": [
+        "ko_mention_holdout_012",
+        "ko_mention_holdout_016"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_368",
+      "mention_ids": [
+        "ko_mention_holdout_012",
+        "ko_mention_holdout_017"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_369",
+      "mention_ids": [
+        "ko_mention_holdout_012",
+        "ko_mention_holdout_018"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_370",
+      "mention_ids": [
+        "ko_mention_holdout_012",
+        "ko_mention_holdout_019"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_371",
+      "mention_ids": [
+        "ko_mention_holdout_012",
+        "ko_mention_holdout_020"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_372",
+      "mention_ids": [
+        "ko_mention_holdout_012",
+        "ko_mention_holdout_021"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_373",
+      "mention_ids": [
+        "ko_mention_holdout_012",
+        "ko_mention_holdout_022"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_374",
+      "mention_ids": [
+        "ko_mention_holdout_012",
+        "ko_mention_holdout_023"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_375",
+      "mention_ids": [
+        "ko_mention_holdout_012",
+        "ko_mention_holdout_024"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_376",
+      "mention_ids": [
+        "ko_mention_holdout_012",
+        "ko_mention_holdout_025"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_377",
+      "mention_ids": [
+        "ko_mention_holdout_012",
+        "ko_mention_holdout_026"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_378",
+      "mention_ids": [
+        "ko_mention_holdout_012",
+        "ko_mention_holdout_027"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_379",
+      "mention_ids": [
+        "ko_mention_holdout_012",
+        "ko_mention_holdout_028"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_380",
+      "mention_ids": [
+        "ko_mention_holdout_012",
+        "ko_mention_holdout_029"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_381",
+      "mention_ids": [
+        "ko_mention_holdout_012",
+        "ko_mention_holdout_030"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_382",
+      "mention_ids": [
+        "ko_mention_holdout_012",
+        "ko_mention_holdout_031"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_383",
+      "mention_ids": [
+        "ko_mention_holdout_012",
+        "ko_mention_holdout_032"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_384",
+      "mention_ids": [
+        "ko_mention_holdout_012",
+        "ko_mention_holdout_033"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_385",
+      "mention_ids": [
+        "ko_mention_holdout_012",
+        "ko_mention_holdout_034"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_386",
+      "mention_ids": [
+        "ko_mention_holdout_012",
+        "ko_mention_holdout_035"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_387",
+      "mention_ids": [
+        "ko_mention_holdout_012",
+        "ko_mention_holdout_036"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_388",
+      "mention_ids": [
+        "ko_mention_holdout_012",
+        "ko_mention_holdout_037"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_389",
+      "mention_ids": [
+        "ko_mention_holdout_012",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_390",
+      "mention_ids": [
+        "ko_mention_holdout_012",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_391",
+      "mention_ids": [
+        "ko_mention_holdout_013",
+        "ko_mention_holdout_014"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_392",
+      "mention_ids": [
+        "ko_mention_holdout_013",
+        "ko_mention_holdout_015"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_393",
+      "mention_ids": [
+        "ko_mention_holdout_013",
+        "ko_mention_holdout_016"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_394",
+      "mention_ids": [
+        "ko_mention_holdout_013",
+        "ko_mention_holdout_017"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_395",
+      "mention_ids": [
+        "ko_mention_holdout_013",
+        "ko_mention_holdout_018"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_396",
+      "mention_ids": [
+        "ko_mention_holdout_013",
+        "ko_mention_holdout_019"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_397",
+      "mention_ids": [
+        "ko_mention_holdout_013",
+        "ko_mention_holdout_020"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_398",
+      "mention_ids": [
+        "ko_mention_holdout_013",
+        "ko_mention_holdout_021"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_399",
+      "mention_ids": [
+        "ko_mention_holdout_013",
+        "ko_mention_holdout_022"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_400",
+      "mention_ids": [
+        "ko_mention_holdout_013",
+        "ko_mention_holdout_023"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_401",
+      "mention_ids": [
+        "ko_mention_holdout_013",
+        "ko_mention_holdout_024"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_402",
+      "mention_ids": [
+        "ko_mention_holdout_013",
+        "ko_mention_holdout_025"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_403",
+      "mention_ids": [
+        "ko_mention_holdout_013",
+        "ko_mention_holdout_026"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_404",
+      "mention_ids": [
+        "ko_mention_holdout_013",
+        "ko_mention_holdout_027"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_405",
+      "mention_ids": [
+        "ko_mention_holdout_013",
+        "ko_mention_holdout_028"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_406",
+      "mention_ids": [
+        "ko_mention_holdout_013",
+        "ko_mention_holdout_029"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_407",
+      "mention_ids": [
+        "ko_mention_holdout_013",
+        "ko_mention_holdout_030"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_408",
+      "mention_ids": [
+        "ko_mention_holdout_013",
+        "ko_mention_holdout_031"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_409",
+      "mention_ids": [
+        "ko_mention_holdout_013",
+        "ko_mention_holdout_032"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_410",
+      "mention_ids": [
+        "ko_mention_holdout_013",
+        "ko_mention_holdout_033"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_411",
+      "mention_ids": [
+        "ko_mention_holdout_013",
+        "ko_mention_holdout_034"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_412",
+      "mention_ids": [
+        "ko_mention_holdout_013",
+        "ko_mention_holdout_035"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_413",
+      "mention_ids": [
+        "ko_mention_holdout_013",
+        "ko_mention_holdout_036"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_414",
+      "mention_ids": [
+        "ko_mention_holdout_013",
+        "ko_mention_holdout_037"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_415",
+      "mention_ids": [
+        "ko_mention_holdout_013",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_416",
+      "mention_ids": [
+        "ko_mention_holdout_013",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_417",
+      "mention_ids": [
+        "ko_mention_holdout_014",
+        "ko_mention_holdout_015"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_418",
+      "mention_ids": [
+        "ko_mention_holdout_014",
+        "ko_mention_holdout_016"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_419",
+      "mention_ids": [
+        "ko_mention_holdout_014",
+        "ko_mention_holdout_017"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_420",
+      "mention_ids": [
+        "ko_mention_holdout_014",
+        "ko_mention_holdout_018"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_421",
+      "mention_ids": [
+        "ko_mention_holdout_014",
+        "ko_mention_holdout_019"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_422",
+      "mention_ids": [
+        "ko_mention_holdout_014",
+        "ko_mention_holdout_020"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_423",
+      "mention_ids": [
+        "ko_mention_holdout_014",
+        "ko_mention_holdout_021"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_424",
+      "mention_ids": [
+        "ko_mention_holdout_014",
+        "ko_mention_holdout_022"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_425",
+      "mention_ids": [
+        "ko_mention_holdout_014",
+        "ko_mention_holdout_023"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_426",
+      "mention_ids": [
+        "ko_mention_holdout_014",
+        "ko_mention_holdout_024"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_427",
+      "mention_ids": [
+        "ko_mention_holdout_014",
+        "ko_mention_holdout_025"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_428",
+      "mention_ids": [
+        "ko_mention_holdout_014",
+        "ko_mention_holdout_026"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_429",
+      "mention_ids": [
+        "ko_mention_holdout_014",
+        "ko_mention_holdout_027"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_430",
+      "mention_ids": [
+        "ko_mention_holdout_014",
+        "ko_mention_holdout_028"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_431",
+      "mention_ids": [
+        "ko_mention_holdout_014",
+        "ko_mention_holdout_029"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_432",
+      "mention_ids": [
+        "ko_mention_holdout_014",
+        "ko_mention_holdout_030"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_433",
+      "mention_ids": [
+        "ko_mention_holdout_014",
+        "ko_mention_holdout_031"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_434",
+      "mention_ids": [
+        "ko_mention_holdout_014",
+        "ko_mention_holdout_032"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_435",
+      "mention_ids": [
+        "ko_mention_holdout_014",
+        "ko_mention_holdout_033"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_436",
+      "mention_ids": [
+        "ko_mention_holdout_014",
+        "ko_mention_holdout_034"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_437",
+      "mention_ids": [
+        "ko_mention_holdout_014",
+        "ko_mention_holdout_035"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_438",
+      "mention_ids": [
+        "ko_mention_holdout_014",
+        "ko_mention_holdout_036"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_439",
+      "mention_ids": [
+        "ko_mention_holdout_014",
+        "ko_mention_holdout_037"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_440",
+      "mention_ids": [
+        "ko_mention_holdout_014",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_441",
+      "mention_ids": [
+        "ko_mention_holdout_014",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_442",
+      "mention_ids": [
+        "ko_mention_holdout_015",
+        "ko_mention_holdout_016"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_443",
+      "mention_ids": [
+        "ko_mention_holdout_015",
+        "ko_mention_holdout_017"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_444",
+      "mention_ids": [
+        "ko_mention_holdout_015",
+        "ko_mention_holdout_018"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_445",
+      "mention_ids": [
+        "ko_mention_holdout_015",
+        "ko_mention_holdout_019"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_446",
+      "mention_ids": [
+        "ko_mention_holdout_015",
+        "ko_mention_holdout_020"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_447",
+      "mention_ids": [
+        "ko_mention_holdout_015",
+        "ko_mention_holdout_021"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_448",
+      "mention_ids": [
+        "ko_mention_holdout_015",
+        "ko_mention_holdout_022"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_449",
+      "mention_ids": [
+        "ko_mention_holdout_015",
+        "ko_mention_holdout_023"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_450",
+      "mention_ids": [
+        "ko_mention_holdout_015",
+        "ko_mention_holdout_024"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_451",
+      "mention_ids": [
+        "ko_mention_holdout_015",
+        "ko_mention_holdout_025"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_452",
+      "mention_ids": [
+        "ko_mention_holdout_015",
+        "ko_mention_holdout_026"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_453",
+      "mention_ids": [
+        "ko_mention_holdout_015",
+        "ko_mention_holdout_027"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_454",
+      "mention_ids": [
+        "ko_mention_holdout_015",
+        "ko_mention_holdout_028"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_455",
+      "mention_ids": [
+        "ko_mention_holdout_015",
+        "ko_mention_holdout_029"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_456",
+      "mention_ids": [
+        "ko_mention_holdout_015",
+        "ko_mention_holdout_030"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_457",
+      "mention_ids": [
+        "ko_mention_holdout_015",
+        "ko_mention_holdout_031"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_458",
+      "mention_ids": [
+        "ko_mention_holdout_015",
+        "ko_mention_holdout_032"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_459",
+      "mention_ids": [
+        "ko_mention_holdout_015",
+        "ko_mention_holdout_033"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_460",
+      "mention_ids": [
+        "ko_mention_holdout_015",
+        "ko_mention_holdout_034"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_461",
+      "mention_ids": [
+        "ko_mention_holdout_015",
+        "ko_mention_holdout_035"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_462",
+      "mention_ids": [
+        "ko_mention_holdout_015",
+        "ko_mention_holdout_036"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_463",
+      "mention_ids": [
+        "ko_mention_holdout_015",
+        "ko_mention_holdout_037"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_464",
+      "mention_ids": [
+        "ko_mention_holdout_015",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_465",
+      "mention_ids": [
+        "ko_mention_holdout_015",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_466",
+      "mention_ids": [
+        "ko_mention_holdout_016",
+        "ko_mention_holdout_017"
+      ],
+      "same_type": true,
+      "selected": true,
+      "reasons": [
+        "name_token_containment"
+      ]
+    },
+    {
+      "pair_key": "ko_pair_467",
+      "mention_ids": [
+        "ko_mention_holdout_016",
+        "ko_mention_holdout_018"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_468",
+      "mention_ids": [
+        "ko_mention_holdout_016",
+        "ko_mention_holdout_019"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_469",
+      "mention_ids": [
+        "ko_mention_holdout_016",
+        "ko_mention_holdout_020"
+      ],
+      "same_type": true,
+      "selected": true,
+      "reasons": [
+        "name_token_containment"
+      ]
+    },
+    {
+      "pair_key": "ko_pair_470",
+      "mention_ids": [
+        "ko_mention_holdout_016",
+        "ko_mention_holdout_021"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_471",
+      "mention_ids": [
+        "ko_mention_holdout_016",
+        "ko_mention_holdout_022"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_472",
+      "mention_ids": [
+        "ko_mention_holdout_016",
+        "ko_mention_holdout_023"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_473",
+      "mention_ids": [
+        "ko_mention_holdout_016",
+        "ko_mention_holdout_024"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_474",
+      "mention_ids": [
+        "ko_mention_holdout_016",
+        "ko_mention_holdout_025"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_475",
+      "mention_ids": [
+        "ko_mention_holdout_016",
+        "ko_mention_holdout_026"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_476",
+      "mention_ids": [
+        "ko_mention_holdout_016",
+        "ko_mention_holdout_027"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_477",
+      "mention_ids": [
+        "ko_mention_holdout_016",
+        "ko_mention_holdout_028"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_478",
+      "mention_ids": [
+        "ko_mention_holdout_016",
+        "ko_mention_holdout_029"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_479",
+      "mention_ids": [
+        "ko_mention_holdout_016",
+        "ko_mention_holdout_030"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_480",
+      "mention_ids": [
+        "ko_mention_holdout_016",
+        "ko_mention_holdout_031"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_481",
+      "mention_ids": [
+        "ko_mention_holdout_016",
+        "ko_mention_holdout_032"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_482",
+      "mention_ids": [
+        "ko_mention_holdout_016",
+        "ko_mention_holdout_033"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_483",
+      "mention_ids": [
+        "ko_mention_holdout_016",
+        "ko_mention_holdout_034"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_484",
+      "mention_ids": [
+        "ko_mention_holdout_016",
+        "ko_mention_holdout_035"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_485",
+      "mention_ids": [
+        "ko_mention_holdout_016",
+        "ko_mention_holdout_036"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_486",
+      "mention_ids": [
+        "ko_mention_holdout_016",
+        "ko_mention_holdout_037"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_487",
+      "mention_ids": [
+        "ko_mention_holdout_016",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_488",
+      "mention_ids": [
+        "ko_mention_holdout_016",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_489",
+      "mention_ids": [
+        "ko_mention_holdout_017",
+        "ko_mention_holdout_018"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_490",
+      "mention_ids": [
+        "ko_mention_holdout_017",
+        "ko_mention_holdout_019"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_491",
+      "mention_ids": [
+        "ko_mention_holdout_017",
+        "ko_mention_holdout_020"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_492",
+      "mention_ids": [
+        "ko_mention_holdout_017",
+        "ko_mention_holdout_021"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_493",
+      "mention_ids": [
+        "ko_mention_holdout_017",
+        "ko_mention_holdout_022"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_494",
+      "mention_ids": [
+        "ko_mention_holdout_017",
+        "ko_mention_holdout_023"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_495",
+      "mention_ids": [
+        "ko_mention_holdout_017",
+        "ko_mention_holdout_024"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_496",
+      "mention_ids": [
+        "ko_mention_holdout_017",
+        "ko_mention_holdout_025"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_497",
+      "mention_ids": [
+        "ko_mention_holdout_017",
+        "ko_mention_holdout_026"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_498",
+      "mention_ids": [
+        "ko_mention_holdout_017",
+        "ko_mention_holdout_027"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_499",
+      "mention_ids": [
+        "ko_mention_holdout_017",
+        "ko_mention_holdout_028"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_500",
+      "mention_ids": [
+        "ko_mention_holdout_017",
+        "ko_mention_holdout_029"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_501",
+      "mention_ids": [
+        "ko_mention_holdout_017",
+        "ko_mention_holdout_030"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_502",
+      "mention_ids": [
+        "ko_mention_holdout_017",
+        "ko_mention_holdout_031"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_503",
+      "mention_ids": [
+        "ko_mention_holdout_017",
+        "ko_mention_holdout_032"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_504",
+      "mention_ids": [
+        "ko_mention_holdout_017",
+        "ko_mention_holdout_033"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_505",
+      "mention_ids": [
+        "ko_mention_holdout_017",
+        "ko_mention_holdout_034"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_506",
+      "mention_ids": [
+        "ko_mention_holdout_017",
+        "ko_mention_holdout_035"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_507",
+      "mention_ids": [
+        "ko_mention_holdout_017",
+        "ko_mention_holdout_036"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_508",
+      "mention_ids": [
+        "ko_mention_holdout_017",
+        "ko_mention_holdout_037"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_509",
+      "mention_ids": [
+        "ko_mention_holdout_017",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_510",
+      "mention_ids": [
+        "ko_mention_holdout_017",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_511",
+      "mention_ids": [
+        "ko_mention_holdout_018",
+        "ko_mention_holdout_019"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_512",
+      "mention_ids": [
+        "ko_mention_holdout_018",
+        "ko_mention_holdout_020"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_513",
+      "mention_ids": [
+        "ko_mention_holdout_018",
+        "ko_mention_holdout_021"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_514",
+      "mention_ids": [
+        "ko_mention_holdout_018",
+        "ko_mention_holdout_022"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_515",
+      "mention_ids": [
+        "ko_mention_holdout_018",
+        "ko_mention_holdout_023"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_516",
+      "mention_ids": [
+        "ko_mention_holdout_018",
+        "ko_mention_holdout_024"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_517",
+      "mention_ids": [
+        "ko_mention_holdout_018",
+        "ko_mention_holdout_025"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_518",
+      "mention_ids": [
+        "ko_mention_holdout_018",
+        "ko_mention_holdout_026"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_519",
+      "mention_ids": [
+        "ko_mention_holdout_018",
+        "ko_mention_holdout_027"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_520",
+      "mention_ids": [
+        "ko_mention_holdout_018",
+        "ko_mention_holdout_028"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_521",
+      "mention_ids": [
+        "ko_mention_holdout_018",
+        "ko_mention_holdout_029"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_522",
+      "mention_ids": [
+        "ko_mention_holdout_018",
+        "ko_mention_holdout_030"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_523",
+      "mention_ids": [
+        "ko_mention_holdout_018",
+        "ko_mention_holdout_031"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_524",
+      "mention_ids": [
+        "ko_mention_holdout_018",
+        "ko_mention_holdout_032"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_525",
+      "mention_ids": [
+        "ko_mention_holdout_018",
+        "ko_mention_holdout_033"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_526",
+      "mention_ids": [
+        "ko_mention_holdout_018",
+        "ko_mention_holdout_034"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_527",
+      "mention_ids": [
+        "ko_mention_holdout_018",
+        "ko_mention_holdout_035"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_528",
+      "mention_ids": [
+        "ko_mention_holdout_018",
+        "ko_mention_holdout_036"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_529",
+      "mention_ids": [
+        "ko_mention_holdout_018",
+        "ko_mention_holdout_037"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_530",
+      "mention_ids": [
+        "ko_mention_holdout_018",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_531",
+      "mention_ids": [
+        "ko_mention_holdout_018",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_532",
+      "mention_ids": [
+        "ko_mention_holdout_019",
+        "ko_mention_holdout_020"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_533",
+      "mention_ids": [
+        "ko_mention_holdout_019",
+        "ko_mention_holdout_021"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_534",
+      "mention_ids": [
+        "ko_mention_holdout_019",
+        "ko_mention_holdout_022"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_535",
+      "mention_ids": [
+        "ko_mention_holdout_019",
+        "ko_mention_holdout_023"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_536",
+      "mention_ids": [
+        "ko_mention_holdout_019",
+        "ko_mention_holdout_024"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_537",
+      "mention_ids": [
+        "ko_mention_holdout_019",
+        "ko_mention_holdout_025"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_538",
+      "mention_ids": [
+        "ko_mention_holdout_019",
+        "ko_mention_holdout_026"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_539",
+      "mention_ids": [
+        "ko_mention_holdout_019",
+        "ko_mention_holdout_027"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_540",
+      "mention_ids": [
+        "ko_mention_holdout_019",
+        "ko_mention_holdout_028"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_541",
+      "mention_ids": [
+        "ko_mention_holdout_019",
+        "ko_mention_holdout_029"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_542",
+      "mention_ids": [
+        "ko_mention_holdout_019",
+        "ko_mention_holdout_030"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_543",
+      "mention_ids": [
+        "ko_mention_holdout_019",
+        "ko_mention_holdout_031"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_544",
+      "mention_ids": [
+        "ko_mention_holdout_019",
+        "ko_mention_holdout_032"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_545",
+      "mention_ids": [
+        "ko_mention_holdout_019",
+        "ko_mention_holdout_033"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_546",
+      "mention_ids": [
+        "ko_mention_holdout_019",
+        "ko_mention_holdout_034"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_547",
+      "mention_ids": [
+        "ko_mention_holdout_019",
+        "ko_mention_holdout_035"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_548",
+      "mention_ids": [
+        "ko_mention_holdout_019",
+        "ko_mention_holdout_036"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_549",
+      "mention_ids": [
+        "ko_mention_holdout_019",
+        "ko_mention_holdout_037"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_550",
+      "mention_ids": [
+        "ko_mention_holdout_019",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_551",
+      "mention_ids": [
+        "ko_mention_holdout_019",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_552",
+      "mention_ids": [
+        "ko_mention_holdout_020",
+        "ko_mention_holdout_021"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_553",
+      "mention_ids": [
+        "ko_mention_holdout_020",
+        "ko_mention_holdout_022"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_554",
+      "mention_ids": [
+        "ko_mention_holdout_020",
+        "ko_mention_holdout_023"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_555",
+      "mention_ids": [
+        "ko_mention_holdout_020",
+        "ko_mention_holdout_024"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_556",
+      "mention_ids": [
+        "ko_mention_holdout_020",
+        "ko_mention_holdout_025"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_557",
+      "mention_ids": [
+        "ko_mention_holdout_020",
+        "ko_mention_holdout_026"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_558",
+      "mention_ids": [
+        "ko_mention_holdout_020",
+        "ko_mention_holdout_027"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_559",
+      "mention_ids": [
+        "ko_mention_holdout_020",
+        "ko_mention_holdout_028"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_560",
+      "mention_ids": [
+        "ko_mention_holdout_020",
+        "ko_mention_holdout_029"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_561",
+      "mention_ids": [
+        "ko_mention_holdout_020",
+        "ko_mention_holdout_030"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_562",
+      "mention_ids": [
+        "ko_mention_holdout_020",
+        "ko_mention_holdout_031"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_563",
+      "mention_ids": [
+        "ko_mention_holdout_020",
+        "ko_mention_holdout_032"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_564",
+      "mention_ids": [
+        "ko_mention_holdout_020",
+        "ko_mention_holdout_033"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_565",
+      "mention_ids": [
+        "ko_mention_holdout_020",
+        "ko_mention_holdout_034"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_566",
+      "mention_ids": [
+        "ko_mention_holdout_020",
+        "ko_mention_holdout_035"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_567",
+      "mention_ids": [
+        "ko_mention_holdout_020",
+        "ko_mention_holdout_036"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_568",
+      "mention_ids": [
+        "ko_mention_holdout_020",
+        "ko_mention_holdout_037"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_569",
+      "mention_ids": [
+        "ko_mention_holdout_020",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_570",
+      "mention_ids": [
+        "ko_mention_holdout_020",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_571",
+      "mention_ids": [
+        "ko_mention_holdout_021",
+        "ko_mention_holdout_022"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_572",
+      "mention_ids": [
+        "ko_mention_holdout_021",
+        "ko_mention_holdout_023"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_573",
+      "mention_ids": [
+        "ko_mention_holdout_021",
+        "ko_mention_holdout_024"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_574",
+      "mention_ids": [
+        "ko_mention_holdout_021",
+        "ko_mention_holdout_025"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_575",
+      "mention_ids": [
+        "ko_mention_holdout_021",
+        "ko_mention_holdout_026"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_576",
+      "mention_ids": [
+        "ko_mention_holdout_021",
+        "ko_mention_holdout_027"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_577",
+      "mention_ids": [
+        "ko_mention_holdout_021",
+        "ko_mention_holdout_028"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_578",
+      "mention_ids": [
+        "ko_mention_holdout_021",
+        "ko_mention_holdout_029"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_579",
+      "mention_ids": [
+        "ko_mention_holdout_021",
+        "ko_mention_holdout_030"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_580",
+      "mention_ids": [
+        "ko_mention_holdout_021",
+        "ko_mention_holdout_031"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_581",
+      "mention_ids": [
+        "ko_mention_holdout_021",
+        "ko_mention_holdout_032"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_582",
+      "mention_ids": [
+        "ko_mention_holdout_021",
+        "ko_mention_holdout_033"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_583",
+      "mention_ids": [
+        "ko_mention_holdout_021",
+        "ko_mention_holdout_034"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_584",
+      "mention_ids": [
+        "ko_mention_holdout_021",
+        "ko_mention_holdout_035"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_585",
+      "mention_ids": [
+        "ko_mention_holdout_021",
+        "ko_mention_holdout_036"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_586",
+      "mention_ids": [
+        "ko_mention_holdout_021",
+        "ko_mention_holdout_037"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_587",
+      "mention_ids": [
+        "ko_mention_holdout_021",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_588",
+      "mention_ids": [
+        "ko_mention_holdout_021",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_589",
+      "mention_ids": [
+        "ko_mention_holdout_022",
+        "ko_mention_holdout_023"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_590",
+      "mention_ids": [
+        "ko_mention_holdout_022",
+        "ko_mention_holdout_024"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_591",
+      "mention_ids": [
+        "ko_mention_holdout_022",
+        "ko_mention_holdout_025"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_592",
+      "mention_ids": [
+        "ko_mention_holdout_022",
+        "ko_mention_holdout_026"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_593",
+      "mention_ids": [
+        "ko_mention_holdout_022",
+        "ko_mention_holdout_027"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_594",
+      "mention_ids": [
+        "ko_mention_holdout_022",
+        "ko_mention_holdout_028"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_595",
+      "mention_ids": [
+        "ko_mention_holdout_022",
+        "ko_mention_holdout_029"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_596",
+      "mention_ids": [
+        "ko_mention_holdout_022",
+        "ko_mention_holdout_030"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_597",
+      "mention_ids": [
+        "ko_mention_holdout_022",
+        "ko_mention_holdout_031"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_598",
+      "mention_ids": [
+        "ko_mention_holdout_022",
+        "ko_mention_holdout_032"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_599",
+      "mention_ids": [
+        "ko_mention_holdout_022",
+        "ko_mention_holdout_033"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_600",
+      "mention_ids": [
+        "ko_mention_holdout_022",
+        "ko_mention_holdout_034"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_601",
+      "mention_ids": [
+        "ko_mention_holdout_022",
+        "ko_mention_holdout_035"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_602",
+      "mention_ids": [
+        "ko_mention_holdout_022",
+        "ko_mention_holdout_036"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_603",
+      "mention_ids": [
+        "ko_mention_holdout_022",
+        "ko_mention_holdout_037"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_604",
+      "mention_ids": [
+        "ko_mention_holdout_022",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_605",
+      "mention_ids": [
+        "ko_mention_holdout_022",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_606",
+      "mention_ids": [
+        "ko_mention_holdout_023",
+        "ko_mention_holdout_024"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_607",
+      "mention_ids": [
+        "ko_mention_holdout_023",
+        "ko_mention_holdout_025"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_608",
+      "mention_ids": [
+        "ko_mention_holdout_023",
+        "ko_mention_holdout_026"
+      ],
+      "same_type": true,
+      "selected": true,
+      "reasons": [
+        "name_token_containment"
+      ]
+    },
+    {
+      "pair_key": "ko_pair_609",
+      "mention_ids": [
+        "ko_mention_holdout_023",
+        "ko_mention_holdout_027"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_610",
+      "mention_ids": [
+        "ko_mention_holdout_023",
+        "ko_mention_holdout_028"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_611",
+      "mention_ids": [
+        "ko_mention_holdout_023",
+        "ko_mention_holdout_029"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_612",
+      "mention_ids": [
+        "ko_mention_holdout_023",
+        "ko_mention_holdout_030"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_613",
+      "mention_ids": [
+        "ko_mention_holdout_023",
+        "ko_mention_holdout_031"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_614",
+      "mention_ids": [
+        "ko_mention_holdout_023",
+        "ko_mention_holdout_032"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_615",
+      "mention_ids": [
+        "ko_mention_holdout_023",
+        "ko_mention_holdout_033"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_616",
+      "mention_ids": [
+        "ko_mention_holdout_023",
+        "ko_mention_holdout_034"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_617",
+      "mention_ids": [
+        "ko_mention_holdout_023",
+        "ko_mention_holdout_035"
+      ],
+      "same_type": true,
+      "selected": true,
+      "reasons": [
+        "name_token_containment"
+      ]
+    },
+    {
+      "pair_key": "ko_pair_618",
+      "mention_ids": [
+        "ko_mention_holdout_023",
+        "ko_mention_holdout_036"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_619",
+      "mention_ids": [
+        "ko_mention_holdout_023",
+        "ko_mention_holdout_037"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_620",
+      "mention_ids": [
+        "ko_mention_holdout_023",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_621",
+      "mention_ids": [
+        "ko_mention_holdout_023",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_622",
+      "mention_ids": [
+        "ko_mention_holdout_024",
+        "ko_mention_holdout_025"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_623",
+      "mention_ids": [
+        "ko_mention_holdout_024",
+        "ko_mention_holdout_026"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_624",
+      "mention_ids": [
+        "ko_mention_holdout_024",
+        "ko_mention_holdout_027"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_625",
+      "mention_ids": [
+        "ko_mention_holdout_024",
+        "ko_mention_holdout_028"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_626",
+      "mention_ids": [
+        "ko_mention_holdout_024",
+        "ko_mention_holdout_029"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_627",
+      "mention_ids": [
+        "ko_mention_holdout_024",
+        "ko_mention_holdout_030"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_628",
+      "mention_ids": [
+        "ko_mention_holdout_024",
+        "ko_mention_holdout_031"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_629",
+      "mention_ids": [
+        "ko_mention_holdout_024",
+        "ko_mention_holdout_032"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_630",
+      "mention_ids": [
+        "ko_mention_holdout_024",
+        "ko_mention_holdout_033"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_631",
+      "mention_ids": [
+        "ko_mention_holdout_024",
+        "ko_mention_holdout_034"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_632",
+      "mention_ids": [
+        "ko_mention_holdout_024",
+        "ko_mention_holdout_035"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_633",
+      "mention_ids": [
+        "ko_mention_holdout_024",
+        "ko_mention_holdout_036"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_634",
+      "mention_ids": [
+        "ko_mention_holdout_024",
+        "ko_mention_holdout_037"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_635",
+      "mention_ids": [
+        "ko_mention_holdout_024",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_636",
+      "mention_ids": [
+        "ko_mention_holdout_024",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_637",
+      "mention_ids": [
+        "ko_mention_holdout_025",
+        "ko_mention_holdout_026"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_638",
+      "mention_ids": [
+        "ko_mention_holdout_025",
+        "ko_mention_holdout_027"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_639",
+      "mention_ids": [
+        "ko_mention_holdout_025",
+        "ko_mention_holdout_028"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_640",
+      "mention_ids": [
+        "ko_mention_holdout_025",
+        "ko_mention_holdout_029"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_641",
+      "mention_ids": [
+        "ko_mention_holdout_025",
+        "ko_mention_holdout_030"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_642",
+      "mention_ids": [
+        "ko_mention_holdout_025",
+        "ko_mention_holdout_031"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_643",
+      "mention_ids": [
+        "ko_mention_holdout_025",
+        "ko_mention_holdout_032"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_644",
+      "mention_ids": [
+        "ko_mention_holdout_025",
+        "ko_mention_holdout_033"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_645",
+      "mention_ids": [
+        "ko_mention_holdout_025",
+        "ko_mention_holdout_034"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_646",
+      "mention_ids": [
+        "ko_mention_holdout_025",
+        "ko_mention_holdout_035"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_647",
+      "mention_ids": [
+        "ko_mention_holdout_025",
+        "ko_mention_holdout_036"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_648",
+      "mention_ids": [
+        "ko_mention_holdout_025",
+        "ko_mention_holdout_037"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_649",
+      "mention_ids": [
+        "ko_mention_holdout_025",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_650",
+      "mention_ids": [
+        "ko_mention_holdout_025",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_651",
+      "mention_ids": [
+        "ko_mention_holdout_026",
+        "ko_mention_holdout_027"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_652",
+      "mention_ids": [
+        "ko_mention_holdout_026",
+        "ko_mention_holdout_028"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_653",
+      "mention_ids": [
+        "ko_mention_holdout_026",
+        "ko_mention_holdout_029"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_654",
+      "mention_ids": [
+        "ko_mention_holdout_026",
+        "ko_mention_holdout_030"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_655",
+      "mention_ids": [
+        "ko_mention_holdout_026",
+        "ko_mention_holdout_031"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_656",
+      "mention_ids": [
+        "ko_mention_holdout_026",
+        "ko_mention_holdout_032"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_657",
+      "mention_ids": [
+        "ko_mention_holdout_026",
+        "ko_mention_holdout_033"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_658",
+      "mention_ids": [
+        "ko_mention_holdout_026",
+        "ko_mention_holdout_034"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_659",
+      "mention_ids": [
+        "ko_mention_holdout_026",
+        "ko_mention_holdout_035"
+      ],
+      "same_type": true,
+      "selected": true,
+      "reasons": [
+        "exact_normalized_name"
+      ]
+    },
+    {
+      "pair_key": "ko_pair_660",
+      "mention_ids": [
+        "ko_mention_holdout_026",
+        "ko_mention_holdout_036"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_661",
+      "mention_ids": [
+        "ko_mention_holdout_026",
+        "ko_mention_holdout_037"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_662",
+      "mention_ids": [
+        "ko_mention_holdout_026",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_663",
+      "mention_ids": [
+        "ko_mention_holdout_026",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_664",
+      "mention_ids": [
+        "ko_mention_holdout_027",
+        "ko_mention_holdout_028"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_665",
+      "mention_ids": [
+        "ko_mention_holdout_027",
+        "ko_mention_holdout_029"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_666",
+      "mention_ids": [
+        "ko_mention_holdout_027",
+        "ko_mention_holdout_030"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_667",
+      "mention_ids": [
+        "ko_mention_holdout_027",
+        "ko_mention_holdout_031"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_668",
+      "mention_ids": [
+        "ko_mention_holdout_027",
+        "ko_mention_holdout_032"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_669",
+      "mention_ids": [
+        "ko_mention_holdout_027",
+        "ko_mention_holdout_033"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_670",
+      "mention_ids": [
+        "ko_mention_holdout_027",
+        "ko_mention_holdout_034"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_671",
+      "mention_ids": [
+        "ko_mention_holdout_027",
+        "ko_mention_holdout_035"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_672",
+      "mention_ids": [
+        "ko_mention_holdout_027",
+        "ko_mention_holdout_036"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_673",
+      "mention_ids": [
+        "ko_mention_holdout_027",
+        "ko_mention_holdout_037"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_674",
+      "mention_ids": [
+        "ko_mention_holdout_027",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_675",
+      "mention_ids": [
+        "ko_mention_holdout_027",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_676",
+      "mention_ids": [
+        "ko_mention_holdout_028",
+        "ko_mention_holdout_029"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_677",
+      "mention_ids": [
+        "ko_mention_holdout_028",
+        "ko_mention_holdout_030"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_678",
+      "mention_ids": [
+        "ko_mention_holdout_028",
+        "ko_mention_holdout_031"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_679",
+      "mention_ids": [
+        "ko_mention_holdout_028",
+        "ko_mention_holdout_032"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_680",
+      "mention_ids": [
+        "ko_mention_holdout_028",
+        "ko_mention_holdout_033"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_681",
+      "mention_ids": [
+        "ko_mention_holdout_028",
+        "ko_mention_holdout_034"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_682",
+      "mention_ids": [
+        "ko_mention_holdout_028",
+        "ko_mention_holdout_035"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_683",
+      "mention_ids": [
+        "ko_mention_holdout_028",
+        "ko_mention_holdout_036"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_684",
+      "mention_ids": [
+        "ko_mention_holdout_028",
+        "ko_mention_holdout_037"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_685",
+      "mention_ids": [
+        "ko_mention_holdout_028",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_686",
+      "mention_ids": [
+        "ko_mention_holdout_028",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_687",
+      "mention_ids": [
+        "ko_mention_holdout_029",
+        "ko_mention_holdout_030"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_688",
+      "mention_ids": [
+        "ko_mention_holdout_029",
+        "ko_mention_holdout_031"
+      ],
+      "same_type": true,
+      "selected": true,
+      "reasons": [
+        "name_token_containment"
+      ]
+    },
+    {
+      "pair_key": "ko_pair_689",
+      "mention_ids": [
+        "ko_mention_holdout_029",
+        "ko_mention_holdout_032"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_690",
+      "mention_ids": [
+        "ko_mention_holdout_029",
+        "ko_mention_holdout_033"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_691",
+      "mention_ids": [
+        "ko_mention_holdout_029",
+        "ko_mention_holdout_034"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_692",
+      "mention_ids": [
+        "ko_mention_holdout_029",
+        "ko_mention_holdout_035"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_693",
+      "mention_ids": [
+        "ko_mention_holdout_029",
+        "ko_mention_holdout_036"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_694",
+      "mention_ids": [
+        "ko_mention_holdout_029",
+        "ko_mention_holdout_037"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_695",
+      "mention_ids": [
+        "ko_mention_holdout_029",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_696",
+      "mention_ids": [
+        "ko_mention_holdout_029",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_697",
+      "mention_ids": [
+        "ko_mention_holdout_030",
+        "ko_mention_holdout_031"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_698",
+      "mention_ids": [
+        "ko_mention_holdout_030",
+        "ko_mention_holdout_032"
+      ],
+      "same_type": true,
+      "selected": true,
+      "reasons": [
+        "name_token_containment"
+      ]
+    },
+    {
+      "pair_key": "ko_pair_699",
+      "mention_ids": [
+        "ko_mention_holdout_030",
+        "ko_mention_holdout_033"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_700",
+      "mention_ids": [
+        "ko_mention_holdout_030",
+        "ko_mention_holdout_034"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_701",
+      "mention_ids": [
+        "ko_mention_holdout_030",
+        "ko_mention_holdout_035"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_702",
+      "mention_ids": [
+        "ko_mention_holdout_030",
+        "ko_mention_holdout_036"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_703",
+      "mention_ids": [
+        "ko_mention_holdout_030",
+        "ko_mention_holdout_037"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_704",
+      "mention_ids": [
+        "ko_mention_holdout_030",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_705",
+      "mention_ids": [
+        "ko_mention_holdout_030",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_706",
+      "mention_ids": [
+        "ko_mention_holdout_031",
+        "ko_mention_holdout_032"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_707",
+      "mention_ids": [
+        "ko_mention_holdout_031",
+        "ko_mention_holdout_033"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_708",
+      "mention_ids": [
+        "ko_mention_holdout_031",
+        "ko_mention_holdout_034"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_709",
+      "mention_ids": [
+        "ko_mention_holdout_031",
+        "ko_mention_holdout_035"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_710",
+      "mention_ids": [
+        "ko_mention_holdout_031",
+        "ko_mention_holdout_036"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_711",
+      "mention_ids": [
+        "ko_mention_holdout_031",
+        "ko_mention_holdout_037"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_712",
+      "mention_ids": [
+        "ko_mention_holdout_031",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_713",
+      "mention_ids": [
+        "ko_mention_holdout_031",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_714",
+      "mention_ids": [
+        "ko_mention_holdout_032",
+        "ko_mention_holdout_033"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_715",
+      "mention_ids": [
+        "ko_mention_holdout_032",
+        "ko_mention_holdout_034"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_716",
+      "mention_ids": [
+        "ko_mention_holdout_032",
+        "ko_mention_holdout_035"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_717",
+      "mention_ids": [
+        "ko_mention_holdout_032",
+        "ko_mention_holdout_036"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_718",
+      "mention_ids": [
+        "ko_mention_holdout_032",
+        "ko_mention_holdout_037"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_719",
+      "mention_ids": [
+        "ko_mention_holdout_032",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_720",
+      "mention_ids": [
+        "ko_mention_holdout_032",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_721",
+      "mention_ids": [
+        "ko_mention_holdout_033",
+        "ko_mention_holdout_034"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_722",
+      "mention_ids": [
+        "ko_mention_holdout_033",
+        "ko_mention_holdout_035"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_723",
+      "mention_ids": [
+        "ko_mention_holdout_033",
+        "ko_mention_holdout_036"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_724",
+      "mention_ids": [
+        "ko_mention_holdout_033",
+        "ko_mention_holdout_037"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_725",
+      "mention_ids": [
+        "ko_mention_holdout_033",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_726",
+      "mention_ids": [
+        "ko_mention_holdout_033",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_727",
+      "mention_ids": [
+        "ko_mention_holdout_034",
+        "ko_mention_holdout_035"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_728",
+      "mention_ids": [
+        "ko_mention_holdout_034",
+        "ko_mention_holdout_036"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_729",
+      "mention_ids": [
+        "ko_mention_holdout_034",
+        "ko_mention_holdout_037"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_730",
+      "mention_ids": [
+        "ko_mention_holdout_034",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_731",
+      "mention_ids": [
+        "ko_mention_holdout_034",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_732",
+      "mention_ids": [
+        "ko_mention_holdout_035",
+        "ko_mention_holdout_036"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_733",
+      "mention_ids": [
+        "ko_mention_holdout_035",
+        "ko_mention_holdout_037"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_734",
+      "mention_ids": [
+        "ko_mention_holdout_035",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_735",
+      "mention_ids": [
+        "ko_mention_holdout_035",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_736",
+      "mention_ids": [
+        "ko_mention_holdout_036",
+        "ko_mention_holdout_037"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_737",
+      "mention_ids": [
+        "ko_mention_holdout_036",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_738",
+      "mention_ids": [
+        "ko_mention_holdout_036",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_739",
+      "mention_ids": [
+        "ko_mention_holdout_037",
+        "ko_mention_holdout_038"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_740",
+      "mention_ids": [
+        "ko_mention_holdout_037",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": true,
+      "selected": false,
+      "reasons": []
+    },
+    {
+      "pair_key": "ko_pair_741",
+      "mention_ids": [
+        "ko_mention_holdout_038",
+        "ko_mention_holdout_039"
+      ],
+      "same_type": false,
+      "selected": false,
+      "reasons": []
+    }
+  ]
+}

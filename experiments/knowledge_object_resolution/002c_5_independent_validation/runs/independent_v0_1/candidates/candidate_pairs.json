@@ -1,0 +1,191 @@
+{
+  "artifact_type": "ko_identity_candidate_bundle",
+  "version": "v0.1",
+  "benchmark_split": "holdout",
+  "candidate_order": "ascending_unordered_mention_inventory_pair",
+  "generation_rules": [
+    "exact_normalized_name",
+    "frozen_alias_identity",
+    "name_token_equivalence",
+    "initialism_name_match",
+    "name_token_containment",
+    "exact_source_span"
+  ],
+  "counts": {
+    "mentions": 39,
+    "all_unordered_pairs": 741,
+    "same_type_pairs": 261,
+    "selected_candidates": 7,
+    "rejected_pairs": 734
+  },
+  "candidates": [
+    {
+      "candidate_id": "ko_identity_candidate_001",
+      "mention_a": {
+        "mention_id": "ko_mention_holdout_016",
+        "lecture_id": "graph_algorithms_001",
+        "name": "Path",
+        "type": "Concept",
+        "source_spans": [
+          "A path is a sequence of compatible directed edges."
+        ]
+      },
+      "mention_b": {
+        "mention_id": "ko_mention_holdout_017",
+        "lecture_id": "graph_algorithms_001",
+        "name": "Path Cost",
+        "type": "Concept",
+        "source_spans": [
+          "Its path cost is the sum of their edge weights"
+        ]
+      },
+      "selection_reasons": [
+        "name_token_containment"
+      ]
+    },
+    {
+      "candidate_id": "ko_identity_candidate_002",
+      "mention_a": {
+        "mention_id": "ko_mention_holdout_016",
+        "lecture_id": "graph_algorithms_001",
+        "name": "Path",
+        "type": "Concept",
+        "source_spans": [
+          "A path is a sequence of compatible directed edges."
+        ]
+      },
+      "mention_b": {
+        "mention_id": "ko_mention_holdout_020",
+        "lecture_id": "graph_algorithms_001",
+        "name": "Single-Source Shortest-Path Problem",
+        "type": "Concept",
+        "source_spans": [
+          "The single-source shortest-path problem asks for a minimum-cost path from a chosen source vertex to every reachable vertex."
+        ]
+      },
+      "selection_reasons": [
+        "name_token_containment"
+      ]
+    },
+    {
+      "candidate_id": "ko_identity_candidate_003",
+      "mention_a": {
+        "mention_id": "ko_mention_holdout_023",
+        "lecture_id": "numerical_root_finding_001",
+        "name": "Damped Newton method",
+        "type": "Method",
+        "source_spans": [
+          "The damped Newton method extends Newton's method by scaling the Newton correction with a factor between zero and one."
+        ]
+      },
+      "mention_b": {
+        "mention_id": "ko_mention_holdout_026",
+        "lecture_id": "numerical_root_finding_001",
+        "name": "Newton's method",
+        "type": "Method",
+        "source_spans": [
+          "Newton's method uses the derivative to replace the function locally by its tangent line."
+        ]
+      },
+      "selection_reasons": [
+        "name_token_containment"
+      ]
+    },
+    {
+      "candidate_id": "ko_identity_candidate_004",
+      "mention_a": {
+        "mention_id": "ko_mention_holdout_023",
+        "lecture_id": "numerical_root_finding_001",
+        "name": "Damped Newton method",
+        "type": "Method",
+        "source_spans": [
+          "The damped Newton method extends Newton's method by scaling the Newton correction with a factor between zero and one."
+        ]
+      },
+      "mention_b": {
+        "mention_id": "ko_mention_holdout_035",
+        "lecture_id": "statistics_estimation_001",
+        "name": "Newton's Method",
+        "type": "Method",
+        "source_spans": [
+          "Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically."
+        ]
+      },
+      "selection_reasons": [
+        "name_token_containment"
+      ]
+    },
+    {
+      "candidate_id": "ko_identity_candidate_005",
+      "mention_a": {
+        "mention_id": "ko_mention_holdout_026",
+        "lecture_id": "numerical_root_finding_001",
+        "name": "Newton's method",
+        "type": "Method",
+        "source_spans": [
+          "Newton's method uses the derivative to replace the function locally by its tangent line."
+        ]
+      },
+      "mention_b": {
+        "mention_id": "ko_mention_holdout_035",
+        "lecture_id": "statistics_estimation_001",
+        "name": "Newton's Method",
+        "type": "Method",
+        "source_spans": [
+          "Newton's method can be applied within maximum likelihood estimation to compute a candidate numerically."
+        ]
+      },
+      "selection_reasons": [
+        "exact_normalized_name"
+      ]
+    },
+    {
+      "candidate_id": "ko_identity_candidate_006",
+      "mention_a": {
+        "mention_id": "ko_mention_holdout_029",
+        "lecture_id": "statistics_estimation_001",
+        "name": "Likelihood",
+        "type": "Concept",
+        "source_spans": [
+          "The likelihood is defined from this statistical model by treating the observations as fixed and comparing possible parameter values."
+        ]
+      },
+      "mention_b": {
+        "mention_id": "ko_mention_holdout_031",
+        "lecture_id": "statistics_estimation_001",
+        "name": "Log-Likelihood",
+        "type": "Concept",
+        "source_spans": [
+          "The log-likelihood is obtained by taking the logarithm of the likelihood."
+        ]
+      },
+      "selection_reasons": [
+        "name_token_containment"
+      ]
+    },
+    {
+      "candidate_id": "ko_identity_candidate_007",
+      "mention_a": {
+        "mention_id": "ko_mention_holdout_030",
+        "lecture_id": "statistics_estimation_001",
+        "name": "Likelihood Function",
+        "type": "Formula",
+        "source_spans": [
+          "L(\\theta; x_{1:n}) = \\prod_{i=1}^{n} p(x_i \\mid \\theta)."
+        ]
+      },
+      "mention_b": {
+        "mention_id": "ko_mention_holdout_032",
+        "lecture_id": "statistics_estimation_001",
+        "name": "Log-Likelihood Function",
+        "type": "Formula",
+        "source_spans": [
+          "\\ell(\\theta) = \\log L(\\theta; x_{1:n}) = \\sum_{i=1}^{n} \\log p(x_i \\mid \\theta)."
+        ]
+      },
+      "selection_reasons": [
+        "name_token_containment"
+      ]
+    }
+  ]
+}

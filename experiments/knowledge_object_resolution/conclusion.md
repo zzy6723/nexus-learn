@@ -2,8 +2,9 @@
 
 ## Result
 
-Experiment 002C is complete with a validated development architecture and no
-production canonicalizer selection.
+Experiment 002C is development-complete; independent validation remains
+pending. The development architecture is validated, but no production
+canonicalizer is selected.
 
 - 002C-0 established a strict mention/identity/provenance contract.
 - 002C-1 showed that Exact Name and frozen aliases can work on an easy but
@@ -25,7 +26,7 @@ candidate generation, contradiction checks, and provenance-preserving cluster
 format are retained.
 
 Evidence-ID context resolution v0.2.1 is selected as the development candidate
-for independent validation. No production canonicalization method is selected.
+for future independent validation. No production canonicalization method is selected.
 Exact Name is insufficient on the challenge, context v0.1 failed end-to-end
 execution, and v0.2.1 has only been evaluated on data that influenced method
 development. Experiment 003 should not assume that canonical KO endpoints are
@@ -33,9 +34,15 @@ generally ready.
 
 ## Next Validation
 
-The next iteration is an independently frozen validation source that did not
+The next iteration uses an independently frozen validation source that did not
 drive candidate generation, identity behavior, evidence-ID transport, catalog
 partitioning, or success criteria. The frozen v0.2.1 method must run unchanged.
+
+Its benchmark and full-pipeline preflight are complete. Formal API execution,
+blind Evidence adjudication, cluster evaluation, determinism checking, and the
+combined completion decision remain pending. The source has only one positive
+identity pair, so even a pass will be limited evidence rather than broad
+generalization or production readiness.
 
 This boundary prevents the successful development repair from being
 misrepresented as evidence of generalization.
@@ -60,3 +67,14 @@ evidence sets. Its former-failure diagnostic produced 46/46 exact clusters and
 
 The earlier v0.2 runs remain diagnostic history and were not overwritten.
 Production selection still requires a newly frozen source.
+
+## Programme Status
+
+```text
+002C-0 Benchmark preparation: Completed
+002C-1 Deterministic canonicalization: Completed; insufficient on challenge cases
+002C-2 Context-aware resolution challenge: Completed
+002C-3 v0.1 locked-reuse execution: Failed exact-evidence transport
+002C-4 Evidence-ID v0.2.1: Development validation completed
+002C-5 Independent canonicalization validation: Preflight complete; formal run pending
+```

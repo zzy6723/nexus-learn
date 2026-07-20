@@ -3,8 +3,8 @@
 ## Decision
 
 `candidate_scoped_context_resolution_evidence_ids_v0_2_1` is selected as the
-Knowledge Object resolution **development candidate** for independent
-validation.
+Knowledge Object resolution **development candidate for future independent
+validation**.
 
 It retains the candidate-scoped identity architecture and replaces model-copied
 evidence with candidate-scoped opaque IDs. The runner resolves selected IDs to
@@ -26,6 +26,11 @@ This selection is not a production decision. Both datasets are development
 data, the sample is small, and the method has not been tested on a newly frozen
 source, long parsed documents, noisy extraction output, or broader STEM
 domains. Run-to-run stability is also not established.
+
+The two development resolver runs contain only 17 decisions and three direct
+`DISTINCT_OBJECT` candidates. Perfect metrics on this small candidate-scoped
+sample do not establish stability, generalization, or complete ambiguity
+resolution.
 
 Experiment 003 must not treat canonical KO endpoints as generally validated
 until v0.2.1 passes an independently frozen evaluation source.

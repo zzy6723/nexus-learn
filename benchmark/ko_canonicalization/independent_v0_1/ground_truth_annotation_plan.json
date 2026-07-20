@@ -1,0 +1,53 @@
+{
+  "artifact_type": "ko_canonicalization_independent_annotation_plan",
+  "version": "v0.1",
+  "status": "final_pre_independent_execution",
+  "data_role": "independent_canonicalization_validation",
+  "annotation_policy": {
+    "all_mentions_reviewed": true,
+    "cluster_identity_authoritative": true,
+    "cross_type_merge_forbidden": true,
+    "review_completed_before_resolver_execution": true,
+    "model_predictions_seen": false
+  },
+  "multi_mention_clusters": [
+    {
+      "canonical_name": "Newton's Method",
+      "canonical_type": "Method",
+      "mention_ids": [
+        "ko_mention_holdout_026",
+        "ko_mention_holdout_035"
+      ],
+      "aliases": [],
+      "identity_rationale": "Both mentions denote the same Newton iteration method. One lecture introduces it for scalar root finding and the other applies that same method inside maximum likelihood estimation.",
+      "notes": "Cross-lecture identity; capitalization differs only orthographically."
+    }
+  ],
+  "reviewed_hard_negatives": [
+    {
+      "mention_ids": ["ko_mention_holdout_016", "ko_mention_holdout_017"],
+      "rationale": "A Path is a sequence of edges; Path Cost is a numerical quantity assigned to a path."
+    },
+    {
+      "mention_ids": ["ko_mention_holdout_016", "ko_mention_holdout_020"],
+      "rationale": "A Path is not the Single-Source Shortest-Path Problem that asks for optimal paths."
+    },
+    {
+      "mention_ids": ["ko_mention_holdout_023", "ko_mention_holdout_026"],
+      "rationale": "Damped Newton is a modified method with a scaled correction, not the same method as undamped Newton."
+    },
+    {
+      "mention_ids": ["ko_mention_holdout_023", "ko_mention_holdout_035"],
+      "rationale": "Damped Newton is a modified method and remains distinct from Newton's Method in the statistics lecture."
+    },
+    {
+      "mention_ids": ["ko_mention_holdout_029", "ko_mention_holdout_031"],
+      "rationale": "Likelihood and Log-Likelihood are related transformations but distinct educational objects."
+    },
+    {
+      "mention_ids": ["ko_mention_holdout_030", "ko_mention_holdout_032"],
+      "rationale": "The Likelihood Function formula and Log-Likelihood Function formula are distinct formulas."
+    }
+  ],
+  "coverage_limit": "Only one SAME_OBJECT pair is naturally present. Passing cannot establish broad identity recall or generalization."
+}

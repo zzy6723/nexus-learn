@@ -88,6 +88,17 @@ unseen holdout.
 This evidence supports v0.2.1 as the candidate for independent validation. It
 does not authorize it as the product default.
 
+Experiment 002C-5 freezes the complete v0.2.1 canonicalization pipeline and a
+pre-existing four-lecture Entity bundle that did not participate in 002C method
+development. The source contains 39 mentions, one positive identity pair, and
+six selected hard-negative candidates. Benchmark, pipeline, success-criteria,
+determinism, and blind Evidence-review contracts are frozen, but formal model
+execution has not yet occurred.
+
+Identity-decision Evidence and mention provenance remain separate. Opaque
+Evidence IDs preserve exact lecture spans selected for an identity decision;
+they do not repair nonexact source spans inherited from Entity Extraction.
+
 ## Scope
 
 ADR-005 authorizes the canonical mention/identity data model, the evidence-ID

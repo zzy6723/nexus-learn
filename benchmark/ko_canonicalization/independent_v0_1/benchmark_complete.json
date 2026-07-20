@@ -1,0 +1,76 @@
+{
+  "artifact_type": "ko_canonicalization_independent_benchmark_complete",
+  "version": "v0.1",
+  "status": "final",
+  "data_role": "independent_canonicalization_validation",
+  "frozen_method_commit": "46d5a2937f0a33a3c7eb157da8c8d58bd4451a14",
+  "claim_boundary": "Independent locked reuse relative to 002C method development; one positive identity pair limits recall and generalization claims.",
+  "artifacts": {
+    "source_manifest": {
+      "path": "benchmark/ko_canonicalization/independent_v0_1/source_manifest.json",
+      "sha256": "20c71c5240f8f83ca86f729ddd9e42c75b9adef2a704ccbe54189b543620ad73"
+    },
+    "mention_inventory": {
+      "path": "benchmark/ko_canonicalization/independent_v0_1/mention_inventory.json",
+      "sha256": "d63afa6b9e2ae9fe45e74ee5cffeb97b6db5e30c9e2aab699ec084878dfe1efb"
+    },
+    "mention_inventory_completion_marker": {
+      "path": "benchmark/ko_canonicalization/independent_v0_1/mention_inventory_complete.json",
+      "sha256": "61206d07d7e57d58c7b8148c778470f397e367dfeadf15c6af090fc35b9ffcaa"
+    },
+    "ground_truth_annotation_plan": {
+      "path": "benchmark/ko_canonicalization/independent_v0_1/ground_truth_annotation_plan.json",
+      "sha256": "00898c2dd72fe93a3c9c051d6151b79c38324831ca0ed0a567525b587011af9b"
+    },
+    "ground_truth": {
+      "path": "benchmark/ko_canonicalization/independent_v0_1/ground_truth.json",
+      "sha256": "e9213ba0da956867555a2e4277eb9277054edbeb38af7b08a87735d4503398f0"
+    },
+    "ground_truth_completion_marker": {
+      "path": "benchmark/ko_canonicalization/independent_v0_1/ground_truth_complete.json",
+      "sha256": "29c1dfb6301a7373aaeec0823e446380707cbde293392bf7365f76c211d99e2a"
+    },
+    "success_criteria": {
+      "path": "benchmark/ko_canonicalization/independent_v0_1/success_criteria.json",
+      "sha256": "1b35fed7ff4ff313ff62f6a9932a3d405333e5d2583427964d43cd65f05393af"
+    },
+    "annotation_guidelines": {
+      "path": "benchmark/ko_canonicalization_annotation_guidelines.md",
+      "sha256": "ae88452fbe9ae7bb8ab41c79776d6277105a2f15242d46f43a6495a9ea5b1493"
+    },
+    "evaluation_protocol": {
+      "path": "benchmark/ko_canonicalization_protocol.md",
+      "sha256": "adcca6ce6962500da7427a7b247d76abddb0dd32fb3ef12e2ac9023597ad3b55"
+    },
+    "evidence_review_protocol": {
+      "path": "benchmark/ko_identity_evidence_review_protocol.md",
+      "sha256": "9d7521a2f7e839dc76d55fa37799cfc8d3c36e354d24e07983c210eb5622f9b7"
+    },
+    "ground_truth_generator": {
+      "path": "scripts/create_ko_independent_ground_truth.py",
+      "sha256": "df631ac17bb91fe458bd5086c72785c84edf18fe50ada0e7661d0addcb1787fe"
+    }
+  },
+  "lecture_inventory": {
+    "path": "experiments/relation_extraction/002b_predicted_ko/runs/locked_reuse_v0_2/run_01/lecture_inventory.json",
+    "sha256": "5b53aed0b1c793d47908d773d4e4a6b9ef9dd24e920307f71fa73bc71ec8b069"
+  },
+  "counts": {
+    "mentions": 39,
+    "canonical_clusters": 38,
+    "singleton_clusters": 37,
+    "multi_mention_clusters": 1,
+    "same_object_pairs": 1,
+    "distinct_object_pairs": 740,
+    "lectures": 4,
+    "resolver_expected_positive_candidates": 1,
+    "resolver_expected_hard_negatives": 6,
+    "exact_source_spans": 34,
+    "nonexact_source_spans": 5
+  },
+  "finalizer": {
+    "path": "scripts/finalize_ko_independent_benchmark.py",
+    "sha256": "fd78d4461ddf44add9b1f4038ab2d8691d0508f1662bdaca8b48976d4717acda",
+    "version": "ko_independent_benchmark_finalizer_v0.1"
+  }
+}

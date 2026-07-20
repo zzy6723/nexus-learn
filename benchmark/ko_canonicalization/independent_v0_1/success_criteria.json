@@ -1,0 +1,87 @@
+{
+  "artifact_type": "ko_context_resolution_success_criteria",
+  "version": "v0.1",
+  "scope": "002C-5 independent_v0_1",
+  "candidate_gates": {
+    "gold_same_object_pair_recall_min": 1.0,
+    "selected_candidate_count_max": 7,
+    "selected_hard_negative_count_min": 6,
+    "required_candidate_decisions": [
+      {
+        "case": "path_vs_path_cost",
+        "mention_ids": ["ko_mention_holdout_016", "ko_mention_holdout_017"],
+        "decision": "DISTINCT_OBJECT"
+      },
+      {
+        "case": "path_vs_shortest_path_problem",
+        "mention_ids": ["ko_mention_holdout_016", "ko_mention_holdout_020"],
+        "decision": "DISTINCT_OBJECT"
+      },
+      {
+        "case": "damped_newton_vs_root_newton",
+        "mention_ids": ["ko_mention_holdout_023", "ko_mention_holdout_026"],
+        "decision": "DISTINCT_OBJECT"
+      },
+      {
+        "case": "damped_newton_vs_statistics_newton",
+        "mention_ids": ["ko_mention_holdout_023", "ko_mention_holdout_035"],
+        "decision": "DISTINCT_OBJECT"
+      },
+      {
+        "case": "cross_lecture_newton_identity",
+        "mention_ids": ["ko_mention_holdout_026", "ko_mention_holdout_035"],
+        "decision": "SAME_OBJECT"
+      },
+      {
+        "case": "likelihood_vs_log_likelihood",
+        "mention_ids": ["ko_mention_holdout_029", "ko_mention_holdout_031"],
+        "decision": "DISTINCT_OBJECT"
+      },
+      {
+        "case": "likelihood_formula_vs_log_likelihood_formula",
+        "mention_ids": ["ko_mention_holdout_030", "ko_mention_holdout_032"],
+        "decision": "DISTINCT_OBJECT"
+      }
+    ]
+  },
+  "resolver_gates": {
+    "same_object_precision_min": 1.0,
+    "same_object_recall_min": 1.0,
+    "distinct_object_accuracy_min": 1.0,
+    "unresolved_rate_max": 0.0,
+    "inconsistent_component_count_max": 0,
+    "schema_failure_rate_max": 0.0
+  },
+  "cluster_gates": {
+    "b_cubed_precision_min": 1.0,
+    "b_cubed_recall_min": 1.0,
+    "b_cubed_f1_min": 1.0,
+    "exact_gold_cluster_match_rate_min": 1.0,
+    "singleton_precision_min": 1.0,
+    "singleton_recall_min": 1.0,
+    "false_merge_count_max": 0,
+    "false_split_count_max": 0,
+    "mention_coverage": 1.0,
+    "duplicate_assignments": 0,
+    "orphan_mentions": 0,
+    "lost_provenance_mentions": 0,
+    "cross_type_clusters": 0
+  },
+  "evidence_gates": {
+    "exact_materialization_rate_min": 1.0,
+    "semantic_support_rate_min": 1.0,
+    "pending_count_max": 0,
+    "stale_or_unused_decisions_max": 0
+  },
+  "determinism_gates": {
+    "canonical_assignment_invariant_to_mention_order": true,
+    "canonical_id_invariant_to_mention_order": true,
+    "cluster_identity_invariant_to_candidate_decision_order": true
+  },
+  "upstream_diagnostic": {
+    "exact_source_spans": 34,
+    "nonexact_source_spans": 5,
+    "identity_evidence_does_not_repair_upstream_provenance": true
+  },
+  "interpretation_limit": "Passing supports independent locked reuse on one pre-existing four-lecture source with one positive identity pair and six candidate hard negatives. It does not establish broad generalization, stability, or production readiness."
+}

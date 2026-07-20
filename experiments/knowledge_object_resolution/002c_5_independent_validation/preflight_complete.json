@@ -1,0 +1,48 @@
+{
+  "artifact_type": "ko_independent_validation_preflight_complete",
+  "version": "v0.1",
+  "status": "frozen_pre_execution",
+  "execution_scope": "002C-5 independent_v0_1",
+  "model_run_started": false,
+  "artifacts": {
+    "benchmark_completion": {
+      "path": "benchmark/ko_canonicalization/independent_v0_1/benchmark_complete.json",
+      "sha256": "338aa1c65aabdc71bc79682c721c966cad1ab61a92c40d4cc863654d8b91e46c"
+    },
+    "full_pipeline_manifest": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/full_pipeline_manifest_v0_1.json",
+      "sha256": "947bee4957a212bb47706753fe28043d20376fd8c8c04fba723f885aa980ec7d"
+    },
+    "candidate_completion": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/runs/independent_v0_1/candidates/candidate_generation_complete.json",
+      "sha256": "a11ff2d0567a51d47afe2e2090aa6b3c52d2f434d12b55ce37ad2f557a19342b"
+    },
+    "candidate_pairs": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/runs/independent_v0_1/candidates/candidate_pairs.json",
+      "sha256": "bf3d74b8479d03e7f5f3996ca6a8cb968cb09e93057067609307d179ede33d02"
+    },
+    "candidate_metadata": {
+      "path": "experiments/knowledge_object_resolution/002c_5_independent_validation/runs/independent_v0_1/candidates/metadata.json",
+      "sha256": "7be977a9a63744c4e7fcccf167d45e8bddd30962ba0e5f90715fe2c31f448e27"
+    }
+  },
+  "counts": {
+    "lectures": 4,
+    "mentions": 39,
+    "all_unordered_pairs": 741,
+    "selected_candidates": 7,
+    "expected_same_object_candidates": 1,
+    "expected_hard_negative_candidates": 6
+  },
+  "execution_rules": {
+    "method_changes_after_freeze": "forbidden",
+    "manual_candidate_additions": "forbidden",
+    "blind_evidence_review_before_metrics": true,
+    "failure_reuses_source_as_independent": false
+  },
+  "generator": {
+    "path": "scripts/finalize_ko_independent_preflight.py",
+    "sha256": "c12ae4b5d511e45124c91badc68a2bdb5d14f6fd66424c60bb40708896b01ee0",
+    "version": "ko_independent_preflight_finalizer_v0.1"
+  }
+}

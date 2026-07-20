@@ -84,6 +84,21 @@ class ContextKOResolutionV02RunnerTest(unittest.TestCase):
         self.assertNotIn("lectures", model_input)
         self.assertTrue(model_input["evidence_catalog"])
 
+    def test_evidence_catalog_is_invariant_to_lecture_inventory_order(self) -> None:
+        candidate = json.loads(
+            (self.candidate_dir / "candidate_pairs.json").read_text()
+        )["candidates"][0]
+        lectures = json.loads((CHALLENGE / "lecture_inventory.json").read_text())["lectures"]
+        forward = {item["lecture_id"]: item["text"] for item in lectures}
+        reversed_inventory = {
+            item["lecture_id"]: item["text"] for item in reversed(lectures)
+        }
+
+        self.assertEqual(
+            runner.build_evidence_catalog(candidate, forward),
+            runner.build_evidence_catalog(candidate, reversed_inventory),
+        )
+
     def test_valid_ids_materialize_to_exact_spans_and_complete(self) -> None:
         run_dir = self.root / "success"
         with patch.dict(os.environ, {"DEEPSEEK_API_KEY": "test-key"}):

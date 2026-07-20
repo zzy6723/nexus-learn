@@ -19,12 +19,12 @@ schemas, and `finish_reason = stop`.
 
 ## Structural Results
 
-| Run | Candidates | SAME precision | End-to-end SAME recall | B-cubed F1 | Exact clusters | Success gates |
-| --- | ---: | ---: | ---: | ---: | ---: | --- |
-| v0.2 challenge | 11 | 1.000 | 1.000 | 1.000 | 13/13 | Passed |
-| v0.2 locked-reuse diagnostic | 6 | 1.000 | 1.000 | 1.000 | 46/46 | Passed |
-| v0.2.1 challenge | 11 | 1.000 | 1.000 | 1.000 | 13/13 | Passed |
-| v0.2.1 locked-reuse diagnostic | 6 | 1.000 | 1.000 | 1.000 | 46/46 | Passed |
+| Run | Candidates | SAME precision | End-to-end SAME recall | B-cubed F1 | Exact clusters | Structural identity gates | Evidence semantic gate |
+| --- | ---: | ---: | ---: | ---: | ---: | --- | --- |
+| v0.2 challenge | 11 | 1.000 | 1.000 | 1.000 | 13/13 | Passed | Failed, 10/11 |
+| v0.2 locked-reuse diagnostic | 6 | 1.000 | 1.000 | 1.000 | 46/46 | Passed | Passed, 6/6 |
+| v0.2.1 challenge | 11 | 1.000 | 1.000 | 1.000 | 13/13 | Passed | Passed, 11/11 |
+| v0.2.1 locked-reuse diagnostic | 6 | 1.000 | 1.000 | 1.000 | 46/46 | Passed | Passed, 6/6 |
 
 Every completed run had zero unresolved decisions, duplicate assignments,
 orphan mentions, cross-type clusters, and lost-provenance mentions.
@@ -49,6 +49,15 @@ v0.2.1 corrected the partitioner. The rerun made both formula blocks available,
 and the model selected their IDs. All v0.2.1 evidence sets were exact and
 semantically self-contained under the frozen review rule.
 
+Semantic-support results come from finalized audit artifacts bound to each
+run's `identity_decisions.json` hash. These development reviews were manual,
+retrospective, and not blinded: the reviewer could see the candidate endpoints,
+predicted decision, rationale, selected evidence, run identity, and benchmark
+context. They did not use an embedding or another model as an automatic judge.
+The reviews are suitable for development diagnosis, not independent evidence.
+002C-5 uses the separate blind-review procedure in
+`benchmark/ko_identity_evidence_review_protocol.md`.
+
 ## Interpretation
 
 Opaque evidence IDs are operationally superior to free-form span copying on
@@ -60,3 +69,10 @@ The result establishes development feasibility, not generalization. The
 locked-reuse data influenced the interface, and the challenge influenced both
 identity behavior and the v0.2.1 partitioner fix. A new source is required
 before selecting a production canonicalizer.
+
+The resolver directly saw only three development `DISTINCT_OBJECT` candidates:
+one challenge homonym and two diagnostic containment cases. The full cluster
+Ground Truth covers all pairwise distinct identities, but this does not amount
+to broad context-resolver negative coverage. More same-name, same-type,
+near-definition, shared-symbol, containment, and cross-course hard negatives
+remain required.

@@ -152,6 +152,46 @@ class ContextKOResolutionPipelineTest(unittest.TestCase):
         pending = json.loads((cluster_dir / "adjudication_pending.json").read_text())
         self.assertEqual(len(pending["inconsistent_components"]), 1)
 
+    def test_canonical_assignments_and_ids_are_order_invariant(self) -> None:
+        inventory = json.loads((CHALLENGE / "mention_inventory.json").read_text())
+        normalization = json.loads(NORMALIZATION.read_text())
+        candidates = json.loads((self.candidate_dir / "candidate_pairs.json").read_text())
+        decisions = []
+        for candidate in candidates["candidates"]:
+            pair = frozenset(
+                (candidate["mention_a"]["mention_id"], candidate["mention_b"]["mention_id"])
+            )
+            decisions.append(
+                {
+                    "candidate_id": candidate["candidate_id"],
+                    "decision": "SAME_OBJECT" if pair in self.gold_same else "DISTINCT_OBJECT",
+                }
+            )
+
+        def materialize(inv, decision_rows):
+            mention_ids = [item["mention_id"] for item in inv["mentions"]]
+            groups, contradictions = finalizer.provisional_components(
+                mention_ids, candidates, decision_rows
+            )
+            self.assertFalse(contradictions)
+            prediction, assignments, _ = finalizer.build_cluster_artifacts(
+                inv, groups, normalization
+            )
+            assignment_map = {
+                item["mention_id"]: item["canonical_id"]
+                for item in assignments["assignments"]
+            }
+            cluster_map = {
+                frozenset(item["mention_ids"]): item["canonical_id"]
+                for item in prediction["clusters"]
+            }
+            return assignment_map, cluster_map
+
+        baseline = materialize(inventory, decisions)
+        reversed_inventory = {**inventory, "mentions": list(reversed(inventory["mentions"]))}
+        self.assertEqual(baseline, materialize(reversed_inventory, decisions))
+        self.assertEqual(baseline, materialize(inventory, list(reversed(decisions))))
+
 
 if __name__ == "__main__":
     unittest.main()
