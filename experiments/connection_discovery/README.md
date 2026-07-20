@@ -1,7 +1,7 @@
 # Experiment 003: Connection Discovery
 
 **Status:** In progress with a failed Oracle-classification gate
-**Current stage:** 003-2 development comparison completed; method revision required
+**Current stage:** 003-2b two-stage method prepared; execution pending
 
 ## Objective
 
@@ -32,6 +32,7 @@ deferred to Experiment 004.
 | 003-0 | Benchmark and Evaluation Preparation | Completed and repository-frozen |
 | 003-1 | Oracle-Canonical Candidate Generation | Completed and repository-frozen |
 | 003-2 | Oracle-Canonical Connection Discovery | Completed; frozen gates failed |
+| 003-2b | Two-Stage Direct-Edge Connection Discovery | Method and evaluator prepared; no model run |
 | 003-3 | Predicted-Canonical End-to-End Discovery | Blocked as product validation; diagnostic only |
 | 003-4 | Connection Selection and Ranking | Blocked as product validation; diagnostic only |
 | 003-5 | Independent Validation | Deferred until an Oracle method passes |
@@ -61,6 +62,7 @@ both this manifest and the later candidate-method commit.
 - First source audit: `003_0_benchmark_preparation/source_adequacy_audit.md`
 - 003-2 comparison: `003_2_oracle_connection_discovery/development_comparison.md`
 - 003-2 conclusion: `003_2_oracle_connection_discovery/conclusion.md`
+- 003-2b method: `003_2b_direct_edge_gate/README.md`
 - Draft protocol: `../../benchmark/connection_discovery_protocol.md`
 - Draft annotation rules:
   `../../benchmark/connection_discovery_annotation_guidelines.md`
