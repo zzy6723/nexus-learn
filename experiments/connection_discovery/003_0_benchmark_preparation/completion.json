@@ -1,0 +1,94 @@
+{
+  "artifact_type": "connection_discovery_benchmark_preflight",
+  "version": "v0.1",
+  "status": "ready_for_repository_freeze",
+  "model_execution_allowed": false,
+  "next_gate": "Record the clean repository freeze commit, then bind a frozen execution manifest before any Experiment 003 model call.",
+  "counts": {
+    "all_eligible_pairs": 387,
+    "primary_scored_pairs": 376,
+    "primary_positive_pairs": 41,
+    "primary_negative_pairs": 335,
+    "diagnostic_pairs": 11,
+    "categories": {
+      "IN_SCHEMA_CONNECTION": 46,
+      "NO_IN_SCHEMA_CONNECTION": 335,
+      "OUT_OF_SCHEMA_CONNECTION": 6
+    },
+    "relations": {
+      "APPLIED_IN": 31,
+      "CONTRASTS_WITH": 1,
+      "EXTENDS": 2,
+      "FORMALIZES": 4,
+      "REQUIRES": 8
+    },
+    "evidence_support_scopes": {
+      "multi_lecture_compositional": 5,
+      "single_lecture_explicit": 41
+    }
+  },
+  "scope_limitations": [
+    "No disjoint-provenance positive enters v0.1 primary scoring; the five compositional disjoint positives are diagnostic only.",
+    "RELATED_TO has no positive Ground Truth support."
+  ],
+  "artifacts": {
+    "source_manifest": {
+      "path": "benchmark/connection_discovery/development_v0_1/source_manifest.json",
+      "sha256": "a4448eec4c472127fd4b6015737364007bbed6914416dc6b6d55e6fd2a5f4ded"
+    },
+    "oracle_canonical_inventory": {
+      "path": "benchmark/connection_discovery/development_v0_1/oracle_canonical_inventory.json",
+      "sha256": "682e0d0aa66398cc54128b5bba1b1fdc0a1512ec1c46a83e64463ac2403c34f7"
+    },
+    "pair_universe": {
+      "path": "benchmark/connection_discovery/development_v0_1/pair_universe.json",
+      "sha256": "cb75b629321c33587de4f69ecc683de98565707249ddd5e714590fc90df70c09"
+    },
+    "evidence_catalogs": {
+      "path": "benchmark/connection_discovery/development_v0_1/evidence_catalogs.json",
+      "sha256": "4b5549598dc2aa0250e6d5a688484d13f742d7a6372ba6f6ad6fd1a1ecf87cac"
+    },
+    "annotation_spec": {
+      "path": "benchmark/connection_discovery/development_v0_1/annotation_spec.json",
+      "sha256": "d449f9123fd4c10883763e0767c8c1fc4aee67a18888bd9c9fabff690ae0151b"
+    },
+    "ground_truth": {
+      "path": "benchmark/connection_discovery/development_v0_1/ground_truth.json",
+      "sha256": "1bbbd801b505dc2a1d410f50b605a600b9e2ae135471b5484dea63c76aebcba4"
+    },
+    "annotation_review_audit": {
+      "path": "benchmark/connection_discovery/development_v0_1/annotation_review_audit.json",
+      "sha256": "66d945977118a725b36c85b646fefd135a5045182a2db676444a1af3d43b54f4"
+    },
+    "success_criteria": {
+      "path": "benchmark/connection_discovery_success_criteria_v0_1.json",
+      "sha256": "44b55047bc2d17b63842cc140d0be74f93bb95be4fe12fb578022d87ffe080f8"
+    },
+    "annotation_protocol": {
+      "path": "benchmark/connection_discovery_annotation_guidelines.md",
+      "sha256": "002bf9d9a3e97b8f419d5c8c52337e6500c71b90d72eb2e8e4d1aba7faa39dea"
+    },
+    "evaluation_protocol": {
+      "path": "benchmark/connection_discovery_protocol.md",
+      "sha256": "a0f1343a7cc1884d1a1af26c554d343f55e76e624a5e64ba8cfc22fdf8654d8b"
+    },
+    "schemas": [
+      {
+        "path": "benchmark/schema/canonical_connection_pair_universe.schema.json",
+        "sha256": "8a9a905be3e350dbd664f8fbf1798b82b78a03c71d1242d139274a8e9648fb2a"
+      },
+      {
+        "path": "benchmark/schema/connection_evidence_catalog.schema.json",
+        "sha256": "1a33ab610851f48807fa8ae1551e160fb22a47dc83bd2bfd593e179e680435b7"
+      },
+      {
+        "path": "benchmark/schema/canonical_connection_ground_truth.schema.json",
+        "sha256": "1749bf6f8d74370bbc1831ff2b3c47a2f7af7cd65a213063b2a89f779a44acc8"
+      },
+      {
+        "path": "benchmark/schema/connection_prediction.schema.json",
+        "sha256": "8ac6149f3a73401bdb37214b3e056180f8b319bd3772a76c06f9b3eda6b420dc"
+      }
+    ]
+  }
+}

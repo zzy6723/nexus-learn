@@ -1,0 +1,103 @@
+{
+  "artifact_type": "connection_discovery_success_criteria",
+  "version": "v0.1",
+  "status": "ready_to_freeze",
+  "benchmark_binding": {
+    "path": "benchmark/connection_discovery/development_v0_1/ground_truth.json",
+    "sha256": "1bbbd801b505dc2a1d410f50b605a600b9e2ae135471b5484dea63c76aebcba4"
+  },
+  "frozen_denominators": {
+    "eligible_pairs": 387,
+    "primary_scored_pairs": 376,
+    "primary_positive_pairs": 41,
+    "primary_negative_pairs": 335,
+    "diagnostic_compositional_positives": 5,
+    "schema_gap_pairs": 6,
+    "primary_relation_support": {
+      "APPLIED_IN": 26,
+      "REQUIRES": 8,
+      "FORMALIZES": 4,
+      "EXTENDS": 2,
+      "CONTRASTS_WITH": 1,
+      "RELATED_TO": 0
+    }
+  },
+  "stage_003_1_candidate_generation": {
+    "primary_positive_candidate_recall_minimum": 0.95,
+    "maximum_missed_primary_positives": 2,
+    "same_course_primary_positive_recall_minimum": 0.90,
+    "cross_course_primary_positive_recall_minimum": 0.90,
+    "per_relation_recall_minimum_for_labels_with_support_at_least_4": 0.75,
+    "workload_reduction_minimum": 0.20,
+    "maximum_duplicate_pairs": 0,
+    "maximum_self_pairs": 0,
+    "selection_rule": "Candidate recall is the primary gate. Workload reduction cannot compensate for recall below the frozen threshold.",
+    "diagnostic_only": [
+      "disjoint-provenance compositional-positive recall",
+      "labels with fewer than four primary positives"
+    ]
+  },
+  "stage_003_2_conditional_classification": {
+    "positive_typed_edge_recall_minimum": 0.75,
+    "positive_edge_precision_minimum": 0.75,
+    "no_relation_accuracy_minimum": 0.90,
+    "exact_evidence_materialization_rate": 1.0,
+    "semantic_evidence_support_rate_minimum": 0.90,
+    "related_to_prediction_rate_maximum": 0.05,
+    "maximum_fatal_alignment_errors": 0,
+    "anti_majority_rule": "Overall strict accuracy alone cannot pass because an all-NO_RELATION system exceeds 0.89 on the primary denominator."
+  },
+  "full_universe_discovery": {
+    "primary_connection_precision_minimum": 0.70,
+    "primary_connection_recall_minimum": 0.70,
+    "primary_connection_f1_minimum": 0.70,
+    "cross_course_connection_recall_minimum": 0.65,
+    "maximum_duplicate_connections": 0,
+    "required_error_attribution": [
+      "candidate_miss",
+      "wrong_relation_type",
+      "wrong_direction",
+      "false_positive_relation",
+      "evidence_failure"
+    ]
+  },
+  "stage_003_3_predicted_canonical": {
+    "canonical_endpoint_recoverability_minimum": 0.85,
+    "end_to_end_primary_connection_recall_minimum": 0.60,
+    "maximum_orphan_connections": 0,
+    "maximum_endpoint_alignment_errors": 0,
+    "required_error_attribution": [
+      "missing_canonical_endpoint",
+      "false_merge_propagation",
+      "false_split_propagation",
+      "wrong_ko_type_propagation",
+      "lost_provenance",
+      "candidate_missed_due_to_canonicalization",
+      "duplicate_connection_due_to_false_split",
+      "relation_failure_with_correct_endpoints",
+      "evidence_failure"
+    ]
+  },
+  "stage_003_4_selection_ranking": {
+    "human_scale": "0_to_2",
+    "top_5_mean_educational_usefulness_minimum": 1.5,
+    "precision_at_5_useful_minimum": 0.80,
+    "top_5_redundancy_rate_maximum": 0.20,
+    "dimensions": [
+      "educational_usefulness",
+      "non_obviousness",
+      "cross_course_value",
+      "evidence_strength",
+      "redundancy",
+      "appropriate_specificity"
+    ],
+    "boundary": "Ranking scores never repair an incorrect Relation or unsupported Evidence set."
+  },
+  "claim_limits": [
+    "No primary positive has disjoint endpoint provenance.",
+    "Five disjoint-provenance compositional positives are diagnostic only.",
+    "RELATED_TO has no positive Ground Truth support.",
+    "The source is authored development data, not independent validation.",
+    "Passing results do not establish long-document, parsed-PDF, or production performance."
+  ]
+}

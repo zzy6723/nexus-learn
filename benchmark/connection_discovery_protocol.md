@@ -1,7 +1,7 @@
 # Connection Discovery Evaluation Protocol
 
-**Status:** Draft for Experiment 003-0
-**Version:** v0.1-draft
+**Status:** Ready to freeze before Experiment 003 model execution
+**Version:** v0.1
 **Owner:** Project
 
 Terminology follows `docs/glossary.md`. Relation semantics follow ADR-004 and
@@ -139,6 +139,18 @@ Connections, and relation failure with correct endpoints.
 
 Selection and ranking use a separately frozen review set and do not alter
 Connection correctness metrics.
+
+### v0.1 Coverage Boundary
+
+The development Ground Truth contains 41 primary positives and 335 primary
+negatives. All primary positives are `overlap_bridge` cases supported explicitly
+within one lecture. Five `disjoint_provenance` positives requiring
+multi-lecture composition are diagnostic and do not enter the primary score.
+
+Accordingly, a passing v0.1 result may establish explicit overlap-bridge
+discovery but must not be described as validated implicit cross-document
+reasoning. `RELATED_TO` also has no positive Ground Truth support and may be
+evaluated only for overuse.
 
 ## Freeze And Leakage Rules
 

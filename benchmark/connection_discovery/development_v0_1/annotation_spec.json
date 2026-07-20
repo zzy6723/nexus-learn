@@ -1,0 +1,709 @@
+{
+  "artifact_type": "connection_discovery_annotation_spec",
+  "version": "v0.1",
+  "status": "ready_to_freeze",
+  "split": "development",
+  "default_negative_review": {
+    "status": "complete",
+    "reviewed_pair_count": 330,
+    "method": "Exhaustive endpoint-table review under the direct-support rule; every unlisted eligible pair was reviewed as NO_IN_SCHEMA_CONNECTION before model execution.",
+    "boundary": "Broad topical similarity, transitive links through an intermediate object, and unsupported world knowledge do not create an edge."
+  },
+  "decisions": [
+    {
+      "endpoint_ids": ["conn_dev_ko_001", "conn_dev_ko_003"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_001",
+      "target_canonical_ko_id": "conn_dev_ko_003",
+      "relation_type": "APPLIED_IN",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [{"lecture_id": "multivariable_derivatives_001", "block_index": 5}],
+      "rationale": "The first-order Taylor approximation explicitly uses the gradient as its local linear term."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_003", "conn_dev_ko_004"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_004",
+      "target_canonical_ko_id": "conn_dev_ko_003",
+      "relation_type": "FORMALIZES",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [
+        {"lecture_id": "multivariable_derivatives_001", "block_index": 5},
+        {"lecture_id": "multivariable_derivatives_001", "block_index": 6}
+      ],
+      "rationale": "The displayed Formula is introduced as the formal statement of the first-order Taylor approximation."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_001", "conn_dev_ko_004"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_004",
+      "target_canonical_ko_id": "conn_dev_ko_001",
+      "relation_type": "REQUIRES",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [
+        {"lecture_id": "multivariable_derivatives_001", "block_index": 5},
+        {"lecture_id": "multivariable_derivatives_001", "block_index": 6}
+      ],
+      "rationale": "The first-order Taylor Formula contains the gradient as its required linear term."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_001", "conn_dev_ko_006"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_001",
+      "target_canonical_ko_id": "conn_dev_ko_006",
+      "relation_type": "APPLIED_IN",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [
+        {"lecture_id": "unconstrained_optimisation_001", "block_index": 2},
+        {"lecture_id": "unconstrained_optimisation_001", "block_index": 3}
+      ],
+      "rationale": "Gradient Descent explicitly uses the gradient to define its descent direction."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_005", "conn_dev_ko_006"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_005",
+      "target_canonical_ko_id": "conn_dev_ko_006",
+      "relation_type": "APPLIED_IN",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [
+        {"lecture_id": "unconstrained_optimisation_001", "block_index": 1},
+        {"lecture_id": "unconstrained_optimisation_001", "block_index": 2}
+      ],
+      "rationale": "Gradient Descent acts on the objective function whose value is being minimized."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_006", "conn_dev_ko_010"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_010",
+      "target_canonical_ko_id": "conn_dev_ko_006",
+      "relation_type": "APPLIED_IN",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [
+        {"lecture_id": "unconstrained_optimisation_001", "block_index": 2},
+        {"lecture_id": "unconstrained_optimisation_001", "block_index": 3}
+      ],
+      "rationale": "The Step Size directly controls each Gradient Descent move."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_006", "conn_dev_ko_007"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_007",
+      "target_canonical_ko_id": "conn_dev_ko_006",
+      "relation_type": "FORMALIZES",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [
+        {"lecture_id": "unconstrained_optimisation_001", "block_index": 2},
+        {"lecture_id": "unconstrained_optimisation_001", "block_index": 3}
+      ],
+      "rationale": "The displayed update explicitly specifies one Gradient Descent iteration."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_001", "conn_dev_ko_007"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_007",
+      "target_canonical_ko_id": "conn_dev_ko_001",
+      "relation_type": "REQUIRES",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [
+        {"lecture_id": "unconstrained_optimisation_001", "block_index": 2},
+        {"lecture_id": "unconstrained_optimisation_001", "block_index": 3}
+      ],
+      "rationale": "The Gradient Descent Update cannot be stated without the gradient term."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_007", "conn_dev_ko_010"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_007",
+      "target_canonical_ko_id": "conn_dev_ko_010",
+      "relation_type": "REQUIRES",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [
+        {"lecture_id": "unconstrained_optimisation_001", "block_index": 2},
+        {"lecture_id": "unconstrained_optimisation_001", "block_index": 3}
+      ],
+      "rationale": "The Gradient Descent Update contains the Step Size as its scaling parameter."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_003", "conn_dev_ko_006"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_003",
+      "target_canonical_ko_id": "conn_dev_ko_006",
+      "relation_type": "APPLIED_IN",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [{"lecture_id": "unconstrained_optimisation_001", "block_index": 4}],
+      "rationale": "The first-order Taylor approximation is used to justify the local descent behavior."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_002", "conn_dev_ko_008"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_002",
+      "target_canonical_ko_id": "conn_dev_ko_008",
+      "relation_type": "APPLIED_IN",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [
+        {"lecture_id": "unconstrained_optimisation_001", "block_index": 5},
+        {"lecture_id": "unconstrained_optimisation_001", "block_index": 6}
+      ],
+      "rationale": "The Newton Optimisation Method explicitly uses the Hessian Matrix for curvature."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_001", "conn_dev_ko_008"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_001",
+      "target_canonical_ko_id": "conn_dev_ko_008",
+      "relation_type": "APPLIED_IN",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [
+        {"lecture_id": "unconstrained_optimisation_001", "block_index": 5},
+        {"lecture_id": "unconstrained_optimisation_001", "block_index": 6}
+      ],
+      "rationale": "The Newton Optimisation Update uses the gradient together with curvature."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_005", "conn_dev_ko_008"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_005",
+      "target_canonical_ko_id": "conn_dev_ko_008",
+      "relation_type": "APPLIED_IN",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [
+        {"lecture_id": "unconstrained_optimisation_001", "block_index": 1},
+        {"lecture_id": "unconstrained_optimisation_001", "block_index": 5},
+        {"lecture_id": "unconstrained_optimisation_001", "block_index": 6}
+      ],
+      "rationale": "The Newton Optimisation Method updates parameters to optimize the objective function."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_001", "conn_dev_ko_009"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_009",
+      "target_canonical_ko_id": "conn_dev_ko_001",
+      "relation_type": "REQUIRES",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [
+        {"lecture_id": "unconstrained_optimisation_001", "block_index": 5},
+        {"lecture_id": "unconstrained_optimisation_001", "block_index": 6}
+      ],
+      "rationale": "The Newton Optimisation Update explicitly contains the gradient."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_002", "conn_dev_ko_009"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_009",
+      "target_canonical_ko_id": "conn_dev_ko_002",
+      "relation_type": "REQUIRES",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [
+        {"lecture_id": "unconstrained_optimisation_001", "block_index": 5},
+        {"lecture_id": "unconstrained_optimisation_001", "block_index": 6}
+      ],
+      "rationale": "The Newton Optimisation Update requires the inverse Hessian term."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_006", "conn_dev_ko_008"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_006",
+      "target_canonical_ko_id": "conn_dev_ko_008",
+      "relation_type": "CONTRASTS_WITH",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [{"lecture_id": "unconstrained_optimisation_001", "block_index": 7}],
+      "rationale": "The lecture explicitly contrasts step-size-controlled Gradient Descent with the curvature-adjusted Newton method."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_012", "conn_dev_ko_013"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_012",
+      "target_canonical_ko_id": "conn_dev_ko_013",
+      "relation_type": "APPLIED_IN",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [{"lecture_id": "maximum_likelihood_001", "block_index": 2}],
+      "rationale": "Maximum Likelihood Estimation explicitly uses the Log-Likelihood as its objective."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_001", "conn_dev_ko_014"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_001",
+      "target_canonical_ko_id": "conn_dev_ko_014",
+      "relation_type": "APPLIED_IN",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [
+        {"lecture_id": "maximum_likelihood_001", "block_index": 2},
+        {"lecture_id": "maximum_likelihood_001", "block_index": 3}
+      ],
+      "rationale": "The Score Function is explicitly constructed as a gradient of the Log-Likelihood."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_013", "conn_dev_ko_015"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_015",
+      "target_canonical_ko_id": "conn_dev_ko_013",
+      "relation_type": "APPLIED_IN",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [
+        {"lecture_id": "maximum_likelihood_001", "block_index": 2},
+        {"lecture_id": "maximum_likelihood_001", "block_index": 3},
+        {"lecture_id": "maximum_likelihood_001", "block_index": 4}
+      ],
+      "rationale": "The Score Equation supplies the stationarity condition used to identify an MLE candidate."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_013", "conn_dev_ko_022"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_022",
+      "target_canonical_ko_id": "conn_dev_ko_013",
+      "relation_type": "APPLIED_IN",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [{"lecture_id": "maximum_likelihood_001", "block_index": 4}],
+      "rationale": "The lecture explicitly applies Newton's Root-Finding Method within Maximum Likelihood Estimation."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_015", "conn_dev_ko_022"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_022",
+      "target_canonical_ko_id": "conn_dev_ko_015",
+      "relation_type": "APPLIED_IN",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [{"lecture_id": "maximum_likelihood_001", "block_index": 4}],
+      "rationale": "Newton's Root-Finding Method is used to solve the Score Equation when no closed form is available."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_011", "conn_dev_ko_013"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_013",
+      "target_canonical_ko_id": "conn_dev_ko_011",
+      "relation_type": "REQUIRES",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [
+        {"lecture_id": "maximum_likelihood_001", "block_index": 1},
+        {"lecture_id": "maximum_likelihood_001", "block_index": 2}
+      ],
+      "rationale": "Maximum Likelihood Estimation requires a Statistical Model from which its Log-Likelihood is defined."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_013", "conn_dev_ko_014"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_014",
+      "target_canonical_ko_id": "conn_dev_ko_013",
+      "relation_type": "APPLIED_IN",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [
+        {"lecture_id": "maximum_likelihood_001", "block_index": 2},
+        {"lecture_id": "maximum_likelihood_001", "block_index": 3},
+        {"lecture_id": "maximum_likelihood_001", "block_index": 4}
+      ],
+      "rationale": "The Score Function is used to form the stationarity condition for an MLE candidate."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_005", "conn_dev_ko_013"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_005",
+      "target_canonical_ko_id": "conn_dev_ko_013",
+      "relation_type": "APPLIED_IN",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [{"lecture_id": "maximum_likelihood_001", "block_index": 2}],
+      "rationale": "Maximum Likelihood Estimation explicitly treats the Log-Likelihood as an Objective Function."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_013", "conn_dev_ko_016"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_013",
+      "target_canonical_ko_id": "conn_dev_ko_016",
+      "relation_type": "APPLIED_IN",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [{"lecture_id": "maximum_likelihood_001", "block_index": 5}],
+      "rationale": "Maximum Likelihood Estimation is applied to the Gaussian Linear Regression model described in the lecture."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_017", "conn_dev_ko_019"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_017",
+      "target_canonical_ko_id": "conn_dev_ko_019",
+      "relation_type": "APPLIED_IN",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [{"lecture_id": "least_squares_learning_001", "block_index": 1}],
+      "rationale": "Ordinary Least Squares is defined by minimizing the Least Squares Objective."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_016", "conn_dev_ko_019"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_019",
+      "target_canonical_ko_id": "conn_dev_ko_016",
+      "relation_type": "APPLIED_IN",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [{"lecture_id": "least_squares_learning_001", "block_index": 1}],
+      "rationale": "Ordinary Least Squares is explicitly used to fit a Linear Regression model."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_017", "conn_dev_ko_018"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_018",
+      "target_canonical_ko_id": "conn_dev_ko_017",
+      "relation_type": "FORMALIZES",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [
+        {"lecture_id": "least_squares_learning_001", "block_index": 2},
+        {"lecture_id": "least_squares_learning_001", "block_index": 3},
+        {"lecture_id": "least_squares_learning_001", "block_index": 4}
+      ],
+      "rationale": "The MSE Formula explicitly formalizes the Least Squares Objective up to positive scaling."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_006", "conn_dev_ko_019"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_006",
+      "target_canonical_ko_id": "conn_dev_ko_019",
+      "relation_type": "APPLIED_IN",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [{"lecture_id": "least_squares_learning_001", "block_index": 4}],
+      "rationale": "The lecture explicitly applies Gradient Descent to Ordinary Least Squares."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_001", "conn_dev_ko_019"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_001",
+      "target_canonical_ko_id": "conn_dev_ko_019",
+      "relation_type": "APPLIED_IN",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [{"lecture_id": "least_squares_learning_001", "block_index": 4}],
+      "rationale": "The gradient of the Least Squares Objective is explicitly used when fitting by Gradient Descent."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_019", "conn_dev_ko_020"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_020",
+      "target_canonical_ko_id": "conn_dev_ko_019",
+      "relation_type": "EXTENDS",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [{"lecture_id": "least_squares_learning_001", "block_index": 5}],
+      "rationale": "Ridge Regression explicitly extends Ordinary Least Squares with a coefficient penalty."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_017", "conn_dev_ko_020"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_017",
+      "target_canonical_ko_id": "conn_dev_ko_020",
+      "relation_type": "APPLIED_IN",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [
+        {"lecture_id": "least_squares_learning_001", "block_index": 1},
+        {"lecture_id": "least_squares_learning_001", "block_index": 5}
+      ],
+      "rationale": "Ridge Regression retains the Least Squares Objective and adds a penalty to it."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_021", "conn_dev_ko_022"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_022",
+      "target_canonical_ko_id": "conn_dev_ko_021",
+      "relation_type": "APPLIED_IN",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [{"lecture_id": "nonlinear_root_finding_001", "block_index": 1}],
+      "rationale": "Newton's Root-Finding Method is a method applied to the Root-Finding Problem."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_022", "conn_dev_ko_025"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_025",
+      "target_canonical_ko_id": "conn_dev_ko_022",
+      "relation_type": "APPLIED_IN",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [{"lecture_id": "nonlinear_root_finding_001", "block_index": 1}],
+      "rationale": "Newton's Root-Finding Method explicitly uses the Derivative to construct its tangent correction."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_022", "conn_dev_ko_023"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_023",
+      "target_canonical_ko_id": "conn_dev_ko_022",
+      "relation_type": "FORMALIZES",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [
+        {"lecture_id": "nonlinear_root_finding_001", "block_index": 2},
+        {"lecture_id": "nonlinear_root_finding_001", "block_index": 3},
+        {"lecture_id": "nonlinear_root_finding_001", "block_index": 4}
+      ],
+      "rationale": "The displayed Newton Root Update explicitly formalizes the one-dimensional method."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_022", "conn_dev_ko_024"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_024",
+      "target_canonical_ko_id": "conn_dev_ko_022",
+      "relation_type": "EXTENDS",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [{"lecture_id": "nonlinear_root_finding_001", "block_index": 5}],
+      "rationale": "The Damped Newton Method explicitly extends Newton's method by scaling its correction."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_003", "conn_dev_ko_027"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_003",
+      "target_canonical_ko_id": "conn_dev_ko_027",
+      "relation_type": "APPLIED_IN",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [{"lecture_id": "explicit_ode_methods_001", "block_index": 2}],
+      "rationale": "The Forward Euler Method is explicitly obtained by applying the first-order Taylor approximation."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_010", "conn_dev_ko_027"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_010",
+      "target_canonical_ko_id": "conn_dev_ko_027",
+      "relation_type": "APPLIED_IN",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [
+        {"lecture_id": "explicit_ode_methods_001", "block_index": 2},
+        {"lecture_id": "explicit_ode_methods_001", "block_index": 4}
+      ],
+      "rationale": "The Step Size sets the interval used by each Forward Euler step."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_010", "conn_dev_ko_028"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_028",
+      "target_canonical_ko_id": "conn_dev_ko_010",
+      "relation_type": "REQUIRES",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [
+        {"lecture_id": "explicit_ode_methods_001", "block_index": 2},
+        {"lecture_id": "explicit_ode_methods_001", "block_index": 3},
+        {"lecture_id": "explicit_ode_methods_001", "block_index": 4}
+      ],
+      "rationale": "The Forward Euler Update requires the Step Size as its time increment."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_003", "conn_dev_ko_029"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_029",
+      "target_canonical_ko_id": "conn_dev_ko_003",
+      "relation_type": "REQUIRES",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [{"lecture_id": "explicit_ode_methods_001", "block_index": 5}],
+      "rationale": "The Local Truncation Error is characterized through terms omitted after the first-order Taylor approximation."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_016", "conn_dev_ko_017"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "source_canonical_ko_id": "conn_dev_ko_017",
+      "target_canonical_ko_id": "conn_dev_ko_016",
+      "relation_type": "APPLIED_IN",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [{"lecture_id": "least_squares_learning_001", "block_index": 1}],
+      "rationale": "The Least Squares Objective is explicitly minimized when fitting the Linear Regression model."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_001", "conn_dev_ko_005"],
+      "category": "NO_IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "evidence_refs": [{"lecture_id": "maximum_likelihood_001", "block_index": 2}],
+      "rationale": "Gradient and Objective Function co-occur through the separate Score Function and MLE roles; neither endpoint is directly applied in or required by the other."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_001", "conn_dev_ko_010"],
+      "category": "NO_IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "evidence_refs": [{"lecture_id": "unconstrained_optimisation_001", "block_index": 2}],
+      "rationale": "Gradient and Step Size are sibling inputs to Gradient Descent, not a supported directed Relation between each other."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_001", "conn_dev_ko_013"],
+      "category": "NO_IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "evidence_refs": [{"lecture_id": "maximum_likelihood_001", "block_index": 2}],
+      "rationale": "The Gradient reaches MLE through the explicitly modeled Score Function; the frozen text does not support a direct edge between these endpoints."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_005", "conn_dev_ko_014"],
+      "category": "NO_IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "evidence_refs": [{"lecture_id": "maximum_likelihood_001", "block_index": 2}],
+      "rationale": "Objective Function and Score Function have separate roles inside MLE, and their shared paragraph does not establish a direct ADR-004 Relation."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_021", "conn_dev_ko_025"],
+      "category": "NO_IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": true,
+      "evidence_refs": [{"lecture_id": "nonlinear_root_finding_001", "block_index": 1}],
+      "rationale": "Root-Finding Problem and Derivative are connected through Newton's method; the paragraph does not make one endpoint directly require or apply the other."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_005", "conn_dev_ko_012"],
+      "category": "OUT_OF_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": false,
+      "schema_gap_relation": "PLAYS_ROLE_AS",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [{"lecture_id": "maximum_likelihood_001", "block_index": 2}],
+      "rationale": "The Log-Likelihood plays the role of an Objective Function, which is not represented faithfully by the frozen schema."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_015", "conn_dev_ko_021"],
+      "category": "OUT_OF_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": false,
+      "schema_gap_relation": "INSTANCE_OF",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [{"lecture_id": "maximum_likelihood_001", "block_index": 4}],
+      "rationale": "Solving the Score Equation is presented as a Root-Finding Problem; the instance relation is outside ADR-004."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_011", "conn_dev_ko_016"],
+      "category": "OUT_OF_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": false,
+      "schema_gap_relation": "INSTANCE_OF",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [
+        {"lecture_id": "maximum_likelihood_001", "block_index": 1},
+        {"lecture_id": "maximum_likelihood_001", "block_index": 5}
+      ],
+      "rationale": "A Gaussian Linear Regression model is an instance of a Statistical Model, a relation absent from ADR-004."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_012", "conn_dev_ko_017"],
+      "category": "OUT_OF_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": false,
+      "schema_gap_relation": "EQUIVALENT_UNDER_ASSUMPTIONS",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [{"lecture_id": "maximum_likelihood_001", "block_index": 5}],
+      "rationale": "The Log-Likelihood and Least Squares Objective are conditionally equivalent under the stated Gaussian assumptions."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_013", "conn_dev_ko_019"],
+      "category": "OUT_OF_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": false,
+      "schema_gap_relation": "EQUIVALENT_UNDER_ASSUMPTIONS",
+      "evidence_support_scope": "cross_lecture_explicit",
+      "evidence_refs": [
+        {"lecture_id": "maximum_likelihood_001", "block_index": 5},
+        {"lecture_id": "least_squares_learning_001", "block_index": 6}
+      ],
+      "rationale": "Ordinary Least Squares and Maximum Likelihood Estimation coincide only under the stated Gaussian assumptions."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_005", "conn_dev_ko_017"],
+      "category": "OUT_OF_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": false,
+      "schema_gap_relation": "INSTANCE_OF",
+      "evidence_support_scope": "single_lecture_explicit",
+      "evidence_refs": [{"lecture_id": "least_squares_learning_001", "block_index": 4}],
+      "rationale": "The Least Squares Objective is a specific Objective Function, but the frozen schema has no instance relation."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_004", "conn_dev_ko_027"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": false,
+      "source_canonical_ko_id": "conn_dev_ko_004",
+      "target_canonical_ko_id": "conn_dev_ko_027",
+      "relation_type": "APPLIED_IN",
+      "evidence_support_scope": "multi_lecture_compositional",
+      "evidence_refs": [
+        {"lecture_id": "multivariable_derivatives_001", "block_index": 5},
+        {"lecture_id": "multivariable_derivatives_001", "block_index": 6},
+        {"lecture_id": "explicit_ode_methods_001", "block_index": 2}
+      ],
+      "rationale": "The Formula formalizes the Taylor approximation that the ODE lecture applies to obtain Forward Euler; this requires cross-lecture composition."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_007", "conn_dev_ko_019"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": false,
+      "source_canonical_ko_id": "conn_dev_ko_007",
+      "target_canonical_ko_id": "conn_dev_ko_019",
+      "relation_type": "APPLIED_IN",
+      "evidence_support_scope": "multi_lecture_compositional",
+      "evidence_refs": [
+        {"lecture_id": "unconstrained_optimisation_001", "block_index": 2},
+        {"lecture_id": "unconstrained_optimisation_001", "block_index": 3},
+        {"lecture_id": "least_squares_learning_001", "block_index": 4}
+      ],
+      "rationale": "The Update formalizes Gradient Descent, which the later lecture applies to Ordinary Least Squares."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_013", "conn_dev_ko_023"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": false,
+      "source_canonical_ko_id": "conn_dev_ko_023",
+      "target_canonical_ko_id": "conn_dev_ko_013",
+      "relation_type": "APPLIED_IN",
+      "evidence_support_scope": "multi_lecture_compositional",
+      "evidence_refs": [
+        {"lecture_id": "maximum_likelihood_001", "block_index": 4},
+        {"lecture_id": "nonlinear_root_finding_001", "block_index": 2},
+        {"lecture_id": "nonlinear_root_finding_001", "block_index": 3},
+        {"lecture_id": "nonlinear_root_finding_001", "block_index": 4}
+      ],
+      "rationale": "The Update formalizes the Newton method that the statistics lecture applies within Maximum Likelihood Estimation."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_015", "conn_dev_ko_023"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": false,
+      "source_canonical_ko_id": "conn_dev_ko_023",
+      "target_canonical_ko_id": "conn_dev_ko_015",
+      "relation_type": "APPLIED_IN",
+      "evidence_support_scope": "multi_lecture_compositional",
+      "evidence_refs": [
+        {"lecture_id": "maximum_likelihood_001", "block_index": 4},
+        {"lecture_id": "nonlinear_root_finding_001", "block_index": 2},
+        {"lecture_id": "nonlinear_root_finding_001", "block_index": 3},
+        {"lecture_id": "nonlinear_root_finding_001", "block_index": 4}
+      ],
+      "rationale": "The Update implements the Newton method used to solve the Score Equation, requiring Evidence from both lectures."
+    },
+    {
+      "endpoint_ids": ["conn_dev_ko_004", "conn_dev_ko_029"],
+      "category": "IN_SCHEMA_CONNECTION",
+      "primary_scoring_eligible": false,
+      "source_canonical_ko_id": "conn_dev_ko_004",
+      "target_canonical_ko_id": "conn_dev_ko_029",
+      "relation_type": "APPLIED_IN",
+      "evidence_support_scope": "multi_lecture_compositional",
+      "evidence_refs": [
+        {"lecture_id": "multivariable_derivatives_001", "block_index": 5},
+        {"lecture_id": "multivariable_derivatives_001", "block_index": 6},
+        {"lecture_id": "explicit_ode_methods_001", "block_index": 5}
+      ],
+      "rationale": "The Taylor Formula formalizes the approximation whose omitted higher-order terms govern Local Truncation Error."
+    }
+  ]
+}

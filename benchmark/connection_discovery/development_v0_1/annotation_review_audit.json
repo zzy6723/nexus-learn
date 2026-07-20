@@ -1,0 +1,126 @@
+{
+  "artifact_type": "connection_discovery_annotation_review_audit",
+  "version": "v0.1",
+  "status": "passed_with_scope_limitations",
+  "freeze_ready": true,
+  "inputs": {
+    "source_manifest": "benchmark/connection_discovery/development_v0_1/source_manifest.json",
+    "oracle_canonical_inventory": "benchmark/connection_discovery/development_v0_1/oracle_canonical_inventory.json",
+    "pair_universe": "benchmark/connection_discovery/development_v0_1/pair_universe.json",
+    "evidence_catalogs": "benchmark/connection_discovery/development_v0_1/evidence_catalogs.json",
+    "ground_truth": "benchmark/connection_discovery/development_v0_1/ground_truth.json"
+  },
+  "counts": {
+    "all_eligible_pairs": 387,
+    "primary_scored_pairs": 376,
+    "primary_positive_pairs": 41,
+    "primary_negative_pairs": 335,
+    "diagnostic_pairs": 11,
+    "categories": {
+      "IN_SCHEMA_CONNECTION": 46,
+      "NO_IN_SCHEMA_CONNECTION": 335,
+      "OUT_OF_SCHEMA_CONNECTION": 6
+    },
+    "relations": {
+      "APPLIED_IN": 31,
+      "CONTRASTS_WITH": 1,
+      "EXTENDS": 2,
+      "FORMALIZES": 4,
+      "REQUIRES": 8
+    },
+    "evidence_support_scopes": {
+      "multi_lecture_compositional": 5,
+      "single_lecture_explicit": 41
+    }
+  },
+  "evidence": {
+    "selected_items": 99,
+    "exact_catalog_matches": 99
+  },
+  "negative_review": {
+    "shared_block_negative_count": 5,
+    "explicitly_reviewed_shared_block_count": 5,
+    "unresolved_shared_block_count": 0,
+    "items": [
+      {
+        "canonical_pair_id": "conn_dev_pair_d88a461c47b9d32c",
+        "ko_a": "Gradient",
+        "ko_b": "Objective Function",
+        "annotation_origin": "explicit_reviewed_decision",
+        "rationale": "Gradient and Objective Function co-occur through the separate Score Function and MLE roles; neither endpoint is directly applied in or required by the other.",
+        "shared_blocks": [
+          {
+            "lecture_id": "maximum_likelihood_001",
+            "block_index": 2,
+            "evidence_id": "evidence_016"
+          }
+        ]
+      },
+      {
+        "canonical_pair_id": "conn_dev_pair_004a5d37e586342f",
+        "ko_a": "Gradient",
+        "ko_b": "Step Size",
+        "annotation_origin": "explicit_reviewed_decision",
+        "rationale": "Gradient and Step Size are sibling inputs to Gradient Descent, not a supported directed Relation between each other.",
+        "shared_blocks": [
+          {
+            "lecture_id": "unconstrained_optimisation_001",
+            "block_index": 2,
+            "evidence_id": "evidence_009"
+          }
+        ]
+      },
+      {
+        "canonical_pair_id": "conn_dev_pair_4a578fe32126af5d",
+        "ko_a": "Gradient",
+        "ko_b": "Maximum Likelihood Estimation",
+        "annotation_origin": "explicit_reviewed_decision",
+        "rationale": "The Gradient reaches MLE through the explicitly modeled Score Function; the frozen text does not support a direct edge between these endpoints.",
+        "shared_blocks": [
+          {
+            "lecture_id": "maximum_likelihood_001",
+            "block_index": 2,
+            "evidence_id": "evidence_016"
+          }
+        ]
+      },
+      {
+        "canonical_pair_id": "conn_dev_pair_dbc167d9bb7ce3f8",
+        "ko_a": "Objective Function",
+        "ko_b": "Score Function",
+        "annotation_origin": "explicit_reviewed_decision",
+        "rationale": "Objective Function and Score Function have separate roles inside MLE, and their shared paragraph does not establish a direct ADR-004 Relation.",
+        "shared_blocks": [
+          {
+            "lecture_id": "maximum_likelihood_001",
+            "block_index": 2,
+            "evidence_id": "evidence_009"
+          }
+        ]
+      },
+      {
+        "canonical_pair_id": "conn_dev_pair_7b6597ac0aac5113",
+        "ko_a": "Root-Finding Problem",
+        "ko_b": "Derivative",
+        "annotation_origin": "explicit_reviewed_decision",
+        "rationale": "Root-Finding Problem and Derivative are connected through Newton's method; the paragraph does not make one endpoint directly require or apply the other.",
+        "shared_blocks": [
+          {
+            "lecture_id": "nonlinear_root_finding_001",
+            "block_index": 1,
+            "evidence_id": "evidence_006"
+          }
+        ]
+      }
+    ]
+  },
+  "positive_scope": {
+    "primary_disjoint_provenance_positives": 0,
+    "diagnostic_disjoint_provenance_positives": 5
+  },
+  "scope_limitations": [
+    "No disjoint-provenance positive enters v0.1 primary scoring; the five compositional disjoint positives are diagnostic only.",
+    "RELATED_TO has no positive Ground Truth support."
+  ],
+  "errors": []
+}

@@ -1,6 +1,6 @@
 # 003-0: Benchmark and Evaluation Preparation
 
-**Status:** In progress
+**Status:** Ready for repository freeze
 **API calls:** None
 
 ## Purpose
@@ -54,15 +54,16 @@ The new authored development bundle is structurally complete:
 See `development_source_design.md`. The machine-readable universe is
 `benchmark/connection_discovery/development_v0_1/pair_universe.json`.
 
-## Next Gate
+## 003-0C Result
 
-003-0C must annotate all 387 pairs before any model run. It must create exact
-candidate-scoped Evidence catalogs, review every default-negative decision,
-freeze schema-gap and ambiguous handling, and define success criteria from the
-completed denominators.
+All 387 eligible pairs are annotated. Candidate-scoped Evidence catalogs,
+schema gaps, explicit hard negatives, success criteria, schemas, and the
+annotation review audit are complete. See `annotation_summary.md`.
+
+The non-Git completion artifact is `completion.json`. It intentionally keeps
+model execution disabled until the repository freeze commit is recorded.
 
 ## Completion Rule
 
-003-0 is complete only after the new source, canonical inventory, exhaustive
-pair annotations, schemas, evaluator behavior, and success criteria are frozen.
-The current stage must not yet emit a completion marker.
+003-0 is methodologically complete but not yet repository-frozen. No 003-1
+runner or model may consume the benchmark before the clean freeze gate.

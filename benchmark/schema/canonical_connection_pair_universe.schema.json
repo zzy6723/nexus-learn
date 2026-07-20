@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "canonical_connection_pair_universe.schema.json",
+  "title": "Canonical Connection Pair Universe",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_type",
+    "version",
+    "status",
+    "split",
+    "pair_identity",
+    "inputs",
+    "counts",
+    "gold_fields_present",
+    "pairs"
+  ],
+  "properties": {
+    "artifact_type": {"const": "canonical_connection_pair_universe"},
+    "version": {"const": "v0.1"},
+    "status": {"enum": ["ready_to_freeze", "frozen"]},
+    "split": {"enum": ["development", "holdout"]},
+    "pair_identity": {"const": "sha256_of_sorted_canonical_ids_v0.1"},
+    "inputs": {"type": "object"},
+    "counts": {"type": "object"},
+    "gold_fields_present": {"const": false},
+    "pairs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/pair"}
+    }
+  },
+  "$defs": {
+    "ko": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "canonical_ko_id",
+        "canonical_name",
+        "canonical_type",
+        "lecture_ids"
+      ],
+      "properties": {
+        "canonical_ko_id": {"type": "string", "pattern": "^conn_(dev|holdout)_ko_[0-9]{3,}$"},
+        "canonical_name": {"type": "string", "minLength": 1},
+        "canonical_type": {"enum": ["Concept", "Method", "Formula"]},
+        "lecture_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "pair": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "canonical_pair_id",
+        "ko_a",
+        "ko_b",
+        "provenance_stratum",
+        "scope_flags"
+      ],
+      "properties": {
+        "canonical_pair_id": {"type": "string", "pattern": "^conn_(dev|holdout)_pair_[0-9a-f]{16}$"},
+        "ko_a": {"$ref": "#/$defs/ko"},
+        "ko_b": {"$ref": "#/$defs/ko"},
+        "provenance_stratum": {
+          "enum": ["disjoint_provenance", "overlap_bridge"]
+        },
+        "scope_flags": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "same_course_cross_lecture",
+            "cross_course",
+            "same_topic_cross_lecture",
+            "cross_topic"
+          ],
+          "properties": {
+            "same_course_cross_lecture": {"type": "boolean"},
+            "cross_course": {"type": "boolean"},
+            "same_topic_cross_lecture": {"type": "boolean"},
+            "cross_topic": {"type": "boolean"}
+          }
+        }
+      }
+    }
+  }
+}

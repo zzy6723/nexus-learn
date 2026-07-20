@@ -1,7 +1,7 @@
 {
   "artifact_type": "connection_discovery_oracle_canonical_inventory",
   "version": "v0.1",
-  "status": "draft_pre_annotation",
+  "status": "ready_to_freeze",
   "split": "development",
   "allowed_types": ["Concept", "Method", "Formula"],
   "source_manifest": "benchmark/connection_discovery/development_v0_1/source_manifest.json",

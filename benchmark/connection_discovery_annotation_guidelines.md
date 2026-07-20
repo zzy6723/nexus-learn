@@ -1,7 +1,7 @@
 # Connection Discovery Annotation Guidelines
 
-**Status:** Draft for Experiment 003-0
-**Version:** v0.1-draft
+**Status:** Ready to freeze before Experiment 003 model execution
+**Version:** v0.1
 **Owner:** Project
 
 ## Annotation Unit

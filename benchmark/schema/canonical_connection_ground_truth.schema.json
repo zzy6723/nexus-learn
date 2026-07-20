@@ -1,0 +1,136 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "canonical_connection_ground_truth.schema.json",
+  "title": "Canonical Connection Ground Truth",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_type",
+    "version",
+    "status",
+    "split",
+    "annotation_protocol",
+    "evaluation_protocol",
+    "allowed_relation_types",
+    "inputs",
+    "counts",
+    "default_negative_review",
+    "pairs"
+  ],
+  "properties": {
+    "artifact_type": {"const": "canonical_connection_ground_truth"},
+    "version": {"const": "v0.1"},
+    "status": {"enum": ["ready_to_freeze", "frozen"]},
+    "split": {"enum": ["development", "holdout"]},
+    "annotation_protocol": {"type": "string", "minLength": 1},
+    "evaluation_protocol": {"type": "string", "minLength": 1},
+    "allowed_relation_types": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"$ref": "#/$defs/relation"}
+    },
+    "inputs": {"type": "object"},
+    "counts": {"type": "object"},
+    "default_negative_review": {"type": "object"},
+    "pairs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/annotation"}
+    }
+  },
+  "$defs": {
+    "relation": {
+      "enum": [
+        "REQUIRES",
+        "APPLIED_IN",
+        "EXTENDS",
+        "CONTRASTS_WITH",
+        "FORMALIZES",
+        "RELATED_TO"
+      ]
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evidence_id", "lecture_id", "block_index", "span"],
+      "properties": {
+        "evidence_id": {"type": "string", "minLength": 1},
+        "lecture_id": {"type": "string", "minLength": 1},
+        "block_index": {"type": "integer", "minimum": 1},
+        "span": {"type": "string", "minLength": 1}
+      }
+    },
+    "edge": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": [
+        "source_canonical_ko_id",
+        "target_canonical_ko_id",
+        "relation_type",
+        "symmetric"
+      ],
+      "properties": {
+        "source_canonical_ko_id": {"type": "string", "minLength": 1},
+        "target_canonical_ko_id": {"type": "string", "minLength": 1},
+        "relation_type": {"$ref": "#/$defs/relation"},
+        "symmetric": {"type": "boolean"}
+      }
+    },
+    "annotation": {
+      "type": "object",
+      "required": [
+        "canonical_pair_id",
+        "ko_a",
+        "ko_b",
+        "provenance_stratum",
+        "scope_flags",
+        "category",
+        "primary_scoring_eligible",
+        "gold_edge",
+        "acceptable_alternatives",
+        "evidence",
+        "evidence_support_scope",
+        "rationale",
+        "annotation_origin"
+      ],
+      "properties": {
+        "canonical_pair_id": {"type": "string", "minLength": 1},
+        "ko_a": {"type": "object"},
+        "ko_b": {"type": "object"},
+        "provenance_stratum": {
+          "enum": ["disjoint_provenance", "overlap_bridge"]
+        },
+        "scope_flags": {"type": "object"},
+        "category": {
+          "enum": [
+            "IN_SCHEMA_CONNECTION",
+            "NO_IN_SCHEMA_CONNECTION",
+            "OUT_OF_SCHEMA_CONNECTION",
+            "AMBIGUOUS"
+          ]
+        },
+        "primary_scoring_eligible": {"type": "boolean"},
+        "gold_edge": {"$ref": "#/$defs/edge"},
+        "acceptable_alternatives": {"type": "array"},
+        "evidence": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/evidence"}
+        },
+        "evidence_support_scope": {
+          "type": ["string", "null"],
+          "enum": [
+            "single_lecture_explicit",
+            "cross_lecture_explicit",
+            "multi_lecture_compositional",
+            null
+          ]
+        },
+        "rationale": {"type": "string", "minLength": 1},
+        "annotation_origin": {
+          "enum": ["reviewed_default_negative", "explicit_reviewed_decision"]
+        },
+        "schema_gap_relation": {"type": "string", "minLength": 1}
+      }
+    }
+  }
+}

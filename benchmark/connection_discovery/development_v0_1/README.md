@@ -1,6 +1,6 @@
 # Connection Discovery Development Source v0.1
 
-**Status:** Draft before Connection annotation
+**Status:** Ready to freeze before model execution
 **Role:** Experiment 003 development
 
 This authored source is designed for canonical-level cross-lecture Connection
@@ -26,5 +26,7 @@ independent validation source.
 - `pair_universe.json` is generated deterministically and contains no gold
   Connection labels.
 
-Connection Ground Truth and Evidence catalogs are added only in 003-0C after
-the source and universe pass structural review.
+Connection Ground Truth and candidate-scoped Evidence catalogs were completed
+in 003-0C without model execution. Their frozen denominators and known scope
+limits are recorded in
+`experiments/connection_discovery/003_0_benchmark_preparation/annotation_summary.md`.

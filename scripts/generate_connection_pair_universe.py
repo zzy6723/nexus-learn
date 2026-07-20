@@ -194,7 +194,7 @@ def build_pair_universe(
     return {
         "artifact_type": "canonical_connection_pair_universe",
         "version": "v0.1",
-        "status": "draft_pre_annotation",
+        "status": "ready_to_freeze",
         "split": source_manifest.get("split", "development"),
         "pair_identity": "sha256_of_sorted_canonical_ids_v0.1",
         "inputs": {

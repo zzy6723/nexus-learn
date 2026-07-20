@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "connection_prediction.schema.json",
+  "title": "Connection Discovery Prediction Bundle",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["artifact_type", "version", "results"],
+  "properties": {
+    "artifact_type": {"const": "canonical_connection_predictions"},
+    "version": {"const": "v0.1"},
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "canonical_pair_id",
+          "source_canonical_ko_id",
+          "target_canonical_ko_id",
+          "relation_type",
+          "evidence_ids",
+          "rationale"
+        ],
+        "properties": {
+          "canonical_pair_id": {"type": "string", "minLength": 1},
+          "source_canonical_ko_id": {"type": "string", "minLength": 1},
+          "target_canonical_ko_id": {"type": "string", "minLength": 1},
+          "relation_type": {
+            "enum": [
+              "REQUIRES",
+              "APPLIED_IN",
+              "EXTENDS",
+              "CONTRASTS_WITH",
+              "FORMALIZES",
+              "RELATED_TO",
+              "NO_RELATION"
+            ]
+          },
+          "evidence_ids": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {"type": "string", "pattern": "^evidence_[0-9]{3,}$"}
+          },
+          "rationale": {"type": "string"}
+        }
+      }
+    }
+  }
+}
