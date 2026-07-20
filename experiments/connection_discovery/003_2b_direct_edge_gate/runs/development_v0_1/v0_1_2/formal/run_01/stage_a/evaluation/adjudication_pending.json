@@ -1,0 +1,2317 @@
+{
+  "artifact_type": "direct_edge_evidence_adjudication_pending",
+  "version": "v0.1",
+  "prediction_content_sha256": "78f61e43f7a01f034884a78eab779d80ac0d50a0866c2f5defe29a7f21355243",
+  "pending_snapshot_sha256": "346e6e12e0c88d4fabf7754831d1b08b4d9344b3f8fc8b3cedda3558f608ccc5",
+  "pending_count": 61,
+  "items": [
+    {
+      "canonical_pair_id": "conn_dev_pair_000ee4a322d95897",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_011",
+          "canonical_name": "Statistical Model",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_021",
+          "canonical_name": "Root-Finding Problem",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001",
+            "nonlinear_root_finding_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_004"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_004",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 4,
+          "span": "At an interior differentiable maximum, a candidate satisfies the score equation \\(s(\\theta)=0\\). Finding such a candidate is a root-finding problem. When the score equation has no closed-form solution, Newton's root-finding method can be applied within maximum likelihood estimation."
+        }
+      ],
+      "rationale": "Evidence 004 states that finding a candidate satisfying the score equation is a root-finding problem, directly linking Statistical Model to Root-Finding Problem.",
+      "prediction_snapshot_sha256": "e1d83c2cc3b22bfbb731cde009e111d014ad08e6b1dea43426882ff52a00fb42"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_004a5d37e586342f",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_001",
+          "canonical_name": "Gradient",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001",
+            "multivariable_derivatives_001",
+            "unconstrained_optimisation_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_010",
+          "canonical_name": "Step Size",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "explicit_ode_methods_001",
+            "unconstrained_optimisation_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_009",
+        "evidence_010"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_009",
+          "lecture_id": "unconstrained_optimisation_001",
+          "block_index": 2,
+          "span": "Gradient descent requires the gradient of the objective function. With step size \\(\\alpha_k>0\\), the method moves opposite to the gradient. The gradient descent update is"
+        },
+        {
+          "evidence_id": "evidence_010",
+          "lecture_id": "unconstrained_optimisation_001",
+          "block_index": 3,
+          "span": "\\[\nx_{k+1}=x_k-\\alpha_k\\nabla f(x_k).\n\\]"
+        }
+      ],
+      "rationale": "Evidence 009 and 010 together state that gradient descent uses the gradient and a step size in the update x_{k+1}=x_k - \u03b1_k \u2207f(x_k), directly connecting Gradient and Step Size.",
+      "prediction_snapshot_sha256": "95a5cab37dce564b67e4ccf0167e89b569b4ad66ef67c1cc2dd58cec99e012f1"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_07f23c7717c1b2fc",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_001",
+          "canonical_name": "Gradient",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001",
+            "multivariable_derivatives_001",
+            "unconstrained_optimisation_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_002",
+          "canonical_name": "Hessian Matrix",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "multivariable_derivatives_001",
+            "unconstrained_optimisation_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_007"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_007",
+          "lecture_id": "multivariable_derivatives_001",
+          "block_index": 7,
+          "span": "The gradient supplies the local linear term, while the Hessian matrix supplies the curvature term used by a second-order approximation."
+        }
+      ],
+      "rationale": "Evidence 007 explicitly states that the gradient supplies the local linear term while the Hessian matrix supplies the curvature term, directly connecting the two concepts.",
+      "prediction_snapshot_sha256": "890d51c7f59c33ff6e262045313b69de6150d5092c748f5370db693e2588f169"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_0c89e22909d9eb04",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_011",
+          "canonical_name": "Statistical Model",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_022",
+          "canonical_name": "Newton's Root-Finding Method",
+          "canonical_type": "Method",
+          "lecture_ids": [
+            "maximum_likelihood_001",
+            "nonlinear_root_finding_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_004"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_004",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 4,
+          "span": "At an interior differentiable maximum, a candidate satisfies the score equation \\(s(\\theta)=0\\). Finding such a candidate is a root-finding problem. When the score equation has no closed-form solution, Newton's root-finding method can be applied within maximum likelihood estimation."
+        }
+      ],
+      "rationale": "Evidence 004 states that Newton's root-finding method can be applied within maximum likelihood estimation to solve the score equation, directly connecting Statistical Model and Newton's Root-Finding Method.",
+      "prediction_snapshot_sha256": "d55ee0d4eb1f07732fccdd5b418d8cbe438c5f105bc5dee40bfe6b9debea9cb8"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_1a9ada3036ab9ac1",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_019",
+          "canonical_name": "Ordinary Least Squares",
+          "canonical_type": "Method",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_021",
+          "canonical_name": "Root-Finding Problem",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001",
+            "nonlinear_root_finding_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_004"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_004",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 4,
+          "span": "At an interior differentiable maximum, a candidate satisfies the score equation \\(s(\\theta)=0\\). Finding such a candidate is a root-finding problem. When the score equation has no closed-form solution, Newton's root-finding method can be applied within maximum likelihood estimation."
+        }
+      ],
+      "rationale": "Evidence 004 states that finding a candidate satisfying the score equation is a root-finding problem, directly linking maximum likelihood estimation (which uses OLS under Gaussian assumptions) to the root-finding problem concept.",
+      "prediction_snapshot_sha256": "4c52e3fde9d3307e4e209fb3a83b36cbb70f59ddebc196d815e6185445561885"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_222c986cd9853739",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_006",
+          "canonical_name": "Gradient Descent",
+          "canonical_type": "Method",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "unconstrained_optimisation_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_017",
+          "canonical_name": "Least Squares Objective",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_016"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_016",
+          "lecture_id": "least_squares_learning_001",
+          "block_index": 4,
+          "span": "This formula formalizes the least squares objective up to a positive constant scaling. Gradient descent can be applied to ordinary least squares by using the gradient of this objective function."
+        }
+      ],
+      "rationale": "Evidence 016 states that gradient descent can be applied to ordinary least squares by using the gradient of the least squares objective, directly connecting Gradient Descent and Least Squares Objective.",
+      "prediction_snapshot_sha256": "acd1af7c27116ff59ca53cd014f174124b6ac2054e09365b49f23fd0b70f879c"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_260ec70c43c90b5d",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_011",
+          "canonical_name": "Statistical Model",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_016",
+          "canonical_name": "Linear Regression",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_005"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_005",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 5,
+          "span": "For a Gaussian linear regression model with constant variance, maximizing the log-likelihood is equivalent to minimizing the least squares objective. Under this assumption, ordinary least squares and maximum likelihood estimation select the same coefficient vector."
+        }
+      ],
+      "rationale": "Evidence 005 states that for a Gaussian linear regression model, maximizing the log-likelihood is equivalent to minimizing the least squares objective, directly connecting Statistical Model (as a family of distributions) to Linear Regression (as a specific model).",
+      "prediction_snapshot_sha256": "6e127e5f9ffc8c35af96daa73a12dfb09df231351abafa9f722a54620eb5f9ca"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_263db2f07078bcd1",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_003",
+          "canonical_name": "First-Order Taylor Approximation",
+          "canonical_type": "Method",
+          "lecture_ids": [
+            "explicit_ode_methods_001",
+            "multivariable_derivatives_001",
+            "unconstrained_optimisation_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_026",
+          "canonical_name": "Initial Value Problem",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "explicit_ode_methods_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_016"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_016",
+          "lecture_id": "explicit_ode_methods_001",
+          "block_index": 2,
+          "span": "Applying the first-order Taylor approximation over a step of length \\(h\\) gives the Forward Euler method. Its Forward Euler update is"
+        }
+      ],
+      "rationale": "Evidence 016 states that applying the first-order Taylor approximation over a step of length h gives the Forward Euler method, which is a numerical method for solving initial value problems, directly connecting the two KOs.",
+      "prediction_snapshot_sha256": "9ff8ef1e11faed72e4aead4b71301b6fadbee03af03abe2cf2473f035e0793e8"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_31fa9b658289ed76",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_013",
+          "canonical_name": "Maximum Likelihood Estimation",
+          "canonical_type": "Method",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_021",
+          "canonical_name": "Root-Finding Problem",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001",
+            "nonlinear_root_finding_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_004"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_004",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 4,
+          "span": "At an interior differentiable maximum, a candidate satisfies the score equation \\(s(\\theta)=0\\). Finding such a candidate is a root-finding problem. When the score equation has no closed-form solution, Newton's root-finding method can be applied within maximum likelihood estimation."
+        }
+      ],
+      "rationale": "Evidence 004 states that finding a candidate that satisfies the score equation is a root-finding problem, directly linking Maximum Likelihood Estimation to the Root-Finding Problem.",
+      "prediction_snapshot_sha256": "30705de5a2578e49f191db574003de12ca6c0aebb44a2debabaaeb5a4b12b556"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_3216d348a5fd0b14",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_006",
+          "canonical_name": "Gradient Descent",
+          "canonical_type": "Method",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "unconstrained_optimisation_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_016",
+          "canonical_name": "Linear Regression",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_016"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_016",
+          "lecture_id": "least_squares_learning_001",
+          "block_index": 4,
+          "span": "This formula formalizes the least squares objective up to a positive constant scaling. Gradient descent can be applied to ordinary least squares by using the gradient of this objective function."
+        }
+      ],
+      "rationale": "Evidence 016 states that gradient descent can be applied to ordinary least squares, which is the method used to fit linear regression, establishing a direct connection between Gradient Descent and Linear Regression.",
+      "prediction_snapshot_sha256": "d8c4b0a74e51a504f6d2fc4b7d812e80a99c37a630f9e65b82659b27201a6f42"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_334f084a05ae5d26",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_021",
+          "canonical_name": "Root-Finding Problem",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001",
+            "nonlinear_root_finding_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_022",
+          "canonical_name": "Newton's Root-Finding Method",
+          "canonical_type": "Method",
+          "lecture_ids": [
+            "maximum_likelihood_001",
+            "nonlinear_root_finding_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_004"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_004",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 4,
+          "span": "At an interior differentiable maximum, a candidate satisfies the score equation \\(s(\\theta)=0\\). Finding such a candidate is a root-finding problem. When the score equation has no closed-form solution, Newton's root-finding method can be applied within maximum likelihood estimation."
+        }
+      ],
+      "rationale": "Evidence 004 states that finding a candidate satisfying the score equation is a root-finding problem and that Newton's root-finding method can be applied, directly linking the two concepts.",
+      "prediction_snapshot_sha256": "4f8a3e8d9e819baea1aeeacd4927c36dace5ec8fd6b5c643b1ae766e307b18ce"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_3b005c7a79510244",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_006",
+          "canonical_name": "Gradient Descent",
+          "canonical_type": "Method",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "unconstrained_optimisation_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_018",
+          "canonical_name": "Mean Squared Error Formula",
+          "canonical_type": "Formula",
+          "lecture_ids": [
+            "least_squares_learning_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_011"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_011",
+          "lecture_id": "least_squares_learning_001",
+          "block_index": 4,
+          "span": "This formula formalizes the least squares objective up to a positive constant scaling. Gradient descent can be applied to ordinary least squares by using the gradient of this objective function."
+        }
+      ],
+      "rationale": "Evidence 011 states that gradient descent can be applied to ordinary least squares by using the gradient of the MSE objective, directly linking Gradient Descent and the Mean Squared Error Formula.",
+      "prediction_snapshot_sha256": "963e3e0823bf4b0760c07a5fba40c69263b6f88203c7e6fcabd8de996b731a36"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_3c1d300edac20859",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_014",
+          "canonical_name": "Score Function",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_021",
+          "canonical_name": "Root-Finding Problem",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001",
+            "nonlinear_root_finding_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_004"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_004",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 4,
+          "span": "At an interior differentiable maximum, a candidate satisfies the score equation \\(s(\\theta)=0\\). Finding such a candidate is a root-finding problem. When the score equation has no closed-form solution, Newton's root-finding method can be applied within maximum likelihood estimation."
+        }
+      ],
+      "rationale": "Evidence 004 states that finding a candidate satisfying the score equation is a root-finding problem, directly linking Score Function to Root-Finding Problem.",
+      "prediction_snapshot_sha256": "14c3fbd35716470c09505b3e7c8a2a971b241702d86ab68f60855d462cfbd88a"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_4a578fe32126af5d",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_001",
+          "canonical_name": "Gradient",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001",
+            "multivariable_derivatives_001",
+            "unconstrained_optimisation_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_013",
+          "canonical_name": "Maximum Likelihood Estimation",
+          "canonical_type": "Method",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_016"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_016",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 2,
+          "span": "Maximum likelihood estimation treats the log-likelihood as an objective function and selects a parameter value that maximizes it. The score function is the gradient of the log-likelihood with respect to the parameter,"
+        }
+      ],
+      "rationale": "Evidence 016 states that the score function is the gradient of the log-likelihood, directly linking Gradient to Maximum Likelihood Estimation.",
+      "prediction_snapshot_sha256": "14173afa83ba9f96213a54c6f34387b940f2809bf041007b93566375bcbf8a05"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_4bc5d12d0482885f",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_011",
+          "canonical_name": "Statistical Model",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_017",
+          "canonical_name": "Least Squares Objective",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_005"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_005",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 5,
+          "span": "For a Gaussian linear regression model with constant variance, maximizing the log-likelihood is equivalent to minimizing the least squares objective. Under this assumption, ordinary least squares and maximum likelihood estimation select the same coefficient vector."
+        }
+      ],
+      "rationale": "Evidence 005 states that for a Gaussian linear regression model, maximizing the log-likelihood is equivalent to minimizing the least squares objective, directly connecting Statistical Model and Least Squares Objective.",
+      "prediction_snapshot_sha256": "20945c82a31a398a9929b604e15b4731adcccd628aa5d66e90d668122ed0596b"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_5377d9a990974fd5",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_005",
+          "canonical_name": "Objective Function",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001",
+            "unconstrained_optimisation_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_007",
+          "canonical_name": "Gradient Descent Update",
+          "canonical_type": "Formula",
+          "lecture_ids": [
+            "unconstrained_optimisation_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_002",
+        "evidence_003"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_002",
+          "lecture_id": "unconstrained_optimisation_001",
+          "block_index": 2,
+          "span": "Gradient descent requires the gradient of the objective function. With step size \\(\\alpha_k>0\\), the method moves opposite to the gradient. The gradient descent update is"
+        },
+        {
+          "evidence_id": "evidence_003",
+          "lecture_id": "unconstrained_optimisation_001",
+          "block_index": 3,
+          "span": "\\[\nx_{k+1}=x_k-\\alpha_k\\nabla f(x_k).\n\\]"
+        }
+      ],
+      "rationale": "Evidence 002 states that gradient descent requires the gradient of the objective function and introduces the update, and Evidence 003 provides the gradient descent update formula, directly connecting Objective Function to Gradient Descent Update.",
+      "prediction_snapshot_sha256": "3879c6a8e09e74ee06e5f0adb4aecfc0bce978605b7334ab432ee448b314ec85"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_56bf2cab52cf025c",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_001",
+          "canonical_name": "Gradient",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001",
+            "multivariable_derivatives_001",
+            "unconstrained_optimisation_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_015",
+          "canonical_name": "Score Equation",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_016",
+        "evidence_017"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_016",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 2,
+          "span": "Maximum likelihood estimation treats the log-likelihood as an objective function and selects a parameter value that maximizes it. The score function is the gradient of the log-likelihood with respect to the parameter,"
+        },
+        {
+          "evidence_id": "evidence_017",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 3,
+          "span": "\\[\ns(\\theta)=\\nabla_{\\theta}\\ell(\\theta).\n\\]"
+        }
+      ],
+      "rationale": "Evidence 016 states 'The score function is the gradient of the log-likelihood with respect to the parameter', and Evidence 017 provides the formula s(\u03b8)=\u2207_\u03b8 \u2113(\u03b8), directly connecting Gradient (ko_a) to Score Equation (ko_b) by defining the score as the gradient of the log-likelihood.",
+      "prediction_snapshot_sha256": "bdc2cd95b8b9552b64f780fa6efa5e613197a8f1d11d584b7c2976d393116c33"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_5729188da76c91ec",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_005",
+          "canonical_name": "Objective Function",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001",
+            "unconstrained_optimisation_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_008",
+          "canonical_name": "Newton Optimisation Method",
+          "canonical_type": "Method",
+          "lecture_ids": [
+            "unconstrained_optimisation_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_005"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_005",
+          "lecture_id": "unconstrained_optimisation_001",
+          "block_index": 5,
+          "span": "The Newton optimisation method additionally requires the Hessian matrix to model local curvature. When the Hessian is invertible, the Newton optimisation update is"
+        }
+      ],
+      "rationale": "Evidence_005 states that the Newton optimisation method requires the Hessian matrix, which is a direct property of the objective function, establishing a direct connection.",
+      "prediction_snapshot_sha256": "bcd68d6de482ee27a6e4b0b9d13c99fe6c2556ff054a7ea59b57c2f0203e4fbe"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_5c9b50da7757c423",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_012",
+          "canonical_name": "Log-Likelihood",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_016",
+          "canonical_name": "Linear Regression",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_005"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_005",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 5,
+          "span": "For a Gaussian linear regression model with constant variance, maximizing the log-likelihood is equivalent to minimizing the least squares objective. Under this assumption, ordinary least squares and maximum likelihood estimation select the same coefficient vector."
+        }
+      ],
+      "rationale": "Evidence 005 states that for a Gaussian linear regression model, maximizing the log-likelihood is equivalent to minimizing the least squares objective, directly connecting Log-Likelihood and Linear Regression.",
+      "prediction_snapshot_sha256": "13061ed07c6d159ee4efa9e206a21c322a45d28486ee5e8c2635520d8151d78d"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_616b3cd5835de47d",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_001",
+          "canonical_name": "Gradient",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001",
+            "multivariable_derivatives_001",
+            "unconstrained_optimisation_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_014",
+          "canonical_name": "Score Function",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_016"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_016",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 2,
+          "span": "Maximum likelihood estimation treats the log-likelihood as an objective function and selects a parameter value that maximizes it. The score function is the gradient of the log-likelihood with respect to the parameter,"
+        }
+      ],
+      "rationale": "Evidence 016 states that the score function is the gradient of the log-likelihood, directly connecting Gradient and Score Function.",
+      "prediction_snapshot_sha256": "b21da50329124e7e6e24a278c064d96af521dd6bcdd69b3929f1c8dfad021e34"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_6c1b7aacdbb18827",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_012",
+          "canonical_name": "Log-Likelihood",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_017",
+          "canonical_name": "Least Squares Objective",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_005"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_005",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 5,
+          "span": "For a Gaussian linear regression model with constant variance, maximizing the log-likelihood is equivalent to minimizing the least squares objective. Under this assumption, ordinary least squares and maximum likelihood estimation select the same coefficient vector."
+        }
+      ],
+      "rationale": "Evidence 005 states that maximizing the log-likelihood is equivalent to minimizing the least squares objective under a Gaussian linear regression model, establishing a direct connection between the two concepts.",
+      "prediction_snapshot_sha256": "d422234c4ac2a80b40cab1a62aadcb88b16a7377fcca898bf9b183053c2c41da"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_799174f17022eacc",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_013",
+          "canonical_name": "Maximum Likelihood Estimation",
+          "canonical_type": "Method",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_014",
+          "canonical_name": "Score Function",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_002",
+        "evidence_003"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_002",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 2,
+          "span": "Maximum likelihood estimation treats the log-likelihood as an objective function and selects a parameter value that maximizes it. The score function is the gradient of the log-likelihood with respect to the parameter,"
+        },
+        {
+          "evidence_id": "evidence_003",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 3,
+          "span": "\\[\ns(\\theta)=\\nabla_{\\theta}\\ell(\\theta).\n\\]"
+        }
+      ],
+      "rationale": "Evidence 002 states that the score function is the gradient of the log-likelihood, and evidence 003 provides the mathematical definition, directly connecting Maximum Likelihood Estimation to the Score Function.",
+      "prediction_snapshot_sha256": "35b7fe3c914baef6625cc1b50b25204cc95e071e4065638a0bfb594ee36d4bfd"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7ae886fbc9be7241",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_005",
+          "canonical_name": "Objective Function",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001",
+            "unconstrained_optimisation_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_018",
+          "canonical_name": "Mean Squared Error Formula",
+          "canonical_type": "Formula",
+          "lecture_ids": [
+            "least_squares_learning_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_016"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_016",
+          "lecture_id": "least_squares_learning_001",
+          "block_index": 4,
+          "span": "This formula formalizes the least squares objective up to a positive constant scaling. Gradient descent can be applied to ordinary least squares by using the gradient of this objective function."
+        }
+      ],
+      "rationale": "Evidence 016 states that the MSE formula formalizes the least squares objective, which is an objective function, directly connecting the two KOs.",
+      "prediction_snapshot_sha256": "ffa26d604ad92fd7886186d4bb67e531108e3718c4144e9293f730686d53cac3"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7d14f554a3646ae6",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_005",
+          "canonical_name": "Objective Function",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001",
+            "unconstrained_optimisation_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_012",
+          "canonical_name": "Log-Likelihood",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_009"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_009",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 2,
+          "span": "Maximum likelihood estimation treats the log-likelihood as an objective function and selects a parameter value that maximizes it. The score function is the gradient of the log-likelihood with respect to the parameter,"
+        }
+      ],
+      "rationale": "Evidence 009 explicitly states that maximum likelihood estimation treats the log-likelihood as an objective function, establishing a direct connection between Log-Likelihood and Objective Function.",
+      "prediction_snapshot_sha256": "b3b8ad3f7d1bc36450e3940e2c3603a30be4a28e85b8fb6c4629218206ec50f1"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_855fc91eae345c72",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_002",
+          "canonical_name": "Hessian Matrix",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "multivariable_derivatives_001",
+            "unconstrained_optimisation_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_008",
+          "canonical_name": "Newton Optimisation Method",
+          "canonical_type": "Method",
+          "lecture_ids": [
+            "unconstrained_optimisation_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_012"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_012",
+          "lecture_id": "unconstrained_optimisation_001",
+          "block_index": 5,
+          "span": "The Newton optimisation method additionally requires the Hessian matrix to model local curvature. When the Hessian is invertible, the Newton optimisation update is"
+        }
+      ],
+      "rationale": "Evidence_012 explicitly states that the Newton optimisation method requires the Hessian matrix, establishing a direct connection between the two concepts.",
+      "prediction_snapshot_sha256": "d7638722b02aae8f5d9db923a837551eada6cad9f47df7ac2c0264256f7461fc"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_88939b4d17cdfb3e",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_005",
+          "canonical_name": "Objective Function",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001",
+            "unconstrained_optimisation_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_017",
+          "canonical_name": "Least Squares Objective",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_012"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_012",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 5,
+          "span": "For a Gaussian linear regression model with constant variance, maximizing the log-likelihood is equivalent to minimizing the least squares objective. Under this assumption, ordinary least squares and maximum likelihood estimation select the same coefficient vector."
+        }
+      ],
+      "rationale": "Evidence 012 states that maximizing the log-likelihood is equivalent to minimizing the least squares objective, directly connecting Objective Function and Least Squares Objective.",
+      "prediction_snapshot_sha256": "5e35e982c8cf75e18dd62e455059e798e63f002c69587a8744f5c3d070043fe1"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_8c981e7dd58feb47",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_013",
+          "canonical_name": "Maximum Likelihood Estimation",
+          "canonical_type": "Method",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_019",
+          "canonical_name": "Ordinary Least Squares",
+          "canonical_type": "Method",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_005"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_005",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 5,
+          "span": "For a Gaussian linear regression model with constant variance, maximizing the log-likelihood is equivalent to minimizing the least squares objective. Under this assumption, ordinary least squares and maximum likelihood estimation select the same coefficient vector."
+        }
+      ],
+      "rationale": "Evidence 005 states that under a Gaussian linear regression model, ordinary least squares and maximum likelihood estimation select the same coefficient vector, establishing a direct equivalence between the two methods.",
+      "prediction_snapshot_sha256": "688f306115b2f9eef8981cc3a652a73f74dbe8fc6f761796ab75938b8fb0d9ec"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_8fae4bf3dd480f71",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_001",
+          "canonical_name": "Gradient",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001",
+            "multivariable_derivatives_001",
+            "unconstrained_optimisation_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_012",
+          "canonical_name": "Log-Likelihood",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_016",
+        "evidence_017"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_016",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 2,
+          "span": "Maximum likelihood estimation treats the log-likelihood as an objective function and selects a parameter value that maximizes it. The score function is the gradient of the log-likelihood with respect to the parameter,"
+        },
+        {
+          "evidence_id": "evidence_017",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 3,
+          "span": "\\[\ns(\\theta)=\\nabla_{\\theta}\\ell(\\theta).\n\\]"
+        }
+      ],
+      "rationale": "Evidence 016 states 'The score function is the gradient of the log-likelihood with respect to the parameter', and Evidence 017 provides the formula, directly connecting Gradient and Log-Likelihood.",
+      "prediction_snapshot_sha256": "69eef019fbc79b8e18cef23735ba32b1420ddb58c3e5a3f9f46a7bf78f5dae23"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9411fb11503a6f0f",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_005",
+          "canonical_name": "Objective Function",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001",
+            "unconstrained_optimisation_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_010",
+          "canonical_name": "Step Size",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "explicit_ode_methods_001",
+            "unconstrained_optimisation_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_002"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_002",
+          "lecture_id": "unconstrained_optimisation_001",
+          "block_index": 2,
+          "span": "Gradient descent requires the gradient of the objective function. With step size \\(\\alpha_k>0\\), the method moves opposite to the gradient. The gradient descent update is"
+        }
+      ],
+      "rationale": "Evidence_002 states that gradient descent requires the gradient of the objective function and uses a step size, directly connecting Objective Function and Step Size.",
+      "prediction_snapshot_sha256": "955ad4324e3826e295dec0b7a408c1aaf66591753810da01b25c68c50c9c9351"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9b1e66cc5876fb95",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_016",
+          "canonical_name": "Linear Regression",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_021",
+          "canonical_name": "Root-Finding Problem",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001",
+            "nonlinear_root_finding_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_004"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_004",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 4,
+          "span": "At an interior differentiable maximum, a candidate satisfies the score equation \\(s(\\theta)=0\\). Finding such a candidate is a root-finding problem. When the score equation has no closed-form solution, Newton's root-finding method can be applied within maximum likelihood estimation."
+        }
+      ],
+      "rationale": "Evidence 004 states that finding a candidate satisfying the score equation is a root-finding problem, directly linking Linear Regression (via MLE) to Root-Finding Problem.",
+      "prediction_snapshot_sha256": "c489107403a0233b9e86e64b12648276e4000ec1cbfbfa1ee06e1830bceb4762"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9cd38efffcca81cd",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_017",
+          "canonical_name": "Least Squares Objective",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_020",
+          "canonical_name": "Ridge Regression",
+          "canonical_type": "Method",
+          "lecture_ids": [
+            "least_squares_learning_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_010"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_010",
+          "lecture_id": "least_squares_learning_001",
+          "block_index": 5,
+          "span": "Ridge regression extends ordinary least squares by adding a squared-coefficient penalty to the objective. The penalty can improve numerical stability and reduce sensitivity to highly correlated features."
+        }
+      ],
+      "rationale": "Evidence 010 states that Ridge regression extends ordinary least squares by adding a penalty to the objective, directly connecting the Least Squares Objective (ko_a) to Ridge Regression (ko_b).",
+      "prediction_snapshot_sha256": "9b6bdb5997fddcee9abc3cebb03eff436c869ec755fc51238ddf675c38e0dfff"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a1e6b8f76fd16f4d",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_021",
+          "canonical_name": "Root-Finding Problem",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001",
+            "nonlinear_root_finding_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_023",
+          "canonical_name": "Newton Root Update",
+          "canonical_type": "Formula",
+          "lecture_ids": [
+            "nonlinear_root_finding_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_004",
+        "evidence_006",
+        "evidence_007",
+        "evidence_008"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_004",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 4,
+          "span": "At an interior differentiable maximum, a candidate satisfies the score equation \\(s(\\theta)=0\\). Finding such a candidate is a root-finding problem. When the score equation has no closed-form solution, Newton's root-finding method can be applied within maximum likelihood estimation."
+        },
+        {
+          "evidence_id": "evidence_006",
+          "lecture_id": "nonlinear_root_finding_001",
+          "block_index": 1,
+          "span": "A root-finding problem asks for a point \\(x^*\\) satisfying \\(g(x^*)=0\\). Newton's root-finding method requires the derivative of \\(g\\) and replaces the function locally by its tangent line."
+        },
+        {
+          "evidence_id": "evidence_007",
+          "lecture_id": "nonlinear_root_finding_001",
+          "block_index": 2,
+          "span": "Provided \\(g'(x_k)\\neq 0\\), the Newton root update is"
+        },
+        {
+          "evidence_id": "evidence_008",
+          "lecture_id": "nonlinear_root_finding_001",
+          "block_index": 3,
+          "span": "\\[\nx_{k+1}=x_k-\\frac{g(x_k)}{g'(x_k)}.\n\\]"
+        }
+      ],
+      "rationale": "Evidence 004 states that Newton's root-finding method can be applied to the root-finding problem, and evidence 006-008 define the Newton root update as the iterative formula used in Newton's method for root-finding.",
+      "prediction_snapshot_sha256": "f42a38ee13654d5666f30b45373b76fe8bd0de46bc256bd0d2aea3067b08909f"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a234bad0c2a17d8c",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_015",
+          "canonical_name": "Score Equation",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_017",
+          "canonical_name": "Least Squares Objective",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_005"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_005",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 5,
+          "span": "For a Gaussian linear regression model with constant variance, maximizing the log-likelihood is equivalent to minimizing the least squares objective. Under this assumption, ordinary least squares and maximum likelihood estimation select the same coefficient vector."
+        }
+      ],
+      "rationale": "Evidence 005 states that for Gaussian linear regression, maximizing the log-likelihood is equivalent to minimizing the least squares objective, directly connecting Score Equation (via log-likelihood) to Least Squares Objective.",
+      "prediction_snapshot_sha256": "bd078d85ef507519891b47c8448b20a0ce50a8bcf70c89b8acfdd3a11094588b"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a92bdea086a3cd0c",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_012",
+          "canonical_name": "Log-Likelihood",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_019",
+          "canonical_name": "Ordinary Least Squares",
+          "canonical_type": "Method",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_005"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_005",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 5,
+          "span": "For a Gaussian linear regression model with constant variance, maximizing the log-likelihood is equivalent to minimizing the least squares objective. Under this assumption, ordinary least squares and maximum likelihood estimation select the same coefficient vector."
+        }
+      ],
+      "rationale": "Evidence 005 states that for a Gaussian linear regression model with constant variance, maximizing the log-likelihood is equivalent to minimizing the least squares objective, directly connecting Log-Likelihood and Ordinary Least Squares.",
+      "prediction_snapshot_sha256": "5fbcaba5a1349d614615784636246e38be8755f7932a0406669a497766767957"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ad73d420644fe99f",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_003",
+          "canonical_name": "First-Order Taylor Approximation",
+          "canonical_type": "Method",
+          "lecture_ids": [
+            "explicit_ode_methods_001",
+            "multivariable_derivatives_001",
+            "unconstrained_optimisation_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_005",
+          "canonical_name": "Objective Function",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001",
+            "unconstrained_optimisation_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_011"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_011",
+          "lecture_id": "unconstrained_optimisation_001",
+          "block_index": 4,
+          "span": "For a small proposed displacement, the first-order Taylor approximation predicts the resulting objective change. This explains why a displacement opposite to the gradient is locally descending when the step size is sufficiently small."
+        }
+      ],
+      "rationale": "Evidence 011 states that the first-order Taylor approximation predicts the objective change for a small displacement, directly linking the method to the objective function.",
+      "prediction_snapshot_sha256": "68fdce4cde2bd265d33ed9495b128082b0894ff314b94e85fd84fbcf6cc37d63"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_b0c235b2d349eff7",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_018",
+          "canonical_name": "Mean Squared Error Formula",
+          "canonical_type": "Formula",
+          "lecture_ids": [
+            "least_squares_learning_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_019",
+          "canonical_name": "Ordinary Least Squares",
+          "canonical_type": "Method",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_007",
+        "evidence_008",
+        "evidence_009"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_007",
+          "lecture_id": "least_squares_learning_001",
+          "block_index": 2,
+          "span": "For observations \\((x_i,y_i)\\), the mean squared error formula is"
+        },
+        {
+          "evidence_id": "evidence_008",
+          "lecture_id": "least_squares_learning_001",
+          "block_index": 3,
+          "span": "\\[\n\\operatorname{MSE}(\\beta)=\\frac{1}{n}\\sum_{i=1}^{n}(y_i-x_i^\\top\\beta)^2.\n\\]"
+        },
+        {
+          "evidence_id": "evidence_009",
+          "lecture_id": "least_squares_learning_001",
+          "block_index": 4,
+          "span": "This formula formalizes the least squares objective up to a positive constant scaling. Gradient descent can be applied to ordinary least squares by using the gradient of this objective function."
+        }
+      ],
+      "rationale": "Evidence 007 and 008 present the MSE formula, and evidence 009 states that this formula formalizes the least squares objective used in ordinary least squares, establishing a direct definitional connection.",
+      "prediction_snapshot_sha256": "2b6098f2c3e237df766d1b552c103be5f6efb66481c9ce8088b312344ae18f5a"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_b1a1609d22506ef6",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_013",
+          "canonical_name": "Maximum Likelihood Estimation",
+          "canonical_type": "Method",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_016",
+          "canonical_name": "Linear Regression",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_005",
+        "evidence_011"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_005",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 5,
+          "span": "For a Gaussian linear regression model with constant variance, maximizing the log-likelihood is equivalent to minimizing the least squares objective. Under this assumption, ordinary least squares and maximum likelihood estimation select the same coefficient vector."
+        },
+        {
+          "evidence_id": "evidence_011",
+          "lecture_id": "least_squares_learning_001",
+          "block_index": 6,
+          "span": "Under a Gaussian noise model, ordinary least squares also has a maximum likelihood estimation interpretation. That equivalence depends on the statistical assumptions and is not an identity between the two methods in every model."
+        }
+      ],
+      "rationale": "Evidence states that for Gaussian linear regression, MLE is equivalent to least squares, and that OLS has an MLE interpretation under Gaussian noise.",
+      "prediction_snapshot_sha256": "98d1460d3f4e9f37abaf5966033b6fe6ab7b4d453d521ebfea100dc4d8619874"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_b5ea294ae5f29863",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_005",
+          "canonical_name": "Objective Function",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001",
+            "unconstrained_optimisation_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_015",
+          "canonical_name": "Score Equation",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_009",
+        "evidence_010"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_009",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 2,
+          "span": "Maximum likelihood estimation treats the log-likelihood as an objective function and selects a parameter value that maximizes it. The score function is the gradient of the log-likelihood with respect to the parameter,"
+        },
+        {
+          "evidence_id": "evidence_010",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 3,
+          "span": "\\[\ns(\\theta)=\\nabla_{\\theta}\\ell(\\theta).\n\\]"
+        }
+      ],
+      "rationale": "Evidence 009 states that the score function is the gradient of the log-likelihood, and evidence 010 defines the score equation as s(\u03b8)=0, directly linking the objective function (log-likelihood) to the score equation.",
+      "prediction_snapshot_sha256": "6d5bf3167ca7f41de8cccb85681d2e21b42f6fc46213344d4ce9b6af5811b28f"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_be2636a5d8bc8b4c",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_016",
+          "canonical_name": "Linear Regression",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_018",
+          "canonical_name": "Mean Squared Error Formula",
+          "canonical_type": "Formula",
+          "lecture_ids": [
+            "least_squares_learning_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_006",
+        "evidence_007",
+        "evidence_008"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_006",
+          "lecture_id": "least_squares_learning_001",
+          "block_index": 1,
+          "span": "Linear regression models a response using a linear function of the input features. Ordinary least squares fits a linear regression model by minimizing the least squares objective over the coefficient vector \\(\\beta\\)."
+        },
+        {
+          "evidence_id": "evidence_007",
+          "lecture_id": "least_squares_learning_001",
+          "block_index": 2,
+          "span": "For observations \\((x_i,y_i)\\), the mean squared error formula is"
+        },
+        {
+          "evidence_id": "evidence_008",
+          "lecture_id": "least_squares_learning_001",
+          "block_index": 3,
+          "span": "\\[\n\\operatorname{MSE}(\\beta)=\\frac{1}{n}\\sum_{i=1}^{n}(y_i-x_i^\\top\\beta)^2.\n\\]"
+        }
+      ],
+      "rationale": "Evidence 006 states that linear regression is fit by minimizing the least squares objective, and evidence 007-008 provide the MSE formula which is the least squares objective, directly connecting Linear Regression to the Mean Squared Error Formula.",
+      "prediction_snapshot_sha256": "b5de7c7f4dc1cb303f9ba50448f396e58ae9abdc79a2bbc8a634ee494ddeb93a"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_be5dff9ee6b32e1a",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_005",
+          "canonical_name": "Objective Function",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001",
+            "unconstrained_optimisation_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_020",
+          "canonical_name": "Ridge Regression",
+          "canonical_type": "Method",
+          "lecture_ids": [
+            "least_squares_learning_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_017"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_017",
+          "lecture_id": "least_squares_learning_001",
+          "block_index": 5,
+          "span": "Ridge regression extends ordinary least squares by adding a squared-coefficient penalty to the objective. The penalty can improve numerical stability and reduce sensitivity to highly correlated features."
+        }
+      ],
+      "rationale": "Evidence 017 states that Ridge regression extends ordinary least squares by adding a penalty to the objective, directly connecting the Objective Function concept to Ridge Regression.",
+      "prediction_snapshot_sha256": "0e3b109fea03ca373c9cbf107f0715900ef96e29215df69cadb745112ccdc167"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c02b6a5def080df9",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_003",
+          "canonical_name": "First-Order Taylor Approximation",
+          "canonical_type": "Method",
+          "lecture_ids": [
+            "explicit_ode_methods_001",
+            "multivariable_derivatives_001",
+            "unconstrained_optimisation_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_028",
+          "canonical_name": "Forward Euler Update",
+          "canonical_type": "Formula",
+          "lecture_ids": [
+            "explicit_ode_methods_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_016",
+        "evidence_017"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_016",
+          "lecture_id": "explicit_ode_methods_001",
+          "block_index": 2,
+          "span": "Applying the first-order Taylor approximation over a step of length \\(h\\) gives the Forward Euler method. Its Forward Euler update is"
+        },
+        {
+          "evidence_id": "evidence_017",
+          "lecture_id": "explicit_ode_methods_001",
+          "block_index": 3,
+          "span": "\\[\ny_{n+1}=y_n+hF(t_n,y_n).\n\\]"
+        }
+      ],
+      "rationale": "Evidence 016 states that applying the first-order Taylor approximation over a step of length h gives the Forward Euler method, and evidence 017 provides the Forward Euler update formula, directly linking the two KOs.",
+      "prediction_snapshot_sha256": "052b58d8a2d7878a4e4b1c5914a4274a2e8469b7ec24a1c539ad4c9f318c5895"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c862968c2f7bbf13",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_015",
+          "canonical_name": "Score Equation",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_021",
+          "canonical_name": "Root-Finding Problem",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001",
+            "nonlinear_root_finding_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_004"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_004",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 4,
+          "span": "At an interior differentiable maximum, a candidate satisfies the score equation \\(s(\\theta)=0\\). Finding such a candidate is a root-finding problem. When the score equation has no closed-form solution, Newton's root-finding method can be applied within maximum likelihood estimation."
+        }
+      ],
+      "rationale": "Evidence 004 states that solving the score equation s(\u03b8)=0 is a root-finding problem, directly linking Score Equation to Root-Finding Problem.",
+      "prediction_snapshot_sha256": "0091f7985fe8adefce3f4e17f0feb506631951931ddd3ecab530580e7c31c63d"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c9b55dc727622af1",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_017",
+          "canonical_name": "Least Squares Objective",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_018",
+          "canonical_name": "Mean Squared Error Formula",
+          "canonical_type": "Formula",
+          "lecture_ids": [
+            "least_squares_learning_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_009"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_009",
+          "lecture_id": "least_squares_learning_001",
+          "block_index": 4,
+          "span": "This formula formalizes the least squares objective up to a positive constant scaling. Gradient descent can be applied to ordinary least squares by using the gradient of this objective function."
+        }
+      ],
+      "rationale": "Evidence 009 states that the MSE formula formalizes the least squares objective up to a positive constant scaling, directly linking the two Knowledge Objects.",
+      "prediction_snapshot_sha256": "08b2b49bd850daa6836f86068ce35aa21bfbeb4430e2b3f93fd3f361e273f37b"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c9da9f7c5ff3c1f6",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_012",
+          "canonical_name": "Log-Likelihood",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_022",
+          "canonical_name": "Newton's Root-Finding Method",
+          "canonical_type": "Method",
+          "lecture_ids": [
+            "maximum_likelihood_001",
+            "nonlinear_root_finding_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_004"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_004",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 4,
+          "span": "At an interior differentiable maximum, a candidate satisfies the score equation \\(s(\\theta)=0\\). Finding such a candidate is a root-finding problem. When the score equation has no closed-form solution, Newton's root-finding method can be applied within maximum likelihood estimation."
+        }
+      ],
+      "rationale": "Evidence 004 states that Newton's root-finding method can be applied within maximum likelihood estimation to solve the score equation derived from the log-likelihood, establishing a direct connection between Log-Likelihood and Newton's Root-Finding Method.",
+      "prediction_snapshot_sha256": "bb40213073b462eb1498c741614d72a9e8836b87fcc4fc2d4961e61591495753"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ce63516ba4c4f71d",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_005",
+          "canonical_name": "Objective Function",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001",
+            "unconstrained_optimisation_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_011",
+          "canonical_name": "Statistical Model",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_009"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_009",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 2,
+          "span": "Maximum likelihood estimation treats the log-likelihood as an objective function and selects a parameter value that maximizes it. The score function is the gradient of the log-likelihood with respect to the parameter,"
+        }
+      ],
+      "rationale": "Evidence 009 states that maximum likelihood estimation treats the log-likelihood as an objective function, directly connecting Statistical Model (via log-likelihood) to Objective Function.",
+      "prediction_snapshot_sha256": "d51004c8ba7810cce86a8568cf610c5d8e9a6dc9185421ac63f683097e28b96f"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d6043a4c35e6c8b9",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_016",
+          "canonical_name": "Linear Regression",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_017",
+          "canonical_name": "Least Squares Objective",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_005"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_005",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 5,
+          "span": "For a Gaussian linear regression model with constant variance, maximizing the log-likelihood is equivalent to minimizing the least squares objective. Under this assumption, ordinary least squares and maximum likelihood estimation select the same coefficient vector."
+        }
+      ],
+      "rationale": "Evidence 005 states that for a Gaussian linear regression model, maximizing the log-likelihood is equivalent to minimizing the least squares objective, directly connecting Linear Regression and Least Squares Objective.",
+      "prediction_snapshot_sha256": "94edbacfbbec4441a2bb50fe1576633e30feca19119544534d90b1517d5ed4c7"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d64d8e658f6dafd8",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_022",
+          "canonical_name": "Newton's Root-Finding Method",
+          "canonical_type": "Method",
+          "lecture_ids": [
+            "maximum_likelihood_001",
+            "nonlinear_root_finding_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_023",
+          "canonical_name": "Newton Root Update",
+          "canonical_type": "Formula",
+          "lecture_ids": [
+            "nonlinear_root_finding_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_009"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_009",
+          "lecture_id": "nonlinear_root_finding_001",
+          "block_index": 4,
+          "span": "The Newton root update formalizes Newton's root-finding method in one dimension. Near a simple root, the derivative controls the tangent correction."
+        }
+      ],
+      "rationale": "Evidence 009 states that the Newton root update formalizes Newton's root-finding method, directly connecting the method (ko_a) to the formula (ko_b).",
+      "prediction_snapshot_sha256": "9f1c59f6c2bb4eb43a2536d220738bf118494a2f72a6687dc99b6b78e4376bf7"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d88a461c47b9d32c",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_001",
+          "canonical_name": "Gradient",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001",
+            "multivariable_derivatives_001",
+            "unconstrained_optimisation_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_005",
+          "canonical_name": "Objective Function",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001",
+            "unconstrained_optimisation_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_009"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_009",
+          "lecture_id": "unconstrained_optimisation_001",
+          "block_index": 2,
+          "span": "Gradient descent requires the gradient of the objective function. With step size \\(\\alpha_k>0\\), the method moves opposite to the gradient. The gradient descent update is"
+        }
+      ],
+      "rationale": "Evidence 009 states that gradient descent requires the gradient of the objective function, directly linking Gradient and Objective Function.",
+      "prediction_snapshot_sha256": "dcb756fc60ace4ce640ffe981defea331e8a61340da641292ca2c067a9ad4de2"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_da1c18bdf793236f",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_012",
+          "canonical_name": "Log-Likelihood",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_021",
+          "canonical_name": "Root-Finding Problem",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001",
+            "nonlinear_root_finding_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_004"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_004",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 4,
+          "span": "At an interior differentiable maximum, a candidate satisfies the score equation \\(s(\\theta)=0\\). Finding such a candidate is a root-finding problem. When the score equation has no closed-form solution, Newton's root-finding method can be applied within maximum likelihood estimation."
+        }
+      ],
+      "rationale": "Evidence 004 states that finding a candidate satisfying the score equation is a root-finding problem, directly connecting Log-Likelihood (via its gradient) to Root-Finding Problem.",
+      "prediction_snapshot_sha256": "dddcb7d55b06d483c1fc550ccb48cd48c05ebbd20ee803c556850c60e17468a0"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_dbc167d9bb7ce3f8",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_005",
+          "canonical_name": "Objective Function",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001",
+            "unconstrained_optimisation_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_014",
+          "canonical_name": "Score Function",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_009"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_009",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 2,
+          "span": "Maximum likelihood estimation treats the log-likelihood as an objective function and selects a parameter value that maximizes it. The score function is the gradient of the log-likelihood with respect to the parameter,"
+        }
+      ],
+      "rationale": "Evidence 009 states that the score function is the gradient of the log-likelihood, which is treated as an objective function, directly connecting the two concepts.",
+      "prediction_snapshot_sha256": "6ce06cd01df95a9a3a9f403d30680b5488a4a7d08ca2d296f2a429aa35404d9a"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_dcf07ffb792c61d7",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_014",
+          "canonical_name": "Score Function",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_022",
+          "canonical_name": "Newton's Root-Finding Method",
+          "canonical_type": "Method",
+          "lecture_ids": [
+            "maximum_likelihood_001",
+            "nonlinear_root_finding_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_004"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_004",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 4,
+          "span": "At an interior differentiable maximum, a candidate satisfies the score equation \\(s(\\theta)=0\\). Finding such a candidate is a root-finding problem. When the score equation has no closed-form solution, Newton's root-finding method can be applied within maximum likelihood estimation."
+        }
+      ],
+      "rationale": "Evidence 004 states that when the score equation has no closed-form solution, Newton's root-finding method can be applied within maximum likelihood estimation, directly connecting Score Function and Newton's Root-Finding Method.",
+      "prediction_snapshot_sha256": "01154543eee10d56831722ede5baaf38b20244298f106ae061178c009bd98a9f"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_e1603fa09ad3fd48",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_005",
+          "canonical_name": "Objective Function",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001",
+            "unconstrained_optimisation_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_021",
+          "canonical_name": "Root-Finding Problem",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001",
+            "nonlinear_root_finding_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_011"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_011",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 4,
+          "span": "At an interior differentiable maximum, a candidate satisfies the score equation \\(s(\\theta)=0\\). Finding such a candidate is a root-finding problem. When the score equation has no closed-form solution, Newton's root-finding method can be applied within maximum likelihood estimation."
+        }
+      ],
+      "rationale": "Evidence 011 states that finding a candidate satisfying the score equation is a root-finding problem, directly linking the objective function (log-likelihood) to the root-finding problem.",
+      "prediction_snapshot_sha256": "0cdd1a56f0a4b9321cb8aa22a8efbef9c4962aa8bbc88ee785c98575d0a208fb"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_e339035d075320bb",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_005",
+          "canonical_name": "Objective Function",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001",
+            "unconstrained_optimisation_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_006",
+          "canonical_name": "Gradient Descent",
+          "canonical_type": "Method",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "unconstrained_optimisation_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_002"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_002",
+          "lecture_id": "unconstrained_optimisation_001",
+          "block_index": 2,
+          "span": "Gradient descent requires the gradient of the objective function. With step size \\(\\alpha_k>0\\), the method moves opposite to the gradient. The gradient descent update is"
+        }
+      ],
+      "rationale": "Evidence_002 states that gradient descent requires the gradient of the objective function, directly linking the two concepts.",
+      "prediction_snapshot_sha256": "72a52b7b52ec82dcecf919b2854433ee61e13cc4ae6af1079ab4c50e0437f919"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_e674a485e3829890",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_017",
+          "canonical_name": "Least Squares Objective",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_019",
+          "canonical_name": "Ordinary Least Squares",
+          "canonical_type": "Method",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_005"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_005",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 5,
+          "span": "For a Gaussian linear regression model with constant variance, maximizing the log-likelihood is equivalent to minimizing the least squares objective. Under this assumption, ordinary least squares and maximum likelihood estimation select the same coefficient vector."
+        }
+      ],
+      "rationale": "Evidence 005 states that for Gaussian linear regression, maximizing log-likelihood is equivalent to minimizing the least squares objective, directly connecting Least Squares Objective and Ordinary Least Squares.",
+      "prediction_snapshot_sha256": "d5b20be295fb93e0cf397b5785f15ce4f8bc8dd7d5321ebcba7218f6b6d52a30"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_edd5dd0dffb7131e",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_013",
+          "canonical_name": "Maximum Likelihood Estimation",
+          "canonical_type": "Method",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_017",
+          "canonical_name": "Least Squares Objective",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_005"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_005",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 5,
+          "span": "For a Gaussian linear regression model with constant variance, maximizing the log-likelihood is equivalent to minimizing the least squares objective. Under this assumption, ordinary least squares and maximum likelihood estimation select the same coefficient vector."
+        }
+      ],
+      "rationale": "Evidence 005 states that for a Gaussian linear regression model, maximizing the log-likelihood is equivalent to minimizing the least squares objective, directly connecting Maximum Likelihood Estimation and Least Squares Objective.",
+      "prediction_snapshot_sha256": "81c415a9e2e5729f96237e18af689d73a4636d10676ee7c15d2fbf83b01509e8"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_f04767c63a30f18a",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_003",
+          "canonical_name": "First-Order Taylor Approximation",
+          "canonical_type": "Method",
+          "lecture_ids": [
+            "explicit_ode_methods_001",
+            "multivariable_derivatives_001",
+            "unconstrained_optimisation_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_007",
+          "canonical_name": "Gradient Descent Update",
+          "canonical_type": "Formula",
+          "lecture_ids": [
+            "unconstrained_optimisation_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_011"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_011",
+          "lecture_id": "unconstrained_optimisation_001",
+          "block_index": 4,
+          "span": "For a small proposed displacement, the first-order Taylor approximation predicts the resulting objective change. This explains why a displacement opposite to the gradient is locally descending when the step size is sufficiently small."
+        }
+      ],
+      "rationale": "Evidence 011 states that the first-order Taylor approximation predicts the objective change for a small displacement, explaining why moving opposite the gradient is locally descending, directly linking the approximation to the gradient descent update.",
+      "prediction_snapshot_sha256": "bb1897992769c72adb583ec3b9eba4c64809b0b6cf0a1fba81d2b4a4a5edca11"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_f089c625fb64bde0",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_001",
+          "canonical_name": "Gradient",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001",
+            "multivariable_derivatives_001",
+            "unconstrained_optimisation_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_003",
+          "canonical_name": "First-Order Taylor Approximation",
+          "canonical_type": "Method",
+          "lecture_ids": [
+            "explicit_ode_methods_001",
+            "multivariable_derivatives_001",
+            "unconstrained_optimisation_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_005",
+        "evidence_006"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_005",
+          "lecture_id": "multivariable_derivatives_001",
+          "block_index": 5,
+          "span": "The first-order Taylor approximation uses the function value and gradient at \\(x\\) to approximate the value after a small displacement \\(\\Delta x\\). It is formalized by the first-order Taylor formula"
+        },
+        {
+          "evidence_id": "evidence_006",
+          "lecture_id": "multivariable_derivatives_001",
+          "block_index": 6,
+          "span": "\\[\nT_1(x+\\Delta x;x)=f(x)+\\nabla f(x)^\\top\\Delta x.\n\\]"
+        }
+      ],
+      "rationale": "Evidence 005 and 006 together state that the first-order Taylor approximation uses the gradient, directly connecting the two concepts.",
+      "prediction_snapshot_sha256": "f4e61741a8caa68971fb617afbea980ec7937c69f3d07d40d6fa1a3d64cb8766"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_f0bc752d2a70b1ce",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_016",
+          "canonical_name": "Linear Regression",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_019",
+          "canonical_name": "Ordinary Least Squares",
+          "canonical_type": "Method",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_005"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_005",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 5,
+          "span": "For a Gaussian linear regression model with constant variance, maximizing the log-likelihood is equivalent to minimizing the least squares objective. Under this assumption, ordinary least squares and maximum likelihood estimation select the same coefficient vector."
+        }
+      ],
+      "rationale": "Evidence 005 states that for a Gaussian linear regression model, ordinary least squares and maximum likelihood estimation select the same coefficient vector, directly connecting Linear Regression and Ordinary Least Squares.",
+      "prediction_snapshot_sha256": "8b2aaa14892358c2e6e2cb26fb07b5748b5b14b2264617777810a45b3fae631f"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_f7ace63dad8e0d13",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_005",
+          "canonical_name": "Objective Function",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "maximum_likelihood_001",
+            "unconstrained_optimisation_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_009",
+          "canonical_name": "Newton Optimisation Update",
+          "canonical_type": "Formula",
+          "lecture_ids": [
+            "unconstrained_optimisation_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_005",
+        "evidence_006"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_005",
+          "lecture_id": "unconstrained_optimisation_001",
+          "block_index": 5,
+          "span": "The Newton optimisation method additionally requires the Hessian matrix to model local curvature. When the Hessian is invertible, the Newton optimisation update is"
+        },
+        {
+          "evidence_id": "evidence_006",
+          "lecture_id": "unconstrained_optimisation_001",
+          "block_index": 6,
+          "span": "\\[\nx_{k+1}=x_k-H_f(x_k)^{-1}\\nabla f(x_k).\n\\]"
+        }
+      ],
+      "rationale": "Evidence 005 states that the Newton optimisation method requires the Hessian matrix and introduces the update, and Evidence 006 provides the formula for the Newton optimisation update, directly connecting the objective function (as the function f) to the Newton update formula.",
+      "prediction_snapshot_sha256": "8253ff79dfb1593f71e765102c94f4169ce3226e7c5eada93a273044d4bec2a8"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_fa0a79a76255633a",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_001",
+          "canonical_name": "Gradient",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001",
+            "multivariable_derivatives_001",
+            "unconstrained_optimisation_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_021",
+          "canonical_name": "Root-Finding Problem",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001",
+            "nonlinear_root_finding_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_018"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_018",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 4,
+          "span": "At an interior differentiable maximum, a candidate satisfies the score equation \\(s(\\theta)=0\\). Finding such a candidate is a root-finding problem. When the score equation has no closed-form solution, Newton's root-finding method can be applied within maximum likelihood estimation."
+        }
+      ],
+      "rationale": "Evidence 018 states that finding a candidate satisfying the score equation (gradient of log-likelihood equals zero) is a root-finding problem, directly linking Gradient (as score function) to Root-Finding Problem.",
+      "prediction_snapshot_sha256": "5ba798636472286902e4ea6d727a1ea04cf8918358e4259eb2f66a194c540d16"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ff190ee933b57b25",
+      "endpoints": {
+        "ko_a": {
+          "canonical_ko_id": "conn_dev_ko_001",
+          "canonical_name": "Gradient",
+          "canonical_type": "Concept",
+          "lecture_ids": [
+            "maximum_likelihood_001",
+            "multivariable_derivatives_001",
+            "unconstrained_optimisation_001"
+          ]
+        },
+        "ko_b": {
+          "canonical_ko_id": "conn_dev_ko_006",
+          "canonical_name": "Gradient Descent",
+          "canonical_type": "Method",
+          "lecture_ids": [
+            "least_squares_learning_001",
+            "unconstrained_optimisation_001"
+          ]
+        }
+      },
+      "evidence_ids": [
+        "evidence_009"
+      ],
+      "materialized_evidence": [
+        {
+          "evidence_id": "evidence_009",
+          "lecture_id": "unconstrained_optimisation_001",
+          "block_index": 2,
+          "span": "Gradient descent requires the gradient of the objective function. With step size \\(\\alpha_k>0\\), the method moves opposite to the gradient. The gradient descent update is"
+        }
+      ],
+      "rationale": "Evidence 009 states 'Gradient descent requires the gradient of the objective function', directly linking Gradient and Gradient Descent.",
+      "prediction_snapshot_sha256": "c26dc8e48614fc6b4e25957cdd3bdf33455d53b80be9628bf0d3a393edc7191e"
+    }
+  ]
+}

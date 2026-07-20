@@ -1,0 +1,69 @@
+{
+  "artifact_type": "two_stage_connection_development_comparison",
+  "version": "v0.1",
+  "status": "final",
+  "scope": "oracle_canonical_development_v0_1",
+  "one_stage_prompt_002": {
+    "method_commit": "b1b7374a5cb13e692e8953b97727634672bc0d19",
+    "metrics": {
+      "path": "experiments/connection_discovery/003_2_oracle_connection_discovery/runs/development_v0_1/refined/formal/run_01/evaluation/metrics.json",
+      "sha256": "b48181860360e15bfb313e9ac7a1e15b6431c8b2efcead3c497a2323364e1fe3"
+    },
+    "counts": {
+      "correct_positive_edges": 13,
+      "correct_no_relation": 38,
+      "false_positive_relations": 40,
+      "false_negative_relations": 3,
+      "wrong_relation_type": 14,
+      "wrong_direction": 11
+    },
+    "metrics_values": {
+      "positive_typed_edge_recall": 0.3170731707317073,
+      "positive_edge_precision": 0.16666666666666666,
+      "no_relation_accuracy": 0.48717948717948717,
+      "strict_edge_accuracy": 0.42857142857142855,
+      "relation_type_accuracy_on_positives": 0.5853658536585366,
+      "direction_accuracy_when_type_correct": 0.5416666666666666,
+      "exact_evidence_materialization_rate": 1.0,
+      "semantic_evidence_support_rate": 0.45121951219512196,
+      "related_to_prediction_rate": 0.025210084033613446,
+      "primary_connection_f1": 0.21848739495798317,
+      "cross_course_connection_recall": 0.2857142857142857
+    }
+  },
+  "two_stage_v0_1_2": {
+    "method_commit": "d0c0dd3c02694646a816b2868fad3171051f877d",
+    "metadata_finalizer_commit": "11b224e3e9b264f636bcb75ca498b0745a3ae2aa",
+    "metrics": {
+      "path": "experiments/connection_discovery/003_2b_direct_edge_gate/runs/development_v0_1/v0_1_2/formal/run_01/evaluation_v2/metrics.json",
+      "sha256": "127bce1a01a6a51f20c757ba7cec94009845e4cfbe9d8c733aa6268ba0db2c20"
+    },
+    "counts": {
+      "correct_positive_edges": 13,
+      "correct_no_relation": 38,
+      "false_positive_relations": 40,
+      "false_negative_relations": 4,
+      "wrong_relation_type": 15,
+      "wrong_direction": 9
+    },
+    "metrics_values": {
+      "positive_typed_edge_recall": 0.3170731707317073,
+      "positive_edge_precision": 0.16883116883116883,
+      "no_relation_accuracy": 0.48717948717948717,
+      "strict_edge_accuracy": 0.42857142857142855,
+      "relation_type_accuracy_on_positives": 0.5365853658536586,
+      "direction_accuracy_when_type_correct": 0.5909090909090909,
+      "exact_evidence_materialization_rate": 1.0,
+      "semantic_evidence_support_rate": 0.40963855421686746,
+      "related_to_prediction_rate": 0.08403361344537816,
+      "primary_connection_f1": 0.22033898305084748,
+      "cross_course_connection_recall": 0.32142857142857145
+    }
+  },
+  "decision": {
+    "two_stage_method_selected": false,
+    "validated_connection_default_selected": false,
+    "outcome": "completed_failed_frozen_gates",
+    "reason": "The two-stage method did not materially improve the one-stage diagnostic and failed both frozen quality gates."
+  }
+}

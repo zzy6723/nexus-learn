@@ -1,0 +1,12 @@
+{
+  "artifact_type": "direct_edge_gate_evaluation_complete",
+  "version": "v0.1",
+  "status": "final",
+  "evaluator": {
+    "path": "scripts/evaluate_direct_edge_gate.py",
+    "sha256": "aae09552b8900f4e2005051a3636e8451df561a46c2d6dca58b5ea4542876656",
+    "version": "direct_edge_gate_evaluator_v0.1"
+  },
+  "prediction_content_sha256": "78f61e43f7a01f034884a78eab779d80ac0d50a0866c2f5defe29a7f21355243",
+  "pending_count": 0
+}

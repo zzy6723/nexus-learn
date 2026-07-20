@@ -1,6 +1,6 @@
 # 003-2b: Two-Stage Direct-Edge Connection Discovery
 
-**Status:** v0.1.1 interrupted by a transport timeout; v0.1.2 recovery prepared
+**Status:** Completed; v0.1.2 execution succeeded and frozen quality gates failed
 
 ## Motivation
 
@@ -133,3 +133,23 @@ replace the original 003-2 success criteria:
 
 The combined output must still pass every original conditional-classification
 and full-universe gate before the method can advance.
+
+## Final Development Outcome
+
+The v0.1.2 resumed run completed all 125 candidates and was finalized without
+changing prediction content. Both Stage-A and combined evaluations are final
+with no pending Evidence adjudication.
+
+Stage A passed its recall and fatal-alignment checks but failed precision,
+negative-accuracy, and semantic-Evidence checks. The combined method then failed
+both original frozen 003-2 gates. Compared with one-stage Prompt 002, it retained
+the same correct-positive count and false-positive count while worsening type
+accuracy, semantic Evidence support, and `RELATED_TO` control. The method is not
+selected as a validated Connection default.
+
+Final records:
+
+- `development_results.md`;
+- `conclusion.md`;
+- `comparison.json`;
+- `development_validation_complete.json`.

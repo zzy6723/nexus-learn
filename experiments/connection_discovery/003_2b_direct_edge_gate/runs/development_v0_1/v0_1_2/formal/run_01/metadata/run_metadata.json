@@ -1,0 +1,142 @@
+{
+  "artifact_type": "two_stage_canonical_connection_run_metadata",
+  "version": "v0.1.2",
+  "run_id": "run_01",
+  "run_status": "completed",
+  "method_id": "direct_edge_gate_then_relation_typing_v0.1.2",
+  "method_commit": "d0c0dd3c02694646a816b2868fad3171051f877d",
+  "git_commit_at_start": "d0c0dd3c02694646a816b2868fad3171051f877d",
+  "git_dirty_at_start": false,
+  "provider": "deepseek",
+  "request_partitioning": "one_canonical_pair_per_request_per_stage_v0.1",
+  "execution_scope": "full_selected_candidate_set",
+  "request_parameters": {
+    "model": "deepseek-v4-flash",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "gate_max_tokens": 700,
+    "type_max_tokens": 900,
+    "schema_repair_attempts": 1,
+    "transport_retries": 2,
+    "transport_retry_delay_seconds": 2.0,
+    "response_format": {
+      "type": "json_object"
+    },
+    "thinking": {
+      "type": "disabled"
+    }
+  },
+  "inputs": {
+    "candidate_selection": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/overlap_bridge/run_01/generation/candidate_selection.json",
+      "sha256": "70318d882755066b32017cb1c9188603060f8cd7237c70e7d7a0b14d339dee7a"
+    },
+    "candidate_completion": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/overlap_bridge/run_01/generation/generation_complete.json",
+      "sha256": "a67aa156596f0a82d8622cf1f5c5d72ca3104b9a53b0118ea0ae06fec2fc3403"
+    },
+    "candidate_validation": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/development_validation_complete.json",
+      "sha256": "279ed77d56c665da3d79c602c6e3515be0b3771f978a1a930d3b281b09ecbc2c"
+    },
+    "canonical_inventory": {
+      "path": "benchmark/connection_discovery/development_v0_1/oracle_canonical_inventory.json",
+      "sha256": "682e0d0aa66398cc54128b5bba1b1fdc0a1512ec1c46a83e64463ac2403c34f7"
+    },
+    "evidence_catalogs": {
+      "path": "benchmark/connection_discovery/development_v0_1/evidence_catalogs.json",
+      "sha256": "4b5549598dc2aa0250e6d5a688484d13f742d7a6372ba6f6ad6fd1a1ecf87cac"
+    },
+    "freeze_manifest": {
+      "path": "experiments/connection_discovery/003_0_benchmark_preparation/benchmark_freeze_manifest_v0_1.json",
+      "sha256": "73dfb238877395c1d57e63c4959f416834b3b30db56dd64abe8981b012f39f2c"
+    }
+  },
+  "prompts": {
+    "direct_edge_gate": {
+      "path": "experiments/connection_discovery/003_2b_direct_edge_gate/direct_edge_prompt.md",
+      "sha256": "6c6fda7b3f691a88ef2d6c3972bdd16d4ee1b366b5feff809d8d3c4249ed43e0"
+    },
+    "relation_typing": {
+      "path": "experiments/connection_discovery/003_2b_direct_edge_gate/relation_typing_prompt.md",
+      "sha256": "0a4bdb7e6378c0e5ea6a42fe819b8327927049084d744c18d43f7e4b34b7210a"
+    }
+  },
+  "prediction_schema": {
+    "path": "benchmark/schema/connection_prediction.schema.json",
+    "sha256": "8ac6149f3a73401bdb37214b3e056180f8b319bd3772a76c06f9b3eda6b420dc"
+  },
+  "runner": {
+    "path": "scripts/run_two_stage_connection_discovery.py",
+    "sha256": "c77ead167d5dca3cf423fee5f5f78c979f24019048bc9a650bbe3281ea0ea47b",
+    "version": "two_stage_connection_runner_v0.1.2"
+  },
+  "candidate_count": 125,
+  "candidate_pair_ids_sha256": "f0dc4fefc54c88d51f22feb298082149a66cbf4dafb371622e45e25636356ad7",
+  "stage_a_request_payload_set_sha256": "c09cf784f94f068978272d8722f7ac120be8a7720dc43cf909ad805b72dc75dc",
+  "stage_b_request_payload_set_sha256": "8e71155dc7a3b4b9ec6d3fc7c98b43b33f97bb8ebf0b23fc182675f3db3b0847",
+  "dry_run": false,
+  "started_at": "2026-07-20T15:01:51.531828+00:00",
+  "stage_a_completed_count": 125,
+  "stage_a_positive_count": 83,
+  "stage_b_completed_count": 83,
+  "stage_b_schema_repair_count": 13,
+  "transport_retry_count": 0,
+  "resume": {
+    "source_run": "experiments/connection_discovery/003_2b_direct_edge_gate/runs/development_v0_1/v0_1_1/formal/run_01",
+    "source_method_commit_assertion": "690d3c34a5ee2a1f6707faea2d66a9deb8c7b846",
+    "source_failure_record": {
+      "path": "experiments/connection_discovery/003_2b_direct_edge_gate/v0_1_1_transport_failure.json",
+      "sha256": "e47e26032260f84c1ad28870fbf427e81d2672015fa41f09f76bb843521af5e8"
+    },
+    "manifest": {
+      "path": "experiments/connection_discovery/003_2b_direct_edge_gate/runs/development_v0_1/v0_1_2/formal/run_01/metadata/resume_manifest.json",
+      "sha256": "cd24c4b7f8b4d6e4aa8d9e81efc5ea7aba9becdbaf17acc58b036a94fd50e112"
+    },
+    "stage_a_reused_count": 125,
+    "stage_b_reused_count": 37,
+    "next_stage_b_pair_id": "conn_dev_pair_9a51109c78e243ef"
+  },
+  "request_success": true,
+  "json_parse_success": true,
+  "prediction_schema_valid": true,
+  "finish_reason": "stop",
+  "latency_ms": 172410,
+  "usage": {
+    "request_count": 221,
+    "completion_tokens": 27424,
+    "prompt_cache_hit_tokens": 268032,
+    "prompt_cache_miss_tokens": 49740,
+    "prompt_tokens": 317772,
+    "prompt_tokens_details": 0,
+    "total_tokens": 345196
+  },
+  "failure": null,
+  "stage_a_prediction": {
+    "path": "experiments/connection_discovery/003_2b_direct_edge_gate/runs/development_v0_1/v0_1_2/formal/run_01/stage_a/output/direct_gate_predictions.json",
+    "sha256": "3aa9c01253e414633b95d8bec51f417167ac6420fe607696be085724d6b452d1"
+  },
+  "stage_b_prediction": {
+    "path": "experiments/connection_discovery/003_2b_direct_edge_gate/runs/development_v0_1/v0_1_2/formal/run_01/stage_b/output/typed_connection_predictions.json",
+    "sha256": "9a20abec9fb8304647c5b888d669fe846db529018bade505b26e5c2423ee9c81"
+  },
+  "prediction": {
+    "path": "experiments/connection_discovery/003_2b_direct_edge_gate/runs/development_v0_1/v0_1_2/formal/run_01/output/canonical_connection_predictions.json",
+    "sha256": "414f916adedb359af9bd982e4638a5d65af5d49b1a4a7640769c4c3355f873ff"
+  },
+  "completed_candidate_count": 125,
+  "metadata_finalization": {
+    "method_id": "add_completed_candidate_count_after_strict_two_stage_validation_v0.1",
+    "finalizer_commit": "11b224e3e9b264f636bcb75ca498b0745a3ae2aa",
+    "finalizer": {
+      "path": "scripts/finalize_two_stage_connection_run.py",
+      "sha256": "a65ba65a55dd7af0d9320e80aebf6e2a1858996e3056f64e6540f4ec5c583d92",
+      "version": "two_stage_connection_metadata_finalizer_v0.1"
+    },
+    "pre_finalization_metadata": {
+      "path": "experiments/connection_discovery/003_2b_direct_edge_gate/runs/development_v0_1/v0_1_2/formal/run_01/metadata/run_metadata.pre_finalization.json",
+      "sha256": "39c20ea40bf20d7f950e4cf88321a79389a40f072a5497294456bf1d96ac024a"
+    },
+    "finalized_at": "2026-07-20T15:15:05.599635+00:00"
+  }
+}

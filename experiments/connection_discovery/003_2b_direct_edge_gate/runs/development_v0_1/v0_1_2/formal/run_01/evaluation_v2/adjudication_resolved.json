@@ -1,0 +1,393 @@
+{
+  "artifact_type": "canonical_connection_evidence_adjudication",
+  "version": "v0.1",
+  "prediction_content_sha256": "145a55720bcab32af4e38c12351ccade6283e6d8e1759044b443c4f44358ae9b",
+  "pending_snapshot_sha256": "ede59db010e96ea638df8b2a00ec66eb3573d9a5fea749416a964541b166d7cd",
+  "decisions": [
+    {
+      "canonical_pair_id": "conn_dev_pair_000ee4a322d95897",
+      "decision": "not_supported",
+      "rationale": "The selected blocks omit an endpoint, leave a reference unresolved, or require an unstated intermediate; they do not establish Statistical Model APPLIED_IN Root-Finding Problem."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_004a5d37e586342f",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted APPLIED_IN relation between Gradient and Step Size; they support a different or out-of-schema relation at most."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_07f23c7717c1b2fc",
+      "decision": "supported",
+      "rationale": "The selected blocks directly establish the predicted edge and direction: Gradient RELATED_TO Hessian Matrix."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_0c89e22909d9eb04",
+      "decision": "not_supported",
+      "rationale": "The selected blocks omit an endpoint, leave a reference unresolved, or require an unstated intermediate; they do not establish Statistical Model APPLIED_IN Newton's Root-Finding Method."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_1a9ada3036ab9ac1",
+      "decision": "not_supported",
+      "rationale": "The selected blocks omit an endpoint, leave a reference unresolved, or require an unstated intermediate; they do not establish Ordinary Least Squares APPLIED_IN Root-Finding Problem."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_222c986cd9853739",
+      "decision": "supported",
+      "rationale": "The selected blocks directly establish the predicted edge and direction: Gradient Descent APPLIED_IN Least Squares Objective."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_225420587c4177f5",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted RELATED_TO relation between Gradient Descent and Gradient Descent Update; they support a different or out-of-schema relation at most."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_260ec70c43c90b5d",
+      "decision": "not_supported",
+      "rationale": "The selected blocks omit an endpoint, leave a reference unresolved, or require an unstated intermediate; they do not establish Statistical Model APPLIED_IN Linear Regression."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_263db2f07078bcd1",
+      "decision": "not_supported",
+      "rationale": "The selected blocks omit an endpoint, leave a reference unresolved, or require an unstated intermediate; they do not establish First-Order Taylor Approximation APPLIED_IN Initial Value Problem."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_2bb1aeb7a750deb8",
+      "decision": "supported",
+      "rationale": "The selected blocks directly establish the predicted edge and direction: Gradient APPLIED_IN Newton Optimisation Method."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_31fa9b658289ed76",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not support the predicted direction for Maximum Likelihood Estimation APPLIED_IN Root-Finding Problem; the stated use, dependency, or extension runs in the reverse direction or targets a different object."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_3216d348a5fd0b14",
+      "decision": "not_supported",
+      "rationale": "The selected blocks omit an endpoint, leave a reference unresolved, or require an unstated intermediate; they do not establish Gradient Descent APPLIED_IN Linear Regression."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_334f084a05ae5d26",
+      "decision": "supported",
+      "rationale": "The selected blocks directly establish the predicted edge and direction: Newton's Root-Finding Method APPLIED_IN Root-Finding Problem."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_3b005c7a79510244",
+      "decision": "not_supported",
+      "rationale": "The selected blocks omit an endpoint, leave a reference unresolved, or require an unstated intermediate; they do not establish Gradient Descent APPLIED_IN Mean Squared Error Formula."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_3c1d300edac20859",
+      "decision": "supported",
+      "rationale": "The selected blocks directly establish the predicted edge and direction: Score Function APPLIED_IN Root-Finding Problem."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_4a578fe32126af5d",
+      "decision": "supported",
+      "rationale": "The selected blocks directly establish the predicted edge and direction: Gradient APPLIED_IN Maximum Likelihood Estimation."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_4bc5d12d0482885f",
+      "decision": "not_supported",
+      "rationale": "The selected blocks omit an endpoint, leave a reference unresolved, or require an unstated intermediate; they do not establish Statistical Model APPLIED_IN Least Squares Objective."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_5377d9a990974fd5",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not support the predicted direction for Objective Function REQUIRES Gradient Descent Update; the stated use, dependency, or extension runs in the reverse direction or targets a different object."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_56bf2cab52cf025c",
+      "decision": "not_supported",
+      "rationale": "The selected blocks omit an endpoint, leave a reference unresolved, or require an unstated intermediate; they do not establish Gradient APPLIED_IN Score Equation."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_5729188da76c91ec",
+      "decision": "not_supported",
+      "rationale": "The selected blocks omit an endpoint, leave a reference unresolved, or require an unstated intermediate; they do not establish Newton Optimisation Method REQUIRES Objective Function."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_5c9b50da7757c423",
+      "decision": "supported",
+      "rationale": "The selected blocks directly establish the predicted edge and direction: Log-Likelihood APPLIED_IN Linear Regression."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_616b3cd5835de47d",
+      "decision": "supported",
+      "rationale": "The selected blocks directly establish the predicted edge and direction: Gradient RELATED_TO Score Function."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_63bb993a9e7b1d30",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not support the predicted direction for Newton's Root-Finding Method EXTENDS Damped Newton Method; the stated use, dependency, or extension runs in the reverse direction or targets a different object."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_654033881f94fbf0",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not support the predicted direction for Gradient Descent Update APPLIED_IN Step Size; the stated use, dependency, or extension runs in the reverse direction or targets a different object."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_6c1b7aacdbb18827",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted RELATED_TO relation between Log-Likelihood and Least Squares Objective; they support a different or out-of-schema relation at most."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_799174f17022eacc",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted RELATED_TO relation between Maximum Likelihood Estimation and Score Function; they support a different or out-of-schema relation at most."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7ae886fbc9be7241",
+      "decision": "not_supported",
+      "rationale": "The selected blocks omit an endpoint, leave a reference unresolved, or require an unstated intermediate; they do not establish Mean Squared Error Formula FORMALIZES Objective Function."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7d14f554a3646ae6",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted APPLIED_IN relation between Log-Likelihood and Objective Function; they support a different or out-of-schema relation at most."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7f5ac4c6e2fe5268",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not support the predicted direction for Gradient REQUIRES Gradient Descent Update; the stated use, dependency, or extension runs in the reverse direction or targets a different object."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_8404187bbee08589",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not support the predicted direction for Statistical Model APPLIED_IN Maximum Likelihood Estimation; the stated use, dependency, or extension runs in the reverse direction or targets a different object."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_855fc91eae345c72",
+      "decision": "supported",
+      "rationale": "The selected blocks directly establish the predicted edge and direction: Newton Optimisation Method REQUIRES Hessian Matrix."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_88939b4d17cdfb3e",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted RELATED_TO relation between Objective Function and Least Squares Objective; they support a different or out-of-schema relation at most."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_8c981e7dd58feb47",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted RELATED_TO relation between Maximum Likelihood Estimation and Ordinary Least Squares; they support a different or out-of-schema relation at most."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_8fae4bf3dd480f71",
+      "decision": "supported",
+      "rationale": "The selected blocks directly establish the predicted edge and direction: Gradient APPLIED_IN Log-Likelihood."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9411fb11503a6f0f",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not support the predicted direction for Objective Function REQUIRES Step Size; the stated use, dependency, or extension runs in the reverse direction or targets a different object."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9a51109c78e243ef",
+      "decision": "supported",
+      "rationale": "The selected blocks directly establish the predicted edge and direction: Newton's Root-Finding Method REQUIRES Derivative."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9b1e66cc5876fb95",
+      "decision": "not_supported",
+      "rationale": "The selected blocks omit an endpoint, leave a reference unresolved, or require an unstated intermediate; they do not establish Linear Regression APPLIED_IN Root-Finding Problem."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9cd38efffcca81cd",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not support the predicted direction for Least Squares Objective EXTENDS Ridge Regression; the stated use, dependency, or extension runs in the reverse direction or targets a different object."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9f008ddde3e426f0",
+      "decision": "supported",
+      "rationale": "The selected blocks directly establish the predicted edge and direction: Maximum Likelihood Estimation RELATED_TO Score Equation."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a1259045b6b2d2c7",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted FORMALIZES relation between First-Order Taylor Formula and Gradient; they support a different or out-of-schema relation at most."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a1e6b8f76fd16f4d",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not support the predicted direction for Root-Finding Problem APPLIED_IN Newton Root Update; the stated use, dependency, or extension runs in the reverse direction or targets a different object."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a234bad0c2a17d8c",
+      "decision": "not_supported",
+      "rationale": "The selected blocks omit an endpoint, leave a reference unresolved, or require an unstated intermediate; they do not establish Score Equation APPLIED_IN Least Squares Objective."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a92bdea086a3cd0c",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted RELATED_TO relation between Log-Likelihood and Ordinary Least Squares; they support a different or out-of-schema relation at most."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ad73d420644fe99f",
+      "decision": "supported",
+      "rationale": "The selected blocks directly establish the predicted edge and direction: First-Order Taylor Approximation APPLIED_IN Objective Function."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_b0c235b2d349eff7",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted FORMALIZES relation between Mean Squared Error Formula and Ordinary Least Squares; they support a different or out-of-schema relation at most."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_b1a1609d22506ef6",
+      "decision": "supported",
+      "rationale": "The selected blocks directly establish the predicted edge and direction: Maximum Likelihood Estimation APPLIED_IN Linear Regression."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_b23eff47b6d29fb5",
+      "decision": "supported",
+      "rationale": "The selected blocks directly establish the predicted edge and direction: Maximum Likelihood Estimation APPLIED_IN Objective Function."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_b5ea294ae5f29863",
+      "decision": "not_supported",
+      "rationale": "The selected blocks omit an endpoint, leave a reference unresolved, or require an unstated intermediate; they do not establish Objective Function RELATED_TO Score Equation."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_be2636a5d8bc8b4c",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted FORMALIZES relation between Mean Squared Error Formula and Linear Regression; they support a different or out-of-schema relation at most."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_be5dff9ee6b32e1a",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted EXTENDS relation between Ridge Regression and Objective Function; they support a different or out-of-schema relation at most."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_bfce59cf0247f59a",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not support the predicted direction for Hessian Matrix REQUIRES Newton Optimisation Update; the stated use, dependency, or extension runs in the reverse direction or targets a different object."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c02b6a5def080df9",
+      "decision": "supported",
+      "rationale": "The selected blocks directly establish the predicted edge and direction: First-Order Taylor Approximation APPLIED_IN Forward Euler Update."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c862968c2f7bbf13",
+      "decision": "supported",
+      "rationale": "The selected blocks directly establish the predicted edge and direction: Score Equation APPLIED_IN Root-Finding Problem."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c9b55dc727622af1",
+      "decision": "not_supported",
+      "rationale": "The selected blocks omit an endpoint, leave a reference unresolved, or require an unstated intermediate; they do not establish Mean Squared Error Formula FORMALIZES Least Squares Objective."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c9d185b1eedd2c21",
+      "decision": "supported",
+      "rationale": "The selected blocks directly establish the predicted edge and direction: First-Order Taylor Approximation RELATED_TO Local Truncation Error."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c9da9f7c5ff3c1f6",
+      "decision": "not_supported",
+      "rationale": "The selected blocks omit an endpoint, leave a reference unresolved, or require an unstated intermediate; they do not establish Newton's Root-Finding Method APPLIED_IN Log-Likelihood."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ce63516ba4c4f71d",
+      "decision": "not_supported",
+      "rationale": "The selected blocks omit an endpoint, leave a reference unresolved, or require an unstated intermediate; they do not establish Objective Function APPLIED_IN Statistical Model."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d6043a4c35e6c8b9",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not support the predicted direction for Linear Regression APPLIED_IN Least Squares Objective; the stated use, dependency, or extension runs in the reverse direction or targets a different object."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d64d8e658f6dafd8",
+      "decision": "supported",
+      "rationale": "The selected blocks directly establish the predicted edge and direction: Newton Root Update FORMALIZES Newton's Root-Finding Method."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d88a461c47b9d32c",
+      "decision": "supported",
+      "rationale": "The selected blocks directly establish the predicted edge and direction: Gradient APPLIED_IN Objective Function."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_da1c18bdf793236f",
+      "decision": "not_supported",
+      "rationale": "The selected blocks omit an endpoint, leave a reference unresolved, or require an unstated intermediate; they do not establish Log-Likelihood APPLIED_IN Root-Finding Problem."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_dbc167d9bb7ce3f8",
+      "decision": "supported",
+      "rationale": "The selected blocks directly establish the predicted edge and direction: Objective Function RELATED_TO Score Function."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_dcf07ffb792c61d7",
+      "decision": "supported",
+      "rationale": "The selected blocks directly establish the predicted edge and direction: Score Function APPLIED_IN Newton's Root-Finding Method."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_e1603fa09ad3fd48",
+      "decision": "not_supported",
+      "rationale": "The selected blocks omit an endpoint, leave a reference unresolved, or require an unstated intermediate; they do not establish Objective Function APPLIED_IN Root-Finding Problem."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_e339035d075320bb",
+      "decision": "supported",
+      "rationale": "The selected blocks directly establish the predicted edge and direction: Gradient Descent REQUIRES Objective Function."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_e674a485e3829890",
+      "decision": "supported",
+      "rationale": "The selected blocks directly establish the predicted edge and direction: Least Squares Objective APPLIED_IN Ordinary Least Squares."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_e848f855de939343",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not support the predicted direction for Ordinary Least Squares EXTENDS Ridge Regression; the stated use, dependency, or extension runs in the reverse direction or targets a different object."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_edd5dd0dffb7131e",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not establish the predicted RELATED_TO relation between Maximum Likelihood Estimation and Least Squares Objective; they support a different or out-of-schema relation at most."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ef28d97312ee8970",
+      "decision": "supported",
+      "rationale": "The selected blocks directly establish the predicted edge and direction: Gradient APPLIED_IN Newton Optimisation Update."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_f04767c63a30f18a",
+      "decision": "not_supported",
+      "rationale": "The selected blocks omit an endpoint, leave a reference unresolved, or require an unstated intermediate; they do not establish First-Order Taylor Approximation APPLIED_IN Gradient Descent Update."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_f089c625fb64bde0",
+      "decision": "supported",
+      "rationale": "The selected blocks directly establish the predicted edge and direction: Gradient APPLIED_IN First-Order Taylor Approximation."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_f0bc752d2a70b1ce",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not support the predicted direction for Linear Regression APPLIED_IN Ordinary Least Squares; the stated use, dependency, or extension runs in the reverse direction or targets a different object."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_f7ace63dad8e0d13",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not support the predicted direction for Objective Function REQUIRES Newton Optimisation Update; the stated use, dependency, or extension runs in the reverse direction or targets a different object."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_fa0a79a76255633a",
+      "decision": "not_supported",
+      "rationale": "The selected blocks omit an endpoint, leave a reference unresolved, or require an unstated intermediate; they do not establish Gradient APPLIED_IN Root-Finding Problem."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_fac1350d8eb9227e",
+      "decision": "supported",
+      "rationale": "The selected blocks directly establish the predicted edge and direction: Score Equation APPLIED_IN Newton's Root-Finding Method."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_fb58022473834283",
+      "decision": "not_supported",
+      "rationale": "The selected blocks do not support the predicted direction for Gradient Descent APPLIED_IN Step Size; the stated use, dependency, or extension runs in the reverse direction or targets a different object."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ff190ee933b57b25",
+      "decision": "supported",
+      "rationale": "The selected blocks directly establish the predicted edge and direction: Gradient Descent REQUIRES Gradient."
+    }
+  ]
+}

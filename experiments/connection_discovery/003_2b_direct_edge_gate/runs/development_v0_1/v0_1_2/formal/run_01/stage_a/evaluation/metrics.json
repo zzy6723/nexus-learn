@@ -1,0 +1,61 @@
+{
+  "artifact_type": "direct_edge_gate_metrics",
+  "version": "v0.1",
+  "evaluation_status": "final",
+  "counts": {
+    "primary_positive_pairs": 41,
+    "primary_negative_pairs": 78,
+    "true_positive_gates": 37,
+    "true_negative_gates": 38,
+    "false_positive_gates": 40,
+    "false_negative_gates": 4,
+    "predicted_positive_gates": 83,
+    "evidence_auto_supported": 22,
+    "evidence_supported_by_adjudication": 36,
+    "evidence_not_supported": 25,
+    "evidence_pending": 0
+  },
+  "metrics": {
+    "direct_edge_precision": 0.4805194805194805,
+    "direct_edge_recall": 0.9024390243902439,
+    "direct_edge_f1": 0.6271186440677966,
+    "primary_negative_accuracy": 0.48717948717948717,
+    "semantic_evidence_support_rate": 0.6987951807228916
+  },
+  "diagnostic_gate_assessment": {
+    "outcome": "failed",
+    "checks": {
+      "direct_edge_recall": {
+        "value": 0.9024390243902439,
+        "operator": ">=",
+        "threshold": 0.8,
+        "passed": true
+      },
+      "direct_edge_precision": {
+        "value": 0.4805194805194805,
+        "operator": ">=",
+        "threshold": 0.7,
+        "passed": false
+      },
+      "primary_negative_accuracy": {
+        "value": 0.48717948717948717,
+        "operator": ">=",
+        "threshold": 0.8,
+        "passed": false
+      },
+      "semantic_evidence_support_rate": {
+        "value": 0.6987951807228916,
+        "operator": ">=",
+        "threshold": 0.9,
+        "passed": false
+      },
+      "fatal_alignment_errors": {
+        "value": 0,
+        "operator": "<=",
+        "threshold": 0,
+        "passed": true
+      }
+    },
+    "authority": "Diagnostic only; combined output remains subject to the original frozen 003-2 gates."
+  }
+}

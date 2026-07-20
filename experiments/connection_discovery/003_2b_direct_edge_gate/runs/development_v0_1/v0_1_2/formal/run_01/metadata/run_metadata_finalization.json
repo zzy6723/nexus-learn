@@ -1,0 +1,17 @@
+{
+  "artifact_type": "two_stage_connection_metadata_finalization",
+  "version": "v0.1",
+  "status": "complete",
+  "reason": "additive evaluator metadata compatibility",
+  "prediction_content_changed": false,
+  "pre_finalization_metadata": {
+    "path": "experiments/connection_discovery/003_2b_direct_edge_gate/runs/development_v0_1/v0_1_2/formal/run_01/metadata/run_metadata.pre_finalization.json",
+    "sha256": "39c20ea40bf20d7f950e4cf88321a79389a40f072a5497294456bf1d96ac024a"
+  },
+  "finalized_metadata": {
+    "path": "experiments/connection_discovery/003_2b_direct_edge_gate/runs/development_v0_1/v0_1_2/formal/run_01/metadata/run_metadata.json",
+    "sha256": "609106b6e570ff920e7d5e370e8260bf8eb6dd632748e3070830658684fd20c3"
+  },
+  "completed_candidate_count": 125,
+  "finalizer_commit": "11b224e3e9b264f636bcb75ca498b0745a3ae2aa"
+}

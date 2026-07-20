@@ -1,0 +1,55 @@
+{
+  "artifact_type": "two_stage_connection_development_validation_complete",
+  "version": "v0.1",
+  "status": "completed_failed_frozen_gates",
+  "method_id": "direct_edge_gate_then_relation_typing_v0.1.2",
+  "method_commit": "d0c0dd3c02694646a816b2868fad3171051f877d",
+  "metadata_finalizer_commit": "11b224e3e9b264f636bcb75ca498b0745a3ae2aa",
+  "validated_default_selected": false,
+  "run": {
+    "metadata": {
+      "path": "experiments/connection_discovery/003_2b_direct_edge_gate/runs/development_v0_1/v0_1_2/formal/run_01/metadata/run_metadata.json",
+      "sha256": "609106b6e570ff920e7d5e370e8260bf8eb6dd632748e3070830658684fd20c3"
+    },
+    "prediction": {
+      "path": "experiments/connection_discovery/003_2b_direct_edge_gate/runs/development_v0_1/v0_1_2/formal/run_01/output/canonical_connection_predictions.json",
+      "sha256": "414f916adedb359af9bd982e4638a5d65af5d49b1a4a7640769c4c3355f873ff"
+    },
+    "prediction_content_changed_by_finalizer": false
+  },
+  "stage_a_evaluation": {
+    "metrics": {
+      "path": "experiments/connection_discovery/003_2b_direct_edge_gate/runs/development_v0_1/v0_1_2/formal/run_01/stage_a/evaluation/metrics.json",
+      "sha256": "94cb030f6c9f7ad723ae393c975a72b3152d582555f48e5ae022305ace6aa7f8"
+    },
+    "evaluation_complete": {
+      "path": "experiments/connection_discovery/003_2b_direct_edge_gate/runs/development_v0_1/v0_1_2/formal/run_01/stage_a/evaluation/evaluation_complete.json",
+      "sha256": "abb12b3d4bd2a80aafe5abe9b93eea8768cd1aaf03194323a234fe8d04d57f49"
+    },
+    "evaluation_status": "final",
+    "diagnostic_gate_outcome": "failed",
+    "pending_count": 0
+  },
+  "combined_evaluation": {
+    "metrics": {
+      "path": "experiments/connection_discovery/003_2b_direct_edge_gate/runs/development_v0_1/v0_1_2/formal/run_01/evaluation_v2/metrics.json",
+      "sha256": "127bce1a01a6a51f20c757ba7cec94009845e4cfbe9d8c733aa6268ba0db2c20"
+    },
+    "evaluation_complete": {
+      "path": "experiments/connection_discovery/003_2b_direct_edge_gate/runs/development_v0_1/v0_1_2/formal/run_01/evaluation_v2/evaluation_complete.json",
+      "sha256": "e79beca7b79de06677e1c12a08df31299cac9f405e391347358c46a7d9d6f3ff"
+    },
+    "evaluation_status": "final",
+    "conditional_gate_outcome": "failed",
+    "full_universe_gate_outcome": "failed",
+    "pending_count": 0
+  },
+  "comparison": {
+    "path": "experiments/connection_discovery/003_2b_direct_edge_gate/comparison.json",
+    "sha256": "fe249073ad4505232826bc2db20ac58fa1fa50691772ef17fe683c60b5c43843",
+    "one_stage_reference": "prompt_refinement_v0_2",
+    "material_improvement_observed": false
+  },
+  "decision": "Do not select the two-stage method as a validated Connection Discovery default.",
+  "next_gate": "Freeze a materially revised Oracle-canonical decision method and evaluate it on fresh data before making a generalization claim; keep 003-3 and 003-4 diagnostic-only while Oracle classification remains unresolved."
+}

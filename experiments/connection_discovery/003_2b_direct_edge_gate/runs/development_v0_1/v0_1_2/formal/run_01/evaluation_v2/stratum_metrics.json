@@ -1,0 +1,30 @@
+{
+  "artifact_type": "canonical_connection_stratum_metrics",
+  "version": "v0.1",
+  "strata": [
+    {
+      "stratum": "cross_course",
+      "positive_support": 28,
+      "strict_correct": 9,
+      "recall": 0.32142857142857145
+    },
+    {
+      "stratum": "cross_topic",
+      "positive_support": 41,
+      "strict_correct": 13,
+      "recall": 0.3170731707317073
+    },
+    {
+      "stratum": "overlap_bridge",
+      "positive_support": 41,
+      "strict_correct": 13,
+      "recall": 0.3170731707317073
+    },
+    {
+      "stratum": "same_course_cross_lecture",
+      "positive_support": 26,
+      "strict_correct": 10,
+      "recall": 0.38461538461538464
+    }
+  ]
+}

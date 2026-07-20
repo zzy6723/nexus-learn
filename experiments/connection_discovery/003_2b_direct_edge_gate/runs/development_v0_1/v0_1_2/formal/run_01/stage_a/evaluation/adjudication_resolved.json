@@ -1,0 +1,313 @@
+{
+  "artifact_type": "direct_edge_evidence_adjudication",
+  "version": "v0.1",
+  "prediction_content_sha256": "78f61e43f7a01f034884a78eab779d80ac0d50a0866c2f5defe29a7f21355243",
+  "pending_snapshot_sha256": "346e6e12e0c88d4fabf7754831d1b08b4d9344b3f8fc8b3cedda3558f608ccc5",
+  "decisions": [
+    {
+      "canonical_pair_id": "conn_dev_pair_000ee4a322d95897",
+      "decision": "not_supported",
+      "rationale": "The block connects maximum-likelihood score solving to root finding but does not identify the Statistical Model endpoint; that connection needs an unstated intermediate."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_004a5d37e586342f",
+      "decision": "supported",
+      "rationale": "The blocks directly combine the step size and gradient in the stated gradient-descent displacement and update."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_07f23c7717c1b2fc",
+      "decision": "supported",
+      "rationale": "The block explicitly assigns complementary terms of the same second-order approximation to the gradient and Hessian."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_0c89e22909d9eb04",
+      "decision": "not_supported",
+      "rationale": "Newton root finding is connected to maximum-likelihood score solving, while the Statistical Model endpoint is not identified."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_1a9ada3036ab9ac1",
+      "decision": "not_supported",
+      "rationale": "Ordinary Least Squares is absent from the selected block; linking it through Gaussian MLE would require omitted context."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_222c986cd9853739",
+      "decision": "supported",
+      "rationale": "The block directly states that gradient descent is applied using the gradient of the least-squares objective."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_260ec70c43c90b5d",
+      "decision": "not_supported",
+      "rationale": "The block names a Gaussian linear-regression model, but generic Statistical Model to Linear Regression is only instance membership under this Evidence protocol."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_263db2f07078bcd1",
+      "decision": "not_supported",
+      "rationale": "The block links Taylor approximation to Forward Euler but never identifies an Initial Value Problem; the proposed edge requires that intermediate."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_31fa9b658289ed76",
+      "decision": "supported",
+      "rationale": "The block directly presents finding the maximum-likelihood score-equation candidate as a root-finding problem."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_3216d348a5fd0b14",
+      "decision": "not_supported",
+      "rationale": "The Evidence says gradient descent applies to Ordinary Least Squares, not directly to the Linear Regression endpoint."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_334f084a05ae5d26",
+      "decision": "supported",
+      "rationale": "The same block identifies the root-finding problem and explicitly states that Newton's root-finding method can solve it."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_3b005c7a79510244",
+      "decision": "not_supported",
+      "rationale": "The selected block does not identify the referenced formula as the Mean Squared Error Formula, so that endpoint is unresolved."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_3c1d300edac20859",
+      "decision": "supported",
+      "rationale": "The block states that solving the score equation is a root-finding problem, directly connecting the score function's zero condition to root finding."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_4a578fe32126af5d",
+      "decision": "supported",
+      "rationale": "The block directly defines the score used by Maximum Likelihood Estimation as a gradient of its log-likelihood objective."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_4bc5d12d0482885f",
+      "decision": "not_supported",
+      "rationale": "The block connects a specific Gaussian linear-regression model to least squares; treating this as a generic Statistical Model edge is instance membership."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_5377d9a990974fd5",
+      "decision": "supported",
+      "rationale": "The text introduces the update from the gradient of the objective and the formula directly contains that objective gradient."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_56bf2cab52cf025c",
+      "decision": "not_supported",
+      "rationale": "The blocks define the Score Function as a gradient but do not present the Score Equation zero condition named by the endpoint."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_5729188da76c91ec",
+      "decision": "not_supported",
+      "rationale": "The block connects Newton optimisation to the Hessian, but the Objective Function endpoint is not independently identified."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_5c9b50da7757c423",
+      "decision": "supported",
+      "rationale": "The block explicitly places log-likelihood maximisation inside a Gaussian linear-regression model."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_616b3cd5835de47d",
+      "decision": "supported",
+      "rationale": "The selected sentence directly defines the Score Function as the gradient of the log-likelihood."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_6c1b7aacdbb18827",
+      "decision": "supported",
+      "rationale": "The block directly states the conditional equivalence between maximising log-likelihood and minimising the least-squares objective."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_799174f17022eacc",
+      "decision": "supported",
+      "rationale": "The blocks introduce the score within Maximum Likelihood Estimation and provide its defining formula."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7ae886fbc9be7241",
+      "decision": "not_supported",
+      "rationale": "The selected block uses an unresolved 'This formula' reference and never identifies it as the Mean Squared Error Formula."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7d14f554a3646ae6",
+      "decision": "supported",
+      "rationale": "The block explicitly states that Maximum Likelihood Estimation treats the log-likelihood as an objective function."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_855fc91eae345c72",
+      "decision": "supported",
+      "rationale": "The block directly states that the Newton optimisation method requires the Hessian matrix."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_88939b4d17cdfb3e",
+      "decision": "not_supported",
+      "rationale": "The block names a least-squares objective but does not establish a graph relation to the generic Objective Function endpoint beyond instance membership."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_8c981e7dd58feb47",
+      "decision": "supported",
+      "rationale": "The block directly states that Ordinary Least Squares and Maximum Likelihood Estimation select the same coefficients under the stated assumptions."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_8fae4bf3dd480f71",
+      "decision": "supported",
+      "rationale": "The blocks directly express the score as the gradient of the log-likelihood."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9411fb11503a6f0f",
+      "decision": "not_supported",
+      "rationale": "Objective gradient and step size are separate inputs to Gradient Descent; the selected sentence does not establish a direct predicate between those endpoints."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9b1e66cc5876fb95",
+      "decision": "not_supported",
+      "rationale": "Linear Regression is absent; reaching it through Maximum Likelihood Estimation requires unstated context."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9cd38efffcca81cd",
+      "decision": "not_supported",
+      "rationale": "The block names Ordinary Least Squares and an objective but does not self-containedly identify that objective as the Least Squares Objective endpoint."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a1e6b8f76fd16f4d",
+      "decision": "supported",
+      "rationale": "The blocks define a root-finding problem, introduce Newton's method for it, and provide the corresponding Newton root update."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a234bad0c2a17d8c",
+      "decision": "not_supported",
+      "rationale": "The Score Equation endpoint is not present in the selected block; connecting it through log-likelihood is an omitted intermediate step."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a92bdea086a3cd0c",
+      "decision": "supported",
+      "rationale": "The block directly relates log-likelihood maximisation to the least-squares optimisation performed by Ordinary Least Squares."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ad73d420644fe99f",
+      "decision": "supported",
+      "rationale": "The block explicitly states that the first-order Taylor approximation predicts change in the objective."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_b0c235b2d349eff7",
+      "decision": "supported",
+      "rationale": "The blocks give the Mean Squared Error Formula and explicitly identify it with the least-squares objective used by Ordinary Least Squares."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_b1a1609d22506ef6",
+      "decision": "supported",
+      "rationale": "The blocks directly give Maximum Likelihood Estimation as an interpretation of fitting Gaussian linear regression."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_b5ea294ae5f29863",
+      "decision": "not_supported",
+      "rationale": "The selected blocks define the Score Function, not the Score Equation zero condition claimed by the endpoint and rationale."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_be2636a5d8bc8b4c",
+      "decision": "supported",
+      "rationale": "The blocks state that Linear Regression is fitted by the least-squares objective and supply its Mean Squared Error Formula."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_be5dff9ee6b32e1a",
+      "decision": "supported",
+      "rationale": "The block directly states that Ridge Regression changes the optimisation objective by adding a penalty."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c02b6a5def080df9",
+      "decision": "supported",
+      "rationale": "The blocks state that first-order Taylor approximation yields Forward Euler and immediately provide the Forward Euler update."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c862968c2f7bbf13",
+      "decision": "supported",
+      "rationale": "The block explicitly states that solving the Score Equation is a root-finding problem."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c9b55dc727622af1",
+      "decision": "not_supported",
+      "rationale": "The selected block refers to 'This formula' without including or naming the Mean Squared Error Formula, leaving that endpoint unresolved."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c9da9f7c5ff3c1f6",
+      "decision": "not_supported",
+      "rationale": "The block links Newton root finding to the score equation but never identifies the Log-Likelihood endpoint."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ce63516ba4c4f71d",
+      "decision": "not_supported",
+      "rationale": "The block connects log-likelihood to Objective Function but does not identify a Statistical Model endpoint."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d6043a4c35e6c8b9",
+      "decision": "supported",
+      "rationale": "The block directly associates a Gaussian linear-regression model with minimising the least-squares objective."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d64d8e658f6dafd8",
+      "decision": "supported",
+      "rationale": "The block explicitly states that the Newton root update formalizes Newton's root-finding method."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d88a461c47b9d32c",
+      "decision": "supported",
+      "rationale": "The block directly states that Gradient Descent requires the gradient of the objective function."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_da1c18bdf793236f",
+      "decision": "not_supported",
+      "rationale": "The selected block presents a score-equation root-finding problem but does not identify Log-Likelihood."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_dbc167d9bb7ce3f8",
+      "decision": "supported",
+      "rationale": "The sentence identifies log-likelihood as the objective and directly defines its gradient as the Score Function."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_dcf07ffb792c61d7",
+      "decision": "supported",
+      "rationale": "The block directly applies Newton's root-finding method to the zero condition of the Score Function."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_e1603fa09ad3fd48",
+      "decision": "not_supported",
+      "rationale": "The root-finding statement concerns a score equation; the Objective Function endpoint is only reachable through omitted log-likelihood context."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_e339035d075320bb",
+      "decision": "supported",
+      "rationale": "The block explicitly states that Gradient Descent requires the gradient of the objective function."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_e674a485e3829890",
+      "decision": "supported",
+      "rationale": "The block directly associates Ordinary Least Squares with minimising the least-squares objective under the stated model."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_edd5dd0dffb7131e",
+      "decision": "supported",
+      "rationale": "The block directly states the conditional equivalence between Maximum Likelihood Estimation and minimising the least-squares objective."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_f04767c63a30f18a",
+      "decision": "not_supported",
+      "rationale": "The block explains a descending displacement but does not identify or display the Gradient Descent Update endpoint."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_f089c625fb64bde0",
+      "decision": "supported",
+      "rationale": "The blocks directly state and formalize the use of the gradient in the first-order Taylor approximation."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_f0bc752d2a70b1ce",
+      "decision": "supported",
+      "rationale": "The block directly places Ordinary Least Squares as the fitting method for the stated Gaussian linear-regression model."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_f7ace63dad8e0d13",
+      "decision": "not_supported",
+      "rationale": "The blocks provide the Newton optimisation update but do not self-containedly identify the Objective Function endpoint."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_fa0a79a76255633a",
+      "decision": "not_supported",
+      "rationale": "The selected block identifies a score-equation root-finding problem but never states that the score is a gradient."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ff190ee933b57b25",
+      "decision": "supported",
+      "rationale": "The block explicitly states that Gradient Descent requires the gradient of the objective function."
+    }
+  ]
+}
