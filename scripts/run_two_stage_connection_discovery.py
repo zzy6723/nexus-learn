@@ -762,6 +762,7 @@ def main(argv: list[str] | None = None) -> int:
             "version": RUNNER_VERSION,
         },
         "candidate_count": len(items),
+        "completed_candidate_count": 0,
         "candidate_pair_ids_sha256": base.sha256_json(
             [item["canonical_pair_id"] for item in items]
         ),
@@ -1112,6 +1113,7 @@ def main(argv: list[str] | None = None) -> int:
     base.write_json(prediction_path, prediction)
     metadata.update({
         "run_status": "completed_subset" if args.only else "completed",
+        "completed_candidate_count": len(items),
         "stage_b_completed_count": len(positive_items),
         "stage_b_schema_repair_count": schema_repair_count,
         "request_success": True,

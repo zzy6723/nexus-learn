@@ -107,6 +107,14 @@ eligible Stage-B pair is `conn_dev_pair_9a51109c78e243ef`. The resumed run must
 use a new directory and method commit; the source run remains unchanged and is
 never itself completed or evaluated.
 
+Runner v0.1.2 also emits the generic `completed_candidate_count` required by
+the frozen 003-2 evaluator. The first completed resumed run predated that
+additive field and is repaired only through
+`scripts/finalize_two_stage_connection_run.py`. The finalizer reconstructs the
+125-result aggregate from the Stage-A and Stage-B bundles, preserves a
+pre-finalization metadata snapshot, and records that prediction content did not
+change. It does not modify evaluator logic, predictions, or scores.
+
 ## Interpretation
 
 This is a new development method version, not Prompt 003. A relative gain is not

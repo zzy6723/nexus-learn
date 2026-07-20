@@ -177,6 +177,7 @@ class TwoStageConnectionRunnerTests(unittest.TestCase):
             self.assertNotIn("rationale", model_input)
             metadata = json.loads((run_dir / "metadata/run_metadata.json").read_text())
             self.assertEqual(metadata["run_status"], "completed_subset")
+            self.assertEqual(metadata["completed_candidate_count"], 1)
             self.assertEqual(metadata["stage_a_positive_count"], 1)
             self.assertEqual(metadata["stage_b_completed_count"], 1)
 
