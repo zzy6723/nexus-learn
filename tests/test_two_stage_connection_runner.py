@@ -245,6 +245,10 @@ class TwoStageConnectionRunnerTests(unittest.TestCase):
             self.assertEqual(api.call_count, 3)
             metadata = json.loads((run_dir / "metadata/run_metadata.json").read_text())
             self.assertEqual(metadata["stage_b_schema_repair_count"], 1)
+            self.assertEqual(
+                metadata["method_id"],
+                "direct_edge_gate_then_relation_typing_v0.1.1",
+            )
             self.assertEqual(metadata["usage"]["request_count"], 3)
             pair_metadata = json.loads(
                 (run_dir / f"stage_b/metadata/pairs/{item['canonical_pair_id']}.json").read_text()

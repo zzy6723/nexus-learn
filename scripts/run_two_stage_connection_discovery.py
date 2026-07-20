@@ -316,7 +316,11 @@ def main(argv: list[str] | None = None) -> int:
         "version": "v0.1",
         "run_id": args.run_id,
         "run_status": "prepared",
-        "method_id": "direct_edge_gate_then_relation_typing_v0.1",
+        "method_id": (
+            "direct_edge_gate_then_relation_typing_v0.1.1"
+            if args.schema_repair_attempts == 1
+            else "direct_edge_gate_then_relation_typing_v0.1"
+        ),
         "method_commit": args.method_commit,
         "git_commit_at_start": commit,
         "git_dirty_at_start": dirty,
