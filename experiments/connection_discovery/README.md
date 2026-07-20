@@ -1,7 +1,7 @@
 # Experiment 003: Connection Discovery
 
 **Status:** In progress
-**Current stage:** 003-0 freeze manifest commit pending
+**Current stage:** 003-1 candidate-generation implementation
 
 ## Objective
 
@@ -29,8 +29,8 @@ deferred to Experiment 004.
 
 | Stage | Name | Status |
 | --- | --- | --- |
-| 003-0 | Benchmark and Evaluation Preparation | Freeze manifest commit pending |
-| 003-1 | Oracle-Canonical Candidate Generation | Pending |
+| 003-0 | Benchmark and Evaluation Preparation | Completed and repository-frozen |
+| 003-1 | Oracle-Canonical Candidate Generation | Implementation in progress |
 | 003-2 | Oracle-Canonical Connection Discovery | Pending |
 | 003-3 | Predicted-Canonical End-to-End Discovery | Pending |
 | 003-4 | Connection Selection and Ranking | Pending |
@@ -39,6 +39,10 @@ deferred to Experiment 004.
 No Connection model run is allowed before the 003-0 source, pair universe,
 Ground Truth, evaluation protocol, success criteria, and leakage audit are
 frozen.
+
+The 003-0 freeze manifest was committed at
+`11f7696ba829e9f3c51eb2fcac04757fdcdfd2a3`. 003-1 formal artifacts must bind
+both this manifest and the later candidate-method commit.
 
 ## Initial v0.1 Decisions
 

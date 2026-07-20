@@ -1,6 +1,6 @@
 # 003-0: Benchmark and Evaluation Preparation
 
-**Status:** Freeze manifest prepared; repository commit pending
+**Status:** Completed and repository-frozen
 **API calls:** None
 
 ## Purpose
@@ -62,11 +62,12 @@ annotation review audit are complete. See `annotation_summary.md`.
 
 The non-Git completion artifact is `completion.json`. The hash-bound
 `benchmark_freeze_manifest_v0_1.json` records benchmark content commit
-`6a941fabab27ba3cacfb502ee4f177cf4711dabb`. The freeze becomes effective only
-after that manifest and its validation test are committed. Model execution
-remains disabled until then.
+`6a941fabab27ba3cacfb502ee4f177cf4711dabb`. The manifest and its validation
+test were repository-frozen at
+`11f7696ba829e9f3c51eb2fcac04757fdcdfd2a3`.
 
 ## Completion Rule
 
-003-0 is methodologically complete but not yet repository-frozen. No 003-1
-runner or model may consume the benchmark before the clean freeze gate.
+003-0 is complete. Any later benchmark-content change requires a new benchmark
+version; Experiment 003 development may now proceed without modifying these
+frozen inputs.
