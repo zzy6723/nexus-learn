@@ -1,0 +1,462 @@
+{
+  "artifact_type": "connection_discovery_oracle_canonical_inventory",
+  "version": "v0.1",
+  "status": "draft_pre_annotation",
+  "split": "development",
+  "allowed_types": ["Concept", "Method", "Formula"],
+  "source_manifest": "benchmark/connection_discovery/development_v0_1/source_manifest.json",
+  "canonical_objects": [
+    {
+      "canonical_ko_id": "conn_dev_ko_001",
+      "canonical_name": "Gradient",
+      "canonical_type": "Concept",
+      "aliases": ["gradient vector"],
+      "mentions": [
+        {
+          "mention_id": "conn_dev_mention_001",
+          "lecture_id": "multivariable_derivatives_001",
+          "source_spans": ["the gradient is the vector of first partial derivatives"]
+        },
+        {
+          "mention_id": "conn_dev_mention_002",
+          "lecture_id": "unconstrained_optimisation_001",
+          "source_spans": ["Gradient descent requires the gradient of the objective function."]
+        },
+        {
+          "mention_id": "conn_dev_mention_003",
+          "lecture_id": "maximum_likelihood_001",
+          "source_spans": ["The score function is the gradient of the log-likelihood with respect to the parameter"]
+        }
+      ]
+    },
+    {
+      "canonical_ko_id": "conn_dev_ko_002",
+      "canonical_name": "Hessian Matrix",
+      "canonical_type": "Concept",
+      "aliases": ["Hessian"],
+      "mentions": [
+        {
+          "mention_id": "conn_dev_mention_004",
+          "lecture_id": "multivariable_derivatives_001",
+          "source_spans": ["The Hessian matrix collects the second partial derivatives of \\(f\\)."]
+        },
+        {
+          "mention_id": "conn_dev_mention_005",
+          "lecture_id": "unconstrained_optimisation_001",
+          "source_spans": ["The Newton optimisation method additionally requires the Hessian matrix to model local curvature."]
+        }
+      ]
+    },
+    {
+      "canonical_ko_id": "conn_dev_ko_003",
+      "canonical_name": "First-Order Taylor Approximation",
+      "canonical_type": "Method",
+      "aliases": ["linear Taylor approximation"],
+      "mentions": [
+        {
+          "mention_id": "conn_dev_mention_006",
+          "lecture_id": "multivariable_derivatives_001",
+          "source_spans": ["The first-order Taylor approximation uses the function value and gradient at \\(x\\) to approximate the value after a small displacement \\(\\Delta x\\)."]
+        },
+        {
+          "mention_id": "conn_dev_mention_007",
+          "lecture_id": "unconstrained_optimisation_001",
+          "source_spans": ["For a small proposed displacement, the first-order Taylor approximation predicts the resulting objective change."]
+        },
+        {
+          "mention_id": "conn_dev_mention_008",
+          "lecture_id": "explicit_ode_methods_001",
+          "source_spans": ["Applying the first-order Taylor approximation over a step of length \\(h\\) gives the Forward Euler method."]
+        }
+      ]
+    },
+    {
+      "canonical_ko_id": "conn_dev_ko_004",
+      "canonical_name": "First-Order Taylor Formula",
+      "canonical_type": "Formula",
+      "aliases": [],
+      "mentions": [
+        {
+          "mention_id": "conn_dev_mention_009",
+          "lecture_id": "multivariable_derivatives_001",
+          "source_spans": ["T_1(x+\\Delta x;x)=f(x)+\\nabla f(x)^\\top\\Delta x."]
+        }
+      ]
+    },
+    {
+      "canonical_ko_id": "conn_dev_ko_005",
+      "canonical_name": "Objective Function",
+      "canonical_type": "Concept",
+      "aliases": ["objective"],
+      "mentions": [
+        {
+          "mention_id": "conn_dev_mention_010",
+          "lecture_id": "unconstrained_optimisation_001",
+          "source_spans": ["An objective function assigns a scalar value to each candidate parameter vector."]
+        },
+        {
+          "mention_id": "conn_dev_mention_011",
+          "lecture_id": "maximum_likelihood_001",
+          "source_spans": ["Maximum likelihood estimation treats the log-likelihood as an objective function and selects a parameter value that maximizes it."]
+        },
+        {
+          "mention_id": "conn_dev_mention_012",
+          "lecture_id": "least_squares_learning_001",
+          "source_spans": ["Gradient descent can be applied to ordinary least squares by using the gradient of this objective function."]
+        }
+      ]
+    },
+    {
+      "canonical_ko_id": "conn_dev_ko_006",
+      "canonical_name": "Gradient Descent",
+      "canonical_type": "Method",
+      "aliases": [],
+      "mentions": [
+        {
+          "mention_id": "conn_dev_mention_013",
+          "lecture_id": "unconstrained_optimisation_001",
+          "source_spans": ["Gradient descent requires the gradient of the objective function."]
+        },
+        {
+          "mention_id": "conn_dev_mention_014",
+          "lecture_id": "least_squares_learning_001",
+          "source_spans": ["Gradient descent can be applied to ordinary least squares by using the gradient of this objective function."]
+        }
+      ]
+    },
+    {
+      "canonical_ko_id": "conn_dev_ko_007",
+      "canonical_name": "Gradient Descent Update",
+      "canonical_type": "Formula",
+      "aliases": [],
+      "mentions": [
+        {
+          "mention_id": "conn_dev_mention_015",
+          "lecture_id": "unconstrained_optimisation_001",
+          "source_spans": ["x_{k+1}=x_k-\\alpha_k\\nabla f(x_k)."]
+        }
+      ]
+    },
+    {
+      "canonical_ko_id": "conn_dev_ko_008",
+      "canonical_name": "Newton Optimisation Method",
+      "canonical_type": "Method",
+      "aliases": ["Newton's optimisation method"],
+      "mentions": [
+        {
+          "mention_id": "conn_dev_mention_016",
+          "lecture_id": "unconstrained_optimisation_001",
+          "source_spans": ["The Newton optimisation method additionally requires the Hessian matrix to model local curvature."]
+        }
+      ]
+    },
+    {
+      "canonical_ko_id": "conn_dev_ko_009",
+      "canonical_name": "Newton Optimisation Update",
+      "canonical_type": "Formula",
+      "aliases": [],
+      "mentions": [
+        {
+          "mention_id": "conn_dev_mention_017",
+          "lecture_id": "unconstrained_optimisation_001",
+          "source_spans": ["x_{k+1}=x_k-H_f(x_k)^{-1}\\nabla f(x_k)."]
+        }
+      ]
+    },
+    {
+      "canonical_ko_id": "conn_dev_ko_010",
+      "canonical_name": "Step Size",
+      "canonical_type": "Concept",
+      "aliases": [],
+      "mentions": [
+        {
+          "mention_id": "conn_dev_mention_018",
+          "lecture_id": "unconstrained_optimisation_001",
+          "source_spans": ["With step size \\(\\alpha_k>0\\), the method moves opposite to the gradient."]
+        },
+        {
+          "mention_id": "conn_dev_mention_019",
+          "lecture_id": "explicit_ode_methods_001",
+          "source_spans": ["The step size \\(h\\) sets the spacing between consecutive numerical time points."]
+        }
+      ]
+    },
+    {
+      "canonical_ko_id": "conn_dev_ko_011",
+      "canonical_name": "Statistical Model",
+      "canonical_type": "Concept",
+      "aliases": [],
+      "mentions": [
+        {
+          "mention_id": "conn_dev_mention_020",
+          "lecture_id": "maximum_likelihood_001",
+          "source_spans": ["A statistical model is a family of probability distributions indexed by an unknown parameter \\(\\theta\\)."]
+        }
+      ]
+    },
+    {
+      "canonical_ko_id": "conn_dev_ko_012",
+      "canonical_name": "Log-Likelihood",
+      "canonical_type": "Concept",
+      "aliases": [],
+      "mentions": [
+        {
+          "mention_id": "conn_dev_mention_021",
+          "lecture_id": "maximum_likelihood_001",
+          "source_spans": ["the log-likelihood measures how the assumed parameter value supports those observations"]
+        }
+      ]
+    },
+    {
+      "canonical_ko_id": "conn_dev_ko_013",
+      "canonical_name": "Maximum Likelihood Estimation",
+      "canonical_type": "Method",
+      "aliases": ["MLE"],
+      "mentions": [
+        {
+          "mention_id": "conn_dev_mention_022",
+          "lecture_id": "maximum_likelihood_001",
+          "source_spans": ["Maximum likelihood estimation treats the log-likelihood as an objective function and selects a parameter value that maximizes it."]
+        },
+        {
+          "mention_id": "conn_dev_mention_023",
+          "lecture_id": "least_squares_learning_001",
+          "source_spans": ["ordinary least squares also has a maximum likelihood estimation interpretation"]
+        }
+      ]
+    },
+    {
+      "canonical_ko_id": "conn_dev_ko_014",
+      "canonical_name": "Score Function",
+      "canonical_type": "Concept",
+      "aliases": [],
+      "mentions": [
+        {
+          "mention_id": "conn_dev_mention_024",
+          "lecture_id": "maximum_likelihood_001",
+          "source_spans": ["The score function is the gradient of the log-likelihood with respect to the parameter"]
+        }
+      ]
+    },
+    {
+      "canonical_ko_id": "conn_dev_ko_015",
+      "canonical_name": "Score Equation",
+      "canonical_type": "Concept",
+      "aliases": [],
+      "mentions": [
+        {
+          "mention_id": "conn_dev_mention_025",
+          "lecture_id": "maximum_likelihood_001",
+          "source_spans": ["At an interior differentiable maximum, a candidate satisfies the score equation \\(s(\\theta)=0\\)."]
+        }
+      ]
+    },
+    {
+      "canonical_ko_id": "conn_dev_ko_016",
+      "canonical_name": "Linear Regression",
+      "canonical_type": "Concept",
+      "aliases": [],
+      "mentions": [
+        {
+          "mention_id": "conn_dev_mention_026",
+          "lecture_id": "maximum_likelihood_001",
+          "source_spans": ["For a Gaussian linear regression model with constant variance"]
+        },
+        {
+          "mention_id": "conn_dev_mention_027",
+          "lecture_id": "least_squares_learning_001",
+          "source_spans": ["Linear regression models a response using a linear function of the input features."]
+        }
+      ]
+    },
+    {
+      "canonical_ko_id": "conn_dev_ko_017",
+      "canonical_name": "Least Squares Objective",
+      "canonical_type": "Concept",
+      "aliases": [],
+      "mentions": [
+        {
+          "mention_id": "conn_dev_mention_028",
+          "lecture_id": "maximum_likelihood_001",
+          "source_spans": ["maximizing the log-likelihood is equivalent to minimizing the least squares objective"]
+        },
+        {
+          "mention_id": "conn_dev_mention_029",
+          "lecture_id": "least_squares_learning_001",
+          "source_spans": ["Ordinary least squares fits a linear regression model by minimizing the least squares objective"]
+        }
+      ]
+    },
+    {
+      "canonical_ko_id": "conn_dev_ko_018",
+      "canonical_name": "Mean Squared Error Formula",
+      "canonical_type": "Formula",
+      "aliases": ["MSE formula"],
+      "mentions": [
+        {
+          "mention_id": "conn_dev_mention_030",
+          "lecture_id": "least_squares_learning_001",
+          "source_spans": ["\\operatorname{MSE}(\\beta)=\\frac{1}{n}\\sum_{i=1}^{n}(y_i-x_i^\\top\\beta)^2."]
+        }
+      ]
+    },
+    {
+      "canonical_ko_id": "conn_dev_ko_019",
+      "canonical_name": "Ordinary Least Squares",
+      "canonical_type": "Method",
+      "aliases": ["OLS"],
+      "mentions": [
+        {
+          "mention_id": "conn_dev_mention_031",
+          "lecture_id": "maximum_likelihood_001",
+          "source_spans": ["ordinary least squares and maximum likelihood estimation select the same coefficient vector"]
+        },
+        {
+          "mention_id": "conn_dev_mention_032",
+          "lecture_id": "least_squares_learning_001",
+          "source_spans": ["Ordinary least squares fits a linear regression model by minimizing the least squares objective over the coefficient vector \\(\\beta\\)."]
+        }
+      ]
+    },
+    {
+      "canonical_ko_id": "conn_dev_ko_020",
+      "canonical_name": "Ridge Regression",
+      "canonical_type": "Method",
+      "aliases": [],
+      "mentions": [
+        {
+          "mention_id": "conn_dev_mention_033",
+          "lecture_id": "least_squares_learning_001",
+          "source_spans": ["Ridge regression extends ordinary least squares by adding a squared-coefficient penalty to the objective."]
+        }
+      ]
+    },
+    {
+      "canonical_ko_id": "conn_dev_ko_021",
+      "canonical_name": "Root-Finding Problem",
+      "canonical_type": "Concept",
+      "aliases": ["root problem"],
+      "mentions": [
+        {
+          "mention_id": "conn_dev_mention_034",
+          "lecture_id": "maximum_likelihood_001",
+          "source_spans": ["Finding such a candidate is a root-finding problem."]
+        },
+        {
+          "mention_id": "conn_dev_mention_035",
+          "lecture_id": "nonlinear_root_finding_001",
+          "source_spans": ["A root-finding problem asks for a point \\(x^*\\) satisfying \\(g(x^*)=0\\)."]
+        }
+      ]
+    },
+    {
+      "canonical_ko_id": "conn_dev_ko_022",
+      "canonical_name": "Newton's Root-Finding Method",
+      "canonical_type": "Method",
+      "aliases": ["Newton's method for root finding"],
+      "mentions": [
+        {
+          "mention_id": "conn_dev_mention_036",
+          "lecture_id": "maximum_likelihood_001",
+          "source_spans": ["Newton's root-finding method can be applied within maximum likelihood estimation."]
+        },
+        {
+          "mention_id": "conn_dev_mention_037",
+          "lecture_id": "nonlinear_root_finding_001",
+          "source_spans": ["Newton's root-finding method requires the derivative of \\(g\\) and replaces the function locally by its tangent line."]
+        }
+      ]
+    },
+    {
+      "canonical_ko_id": "conn_dev_ko_023",
+      "canonical_name": "Newton Root Update",
+      "canonical_type": "Formula",
+      "aliases": [],
+      "mentions": [
+        {
+          "mention_id": "conn_dev_mention_038",
+          "lecture_id": "nonlinear_root_finding_001",
+          "source_spans": ["x_{k+1}=x_k-\\frac{g(x_k)}{g'(x_k)}."]
+        }
+      ]
+    },
+    {
+      "canonical_ko_id": "conn_dev_ko_024",
+      "canonical_name": "Damped Newton Method",
+      "canonical_type": "Method",
+      "aliases": [],
+      "mentions": [
+        {
+          "mention_id": "conn_dev_mention_039",
+          "lecture_id": "nonlinear_root_finding_001",
+          "source_spans": ["The damped Newton method extends Newton's root-finding method by multiplying the correction by a factor \\(\\lambda_k\\in(0,1]\\)."]
+        }
+      ]
+    },
+    {
+      "canonical_ko_id": "conn_dev_ko_025",
+      "canonical_name": "Derivative",
+      "canonical_type": "Concept",
+      "aliases": [],
+      "mentions": [
+        {
+          "mention_id": "conn_dev_mention_040",
+          "lecture_id": "nonlinear_root_finding_001",
+          "source_spans": ["Newton's root-finding method requires the derivative of \\(g\\)"]
+        }
+      ]
+    },
+    {
+      "canonical_ko_id": "conn_dev_ko_026",
+      "canonical_name": "Initial Value Problem",
+      "canonical_type": "Concept",
+      "aliases": ["IVP"],
+      "mentions": [
+        {
+          "mention_id": "conn_dev_mention_041",
+          "lecture_id": "explicit_ode_methods_001",
+          "source_spans": ["An initial value problem combines a differential equation \\(y'(t)=F(t,y(t))\\) with an initial value \\(y(t_0)=y_0\\)."]
+        }
+      ]
+    },
+    {
+      "canonical_ko_id": "conn_dev_ko_027",
+      "canonical_name": "Forward Euler Method",
+      "canonical_type": "Method",
+      "aliases": ["Euler method"],
+      "mentions": [
+        {
+          "mention_id": "conn_dev_mention_042",
+          "lecture_id": "explicit_ode_methods_001",
+          "source_spans": ["Applying the first-order Taylor approximation over a step of length \\(h\\) gives the Forward Euler method."]
+        }
+      ]
+    },
+    {
+      "canonical_ko_id": "conn_dev_ko_028",
+      "canonical_name": "Forward Euler Update",
+      "canonical_type": "Formula",
+      "aliases": [],
+      "mentions": [
+        {
+          "mention_id": "conn_dev_mention_043",
+          "lecture_id": "explicit_ode_methods_001",
+          "source_spans": ["y_{n+1}=y_n+hF(t_n,y_n)."]
+        }
+      ]
+    },
+    {
+      "canonical_ko_id": "conn_dev_ko_029",
+      "canonical_name": "Local Truncation Error",
+      "canonical_type": "Concept",
+      "aliases": [],
+      "mentions": [
+        {
+          "mention_id": "conn_dev_mention_044",
+          "lecture_id": "explicit_ode_methods_001",
+          "source_spans": ["The local truncation error is the one-step error obtained when the exact current solution value is inserted into the numerical update."]
+        }
+      ]
+    }
+  ]
+}

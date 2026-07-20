@@ -1,0 +1,52 @@
+{
+  "artifact_type": "connection_discovery_source_manifest",
+  "version": "v0.1",
+  "status": "draft_pre_annotation",
+  "split": "development",
+  "data_role": "connection_discovery_method_development",
+  "authorship": "Authored for this repository before Connection model execution.",
+  "lectures": [
+    {
+      "lecture_id": "multivariable_derivatives_001",
+      "course_id": "mathematical_optimisation",
+      "topic_id": "multivariable_derivatives",
+      "sequence": 1,
+      "path": "benchmark/connection_discovery/development_v0_1/lectures/multivariable_derivatives_001.md"
+    },
+    {
+      "lecture_id": "unconstrained_optimisation_001",
+      "course_id": "mathematical_optimisation",
+      "topic_id": "unconstrained_optimisation",
+      "sequence": 2,
+      "path": "benchmark/connection_discovery/development_v0_1/lectures/unconstrained_optimisation_001.md"
+    },
+    {
+      "lecture_id": "maximum_likelihood_001",
+      "course_id": "statistical_learning",
+      "topic_id": "maximum_likelihood",
+      "sequence": 1,
+      "path": "benchmark/connection_discovery/development_v0_1/lectures/maximum_likelihood_001.md"
+    },
+    {
+      "lecture_id": "least_squares_learning_001",
+      "course_id": "statistical_learning",
+      "topic_id": "least_squares_learning",
+      "sequence": 2,
+      "path": "benchmark/connection_discovery/development_v0_1/lectures/least_squares_learning_001.md"
+    },
+    {
+      "lecture_id": "nonlinear_root_finding_001",
+      "course_id": "numerical_methods",
+      "topic_id": "nonlinear_root_finding",
+      "sequence": 1,
+      "path": "benchmark/connection_discovery/development_v0_1/lectures/nonlinear_root_finding_001.md"
+    },
+    {
+      "lecture_id": "explicit_ode_methods_001",
+      "course_id": "numerical_methods",
+      "topic_id": "explicit_ode_methods",
+      "sequence": 2,
+      "path": "benchmark/connection_discovery/development_v0_1/lectures/explicit_ode_methods_001.md"
+    }
+  ]
+}

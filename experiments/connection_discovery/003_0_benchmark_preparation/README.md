@@ -38,20 +38,28 @@ Reasons:
 The source remains useful as a later sparse diagnostic. It must not be called
 an unseen 003 holdout because it has already been inspected.
 
+## 003-0B Result
+
+The new authored development bundle is structurally complete:
+
+- 6 lectures across 3 declared course sequences;
+- 29 Oracle canonical KOs and 44 exact mention spans;
+- 387 eligible cross-lecture pairs;
+- 262 disjoint-provenance and 125 overlap-bridge pairs;
+- 139 same-course cross-lecture pairs and 330 pairs with a cross-course
+  combination;
+- explicit bridge families for multiple Relation types and intentional schema
+  gaps.
+
+See `development_source_design.md`. The machine-readable universe is
+`benchmark/connection_discovery/development_v0_1/pair_universe.json`.
+
 ## Next Gate
 
-Design and audit a new authored development bundle before annotating the
-exhaustive pair universe. Target properties are:
-
-- 6 lectures across at least 3 declared course or topic groups;
-- 24-30 Oracle canonical KOs;
-- approximately 250-400 eligible cross-lecture pairs;
-- multiple explicit positive bridge families;
-- coverage of at least `REQUIRES`, `APPLIED_IN`, `FORMALIZES`, and `EXTENDS`;
-- sufficient near-domain hard negatives;
-- exact candidate-scoped Evidence blocks.
-
-The target ranges guide workload and coverage. They are not success metrics.
+003-0C must annotate all 387 pairs before any model run. It must create exact
+candidate-scoped Evidence catalogs, review every default-negative decision,
+freeze schema-gap and ambiguous handling, and define success criteria from the
+completed denominators.
 
 ## Completion Rule
 
