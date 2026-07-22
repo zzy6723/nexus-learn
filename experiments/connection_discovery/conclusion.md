@@ -78,7 +78,7 @@ method passes its frozen gates.
 
 ## Scope Limits
 
-The result concerns 31 Oracle canonical Knowledge Objects, 387 eligible pairs,
+The result concerns 29 Oracle canonical Knowledge Objects, 387 eligible pairs,
 125 selected candidates, and short authored STEM lectures. It does not establish
 performance on long documents, parsed PDFs, noisy Entity outputs, broad STEM
 coverage, learner-specific usefulness, or run-to-run stability.

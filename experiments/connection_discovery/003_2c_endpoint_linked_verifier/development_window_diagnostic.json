@@ -1,0 +1,46 @@
+{
+  "artifact_type": "connection_evidence_window_development_diagnostic",
+  "version": "v0.1",
+  "status": "development_only_method_informed_by_same_data",
+  "method": {
+    "id": "minimal_endpoint_linked_windows_v0.1",
+    "max_blocks": 3,
+    "same_lecture_only": true,
+    "minimal_windows_only": true
+  },
+  "inputs": {
+    "candidate_selection": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/overlap_bridge/run_01/generation/candidate_selection.json",
+      "sha256": "70318d882755066b32017cb1c9188603060f8cd7237c70e7d7a0b14d339dee7a"
+    },
+    "canonical_inventory": {
+      "path": "benchmark/connection_discovery/development_v0_1/oracle_canonical_inventory.json",
+      "sha256": "682e0d0aa66398cc54128b5bba1b1fdc0a1512ec1c46a83e64463ac2403c34f7"
+    },
+    "evidence_catalogs": {
+      "path": "benchmark/connection_discovery/development_v0_1/evidence_catalogs.json",
+      "sha256": "4b5549598dc2aa0250e6d5a688484d13f742d7a6372ba6f6ad6fd1a1ecf87cac"
+    },
+    "ground_truth_for_diagnostic_only": {
+      "path": "benchmark/connection_discovery/development_v0_1/ground_truth.json",
+      "sha256": "1bbbd801b505dc2a1d410f50b605a600b9e2ae135471b5484dea63c76aebcba4"
+    }
+  },
+  "counts": {
+    "selected_pairs": 125,
+    "pairs_with_windows": 111,
+    "pairs_without_windows": 14,
+    "minimal_windows": 173,
+    "primary_positive_pairs": 41,
+    "primary_positive_pairs_with_windows": 41,
+    "primary_negative_pairs": 78,
+    "primary_negative_pairs_with_windows": 65,
+    "other_pairs": 6,
+    "other_pairs_with_windows": 5
+  },
+  "metrics": {
+    "primary_positive_window_coverage": 1.0,
+    "primary_negative_window_rate": 0.8333333333333334
+  },
+  "interpretation": "The deterministic window method preserves endpoint-linked coverage for all current development positives while reducing 14 pairs to deterministic no-window rejections. Because this benchmark informed max_blocks and matching design, the result is not a validation score."
+}

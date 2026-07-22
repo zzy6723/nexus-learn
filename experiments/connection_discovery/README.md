@@ -1,7 +1,7 @@
 # Experiment 003: Connection Discovery
 
-**Status:** Experiment 003 v0.1 completed with a negative Technical Validation result
-**Current stage:** Closed; no Oracle-canonical Connection method passed the frozen gates
+**Status:** v0.1 completed with a negative result; v0.2 method preparation in progress
+**Current stage:** 003-2c endpoint-linked Evidence verification preparation
 
 ## Objective
 
@@ -33,6 +33,7 @@ deferred to Experiment 004.
 | 003-1 | Oracle-Canonical Candidate Generation | Completed and repository-frozen |
 | 003-2 | Oracle-Canonical Connection Discovery | Completed; frozen gates failed |
 | 003-2b | Two-Stage Direct-Edge Connection Discovery | Completed; execution recovered, frozen quality gates failed |
+| 003-2c | Endpoint-Linked Evidence Verification | v0.2 method preparation; no model run yet |
 | 003-3 | Predicted-Canonical End-to-End Discovery | Not executed; Oracle gate precondition failed |
 | 003-4 | Connection Selection and Ranking | Not executed; no validated Connection set |
 | 003-5 | Independent Validation | Not executed; no method qualified |
@@ -65,6 +66,7 @@ both this manifest and the later candidate-method commit.
 - 003-2b method: `003_2b_direct_edge_gate/README.md`
 - 003-2b results: `003_2b_direct_edge_gate/development_results.md`
 - 003-2b conclusion: `003_2b_direct_edge_gate/conclusion.md`
+- 003-2c method: `003_2c_endpoint_linked_verifier/README.md`
 - Experiment conclusion: `conclusion.md`
 - Machine-readable closure: `experiment_validation_complete.json`
 - Draft protocol: `../../benchmark/connection_discovery_protocol.md`
@@ -82,3 +84,8 @@ preconditions were not met. Experiment 003 v0.1 is closed as a valid negative
 result. Any future v0.2 must declare a materially revised method and use fresh
 evaluation data rather than continue pair-specific prompt tuning on the current
 development benchmark.
+
+The v0.2 cycle is now being prepared as 003-2c. Its deterministic preprocessor
+constructs minimal endpoint-linked Evidence windows, and its verifier separates
+direct in-schema edges from out-of-schema, mediated/contextual, and insufficient
+support. The old benchmark is development diagnostic data only for this method.

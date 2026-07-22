@@ -1,0 +1,41 @@
+{
+  "artifact_type": "endpoint_linked_connection_verifier_success_criteria",
+  "version": "v0.1",
+  "status": "ready_to_freeze_before_model_execution",
+  "development_diagnostic": {
+    "primary_positive_window_coverage": {
+      "operator": ">=",
+      "threshold": 0.95
+    },
+    "fatal_alignment_errors": {
+      "operator": "==",
+      "threshold": 0
+    },
+    "aggregation_conflicts": {
+      "operator": "<=",
+      "threshold": 2
+    },
+    "positive_edge_precision": {
+      "operator": ">=",
+      "threshold": 0.7
+    },
+    "positive_typed_edge_recall": {
+      "operator": ">=",
+      "threshold": 0.7
+    },
+    "no_relation_accuracy": {
+      "operator": ">=",
+      "threshold": 0.85
+    },
+    "semantic_evidence_support_rate": {
+      "operator": ">=",
+      "threshold": 0.9
+    },
+    "related_to_prediction_rate": {
+      "operator": "<=",
+      "threshold": 0.05
+    }
+  },
+  "selection_rule": "Every listed criterion must pass. Development success authorizes fresh validation construction, not production selection.",
+  "independent_validation": "Must be frozen separately on a fresh explicitly annotated source after the method is fixed."
+}

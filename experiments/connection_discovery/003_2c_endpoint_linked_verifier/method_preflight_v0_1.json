@@ -1,0 +1,55 @@
+{
+  "artifact_type": "endpoint_linked_connection_verifier_method_preflight",
+  "version": "v0.1",
+  "status": "ready_for_repository_freeze",
+  "model_execution_authorized": false,
+  "method_id": "endpoint_linked_window_verifier_v0.1",
+  "bindings": {
+    "failure_analysis": {
+      "path": "experiments/connection_discovery/003_2c_endpoint_linked_verifier/v0_1_failure_analysis.md",
+      "sha256": "7dd0c5cc398cb66d00e3adc347c61e614bf4868912f62eef53d2bb4e720fa719"
+    },
+    "method_contract": {
+      "path": "experiments/connection_discovery/003_2c_endpoint_linked_verifier/method_contract_v0_1.md",
+      "sha256": "9ac62479d4c05018c9d4e783920ace485178398ece5f4f84e328cfcc41599b81"
+    },
+    "success_criteria": {
+      "path": "experiments/connection_discovery/003_2c_endpoint_linked_verifier/success_criteria_v0_1.json",
+      "sha256": "42f9204e865ef8004c88a2df56316ceb2ee9bd4079bf24cc22590b256170694f"
+    },
+    "prompt": {
+      "path": "experiments/connection_discovery/003_2c_endpoint_linked_verifier/window_verifier_prompt.md",
+      "sha256": "b8b246a662e5a61a1d78d85b326a9b707382bf2391adead4376d4ea98e545f31"
+    },
+    "development_window_diagnostic": {
+      "path": "experiments/connection_discovery/003_2c_endpoint_linked_verifier/development_window_diagnostic.json",
+      "sha256": "895dbedcd13f39b6f43c04a6ad03650bea9bae46c655ec9c45a09c9258748b72"
+    },
+    "window_generator": {
+      "path": "scripts/generate_connection_evidence_windows.py",
+      "sha256": "845424dfd0b02e4efdc2fb8764d170924cd9ddcdd7b0950b8bdf53e8a44aad9d"
+    },
+    "verifier_runner": {
+      "path": "scripts/run_endpoint_linked_connection_verifier.py",
+      "sha256": "12aaf2a5a7a749dcaaa40d5555d691da659b775dbd680af895b27681f4d4ead7"
+    },
+    "window_generator_tests": {
+      "path": "tests/test_connection_evidence_windows.py",
+      "sha256": "c0ab5225929348d71cf57d512061dd246b6b5647cc69bbe0ed188ce3c9afa453"
+    },
+    "verifier_runner_tests": {
+      "path": "tests/test_endpoint_linked_connection_verifier.py",
+      "sha256": "bad1ec05396befa97db21c399759909e1439a88e0c58123b548c1b83119464f2"
+    }
+  },
+  "validation": {
+    "new_tests_passed": 11,
+    "connection_discovery_regression_tests_passed": 68,
+    "real_development_selected_pairs": 125,
+    "real_development_minimal_windows": 173,
+    "real_development_primary_positive_window_coverage": 1.0,
+    "gold_leakage_detected": false,
+    "secret_pattern_detected": false
+  },
+  "next_gate": "Commit the bound method files, confirm a clean repository, generate the formal Evidence-window bundle at that commit, and perform a dry run before any API request."
+}

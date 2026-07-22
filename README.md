@@ -72,7 +72,7 @@ Technical Validation currently has the following experiment status:
 | 002B-1 | Controlled predicted-KO pipeline coupling | Completed |
 | 002B-2 | Candidate Pair Generation under predicted KOs | Completed with partial feasibility |
 | 002C | Knowledge Object Resolution / Canonicalization | Completed with limited independent validation |
-| 003 | Learner-relevant Connection Discovery | v0.1 completed with a negative result |
+| 003 | Learner-relevant Connection Discovery | v0.1 negative; v0.2 method preparation in progress |
 | 004 | Learner-facing Connection Explanation | Not started |
 
 Experiment 002B is complete. The current lecture-local safety path uses
@@ -89,6 +89,10 @@ Connection classification validation. Candidate generation retained all 41
 primary positive pairs, but both the one-stage and two-stage classifiers failed
 the frozen quality gates. No validated Connection Discovery default is selected,
 and downstream ranking or explanation is not authorized as product validation.
+
+The v0.2 method preparation constrains the model to minimal endpoint-linked
+Evidence windows and distinguishes direct graph edges from mediated or shared
+context. It has not yet produced a formal model result.
 
 The user interface is intentionally postponed until the core AI pipeline has been validated.
 
