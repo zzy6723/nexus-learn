@@ -1,0 +1,881 @@
+{
+  "artifact_type": "connection_window_aggregation_diagnostics",
+  "version": "v0.1",
+  "pairs": [
+    {
+      "canonical_pair_id": "conn_dev_pair_000ee4a322d95897",
+      "window_count": 0,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_004a5d37e586342f",
+      "window_count": 3,
+      "direct_window_count": 2,
+      "unique_direct_edge_count": 2,
+      "aggregation_outcome": "conflicting_direct_edges"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_0640b65385629338",
+      "window_count": 1,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_079e85d9a20814b7",
+      "window_count": 0,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_07a48d5987f87d67",
+      "window_count": 0,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_07f23c7717c1b2fc",
+      "window_count": 5,
+      "direct_window_count": 2,
+      "unique_direct_edge_count": 2,
+      "aggregation_outcome": "conflicting_direct_edges"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_0c89e22909d9eb04",
+      "window_count": 0,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_1191a92948ebd2d6",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_1a40513a66e7f15d",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_1a9ada3036ab9ac1",
+      "window_count": 1,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_203435522ae7fc94",
+      "window_count": 1,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_207ca66121d45a58",
+      "window_count": 2,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_222c986cd9853739",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_225420587c4177f5",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_260ec70c43c90b5d",
+      "window_count": 0,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_263db2f07078bcd1",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_2653269d6960cfb8",
+      "window_count": 2,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_2bb1aeb7a750deb8",
+      "window_count": 2,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_2cebee9063b290e6",
+      "window_count": 0,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_2e7e34a63a7a010e",
+      "window_count": 2,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_2e86bae906db9729",
+      "window_count": 2,
+      "direct_window_count": 2,
+      "unique_direct_edge_count": 2,
+      "aggregation_outcome": "conflicting_direct_edges"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_31fa9b658289ed76",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_3216d348a5fd0b14",
+      "window_count": 0,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_334f084a05ae5d26",
+      "window_count": 2,
+      "direct_window_count": 2,
+      "unique_direct_edge_count": 2,
+      "aggregation_outcome": "conflicting_direct_edges"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_36ccbe1b2809f02f",
+      "window_count": 1,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_3b005c7a79510244",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_3c1d300edac20859",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_4a578fe32126af5d",
+      "window_count": 2,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_4bc5d12d0482885f",
+      "window_count": 0,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_4e14b70508e9162e",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_4f47407efd260c39",
+      "window_count": 1,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_523107aa1d66d340",
+      "window_count": 1,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_528c5bc99dfe3da3",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_5377d9a990974fd5",
+      "window_count": 2,
+      "direct_window_count": 2,
+      "unique_direct_edge_count": 2,
+      "aggregation_outcome": "conflicting_direct_edges"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_54a583c2de885f78",
+      "window_count": 2,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_56bf2cab52cf025c",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_5729188da76c91ec",
+      "window_count": 1,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_573cfcca7161b8cc",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_58cb2129cbbe96fd",
+      "window_count": 4,
+      "direct_window_count": 4,
+      "unique_direct_edge_count": 2,
+      "aggregation_outcome": "conflicting_direct_edges"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_596c5ef5d936bf59",
+      "window_count": 0,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_5ad127da6345956c",
+      "window_count": 0,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_5c9b50da7757c423",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_616b3cd5835de47d",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_623dc620447526e3",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_63bb993a9e7b1d30",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_654033881f94fbf0",
+      "window_count": 2,
+      "direct_window_count": 2,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_65d8ad81bc1dc2cb",
+      "window_count": 1,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_6aa4cd7ede0d0fd8",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_6c1b7aacdbb18827",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_6d5cf494bbd05db6",
+      "window_count": 1,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_6e643548d9f9123a",
+      "window_count": 0,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_6fe7e172bceffbee",
+      "window_count": 3,
+      "direct_window_count": 2,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7198ee241a3c0808",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_799174f17022eacc",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7ae886fbc9be7241",
+      "window_count": 2,
+      "direct_window_count": 2,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7b6597ac0aac5113",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7cd6620daef9af12",
+      "window_count": 1,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7d14f554a3646ae6",
+      "window_count": 2,
+      "direct_window_count": 2,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7f5ac4c6e2fe5268",
+      "window_count": 2,
+      "direct_window_count": 2,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_81f4b77e0b280216",
+      "window_count": 2,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_8404187bbee08589",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_855fc91eae345c72",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_88939b4d17cdfb3e",
+      "window_count": 3,
+      "direct_window_count": 3,
+      "unique_direct_edge_count": 2,
+      "aggregation_outcome": "conflicting_direct_edges"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_8c981e7dd58feb47",
+      "window_count": 2,
+      "direct_window_count": 2,
+      "unique_direct_edge_count": 2,
+      "aggregation_outcome": "conflicting_direct_edges"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_8fae4bf3dd480f71",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9411fb11503a6f0f",
+      "window_count": 2,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9a51109c78e243ef",
+      "window_count": 2,
+      "direct_window_count": 2,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9b1e66cc5876fb95",
+      "window_count": 1,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9b5399bc5a3f9e73",
+      "window_count": 1,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9c6621685b9ef5e5",
+      "window_count": 2,
+      "direct_window_count": 2,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9cd38efffcca81cd",
+      "window_count": 1,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9f008ddde3e426f0",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a1259045b6b2d2c7",
+      "window_count": 2,
+      "direct_window_count": 2,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a1e6b8f76fd16f4d",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a234bad0c2a17d8c",
+      "window_count": 1,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a47be07419d8b917",
+      "window_count": 3,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a8513031d82ba28e",
+      "window_count": 1,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a92bdea086a3cd0c",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ac297f8e072816c0",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ad73d420644fe99f",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_b0c235b2d349eff7",
+      "window_count": 2,
+      "direct_window_count": 2,
+      "unique_direct_edge_count": 2,
+      "aggregation_outcome": "conflicting_direct_edges"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_b1a1609d22506ef6",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_b23eff47b6d29fb5",
+      "window_count": 3,
+      "direct_window_count": 2,
+      "unique_direct_edge_count": 2,
+      "aggregation_outcome": "conflicting_direct_edges"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_b5ea294ae5f29863",
+      "window_count": 2,
+      "direct_window_count": 2,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_be2636a5d8bc8b4c",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_be5dff9ee6b32e1a",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_bed567d1ff4c7012",
+      "window_count": 2,
+      "direct_window_count": 2,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_bfce59cf0247f59a",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c0111c22941b9e4b",
+      "window_count": 2,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c02b6a5def080df9",
+      "window_count": 2,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c21da2851eae0815",
+      "window_count": 1,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c862968c2f7bbf13",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c9b55dc727622af1",
+      "window_count": 2,
+      "direct_window_count": 2,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c9d185b1eedd2c21",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c9da9f7c5ff3c1f6",
+      "window_count": 2,
+      "direct_window_count": 2,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ca264bc4f8b65f3b",
+      "window_count": 2,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ce63516ba4c4f71d",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d28ab8d8057efb6a",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d4084502778d049d",
+      "window_count": 0,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d6043a4c35e6c8b9",
+      "window_count": 2,
+      "direct_window_count": 2,
+      "unique_direct_edge_count": 2,
+      "aggregation_outcome": "conflicting_direct_edges"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d64d8e658f6dafd8",
+      "window_count": 2,
+      "direct_window_count": 2,
+      "unique_direct_edge_count": 2,
+      "aggregation_outcome": "conflicting_direct_edges"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d6c5b70637127bb4",
+      "window_count": 0,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d7f55c9116fa3adf",
+      "window_count": 1,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d88a461c47b9d32c",
+      "window_count": 4,
+      "direct_window_count": 4,
+      "unique_direct_edge_count": 2,
+      "aggregation_outcome": "conflicting_direct_edges"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_da1c18bdf793236f",
+      "window_count": 2,
+      "direct_window_count": 2,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_dbc167d9bb7ce3f8",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_dcf07ffb792c61d7",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_dec2bec3d250fd3c",
+      "window_count": 0,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_e1603fa09ad3fd48",
+      "window_count": 2,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_e339035d075320bb",
+      "window_count": 2,
+      "direct_window_count": 2,
+      "unique_direct_edge_count": 2,
+      "aggregation_outcome": "conflicting_direct_edges"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_e674a485e3829890",
+      "window_count": 3,
+      "direct_window_count": 3,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_e848f855de939343",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ea10f05ebcebff54",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_edd5dd0dffb7131e",
+      "window_count": 2,
+      "direct_window_count": 2,
+      "unique_direct_edge_count": 2,
+      "aggregation_outcome": "conflicting_direct_edges"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ef28d97312ee8970",
+      "window_count": 2,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_f04767c63a30f18a",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_f089c625fb64bde0",
+      "window_count": 2,
+      "direct_window_count": 2,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_f0bc752d2a70b1ce",
+      "window_count": 2,
+      "direct_window_count": 2,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_f725fe54ec613340",
+      "window_count": 2,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_f7ace63dad8e0d13",
+      "window_count": 1,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_fa0a79a76255633a",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_fac1350d8eb9227e",
+      "window_count": 1,
+      "direct_window_count": 1,
+      "unique_direct_edge_count": 1,
+      "aggregation_outcome": "unique_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_fb58022473834283",
+      "window_count": 2,
+      "direct_window_count": 2,
+      "unique_direct_edge_count": 2,
+      "aggregation_outcome": "conflicting_direct_edges"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_fb6ac84549809e7b",
+      "window_count": 1,
+      "direct_window_count": 0,
+      "unique_direct_edge_count": 0,
+      "aggregation_outcome": "no_direct_edge"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ff190ee933b57b25",
+      "window_count": 3,
+      "direct_window_count": 3,
+      "unique_direct_edge_count": 3,
+      "aggregation_outcome": "conflicting_direct_edges"
+    }
+  ]
+}

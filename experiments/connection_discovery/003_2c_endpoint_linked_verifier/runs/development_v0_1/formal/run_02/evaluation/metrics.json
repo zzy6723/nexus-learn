@@ -1,0 +1,125 @@
+{
+  "artifact_type": "canonical_connection_metrics",
+  "version": "v0.1",
+  "evaluation_status": "final",
+  "counts": {
+    "universe_primary_positive_pairs": 41,
+    "universe_primary_negative_pairs": 335,
+    "selected_primary_positive_pairs": 41,
+    "selected_primary_negative_pairs": 78,
+    "candidate_misses": 0,
+    "correct_positive_edges": 15,
+    "correct_no_relation": 42,
+    "predicted_positive_primary": 68,
+    "false_positive_relations": 36,
+    "false_negative_relations": 9,
+    "wrong_relation_type": 11,
+    "wrong_direction": 6,
+    "positive_evidence_cases": 71,
+    "evidence_auto_supported": 6,
+    "evidence_supported_by_adjudication": 23,
+    "evidence_not_supported": 42,
+    "evidence_pending": 0
+  },
+  "conditional_metrics": {
+    "positive_typed_edge_recall": 0.36585365853658536,
+    "positive_edge_precision": 0.22058823529411764,
+    "no_relation_accuracy": 0.5384615384615384,
+    "strict_edge_accuracy": 0.4789915966386555,
+    "relation_type_accuracy_on_positives": 0.5121951219512195,
+    "direction_accuracy_when_type_correct": 0.7142857142857143,
+    "exact_evidence_materialization_rate": 1.0,
+    "semantic_evidence_support_rate": 0.4084507042253521,
+    "related_to_prediction_rate": 0.0
+  },
+  "full_universe_metrics": {
+    "primary_connection_precision": 0.22058823529411764,
+    "primary_connection_recall": 0.36585365853658536,
+    "primary_connection_f1": 0.27522935779816515,
+    "pipeline_strict_accuracy": 0.8351063829787234,
+    "cross_course_connection_recall": 0.35714285714285715
+  },
+  "gate_assessment": {
+    "outcome": "failed",
+    "checks": {
+      "positive_typed_edge_recall": {
+        "value": 0.36585365853658536,
+        "operator": ">=",
+        "threshold": 0.75,
+        "passed": false
+      },
+      "positive_edge_precision": {
+        "value": 0.22058823529411764,
+        "operator": ">=",
+        "threshold": 0.75,
+        "passed": false
+      },
+      "no_relation_accuracy": {
+        "value": 0.5384615384615384,
+        "operator": ">=",
+        "threshold": 0.9,
+        "passed": false
+      },
+      "exact_evidence_materialization_rate": {
+        "value": 1.0,
+        "operator": "==",
+        "threshold": 1.0,
+        "passed": true
+      },
+      "semantic_evidence_support_rate": {
+        "value": 0.4084507042253521,
+        "operator": ">=",
+        "threshold": 0.9,
+        "passed": false
+      },
+      "related_to_prediction_rate": {
+        "value": 0.0,
+        "operator": "<=",
+        "threshold": 0.05,
+        "passed": true
+      },
+      "fatal_alignment_errors": {
+        "value": 0,
+        "operator": "<=",
+        "threshold": 0,
+        "passed": true
+      }
+    },
+    "anti_majority_rule": "Overall strict accuracy alone cannot pass because an all-NO_RELATION system exceeds 0.89 on the primary denominator."
+  },
+  "full_universe_gate_assessment": {
+    "outcome": "failed",
+    "checks": {
+      "primary_connection_precision": {
+        "value": 0.22058823529411764,
+        "operator": ">=",
+        "threshold": 0.7,
+        "passed": false
+      },
+      "primary_connection_recall": {
+        "value": 0.36585365853658536,
+        "operator": ">=",
+        "threshold": 0.7,
+        "passed": false
+      },
+      "primary_connection_f1": {
+        "value": 0.27522935779816515,
+        "operator": ">=",
+        "threshold": 0.7,
+        "passed": false
+      },
+      "cross_course_connection_recall": {
+        "value": 0.35714285714285715,
+        "operator": ">=",
+        "threshold": 0.65,
+        "passed": false
+      },
+      "duplicate_connections": {
+        "value": 0,
+        "operator": "<=",
+        "threshold": 0,
+        "passed": true
+      }
+    }
+  }
+}

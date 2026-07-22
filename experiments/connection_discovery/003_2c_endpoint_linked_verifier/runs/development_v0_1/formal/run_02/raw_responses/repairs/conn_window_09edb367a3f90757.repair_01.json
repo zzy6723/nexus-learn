@@ -1,0 +1,28 @@
+{
+  "id": "633586ed-9b9c-4b39-bbcc-0578552342ca",
+  "object": "chat.completion",
+  "created": 1784696376,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"canonical_pair_id\": \"conn_dev_pair_623dc620447526e3\",\n  \"window_id\": \"conn_window_09edb367a3f90757\",\n  \"support_decision\": \"DIRECT_IN_SCHEMA\",\n  \"source_canonical_ko_id\": \"conn_dev_ko_004\",\n  \"target_canonical_ko_id\": \"conn_dev_ko_003\",\n  \"relation_type\": \"FORMALIZES\",\n  \"evidence_ids\": [\"evidence_005\"],\n  \"rationale\": \"The evidence states that the first-order Taylor approximation is formalized by the first-order Taylor formula, so the Formula (source) formalizes the Method (target).\"\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1214,
+    "completion_tokens": 152,
+    "total_tokens": 1366,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 702
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,12 @@
+{
+  "canonical_pair_id": "conn_dev_pair_88939b4d17cdfb3e",
+  "window_id": "conn_window_bfdda5476c26ea44",
+  "support_decision": "DIRECT_IN_SCHEMA",
+  "source_canonical_ko_id": "conn_dev_ko_017",
+  "target_canonical_ko_id": "conn_dev_ko_005",
+  "relation_type": "RELATED_TO",
+  "evidence_ids": [
+    "evidence_016"
+  ],
+  "rationale": "The evidence explicitly states that the formula formalizes the least squares objective, connecting Least Squares Objective to Objective Function. Since FORMALIZES requires a Formula source and Least Squares Objective is a Concept, the appropriate relation is RELATED_TO."
+}

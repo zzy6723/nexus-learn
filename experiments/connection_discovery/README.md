@@ -1,7 +1,7 @@
 # Experiment 003: Connection Discovery
 
-**Status:** v0.1 completed with a negative result; v0.2 method preparation in progress
-**Current stage:** 003-2c endpoint-linked Evidence verification preparation
+**Status:** v0.1 and v0.2 development cycles completed with negative results
+**Current stage:** Experiment 003 closed; no validated Connection method selected
 
 ## Objective
 
@@ -33,7 +33,7 @@ deferred to Experiment 004.
 | 003-1 | Oracle-Canonical Candidate Generation | Completed and repository-frozen |
 | 003-2 | Oracle-Canonical Connection Discovery | Completed; frozen gates failed |
 | 003-2b | Two-Stage Direct-Edge Connection Discovery | Completed; execution recovered, frozen quality gates failed |
-| 003-2c | Endpoint-Linked Evidence Verification | v0.2 method preparation; no model run yet |
+| 003-2c | Endpoint-Linked Evidence Verification | Completed; modest diagnostic gains, frozen development criteria failed |
 | 003-3 | Predicted-Canonical End-to-End Discovery | Not executed; Oracle gate precondition failed |
 | 003-4 | Connection Selection and Ranking | Not executed; no validated Connection set |
 | 003-5 | Independent Validation | Not executed; no method qualified |
@@ -67,8 +67,12 @@ both this manifest and the later candidate-method commit.
 - 003-2b results: `003_2b_direct_edge_gate/development_results.md`
 - 003-2b conclusion: `003_2b_direct_edge_gate/conclusion.md`
 - 003-2c method: `003_2c_endpoint_linked_verifier/README.md`
+- 003-2c results: `003_2c_endpoint_linked_verifier/development_results.md`
+- 003-2c comparison: `003_2c_endpoint_linked_verifier/development_comparison.json`
+- 003-2c conclusion: `003_2c_endpoint_linked_verifier/conclusion.md`
 - Experiment conclusion: `conclusion.md`
 - Machine-readable closure: `experiment_validation_complete.json`
+- v0.2 development closure: `experiment_v0_2_development_complete.json`
 - Draft protocol: `../../benchmark/connection_discovery_protocol.md`
 - Draft annotation rules:
   `../../benchmark/connection_discovery_annotation_guidelines.md`
@@ -85,7 +89,17 @@ result. Any future v0.2 must declare a materially revised method and use fresh
 evaluation data rather than continue pair-specific prompt tuning on the current
 development benchmark.
 
-The v0.2 cycle is now being prepared as 003-2c. Its deterministic preprocessor
-constructs minimal endpoint-linked Evidence windows, and its verifier separates
-direct in-schema edges from out-of-schema, mediated/contextual, and insufficient
-support. The old benchmark is development diagnostic data only for this method.
+## Final v0.2 Development Decision
+
+The endpoint-linked v0.1.1 verifier completed all 173 window requests over the
+same 125 development candidates. It modestly improved positive precision,
+typed-edge recall, negative accuracy, direction, and full-universe F1, but
+failed five of eight predeclared 003-2c criteria. Semantic Evidence support
+remained `0.4085`, and 17 conflicting window-level edges forced fail-closed
+aggregation.
+
+No endpoint-linked verifier is selected. The old benchmark is now exhausted as
+development data for these methods; it cannot support an independent claim.
+Experiment 003 is closed as a negative Technical Validation programme. Stages
+003-3 through 003-5 remain unexecuted, and Experiment 004 product validation is
+not authorized.

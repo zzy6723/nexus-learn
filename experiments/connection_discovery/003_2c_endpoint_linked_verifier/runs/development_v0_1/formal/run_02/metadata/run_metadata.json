@@ -1,0 +1,84 @@
+{
+  "artifact_type": "endpoint_linked_connection_verifier_run_metadata",
+  "version": "v0.1",
+  "run_id": "run_02",
+  "run_status": "completed",
+  "method_id": "endpoint_linked_window_verifier_v0.1.1",
+  "method_commit": "02a618358301d1e4f87488198e71c8d9dc232fbc",
+  "git_commit_at_start": "02a618358301d1e4f87488198e71c8d9dc232fbc",
+  "git_dirty_at_start": false,
+  "execution_scope": "full_selected_candidate_set",
+  "request_partitioning": "one_endpoint_linked_window_per_request_v0.1",
+  "request_parameters": {
+    "model": "deepseek-v4-flash",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 900,
+    "transport_retries": 2,
+    "schema_repair_attempts": 1
+  },
+  "inputs": {
+    "window_bundle": {
+      "path": "experiments/connection_discovery/003_2c_endpoint_linked_verifier/runs/development_v0_1/window_generation/run_01/window_bundle.json",
+      "sha256": "9522cac64918d0f3ee3e120a7d38d13bdb0b81d450048a2994aac91c895d633f"
+    },
+    "candidate_selection": {
+      "path": "experiments/connection_discovery/003_1_candidate_generation/runs/development_v0_1/overlap_bridge/run_01/generation/candidate_selection.json",
+      "sha256": "70318d882755066b32017cb1c9188603060f8cd7237c70e7d7a0b14d339dee7a"
+    },
+    "evidence_catalogs": {
+      "path": "benchmark/connection_discovery/development_v0_1/evidence_catalogs.json",
+      "sha256": "4b5549598dc2aa0250e6d5a688484d13f742d7a6372ba6f6ad6fd1a1ecf87cac"
+    },
+    "freeze_manifest": {
+      "path": "experiments/connection_discovery/003_0_benchmark_preparation/benchmark_freeze_manifest_v0_1.json",
+      "sha256": "73dfb238877395c1d57e63c4959f416834b3b30db56dd64abe8981b012f39f2c"
+    },
+    "prompt": {
+      "path": "experiments/connection_discovery/003_2c_endpoint_linked_verifier/window_verifier_prompt.md",
+      "sha256": "b8b246a662e5a61a1d78d85b326a9b707382bf2391adead4376d4ea98e545f31"
+    }
+  },
+  "runner": {
+    "path": "scripts/run_endpoint_linked_connection_verifier.py",
+    "sha256": "fbb5972281978cd5250272867b5509ef354ffc9c1ab018382a383c76c58b2c40",
+    "version": "endpoint_linked_connection_verifier_runner_v0.1.1"
+  },
+  "candidate_count": 125,
+  "window_request_count": 173,
+  "request_payload_set_sha256": "56f30b8213329b804110bf75bc21fba1c803e39ebff5f990e2d824f14dfff439",
+  "dry_run": false,
+  "started_at": "2026-07-22T04:56:48.501295+00:00",
+  "request_success": true,
+  "json_parse_success": true,
+  "prediction_schema_valid": true,
+  "finish_reason": "stop",
+  "completed_window_count": 173,
+  "attempted_window_count": 173,
+  "api_request_attempt_count": 176,
+  "request_completed_count": 176,
+  "parse_completed_count": 176,
+  "completed_candidate_count": 125,
+  "transport_retry_count": 0,
+  "schema_repair_count": 3,
+  "aggregation_conflict_count": 17,
+  "usage": {
+    "prompt_tokens": 174487,
+    "completion_tokens": 27704,
+    "total_tokens": 202191,
+    "prompt_cache_hit_tokens": 122624,
+    "prompt_cache_miss_tokens": 51863
+  },
+  "window_verifications": {
+    "path": "experiments/connection_discovery/003_2c_endpoint_linked_verifier/runs/development_v0_1/formal/run_02/window_decisions/window_verifications.json",
+    "sha256": "b8942a2d1aeb449af049c93fed065cd12b7c232a4a2ad7097730b8925051d391"
+  },
+  "aggregation_diagnostics": {
+    "path": "experiments/connection_discovery/003_2c_endpoint_linked_verifier/runs/development_v0_1/formal/run_02/output/aggregation_diagnostics.json",
+    "sha256": "308336f7cbc48066840214e08b748be29c9fd091624cd73d62053a4e6e42a10f"
+  },
+  "prediction": {
+    "path": "experiments/connection_discovery/003_2c_endpoint_linked_verifier/runs/development_v0_1/formal/run_02/output/canonical_connection_predictions.json",
+    "sha256": "50f11b90b983e209a10e3fec5e377be7af21663abf3f3728f8b531742ee40fc1"
+  }
+}

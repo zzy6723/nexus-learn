@@ -1,6 +1,6 @@
 # 003-2c: Endpoint-Linked Evidence Verification
 
-**Status:** v0.1 schema failure recorded; v0.1.1 execution repair pending freeze
+**Status:** v0.1.1 development evaluation completed; frozen criteria failed
 
 ## Objective
 
@@ -38,7 +38,7 @@ generalization. Before any independent claim, the frozen method must be run on
 a fresh source whose pair categories are explicitly reviewed under the v0.2
 scope taxonomy.
 
-## Planned Artifacts
+## Artifacts
 
 - `v0_1_failure_analysis.md`;
 - `method_contract_v0_1.md`;
@@ -48,7 +48,11 @@ scope taxonomy.
 - `method_preflight_v0_1_1.json`;
 - deterministic Evidence-window bundle;
 - candidate-scoped verifier outputs;
-- existing canonical Connection predictions for final evaluation.
+- final canonical Connection predictions and evaluation;
+- `development_results.md`;
+- `development_comparison.json`;
+- `conclusion.md`;
+- `development_validation_complete.json`.
 
 No formal API run is allowed until the method implementation, tests, prompt,
 and success criteria are repository-frozen at one clean commit.
@@ -77,3 +81,16 @@ This confirms that the preprocessor can narrow Evidence without losing a
 current development positive. It is not a validation result because the old
 benchmark informed the three-block limit and endpoint-linking design. The
 machine-readable record is `development_window_diagnostic.json`.
+
+## Final Development Result
+
+Runner v0.1.1 completed 173 window requests and emitted predictions for all 125
+candidates. Three schema-invalid model responses were handled by the frozen
+single-repair contract. The final evaluation resolved all 65 pending Evidence
+cases and reached `evaluation_status = final`.
+
+The method improved several diagnostics but failed five of eight predeclared
+003-2c criteria. It achieved `0.2206` positive precision, `0.3659` positive
+typed-edge recall, `0.5385` `NO_RELATION` accuracy, and `0.4085` semantic
+Evidence support. Seventeen aggregation conflicts also exceeded the maximum of
+two. No Connection Discovery default is selected.

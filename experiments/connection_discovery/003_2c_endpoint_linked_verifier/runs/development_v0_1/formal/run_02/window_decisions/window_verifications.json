@@ -1,0 +1,2010 @@
+{
+  "artifact_type": "connection_window_verifications",
+  "version": "v0.1",
+  "decisions": [
+    {
+      "canonical_pair_id": "conn_dev_pair_004a5d37e586342f",
+      "window_id": "conn_window_40bbb87551951d48",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_001",
+      "target_canonical_ko_id": "conn_dev_ko_010",
+      "relation_type": "REQUIRES",
+      "evidence_ids": [
+        "evidence_009"
+      ],
+      "rationale": "The evidence states 'Gradient descent requires the gradient of the objective function. With step size \u03b1_k>0, the method moves opposite to the gradient.' This directly indicates that Gradient (source) is required for Step Size (target) to be applied in the gradient descent update, establishing a REQUIRES relation."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_004a5d37e586342f",
+      "window_id": "conn_window_5db09f96b5425deb",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "The evidence mentions gradient and step size but does not establish a direct typed connection between them; it connects them via the concept of displacement and Taylor approximation, requiring an intermediate object."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_004a5d37e586342f",
+      "window_id": "conn_window_ad1d0f493d3ee140",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_001",
+      "target_canonical_ko_id": "conn_dev_ko_010",
+      "relation_type": "CONTRASTS_WITH",
+      "evidence_ids": [
+        "evidence_014"
+      ],
+      "rationale": "The evidence explicitly contrasts gradient descent (which uses an explicit step size) with Newton's method (which uses a curvature-adjusted step), establishing a direct contrast between Gradient and Step Size."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_0640b65385629338",
+      "window_id": "conn_window_4f955707d2ba342d",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "The evidence mentions least squares objective and root-finding problem separately but does not establish a direct connection between them. Evidence_005 links least squares to maximum likelihood, and evidence_004 links root-finding to score equations, but no evidence directly connects least squares objective to root-finding problem."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_07f23c7717c1b2fc",
+      "window_id": "conn_window_0e49de2edf348405",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_001",
+      "target_canonical_ko_id": "conn_dev_ko_002",
+      "relation_type": "CONTRASTS_WITH",
+      "evidence_ids": [
+        "evidence_007"
+      ],
+      "rationale": "The evidence explicitly contrasts the gradient (linear term) with the Hessian matrix (curvature term) in the context of a second-order approximation, establishing a direct contrast between the two concepts."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_07f23c7717c1b2fc",
+      "window_id": "conn_window_895e1d2a0f9a31f1",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "The evidence mentions gradient and Hessian matrix separately in different contexts (gradient descent vs Newton method), but does not establish a direct typed connection between them. They are related via optimization methods, but no direct edge is shown."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_07f23c7717c1b2fc",
+      "window_id": "conn_window_3942517af2ecf871",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_001",
+      "target_canonical_ko_id": "conn_dev_ko_002",
+      "relation_type": "REQUIRES",
+      "evidence_ids": [
+        "evidence_012",
+        "evidence_013"
+      ],
+      "rationale": "Evidence states that Newton's method requires the Hessian matrix, and the update formula uses gradient and Hessian together, establishing that Gradient (source) is used in a method that requires Hessian Matrix (target)."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_07f23c7717c1b2fc",
+      "window_id": "conn_window_b3731d9d20020683",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "The evidence defines the Hessian matrix and mentions the gradient in the context of Taylor approximation, but does not directly connect the two concepts. The connection is mediated by the Taylor formula, which is not one of the endpoints."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_07f23c7717c1b2fc",
+      "window_id": "conn_window_ec41c5418a11fa85",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "The evidence defines gradient and Hessian separately but does not explicitly connect them. They are related via second-order derivatives, but the connection is mediated by the concept of partial derivatives and not directly stated."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_1191a92948ebd2d6",
+      "window_id": "conn_window_9c5b391f6eaf1b62",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_001",
+      "target_canonical_ko_id": "conn_dev_ko_011",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_016"
+      ],
+      "rationale": "Evidence 016 states that the score function is the gradient of the log-likelihood, and maximum likelihood estimation uses this gradient. This directly shows that Gradient is applied in the context of Statistical Model (via MLE)."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_1a40513a66e7f15d",
+      "window_id": "conn_window_a668a36b00ac790b",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_010",
+      "target_canonical_ko_id": "conn_dev_ko_027",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_011"
+      ],
+      "rationale": "The evidence states that the step size h sets spacing and that the Forward Euler update formalizes how the method advances one step, indicating that Step Size is used in the Forward Euler Method."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_1a9ada3036ab9ac1",
+      "window_id": "conn_window_fa0438eb486a8f87",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "The evidence does not directly connect Ordinary Least Squares and Root-Finding Problem. Evidence_005 links OLS to MLE, and evidence_004 links MLE to root-finding, but no direct edge between the two endpoints is established."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_203435522ae7fc94",
+      "window_id": "conn_window_30e4f86919223583",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "The evidence mentions score equation and linear regression separately but does not establish a direct typed connection between them. The score equation is discussed in the context of maximum likelihood estimation, and linear regression is mentioned as a model where MLE equals OLS, but no direct link between the two concepts is made."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_207ca66121d45a58",
+      "window_id": "conn_window_3a8ad542f5ed41dd",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_001",
+      "target_canonical_ko_id": "conn_dev_ko_019",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_023"
+      ],
+      "rationale": "The evidence states that gradient descent can be applied to ordinary least squares by using the gradient of the objective function, directly establishing that Gradient is applied in Ordinary Least Squares."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_207ca66121d45a58",
+      "window_id": "conn_window_e746be3d7c2207cc",
+      "support_decision": "INSUFFICIENT",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "The evidence contrasts Newton's method with gradient descent, but does not mention Ordinary Least Squares or establish a direct connection between Gradient and Ordinary Least Squares."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_222c986cd9853739",
+      "window_id": "conn_window_46258ea3a8aaabfa",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_006",
+      "target_canonical_ko_id": "conn_dev_ko_017",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_016"
+      ],
+      "rationale": "Evidence states 'Gradient descent can be applied to ordinary least squares by using the gradient of this objective function', directly connecting Gradient Descent (Method) as applied to Least Squares Objective (Concept)."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_225420587c4177f5",
+      "window_id": "conn_window_c3b8170aa7efd687",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_006",
+      "target_canonical_ko_id": "conn_dev_ko_007",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_002"
+      ],
+      "rationale": "The evidence states that gradient descent uses the gradient and moves opposite to it, and then mentions 'the gradient descent update is', directly linking the method to its update formula. This establishes that the method (Gradient Descent) is applied in the update formula (Gradient Descent Update)."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_263db2f07078bcd1",
+      "window_id": "conn_window_70fdad7842f9fc04",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_003",
+      "target_canonical_ko_id": "conn_dev_ko_026",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_016"
+      ],
+      "rationale": "Evidence 016 states that applying the first-order Taylor approximation gives the Forward Euler method, which is a method for solving initial value problems. This directly shows the source (First-Order Taylor Approximation) being applied in the context of the target (Initial Value Problem)."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_2653269d6960cfb8",
+      "window_id": "conn_window_23c518bbaed4142d",
+      "support_decision": "INSUFFICIENT",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "The evidence mentions the Newton optimisation update and step size in separate sentences, but does not explicitly connect them as a direct typed relation. The connection is mediated by the context of optimisation methods, not directly established."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_2653269d6960cfb8",
+      "window_id": "conn_window_ad75f6fdbcd71f74",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_009",
+      "target_canonical_ko_id": "conn_dev_ko_010",
+      "relation_type": "CONTRASTS_WITH",
+      "evidence_ids": [
+        "evidence_007"
+      ],
+      "rationale": "Evidence 007 explicitly contrasts Newton's full step (source) with gradient descent's explicit step size (target), establishing a direct contrast."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_2bb1aeb7a750deb8",
+      "window_id": "conn_window_e47fd1c5b3a669dd",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_001",
+      "target_canonical_ko_id": "conn_dev_ko_008",
+      "relation_type": "CONTRASTS_WITH",
+      "evidence_ids": [
+        "evidence_014"
+      ],
+      "rationale": "The evidence explicitly contrasts gradient descent (Gradient) with Newton optimisation method, stating differences in step size control."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_2bb1aeb7a750deb8",
+      "window_id": "conn_window_92cecbbe7f31cc9f",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "The evidence mentions gradient and Newton method separately but does not establish a direct typed connection between them. The connection is mediated by the Hessian and curvature concepts, not directly between Gradient and Newton Optimisation Method."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_2e7e34a63a7a010e",
+      "window_id": "conn_window_973757a9125387be",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "Evidence mentions Newton's method applied to score equation (root-finding) within MLE, but does not directly connect Objective Function to Newton's Root-Finding Method. The connection is mediated by the score equation and MLE context."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_2e7e34a63a7a010e",
+      "window_id": "conn_window_0bf264da3348e1fc",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_022",
+      "target_canonical_ko_id": "conn_dev_ko_005",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_011"
+      ],
+      "rationale": "Evidence 011 explicitly states that Newton's root-finding method is applied within maximum likelihood estimation to solve the score equation, which is derived from the objective function (log-likelihood). This establishes a direct APPLIED_IN relation from Newton's method to the objective function."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_2e86bae906db9729",
+      "window_id": "conn_window_3b37caf273ed56c8",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_005",
+      "target_canonical_ko_id": "conn_dev_ko_016",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_012"
+      ],
+      "rationale": "The evidence states that maximizing the log-likelihood (Objective Function) is equivalent to minimizing the least squares objective in Linear Regression, directly showing that the objective function is applied in linear regression."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_2e86bae906db9729",
+      "window_id": "conn_window_867c0b8cadde85d1",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_016",
+      "target_canonical_ko_id": "conn_dev_ko_005",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_013"
+      ],
+      "rationale": "The evidence states that ordinary least squares fits a linear regression model by minimizing the least squares objective, which is an objective function. Thus, Linear Regression (source) applies the Objective Function (target) in its fitting process."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_31fa9b658289ed76",
+      "window_id": "conn_window_809af071d8d56497",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_013",
+      "target_canonical_ko_id": "conn_dev_ko_021",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_004"
+      ],
+      "rationale": "The evidence states that finding a candidate for maximum likelihood estimation is a root-finding problem, indicating that Maximum Likelihood Estimation applies Root-Finding Problem."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_334f084a05ae5d26",
+      "window_id": "conn_window_4a10719ddd909f91",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_021",
+      "target_canonical_ko_id": "conn_dev_ko_022",
+      "relation_type": "REQUIRES",
+      "evidence_ids": [
+        "evidence_006"
+      ],
+      "rationale": "The evidence states that Newton's method requires the derivative, which is a prerequisite for solving root-finding problems, establishing a direct REQUIRES relation from the method to the problem."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_334f084a05ae5d26",
+      "window_id": "conn_window_6dbcf7036ef15657",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_021",
+      "target_canonical_ko_id": "conn_dev_ko_022",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_004"
+      ],
+      "rationale": "The evidence states that Newton's root-finding method is applied to solve the root-finding problem arising from the score equation, establishing a direct APPLIED_IN relation from Root-Finding Problem to Newton's Root-Finding Method."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_36ccbe1b2809f02f",
+      "window_id": "conn_window_412d265c7b50bb97",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "The evidence mentions Hessian matrix and objective function but does not establish a direct typed connection between them. The Hessian is used in Newton's method, which is an optimization method for objective functions, but the evidence does not explicitly connect the two endpoints directly; it requires the context of Newton's method as an intermediate."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_3b005c7a79510244",
+      "window_id": "conn_window_a04761bfaa6d6684",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_006",
+      "target_canonical_ko_id": "conn_dev_ko_018",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_011"
+      ],
+      "rationale": "Evidence 011 explicitly states that gradient descent can be applied to ordinary least squares using the gradient of the MSE objective, establishing a direct APPLIED_IN relation from Gradient Descent to Mean Squared Error Formula."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_3c1d300edac20859",
+      "window_id": "conn_window_41406eb343478bb2",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_014",
+      "target_canonical_ko_id": "conn_dev_ko_021",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_004"
+      ],
+      "rationale": "Evidence 004 explicitly states that solving the score equation (derived from the score function) is a root-finding problem, establishing a direct application of the score function concept to the root-finding problem."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_4a578fe32126af5d",
+      "window_id": "conn_window_4c5e5802864791a1",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_001",
+      "target_canonical_ko_id": "conn_dev_ko_013",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_016"
+      ],
+      "rationale": "The evidence states that the score function is the gradient of the log-likelihood, directly showing that Gradient is applied in Maximum Likelihood Estimation."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_4a578fe32126af5d",
+      "window_id": "conn_window_20c863e06a997331",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "Evidence 025 mentions that OLS has an MLE interpretation under Gaussian noise, but does not directly connect Gradient to MLE. The connection requires an intermediate object (OLS) and additional assumptions, so it is mediated."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_4e14b70508e9162e",
+      "window_id": "conn_window_acae0bd675c7e4fa",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_001",
+      "target_canonical_ko_id": "conn_dev_ko_017",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_023"
+      ],
+      "rationale": "The evidence states that gradient descent can be applied to ordinary least squares by using the gradient of the objective function, directly connecting Gradient (source) as applied in Least Squares Objective (target)."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_4f47407efd260c39",
+      "window_id": "conn_window_f1b6096869d13fc1",
+      "support_decision": "INSUFFICIENT",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "The evidence window discusses step size and local truncation error separately, but does not explicitly connect them. No direct relationship between the two concepts is established."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_523107aa1d66d340",
+      "window_id": "conn_window_fea4a75dcfa8d98b",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "Evidence 004 connects Newton's method to score equation root-finding, not directly to Least Squares Objective. Evidence 005 connects Least Squares Objective to MLE, but not to Newton's method. No evidence directly links the two endpoints."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_528c5bc99dfe3da3",
+      "window_id": "conn_window_422f60034e64f29b",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_002",
+      "target_canonical_ko_id": "conn_dev_ko_006",
+      "relation_type": "CONTRASTS_WITH",
+      "evidence_ids": [
+        "evidence_014"
+      ],
+      "rationale": "Evidence 014 explicitly contrasts Newton's method (which uses Hessian) with gradient descent, establishing a direct contrast between Hessian Matrix and Gradient Descent."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_5377d9a990974fd5",
+      "window_id": "conn_window_2a141f2f5547f925",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_005",
+      "target_canonical_ko_id": "conn_dev_ko_007",
+      "relation_type": "REQUIRES",
+      "evidence_ids": [
+        "evidence_002"
+      ],
+      "rationale": "The evidence states 'Gradient descent requires the gradient of the objective function', establishing that the Objective Function (source) is required for the Gradient Descent Update (target)."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_5377d9a990974fd5",
+      "window_id": "conn_window_d0e58e5394ad4f7b",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_007",
+      "target_canonical_ko_id": "conn_dev_ko_005",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_003",
+        "evidence_004"
+      ],
+      "rationale": "Evidence 003 shows the Gradient Descent Update formula. Evidence 004 explains that the update direction is opposite to the gradient to minimize the objective function, directly establishing that the update is applied to optimize the Objective Function."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_54a583c2de885f78",
+      "window_id": "conn_window_553324c3e012e48d",
+      "support_decision": "INSUFFICIENT",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "The evidence mentions Newton's root-finding method but does not connect it to Ordinary Least Squares. No direct or mediated connection is established."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_54a583c2de885f78",
+      "window_id": "conn_window_9fe26bff6664bb3b",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "Evidence 004 discusses Newton's method applied to maximum likelihood estimation, not directly to OLS. Evidence 005 shows equivalence between OLS and MLE under Gaussian assumptions, but does not directly connect OLS to Newton's method. The connection between OLS and Newton's method is mediated by MLE, not direct."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_56bf2cab52cf025c",
+      "window_id": "conn_window_9633aa177fddcd3a",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_001",
+      "target_canonical_ko_id": "conn_dev_ko_015",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_016",
+        "evidence_017"
+      ],
+      "rationale": "Evidence 016 states 'The score function is the gradient of the log-likelihood', and evidence 017 provides the formula s(\u03b8)=\u2207\u03b8\u2113(\u03b8). Together they show that Gradient is applied in the Score Equation."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_5729188da76c91ec",
+      "window_id": "conn_window_5c2d61b9c1872286",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "The evidence mentions both Objective Function and Newton Optimisation Method, but does not establish a direct typed connection between them. Evidence_004 discusses gradient descent using Taylor approximation, while evidence_005 introduces Newton's method requiring Hessian. The connection is mediated by the concept of gradient descent or curvature, not directly between the two endpoints."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_573cfcca7161b8cc",
+      "window_id": "conn_window_b6c5a873b144febe",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_003",
+      "target_canonical_ko_id": "conn_dev_ko_006",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_011"
+      ],
+      "rationale": "Evidence 011 explicitly states that the first-order Taylor approximation explains why moving opposite to the gradient (Gradient Descent) is locally descending, establishing a direct application of the approximation in the method."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_58cb2129cbbe96fd",
+      "window_id": "conn_window_874645220f4f346f",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_019",
+      "target_canonical_ko_id": "conn_dev_ko_005",
+      "relation_type": "EXTENDS",
+      "evidence_ids": [
+        "evidence_017"
+      ],
+      "rationale": "The evidence states that Ridge regression extends ordinary least squares by adding a penalty to the objective function, establishing a direct EXTENDS relation from OLS (source) to Objective Function (target)."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_58cb2129cbbe96fd",
+      "window_id": "conn_window_bcb17637c7ab6f8a",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_019",
+      "target_canonical_ko_id": "conn_dev_ko_005",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_012"
+      ],
+      "rationale": "The evidence states that maximizing log-likelihood is equivalent to minimizing the least squares objective, indicating that Ordinary Least Squares is applied in the context of the Objective Function (specifically, the least squares objective)."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_58cb2129cbbe96fd",
+      "window_id": "conn_window_f8632db4312a681c",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_019",
+      "target_canonical_ko_id": "conn_dev_ko_005",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_013"
+      ],
+      "rationale": "The evidence states that Ordinary Least Squares fits a model by minimizing the least squares objective, directly showing that OLS applies the Objective Function."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_58cb2129cbbe96fd",
+      "window_id": "conn_window_f91f8fb65120d9c8",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_019",
+      "target_canonical_ko_id": "conn_dev_ko_005",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_016"
+      ],
+      "rationale": "The evidence states that gradient descent can be applied to ordinary least squares by using the gradient of the objective function, indicating that Ordinary Least Squares (source) is applied in the context of the Objective Function (target)."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_5c9b50da7757c423",
+      "window_id": "conn_window_43e1e01a4ede1370",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_012",
+      "target_canonical_ko_id": "conn_dev_ko_016",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_005"
+      ],
+      "rationale": "The evidence states that maximizing log-likelihood is equivalent to minimizing least squares in Gaussian linear regression, directly showing that Log-Likelihood is applied in the context of Linear Regression."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_616b3cd5835de47d",
+      "window_id": "conn_window_fb601d37587c3f3b",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_001",
+      "target_canonical_ko_id": "conn_dev_ko_014",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_016"
+      ],
+      "rationale": "The evidence states 'The score function is the gradient of the log-likelihood', directly establishing that Gradient is applied in Score Function."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_623dc620447526e3",
+      "window_id": "conn_window_09edb367a3f90757",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_004",
+      "target_canonical_ko_id": "conn_dev_ko_003",
+      "relation_type": "FORMALIZES",
+      "evidence_ids": [
+        "evidence_005"
+      ],
+      "rationale": "The evidence states that the first-order Taylor approximation is formalized by the first-order Taylor formula, so the Formula (source) formalizes the Method (target)."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_63bb993a9e7b1d30",
+      "window_id": "conn_window_982cb5b85672a27d",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_022",
+      "target_canonical_ko_id": "conn_dev_ko_024",
+      "relation_type": "EXTENDS",
+      "evidence_ids": [
+        "evidence_010"
+      ],
+      "rationale": "The evidence explicitly states that the damped Newton method extends Newton's root-finding method by adding a damping factor, establishing a direct EXTENDS relation from Newton's method to the damped variant."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_654033881f94fbf0",
+      "window_id": "conn_window_2943e97ea4b4ef3d",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_007",
+      "target_canonical_ko_id": "conn_dev_ko_010",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_002"
+      ],
+      "rationale": "The evidence states that gradient descent update uses step size, indicating that Step Size is applied in the Gradient Descent Update formula."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_654033881f94fbf0",
+      "window_id": "conn_window_fa85dde9a64072c5",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_007",
+      "target_canonical_ko_id": "conn_dev_ko_010",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_003",
+        "evidence_004"
+      ],
+      "rationale": "Evidence_003 shows the gradient descent update formula, which includes the step size \u03b1_k. Evidence_004 explains that the step size must be sufficiently small for the update to be locally descending. Together, they directly show that the step size is applied in the gradient descent update formula."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_65d8ad81bc1dc2cb",
+      "window_id": "conn_window_bc01729fe9e71782",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "Evidence 010 connects Ridge Regression to Ordinary Least Squares, not to Maximum Likelihood Estimation. Evidence 011 connects Ordinary Least Squares to Maximum Likelihood Estimation. The connection between Ridge Regression and Maximum Likelihood Estimation is mediated by Ordinary Least Squares, not direct."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_6aa4cd7ede0d0fd8",
+      "window_id": "conn_window_a8e13557d3308eff",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_010",
+      "target_canonical_ko_id": "conn_dev_ko_028",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_011"
+      ],
+      "rationale": "The evidence states that step size h sets spacing, and Forward Euler update formalizes advancing one step, indicating step size is applied in the update."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_6c1b7aacdbb18827",
+      "window_id": "conn_window_c4f1eb2c94fa557c",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_012",
+      "target_canonical_ko_id": "conn_dev_ko_017",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_005"
+      ],
+      "rationale": "The evidence explicitly states that maximizing log-likelihood is equivalent to minimizing the least squares objective, establishing a direct application of log-likelihood in the context of least squares."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_6d5cf494bbd05db6",
+      "window_id": "conn_window_e38f0d0b764caf5f",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "Evidence 018 mentions that OLS has an MLE interpretation under Gaussian noise, but this connects OLS (not Gradient Descent) to MLE. No evidence directly links Gradient Descent and Maximum Likelihood Estimation; the connection is mediated by OLS."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_6fe7e172bceffbee",
+      "window_id": "conn_window_9309ea51908f81ae",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_003",
+      "target_canonical_ko_id": "conn_dev_ko_010",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_011"
+      ],
+      "rationale": "The evidence states that the first-order Taylor approximation predicts the objective change for a small displacement, and that the step size must be sufficiently small for the descent direction to be valid. This directly shows that the Taylor approximation is applied in the context of step size."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_6fe7e172bceffbee",
+      "window_id": "conn_window_2ecbe7d15072b6c7",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "The evidence mentions First-Order Taylor Approximation in the context of local truncation error for Forward Euler, but does not directly connect it to Step Size. The connection is mediated by the Forward Euler method and error analysis."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_6fe7e172bceffbee",
+      "window_id": "conn_window_d951c439c5711aba",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_003",
+      "target_canonical_ko_id": "conn_dev_ko_010",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_016",
+        "evidence_017",
+        "evidence_018"
+      ],
+      "rationale": "Evidence states that the first-order Taylor approximation is applied over a step of length h, and the step size h is defined as the spacing between time points. The update formula y_{n+1}=y_n+hF(t_n,y_n) shows the Taylor approximation applied using step size h, establishing a direct APPLIED_IN relation from the method to the concept."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7198ee241a3c0808",
+      "window_id": "conn_window_b327d48575d573b9",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_008",
+      "target_canonical_ko_id": "conn_dev_ko_006",
+      "relation_type": "CONTRASTS_WITH",
+      "evidence_ids": [
+        "evidence_007"
+      ],
+      "rationale": "The evidence explicitly contrasts Newton optimisation method with gradient descent, stating that Newton takes a full curvature-adjusted step whereas gradient descent uses an explicit step size. This is a direct contrast between the two methods."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_799174f17022eacc",
+      "window_id": "conn_window_8de85af858042983",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_014",
+      "target_canonical_ko_id": "conn_dev_ko_013",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_002"
+      ],
+      "rationale": "The evidence states that the score function is the gradient of the log-likelihood, which is used in maximum likelihood estimation. This directly shows the score function being applied in the context of MLE."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7ae886fbc9be7241",
+      "window_id": "conn_window_7e42a348328d39cc",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_018",
+      "target_canonical_ko_id": "conn_dev_ko_005",
+      "relation_type": "FORMALIZES",
+      "evidence_ids": [
+        "evidence_013",
+        "evidence_014"
+      ],
+      "rationale": "Evidence 013 introduces the least squares objective, and evidence 014 states the mean squared error formula, which is the formula that formalizes the objective function."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7ae886fbc9be7241",
+      "window_id": "conn_window_ac4ea8e0d538451f",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_018",
+      "target_canonical_ko_id": "conn_dev_ko_005",
+      "relation_type": "FORMALIZES",
+      "evidence_ids": [
+        "evidence_015",
+        "evidence_016"
+      ],
+      "rationale": "Evidence 015 provides the MSE formula, and evidence 016 explicitly states 'This formula formalizes the least squares objective', directly establishing that the Mean Squared Error Formula formalizes the Objective Function."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7b6597ac0aac5113",
+      "window_id": "conn_window_945d77eb77a10bff",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_021",
+      "target_canonical_ko_id": "conn_dev_ko_025",
+      "relation_type": "REQUIRES",
+      "evidence_ids": [
+        "evidence_006"
+      ],
+      "rationale": "The evidence states that Newton's method requires the derivative of g, establishing that Root-Finding Problem (source) requires Derivative (target)."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7cd6620daef9af12",
+      "window_id": "conn_window_8f219d5521f3c490",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "The evidence mentions first-order Taylor approximation and Newton optimisation update, but does not directly connect them. The connection is mediated by the gradient descent concept (displacement opposite gradient) and the Hessian, which are not the endpoints. Thus, the evidence does not establish a direct typed edge between the two endpoints."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7d14f554a3646ae6",
+      "window_id": "conn_window_46a7f106ffc38303",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_012",
+      "target_canonical_ko_id": "conn_dev_ko_005",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_009"
+      ],
+      "rationale": "The evidence states that 'log-likelihood' is treated as an 'objective function', indicating that log-likelihood is applied in the role of an objective function."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7d14f554a3646ae6",
+      "window_id": "conn_window_6dae3ba41f5c9d56",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_012",
+      "target_canonical_ko_id": "conn_dev_ko_005",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_012"
+      ],
+      "rationale": "The evidence states that maximizing log-likelihood is equivalent to minimizing the least squares objective, directly connecting Log-Likelihood (source) as applied in the context of Objective Function (target)."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7f5ac4c6e2fe5268",
+      "window_id": "conn_window_c47296a5bbdd7dfa",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_001",
+      "target_canonical_ko_id": "conn_dev_ko_007",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_009"
+      ],
+      "rationale": "The evidence states 'Gradient descent requires the gradient of the objective function' and 'The gradient descent update is', directly showing that the Gradient is applied in the Gradient Descent Update formula."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7f5ac4c6e2fe5268",
+      "window_id": "conn_window_112a7e7338f97769",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_001",
+      "target_canonical_ko_id": "conn_dev_ko_007",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_010",
+        "evidence_011"
+      ],
+      "rationale": "Evidence shows gradient (\u2207f(x_k)) is directly used in the Gradient Descent Update formula, and the text explains the rationale for moving opposite to the gradient."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_81f4b77e0b280216",
+      "window_id": "conn_window_4fd0a3d98a5246a4",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_008",
+      "target_canonical_ko_id": "conn_dev_ko_010",
+      "relation_type": "CONTRASTS_WITH",
+      "evidence_ids": [
+        "evidence_007"
+      ],
+      "rationale": "The evidence explicitly contrasts Newton optimisation method (source) with gradient descent's use of step size (target), establishing a direct contrast between the two endpoints."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_81f4b77e0b280216",
+      "window_id": "conn_window_cb629da23577c845",
+      "support_decision": "INSUFFICIENT",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "The evidence mentions Newton optimisation method and step size in separate sentences, but does not establish a direct connection between them. Evidence_004 discusses step size in the context of gradient descent, not Newton's method. Evidence_005 introduces Newton's method but does not mention step size. No direct typed relation is established."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_8404187bbee08589",
+      "window_id": "conn_window_c4ab9f41062ea1c4",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_011",
+      "target_canonical_ko_id": "conn_dev_ko_013",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_001",
+        "evidence_002"
+      ],
+      "rationale": "Evidence_001 defines a statistical model as a family of distributions with a parameter. Evidence_002 states that maximum likelihood estimation uses the log-likelihood (derived from the model) as an objective function to select a parameter value. Thus, the statistical model is applied in maximum likelihood estimation."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_855fc91eae345c72",
+      "window_id": "conn_window_1e1eebedca2e0e90",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_002",
+      "target_canonical_ko_id": "conn_dev_ko_008",
+      "relation_type": "REQUIRES",
+      "evidence_ids": [
+        "evidence_012"
+      ],
+      "rationale": "The evidence states that the Newton optimisation method 'requires' the Hessian matrix, establishing a direct REQUIRES relation from Hessian Matrix to Newton Optimisation Method."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_88939b4d17cdfb3e",
+      "window_id": "conn_window_450b2beafa6b9d4c",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_017",
+      "target_canonical_ko_id": "conn_dev_ko_005",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_013"
+      ],
+      "rationale": "The evidence states that ordinary least squares minimizes the least squares objective, which is a specific instance of an objective function. Thus, Least Squares Objective is applied in the context of minimizing an objective function."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_88939b4d17cdfb3e",
+      "window_id": "conn_window_bfdda5476c26ea44",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_017",
+      "target_canonical_ko_id": "conn_dev_ko_005",
+      "relation_type": "RELATED_TO",
+      "evidence_ids": [
+        "evidence_016"
+      ],
+      "rationale": "The evidence explicitly states that the formula formalizes the least squares objective, connecting Least Squares Objective to Objective Function. Since FORMALIZES requires a Formula source and Least Squares Objective is a Concept, the appropriate relation is RELATED_TO."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_88939b4d17cdfb3e",
+      "window_id": "conn_window_ef382e6355430b2c",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_017",
+      "target_canonical_ko_id": "conn_dev_ko_005",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_012"
+      ],
+      "rationale": "The evidence states that minimizing the least squares objective is equivalent to maximizing the log-likelihood, establishing that the Least Squares Objective is applied in the context of the Objective Function (specifically, the log-likelihood)."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_8c981e7dd58feb47",
+      "window_id": "conn_window_eb85cfb0e27a3ae3",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_019",
+      "target_canonical_ko_id": "conn_dev_ko_013",
+      "relation_type": "RELATED_TO",
+      "evidence_ids": [
+        "evidence_011"
+      ],
+      "rationale": "The evidence explicitly states that ordinary least squares has a maximum likelihood estimation interpretation under a Gaussian noise model, establishing a direct educational connection between the two methods. The relation is not stronger than RELATED_TO because it notes the equivalence depends on assumptions and is not an identity."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_8c981e7dd58feb47",
+      "window_id": "conn_window_edea2db2f8f212c6",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_013",
+      "target_canonical_ko_id": "conn_dev_ko_019",
+      "relation_type": "RELATED_TO",
+      "evidence_ids": [
+        "evidence_005"
+      ],
+      "rationale": "The evidence explicitly states that under a Gaussian linear regression model with constant variance, maximum likelihood estimation and ordinary least squares are equivalent, establishing a direct educational connection between the two methods."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_8fae4bf3dd480f71",
+      "window_id": "conn_window_02f73fe0353a3d83",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_001",
+      "target_canonical_ko_id": "conn_dev_ko_012",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_016"
+      ],
+      "rationale": "The evidence states 'the score function is the gradient of the log-likelihood', directly showing that Gradient is applied to Log-Likelihood."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9411fb11503a6f0f",
+      "window_id": "conn_window_1186a209d859e5f6",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "The evidence mentions both Objective Function and Step Size, but the connection is mediated by the gradient descent concept and the Taylor approximation. The evidence does not establish a direct typed relation between the two endpoints without invoking an intermediate object."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9411fb11503a6f0f",
+      "window_id": "conn_window_9ca54c5404445156",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "The evidence mentions both 'objective function' and 'step size' but does not establish a direct typed connection between them; they are co-occurring in the context of gradient descent, requiring the intermediate concept of gradient descent update to connect them."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9a51109c78e243ef",
+      "window_id": "conn_window_39c1dd8270fcf85d",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_022",
+      "target_canonical_ko_id": "conn_dev_ko_025",
+      "relation_type": "REQUIRES",
+      "evidence_ids": [
+        "evidence_006"
+      ],
+      "rationale": "Evidence states Newton's method requires the derivative, establishing a direct prerequisite relationship from Method to Concept."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9a51109c78e243ef",
+      "window_id": "conn_window_687b3ef63b62d87b",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_022",
+      "target_canonical_ko_id": "conn_dev_ko_025",
+      "relation_type": "REQUIRES",
+      "evidence_ids": [
+        "evidence_009"
+      ],
+      "rationale": "The evidence states that the derivative controls the tangent correction in Newton's method, indicating that Newton's method requires the derivative."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9b1e66cc5876fb95",
+      "window_id": "conn_window_b20da0ecfcd93764",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "Evidence 004 connects root-finding to score equations, not directly to linear regression. Evidence 005 discusses linear regression and MLE but does not mention root-finding. No evidence directly links Linear Regression and Root-Finding Problem."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9b5399bc5a3f9e73",
+      "window_id": "conn_window_9fb6d66735fe7f28",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "Evidence 005 mentions Gaussian linear regression and maximum likelihood, but not Newton's method. Evidence 004 discusses Newton's method applied to maximum likelihood estimation, but does not mention linear regression. The connection between Linear Regression and Newton's Root-Finding Method is mediated by maximum likelihood estimation, not direct."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9c6621685b9ef5e5",
+      "window_id": "conn_window_0a318a98a1a8efbd",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_012",
+      "target_canonical_ko_id": "conn_dev_ko_013",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_005"
+      ],
+      "rationale": "The evidence states that maximizing the log-likelihood is equivalent to minimizing least squares, and that under the assumption, ordinary least squares and maximum likelihood estimation select the same coefficient vector. This directly shows that Log-Likelihood is used (applied) in the context of Maximum Likelihood Estimation."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9c6621685b9ef5e5",
+      "window_id": "conn_window_7923f522b625b3ad",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_012",
+      "target_canonical_ko_id": "conn_dev_ko_013",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_002"
+      ],
+      "rationale": "The evidence states that maximum likelihood estimation treats the log-likelihood as an objective function and maximizes it, directly showing that Log-Likelihood is applied in Maximum Likelihood Estimation."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9cd38efffcca81cd",
+      "window_id": "conn_window_08c2f399d25c0a1b",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "Evidence 009 discusses least squares objective and gradient descent, but does not mention ridge regression. Evidence 010 discusses ridge regression extending ordinary least squares, but does not directly connect to the least squares objective as a concept. The connection between the two endpoints is mediated by ordinary least squares, which is not one of the endpoints."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9f008ddde3e426f0",
+      "window_id": "conn_window_215db69332921832",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_013",
+      "target_canonical_ko_id": "conn_dev_ko_015",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_004"
+      ],
+      "rationale": "The evidence states that Newton's method is applied within maximum likelihood estimation to solve the score equation, indicating that Maximum Likelihood Estimation (source) uses the Score Equation (target) as part of its optimization process."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a1259045b6b2d2c7",
+      "window_id": "conn_window_68223bf8735d8852",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_004",
+      "target_canonical_ko_id": "conn_dev_ko_001",
+      "relation_type": "FORMALIZES",
+      "evidence_ids": [
+        "evidence_005"
+      ],
+      "rationale": "The evidence states that the first-order Taylor formula formalizes the approximation using the gradient, establishing a direct FORMALIZES relation from the Formula to the Concept."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a1259045b6b2d2c7",
+      "window_id": "conn_window_b691e7700066d221",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_004",
+      "target_canonical_ko_id": "conn_dev_ko_001",
+      "relation_type": "FORMALIZES",
+      "evidence_ids": [
+        "evidence_006"
+      ],
+      "rationale": "Evidence 006 explicitly shows the First-Order Taylor Formula using the gradient, establishing a direct formalization of the Gradient concept."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a1e6b8f76fd16f4d",
+      "window_id": "conn_window_0562c070c9f05336",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_023",
+      "target_canonical_ko_id": "conn_dev_ko_021",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_006",
+        "evidence_007"
+      ],
+      "rationale": "Evidence states Newton's method is applied to solve a root-finding problem, establishing a direct APPLIED_IN relation from Newton Root Update to Root-Finding Problem."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a234bad0c2a17d8c",
+      "window_id": "conn_window_fb7a7ac0f3925f05",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "Evidence 005 states that maximizing log-likelihood is equivalent to minimizing least squares objective, but does not directly connect Score Equation to Least Squares Objective. The connection is mediated by the log-likelihood and the Gaussian linear regression context."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a47be07419d8b917",
+      "window_id": "conn_window_78f63349a249e2e2",
+      "support_decision": "INSUFFICIENT",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "The evidence mentions first-order Taylor approximation and Hessian matrix separately, but does not establish a direct connection between them. Evidence 011 discusses first-order Taylor approximation without referencing Hessian matrix; evidence 012 mentions Hessian matrix in the context of Newton's method, not directly linked to first-order Taylor approximation. No direct typed relation is established."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a47be07419d8b917",
+      "window_id": "conn_window_26f5c2254803371e",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "The evidence discusses first-order Taylor approximation and mentions Hessian matrix only in the context of second-order approximation, not establishing a direct connection between Hessian Matrix and First-Order Taylor Approximation."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a47be07419d8b917",
+      "window_id": "conn_window_3067da7a2f78864e",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "The evidence defines the Hessian matrix and the first-order Taylor approximation separately, but does not directly connect them. The Hessian is about second derivatives, while the first-order approximation uses only the gradient. Any connection would require an intermediate concept (e.g., second-order approximation), which is not provided."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a8513031d82ba28e",
+      "window_id": "conn_window_3af2573657d9f54a",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "The evidence mentions Score Equation and Ordinary Least Squares in separate contexts without a direct connection between them. Evidence_004 discusses score equation in MLE, evidence_005 discusses OLS in Gaussian linear regression. They are linked via maximum likelihood estimation, not directly."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a92bdea086a3cd0c",
+      "window_id": "conn_window_dc04ecd930aa71f9",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_012",
+      "target_canonical_ko_id": "conn_dev_ko_019",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_005"
+      ],
+      "rationale": "The evidence states that maximizing log-likelihood is equivalent to minimizing least squares objective, indicating that Log-Likelihood is applied in the context of Ordinary Least Squares."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ac297f8e072816c0",
+      "window_id": "conn_window_415305dd4989cbfb",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_001",
+      "target_canonical_ko_id": "conn_dev_ko_022",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_018"
+      ],
+      "rationale": "Evidence 018 explicitly states that Newton's root-finding method is applied to solve the score equation, which involves the gradient. Thus, Gradient is applied in Newton's Root-Finding Method."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ad73d420644fe99f",
+      "window_id": "conn_window_9409e45cc8490ae2",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_003",
+      "target_canonical_ko_id": "conn_dev_ko_005",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_011"
+      ],
+      "rationale": "The evidence states that the first-order Taylor approximation predicts the objective change, directly showing the method applied to the concept."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_b0c235b2d349eff7",
+      "window_id": "conn_window_6dec95ff370b5887",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_018",
+      "target_canonical_ko_id": "conn_dev_ko_019",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_006",
+        "evidence_007"
+      ],
+      "rationale": "Evidence 006 states that OLS minimizes the least squares objective, and evidence 007 introduces the mean squared error formula. Together they show that the MSE formula is applied in OLS."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_b0c235b2d349eff7",
+      "window_id": "conn_window_960e35d72e966789",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_018",
+      "target_canonical_ko_id": "conn_dev_ko_019",
+      "relation_type": "FORMALIZES",
+      "evidence_ids": [
+        "evidence_008",
+        "evidence_009"
+      ],
+      "rationale": "Evidence explicitly states that the MSE formula formalizes the least squares objective, and the context connects it to ordinary least squares. The formula is the source, and the method is the target."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_b1a1609d22506ef6",
+      "window_id": "conn_window_0ddaae33b90f013e",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_013",
+      "target_canonical_ko_id": "conn_dev_ko_016",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_005"
+      ],
+      "rationale": "Evidence states that maximum likelihood estimation is applied to linear regression (Gaussian model) to estimate coefficients, establishing a direct APPLIED_IN relation."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_b23eff47b6d29fb5",
+      "window_id": "conn_window_13ef2de02f0b31e1",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_005",
+      "target_canonical_ko_id": "conn_dev_ko_013",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_012"
+      ],
+      "rationale": "The evidence states that maximizing the log-likelihood (Maximum Likelihood Estimation) is equivalent to minimizing the least squares objective (Objective Function), indicating that the Objective Function is applied in the context of Maximum Likelihood Estimation."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_b23eff47b6d29fb5",
+      "window_id": "conn_window_e287f5c02abe4a80",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_013",
+      "target_canonical_ko_id": "conn_dev_ko_005",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_009"
+      ],
+      "rationale": "Evidence states that maximum likelihood estimation treats the log-likelihood as an objective function, directly applying the concept of objective function in the method."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_b23eff47b6d29fb5",
+      "window_id": "conn_window_eaa2ce1d34728f61",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "Evidence 018 mentions that ordinary least squares has a maximum likelihood estimation interpretation, but the endpoints are 'Objective Function' and 'Maximum Likelihood Estimation'. The connection is mediated by ordinary least squares, not direct between the endpoints. Evidence 017 does not involve MLE. Thus, no direct edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_b5ea294ae5f29863",
+      "window_id": "conn_window_c8a374ae48e28292",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_015",
+      "target_canonical_ko_id": "conn_dev_ko_005",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_011"
+      ],
+      "rationale": "Evidence 011 states that the score equation is used to find a candidate for maximum likelihood estimation, which involves optimizing an objective function. Thus, the Score Equation is applied in the context of the Objective Function."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_b5ea294ae5f29863",
+      "window_id": "conn_window_4c50de242e6237ba",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_015",
+      "target_canonical_ko_id": "conn_dev_ko_005",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_011"
+      ],
+      "rationale": "Evidence 011 states that a candidate satisfies the score equation s(\u03b8)=0, and that finding such a candidate is a root-finding problem applied within maximum likelihood estimation. This directly shows that the Score Equation is applied in the context of the Objective Function (log-likelihood) for maximum likelihood estimation."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_be2636a5d8bc8b4c",
+      "window_id": "conn_window_01fa003dabc4a571",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_018",
+      "target_canonical_ko_id": "conn_dev_ko_016",
+      "relation_type": "FORMALIZES",
+      "evidence_ids": [
+        "evidence_006",
+        "evidence_007"
+      ],
+      "rationale": "Evidence 006 states that ordinary least squares minimizes the least squares objective, and evidence 007 introduces the mean squared error formula. Together, they show that the Mean Squared Error Formula formalizes the objective minimized in Linear Regression."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_be5dff9ee6b32e1a",
+      "window_id": "conn_window_e4c54562272ff167",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_020",
+      "target_canonical_ko_id": "conn_dev_ko_005",
+      "relation_type": "EXTENDS",
+      "evidence_ids": [
+        "evidence_017"
+      ],
+      "rationale": "The evidence states 'Ridge regression extends ordinary least squares by adding a squared-coefficient penalty to the objective.' This directly connects Ridge Regression (source) to Objective Function (target) with an EXTENDS relation, as Ridge adds a penalty term to the objective."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_bed567d1ff4c7012",
+      "window_id": "conn_window_6121688c6f01177d",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_003",
+      "target_canonical_ko_id": "conn_dev_ko_027",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_019"
+      ],
+      "rationale": "The evidence states that the Forward Euler method's local truncation error is governed by terms omitted after the first-order Taylor approximation, directly indicating that the Taylor approximation is applied in the Forward Euler method."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_bed567d1ff4c7012",
+      "window_id": "conn_window_e5deae62b25205be",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_003",
+      "target_canonical_ko_id": "conn_dev_ko_027",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_016"
+      ],
+      "rationale": "The evidence explicitly states that applying the first-order Taylor approximation gives the Forward Euler method, establishing a direct application relationship."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_bfce59cf0247f59a",
+      "window_id": "conn_window_2df6325663b250ff",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_002",
+      "target_canonical_ko_id": "conn_dev_ko_009",
+      "relation_type": "REQUIRES",
+      "evidence_ids": [
+        "evidence_012"
+      ],
+      "rationale": "The evidence states that Newton optimisation method requires the Hessian matrix, establishing a direct prerequisite relationship from Hessian Matrix to Newton Optimisation Update."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c0111c22941b9e4b",
+      "window_id": "conn_window_c6ad57b6ab944d3b",
+      "support_decision": "INSUFFICIENT",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "The evidence mentions Hessian matrix and step size in separate contexts (Newton vs gradient descent), but does not establish a direct connection between them. The Hessian is used in Newton's method, while step size is discussed in gradient descent; no explicit relationship is stated."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c0111c22941b9e4b",
+      "window_id": "conn_window_186ce8660487f697",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_002",
+      "target_canonical_ko_id": "conn_dev_ko_010",
+      "relation_type": "CONTRASTS_WITH",
+      "evidence_ids": [
+        "evidence_014"
+      ],
+      "rationale": "Evidence 014 explicitly contrasts the Newton method's full curvature-adjusted step with gradient descent's explicit step size, establishing a direct contrast between Hessian Matrix (used in Newton) and Step Size (used in gradient descent)."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c02b6a5def080df9",
+      "window_id": "conn_window_8b3eae83fb6c354f",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_003",
+      "target_canonical_ko_id": "conn_dev_ko_028",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_016"
+      ],
+      "rationale": "The evidence explicitly states that applying the First-Order Taylor Approximation gives the Forward Euler Update, establishing a direct application of the method to produce the formula."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c02b6a5def080df9",
+      "window_id": "conn_window_3bcf61ba4986f6e1",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "Evidence 019 mentions that the error of Forward Euler is governed by terms omitted after the first-order Taylor approximation, but does not directly state that Forward Euler Update is an application of First-Order Taylor Approximation. The connection is mediated by the concept of truncation error, not a direct typed edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c21da2851eae0815",
+      "window_id": "conn_window_736a866ec8e9fea7",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "Evidence mentions Gradient Descent applied to ordinary least squares, and Ridge Regression extends ordinary least squares, but no direct connection between Gradient Descent and Ridge Regression is established. The connection is mediated by ordinary least squares."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c862968c2f7bbf13",
+      "window_id": "conn_window_21542f301a086f98",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_015",
+      "target_canonical_ko_id": "conn_dev_ko_021",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_004"
+      ],
+      "rationale": "The evidence states that solving the score equation is a root-finding problem, directly establishing that the Score Equation is applied in the context of a Root-Finding Problem."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c9b55dc727622af1",
+      "window_id": "conn_window_833a1c0d69e3c39f",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_018",
+      "target_canonical_ko_id": "conn_dev_ko_017",
+      "relation_type": "FORMALIZES",
+      "evidence_ids": [
+        "evidence_006",
+        "evidence_007"
+      ],
+      "rationale": "Evidence 006 introduces the least squares objective as a concept to be minimized. Evidence 007 introduces the mean squared error formula. The connection is that the mean squared error formula is the specific formula that formalizes the least squares objective. Thus, the formula (source) formalizes the concept (target)."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c9b55dc727622af1",
+      "window_id": "conn_window_e1982507ef12ea06",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_018",
+      "target_canonical_ko_id": "conn_dev_ko_017",
+      "relation_type": "FORMALIZES",
+      "evidence_ids": [
+        "evidence_008",
+        "evidence_009"
+      ],
+      "rationale": "Evidence 008 provides the MSE formula, and evidence 009 explicitly states 'This formula formalizes the least squares objective', establishing a direct FORMALIZES relation from the formula to the concept."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c9d185b1eedd2c21",
+      "window_id": "conn_window_84c82f1c9a26118e",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_003",
+      "target_canonical_ko_id": "conn_dev_ko_029",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_019"
+      ],
+      "rationale": "The evidence states that the local truncation error for Forward Euler is governed by terms omitted after the first-order Taylor approximation, directly showing that the First-Order Taylor Approximation is applied in the context of Local Truncation Error."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c9da9f7c5ff3c1f6",
+      "window_id": "conn_window_73c3c3053f8c9a0d",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_022",
+      "target_canonical_ko_id": "conn_dev_ko_012",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_004"
+      ],
+      "rationale": "Evidence 004 explicitly states that Newton's root-finding method is applied within maximum likelihood estimation to solve the score equation, which involves the log-likelihood. Thus, Newton's method is applied in the context of log-likelihood."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c9da9f7c5ff3c1f6",
+      "window_id": "conn_window_46d6466fc389113c",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_022",
+      "target_canonical_ko_id": "conn_dev_ko_012",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_004"
+      ],
+      "rationale": "Evidence 004 explicitly states that Newton's root-finding method can be applied within maximum likelihood estimation to solve the score equation, which involves the log-likelihood. This establishes a direct APPLIED_IN relation from Newton's method to Log-Likelihood."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ca264bc4f8b65f3b",
+      "window_id": "conn_window_087a0afe37e29e04",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "Evidence mentions Hessian matrix and first-order Taylor formula in the same context, but does not establish a direct typed connection between them. The Hessian is associated with second-order approximation, while the first-order formula uses gradient. Connection is mediated by the concept of Taylor expansion order."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ca264bc4f8b65f3b",
+      "window_id": "conn_window_df805f4586558f57",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "The evidence discusses Hessian matrix and first-order Taylor formula separately, but does not establish a direct connection between them. The Hessian is second-order, while the first-order Taylor formula uses gradient, not Hessian. Any connection would require an intermediate object (e.g., second-order Taylor formula)."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ce63516ba4c4f71d",
+      "window_id": "conn_window_e93f679f1a46a8af",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_005",
+      "target_canonical_ko_id": "conn_dev_ko_011",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_009"
+      ],
+      "rationale": "Evidence 009 explicitly states that the log-likelihood is treated as an objective function, directly connecting Objective Function (source) as applied in the context of Statistical Model (target)."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d28ab8d8057efb6a",
+      "window_id": "conn_window_fe5f28997a711450",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_009",
+      "target_canonical_ko_id": "conn_dev_ko_006",
+      "relation_type": "CONTRASTS_WITH",
+      "evidence_ids": [
+        "evidence_007"
+      ],
+      "rationale": "Evidence 007 explicitly contrasts Newton Optimisation Update with Gradient Descent, establishing a direct contrast between the two endpoints."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d6043a4c35e6c8b9",
+      "window_id": "conn_window_af3dc559e2994f1f",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_017",
+      "target_canonical_ko_id": "conn_dev_ko_016",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_005"
+      ],
+      "rationale": "The evidence states that maximizing log-likelihood is equivalent to minimizing the least squares objective, indicating that the Least Squares Objective is applied in the context of Linear Regression."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d6043a4c35e6c8b9",
+      "window_id": "conn_window_f5361d4f433b3d8a",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_016",
+      "target_canonical_ko_id": "conn_dev_ko_017",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_006"
+      ],
+      "rationale": "The evidence states that linear regression is fitted by minimizing the least squares objective, indicating that the concept of linear regression applies the least squares objective."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d64d8e658f6dafd8",
+      "window_id": "conn_window_5a589e5117e2bbca",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_023",
+      "target_canonical_ko_id": "conn_dev_ko_022",
+      "relation_type": "FORMALIZES",
+      "evidence_ids": [
+        "evidence_009"
+      ],
+      "rationale": "The evidence explicitly states 'The Newton root update formalizes Newton's root-finding method', establishing a direct FORMALIZES relation from the Formula (source) to the Method (target)."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d64d8e658f6dafd8",
+      "window_id": "conn_window_8ddfc8b935d01aa1",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_022",
+      "target_canonical_ko_id": "conn_dev_ko_023",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_006",
+        "evidence_007"
+      ],
+      "rationale": "Evidence states Newton's method requires derivative and replaces function by tangent line, then introduces the Newton root update formula, showing the method is applied in the formula."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d7f55c9116fa3adf",
+      "window_id": "conn_window_36b8ef67661ac2ae",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "The evidence mentions first-order Taylor approximation and Newton optimisation method, but does not directly connect them. The connection is mediated by the concept of gradient descent or curvature, which is not explicitly stated as a direct edge between the two endpoints."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d88a461c47b9d32c",
+      "window_id": "conn_window_0d039ecb078f41bd",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_001",
+      "target_canonical_ko_id": "conn_dev_ko_005",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_011"
+      ],
+      "rationale": "The evidence states that the gradient is used to predict the change in the objective function, indicating that the gradient is applied in the context of the objective function."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d88a461c47b9d32c",
+      "window_id": "conn_window_3bd0bb37848e3343",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_001",
+      "target_canonical_ko_id": "conn_dev_ko_005",
+      "relation_type": "REQUIRES",
+      "evidence_ids": [
+        "evidence_009"
+      ],
+      "rationale": "The evidence states 'Gradient descent requires the gradient of the objective function', directly establishing that Gradient (source) is required by Objective Function (target) in the context of gradient descent."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d88a461c47b9d32c",
+      "window_id": "conn_window_c604b2a020ee302b",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_001",
+      "target_canonical_ko_id": "conn_dev_ko_005",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_016"
+      ],
+      "rationale": "The evidence states that the score function is the gradient of the log-likelihood, and the log-likelihood is treated as an objective function. This directly shows that Gradient is applied in the context of an Objective Function."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d88a461c47b9d32c",
+      "window_id": "conn_window_f960e9e817ad6907",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_001",
+      "target_canonical_ko_id": "conn_dev_ko_005",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_023"
+      ],
+      "rationale": "The evidence states that gradient descent uses the gradient of the objective function, indicating that Gradient is applied in the context of Objective Function."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_da1c18bdf793236f",
+      "window_id": "conn_window_13a19e69f6a0ce37",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_012",
+      "target_canonical_ko_id": "conn_dev_ko_021",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_004"
+      ],
+      "rationale": "Evidence 004 states that finding a candidate for maximum likelihood (which involves log-likelihood) is a root-finding problem, directly establishing that Log-Likelihood is applied in Root-Finding Problem."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_da1c18bdf793236f",
+      "window_id": "conn_window_c6a60595f1d2a4e5",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_012",
+      "target_canonical_ko_id": "conn_dev_ko_021",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_004"
+      ],
+      "rationale": "Evidence 004 explicitly states that solving the score equation (derived from log-likelihood) is a root-finding problem, directly connecting Log-Likelihood as applied in Root-Finding Problem."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_dbc167d9bb7ce3f8",
+      "window_id": "conn_window_1e59b0b33a8724c7",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_014",
+      "target_canonical_ko_id": "conn_dev_ko_005",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_009"
+      ],
+      "rationale": "The evidence states that the score function is the gradient of the log-likelihood, which is used as an objective function. This directly shows that the score function is applied in the context of the objective function."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_dcf07ffb792c61d7",
+      "window_id": "conn_window_ea3531afc3c667ff",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_014",
+      "target_canonical_ko_id": "conn_dev_ko_022",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_004"
+      ],
+      "rationale": "Evidence 004 explicitly states that Newton's root-finding method can be applied within maximum likelihood estimation to solve the score equation, establishing a direct application of the Score Function (source) in Newton's Root-Finding Method (target)."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_e1603fa09ad3fd48",
+      "window_id": "conn_window_dc12cc633f4524e4",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "Evidence 011 mentions that solving the score equation is a root-finding problem, but does not directly connect 'Objective Function' to 'Root-Finding Problem'. The connection is mediated by the score equation and maximum likelihood estimation. Evidence 012 discusses least squares objective but does not mention root-finding. Thus, no direct edge is established."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_e1603fa09ad3fd48",
+      "window_id": "conn_window_8aaff5bd0d30c395",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_005",
+      "target_canonical_ko_id": "conn_dev_ko_021",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_011"
+      ],
+      "rationale": "Evidence 011 states that finding a candidate satisfying the score equation (derived from the objective function) is a root-finding problem, directly establishing that the Objective Function is applied in the Root-Finding Problem context."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_e339035d075320bb",
+      "window_id": "conn_window_0f17a8fe4d091030",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_006",
+      "target_canonical_ko_id": "conn_dev_ko_005",
+      "relation_type": "REQUIRES",
+      "evidence_ids": [
+        "evidence_002"
+      ],
+      "rationale": "Evidence states 'Gradient descent requires the gradient of the objective function', establishing a direct REQUIRES relation from Gradient Descent to Objective Function."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_e339035d075320bb",
+      "window_id": "conn_window_49cad7b70381433b",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_006",
+      "target_canonical_ko_id": "conn_dev_ko_005",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_016"
+      ],
+      "rationale": "The evidence states that gradient descent can be applied to ordinary least squares by using the gradient of the objective function, establishing a direct APPLIED_IN relation from Gradient Descent to Objective Function."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_e674a485e3829890",
+      "window_id": "conn_window_2bd99730d0fd89fb",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_017",
+      "target_canonical_ko_id": "conn_dev_ko_019",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_009"
+      ],
+      "rationale": "The evidence states that gradient descent can be applied to ordinary least squares by using the gradient of the least squares objective, indicating that the objective is applied in the method."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_e674a485e3829890",
+      "window_id": "conn_window_411d338dd8f13dbb",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_017",
+      "target_canonical_ko_id": "conn_dev_ko_019",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_006"
+      ],
+      "rationale": "The evidence states that Ordinary Least Squares fits a model by minimizing the least squares objective, directly establishing that the Least Squares Objective is applied in Ordinary Least Squares."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_e674a485e3829890",
+      "window_id": "conn_window_d41d492d5703d225",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_017",
+      "target_canonical_ko_id": "conn_dev_ko_019",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_005"
+      ],
+      "rationale": "The evidence states that minimizing the least squares objective is equivalent to maximizing the log-likelihood under OLS assumptions, and that OLS and MLE select the same coefficient vector. This directly shows that the Least Squares Objective is applied in the Ordinary Least Squares method."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_e848f855de939343",
+      "window_id": "conn_window_829ab3009e2b6371",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_019",
+      "target_canonical_ko_id": "conn_dev_ko_020",
+      "relation_type": "EXTENDS",
+      "evidence_ids": [
+        "evidence_010"
+      ],
+      "rationale": "Evidence states 'Ridge regression extends ordinary least squares', establishing a direct EXTENDS relation from OLS to Ridge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ea10f05ebcebff54",
+      "window_id": "conn_window_e9a565a893d187a6",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_022",
+      "target_canonical_ko_id": "conn_dev_ko_013",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_004"
+      ],
+      "rationale": "Evidence states that Newton's root-finding method can be applied within maximum likelihood estimation, establishing a direct APPLIED_IN relation from Newton's method to MLE."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_edd5dd0dffb7131e",
+      "window_id": "conn_window_5824cfe26a13b875",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_013",
+      "target_canonical_ko_id": "conn_dev_ko_017",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_005"
+      ],
+      "rationale": "The evidence states that maximizing log-likelihood (Maximum Likelihood Estimation) is equivalent to minimizing the least squares objective, indicating that MLE is applied in the context of the Least Squares Objective."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_edd5dd0dffb7131e",
+      "window_id": "conn_window_bcc8363ac649d670",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_013",
+      "target_canonical_ko_id": "conn_dev_ko_017",
+      "relation_type": "RELATED_TO",
+      "evidence_ids": [
+        "evidence_011"
+      ],
+      "rationale": "Evidence 011 explicitly states that ordinary least squares has a maximum likelihood estimation interpretation, directly connecting the two endpoints. No stronger relation type applies."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ef28d97312ee8970",
+      "window_id": "conn_window_57796692c342de7d",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "The evidence mentions gradient descent and Newton's method, but does not directly connect 'Gradient' to 'Newton Optimisation Update' as a typed edge. The connection is mediated by the context of optimization methods."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ef28d97312ee8970",
+      "window_id": "conn_window_6081b8dc5abbf0af",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_009",
+      "target_canonical_ko_id": "conn_dev_ko_001",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_013",
+        "evidence_014"
+      ],
+      "rationale": "Evidence 013 shows the Newton update formula explicitly using the gradient, and evidence 014 contrasts Newton with gradient descent, directly establishing that the gradient is applied in the Newton update."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_f04767c63a30f18a",
+      "window_id": "conn_window_363a17f0cfc97025",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_003",
+      "target_canonical_ko_id": "conn_dev_ko_007",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_011"
+      ],
+      "rationale": "Evidence 011 explicitly states that the first-order Taylor approximation explains why the gradient descent update (displacement opposite to gradient) is locally descending, establishing a direct application of the approximation in the update."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_f089c625fb64bde0",
+      "window_id": "conn_window_56d5d6588c640668",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_001",
+      "target_canonical_ko_id": "conn_dev_ko_003",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_011"
+      ],
+      "rationale": "The evidence states that the first-order Taylor approximation uses the gradient to predict objective change, indicating the gradient is applied in the approximation."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_f089c625fb64bde0",
+      "window_id": "conn_window_eaa372a595d7043c",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_001",
+      "target_canonical_ko_id": "conn_dev_ko_003",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_005"
+      ],
+      "rationale": "The evidence states that the first-order Taylor approximation uses the gradient, establishing a direct APPLIED_IN relation from Gradient to First-Order Taylor Approximation."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_f0bc752d2a70b1ce",
+      "window_id": "conn_window_bdbaee19c7d46c25",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_016",
+      "target_canonical_ko_id": "conn_dev_ko_019",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_005"
+      ],
+      "rationale": "The evidence states that for a Gaussian linear regression model, maximizing log-likelihood is equivalent to minimizing least squares, and that ordinary least squares and MLE select the same coefficient vector. This directly shows that Linear Regression (source) is used in Ordinary Least Squares (target) as the method for estimation."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_f0bc752d2a70b1ce",
+      "window_id": "conn_window_e6175f534a03ca55",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_016",
+      "target_canonical_ko_id": "conn_dev_ko_019",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_006"
+      ],
+      "rationale": "The evidence states that ordinary least squares fits a linear regression model, indicating that Linear Regression is the model and Ordinary Least Squares is the method applied to fit it."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_f725fe54ec613340",
+      "window_id": "conn_window_ca4ff6559dfb3400",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_006",
+      "target_canonical_ko_id": "conn_dev_ko_019",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_016"
+      ],
+      "rationale": "The evidence explicitly states 'Gradient descent can be applied to ordinary least squares', establishing a direct APPLIED_IN relation from Gradient Descent to Ordinary Least Squares."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_f725fe54ec613340",
+      "window_id": "conn_window_df86ce64fcd4bb43",
+      "support_decision": "INSUFFICIENT",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "The evidence contrasts Newton's method with gradient descent, but does not mention Ordinary Least Squares. No direct connection between Gradient Descent and Ordinary Least Squares is established."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_f7ace63dad8e0d13",
+      "window_id": "conn_window_f5ee495249bd37bc",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "The evidence mentions gradient descent and Newton's method separately, but does not directly connect Objective Function to Newton Optimisation Update. The connection is mediated by the Hessian and curvature concepts."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_fa0a79a76255633a",
+      "window_id": "conn_window_171faa805b5332eb",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_021",
+      "target_canonical_ko_id": "conn_dev_ko_001",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_018"
+      ],
+      "rationale": "Evidence 018 explicitly states that finding a candidate satisfying the score equation is a root-finding problem, and that the score equation involves the gradient. This establishes that the Root-Finding Problem is applied in the context of Gradient (via the score equation)."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_fac1350d8eb9227e",
+      "window_id": "conn_window_700ec9018c2b52be",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_015",
+      "target_canonical_ko_id": "conn_dev_ko_022",
+      "relation_type": "APPLIED_IN",
+      "evidence_ids": [
+        "evidence_004"
+      ],
+      "rationale": "The evidence states that Newton's root-finding method can be applied to solve the score equation, establishing a direct application of the method to the concept."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_fb58022473834283",
+      "window_id": "conn_window_baa3b1b33bcfaf1b",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_006",
+      "target_canonical_ko_id": "conn_dev_ko_010",
+      "relation_type": "CONTRASTS_WITH",
+      "evidence_ids": [
+        "evidence_007"
+      ],
+      "rationale": "The evidence contrasts Newton's method with gradient descent, explicitly mentioning that gradient descent controls movement through an explicit step size, establishing a direct contrast between Gradient Descent and Step Size."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_fb58022473834283",
+      "window_id": "conn_window_e5f9200fc67404bf",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_006",
+      "target_canonical_ko_id": "conn_dev_ko_010",
+      "relation_type": "REQUIRES",
+      "evidence_ids": [
+        "evidence_002"
+      ],
+      "rationale": "The evidence states 'Gradient descent requires ... step size', establishing a direct prerequisite relationship from Gradient Descent to Step Size."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_fb6ac84549809e7b",
+      "window_id": "conn_window_9ed20be0bcd03d01",
+      "support_decision": "MEDIATED_OR_CONTEXTUAL",
+      "source_canonical_ko_id": null,
+      "target_canonical_ko_id": null,
+      "relation_type": null,
+      "evidence_ids": [],
+      "rationale": "The evidence mentions Hessian matrix and gradient descent update separately, but does not establish a direct connection between them. The Newton method is discussed as a separate context, requiring an intermediate object (Newton update) to connect Hessian matrix to gradient descent update."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ff190ee933b57b25",
+      "window_id": "conn_window_764285adce74418a",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_006",
+      "target_canonical_ko_id": "conn_dev_ko_001",
+      "relation_type": "REQUIRES",
+      "evidence_ids": [
+        "evidence_023"
+      ],
+      "rationale": "The evidence states that gradient descent can be applied to ordinary least squares by using the gradient of the objective function, indicating that gradient descent requires the gradient concept."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ff190ee933b57b25",
+      "window_id": "conn_window_b256f344aa530ffd",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_001",
+      "target_canonical_ko_id": "conn_dev_ko_006",
+      "relation_type": "REQUIRES",
+      "evidence_ids": [
+        "evidence_009"
+      ],
+      "rationale": "The evidence states 'Gradient descent requires the gradient of the objective function', establishing a direct REQUIRES relation from Gradient Descent to Gradient."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ff190ee933b57b25",
+      "window_id": "conn_window_de726ad9b41eb4b7",
+      "support_decision": "DIRECT_IN_SCHEMA",
+      "source_canonical_ko_id": "conn_dev_ko_006",
+      "target_canonical_ko_id": "conn_dev_ko_001",
+      "relation_type": "CONTRASTS_WITH",
+      "evidence_ids": [
+        "evidence_014"
+      ],
+      "rationale": "The evidence explicitly contrasts Gradient Descent with Newton's method, establishing a direct contrast between Gradient Descent and Gradient (as the method uses gradient)."
+    }
+  ]
+}

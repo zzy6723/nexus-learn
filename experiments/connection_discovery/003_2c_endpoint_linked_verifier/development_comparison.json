@@ -1,0 +1,61 @@
+{
+  "artifact_type": "endpoint_linked_connection_development_comparison",
+  "version": "v0.1",
+  "status": "final",
+  "scope": "oracle_canonical_development_v0_1",
+  "one_stage_prompt_002": {
+    "correct_positive_edges": 13,
+    "false_positive_relations": 40,
+    "false_negative_relations": 3,
+    "positive_typed_edge_recall": 0.3170731707317073,
+    "positive_edge_precision": 0.16666666666666666,
+    "no_relation_accuracy": 0.48717948717948717,
+    "strict_edge_accuracy": 0.42857142857142855,
+    "relation_type_accuracy_on_positives": 0.5853658536585366,
+    "direction_accuracy_when_type_correct": 0.5416666666666666,
+    "semantic_evidence_support_rate": 0.45121951219512196,
+    "related_to_prediction_rate": 0.025210084033613446,
+    "primary_connection_f1": 0.21848739495798317,
+    "cross_course_connection_recall": 0.2857142857142857
+  },
+  "two_stage_v0_1_2": {
+    "correct_positive_edges": 13,
+    "false_positive_relations": 40,
+    "false_negative_relations": 4,
+    "positive_typed_edge_recall": 0.3170731707317073,
+    "positive_edge_precision": 0.16883116883116883,
+    "no_relation_accuracy": 0.48717948717948717,
+    "strict_edge_accuracy": 0.42857142857142855,
+    "relation_type_accuracy_on_positives": 0.5365853658536586,
+    "direction_accuracy_when_type_correct": 0.5909090909090909,
+    "semantic_evidence_support_rate": 0.40963855421686746,
+    "related_to_prediction_rate": 0.08403361344537816,
+    "primary_connection_f1": 0.22033898305084748,
+    "cross_course_connection_recall": 0.32142857142857145
+  },
+  "endpoint_linked_v0_1_1": {
+    "method_commit": "02a618358301d1e4f87488198e71c8d9dc232fbc",
+    "metrics_path": "experiments/connection_discovery/003_2c_endpoint_linked_verifier/runs/development_v0_1/formal/run_02/evaluation/metrics.json",
+    "metrics_sha256": "840c0383415d0ae0842c7d600ce54f236724bbfd057a6bbbc8798dbcfdea9060",
+    "correct_positive_edges": 15,
+    "false_positive_relations": 36,
+    "false_negative_relations": 9,
+    "aggregation_conflicts": 17,
+    "positive_typed_edge_recall": 0.36585365853658536,
+    "positive_edge_precision": 0.22058823529411764,
+    "no_relation_accuracy": 0.5384615384615384,
+    "strict_edge_accuracy": 0.4789915966386555,
+    "relation_type_accuracy_on_positives": 0.5121951219512195,
+    "direction_accuracy_when_type_correct": 0.7142857142857143,
+    "semantic_evidence_support_rate": 0.4084507042253521,
+    "related_to_prediction_rate": 0.0,
+    "primary_connection_f1": 0.27522935779816515,
+    "cross_course_connection_recall": 0.35714285714285715
+  },
+  "decision": {
+    "endpoint_linked_method_selected": false,
+    "validated_connection_default_selected": false,
+    "outcome": "completed_failed_frozen_development_gates",
+    "reason": "Endpoint-linked windows produced modest precision, recall, direction, and F1 gains, but failed five of eight predeclared development criteria and did not improve semantic Evidence support."
+  }
+}

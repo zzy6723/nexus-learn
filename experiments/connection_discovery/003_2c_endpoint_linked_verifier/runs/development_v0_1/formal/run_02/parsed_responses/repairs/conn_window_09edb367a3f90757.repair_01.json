@@ -1,0 +1,12 @@
+{
+  "canonical_pair_id": "conn_dev_pair_623dc620447526e3",
+  "window_id": "conn_window_09edb367a3f90757",
+  "support_decision": "DIRECT_IN_SCHEMA",
+  "source_canonical_ko_id": "conn_dev_ko_004",
+  "target_canonical_ko_id": "conn_dev_ko_003",
+  "relation_type": "FORMALIZES",
+  "evidence_ids": [
+    "evidence_005"
+  ],
+  "rationale": "The evidence states that the first-order Taylor approximation is formalized by the first-order Taylor formula, so the Formula (source) formalizes the Method (target)."
+}

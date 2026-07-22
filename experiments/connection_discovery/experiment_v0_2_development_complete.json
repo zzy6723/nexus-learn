@@ -1,0 +1,36 @@
+{
+  "artifact_type": "connection_discovery_v0_2_development_complete",
+  "version": "v0.1",
+  "status": "completed_negative_development_result",
+  "technical_validation_outcome": "failed_endpoint_linked_development_gates",
+  "validated_connection_method_selected": false,
+  "method": {
+    "id": "endpoint_linked_window_verifier_v0.1.1",
+    "commit": "02a618358301d1e4f87488198e71c8d9dc232fbc",
+    "scope": "oracle_canonical_development_v0_1"
+  },
+  "stage_record": {
+    "003_2c": {
+      "status": "completed_failed_frozen_development_gates",
+      "artifact": {
+        "path": "experiments/connection_discovery/003_2c_endpoint_linked_verifier/development_validation_complete.json",
+        "sha256": "028a5c77a2b4fc0ed585f6fb015f3b6a0c0cb1c96b194023dbf9e7fd6cacc6a1"
+      }
+    }
+  },
+  "final_decision": {
+    "experiment_003_closed": true,
+    "connection_discovery_operationally_viable": false,
+    "experiment_004_product_validation_authorized": false,
+    "further_tuning_on_development_v0_1_authorized": false,
+    "independent_validation_executed": false
+  },
+  "accepted_assets": [
+    "endpoint_linked_evidence_window_generator",
+    "candidate_scoped_window_verifier_runner",
+    "single_validator_guided_schema_repair_contract",
+    "deterministic_conflict_fail_closed_aggregation",
+    "snapshot_bound_semantic_evidence_adjudication"
+  ],
+  "next_gate": "A future Connection research cycle must use a materially different learning signal, freeze it before evaluation, and reserve a fresh explicitly annotated source for independent validation."
+}

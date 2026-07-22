@@ -1,6 +1,6 @@
-# Experiment 003 v0.1 Conclusion
+# Experiment 003 Conclusion
 
-**Status:** Completed with a negative Technical Validation result
+**Status:** v0.1 and v0.2 development completed with negative Technical Validation results
 
 ## Result
 
@@ -82,3 +82,29 @@ The result concerns 29 Oracle canonical Knowledge Objects, 387 eligible pairs,
 125 selected candidates, and short authored STEM lectures. It does not establish
 performance on long documents, parsed PDFs, noisy Entity outputs, broad STEM
 coverage, learner-specific usefulness, or run-to-run stability.
+
+## v0.2 Development Addendum
+
+The v0.2 endpoint-linked Evidence verifier tested a materially different input
+and decision contract on the same development benchmark. Deterministic
+preprocessing generated 173 minimal windows, retained coverage for all 41
+primary positives, and guaranteed exact Evidence materialization. A completed
+candidate-scoped run produced 15 correct positive edges, 36 false positives,
+and 9 false negatives.
+
+Compared with v0.1, positive precision rose to `0.2206`, typed-edge recall to
+`0.3659`, `NO_RELATION` accuracy to `0.5385`, and full-universe F1 to `0.2752`.
+These are modest diagnostic improvements, not validation success. The method
+generated 17 aggregation conflicts and only `0.4085` semantic Evidence support.
+Five of eight frozen 003-2c criteria failed.
+
+The v0.2 result confirms that endpoint-scoped retrieval and exact Evidence
+transport do not by themselves solve direct-edge semantics. The unresolved
+problem is distinguishing exact typed educational edges from mediated context,
+shared derivations, and endpoint abstraction drift.
+
+No validated Connection Discovery method is selected after either development
+cycle. Further tuning on this benchmark is stopped. Any future research must
+use a materially different learning signal and reserve fresh explicitly
+annotated data for independent validation. Predicted-canonical propagation,
+learner-facing ranking, and Experiment 004 product validation remain blocked.

@@ -1,0 +1,333 @@
+{
+  "artifact_type": "canonical_connection_evidence_adjudication",
+  "version": "v0.1",
+  "prediction_content_sha256": "353a23c8ac40eead88d442b62adcbbd0eca9a305036722c920800e67403976d1",
+  "pending_snapshot_sha256": "48ab03ad22ca69efcfa36654dea9d9e9e1da36682ea617c9453e2eeb1aef95f7",
+  "decisions": [
+    {
+      "canonical_pair_id": "conn_dev_pair_1191a92948ebd2d6",
+      "decision": "not_supported",
+      "rationale": "The evidence describes a gradient in maximum likelihood estimation but does not identify the Statistical Model endpoint; the predicted edge requires an omitted intermediate."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_1a40513a66e7f15d",
+      "decision": "supported",
+      "rationale": "The evidence directly places the step size h in the Forward Euler method's one-step update context."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_222c986cd9853739",
+      "decision": "supported",
+      "rationale": "The evidence directly states that Gradient Descent is applied to ordinary least squares through the gradient of the Least Squares Objective."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_225420587c4177f5",
+      "decision": "not_supported",
+      "rationale": "The evidence identifies the update as belonging to Gradient Descent, but it does not establish that the Method is applied in the Formula; the Formula instead formalizes the Method."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_263db2f07078bcd1",
+      "decision": "not_supported",
+      "rationale": "The evidence links the Taylor approximation to Forward Euler but never identifies the Initial Value Problem endpoint."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_2653269d6960cfb8",
+      "decision": "not_supported",
+      "rationale": "The evidence contrasts two methods' step behaviour, not the Newton Optimisation Update Formula with the Step Size concept."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_2bb1aeb7a750deb8",
+      "decision": "not_supported",
+      "rationale": "The evidence contrasts Gradient Descent with Newton Optimisation, not the Gradient concept with Newton Optimisation Method."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_2e7e34a63a7a010e",
+      "decision": "not_supported",
+      "rationale": "The evidence applies Newton's method within Maximum Likelihood Estimation to the Score Equation; it does not identify Objective Function as the application target."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_31fa9b658289ed76",
+      "decision": "not_supported",
+      "rationale": "The evidence makes root finding part of Maximum Likelihood Estimation, so it does not support Maximum Likelihood Estimation being applied in a Root-Finding Problem."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_3b005c7a79510244",
+      "decision": "not_supported",
+      "rationale": "The evidence applies Gradient Descent to ordinary least squares and its objective, not specifically to the Mean Squared Error Formula endpoint."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_3c1d300edac20859",
+      "decision": "not_supported",
+      "rationale": "The evidence identifies the Score Equation as a root-finding problem but does not identify the distinct Score Function endpoint."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_4a578fe32126af5d",
+      "decision": "supported",
+      "rationale": "The evidence directly defines the score used by Maximum Likelihood Estimation as a gradient of its log-likelihood objective."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_4e14b70508e9162e",
+      "decision": "supported",
+      "rationale": "The evidence directly states that Gradient Descent uses the Gradient of the Least Squares Objective."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_528c5bc99dfe3da3",
+      "decision": "not_supported",
+      "rationale": "The evidence contrasts Newton Optimisation with Gradient Descent but does not identify the Hessian Matrix endpoint."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_56bf2cab52cf025c",
+      "decision": "not_supported",
+      "rationale": "The evidence defines the Score Function using a gradient but does not present the Score Equation zero condition named by the endpoint."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_5c9b50da7757c423",
+      "decision": "supported",
+      "rationale": "The evidence explicitly places log-likelihood maximisation inside a Gaussian Linear Regression model."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_616b3cd5835de47d",
+      "decision": "supported",
+      "rationale": "The evidence directly defines the Score Function as the Gradient of the log-likelihood."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_623dc620447526e3",
+      "decision": "supported",
+      "rationale": "The evidence explicitly states that the First-Order Taylor Formula formalizes the First-Order Taylor Approximation."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_63bb993a9e7b1d30",
+      "decision": "not_supported",
+      "rationale": "The evidence states that Damped Newton Method extends Newton's Root-Finding Method, which is the reverse of the predicted EXTENDS direction."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_654033881f94fbf0",
+      "decision": "not_supported",
+      "rationale": "The Gradient Descent Update uses a Step Size; the predicted APPLIED_IN direction runs from the Formula to the Concept and is reversed."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_6aa4cd7ede0d0fd8",
+      "decision": "not_supported",
+      "rationale": "The evidence names Step Size and Forward Euler Update but does not state that the update uses the step size or otherwise directly establish the predicted edge."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_6c1b7aacdbb18827",
+      "decision": "not_supported",
+      "rationale": "Conditional equivalence between two optimisation objectives does not establish that Log-Likelihood is used or instantiated in the Least Squares Objective."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_6fe7e172bceffbee",
+      "decision": "not_supported",
+      "rationale": "The evidence uses a small Step Size in a descent argument but does not make the First-Order Taylor Approximation an object applied in Step Size."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_799174f17022eacc",
+      "decision": "supported",
+      "rationale": "The evidence introduces the Score Function within Maximum Likelihood Estimation and defines its role through the log-likelihood gradient."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7ae886fbc9be7241",
+      "decision": "not_supported",
+      "rationale": "The evidence does not directly connect the Mean Squared Error Formula to the generic Objective Function endpoint; the specific Least Squares Objective is an omitted distinction."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7b6597ac0aac5113",
+      "decision": "not_supported",
+      "rationale": "Only Newton's Root-Finding Method is stated to require a Derivative; a Root-Finding Problem does not generally require one."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7d14f554a3646ae6",
+      "decision": "supported",
+      "rationale": "The evidence explicitly states that Maximum Likelihood Estimation treats Log-Likelihood as an Objective Function."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7f5ac4c6e2fe5268",
+      "decision": "supported",
+      "rationale": "The evidence directly states that Gradient Descent requires the Gradient and immediately identifies the Gradient Descent Update."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_81f4b77e0b280216",
+      "decision": "not_supported",
+      "rationale": "The evidence contrasts Newton Optimisation with Gradient Descent's movement control, not Newton Optimisation Method with the Step Size concept."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_8404187bbee08589",
+      "decision": "not_supported",
+      "rationale": "The evidence connects Maximum Likelihood Estimation to log-likelihood but does not directly state that Statistical Model is used in the method; that connection requires an intermediate."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_855fc91eae345c72",
+      "decision": "not_supported",
+      "rationale": "The evidence states that Newton Optimisation Method requires Hessian Matrix, which is the reverse of the predicted REQUIRES direction."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_8fae4bf3dd480f71",
+      "decision": "supported",
+      "rationale": "The evidence directly states that the Score Function is the Gradient of the Log-Likelihood."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9a51109c78e243ef",
+      "decision": "supported",
+      "rationale": "The evidence explicitly states that Newton's Root-Finding Method requires the Derivative."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9c6621685b9ef5e5",
+      "decision": "supported",
+      "rationale": "The evidence directly places Log-Likelihood maximisation inside Maximum Likelihood Estimation and compares its solution with ordinary least squares."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9f008ddde3e426f0",
+      "decision": "not_supported",
+      "rationale": "The Score Equation is used as a condition within Maximum Likelihood Estimation; the predicted APPLIED_IN direction is reversed."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a1259045b6b2d2c7",
+      "decision": "not_supported",
+      "rationale": "The Formula formalizes the Taylor Approximation and uses Gradient as a term; it does not formalize the Gradient concept."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a1e6b8f76fd16f4d",
+      "decision": "supported",
+      "rationale": "The evidence defines a Root-Finding Problem, introduces Newton's method for it, and immediately provides the Newton Root Update used in that problem."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a92bdea086a3cd0c",
+      "decision": "not_supported",
+      "rationale": "The evidence states an optimisation equivalence under a Gaussian model but does not establish Log-Likelihood as an object used in Ordinary Least Squares."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ac297f8e072816c0",
+      "decision": "not_supported",
+      "rationale": "The evidence applies Newton's method to the Score Equation but does not identify Gradient as an endpoint in the selected span."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ad73d420644fe99f",
+      "decision": "supported",
+      "rationale": "The evidence explicitly applies the First-Order Taylor Approximation to predicting a change in the Objective Function."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_b5ea294ae5f29863",
+      "decision": "not_supported",
+      "rationale": "The evidence identifies the Score Equation as a root-finding condition but does not identify the Objective Function endpoint."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_be2636a5d8bc8b4c",
+      "decision": "not_supported",
+      "rationale": "The Mean Squared Error Formula formalizes a fitting objective, not the broader Linear Regression concept itself."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_be5dff9ee6b32e1a",
+      "decision": "not_supported",
+      "rationale": "The evidence states that Ridge Regression extends Ordinary Least Squares by changing an objective; it does not state that Ridge Regression extends Objective Function."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_bed567d1ff4c7012",
+      "decision": "supported",
+      "rationale": "The evidence directly connects the Forward Euler Method's truncation behaviour to the omitted terms of the First-Order Taylor Approximation."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_bfce59cf0247f59a",
+      "decision": "not_supported",
+      "rationale": "The Newton Optimisation Update requires or uses the Hessian Matrix; the predicted REQUIRES direction is reversed."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c0111c22941b9e4b",
+      "decision": "not_supported",
+      "rationale": "The evidence contrasts two optimisation methods' step behaviour, not Hessian Matrix with Step Size as exact endpoints."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c02b6a5def080df9",
+      "decision": "supported",
+      "rationale": "The evidence directly states that applying the First-Order Taylor Approximation produces Forward Euler and immediately identifies its update."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c862968c2f7bbf13",
+      "decision": "supported",
+      "rationale": "The evidence explicitly identifies solving the Score Equation as a Root-Finding Problem."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c9b55dc727622af1",
+      "decision": "supported",
+      "rationale": "The evidence introduces the Least Squares Objective and immediately supplies the Mean Squared Error Formula that expresses it."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c9d185b1eedd2c21",
+      "decision": "supported",
+      "rationale": "The evidence directly links Local Truncation Error to terms omitted after the First-Order Taylor Approximation."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c9da9f7c5ff3c1f6",
+      "decision": "not_supported",
+      "rationale": "The evidence connects Newton root finding to the Score Equation but never identifies Log-Likelihood as the target endpoint."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ce63516ba4c4f71d",
+      "decision": "not_supported",
+      "rationale": "The evidence connects Log-Likelihood with Objective Function but does not identify Statistical Model as the target endpoint."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d28ab8d8057efb6a",
+      "decision": "not_supported",
+      "rationale": "The evidence contrasts Newton Optimisation Method with Gradient Descent, not the Newton Optimisation Update Formula with Gradient Descent."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_da1c18bdf793236f",
+      "decision": "not_supported",
+      "rationale": "The selected evidence presents a Score Equation root-finding problem but does not identify Log-Likelihood."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_dbc167d9bb7ce3f8",
+      "decision": "not_supported",
+      "rationale": "The evidence defines Score Function as the Gradient of an Objective Function; it does not establish that Score Function is applied in Objective Function."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_dcf07ffb792c61d7",
+      "decision": "not_supported",
+      "rationale": "The evidence applies Newton's method to the Score Equation, not to the distinct Score Function endpoint."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_e1603fa09ad3fd48",
+      "decision": "not_supported",
+      "rationale": "The root-finding statement concerns a Score Equation; the Objective Function endpoint is reachable only through omitted log-likelihood context."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_e674a485e3829890",
+      "decision": "supported",
+      "rationale": "The evidence directly associates Ordinary Least Squares with the gradient and minimisation of the Least Squares Objective."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_e848f855de939343",
+      "decision": "not_supported",
+      "rationale": "The evidence explicitly gives the reverse edge: Ridge Regression extends Ordinary Least Squares."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ef28d97312ee8970",
+      "decision": "not_supported",
+      "rationale": "The Gradient is used in the Newton Optimisation Update; the predicted APPLIED_IN direction from the Formula to Gradient is reversed."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_f04767c63a30f18a",
+      "decision": "not_supported",
+      "rationale": "The evidence explains local descent using a Taylor approximation but does not identify the Gradient Descent Update Formula endpoint."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_f089c625fb64bde0",
+      "decision": "supported",
+      "rationale": "The evidence directly links the First-Order Taylor Approximation to a displacement defined using the Gradient."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_f0bc752d2a70b1ce",
+      "decision": "not_supported",
+      "rationale": "Ordinary Least Squares is the method applied to fit Linear Regression; the predicted APPLIED_IN direction from Linear Regression to the method is reversed."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_fa0a79a76255633a",
+      "decision": "not_supported",
+      "rationale": "The selected span identifies a Score Equation root-finding problem but never states that the score is a Gradient."
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_fac1350d8eb9227e",
+      "decision": "supported",
+      "rationale": "The evidence states that Newton's Root-Finding Method is applied to solve the Score Equation, so the equation is used in that method."
+    }
+  ]
+}

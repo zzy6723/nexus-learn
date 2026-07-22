@@ -1,0 +1,60 @@
+{
+  "artifact_type": "endpoint_linked_connection_development_validation_complete",
+  "version": "v0.1",
+  "status": "completed_failed_frozen_development_gates",
+  "method_id": "endpoint_linked_window_verifier_v0.1.1",
+  "method_commit": "02a618358301d1e4f87488198e71c8d9dc232fbc",
+  "validated_default_selected": false,
+  "run": {
+    "metadata": {
+      "path": "experiments/connection_discovery/003_2c_endpoint_linked_verifier/runs/development_v0_1/formal/run_02/metadata/run_metadata.json",
+      "sha256": "fa5f293de5cc67eb0c53f7679514022bbf47928ae8f005ea4edde393f6839059"
+    },
+    "prediction": {
+      "path": "experiments/connection_discovery/003_2c_endpoint_linked_verifier/runs/development_v0_1/formal/run_02/output/canonical_connection_predictions.json",
+      "sha256": "50f11b90b983e209a10e3fec5e377be7af21663abf3f3728f8b531742ee40fc1"
+    },
+    "candidate_count": 125,
+    "window_count": 173,
+    "schema_repair_count": 3,
+    "aggregation_conflict_count": 17
+  },
+  "evaluation": {
+    "metrics": {
+      "path": "experiments/connection_discovery/003_2c_endpoint_linked_verifier/runs/development_v0_1/formal/run_02/evaluation/metrics.json",
+      "sha256": "840c0383415d0ae0842c7d600ce54f236724bbfd057a6bbbc8798dbcfdea9060"
+    },
+    "evaluation_complete": {
+      "path": "experiments/connection_discovery/003_2c_endpoint_linked_verifier/runs/development_v0_1/formal/run_02/evaluation/evaluation_complete.json",
+      "sha256": "5346b59052814558ec268e40aaf529791aa62adc0043c072facde623aba75d79"
+    },
+    "adjudication": {
+      "path": "experiments/connection_discovery/003_2c_endpoint_linked_verifier/runs/development_v0_1/formal/run_02/evaluation/adjudication_resolved.json",
+      "sha256": "d55398457e08206808a0030433a1bf8d00b4e9231dd5a161573b7926d6a7f36f",
+      "pending_count": 0,
+      "supported": 23,
+      "not_supported": 42
+    },
+    "evaluation_status": "final",
+    "conditional_gate_outcome": "failed",
+    "full_universe_gate_outcome": "failed"
+  },
+  "local_gate_assessment": {
+    "passed": 3,
+    "failed": 5,
+    "failed_checks": [
+      "aggregation_conflicts",
+      "positive_edge_precision",
+      "positive_typed_edge_recall",
+      "no_relation_accuracy",
+      "semantic_evidence_support_rate"
+    ]
+  },
+  "comparison": {
+    "path": "experiments/connection_discovery/003_2c_endpoint_linked_verifier/development_comparison.json",
+    "sha256": "599bee962beaa005ff478a17f7fde43456a7b48baf56739c5f75d34a7e2a01f5",
+    "material_improvement_observed": false
+  },
+  "decision": "Do not select endpoint-linked window verification as a validated Connection Discovery default.",
+  "next_gate": "Do not continue tuning on development_v0_1. Any future cycle must introduce a materially different learning signal and reserve fresh data for independent validation."
+}

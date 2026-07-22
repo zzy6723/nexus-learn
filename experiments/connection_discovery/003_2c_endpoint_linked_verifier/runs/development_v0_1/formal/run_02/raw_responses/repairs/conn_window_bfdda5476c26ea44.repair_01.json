@@ -1,0 +1,28 @@
+{
+  "id": "46be84d2-4238-4ddf-abd2-3aed8f42dedf",
+  "object": "chat.completion",
+  "created": 1784696463,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"canonical_pair_id\": \"conn_dev_pair_88939b4d17cdfb3e\",\n  \"window_id\": \"conn_window_bfdda5476c26ea44\",\n  \"support_decision\": \"DIRECT_IN_SCHEMA\",\n  \"source_canonical_ko_id\": \"conn_dev_ko_017\",\n  \"target_canonical_ko_id\": \"conn_dev_ko_005\",\n  \"relation_type\": \"RELATED_TO\",\n  \"evidence_ids\": [\"evidence_016\"],\n  \"rationale\": \"The evidence explicitly states that the formula formalizes the least squares objective, connecting Least Squares Objective to Objective Function. Since FORMALIZES requires a Formula source and Least Squares Objective is a Concept, the appropriate relation is RELATED_TO.\"\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1198,
+    "completion_tokens": 168,
+    "total_tokens": 1366,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 558
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}
