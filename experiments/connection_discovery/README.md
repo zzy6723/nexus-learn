@@ -1,7 +1,7 @@
 # Experiment 003: Connection Discovery
 
-**Status:** In progress with an unresolved Oracle-classification gate
-**Current stage:** 003-2b completed; two-stage v0.1.2 failed frozen quality gates
+**Status:** Experiment 003 v0.1 completed with a negative Technical Validation result
+**Current stage:** Closed; no Oracle-canonical Connection method passed the frozen gates
 
 ## Objective
 
@@ -33,9 +33,9 @@ deferred to Experiment 004.
 | 003-1 | Oracle-Canonical Candidate Generation | Completed and repository-frozen |
 | 003-2 | Oracle-Canonical Connection Discovery | Completed; frozen gates failed |
 | 003-2b | Two-Stage Direct-Edge Connection Discovery | Completed; execution recovered, frozen quality gates failed |
-| 003-3 | Predicted-Canonical End-to-End Discovery | Blocked as product validation; diagnostic only |
-| 003-4 | Connection Selection and Ranking | Blocked as product validation; diagnostic only |
-| 003-5 | Independent Validation | Deferred until an Oracle method passes |
+| 003-3 | Predicted-Canonical End-to-End Discovery | Not executed; Oracle gate precondition failed |
+| 003-4 | Connection Selection and Ranking | Not executed; no validated Connection set |
+| 003-5 | Independent Validation | Not executed; no method qualified |
 
 No Connection model run is allowed before the 003-0 source, pair universe,
 Ground Truth, evaluation protocol, success criteria, and leakage audit are
@@ -65,6 +65,20 @@ both this manifest and the later candidate-method commit.
 - 003-2b method: `003_2b_direct_edge_gate/README.md`
 - 003-2b results: `003_2b_direct_edge_gate/development_results.md`
 - 003-2b conclusion: `003_2b_direct_edge_gate/conclusion.md`
+- Experiment conclusion: `conclusion.md`
+- Machine-readable closure: `experiment_validation_complete.json`
 - Draft protocol: `../../benchmark/connection_discovery_protocol.md`
 - Draft annotation rules:
   `../../benchmark/connection_discovery_annotation_guidelines.md`
+
+## Final v0.1 Decision
+
+Candidate generation was feasible, but one-stage and two-stage
+Oracle-canonical Connection classification both failed the frozen conditional
+and full-universe gates. No validated Connection classifier is selected.
+
+Stages 003-3 through 003-5 were intentionally not executed because their
+preconditions were not met. Experiment 003 v0.1 is closed as a valid negative
+result. Any future v0.2 must declare a materially revised method and use fresh
+evaluation data rather than continue pair-specific prompt tuning on the current
+development benchmark.

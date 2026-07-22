@@ -71,8 +71,8 @@ Technical Validation currently has the following experiment status:
 | 002A | Oracle-KO Typed Relation Extraction | Completed |
 | 002B-1 | Controlled predicted-KO pipeline coupling | Completed |
 | 002B-2 | Candidate Pair Generation under predicted KOs | Completed with partial feasibility |
-| 002C | Knowledge Object Resolution / Canonicalization | 002C-0 completed; 002C-1 formal runs pending |
-| 003 | Learner-relevant Connection Discovery | Not started |
+| 002C | Knowledge Object Resolution / Canonicalization | Completed with limited independent validation |
+| 003 | Learner-relevant Connection Discovery | v0.1 completed with a negative result |
 | 004 | Learner-facing Connection Explanation | Not started |
 
 Experiment 002B is complete. The current lecture-local safety path uses
@@ -80,11 +80,15 @@ All-Pairs candidate generation because the deterministic Rule-Filtered v0.1
 method reduced workload but failed its frozen positive-recall gate. This is a
 Technical Validation fallback, not a scalable production design.
 
-Experiment 002C-0 has a frozen 39-mention cluster-level development benchmark
-and strict completion checks. The 002C-1 Exact and Alias-Aware deterministic
-methods have passed synthetic implementation tests; their clean-state formal
-development runs are the next gate. Learner-facing Connection discovery and
-ranking remain Experiment 003.
+Experiment 002C selected Evidence-ID context resolution v0.2.1 for subsequent
+Technical Validation after limited independent validation. It is not a
+production canonicalizer.
+
+Experiment 003 v0.1 completed candidate-generation and Oracle-canonical
+Connection classification validation. Candidate generation retained all 41
+primary positive pairs, but both the one-stage and two-stage classifiers failed
+the frozen quality gates. No validated Connection Discovery default is selected,
+and downstream ranking or explanation is not authorized as product validation.
 
 The user interface is intentionally postponed until the core AI pipeline has been validated.
 

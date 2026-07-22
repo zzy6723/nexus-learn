@@ -41,8 +41,8 @@ Connection Discovery is the central AI capability of the project.
 | 002A | Classify typed Relations for supplied Oracle-KO pairs | Completed |
 | 002B-1 | Measure predicted-KO error propagation on supplied gold pair candidates | Completed |
 | 002B-2 | Generate Relation candidate pairs from predicted KOs | Completed with partial feasibility |
-| 002C | Resolve lecture-local KO mentions into canonical objects | 002C-0 completed; 002C-1 formal runs pending |
-| 003 | Discover and rank learner-relevant Connections | Not started |
+| 002C | Resolve lecture-local KO mentions into canonical objects | Completed with limited independent validation |
+| 003 | Discover and rank learner-relevant Connections | v0.1 completed with a negative result |
 | 004 | Generate learner-facing evidence-supported explanations | Not started |
 
 Experiment 002B is complete. Predicted-KO Relation coupling was feasible on
@@ -54,7 +54,13 @@ The alignment used in Experiment 002B-1 is an evaluation scaffold against an
 Oracle inventory. It is not the product canonicalization layer planned for
 Experiment 002C.
 
-Experiment 002C-0 now has a frozen cluster-level development benchmark over 39
-predicted KO mentions. The 002C-1 deterministic runner and evaluator have
-passed synthetic validation; clean-state formal runs remain pending. No API is
-used in 002C-1.
+Experiment 002C selected Evidence-ID context resolution v0.2.1 for subsequent
+Technical Validation after limited independent validation. It is not a
+production canonicalizer.
+
+Experiment 003 v0.1 retained all 41 primary positive pairs with its selected
+candidate generator, but both tested Oracle-canonical Connection classifiers
+failed the frozen quality gates. Predicted-canonical propagation, ranking,
+independent validation, and learner-facing explanation were not executed because
+their preconditions were not met. A future v0.2 requires a materially revised
+method and fresh evaluation data.

@@ -1,0 +1,66 @@
+{
+  "artifact_type": "connection_discovery_experiment_validation_complete",
+  "version": "v0.1",
+  "status": "completed_negative_result",
+  "technical_validation_outcome": "failed_oracle_connection_discovery_gate",
+  "validated_connection_method_selected": false,
+  "candidate_generation_method": {
+    "selected": "overlap_bridge_v0.1",
+    "scope": "development_candidate_generation_only"
+  },
+  "stage_records": {
+    "003_0": {
+      "status": "completed",
+      "artifact": {
+        "path": "experiments/connection_discovery/003_0_benchmark_preparation/completion.json",
+        "sha256": "968ea077b177368fb1aa6ddc8418e852d5aedc33aec7e98fc1dbee8138ef54ed"
+      }
+    },
+    "003_1": {
+      "status": "completed_selected_development_candidate_generator",
+      "artifact": {
+        "path": "experiments/connection_discovery/003_1_candidate_generation/development_validation_complete.json",
+        "sha256": "279ed77d56c665da3d79c602c6e3515be0b3771f978a1a930d3b281b09ecbc2c"
+      }
+    },
+    "003_2": {
+      "status": "completed_failed_frozen_gates",
+      "artifact": {
+        "path": "experiments/connection_discovery/003_2_oracle_connection_discovery/development_validation_complete.json",
+        "sha256": "f8060c732f1b62d61db27561d0da71c0574388c91a5a4b1a8deca72326a34c09"
+      }
+    },
+    "003_2b": {
+      "status": "completed_failed_frozen_gates",
+      "artifact": {
+        "path": "experiments/connection_discovery/003_2b_direct_edge_gate/development_validation_complete.json",
+        "sha256": "3bdb692a6e9bed6af88e41f75fa8a35fa9eab2bfc1365e7f868e0ca06bb8f430"
+      }
+    },
+    "003_3": {
+      "status": "not_executed_precondition_failed",
+      "reason": "Oracle-canonical Connection classification did not pass the frozen gates."
+    },
+    "003_4": {
+      "status": "not_executed_precondition_failed",
+      "reason": "No validated Connection set existed for educational selection and ranking."
+    },
+    "003_5": {
+      "status": "not_executed_precondition_failed",
+      "reason": "No complete Connection Discovery method qualified for independent validation."
+    }
+  },
+  "final_decision": {
+    "experiment_003_v0_1_closed": true,
+    "connection_discovery_operationally_viable": false,
+    "experiment_004_product_validation_authorized": false,
+    "prompt_003_on_current_development_set_authorized": false
+  },
+  "accepted_assets": [
+    "frozen_connection_benchmark_and_evaluator",
+    "overlap_bridge_v0.1_candidate_generator_for_development",
+    "candidate_scoped_evidence_and_adjudication_infrastructure",
+    "strict_failure_and_resume_lifecycle"
+  ],
+  "next_gate": "Declare and freeze a materially revised Connection Discovery v0.2 method, use fresh method-evaluation data, and pass the Oracle-canonical gates before predicted-canonical, ranking, independent-validation, or explanation claims."
+}
