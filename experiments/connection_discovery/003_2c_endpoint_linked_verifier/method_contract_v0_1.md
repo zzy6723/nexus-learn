@@ -73,6 +73,15 @@ For each canonical pair:
 
 Aggregation may not use confidence scores or gold-aware tie breaking.
 
+## Execution Reliability
+
+After a successful API request and JSON parse, one validator-guided repair is
+allowed for a schema-invalid window decision. The repair receives only the
+unchanged window input, the invalid response, and the deterministic validator
+error. It receives no Ground Truth or scoring information. The original and
+repair artifacts are both retained. Request failures, semantic evaluation
+errors, and a second schema-invalid response remain fail-closed outcomes.
+
 ## Evaluation Boundary
 
 Development evaluation reports:

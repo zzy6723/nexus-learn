@@ -1,0 +1,35 @@
+{
+  "artifact_type": "endpoint_linked_connection_verifier_execution_failure",
+  "version": "v0.1",
+  "status": "recorded_non_evaluable_schema_failure",
+  "method_commit": "169a6d24e067a14b7efd27b27cb8cd9f4305ca95",
+  "run_id": "run_01",
+  "failure_window_id": "conn_window_9633aa177fddcd3a",
+  "failure_pair_id": "conn_dev_pair_56bf2cab52cf025c",
+  "failure_reason": "FORMALIZES source must be Formula",
+  "completed_window_count": 42,
+  "request_success": true,
+  "json_parse_success": true,
+  "prediction_schema_valid": false,
+  "artifacts": {
+    "metadata": {
+      "path": "experiments/connection_discovery/003_2c_endpoint_linked_verifier/runs/development_v0_1/formal/run_01/metadata/run_metadata.json",
+      "sha256": "432a8f661b96e0e2f31b142244f2971b53ef2f373aef97cb82725ce823589df2"
+    },
+    "rendered_input": {
+      "path": "experiments/connection_discovery/003_2c_endpoint_linked_verifier/runs/development_v0_1/formal/run_01/rendered_inputs/windows/conn_window_9633aa177fddcd3a.json",
+      "sha256": "4caf29dc6d202cb67476a64810a5e59e31070ebdd6e0bdc6535fce3d94e7bf84"
+    },
+    "raw_response": {
+      "path": "experiments/connection_discovery/003_2c_endpoint_linked_verifier/runs/development_v0_1/formal/run_01/raw_responses/windows/conn_window_9633aa177fddcd3a.json",
+      "sha256": "d9d8f55ec182c1d515a5de10300c78c00c7ece33498cae9a0ad8016d6b8473f7"
+    },
+    "parsed_response": {
+      "path": "experiments/connection_discovery/003_2c_endpoint_linked_verifier/runs/development_v0_1/formal/run_01/parsed_responses/windows/conn_window_9633aa177fddcd3a.json",
+      "sha256": "9b08a4bb1d1af0592edfce168adc5ac62c766520f03f69324b1288364b69c318"
+    }
+  },
+  "prediction_content_manually_modified": false,
+  "evaluable": false,
+  "next_gate": "Freeze runner v0.1.1 with one generic schema-repair attempt, then execute a new full run without overwriting run_01."
+}

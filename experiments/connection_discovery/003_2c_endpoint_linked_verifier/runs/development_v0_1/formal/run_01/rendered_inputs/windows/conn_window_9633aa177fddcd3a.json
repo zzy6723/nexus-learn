@@ -1,0 +1,23 @@
+{
+  "model": "deepseek-v4-flash",
+  "messages": [
+    {
+      "role": "system",
+      "content": "# Role\n\nYou verify whether one small Evidence window establishes a direct typed learning\nConnection between two exact canonical Knowledge Objects.\n\n# Support Decision\n\nChoose exactly one:\n\n- `DIRECT_IN_SCHEMA`\n- `DIRECT_OUT_OF_SCHEMA`\n- `MEDIATED_OR_CONTEXTUAL`\n- `INSUFFICIENT`\n\nA direct edge must be established by the supplied Evidence window itself. Do\nnot rely on omitted lecture blocks, general STEM knowledge, or an unstated\nintermediate object.\n\nSame lecture, shared notation, co-occurrence in one formula, or participation in\nthe same third method is not sufficient. If the explanation needs a third\nKnowledge Object to connect the endpoints, choose `MEDIATED_OR_CONTEXTUAL`.\n\n`DIRECT_OUT_OF_SCHEMA` requires an explicit endpoint-to-endpoint connection\nthat none of the allowed Relation types represents faithfully. It is not an\nuncertainty label.\n\n# Relation Types\n\nFor `DIRECT_IN_SCHEMA`, choose exactly one frozen Relation:\n\n- `REQUIRES`: source depends on target as a prerequisite or required input.\n- `APPLIED_IN`: source is used or instantiated in target.\n- `EXTENDS`: source adds to or generalizes target.\n- `CONTRASTS_WITH`: source and target are explicitly contrasted.\n- `FORMALIZES`: source is a Formula that defines or expresses target.\n- `RELATED_TO`: the Evidence explicitly establishes a direct educational\n  connection, but no stronger type applies.\n\nVerify direction by reading the final edge as a sentence. Do not copy endpoint\norder automatically. `FORMALIZES` requires a Formula source.\n\n# Evidence\n\nFor `DIRECT_IN_SCHEMA`, select a non-empty subset of the supplied Evidence IDs.\nThe selected set, read alone, must identify both exact endpoints and establish\nthe typed directed edge. Unresolved references and evidence supporting only an\nintermediate object are invalid.\n\nOther support decisions must return an empty Evidence-ID list for the graph\nedge because no graph edge will be emitted.\n\n# Output\n\nReturn one JSON object only:\n\n```json\n{\n  \"canonical_pair_id\": \"opaque pair ID\",\n  \"window_id\": \"opaque window ID\",\n  \"support_decision\": \"DIRECT_IN_SCHEMA | DIRECT_OUT_OF_SCHEMA | MEDIATED_OR_CONTEXTUAL | INSUFFICIENT\",\n  \"source_canonical_ko_id\": \"endpoint ID or null\",\n  \"target_canonical_ko_id\": \"endpoint ID or null\",\n  \"relation_type\": \"allowed Relation or null\",\n  \"evidence_ids\": [\"opaque Evidence ID\"],\n  \"rationale\": \"Brief audit rationale\"\n}\n```\n\nFor every decision other than `DIRECT_IN_SCHEMA`, set source, target, and\nRelation type to `null`, and return `evidence_ids` as an empty list.\n"
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"canonical_pair_id\": \"conn_dev_pair_56bf2cab52cf025c\",\n  \"window_id\": \"conn_window_9633aa177fddcd3a\",\n  \"endpoints\": [\n    {\n      \"canonical_ko_id\": \"conn_dev_ko_001\",\n      \"canonical_name\": \"Gradient\",\n      \"canonical_type\": \"Concept\"\n    },\n    {\n      \"canonical_ko_id\": \"conn_dev_ko_015\",\n      \"canonical_name\": \"Score Equation\",\n      \"canonical_type\": \"Concept\"\n    }\n  ],\n  \"evidence_window\": [\n    {\n      \"evidence_id\": \"evidence_016\",\n      \"lecture_id\": \"maximum_likelihood_001\",\n      \"span\": \"Maximum likelihood estimation treats the log-likelihood as an objective function and selects a parameter value that maximizes it. The score function is the gradient of the log-likelihood with respect to the parameter,\"\n    },\n    {\n      \"evidence_id\": \"evidence_017\",\n      \"lecture_id\": \"maximum_likelihood_001\",\n      \"span\": \"\\\\[\\ns(\\\\theta)=\\\\nabla_{\\\\theta}\\\\ell(\\\\theta).\\n\\\\]\"\n    },\n    {\n      \"evidence_id\": \"evidence_018\",\n      \"lecture_id\": \"maximum_likelihood_001\",\n      \"span\": \"At an interior differentiable maximum, a candidate satisfies the score equation \\\\(s(\\\\theta)=0\\\\). Finding such a candidate is a root-finding problem. When the score equation has no closed-form solution, Newton's root-finding method can be applied within maximum likelihood estimation.\"\n    }\n  ],\n  \"allowed_support_decisions\": [\n    \"DIRECT_IN_SCHEMA\",\n    \"DIRECT_OUT_OF_SCHEMA\",\n    \"INSUFFICIENT\",\n    \"MEDIATED_OR_CONTEXTUAL\"\n  ],\n  \"allowed_relation_types\": [\n    \"APPLIED_IN\",\n    \"CONTRASTS_WITH\",\n    \"EXTENDS\",\n    \"FORMALIZES\",\n    \"RELATED_TO\",\n    \"REQUIRES\"\n  ]\n}"
+    }
+  ],
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "max_tokens": 900,
+  "stream": false,
+  "response_format": {
+    "type": "json_object"
+  },
+  "thinking": {
+    "type": "disabled"
+  }
+}

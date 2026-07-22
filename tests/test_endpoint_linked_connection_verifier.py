@@ -6,6 +6,7 @@ import unittest
 from scripts.run_endpoint_linked_connection_verifier import (
     EndpointVerifierError,
     aggregate_predictions,
+    build_schema_repair_payload,
     build_execution_items,
     validate_window_decision,
 )
@@ -117,6 +118,28 @@ class EndpointLinkedVerifierTests(unittest.TestCase):
         )
         self.assertEqual(predictions["results"][0]["relation_type"], "NO_RELATION")
         self.assertEqual(diagnostics[0]["aggregation_outcome"], "conflicting_direct_edges")
+
+    def test_schema_repair_is_generic_and_gold_free(self):
+        item = build_execution_items(bundle())[0]
+        payload = {
+            "model": "test-model",
+            "messages": [
+                {"role": "system", "content": "Verifier prompt"},
+                {"role": "user", "content": __import__("json").dumps(item["model_input"])},
+            ],
+            "temperature": 0,
+            "top_p": 1,
+            "max_tokens": 900,
+        }
+        invalid = direct_decision(relation_type="FORMALIZES")
+        repair = build_schema_repair_payload(
+            payload, invalid, "FORMALIZES source must be Formula"
+        )
+        repair_input = __import__("json").loads(repair["messages"][1]["content"])
+        self.assertEqual(repair_input["original_model_input"], item["model_input"])
+        self.assertEqual(repair_input["invalid_response"], invalid)
+        self.assertIn("FORMALIZES source", repair_input["validator_error"])
+        self.assertNotIn("gold", repair["messages"][1]["content"].lower())
 
 
 if __name__ == "__main__":

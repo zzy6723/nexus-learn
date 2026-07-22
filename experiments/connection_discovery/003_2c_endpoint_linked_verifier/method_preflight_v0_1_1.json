@@ -1,18 +1,32 @@
 {
   "artifact_type": "endpoint_linked_connection_verifier_method_preflight",
-  "version": "v0.1",
-  "status": "superseded_after_recorded_schema_failure",
+  "version": "v0.1.1",
+  "status": "ready_for_repository_freeze",
   "model_execution_authorized": false,
-  "repository_freeze_commit": "169a6d24e067a14b7efd27b27cb8cd9f4305ca95",
-  "method_id": "endpoint_linked_window_verifier_v0.1",
+  "method_id": "endpoint_linked_window_verifier_v0.1.1",
+  "change_scope": "generic_validator_guided_schema_repair_only",
+  "unchanged": [
+    "candidate_selection",
+    "canonical_inventory",
+    "evidence_window_bundle",
+    "window_verifier_prompt",
+    "relation_schema",
+    "ground_truth",
+    "success_criteria",
+    "final_evaluator"
+  ],
   "bindings": {
     "failure_analysis": {
       "path": "experiments/connection_discovery/003_2c_endpoint_linked_verifier/v0_1_failure_analysis.md",
       "sha256": "7dd0c5cc398cb66d00e3adc347c61e614bf4868912f62eef53d2bb4e720fa719"
     },
+    "recorded_v0_1_failure": {
+      "path": "experiments/connection_discovery/003_2c_endpoint_linked_verifier/v0_1_schema_failure.json",
+      "sha256": "5e5a993a20fe9ac574847551cdab8890a21237ea61b98f8c08194eeb830ab3c2"
+    },
     "method_contract": {
       "path": "experiments/connection_discovery/003_2c_endpoint_linked_verifier/method_contract_v0_1.md",
-      "sha256": "9ac62479d4c05018c9d4e783920ace485178398ece5f4f84e328cfcc41599b81"
+      "sha256": "73982b1bf807f387f580c10f682adf439f1ece995e11a08e29b8507a4f6ef440"
     },
     "success_criteria": {
       "path": "experiments/connection_discovery/003_2c_endpoint_linked_verifier/success_criteria_v0_1.json",
@@ -32,7 +46,7 @@
     },
     "verifier_runner": {
       "path": "scripts/run_endpoint_linked_connection_verifier.py",
-      "sha256": "12aaf2a5a7a749dcaaa40d5555d691da659b775dbd680af895b27681f4d4ead7"
+      "sha256": "fbb5972281978cd5250272867b5509ef354ffc9c1ab018382a383c76c58b2c40"
     },
     "window_generator_tests": {
       "path": "tests/test_connection_evidence_windows.py",
@@ -40,17 +54,15 @@
     },
     "verifier_runner_tests": {
       "path": "tests/test_endpoint_linked_connection_verifier.py",
-      "sha256": "bad1ec05396befa97db21c399759909e1439a88e0c58123b548c1b83119464f2"
+      "sha256": "087a21a9aaf326aa6aeb23375006aa26a5f335768f0e314c347596275d16a587"
     }
   },
   "validation": {
-    "new_tests_passed": 11,
-    "connection_discovery_regression_tests_passed": 68,
-    "real_development_selected_pairs": 125,
-    "real_development_minimal_windows": 173,
-    "real_development_primary_positive_window_coverage": 1.0,
-    "gold_leakage_detected": false,
-    "secret_pattern_detected": false
+    "new_tests_passed": 12,
+    "schema_repair_attempt_limit": 1,
+    "repair_receives_gold_fields": false,
+    "second_invalid_response_fails_closed": true,
+    "v0_1_failure_artifacts_manually_modified": false
   },
-  "next_gate": "Use the separately frozen v0.1.1 execution-reliability revision; do not rerun or modify v0.1 run_01."
+  "next_gate": "Commit the v0.1.1 repair and failure record, confirm a clean repository, perform a new dry run, then execute a new full formal run without overwriting v0.1 run_01."
 }

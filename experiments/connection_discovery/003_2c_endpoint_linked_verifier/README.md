@@ -1,6 +1,6 @@
 # 003-2c: Endpoint-Linked Evidence Verification
 
-**Status:** Method implementation complete; repository freeze pending
+**Status:** v0.1 schema failure recorded; v0.1.1 execution repair pending freeze
 
 ## Objective
 
@@ -45,12 +45,25 @@ scope taxonomy.
 - `success_criteria_v0_1.json`;
 - `window_verifier_prompt.md`;
 - `method_preflight_v0_1.json`;
+- `method_preflight_v0_1_1.json`;
 - deterministic Evidence-window bundle;
 - candidate-scoped verifier outputs;
 - existing canonical Connection predictions for final evaluation.
 
 No formal API run is allowed until the method implementation, tests, prompt,
 and success criteria are repository-frozen at one clean commit.
+
+## v0.1 Execution Failure
+
+The first formal run completed 42 windows before the model returned
+`FORMALIZES` with a `Concept` source. The API request and JSON parse succeeded,
+but strict schema validation failed. No aggregate prediction was produced and
+the run is not evaluable.
+
+Runner v0.1.1 adds one generic validator-guided schema-repair attempt. This is
+an execution-contract repair, not a prompt or benchmark change. The failure is
+bound in `v0_1_schema_failure.md` and `v0_1_schema_failure.json`. A new formal
+run must use a new directory; `run_01` is retained unchanged.
 
 ## Deterministic Development Diagnostic
 

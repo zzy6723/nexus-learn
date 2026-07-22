@@ -1,0 +1,28 @@
+{
+  "id": "dd20e4a0-5121-46c3-ad93-35057059f996",
+  "object": "chat.completion",
+  "created": 1784694258,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"canonical_pair_id\": \"conn_dev_pair_56bf2cab52cf025c\",\n  \"window_id\": \"conn_window_9633aa177fddcd3a\",\n  \"support_decision\": \"DIRECT_IN_SCHEMA\",\n  \"source_canonical_ko_id\": \"conn_dev_ko_001\",\n  \"target_canonical_ko_id\": \"conn_dev_ko_015\",\n  \"relation_type\": \"FORMALIZES\",\n  \"evidence_ids\": [\"evidence_017\"],\n  \"rationale\": \"Evidence 017 explicitly states the score function as the gradient of the log-likelihood, which is a formula that defines the Score Equation concept in terms of Gradient.\"\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1089,
+    "completion_tokens": 153,
+    "total_tokens": 1242,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 449
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

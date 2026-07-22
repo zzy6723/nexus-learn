@@ -76,8 +76,8 @@ DEFAULT_FREEZE = (
     / "003_0_benchmark_preparation"
     / "benchmark_freeze_manifest_v0_1.json"
 )
-RUNNER_VERSION = "endpoint_linked_connection_verifier_runner_v0.1"
-METHOD_ID = "endpoint_linked_window_verifier_v0.1"
+RUNNER_VERSION = "endpoint_linked_connection_verifier_runner_v0.1.1"
+METHOD_ID = "endpoint_linked_window_verifier_v0.1.1"
 SUPPORT_DECISIONS = {
     "DIRECT_IN_SCHEMA",
     "DIRECT_OUT_OF_SCHEMA",
@@ -338,6 +338,35 @@ def call_with_retries(
             time.sleep(2)
 
 
+def build_schema_repair_payload(
+    original_payload: dict[str, Any],
+    invalid_prediction: dict[str, Any],
+    validator_error: str,
+) -> dict[str, Any]:
+    try:
+        original_model_input = json.loads(original_payload["messages"][1]["content"])
+        original_system_prompt = original_payload["messages"][0]["content"]
+    except (KeyError, IndexError, TypeError, json.JSONDecodeError) as exc:
+        raise EndpointVerifierError("Cannot construct schema repair payload") from exc
+    repair_instruction = (
+        "The previous response violated the deterministic output contract. "
+        "Return one corrected JSON object for the unchanged candidate and Evidence "
+        "window. Use only the supplied endpoint IDs and Evidence IDs. Do not add new "
+        "facts. The validator error is structural and does not reveal a gold label."
+    )
+    repair_input = {
+        "original_model_input": original_model_input,
+        "invalid_response": invalid_prediction,
+        "validator_error": validator_error,
+    }
+    repaired = dict(original_payload)
+    repaired["messages"] = [
+        {"role": "system", "content": f"{original_system_prompt}\n\n# Schema Repair\n{repair_instruction}"},
+        {"role": "user", "content": json.dumps(repair_input, ensure_ascii=False, indent=2)},
+    ]
+    return repaired
+
+
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--window-bundle", default=str(DEFAULT_WINDOWS))
@@ -353,6 +382,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--top-p", type=float, default=1.0)
     parser.add_argument("--max-tokens", type=int, default=900)
     parser.add_argument("--transport-retries", type=int, default=2)
+    parser.add_argument("--schema-repair-attempts", type=int, choices=(0, 1), default=1)
     parser.add_argument("--dry-run", action="store_true")
     return parser.parse_args(argv)
 
@@ -421,6 +451,7 @@ def main(argv: list[str] | None = None) -> int:
             "top_p": args.top_p,
             "max_tokens": args.max_tokens,
             "transport_retries": args.transport_retries,
+            "schema_repair_attempts": args.schema_repair_attempts,
         },
         "inputs": {
             "window_bundle": binding(paths["window_bundle"]),
@@ -463,11 +494,14 @@ def main(argv: list[str] | None = None) -> int:
     finish_reasons: list[str | None] = []
     usage: dict[str, int] = {}
     attempted_window_count = 0
+    api_request_attempt_count = 0
     request_completed_count = 0
     parse_completed_count = 0
+    schema_repair_count = 0
     try:
         for item, payload in zip(items, payloads):
             attempted_window_count += 1
+            api_request_attempt_count += 1
             response, retries = call_with_retries(
                 api_key=api_key,
                 payload=payload,
@@ -485,7 +519,43 @@ def main(argv: list[str] | None = None) -> int:
                 run_dir / "parsed_responses" / "windows" / f"{item['window_id']}.json",
                 parsed,
             )
-            decision = validate_window_decision(parsed, item)
+            try:
+                decision = validate_window_decision(parsed, item)
+            except EndpointVerifierError as schema_error:
+                if args.schema_repair_attempts != 1:
+                    raise
+                repair_payload = build_schema_repair_payload(
+                    payload, parsed, str(schema_error)
+                )
+                repair_name = f"{item['window_id']}.repair_01.json"
+                write_json(
+                    run_dir / "rendered_inputs" / "repairs" / repair_name,
+                    repair_payload,
+                )
+                api_request_attempt_count += 1
+                repair_response, repair_retries = call_with_retries(
+                    api_key=api_key,
+                    payload=repair_payload,
+                    retries=args.transport_retries,
+                )
+                request_completed_count += 1
+                retry_count += repair_retries
+                schema_repair_count += 1
+                write_json(
+                    run_dir / "raw_responses" / "repairs" / repair_name,
+                    repair_response,
+                )
+                repair_parsed, repair_finish_reason = extract_response(repair_response)
+                parse_completed_count += 1
+                write_json(
+                    run_dir / "parsed_responses" / "repairs" / repair_name,
+                    repair_parsed,
+                )
+                decision = validate_window_decision(repair_parsed, item)
+                finish_reasons.append(repair_finish_reason)
+                for key, value in repair_response.get("usage", {}).items():
+                    if isinstance(value, int):
+                        usage[key] = usage.get(key, 0) + value
             decisions.append(decision)
             finish_reasons.append(finish_reason)
             write_json(
@@ -511,10 +581,12 @@ def main(argv: list[str] | None = None) -> int:
                 "finish_reason": "stop" if set(finish_reasons) == {"stop"} else "mixed",
                 "completed_window_count": len(decisions),
                 "attempted_window_count": attempted_window_count,
+                "api_request_attempt_count": api_request_attempt_count,
                 "request_completed_count": request_completed_count,
                 "parse_completed_count": parse_completed_count,
                 "completed_candidate_count": len(predictions["results"]),
                 "transport_retry_count": retry_count,
+                "schema_repair_count": schema_repair_count,
                 "aggregation_conflict_count": sum(
                     item["aggregation_outcome"] == "conflicting_direct_edges"
                     for item in diagnostics
@@ -527,7 +599,7 @@ def main(argv: list[str] | None = None) -> int:
         )
         write_json(metadata_path, metadata)
     except Exception as exc:
-        if request_completed_count < attempted_window_count:
+        if request_completed_count < api_request_attempt_count:
             failure_status = "request_failed"
             request_success = False
             json_parse_success = False
@@ -546,10 +618,12 @@ def main(argv: list[str] | None = None) -> int:
                 "json_parse_success": json_parse_success,
                 "prediction_schema_valid": False,
                 "attempted_window_count": attempted_window_count,
+                "api_request_attempt_count": api_request_attempt_count,
                 "request_completed_count": request_completed_count,
                 "parse_completed_count": parse_completed_count,
                 "completed_window_count": len(decisions),
                 "transport_retry_count": retry_count,
+                "schema_repair_count": schema_repair_count,
                 "failure": str(exc),
             }
         )
