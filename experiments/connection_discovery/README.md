@@ -71,7 +71,7 @@ both this manifest and the later candidate-method commit.
 - 003-2c comparison: `003_2c_endpoint_linked_verifier/development_comparison.json`
 - 003-2c conclusion: `003_2c_endpoint_linked_verifier/conclusion.md`
 - Experiment conclusion: `conclusion.md`
-- Machine-readable closure: `experiment_validation_complete.json`
+- v0.1 machine-readable closure: `experiment_validation_complete.json`
 - v0.2 development closure: `experiment_v0_2_development_complete.json`
 - Draft protocol: `../../benchmark/connection_discovery_protocol.md`
 - Draft annotation rules:

@@ -42,7 +42,7 @@ Connection Discovery is the central AI capability of the project.
 | 002B-1 | Measure predicted-KO error propagation on supplied gold pair candidates | Completed |
 | 002B-2 | Generate Relation candidate pairs from predicted KOs | Completed with partial feasibility |
 | 002C | Resolve lecture-local KO mentions into canonical objects | Completed with limited independent validation |
-| 003 | Discover and rank learner-relevant Connections | v0.1 negative; v0.2 method preparation in progress |
+| 003 | Discover and rank learner-relevant Connections | Completed with negative Technical Validation results |
 | 004 | Generate learner-facing evidence-supported explanations | Not started |
 
 Experiment 002B is complete. Predicted-KO Relation coupling was feasible on
@@ -65,6 +65,9 @@ independent validation, and learner-facing explanation were not executed because
 their preconditions were not met. A future v0.2 requires a materially revised
 method and fresh evaluation data.
 
-Experiment 003 v0.2 preparation now tests endpoint-linked Evidence windows and
-an explicit direct-versus-mediated support contract. No v0.2 model run or
-generalization claim has yet been made.
+Experiment 003 v0.2 evaluated endpoint-linked Evidence windows and an explicit
+direct-versus-mediated support contract. It improved some development
+diagnostics but failed five of eight frozen criteria, including precision,
+recall, negative accuracy, conflict control, and semantic Evidence support.
+No Connection classifier is selected, and the existing 125-pair benchmark is
+now development-only for all three tested architectures.

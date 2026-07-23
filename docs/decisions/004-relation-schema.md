@@ -1,8 +1,9 @@
 # ADR-004: Relation Schema
 
-**Status:** Proposed
-**Version:** v0.1
+**Status:** Accepted
+**Version:** v0.2
 **Date:** 2026-07-12
+**Last Updated:** 2026-07-24
 **Owner:** Project
 
 Terminology follows `docs/glossary.md`.
@@ -106,6 +107,35 @@ Experiment 002B should later evaluate how errors from Knowledge Object extractio
 
 ---
 
+# Validation Evidence
+
+Experiment 002A evaluated the schema first on development data and then on a
+frozen unseen holdout containing 40 primary pairs across four authored STEM
+lectures.
+
+The selected Prompt 002:
+
+- achieved `40/40` Relation-type accuracy on holdout;
+- achieved `36/40` strict edge accuracy;
+- rejected all 11 holdout hard negatives;
+- produced no `RELATED_TO` fallback predictions;
+- preserved exact Evidence grounding for all positive predictions;
+- retained four repeated endpoint-direction errors on `APPLIED_IN`.
+
+The result supports the schema as an interpretable and operational working
+contract for subsequent Technical Validation. It does not establish complete
+coverage of educational relations. `RELATED_TO` had no positive holdout
+support, while `EXTENDS` and `CONTRASTS_WITH` had only small samples.
+
+Experiment 003 reused the schema for Connection Discovery. Its negative result
+does not reverse this decision: the dominant failure was deciding whether a
+direct edge existed between exact endpoints, not an isolated demonstration that
+the Relation vocabulary itself was unusable. However, the Connection
+experiments exposed out-of-schema and mediated cases that must not be forced
+into an in-schema edge.
+
+---
+
 # Consequences
 
 ## Positive
@@ -122,6 +152,8 @@ Experiment 002B should later evaluate how errors from Knowledge Object extractio
 - Some STEM relations may not fit the initial schema cleanly.
 - The development benchmark does not yet provide positive coverage of every proposed Relation type.
 - Direction rules will require careful annotation and adjudication.
+- Acceptance is limited to Technical Validation and does not establish a
+  complete or production-stable educational Relation ontology.
 
 ---
 
@@ -133,3 +165,5 @@ Experiment 002B should later evaluate how errors from Knowledge Object extractio
 - `benchmark/relation_evaluation_protocol.md`
 - `benchmark/ground_truth/relations_development_v0_1.json`
 - `experiments/relation_extraction/README.md`
+- `experiments/relation_extraction/holdout_comparison.md`
+- `docs/decisions/006-connection-discovery-validation-boundary.md`
