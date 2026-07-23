@@ -37,7 +37,7 @@ and recorded `prediction_content_changed = false`.
 | Fatal alignment errors | 0 | = 0 | Yes |
 
 Stage A found 37 of 41 positive pairs but also passed 40 of 78 selected primary
-negatives. It therefore reduced false negatives at the cost of severe
+negatives. It therefore retained high direct-edge recall at the cost of severe
 overconnection. Evidence adjudication resolved all 61 pending cases: 36 were
 `supported` and 25 were `not_supported`.
 
@@ -61,11 +61,12 @@ overconnection. Evidence adjudication resolved all 61 pending cases: 36 were
 | Cross-course Connection recall | 0.3214 | >= 0.65 | No |
 
 The final output contained 13 correct positive edges, 38 correct selected
-negatives, 40 false-positive Relations, four false negatives, 15 wrong Relation
-types, and nine wrong directions. All 77 pending typed-Evidence cases were
-resolved: 28 were `supported` and 49 were `not_supported`. Together with six
-exact-gold automatic matches, this gives 34 supported Evidence cases among 83
-positive predictions.
+negatives, 40 edges on gold-negative pairs, 24 wrong typed or directed edges on
+gold-positive pairs, and four gold-positive pairs predicted as `NO_RELATION`.
+The 24 wrong positive edges comprise 15 wrong Relation types and nine wrong
+directions. All 77 pending typed-Evidence cases were resolved: 28 were
+`supported` and 49 were `not_supported`. Together with six exact-gold automatic
+matches, this gives 34 supported Evidence cases among 83 positive predictions.
 
 Per-relation recall remained uneven: `FORMALIZES` reached 0.75 and `APPLIED_IN`
 0.3846, while `REQUIRES`, `EXTENDS`, and `CONTRASTS_WITH` each had zero strict

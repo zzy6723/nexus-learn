@@ -83,8 +83,12 @@ It does not yet cover:
 - ranking Connection Hypotheses;
 - long-document relation discovery;
 - relation extraction from noisy parsed PDFs;
-- evidence quality beyond source-span grounding and brief rationale;
-- end-to-end propagation from predicted Knowledge Objects.
+- a complete production Evidence semantics model. Later experiments may impose
+  exact materialization and semantic-support adjudication without changing the
+  Relation labels;
+- production validation of end-to-end propagation from predicted Knowledge
+  Objects. Experiment 002B measured this propagation but did not establish
+  production readiness.
 
 ---
 

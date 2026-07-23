@@ -1,6 +1,6 @@
 {
   "artifact_type": "endpoint_linked_connection_development_validation_complete",
-  "version": "v0.1",
+  "artifact_schema_version": "v0.2",
   "status": "completed_failed_frozen_development_gates",
   "method_id": "endpoint_linked_window_verifier_v0.1.1",
   "method_commit": "02a618358301d1e4f87488198e71c8d9dc232fbc",
@@ -35,6 +35,22 @@
       "supported": 23,
       "not_supported": 42
     },
+    "semantic_evidence_support": {
+      "automatic_supported": 6,
+      "manual_supported": 23,
+      "manual_not_supported": 42,
+      "pending": 0,
+      "supported_total": 29,
+      "denominator": 71,
+      "rate": 0.4084507042253521
+    },
+    "primary_error_decomposition": {
+      "strict_correct_gold_positive_edge": 15,
+      "wrong_typed_or_directed_edge_on_gold_positive": 17,
+      "gold_positive_predicted_no_relation": 9,
+      "edge_predicted_on_gold_negative": 36,
+      "correct_no_relation_on_gold_negative": 42
+    },
     "evaluation_status": "final",
     "conditional_gate_outcome": "failed",
     "full_universe_gate_outcome": "failed"
@@ -52,8 +68,15 @@
   },
   "comparison": {
     "path": "experiments/connection_discovery/003_2c_endpoint_linked_verifier/development_comparison.json",
-    "sha256": "599bee962beaa005ff478a17f7fde43456a7b48baf56739c5f75d34a7e2a01f5",
+    "sha256": "c1588024b7ab8358ef9f47ef145d6cc6e9ea4e174b78fb97a5ca76b1befb7e82",
     "material_improvement_observed": false
+  },
+  "aggregation_analysis": {
+    "path": "experiments/connection_discovery/003_2c_endpoint_linked_verifier/aggregation_analysis.json",
+    "sha256": "f6dbddfe330ec27169c5698af206d9f850397432ccb1b2a69b30dbf798995308",
+    "conflict_count": 17,
+    "conflict_rate_all_pairs": 0.136,
+    "conflict_rate_pairs_with_direct_window": 0.19318181818181818
   },
   "decision": "Do not select endpoint-linked window verification as a validated Connection Discovery default.",
   "next_gate": "Do not continue tuning on development_v0_1. Any future cycle must introduce a materially different learning signal and reserve fresh data for independent validation."

@@ -72,8 +72,8 @@ Technical Validation currently has the following experiment status:
 | 002B-1 | Controlled predicted-KO pipeline coupling | Completed |
 | 002B-2 | Candidate Pair Generation under predicted KOs | Completed with partial feasibility |
 | 002C | Knowledge Object Resolution / Canonicalization | Completed with limited independent validation |
-| 003 | Learner-relevant Connection Discovery | Completed with negative Technical Validation results |
-| 004 | Learner-facing Connection Explanation | Not started |
+| 003 | Learner-relevant Connection Discovery | Closed with negative development Technical Validation results |
+| 004 | Learner-facing Connection Explanation | Blocked as downstream product validation |
 
 Experiment 002B is complete. The current lecture-local safety path uses
 All-Pairs candidate generation because the deterministic Rule-Filtered v0.1
@@ -86,16 +86,20 @@ production canonicalizer.
 
 Experiment 003 v0.1 completed candidate-generation and Oracle-canonical
 Connection classification validation. Candidate generation retained all 41
-primary positive pairs, but both the one-stage and two-stage classifiers failed
-the frozen quality gates. No validated Connection Discovery default is selected,
-and downstream ranking or explanation is not authorized as product validation.
+overlap-bridge primary positive pairs, but both the one-stage and two-stage
+classifiers failed the frozen quality gates. The five disjoint-provenance
+compositional positives were diagnostic-only. No validated Connection
+Discovery default is selected, and downstream ranking or explanation is not
+authorized as product validation.
 
 Experiment 003 v0.2 then evaluated minimal endpoint-linked Evidence windows and
 an explicit direct-versus-mediated support contract. The method produced modest
 development gains but still failed five of eight frozen criteria: positive
 precision was `0.2206`, typed-edge recall was `0.3659`, and semantic Evidence
 support was `0.4085`. Experiment 003 is therefore closed without a validated
-Connection classifier. Experiment 004 remains blocked as product validation.
+Connection classifier. This is a scoped negative development result, not a
+claim that Connection Discovery is generally impossible. Experiment 004
+remains blocked as product validation.
 
 The user interface is intentionally postponed until the core AI pipeline has been validated.
 

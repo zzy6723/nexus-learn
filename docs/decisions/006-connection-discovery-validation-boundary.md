@@ -1,8 +1,9 @@
 # ADR-006: Connection Discovery Validation Boundary
 
 **Status:** Accepted
-**Version:** v0.1
+**Version:** v0.2
 **Date:** 2026-07-24
+**Last Updated:** 2026-07-24
 **Owner:** Project
 
 ## Context
@@ -49,8 +50,14 @@ support an independent generalization claim for a future method.
 ### Candidate generation
 
 The selected candidate generator retained all 41 primary positive pairs while
-reducing the eligible universe from 387 to 125 pairs. Candidate coverage was
-therefore not the dominant failure in the current benchmark.
+reducing the eligible universe from 387 to 125 pairs. All 41 primary positives
+are `overlap_bridge` cases. Candidate coverage was therefore not the dominant
+failure within the overlap-bridge primary scope of the current benchmark.
+
+The benchmark contains no disjoint-provenance primary positives. Five
+disjoint-provenance compositional positives are diagnostic-only, and the
+selected candidate generator recovered none of them. The `41/41` result
+therefore does not establish general disjoint-provenance discovery.
 
 ### One-stage classification
 
@@ -89,6 +96,11 @@ diagnostics but still produced:
 It failed five of eight predeclared development criteria. Exact Evidence
 materialization and `RELATED_TO` control passed, but exact transport did not
 imply semantic support.
+
+The endpoint-linked contract itself requires a same-lecture window containing
+both endpoints. It therefore cannot directly verify a truly
+disjoint-provenance pair with no shared lecture Evidence. This is a declared
+method scope limitation, not a candidate-generation success.
 
 ## Interpretation
 
@@ -138,14 +150,17 @@ Positive consequences:
 - the project does not hide a failed central capability behind a polished UI;
 - accepted benchmark, Evidence, runner, and adjudication infrastructure remain
   reusable;
-- the failure is localized to semantic edge discrimination rather than basic
-  candidate coverage or Evidence transport;
+- within the frozen overlap-bridge primary evaluation, the dominant observed
+  failure is localized to semantic edge discrimination rather than candidate
+  coverage or Evidence transport;
 - future work has a clear independent-validation boundary.
 
 Costs and limitations:
 
 - the current MVP cannot yet deliver its central learner-facing promise;
-- Experiment 004 product validation remains blocked;
+- Experiment 004 remains blocked as downstream product validation. Separate
+  Oracle-conditioned explanation research is scientifically possible but
+  cannot validate the discovery pipeline;
 - a materially different modeling approach and fresh annotation work are
   required;
 - no claim is made about long documents, parsed PDFs, noisy predicted

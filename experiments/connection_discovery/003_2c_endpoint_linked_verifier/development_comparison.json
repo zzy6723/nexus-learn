@@ -1,34 +1,69 @@
 {
   "artifact_type": "endpoint_linked_connection_development_comparison",
-  "version": "v0.1",
+  "artifact_schema_version": "v0.2",
   "status": "final",
-  "scope": "oracle_canonical_development_v0_1",
+  "scope": "oracle_canonical_overlap_bridge_primary_development_v0_1",
+  "benchmark_counts": {
+    "selected_candidates": 125,
+    "primary_positive_pairs": 41,
+    "primary_negative_pairs": 78,
+    "diagnostic_pairs": 6,
+    "primary_positive_provenance": {
+      "overlap_bridge": 41,
+      "disjoint_provenance": 0
+    },
+    "diagnostic_disjoint_provenance_compositional_positives": 5
+  },
   "one_stage_prompt_002": {
-    "correct_positive_edges": 13,
-    "false_positive_relations": 40,
-    "false_negative_relations": 3,
+    "primary_error_decomposition": {
+      "strict_correct_gold_positive_edge": 13,
+      "wrong_typed_or_directed_edge_on_gold_positive": 25,
+      "gold_positive_predicted_no_relation": 3,
+      "edge_predicted_on_gold_negative": 40,
+      "correct_no_relation_on_gold_negative": 38
+    },
+    "semantic_evidence_support": {
+      "automatic_supported": 8,
+      "manual_supported": 29,
+      "manual_not_supported": 45,
+      "pending": 0,
+      "supported_total": 37,
+      "denominator": 82,
+      "rate": 0.45121951219512196
+    },
     "positive_typed_edge_recall": 0.3170731707317073,
     "positive_edge_precision": 0.16666666666666666,
     "no_relation_accuracy": 0.48717948717948717,
     "strict_edge_accuracy": 0.42857142857142855,
     "relation_type_accuracy_on_positives": 0.5853658536585366,
     "direction_accuracy_when_type_correct": 0.5416666666666666,
-    "semantic_evidence_support_rate": 0.45121951219512196,
     "related_to_prediction_rate": 0.025210084033613446,
     "primary_connection_f1": 0.21848739495798317,
     "cross_course_connection_recall": 0.2857142857142857
   },
   "two_stage_v0_1_2": {
-    "correct_positive_edges": 13,
-    "false_positive_relations": 40,
-    "false_negative_relations": 4,
+    "primary_error_decomposition": {
+      "strict_correct_gold_positive_edge": 13,
+      "wrong_typed_or_directed_edge_on_gold_positive": 24,
+      "gold_positive_predicted_no_relation": 4,
+      "edge_predicted_on_gold_negative": 40,
+      "correct_no_relation_on_gold_negative": 38
+    },
+    "semantic_evidence_support": {
+      "automatic_supported": 6,
+      "manual_supported": 28,
+      "manual_not_supported": 49,
+      "pending": 0,
+      "supported_total": 34,
+      "denominator": 83,
+      "rate": 0.40963855421686746
+    },
     "positive_typed_edge_recall": 0.3170731707317073,
     "positive_edge_precision": 0.16883116883116883,
     "no_relation_accuracy": 0.48717948717948717,
     "strict_edge_accuracy": 0.42857142857142855,
     "relation_type_accuracy_on_positives": 0.5365853658536586,
     "direction_accuracy_when_type_correct": 0.5909090909090909,
-    "semantic_evidence_support_rate": 0.40963855421686746,
     "related_to_prediction_rate": 0.08403361344537816,
     "primary_connection_f1": 0.22033898305084748,
     "cross_course_connection_recall": 0.32142857142857145
@@ -37,20 +72,66 @@
     "method_commit": "02a618358301d1e4f87488198e71c8d9dc232fbc",
     "metrics_path": "experiments/connection_discovery/003_2c_endpoint_linked_verifier/runs/development_v0_1/formal/run_02/evaluation/metrics.json",
     "metrics_sha256": "840c0383415d0ae0842c7d600ce54f236724bbfd057a6bbbc8798dbcfdea9060",
-    "correct_positive_edges": 15,
-    "false_positive_relations": 36,
-    "false_negative_relations": 9,
-    "aggregation_conflicts": 17,
+    "primary_error_decomposition": {
+      "strict_correct_gold_positive_edge": 15,
+      "wrong_typed_or_directed_edge_on_gold_positive": 17,
+      "gold_positive_predicted_no_relation": 9,
+      "edge_predicted_on_gold_negative": 36,
+      "correct_no_relation_on_gold_negative": 42
+    },
+    "semantic_evidence_support": {
+      "automatic_supported": 6,
+      "manual_supported": 23,
+      "manual_not_supported": 42,
+      "pending": 0,
+      "supported_total": 29,
+      "denominator": 71,
+      "rate": 0.4084507042253521
+    },
+    "aggregation": {
+      "unique_direct_edge": 71,
+      "no_direct_edge": 37,
+      "conflicting_direct_edges": 17,
+      "conflict_rate_all_pairs": 0.136,
+      "conflict_rate_window_covered_pairs": 0.15315315315315314,
+      "conflict_rate_pairs_with_direct_window": 0.19318181818181818
+    },
     "positive_typed_edge_recall": 0.36585365853658536,
     "positive_edge_precision": 0.22058823529411764,
     "no_relation_accuracy": 0.5384615384615384,
     "strict_edge_accuracy": 0.4789915966386555,
     "relation_type_accuracy_on_positives": 0.5121951219512195,
     "direction_accuracy_when_type_correct": 0.7142857142857143,
-    "semantic_evidence_support_rate": 0.4084507042253521,
     "related_to_prediction_rate": 0.0,
     "primary_connection_f1": 0.27522935779816515,
-    "cross_course_connection_recall": 0.35714285714285715
+    "cross_course_connection_recall": 0.35714285714285715,
+    "wilson_95_intervals": {
+      "primary_positive_window_coverage_41_of_41": [
+        0.9143,
+        1.0
+      ],
+      "positive_edge_precision_15_of_68": [
+        0.1385,
+        0.3326
+      ],
+      "positive_typed_edge_recall_15_of_41": [
+        0.2359,
+        0.5188
+      ],
+      "no_relation_accuracy_42_of_78": [
+        0.4286,
+        0.6447
+      ],
+      "semantic_evidence_support_29_of_71": [
+        0.3017,
+        0.5246
+      ]
+    }
+  },
+  "interpretation": {
+    "observed_change": "Endpoint linking reduced wrong typed or directed gold-positive edges and gold-negative overconnections, but increased gold-positive rejection.",
+    "aggregation_conflicts_are_distinct_from_wrong_final_edges": true,
+    "disjoint_provenance_primary_validation_established": false
   },
   "decision": {
     "endpoint_linked_method_selected": false,

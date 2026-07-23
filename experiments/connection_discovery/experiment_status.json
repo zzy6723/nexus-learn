@@ -1,0 +1,56 @@
+{
+  "artifact_type": "connection_discovery_experiment_status",
+  "artifact_schema_version": "v0.1",
+  "status": "closed_negative_development_validation",
+  "authoritative_as_of": "2026-07-24",
+  "validated_connection_method_selected": false,
+  "current_decision": {
+    "connection_discovery_operationally_viable_under_tested_methods": false,
+    "experiment_004_downstream_product_validation_authorized": false,
+    "further_tuning_on_development_v0_1_authorized": false,
+    "independent_validation_executed": false
+  },
+  "decision_scope": {
+    "tested_method_cycles": [
+      "v0.1",
+      "v0.2"
+    ],
+    "benchmark": "oracle_canonical_development_v0_1",
+    "primary_positive_scope": "overlap_bridge_only",
+    "primary_positive_count": 41,
+    "disjoint_provenance_primary_positive_count": 0,
+    "disjoint_provenance_compositional_diagnostic_count": 5,
+    "claim": "No tested v0.1 or v0.2 development method passed the frozen Connection Discovery gates."
+  },
+  "cycle_records": {
+    "v0.1": {
+      "status": "completed_negative_result",
+      "artifact": {
+        "path": "experiments/connection_discovery/experiment_validation_complete.json",
+        "sha256": "d6c5985c1db6179764a9c95dc40fa4e5372a92c0d589606c451d76aebff8ff61"
+      }
+    },
+    "v0.2": {
+      "status": "completed_negative_development_result",
+      "artifact": {
+        "path": "experiments/connection_discovery/experiment_v0_2_development_complete.json",
+        "sha256": "4dbaf1493b837398756e5f14f4855cce7f4aa5c90ed92055dcd9a86d94d346b2"
+      }
+    }
+  },
+  "authoritative_documents": {
+    "conclusion": {
+      "path": "experiments/connection_discovery/conclusion.md",
+      "sha256": "3d64a2fa9adc8a771cf0a847f46170250a456d17cf9aa7fac512374cbe1854ef"
+    },
+    "decision_record": {
+      "path": "docs/decisions/006-connection-discovery-validation-boundary.md",
+      "sha256": "7047f5b4227841e3e80f0f9b1e7cb7e4f4978043aa1cdbdced922dabbbbe7717"
+    },
+    "persistent_error_analysis": {
+      "path": "experiments/connection_discovery/persistent_error_analysis.md",
+      "sha256": "24715b887b78faae3eeaf142e30796847e4a26f09ecc6e5c9eb9bc687a9c8bbc"
+    }
+  },
+  "next_gate": "A v0.3 or later cycle must declare a materially different learning or decision signal, freeze it before evaluation, and reserve a fresh explicitly annotated source for independent validation."
+}

@@ -30,6 +30,11 @@ For each selected canonical pair:
 The model never receives Ground Truth category, gold Relation, gold Evidence,
 primary-scoring eligibility, or annotation rationale.
 
+Because each valid window belongs to one lecture and must cover both endpoints,
+this method cannot directly verify a truly disjoint-provenance pair for which
+no single lecture contains both endpoints. Such pairs are outside the primary
+v0.2 scope.
+
 ## Development and Validation Boundary
 
 The existing 125-pair benchmark may be used only as a development diagnostic
@@ -51,6 +56,7 @@ scope taxonomy.
 - final canonical Connection predictions and evaluation;
 - `development_results.md`;
 - `development_comparison.json`;
+- `aggregation_analysis.json`;
 - `conclusion.md`;
 - `development_validation_complete.json`.
 

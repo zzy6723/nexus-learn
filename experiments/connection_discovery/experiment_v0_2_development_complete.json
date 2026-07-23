@@ -1,6 +1,7 @@
 {
   "artifact_type": "connection_discovery_v0_2_development_complete",
-  "version": "v0.1",
+  "artifact_schema_version": "v0.2",
+  "experiment_cycle": "v0.2",
   "status": "completed_negative_development_result",
   "technical_validation_outcome": "failed_endpoint_linked_development_gates",
   "validated_connection_method_selected": false,
@@ -14,16 +15,42 @@
       "status": "completed_failed_frozen_development_gates",
       "artifact": {
         "path": "experiments/connection_discovery/003_2c_endpoint_linked_verifier/development_validation_complete.json",
-        "sha256": "028a5c77a2b4fc0ed585f6fb015f3b6a0c0cb1c96b194023dbf9e7fd6cacc6a1"
+        "sha256": "dddd9500cc6e35e5312cbd4642af6f3bb54c79863e05f553688335a087996887"
       }
     }
   },
+  "decision_scope": {
+    "benchmark": "oracle_canonical_development_v0_1",
+    "tested_method_cycles": [
+      "v0.1",
+      "v0.2"
+    ],
+    "primary_positive_scope": "overlap_bridge_only",
+    "primary_positive_count": 41,
+    "disjoint_provenance_primary_positive_count": 0,
+    "disjoint_provenance_compositional_diagnostic_count": 5,
+    "independent_validation_executed": false
+  },
   "final_decision": {
     "experiment_003_closed": true,
-    "connection_discovery_operationally_viable": false,
+    "connection_discovery_operationally_viable_under_tested_methods": false,
     "experiment_004_product_validation_authorized": false,
     "further_tuning_on_development_v0_1_authorized": false,
     "independent_validation_executed": false
+  },
+  "analysis_artifacts": {
+    "development_comparison": {
+      "path": "experiments/connection_discovery/003_2c_endpoint_linked_verifier/development_comparison.json",
+      "sha256": "c1588024b7ab8358ef9f47ef145d6cc6e9ea4e174b78fb97a5ca76b1befb7e82"
+    },
+    "aggregation_analysis": {
+      "path": "experiments/connection_discovery/003_2c_endpoint_linked_verifier/aggregation_analysis.json",
+      "sha256": "f6dbddfe330ec27169c5698af206d9f850397432ccb1b2a69b30dbf798995308"
+    },
+    "persistent_error_analysis": {
+      "path": "experiments/connection_discovery/persistent_error_analysis.md",
+      "sha256": "24715b887b78faae3eeaf142e30796847e4a26f09ecc6e5c9eb9bc687a9c8bbc"
+    }
   },
   "accepted_assets": [
     "endpoint_linked_evidence_window_generator",

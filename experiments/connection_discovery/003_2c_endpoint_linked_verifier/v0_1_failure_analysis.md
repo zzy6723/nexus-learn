@@ -18,8 +18,10 @@ Stage A predicted 83 direct Connections:
 The final typed output contained:
 
 - 13 correct positive edges;
-- 40 false-positive Relations;
-- four false negatives;
+- 24 wrong typed or directed edges on gold-positive pairs;
+- four gold-positive pairs predicted as `NO_RELATION`;
+- 40 edges on gold-negative pairs;
+- 38 correctly rejected gold negatives;
 - 15 wrong Relation types;
 - nine wrong directions;
 - 49 semantically unsupported Evidence sets.

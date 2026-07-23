@@ -1,6 +1,13 @@
 # Endpoint-Linked Verifier Method Contract v0.1
 
-**Status:** Draft for implementation freeze
+**Status:** Frozen development method; evaluated and not selected
+**Contract family:** v0.1
+**Execution revision evaluated:** v0.1.1
+
+Execution revision v0.1.1 added one bounded validator-guided repair after a
+deterministic schema-validation failure. It did not change endpoint linking,
+window construction, verification labels, aggregation semantics, or Ground
+Truth.
 
 ## Inputs
 
@@ -39,6 +46,14 @@ A valid Evidence window:
 Window identity is a stable hash of pair ID, lecture ID, and ordered Evidence
 IDs. Pairs without a valid window are deterministically eligible only for
 `NO_RELATION` under this method.
+
+## Scope Limitation
+
+Because a valid window must belong to one lecture and cover both endpoints,
+this method cannot directly verify a truly disjoint-provenance Connection for
+which no single lecture contains Evidence for both endpoints. Such cases remain
+outside the primary v0.2 evaluation scope. The method must not be described as
+general disjoint-provenance cross-document discovery.
 
 ## Window Verification Labels
 

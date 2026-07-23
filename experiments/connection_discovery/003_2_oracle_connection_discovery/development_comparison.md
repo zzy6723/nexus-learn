@@ -77,7 +77,7 @@ The 32 fixes comprise 29 negative-pair corrections and three positive-edge
 corrections. The five regressions comprise three positive pairs changed to
 `NO_RELATION`, one positive direction reversal, and one new false-positive edge.
 
-Prompt 002's three false negatives are:
+Prompt 002's three gold-positive pairs predicted as `NO_RELATION` are:
 
 - Step Size `APPLIED_IN` Forward Euler Method;
 - Gradient `APPLIED_IN` Ordinary Least Squares;

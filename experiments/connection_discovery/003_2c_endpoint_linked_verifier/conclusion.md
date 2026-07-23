@@ -14,16 +14,30 @@ from 40 to 36.
 
 Those gains are not operationally sufficient. Five of eight predeclared 003-2c
 criteria failed. The verifier produced 17 conflicting direct-edge decisions,
-nine false negatives, and 42 semantically unsupported Evidence sets. Semantic
-Evidence support remained `0.4085`, effectively unchanged from the two-stage
-method and below the `0.90` threshold.
+nine gold-positive pairs predicted as `NO_RELATION`, and 42 semantically
+unsupported Evidence sets. Semantic Evidence support remained `29/71`
+(`0.4085`), comprising six automatic exact-gold matches and 23 manually
+supported cases. It was effectively unchanged from the two-stage method and
+below the `0.90` threshold.
+
+The final primary error decomposition is 15 strict-correct gold-positive edges,
+17 wrong typed or directed edges on gold-positive pairs, nine gold-positive
+rejections, 36 edges on gold-negative pairs, and 42 correctly rejected gold
+negatives. The 17 wrong final edges are distinct from the 17 window-aggregation
+conflicts.
 
 The result narrows the research problem: deterministic endpoint-linked windows
 improve input scope and Evidence materialization, but an unsupervised LLM
 verifier still does not reliably distinguish direct typed graph edges from
 mediated, contextual, or abstraction-shifted connections. The remaining
 failure is semantic classification rather than candidate coverage or Evidence
-transport.
+transport within the frozen overlap-bridge primary scope.
+
+All 41 primary positives are `overlap_bridge` cases. Five
+disjoint-provenance compositional positives are diagnostic-only. In addition,
+the same-lecture endpoint-window contract cannot directly verify a truly
+disjoint-provenance pair with no shared lecture Evidence. The result therefore
+does not establish general cross-document candidate coverage.
 
 No further prompt or pair-specific architecture tuning on this development
 benchmark is authorized. The current 125 pairs have informed three classifier
@@ -34,5 +48,5 @@ classification, and reserve a fresh source for independent validation.
 
 Predicted-canonical discovery, learner-facing ranking, and Experiment 004
 product validation remain blocked. Experiment 003 may be closed as a complete
-negative Technical Validation programme with useful infrastructure and a
-localized unresolved semantic boundary.
+negative development Technical Validation programme with useful infrastructure
+and a localized unresolved semantic boundary.

@@ -69,10 +69,14 @@ both this manifest and the later candidate-method commit.
 - 003-2c method: `003_2c_endpoint_linked_verifier/README.md`
 - 003-2c results: `003_2c_endpoint_linked_verifier/development_results.md`
 - 003-2c comparison: `003_2c_endpoint_linked_verifier/development_comparison.json`
+- 003-2c aggregation audit:
+  `003_2c_endpoint_linked_verifier/aggregation_analysis.json`
 - 003-2c conclusion: `003_2c_endpoint_linked_verifier/conclusion.md`
+- Cross-method persistent errors: `persistent_error_analysis.md`
 - Experiment conclusion: `conclusion.md`
 - v0.1 machine-readable closure: `experiment_validation_complete.json`
 - v0.2 development closure: `experiment_v0_2_development_complete.json`
+- Authoritative current status: `experiment_status.json`
 - Draft protocol: `../../benchmark/connection_discovery_protocol.md`
 - Draft annotation rules:
   `../../benchmark/connection_discovery_annotation_guidelines.md`
@@ -85,9 +89,9 @@ and full-universe gates. No validated Connection classifier is selected.
 
 Stages 003-3 through 003-5 were intentionally not executed because their
 preconditions were not met. Experiment 003 v0.1 is closed as a valid negative
-result. Any future v0.2 must declare a materially revised method and use fresh
-evaluation data rather than continue pair-specific prompt tuning on the current
-development benchmark.
+result. At that point, a future v0.2 was required to declare a materially
+revised method rather than continue pair-specific prompt tuning on the current
+development benchmark; 003-2c subsequently executed that development cycle.
 
 ## Final v0.2 Development Decision
 
@@ -100,6 +104,8 @@ aggregation.
 
 No endpoint-linked verifier is selected. The old benchmark is now exhausted as
 development data for these methods; it cannot support an independent claim.
-Experiment 003 is closed as a negative Technical Validation programme. Stages
+Experiment 003 is closed as a negative development Technical Validation
+programme. All 41 primary positives are overlap-bridge cases; the five
+disjoint-provenance compositional positives remain diagnostic-only. Stages
 003-3 through 003-5 remain unexecuted, and Experiment 004 product validation is
 not authorized.

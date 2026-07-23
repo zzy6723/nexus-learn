@@ -42,8 +42,8 @@ Connection Discovery is the central AI capability of the project.
 | 002B-1 | Measure predicted-KO error propagation on supplied gold pair candidates | Completed |
 | 002B-2 | Generate Relation candidate pairs from predicted KOs | Completed with partial feasibility |
 | 002C | Resolve lecture-local KO mentions into canonical objects | Completed with limited independent validation |
-| 003 | Discover and rank learner-relevant Connections | Completed with negative Technical Validation results |
-| 004 | Generate learner-facing evidence-supported explanations | Not started |
+| 003 | Discover and rank learner-relevant Connections | Closed with negative development Technical Validation results |
+| 004 | Generate learner-facing evidence-supported explanations | Blocked as downstream product validation |
 
 Experiment 002B is complete. Predicted-KO Relation coupling was feasible on
 recoverable pairs, but missing KOs remained an upstream bottleneck and the
@@ -59,15 +59,18 @@ Technical Validation after limited independent validation. It is not a
 production canonicalizer.
 
 Experiment 003 v0.1 retained all 41 primary positive pairs with its selected
-candidate generator, but both tested Oracle-canonical Connection classifiers
-failed the frozen quality gates. Predicted-canonical propagation, ranking,
-independent validation, and learner-facing explanation were not executed because
-their preconditions were not met. A future v0.2 requires a materially revised
-method and fresh evaluation data.
+candidate generator within the overlap-bridge primary scope, but both tested
+Oracle-canonical Connection classifiers failed the frozen quality gates. The
+five disjoint-provenance compositional positives were diagnostic-only.
+Predicted-canonical propagation, ranking, independent validation, and
+learner-facing explanation were not executed because their preconditions were
+not met. The subsequent v0.2 cycle therefore used a materially revised method.
 
 Experiment 003 v0.2 evaluated endpoint-linked Evidence windows and an explicit
 direct-versus-mediated support contract. It improved some development
 diagnostics but failed five of eight frozen criteria, including precision,
 recall, negative accuracy, conflict control, and semantic Evidence support.
 No Connection classifier is selected, and the existing 125-pair benchmark is
-now development-only for all three tested architectures.
+now development-only for all three tested architectures. This is a scoped
+negative development result, not evidence that Connection Discovery is
+generally impossible.

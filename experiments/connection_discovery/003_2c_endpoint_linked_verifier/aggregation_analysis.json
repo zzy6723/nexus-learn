@@ -1,0 +1,115 @@
+{
+  "artifact_type": "endpoint_linked_aggregation_analysis",
+  "artifact_schema_version": "v0.1",
+  "status": "final",
+  "scope": "oracle_canonical_overlap_bridge_primary_development_v0_1",
+  "source_artifacts": {
+    "aggregation_diagnostics": {
+      "path": "experiments/connection_discovery/003_2c_endpoint_linked_verifier/runs/development_v0_1/formal/run_02/output/aggregation_diagnostics.json",
+      "sha256": "308336f7cbc48066840214e08b748be29c9fd091624cd73d62053a4e6e42a10f"
+    },
+    "evaluation_matches": {
+      "path": "experiments/connection_discovery/003_2c_endpoint_linked_verifier/runs/development_v0_1/formal/run_02/evaluation/matches.json",
+      "sha256": "9b97d09fd32e8b7ee6b74719b60c06e9d3a637bb1a9c99c41edc7e0485feb7b2"
+    },
+    "evaluation_metrics": {
+      "path": "experiments/connection_discovery/003_2c_endpoint_linked_verifier/runs/development_v0_1/formal/run_02/evaluation/metrics.json",
+      "sha256": "840c0383415d0ae0842c7d600ce54f236724bbfd057a6bbbc8798dbcfdea9060"
+    },
+    "ground_truth": {
+      "path": "benchmark/connection_discovery/development_v0_1/ground_truth.json",
+      "sha256": "1bbbd801b505dc2a1d410f50b605a600b9e2ae135471b5484dea63c76aebcba4"
+    }
+  },
+  "counts": {
+    "selected_pairs": 125,
+    "generated_windows": 173,
+    "window_covered_pairs": 111,
+    "zero_window_pairs": 14,
+    "pairs_with_at_least_one_direct_window": 88,
+    "unique_direct_edge": 71,
+    "no_direct_edge": 37,
+    "conflicting_direct_edges": 17
+  },
+  "zero_window_cross_tab": {
+    "primary_positive": 0,
+    "primary_negative": 13,
+    "diagnostic_out_of_schema": 1
+  },
+  "conflict_cross_tab": {
+    "primary_positive": 7,
+    "primary_negative": 8,
+    "diagnostic_out_of_schema": 2
+  },
+  "conflict_pattern_counts": {
+    "relation_type_only": 10,
+    "direction_only": 4,
+    "relation_type_and_direction": 3
+  },
+  "rates": {
+    "zero_window_rate_all_pairs": {
+      "numerator": 14,
+      "denominator": 125,
+      "value": 0.112
+    },
+    "aggregation_conflict_rate_all_pairs": {
+      "numerator": 17,
+      "denominator": 125,
+      "value": 0.136,
+      "wilson_95_interval": [
+        0.0867,
+        0.207
+      ]
+    },
+    "aggregation_conflict_rate_window_covered": {
+      "numerator": 17,
+      "denominator": 111,
+      "value": 0.15315315315315314,
+      "wilson_95_interval": [
+        0.0979,
+        0.2316
+      ]
+    },
+    "aggregation_conflict_rate_pairs_with_direct_window": {
+      "numerator": 17,
+      "denominator": 88,
+      "value": 0.19318181818181818,
+      "wilson_95_interval": [
+        0.1243,
+        0.2878
+      ]
+    }
+  },
+  "conflict_pair_ids": {
+    "primary_positive": [
+      "conn_dev_pair_334f084a05ae5d26",
+      "conn_dev_pair_b23eff47b6d29fb5",
+      "conn_dev_pair_d6043a4c35e6c8b9",
+      "conn_dev_pair_d64d8e658f6dafd8",
+      "conn_dev_pair_e339035d075320bb",
+      "conn_dev_pair_fb58022473834283",
+      "conn_dev_pair_ff190ee933b57b25"
+    ],
+    "primary_negative": [
+      "conn_dev_pair_004a5d37e586342f",
+      "conn_dev_pair_07f23c7717c1b2fc",
+      "conn_dev_pair_2e86bae906db9729",
+      "conn_dev_pair_5377d9a990974fd5",
+      "conn_dev_pair_58cb2129cbbe96fd",
+      "conn_dev_pair_b0c235b2d349eff7",
+      "conn_dev_pair_d88a461c47b9d32c",
+      "conn_dev_pair_edd5dd0dffb7131e"
+    ],
+    "diagnostic_out_of_schema": [
+      "conn_dev_pair_88939b4d17cdfb3e",
+      "conn_dev_pair_8c981e7dd58feb47"
+    ]
+  },
+  "interpretation": {
+    "policy": "Conflicting direct edges fail closed to NO_RELATION.",
+    "primary_positive_effect": "Seven gold-positive pairs were rejected because their windows disagreed.",
+    "primary_negative_effect": "Eight gold-negative pairs were protected from overconnection because their windows disagreed.",
+    "diagnostic_effect": "Two out-of-schema diagnostic pairs were excluded from primary scoring.",
+    "conclusion": "The conflicts diagnose window-level semantic instability. Without window-level Ground Truth, majority voting or confidence-based aggregation would not be justified."
+  }
+}
