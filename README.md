@@ -73,7 +73,7 @@ Technical Validation currently has the following experiment status:
 | 002B-2 | Candidate Pair Generation under predicted KOs | Completed with partial feasibility |
 | 002C | Knowledge Object Resolution / Canonicalization | Completed with limited independent validation |
 | 003 | Learner-relevant Connection Discovery | Closed with negative development Technical Validation results |
-| 004 | Learner-facing Connection Explanation | Blocked as downstream product validation |
+| 004 | Oracle-conditioned Learning Explanation | 004-0 preparation; downstream product validation remains blocked |
 
 Experiment 002B is complete. The current lecture-local safety path uses
 All-Pairs candidate generation because the deterministic Rule-Filtered v0.1
@@ -100,6 +100,12 @@ support was `0.4085`. Experiment 003 is therefore closed without a validated
 Connection classifier. This is a scoped negative development result, not a
 claim that Connection Discovery is generally impossible. Experiment 004
 remains blocked as product validation.
+
+Experiment 004 has begun only as Oracle-conditioned component validation. Its
+development input fixes human-validated endpoints, Relation direction, and
+Evidence before asking whether a model can produce a faithful and educationally
+useful explanation. This work does not unblock the failed Connection Discovery
+pipeline.
 
 The user interface is intentionally postponed until the core AI pipeline has been validated.
 

@@ -1,0 +1,58 @@
+{
+  "artifact_type": "learning_explanation_004_0_preflight",
+  "artifact_schema_version": "v0.1",
+  "status": "structural_preflight_passed_pending_review_and_freeze",
+  "scope": "oracle_conditioned_development_v0_1",
+  "bindings": {
+    "decision": {
+      "path": "docs/decisions/007-oracle-conditioned-learning-explanation.md",
+      "sha256": "1b853983c39c525b163061adeac6aa0cf96c4b12c28720f595f92f4e08e05f22"
+    },
+    "contract": {
+      "path": "benchmark/learning_explanation_contract.md",
+      "sha256": "7dbab50347f90517a54ac3579d419f335378cf8791517f01237e51244d67d856"
+    },
+    "annotation_guidelines": {
+      "path": "benchmark/learning_explanation_annotation_guidelines.md",
+      "sha256": "afe2deaa2bc6a3ecdf09547f3d7b257da998a9884b1ee0584d105863ab7c2523"
+    },
+    "evaluation_protocol": {
+      "path": "benchmark/learning_explanation_evaluation_protocol.md",
+      "sha256": "56b5c1994ba37a2b7e6f3718e4113a9cb5c23eedca2cd8fc5ff979980d0c51ed"
+    },
+    "success_criteria": {
+      "path": "benchmark/learning_explanation_success_criteria_v0_1.json",
+      "sha256": "7f2b0d3ee273a0350f2616e313191e68f43444b4af0e3dec2dfe49ad0be030d7"
+    },
+    "output_schema": {
+      "path": "benchmark/schema/learning_explanation_output.schema.json",
+      "sha256": "4fe003042a57060608167b7976133c9406a460ae99273458458644a8685a92e5"
+    },
+    "benchmark_completion": {
+      "path": "benchmark/learning_explanation/development_v0_1/benchmark_complete.json",
+      "sha256": "44c6b0a4e67c231849cc1747d5cc67f5aa4b90f53c68f3480cf9638760200051"
+    }
+  },
+  "counts": {
+    "instances": 17,
+    "evidence_items": 30,
+    "relation_support": {
+      "APPLIED_IN": 6,
+      "REQUIRES": 4,
+      "FORMALIZES": 4,
+      "EXTENDS": 2,
+      "CONTRASTS_WITH": 1
+    }
+  },
+  "checks": {
+    "uses_only_human_validated_connections": true,
+    "uses_connection_model_predictions": false,
+    "uses_human_validated_evidence": true,
+    "related_to_excluded_without_positive_support": true,
+    "claim_protocol_defined": true,
+    "faithfulness_precedes_learning_value": true,
+    "independent_validation_source_reserved": false,
+    "model_execution_authorized": false
+  },
+  "next_gate": "Human review and repository freeze are required before implementing formal explanation model execution."
+}

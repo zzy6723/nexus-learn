@@ -141,7 +141,10 @@ Connection Discovery is the central AI capability of this project.
 
 ## Learning Explanation
 
-The generation of human-readable explanations describing why a proposed Connection exists and why it matters for learning.
+The generation of human-readable explanations describing why a validated
+Connection exists and why it matters for learning. An Oracle-conditioned
+Learning Explanation receives a human-validated Connection and Evidence; it
+does not validate Connection Discovery or predicted-Connection propagation.
 
 ---
 

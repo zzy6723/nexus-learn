@@ -43,7 +43,7 @@ Connection Discovery is the central AI capability of the project.
 | 002B-2 | Generate Relation candidate pairs from predicted KOs | Completed with partial feasibility |
 | 002C | Resolve lecture-local KO mentions into canonical objects | Completed with limited independent validation |
 | 003 | Discover and rank learner-relevant Connections | Closed with negative development Technical Validation results |
-| 004 | Generate learner-facing evidence-supported explanations | Blocked as downstream product validation |
+| 004 | Oracle-conditioned evidence-supported explanations | 004-0 preparation; downstream product validation remains blocked |
 
 Experiment 002B is complete. Predicted-KO Relation coupling was feasible on
 recoverable pairs, but missing KOs remained an upstream bottleneck and the
@@ -74,3 +74,8 @@ No Connection classifier is selected, and the existing 125-pair benchmark is
 now development-only for all three tested architectures. This is a scoped
 negative development result, not evidence that Connection Discovery is
 generally impossible.
+
+Experiment 004 has entered benchmark and evaluation preparation only as an
+Oracle-conditioned component experiment. It fixes human-validated Connections
+and Evidence and does not evaluate predicted-Connection explanations or the
+end-to-end product pipeline.

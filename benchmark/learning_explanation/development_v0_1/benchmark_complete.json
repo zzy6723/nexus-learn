@@ -1,0 +1,29 @@
+{
+  "artifact_type": "learning_explanation_benchmark_complete",
+  "artifact_schema_version": "v0.1",
+  "status": "prepared_for_review_not_frozen",
+  "split": "development",
+  "artifacts": {
+    "source_manifest": {
+      "path": "benchmark/learning_explanation/development_v0_1/source_manifest.json",
+      "sha256": "54020abf099c620098f6c2389f16e92ea0428d3b5e2c32d4c523950c72e04832"
+    },
+    "connection_instances": {
+      "path": "benchmark/learning_explanation/development_v0_1/connection_instances.json",
+      "sha256": "757d5efcbc2abadde63afd4239e5317a053cd60446cd78cc3f83413dde778d52"
+    }
+  },
+  "counts": {
+    "instances": 17,
+    "relation_support": {
+      "APPLIED_IN": 6,
+      "REQUIRES": 4,
+      "FORMALIZES": 4,
+      "EXTENDS": 2,
+      "CONTRASTS_WITH": 1
+    },
+    "evidence_items": 30
+  },
+  "model_execution_authorized": false,
+  "next_gate": "Human review, protocol review, repository freeze, and clean-state preflight are required before any explanation model run."
+}

@@ -1,0 +1,675 @@
+{
+  "artifact_type": "oracle_conditioned_learning_explanation_instances",
+  "artifact_schema_version": "v0.1",
+  "status": "prepared_not_frozen",
+  "split": "development",
+  "counts": {
+    "instances": 17,
+    "relation_support": {
+      "APPLIED_IN": 6,
+      "REQUIRES": 4,
+      "FORMALIZES": 4,
+      "EXTENDS": 2,
+      "CONTRASTS_WITH": 1
+    },
+    "evidence_items": 30
+  },
+  "instances": [
+    {
+      "explanation_instance_id": "le_dev_001",
+      "source_connection_pair_id": "conn_dev_pair_f089c625fb64bde0",
+      "source_ko": {
+        "canonical_ko_id": "conn_dev_ko_001",
+        "canonical_name": "Gradient",
+        "canonical_type": "Concept"
+      },
+      "relation_type": "APPLIED_IN",
+      "symmetric": false,
+      "target_ko": {
+        "canonical_ko_id": "conn_dev_ko_003",
+        "canonical_name": "First-Order Taylor Approximation",
+        "canonical_type": "Method"
+      },
+      "evidence": [
+        {
+          "evidence_id": "evidence_005",
+          "lecture_id": "multivariable_derivatives_001",
+          "block_index": 5,
+          "span": "The first-order Taylor approximation uses the function value and gradient at \\(x\\) to approximate the value after a small displacement \\(\\Delta x\\). It is formalized by the first-order Taylor formula"
+        }
+      ],
+      "evidence_support_scope": "single_lecture_explicit",
+      "source_annotation_rationale": "The first-order Taylor approximation explicitly uses the gradient as its local linear term.",
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "data_role": "development_only"
+    },
+    {
+      "explanation_instance_id": "le_dev_002",
+      "source_connection_pair_id": "conn_dev_pair_ff190ee933b57b25",
+      "source_ko": {
+        "canonical_ko_id": "conn_dev_ko_001",
+        "canonical_name": "Gradient",
+        "canonical_type": "Concept"
+      },
+      "relation_type": "APPLIED_IN",
+      "symmetric": false,
+      "target_ko": {
+        "canonical_ko_id": "conn_dev_ko_006",
+        "canonical_name": "Gradient Descent",
+        "canonical_type": "Method"
+      },
+      "evidence": [
+        {
+          "evidence_id": "evidence_009",
+          "lecture_id": "unconstrained_optimisation_001",
+          "block_index": 2,
+          "span": "Gradient descent requires the gradient of the objective function. With step size \\(\\alpha_k>0\\), the method moves opposite to the gradient. The gradient descent update is"
+        },
+        {
+          "evidence_id": "evidence_010",
+          "lecture_id": "unconstrained_optimisation_001",
+          "block_index": 3,
+          "span": "\\[\nx_{k+1}=x_k-\\alpha_k\\nabla f(x_k).\n\\]"
+        }
+      ],
+      "evidence_support_scope": "single_lecture_explicit",
+      "source_annotation_rationale": "Gradient Descent explicitly uses the gradient to define its descent direction.",
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "data_role": "development_only"
+    },
+    {
+      "explanation_instance_id": "le_dev_003",
+      "source_connection_pair_id": "conn_dev_pair_1a40513a66e7f15d",
+      "source_ko": {
+        "canonical_ko_id": "conn_dev_ko_010",
+        "canonical_name": "Step Size",
+        "canonical_type": "Concept"
+      },
+      "relation_type": "APPLIED_IN",
+      "symmetric": false,
+      "target_ko": {
+        "canonical_ko_id": "conn_dev_ko_027",
+        "canonical_name": "Forward Euler Method",
+        "canonical_type": "Method"
+      },
+      "evidence": [
+        {
+          "evidence_id": "evidence_009",
+          "lecture_id": "explicit_ode_methods_001",
+          "block_index": 2,
+          "span": "Applying the first-order Taylor approximation over a step of length \\(h\\) gives the Forward Euler method. Its Forward Euler update is"
+        },
+        {
+          "evidence_id": "evidence_011",
+          "lecture_id": "explicit_ode_methods_001",
+          "block_index": 4,
+          "span": "The step size \\(h\\) sets the spacing between consecutive numerical time points. The Forward Euler update formalizes how the Forward Euler method advances one step from the current approximation."
+        }
+      ],
+      "evidence_support_scope": "single_lecture_explicit",
+      "source_annotation_rationale": "The Step Size sets the interval used by each Forward Euler step.",
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "data_role": "development_only"
+    },
+    {
+      "explanation_instance_id": "le_dev_004",
+      "source_connection_pair_id": "conn_dev_pair_9c6621685b9ef5e5",
+      "source_ko": {
+        "canonical_ko_id": "conn_dev_ko_012",
+        "canonical_name": "Log-Likelihood",
+        "canonical_type": "Concept"
+      },
+      "relation_type": "APPLIED_IN",
+      "symmetric": false,
+      "target_ko": {
+        "canonical_ko_id": "conn_dev_ko_013",
+        "canonical_name": "Maximum Likelihood Estimation",
+        "canonical_type": "Method"
+      },
+      "evidence": [
+        {
+          "evidence_id": "evidence_002",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 2,
+          "span": "Maximum likelihood estimation treats the log-likelihood as an objective function and selects a parameter value that maximizes it. The score function is the gradient of the log-likelihood with respect to the parameter,"
+        }
+      ],
+      "evidence_support_scope": "single_lecture_explicit",
+      "source_annotation_rationale": "Maximum Likelihood Estimation explicitly uses the Log-Likelihood as its objective.",
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "data_role": "development_only"
+    },
+    {
+      "explanation_instance_id": "le_dev_005",
+      "source_connection_pair_id": "conn_dev_pair_ea10f05ebcebff54",
+      "source_ko": {
+        "canonical_ko_id": "conn_dev_ko_022",
+        "canonical_name": "Newton's Root-Finding Method",
+        "canonical_type": "Method"
+      },
+      "relation_type": "APPLIED_IN",
+      "symmetric": false,
+      "target_ko": {
+        "canonical_ko_id": "conn_dev_ko_013",
+        "canonical_name": "Maximum Likelihood Estimation",
+        "canonical_type": "Method"
+      },
+      "evidence": [
+        {
+          "evidence_id": "evidence_004",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 4,
+          "span": "At an interior differentiable maximum, a candidate satisfies the score equation \\(s(\\theta)=0\\). Finding such a candidate is a root-finding problem. When the score equation has no closed-form solution, Newton's root-finding method can be applied within maximum likelihood estimation."
+        }
+      ],
+      "evidence_support_scope": "single_lecture_explicit",
+      "source_annotation_rationale": "The lecture explicitly applies Newton's Root-Finding Method within Maximum Likelihood Estimation.",
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "data_role": "development_only"
+    },
+    {
+      "explanation_instance_id": "le_dev_006",
+      "source_connection_pair_id": "conn_dev_pair_d6043a4c35e6c8b9",
+      "source_ko": {
+        "canonical_ko_id": "conn_dev_ko_017",
+        "canonical_name": "Least Squares Objective",
+        "canonical_type": "Concept"
+      },
+      "relation_type": "APPLIED_IN",
+      "symmetric": false,
+      "target_ko": {
+        "canonical_ko_id": "conn_dev_ko_016",
+        "canonical_name": "Linear Regression",
+        "canonical_type": "Concept"
+      },
+      "evidence": [
+        {
+          "evidence_id": "evidence_006",
+          "lecture_id": "least_squares_learning_001",
+          "block_index": 1,
+          "span": "Linear regression models a response using a linear function of the input features. Ordinary least squares fits a linear regression model by minimizing the least squares objective over the coefficient vector \\(\\beta\\)."
+        }
+      ],
+      "evidence_support_scope": "single_lecture_explicit",
+      "source_annotation_rationale": "The Least Squares Objective is explicitly minimized when fitting the Linear Regression model.",
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "data_role": "development_only"
+    },
+    {
+      "explanation_instance_id": "le_dev_007",
+      "source_connection_pair_id": "conn_dev_pair_a1259045b6b2d2c7",
+      "source_ko": {
+        "canonical_ko_id": "conn_dev_ko_004",
+        "canonical_name": "First-Order Taylor Formula",
+        "canonical_type": "Formula"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "target_ko": {
+        "canonical_ko_id": "conn_dev_ko_001",
+        "canonical_name": "Gradient",
+        "canonical_type": "Concept"
+      },
+      "evidence": [
+        {
+          "evidence_id": "evidence_005",
+          "lecture_id": "multivariable_derivatives_001",
+          "block_index": 5,
+          "span": "The first-order Taylor approximation uses the function value and gradient at \\(x\\) to approximate the value after a small displacement \\(\\Delta x\\). It is formalized by the first-order Taylor formula"
+        },
+        {
+          "evidence_id": "evidence_006",
+          "lecture_id": "multivariable_derivatives_001",
+          "block_index": 6,
+          "span": "\\[\nT_1(x+\\Delta x;x)=f(x)+\\nabla f(x)^\\top\\Delta x.\n\\]"
+        }
+      ],
+      "evidence_support_scope": "single_lecture_explicit",
+      "source_annotation_rationale": "The first-order Taylor Formula contains the gradient as its required linear term.",
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "data_role": "development_only"
+    },
+    {
+      "explanation_instance_id": "le_dev_008",
+      "source_connection_pair_id": "conn_dev_pair_654033881f94fbf0",
+      "source_ko": {
+        "canonical_ko_id": "conn_dev_ko_007",
+        "canonical_name": "Gradient Descent Update",
+        "canonical_type": "Formula"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "target_ko": {
+        "canonical_ko_id": "conn_dev_ko_010",
+        "canonical_name": "Step Size",
+        "canonical_type": "Concept"
+      },
+      "evidence": [
+        {
+          "evidence_id": "evidence_002",
+          "lecture_id": "unconstrained_optimisation_001",
+          "block_index": 2,
+          "span": "Gradient descent requires the gradient of the objective function. With step size \\(\\alpha_k>0\\), the method moves opposite to the gradient. The gradient descent update is"
+        },
+        {
+          "evidence_id": "evidence_003",
+          "lecture_id": "unconstrained_optimisation_001",
+          "block_index": 3,
+          "span": "\\[\nx_{k+1}=x_k-\\alpha_k\\nabla f(x_k).\n\\]"
+        }
+      ],
+      "evidence_support_scope": "single_lecture_explicit",
+      "source_annotation_rationale": "The Gradient Descent Update contains the Step Size as its scaling parameter.",
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "data_role": "development_only"
+    },
+    {
+      "explanation_instance_id": "le_dev_009",
+      "source_connection_pair_id": "conn_dev_pair_6aa4cd7ede0d0fd8",
+      "source_ko": {
+        "canonical_ko_id": "conn_dev_ko_028",
+        "canonical_name": "Forward Euler Update",
+        "canonical_type": "Formula"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "target_ko": {
+        "canonical_ko_id": "conn_dev_ko_010",
+        "canonical_name": "Step Size",
+        "canonical_type": "Concept"
+      },
+      "evidence": [
+        {
+          "evidence_id": "evidence_009",
+          "lecture_id": "explicit_ode_methods_001",
+          "block_index": 2,
+          "span": "Applying the first-order Taylor approximation over a step of length \\(h\\) gives the Forward Euler method. Its Forward Euler update is"
+        },
+        {
+          "evidence_id": "evidence_010",
+          "lecture_id": "explicit_ode_methods_001",
+          "block_index": 3,
+          "span": "\\[\ny_{n+1}=y_n+hF(t_n,y_n).\n\\]"
+        },
+        {
+          "evidence_id": "evidence_011",
+          "lecture_id": "explicit_ode_methods_001",
+          "block_index": 4,
+          "span": "The step size \\(h\\) sets the spacing between consecutive numerical time points. The Forward Euler update formalizes how the Forward Euler method advances one step from the current approximation."
+        }
+      ],
+      "evidence_support_scope": "single_lecture_explicit",
+      "source_annotation_rationale": "The Forward Euler Update requires the Step Size as its time increment.",
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "data_role": "development_only"
+    },
+    {
+      "explanation_instance_id": "le_dev_010",
+      "source_connection_pair_id": "conn_dev_pair_8404187bbee08589",
+      "source_ko": {
+        "canonical_ko_id": "conn_dev_ko_013",
+        "canonical_name": "Maximum Likelihood Estimation",
+        "canonical_type": "Method"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "target_ko": {
+        "canonical_ko_id": "conn_dev_ko_011",
+        "canonical_name": "Statistical Model",
+        "canonical_type": "Concept"
+      },
+      "evidence": [
+        {
+          "evidence_id": "evidence_001",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 1,
+          "span": "A statistical model is a family of probability distributions indexed by an unknown parameter \\(\\theta\\). For observed data, the log-likelihood measures how the assumed parameter value supports those observations."
+        },
+        {
+          "evidence_id": "evidence_002",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 2,
+          "span": "Maximum likelihood estimation treats the log-likelihood as an objective function and selects a parameter value that maximizes it. The score function is the gradient of the log-likelihood with respect to the parameter,"
+        }
+      ],
+      "evidence_support_scope": "single_lecture_explicit",
+      "source_annotation_rationale": "Maximum Likelihood Estimation requires a Statistical Model from which its Log-Likelihood is defined.",
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "data_role": "development_only"
+    },
+    {
+      "explanation_instance_id": "le_dev_011",
+      "source_connection_pair_id": "conn_dev_pair_623dc620447526e3",
+      "source_ko": {
+        "canonical_ko_id": "conn_dev_ko_004",
+        "canonical_name": "First-Order Taylor Formula",
+        "canonical_type": "Formula"
+      },
+      "relation_type": "FORMALIZES",
+      "symmetric": false,
+      "target_ko": {
+        "canonical_ko_id": "conn_dev_ko_003",
+        "canonical_name": "First-Order Taylor Approximation",
+        "canonical_type": "Method"
+      },
+      "evidence": [
+        {
+          "evidence_id": "evidence_005",
+          "lecture_id": "multivariable_derivatives_001",
+          "block_index": 5,
+          "span": "The first-order Taylor approximation uses the function value and gradient at \\(x\\) to approximate the value after a small displacement \\(\\Delta x\\). It is formalized by the first-order Taylor formula"
+        },
+        {
+          "evidence_id": "evidence_006",
+          "lecture_id": "multivariable_derivatives_001",
+          "block_index": 6,
+          "span": "\\[\nT_1(x+\\Delta x;x)=f(x)+\\nabla f(x)^\\top\\Delta x.\n\\]"
+        }
+      ],
+      "evidence_support_scope": "single_lecture_explicit",
+      "source_annotation_rationale": "The displayed Formula is introduced as the formal statement of the first-order Taylor approximation.",
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "data_role": "development_only"
+    },
+    {
+      "explanation_instance_id": "le_dev_012",
+      "source_connection_pair_id": "conn_dev_pair_225420587c4177f5",
+      "source_ko": {
+        "canonical_ko_id": "conn_dev_ko_007",
+        "canonical_name": "Gradient Descent Update",
+        "canonical_type": "Formula"
+      },
+      "relation_type": "FORMALIZES",
+      "symmetric": false,
+      "target_ko": {
+        "canonical_ko_id": "conn_dev_ko_006",
+        "canonical_name": "Gradient Descent",
+        "canonical_type": "Method"
+      },
+      "evidence": [
+        {
+          "evidence_id": "evidence_002",
+          "lecture_id": "unconstrained_optimisation_001",
+          "block_index": 2,
+          "span": "Gradient descent requires the gradient of the objective function. With step size \\(\\alpha_k>0\\), the method moves opposite to the gradient. The gradient descent update is"
+        },
+        {
+          "evidence_id": "evidence_003",
+          "lecture_id": "unconstrained_optimisation_001",
+          "block_index": 3,
+          "span": "\\[\nx_{k+1}=x_k-\\alpha_k\\nabla f(x_k).\n\\]"
+        }
+      ],
+      "evidence_support_scope": "single_lecture_explicit",
+      "source_annotation_rationale": "The displayed update explicitly specifies one Gradient Descent iteration.",
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "data_role": "development_only"
+    },
+    {
+      "explanation_instance_id": "le_dev_013",
+      "source_connection_pair_id": "conn_dev_pair_c9b55dc727622af1",
+      "source_ko": {
+        "canonical_ko_id": "conn_dev_ko_018",
+        "canonical_name": "Mean Squared Error Formula",
+        "canonical_type": "Formula"
+      },
+      "relation_type": "FORMALIZES",
+      "symmetric": false,
+      "target_ko": {
+        "canonical_ko_id": "conn_dev_ko_017",
+        "canonical_name": "Least Squares Objective",
+        "canonical_type": "Concept"
+      },
+      "evidence": [
+        {
+          "evidence_id": "evidence_007",
+          "lecture_id": "least_squares_learning_001",
+          "block_index": 2,
+          "span": "For observations \\((x_i,y_i)\\), the mean squared error formula is"
+        },
+        {
+          "evidence_id": "evidence_008",
+          "lecture_id": "least_squares_learning_001",
+          "block_index": 3,
+          "span": "\\[\n\\operatorname{MSE}(\\beta)=\\frac{1}{n}\\sum_{i=1}^{n}(y_i-x_i^\\top\\beta)^2.\n\\]"
+        },
+        {
+          "evidence_id": "evidence_009",
+          "lecture_id": "least_squares_learning_001",
+          "block_index": 4,
+          "span": "This formula formalizes the least squares objective up to a positive constant scaling. Gradient descent can be applied to ordinary least squares by using the gradient of this objective function."
+        }
+      ],
+      "evidence_support_scope": "single_lecture_explicit",
+      "source_annotation_rationale": "The MSE Formula explicitly formalizes the Least Squares Objective up to positive scaling.",
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "data_role": "development_only"
+    },
+    {
+      "explanation_instance_id": "le_dev_014",
+      "source_connection_pair_id": "conn_dev_pair_d64d8e658f6dafd8",
+      "source_ko": {
+        "canonical_ko_id": "conn_dev_ko_023",
+        "canonical_name": "Newton Root Update",
+        "canonical_type": "Formula"
+      },
+      "relation_type": "FORMALIZES",
+      "symmetric": false,
+      "target_ko": {
+        "canonical_ko_id": "conn_dev_ko_022",
+        "canonical_name": "Newton's Root-Finding Method",
+        "canonical_type": "Method"
+      },
+      "evidence": [
+        {
+          "evidence_id": "evidence_007",
+          "lecture_id": "nonlinear_root_finding_001",
+          "block_index": 2,
+          "span": "Provided \\(g'(x_k)\\neq 0\\), the Newton root update is"
+        },
+        {
+          "evidence_id": "evidence_008",
+          "lecture_id": "nonlinear_root_finding_001",
+          "block_index": 3,
+          "span": "\\[\nx_{k+1}=x_k-\\frac{g(x_k)}{g'(x_k)}.\n\\]"
+        },
+        {
+          "evidence_id": "evidence_009",
+          "lecture_id": "nonlinear_root_finding_001",
+          "block_index": 4,
+          "span": "The Newton root update formalizes Newton's root-finding method in one dimension. Near a simple root, the derivative controls the tangent correction."
+        }
+      ],
+      "evidence_support_scope": "single_lecture_explicit",
+      "source_annotation_rationale": "The displayed Newton Root Update explicitly formalizes the one-dimensional method.",
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "data_role": "development_only"
+    },
+    {
+      "explanation_instance_id": "le_dev_015",
+      "source_connection_pair_id": "conn_dev_pair_e848f855de939343",
+      "source_ko": {
+        "canonical_ko_id": "conn_dev_ko_020",
+        "canonical_name": "Ridge Regression",
+        "canonical_type": "Method"
+      },
+      "relation_type": "EXTENDS",
+      "symmetric": false,
+      "target_ko": {
+        "canonical_ko_id": "conn_dev_ko_019",
+        "canonical_name": "Ordinary Least Squares",
+        "canonical_type": "Method"
+      },
+      "evidence": [
+        {
+          "evidence_id": "evidence_010",
+          "lecture_id": "least_squares_learning_001",
+          "block_index": 5,
+          "span": "Ridge regression extends ordinary least squares by adding a squared-coefficient penalty to the objective. The penalty can improve numerical stability and reduce sensitivity to highly correlated features."
+        }
+      ],
+      "evidence_support_scope": "single_lecture_explicit",
+      "source_annotation_rationale": "Ridge Regression explicitly extends Ordinary Least Squares with a coefficient penalty.",
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "data_role": "development_only"
+    },
+    {
+      "explanation_instance_id": "le_dev_016",
+      "source_connection_pair_id": "conn_dev_pair_63bb993a9e7b1d30",
+      "source_ko": {
+        "canonical_ko_id": "conn_dev_ko_024",
+        "canonical_name": "Damped Newton Method",
+        "canonical_type": "Method"
+      },
+      "relation_type": "EXTENDS",
+      "symmetric": false,
+      "target_ko": {
+        "canonical_ko_id": "conn_dev_ko_022",
+        "canonical_name": "Newton's Root-Finding Method",
+        "canonical_type": "Method"
+      },
+      "evidence": [
+        {
+          "evidence_id": "evidence_010",
+          "lecture_id": "nonlinear_root_finding_001",
+          "block_index": 5,
+          "span": "The damped Newton method extends Newton's root-finding method by multiplying the correction by a factor \\(\\lambda_k\\in(0,1]\\). Damping can prevent a full Newton correction from moving too far when the current iterate is not yet near a root."
+        }
+      ],
+      "evidence_support_scope": "single_lecture_explicit",
+      "source_annotation_rationale": "The Damped Newton Method explicitly extends Newton's method by scaling its correction.",
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "data_role": "development_only"
+    },
+    {
+      "explanation_instance_id": "le_dev_017",
+      "source_connection_pair_id": "conn_dev_pair_7198ee241a3c0808",
+      "source_ko": {
+        "canonical_ko_id": "conn_dev_ko_006",
+        "canonical_name": "Gradient Descent",
+        "canonical_type": "Method"
+      },
+      "relation_type": "CONTRASTS_WITH",
+      "symmetric": true,
+      "target_ko": {
+        "canonical_ko_id": "conn_dev_ko_008",
+        "canonical_name": "Newton Optimisation Method",
+        "canonical_type": "Method"
+      },
+      "evidence": [
+        {
+          "evidence_id": "evidence_007",
+          "lecture_id": "unconstrained_optimisation_001",
+          "block_index": 7,
+          "span": "The Newton optimisation method can take a full curvature-adjusted step, whereas gradient descent controls movement through an explicit step size."
+        }
+      ],
+      "evidence_support_scope": "single_lecture_explicit",
+      "source_annotation_rationale": "The lecture explicitly contrasts step-size-controlled Gradient Descent with the curvature-adjusted Newton method.",
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "data_role": "development_only"
+    }
+  ]
+}

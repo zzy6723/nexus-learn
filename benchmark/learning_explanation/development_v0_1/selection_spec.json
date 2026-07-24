@@ -1,0 +1,102 @@
+{
+  "artifact_type": "learning_explanation_development_selection_spec",
+  "artifact_schema_version": "v0.1",
+  "status": "ready_for_review",
+  "split": "development",
+  "source_ground_truth": {
+    "path": "benchmark/connection_discovery/development_v0_1/ground_truth.json",
+    "sha256": "1bbbd801b505dc2a1d410f50b605a600b9e2ae135471b5484dea63c76aebcba4"
+  },
+  "selection_policy": {
+    "unit": "human_validated_primary_positive_connection",
+    "include_all_labels_with_source_support_at_most": 4,
+    "sampled_relation_types": {
+      "APPLIED_IN": "Six fixed examples spanning calculus, optimisation, ODEs, statistics, root finding, and linear regression.",
+      "REQUIRES": "Four fixed examples spanning formula prerequisites, iterative updates, and model assumptions."
+    },
+    "excluded_relation_types": {
+      "RELATED_TO": "The source benchmark has no reliable positive support."
+    },
+    "selection_was_defined_before_explanation_model_output": true
+  },
+  "expected_counts": {
+    "instances": 17,
+    "relation_support": {
+      "APPLIED_IN": 6,
+      "REQUIRES": 4,
+      "FORMALIZES": 4,
+      "EXTENDS": 2,
+      "CONTRASTS_WITH": 1
+    }
+  },
+  "selected_connections": [
+    {
+      "canonical_pair_id": "conn_dev_pair_f089c625fb64bde0",
+      "expected_relation_type": "APPLIED_IN"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ff190ee933b57b25",
+      "expected_relation_type": "APPLIED_IN"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_1a40513a66e7f15d",
+      "expected_relation_type": "APPLIED_IN"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9c6621685b9ef5e5",
+      "expected_relation_type": "APPLIED_IN"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ea10f05ebcebff54",
+      "expected_relation_type": "APPLIED_IN"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d6043a4c35e6c8b9",
+      "expected_relation_type": "APPLIED_IN"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a1259045b6b2d2c7",
+      "expected_relation_type": "REQUIRES"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_654033881f94fbf0",
+      "expected_relation_type": "REQUIRES"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_6aa4cd7ede0d0fd8",
+      "expected_relation_type": "REQUIRES"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_8404187bbee08589",
+      "expected_relation_type": "REQUIRES"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_623dc620447526e3",
+      "expected_relation_type": "FORMALIZES"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_225420587c4177f5",
+      "expected_relation_type": "FORMALIZES"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c9b55dc727622af1",
+      "expected_relation_type": "FORMALIZES"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d64d8e658f6dafd8",
+      "expected_relation_type": "FORMALIZES"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_e848f855de939343",
+      "expected_relation_type": "EXTENDS"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_63bb993a9e7b1d30",
+      "expected_relation_type": "EXTENDS"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7198ee241a3c0808",
+      "expected_relation_type": "CONTRASTS_WITH"
+    }
+  ]
+}

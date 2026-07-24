@@ -1,0 +1,57 @@
+{
+  "artifact_type": "learning_explanation_source_manifest",
+  "artifact_schema_version": "v0.1",
+  "status": "prepared_not_frozen",
+  "split": "development",
+  "sources": {
+    "selection_spec": {
+      "path": "benchmark/learning_explanation/development_v0_1/selection_spec.json",
+      "sha256": "eef126caba3c452eb6570f6913956f7c566a6fab744a20bbd51d21adb07e17a8"
+    },
+    "connection_ground_truth": {
+      "path": "benchmark/connection_discovery/development_v0_1/ground_truth.json",
+      "sha256": "1bbbd801b505dc2a1d410f50b605a600b9e2ae135471b5484dea63c76aebcba4"
+    },
+    "oracle_canonical_inventory": {
+      "path": "benchmark/connection_discovery/development_v0_1/oracle_canonical_inventory.json",
+      "sha256": "682e0d0aa66398cc54128b5bba1b1fdc0a1512ec1c46a83e64463ac2403c34f7"
+    },
+    "lectures": [
+      {
+        "lecture_id": "explicit_ode_methods_001",
+        "path": "benchmark/connection_discovery/development_v0_1/lectures/explicit_ode_methods_001.md",
+        "sha256": "f0b784a8313ab58a145c9ed5f6bfcfbc84ab97f96fceb6dbd7b9e96c8ccf3f18"
+      },
+      {
+        "lecture_id": "least_squares_learning_001",
+        "path": "benchmark/connection_discovery/development_v0_1/lectures/least_squares_learning_001.md",
+        "sha256": "272371b39b143f7556e206756bb08867e6762d2fdf7aa744ae1c63d71bf516d6"
+      },
+      {
+        "lecture_id": "maximum_likelihood_001",
+        "path": "benchmark/connection_discovery/development_v0_1/lectures/maximum_likelihood_001.md",
+        "sha256": "e7962b41aeffb3860bb592e471d760037366b859f3df8af3ce9bb8646ecb0ad1"
+      },
+      {
+        "lecture_id": "multivariable_derivatives_001",
+        "path": "benchmark/connection_discovery/development_v0_1/lectures/multivariable_derivatives_001.md",
+        "sha256": "6cad584410adcbf3d1c06c20376eb23b48bcf27b71e7e48857447f7fad29f1f2"
+      },
+      {
+        "lecture_id": "nonlinear_root_finding_001",
+        "path": "benchmark/connection_discovery/development_v0_1/lectures/nonlinear_root_finding_001.md",
+        "sha256": "abfce3702b06bc0c276b6f1dfc2fc08b263cc02aa678509d56ea9f2f623f8860"
+      },
+      {
+        "lecture_id": "unconstrained_optimisation_001",
+        "path": "benchmark/connection_discovery/development_v0_1/lectures/unconstrained_optimisation_001.md",
+        "sha256": "384858ef54b28feb7635c940193e1d007de03846f5a2e06931fd41d35ff72561"
+      }
+    ]
+  },
+  "source_boundary": {
+    "uses_human_validated_connections_only": true,
+    "uses_connection_model_predictions": false,
+    "independent_validation_source": false
+  }
+}

@@ -170,6 +170,7 @@ Costs and limitations:
 
 - `docs/decisions/004-relation-schema.md`
 - `docs/decisions/005-knowledge-object-identity.md`
+- `docs/decisions/007-oracle-conditioned-learning-explanation.md`
 - `experiments/connection_discovery/README.md`
 - `experiments/connection_discovery/conclusion.md`
 - `experiments/connection_discovery/003_1_candidate_generation/conclusion.md`

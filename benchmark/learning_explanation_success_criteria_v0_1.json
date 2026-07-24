@@ -1,0 +1,35 @@
+{
+  "artifact_type": "learning_explanation_success_criteria",
+  "artifact_schema_version": "v0.1",
+  "status": "proposed_pre_freeze",
+  "scope": "oracle_conditioned_development_v0_1",
+  "hard_gates": {
+    "schema_valid_output_rate_minimum": 1.0,
+    "immutable_field_accuracy_minimum": 1.0,
+    "exact_evidence_id_validity_rate_minimum": 1.0,
+    "relation_faithfulness_rate_minimum": 0.95,
+    "direction_faithfulness_rate_minimum": 0.95,
+    "endpoint_faithfulness_rate_minimum": 0.95,
+    "explanation_evidence_faithfulness_rate_minimum": 0.9,
+    "faithfulness_pass_rate_minimum": 0.9,
+    "unsupported_claim_rate_maximum": 0.05,
+    "maximum_contradicted_claims": 0,
+    "maximum_pending_claim_adjudications": 0
+  },
+  "secondary_gates_on_faithfulness_passing_outputs": {
+    "mean_conceptual_mechanism_score_minimum": 1.5,
+    "mean_learning_relevance_score_minimum": 1.5,
+    "mean_specificity_score_minimum": 1.5,
+    "mean_clarity_score_minimum": 1.5,
+    "pedagogically_non_empty_rate_minimum": 0.8,
+    "paired_mean_learning_value_composite_gain_over_paraphrase_minimum": 0.5
+  },
+  "selection_rule": "A method must pass every hard gate before secondary metrics can authorize selection. Usefulness cannot compensate for unfaithful explanation.",
+  "claim_limits": [
+    "Development inputs are human-validated Connections, not model-discovered Connections.",
+    "Passing development gates does not establish independent generalization.",
+    "Passing Oracle-conditioned explanation gates does not unblock Connection Discovery.",
+    "No personalization or Learner State claim is evaluated.",
+    "RELATED_TO is excluded because the source benchmark has no reliable positive support."
+  ]
+}

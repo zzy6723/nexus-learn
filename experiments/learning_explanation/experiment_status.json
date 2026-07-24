@@ -1,0 +1,31 @@
+{
+  "artifact_type": "learning_explanation_experiment_status",
+  "artifact_schema_version": "v0.1",
+  "status": "004_0_structurally_prepared_pending_review_and_freeze",
+  "authoritative_as_of": "2026-07-24",
+  "experiment_name": "Oracle-Conditioned Learning Explanation",
+  "product_pipeline_validation_authorized": false,
+  "model_execution_authorized": false,
+  "current_stage": {
+    "id": "004_0",
+    "name": "Benchmark and Evaluation Preparation",
+    "status": "structural_preflight_passed_pending_review_and_freeze",
+    "preflight": {
+      "path": "experiments/learning_explanation/004_0_benchmark_preparation/preflight.json",
+      "sha256": "2c4178ca40f0a4bcdd59cdf6fbec68b47b73e6f6e89b265973489e738d3a98c6"
+    }
+  },
+  "development_benchmark": {
+    "path": "benchmark/learning_explanation/development_v0_1/benchmark_complete.json",
+    "sha256": "44c6b0a4e67c231849cc1747d5cc67f5aa4b90f53c68f3480cf9638760200051",
+    "instances": 17,
+    "independent_validation_source": false
+  },
+  "blocked_capabilities": [
+    "predicted_connection_explanation",
+    "end_to_end_product_pipeline_validation",
+    "connection_ranking",
+    "learner_state_personalization"
+  ],
+  "next_gate": "Human review, threshold acceptance, repository freeze, and clean-state execution preflight before Baseline 001 implementation or any model run."
+}
