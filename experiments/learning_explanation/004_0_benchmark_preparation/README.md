@@ -1,6 +1,6 @@
 # 004-0: Benchmark And Evaluation Preparation
 
-**Status:** Freeze candidate prepared; pending repository freeze
+**Status:** Repository-frozen at `cda3f9dd7f3298d0f726118db8d15e546febccab`
 
 ## Completed Preparation
 
@@ -78,3 +78,6 @@ Before any API call:
 
 The current completion marker intentionally records
 `model_execution_authorized = false`.
+
+The repository freeze was reported by the user and is bound in
+`freeze_manifest.json`. No Git verification was performed by the assistant.

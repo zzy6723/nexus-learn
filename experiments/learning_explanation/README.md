@@ -1,6 +1,6 @@
 # Experiment 004: Oracle-Conditioned Learning Explanation
 
-**Status:** 004-0 freeze candidate prepared; pending repository freeze
+**Status:** 004-0 frozen; 004-1 implementation validated pending freeze
 **Product boundary:** Downstream predicted-Connection explanation remains blocked
 
 ## Objective
@@ -19,8 +19,8 @@ component, not the end-to-end MVP.
 
 | Stage | Name | Status |
 | --- | --- | --- |
-| 004-0 | Benchmark and Evaluation Preparation | Freeze candidate prepared |
-| 004-1 | Oracle-Connection Explanation Baselines | Not started |
+| 004-0 | Benchmark and Evaluation Preparation | Frozen at `cda3f9dd...` |
+| 004-1 | Oracle-Connection Explanation Baselines | Implementation validated; pending freeze and execution |
 | 004-2 | Evidence-Grounded Explanation Method | Not started |
 | 004-3 | Development Validation and Method Selection | Not started |
 | 004-4 | Independent Validation | Not authorized until development gates pass |

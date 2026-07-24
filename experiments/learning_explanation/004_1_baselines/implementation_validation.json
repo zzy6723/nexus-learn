@@ -1,0 +1,54 @@
+{
+  "artifact_type": "learning_explanation_004_1_implementation_validation",
+  "artifact_schema_version": "v0.1",
+  "status": "synthetic_runner_validation_passed_pending_repository_freeze",
+  "validated_at": "2026-07-24",
+  "004_0_freeze_commit": "cda3f9dd7f3298d0f726118db8d15e546febccab",
+  "api_calls": 0,
+  "test_count": 8,
+  "bindings": {
+    "004_0_freeze_manifest": {
+      "path": "experiments/learning_explanation/004_0_benchmark_preparation/freeze_manifest.json",
+      "sha256": "dd4c71807be37f717316eba25950c268d6ca5d2d34e02d163c62f23eacb730d0"
+    },
+    "deterministic_templates": {
+      "path": "experiments/learning_explanation/004_1_baselines/relation_paraphrase/templates_v0_1.json",
+      "sha256": "708ffa2adc089a462b6a641f5dc1fcb5d8ef7510598092f7e9a4f514212e4998"
+    },
+    "relation_only_prompt": {
+      "path": "experiments/learning_explanation/004_1_baselines/relation_only_llm/prompt.md",
+      "sha256": "36e7a871db4696d0ec6eb3f2b4416b0cae6b5f4bda5e6eac0000ee22f60b04e0"
+    },
+    "input_schema": {
+      "path": "benchmark/schema/learning_explanation_input.schema.json",
+      "sha256": "53e8a9d977a48a0a2579c743067adf922146710c30dcd90beec42cc8ea8d1dc1"
+    },
+    "output_schema": {
+      "path": "benchmark/schema/learning_explanation_output.schema.json",
+      "sha256": "2712bfd62382e63fbb50c74bd670814456b3f3027534a7e2fd506bb67d0fa792"
+    },
+    "runner": {
+      "path": "scripts/run_learning_explanation_baselines.py",
+      "sha256": "dc1bad8e086c57d10d0b22d37b545ec7884cc95f3b2ee60aeeb515ba30e393b1"
+    },
+    "test_suite": {
+      "path": "tests/test_learning_explanation_baseline_runner.py",
+      "sha256": "1c2679a2cdeb60b41df8cfc5a540f8c548591398cd864eb7d233b9ebd86e22f6"
+    }
+  },
+  "covered_behaviors": {
+    "deterministic_baseline_uses_zero_api_calls": true,
+    "deterministic_output_is_byte_stable": true,
+    "all_21_instances_are_supported": true,
+    "relation_only_model_input_has_no_evidence": true,
+    "annotation_and_gold_fields_do_not_leak": true,
+    "full_relation_only_dry_run_renders_21_requests": true,
+    "valid_subset_response_completes": true,
+    "nonempty_baseline_evidence_reference_fails_closed": true,
+    "parsed_schema_failure_is_retained": true,
+    "no_overwrite_is_enforced": true,
+    "dirty_repository_fails_before_writes": true
+  },
+  "formal_execution_authorized": false,
+  "next_gate": "Repository-freeze the 004-1 implementation, then execute Baseline 001A and Baseline 001B from the resulting clean commit."
+}

@@ -1,6 +1,6 @@
 # 004-2: Evidence-Grounded Learning Explanation
 
-**Status:** Not started; blocked on 004-0 repository freeze
+**Status:** Not started; blocked on 004-1 baseline execution
 
 `002_evidence_grounded` receives one Oracle Connection and its supplied
 Evidence catalog. It must preserve immutable endpoints, Relation type, and

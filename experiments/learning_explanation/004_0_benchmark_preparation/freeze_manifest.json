@@ -1,0 +1,19 @@
+{
+  "artifact_type": "learning_explanation_004_0_freeze_manifest",
+  "artifact_schema_version": "v0.1",
+  "status": "frozen_content_binding",
+  "freeze_commit": "cda3f9dd7f3298d0f726118db8d15e546febccab",
+  "repository_freeze_reported_by_user": true,
+  "assistant_git_verification_performed": false,
+  "preflight": {
+    "path": "experiments/learning_explanation/004_0_benchmark_preparation/preflight.json",
+    "sha256": "d518bc5badb42f315071ca9059351211eb5728d508feae9172f6d22b92a55cb8"
+  },
+  "frozen_scope": {
+    "oracle_conditioned_only": true,
+    "development_instances": 21,
+    "evidence_items": 40,
+    "model_execution_authorized_by_this_artifact": false
+  },
+  "next_gate": "Freeze the 004-1 baseline implementation, then execute Baseline 001A and dry-run Baseline 001B from a clean repository state."
+}

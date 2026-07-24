@@ -1,6 +1,6 @@
 # 004-1: Oracle-Connection Explanation Baselines
 
-**Status:** Not started; blocked on 004-0 repository freeze
+**Status:** Implementation validated; pending repository freeze and execution
 
 ## Baseline 001A
 
@@ -18,4 +18,31 @@ Both baselines use the v0.2 structured output contract with empty
 `evidence_refs` arrays. Baseline 001B and Method 002 must later use the same
 model and generation parameters.
 
-No execution is authorized until a clean repository commit freezes 004-0.
+Formal execution is not authorized until a clean repository commit freezes
+this 004-1 implementation.
+
+## Implementation
+
+The shared runner is:
+
+`scripts/run_learning_explanation_baselines.py`
+
+It enforces:
+
+- the 004-0 freeze-manifest and benchmark hash chain;
+- a clean repository at the supplied method commit;
+- one explanation instance per request for Baseline 001B;
+- exact immutable transport fields;
+- empty Evidence catalogs and empty output `evidence_refs`;
+- no-overwrite behavior;
+- raw and parsed failure retention;
+- per-instance and aggregate metadata.
+
+The offline suite contains eight tests. It generated the full deterministic
+21-instance output and the full 21-request Relation-only dry-run under mocked
+repository state, without an external API call.
+
+Formal artifacts have not been created. `implementation_validation.json`
+records the validated implementation bindings and keeps
+`formal_execution_authorized = false` until the implementation is
+repository-frozen.

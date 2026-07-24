@@ -1,19 +1,27 @@
 {
   "artifact_type": "learning_explanation_experiment_status",
-    "artifact_schema_version": "v0.2",
-    "status": "004_0_freeze_candidate_prepared_pending_repository_freeze",
+    "artifact_schema_version": "v0.3",
+    "status": "004_1_baseline_implementation_validated_pending_repository_freeze",
   "authoritative_as_of": "2026-07-24",
   "experiment_name": "Oracle-Conditioned Learning Explanation",
   "product_pipeline_validation_authorized": false,
   "model_execution_authorized": false,
-  "current_stage": {
-    "id": "004_0",
-    "name": "Benchmark and Evaluation Preparation",
-        "status": "freeze_candidate_prepared_pending_repository_freeze",
-    "preflight": {
-      "path": "experiments/learning_explanation/004_0_benchmark_preparation/preflight.json",
-            "sha256": "d518bc5badb42f315071ca9059351211eb5728d508feae9172f6d22b92a55cb8"
-    }
+    "004_0_freeze": {
+        "status": "frozen_content_binding",
+        "freeze_commit": "cda3f9dd7f3298d0f726118db8d15e546febccab",
+        "manifest": {
+            "path": "experiments/learning_explanation/004_0_benchmark_preparation/freeze_manifest.json",
+            "sha256": "dd4c71807be37f717316eba25950c268d6ca5d2d34e02d163c62f23eacb730d0"
+        }
+    },
+    "current_stage": {
+        "id": "004_1",
+        "name": "Oracle-Connection Explanation Baselines",
+        "status": "implementation_validated_pending_repository_freeze",
+        "implementation_validation": {
+            "path": "experiments/learning_explanation/004_1_baselines/implementation_validation.json",
+            "sha256": "73f06c1ab6672f647d80d8f545b30364bc8f8f487700ccb04be50885022783a6"
+        }
   },
   "development_benchmark": {
     "path": "benchmark/learning_explanation/development_v0_1/benchmark_complete.json",
@@ -27,5 +35,5 @@
     "connection_ranking",
     "learner_state_personalization"
   ],
-    "next_gate": "Repository freeze and clean-state method preflight before Baselines 001A and 001B implementation or any model run."
+    "next_gate": "Repository-freeze the 004-1 implementation, then run Baseline 001A and dry-run Baseline 001B from the clean implementation commit."
 }

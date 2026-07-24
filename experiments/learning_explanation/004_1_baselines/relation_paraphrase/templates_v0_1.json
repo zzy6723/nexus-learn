@@ -1,0 +1,36 @@
+{
+  "artifact_type": "learning_explanation_relation_paraphrase_templates",
+  "artifact_schema_version": "v0.1",
+  "method_id": "001a_deterministic_paraphrase",
+  "templates": {
+    "REQUIRES": {
+      "connection_summary": "{source} requires {target}.",
+      "why_connected": "Under the validated Connection, {target} is a prerequisite for {source}.",
+      "learning_value": "Recognizing this dependency helps organize how {target} supports understanding {source}."
+    },
+    "APPLIED_IN": {
+      "connection_summary": "{source} is applied in {target}.",
+      "why_connected": "Under the validated Connection, {target} uses {source}.",
+      "learning_value": "Recognizing this application helps place {source} within the study of {target}."
+    },
+    "EXTENDS": {
+      "connection_summary": "{source} extends {target}.",
+      "why_connected": "Under the validated Connection, {source} adds to or modifies {target}.",
+      "learning_value": "Recognizing this extension helps organize {source} as a development of {target}."
+    },
+    "FORMALIZES": {
+      "connection_summary": "{source} formalizes {target}.",
+      "why_connected": "Under the validated Connection, {source} provides a formal expression of {target}.",
+      "learning_value": "Recognizing this formalization helps connect the representation {source} with the idea {target}."
+    },
+    "CONTRASTS_WITH": {
+      "connection_summary": "{source} contrasts with {target}.",
+      "why_connected": "The validated Connection marks a meaningful contrast between {source} and {target}.",
+      "learning_value": "Recognizing this contrast helps keep the roles of {source} and {target} distinct."
+    }
+  },
+  "evidence_policy": {
+    "receives_evidence": false,
+    "all_field_evidence_refs_empty": true
+  }
+}
