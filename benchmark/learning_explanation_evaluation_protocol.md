@@ -1,7 +1,7 @@
 # Learning Explanation Evaluation Protocol
 
-**Status:** Ready for 004-0 review
-**Version:** v0.1
+**Status:** Ready for 004-0 freeze review
+**Version:** v0.2
 
 ## Scope
 
@@ -10,33 +10,40 @@ evaluate Connection Discovery or an end-to-end product pipeline.
 
 ## Methods
 
-### Baseline 001: Deterministic Relation Paraphrase
+### Baseline 001A: Deterministic Relation Paraphrase
 
 Produce a fixed template from source name, Relation, and target name. It uses no
 LLM and establishes a faithful but intentionally shallow lower bound. It
-receives immutable Connection fields and copies supplied Evidence IDs for
-schema consistency, but it does not receive or use Evidence text.
+receives immutable Connection fields but no Evidence IDs or Evidence text. All
+field-level Evidence references are empty.
+
+### Baseline 001B: Relation-Only LLM
+
+Provide the same immutable Connection fields but no Evidence IDs or Evidence
+text. Require the same structured prose fields and empty field-level Evidence
+references. This method measures how much plausible explanation and
+hallucination arise from Relation semantics and model prior knowledge alone.
+It is a diagnostic control and cannot be selected.
 
 ### Method 002: Evidence-Grounded Learning Explanation
 
 Provide Oracle endpoints, Relation, and supplied Evidence entries. Require the
 structured output defined in `benchmark/learning_explanation_contract.md`.
-
-The first development comparison may also report a Relation-only ablation, but
-it is diagnostic and must not replace Baseline 001.
+This is the only selectable Experiment 004 method.
 
 ## Evaluation Sequence
 
 1. Validate JSON schema and immutable transport fields.
-2. Validate that every Evidence ID belongs to the supplied catalog.
-3. Materialize Evidence IDs deterministically.
-4. Blind method identity and randomize review items.
-5. Segment substantive claims.
-6. Label claim support.
-7. Evaluate explanation-level faithfulness.
-8. Score learning value only for faithfulness-passing explanations.
-9. Resolve `UNRESOLVED` claim decisions.
-10. Produce machine-readable metrics, errors, matches, and reviewer artifacts.
+2. Apply the method-specific Evidence-reference contract.
+3. Validate that every cited Evidence ID belongs to the supplied catalog.
+4. Materialize Evidence IDs deterministically for Method 002.
+5. Blind method identity and randomize review items.
+6. Segment substantive claims.
+7. Label claim support.
+8. Evaluate explanation-level faithfulness.
+9. Score learning value only for faithfulness-passing explanations.
+10. Resolve `UNRESOLVED` claim decisions.
+11. Produce machine-readable metrics, errors, matches, and reviewer artifacts.
 
 ## Hard-Gate Metrics
 
@@ -60,6 +67,8 @@ all resolved substantive claims
 ```
 
 `UNRESOLVED` claims prevent final evaluation until adjudicated.
+Evidence-faithfulness metrics are `not_applicable` for Baselines 001A and 001B,
+which receive no Evidence. They must not receive an artificial perfect score.
 
 ## Secondary Metrics
 
@@ -70,7 +79,7 @@ Only faithfulness-passing explanations enter:
 - mean Specificity score;
 - mean Clarity score;
 - pedagogically non-empty rate;
-- paired learning-value composite improvement over Baseline 001.
+- paired learning-value composite improvement over Baseline 001A.
 
 The learning-value composite for one output is the mean of its Conceptual
 Mechanism and Learning Relevance scores. Paired improvement is computed per
@@ -80,11 +89,15 @@ The denominator for every secondary metric must be reported explicitly.
 
 ## Comparison Rules
 
-- The same Connection instances, model, parameters, and output contract must be
-  used across learned methods.
-- Baseline 001 is deterministic and does not receive Evidence.
+- The same Connection instances and output contract must be used across all
+  methods.
+- Baselines 001A and 001B receive no Evidence.
+- Baseline 001B and Method 002 use the same model and generation parameters.
+- Only Method 002 is eligible for selection.
 - Review bundles must hide method identity.
 - A usefulness gain cannot compensate for a hard-gate regression.
+- At most one minimal, error-analysis-driven prompt refinement is allowed on
+  the development benchmark.
 - No benchmark, rubric, claim rule, or threshold may change after formal
   development execution without a new version and rerunning all compared
   methods.

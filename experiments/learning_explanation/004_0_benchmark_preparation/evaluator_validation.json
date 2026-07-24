@@ -1,0 +1,46 @@
+{
+  "artifact_type": "learning_explanation_evaluator_validation",
+  "artifact_schema_version": "v0.1",
+  "status": "synthetic_validation_passed",
+  "validated_at": "2026-07-24",
+  "api_calls": 0,
+  "test_count": 12,
+  "bindings": {
+    "evaluator": {
+      "path": "scripts/evaluate_learning_explanations.py",
+      "sha256": "9d89b34bfbee546986aa11f1ce124a084d5c67a8060fd9b37908c3cf6fde3d72"
+    },
+    "test_suite": {
+      "path": "tests/test_learning_explanation_evaluator.py",
+      "sha256": "039fb213c29cceea4e2205097e63acbd45dfa34543dbb40c21ee6358897e67b7"
+    },
+    "synthetic_benchmark": {
+      "path": "tests/fixtures/learning_explanation/synthetic_benchmark.json",
+      "sha256": "8844d2809c0708533cdaae31a4e916cdb6ab99b804cfc02e4773bf492b76d2c7"
+    },
+    "perfect_predictions": {
+      "path": "tests/fixtures/learning_explanation/perfect_predictions.json",
+      "sha256": "f5053ae3609d404d8de81b20bffb60cf9666273c04ea78225677b1e5686f55fc"
+    },
+    "perfect_reviews": {
+      "path": "tests/fixtures/learning_explanation/perfect_reviews.json",
+      "sha256": "eea19e676a0ab136e8052d7faa1f07b75a971553c84b44bf2e72db8d18d13292"
+    }
+  },
+  "covered_behaviors": {
+    "perfect_evidence_grounded_final": true,
+    "semantic_direction_reversal_scored": true,
+    "unsupported_claim_scored": true,
+    "endpoint_drift_scored": true,
+    "pedagogically_empty_scored": true,
+    "unresolved_claim_produces_draft": true,
+    "unknown_evidence_reference_is_fatal": true,
+    "grounded_why_connected_requires_evidence": true,
+    "source_grounded_claim_requires_field_level_reference": true,
+    "missing_prediction_alignment_is_fatal": true,
+    "stale_review_snapshot_is_fatal": true,
+    "no_evidence_baseline_reports_evidence_not_applicable": true,
+    "fatal_evaluation_cleans_stale_aggregate_metrics": true
+  },
+  "next_gate": "Repository-freeze the evaluator with the benchmark and evaluation contracts before formal method execution."
+}

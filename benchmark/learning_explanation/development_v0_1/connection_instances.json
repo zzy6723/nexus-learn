@@ -4,15 +4,15 @@
   "status": "prepared_not_frozen",
   "split": "development",
   "counts": {
-    "instances": 17,
+    "instances": 21,
     "relation_support": {
-      "APPLIED_IN": 6,
-      "REQUIRES": 4,
+      "APPLIED_IN": 8,
+      "REQUIRES": 6,
       "FORMALIZES": 4,
       "EXTENDS": 2,
       "CONTRASTS_WITH": 1
     },
-    "evidence_items": 30
+    "evidence_items": 40
   },
   "instances": [
     {
@@ -233,6 +233,98 @@
     },
     {
       "explanation_instance_id": "le_dev_007",
+      "source_connection_pair_id": "conn_dev_pair_5729188da76c91ec",
+      "source_ko": {
+        "canonical_ko_id": "conn_dev_ko_005",
+        "canonical_name": "Objective Function",
+        "canonical_type": "Concept"
+      },
+      "relation_type": "APPLIED_IN",
+      "symmetric": false,
+      "target_ko": {
+        "canonical_ko_id": "conn_dev_ko_008",
+        "canonical_name": "Newton Optimisation Method",
+        "canonical_type": "Method"
+      },
+      "evidence": [
+        {
+          "evidence_id": "evidence_001",
+          "lecture_id": "unconstrained_optimisation_001",
+          "block_index": 1,
+          "span": "An objective function assigns a scalar value to each candidate parameter vector. Unconstrained optimisation seeks a parameter vector that minimizes this objective function."
+        },
+        {
+          "evidence_id": "evidence_005",
+          "lecture_id": "unconstrained_optimisation_001",
+          "block_index": 5,
+          "span": "The Newton optimisation method additionally requires the Hessian matrix to model local curvature. When the Hessian is invertible, the Newton optimisation update is"
+        },
+        {
+          "evidence_id": "evidence_006",
+          "lecture_id": "unconstrained_optimisation_001",
+          "block_index": 6,
+          "span": "\\[\nx_{k+1}=x_k-H_f(x_k)^{-1}\\nabla f(x_k).\n\\]"
+        }
+      ],
+      "evidence_support_scope": "single_lecture_explicit",
+      "source_annotation_rationale": "The Newton Optimisation Method updates parameters to optimize the objective function.",
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": false,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "data_role": "development_only"
+    },
+    {
+      "explanation_instance_id": "le_dev_008",
+      "source_connection_pair_id": "conn_dev_pair_799174f17022eacc",
+      "source_ko": {
+        "canonical_ko_id": "conn_dev_ko_014",
+        "canonical_name": "Score Function",
+        "canonical_type": "Concept"
+      },
+      "relation_type": "APPLIED_IN",
+      "symmetric": false,
+      "target_ko": {
+        "canonical_ko_id": "conn_dev_ko_013",
+        "canonical_name": "Maximum Likelihood Estimation",
+        "canonical_type": "Method"
+      },
+      "evidence": [
+        {
+          "evidence_id": "evidence_002",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 2,
+          "span": "Maximum likelihood estimation treats the log-likelihood as an objective function and selects a parameter value that maximizes it. The score function is the gradient of the log-likelihood with respect to the parameter,"
+        },
+        {
+          "evidence_id": "evidence_003",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 3,
+          "span": "\\[\ns(\\theta)=\\nabla_{\\theta}\\ell(\\theta).\n\\]"
+        },
+        {
+          "evidence_id": "evidence_004",
+          "lecture_id": "maximum_likelihood_001",
+          "block_index": 4,
+          "span": "At an interior differentiable maximum, a candidate satisfies the score equation \\(s(\\theta)=0\\). Finding such a candidate is a root-finding problem. When the score equation has no closed-form solution, Newton's root-finding method can be applied within maximum likelihood estimation."
+        }
+      ],
+      "evidence_support_scope": "single_lecture_explicit",
+      "source_annotation_rationale": "The Score Function is used to form the stationarity condition for an MLE candidate.",
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "data_role": "development_only"
+    },
+    {
+      "explanation_instance_id": "le_dev_009",
       "source_connection_pair_id": "conn_dev_pair_a1259045b6b2d2c7",
       "source_ko": {
         "canonical_ko_id": "conn_dev_ko_004",
@@ -272,7 +364,7 @@
       "data_role": "development_only"
     },
     {
-      "explanation_instance_id": "le_dev_008",
+      "explanation_instance_id": "le_dev_010",
       "source_connection_pair_id": "conn_dev_pair_654033881f94fbf0",
       "source_ko": {
         "canonical_ko_id": "conn_dev_ko_007",
@@ -312,7 +404,7 @@
       "data_role": "development_only"
     },
     {
-      "explanation_instance_id": "le_dev_009",
+      "explanation_instance_id": "le_dev_011",
       "source_connection_pair_id": "conn_dev_pair_6aa4cd7ede0d0fd8",
       "source_ko": {
         "canonical_ko_id": "conn_dev_ko_028",
@@ -358,7 +450,7 @@
       "data_role": "development_only"
     },
     {
-      "explanation_instance_id": "le_dev_010",
+      "explanation_instance_id": "le_dev_012",
       "source_connection_pair_id": "conn_dev_pair_8404187bbee08589",
       "source_ko": {
         "canonical_ko_id": "conn_dev_ko_013",
@@ -398,7 +490,87 @@
       "data_role": "development_only"
     },
     {
-      "explanation_instance_id": "le_dev_011",
+      "explanation_instance_id": "le_dev_013",
+      "source_connection_pair_id": "conn_dev_pair_7f5ac4c6e2fe5268",
+      "source_ko": {
+        "canonical_ko_id": "conn_dev_ko_007",
+        "canonical_name": "Gradient Descent Update",
+        "canonical_type": "Formula"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "target_ko": {
+        "canonical_ko_id": "conn_dev_ko_001",
+        "canonical_name": "Gradient",
+        "canonical_type": "Concept"
+      },
+      "evidence": [
+        {
+          "evidence_id": "evidence_009",
+          "lecture_id": "unconstrained_optimisation_001",
+          "block_index": 2,
+          "span": "Gradient descent requires the gradient of the objective function. With step size \\(\\alpha_k>0\\), the method moves opposite to the gradient. The gradient descent update is"
+        },
+        {
+          "evidence_id": "evidence_010",
+          "lecture_id": "unconstrained_optimisation_001",
+          "block_index": 3,
+          "span": "\\[\nx_{k+1}=x_k-\\alpha_k\\nabla f(x_k).\n\\]"
+        }
+      ],
+      "evidence_support_scope": "single_lecture_explicit",
+      "source_annotation_rationale": "The Gradient Descent Update cannot be stated without the gradient term.",
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": true,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "data_role": "development_only"
+    },
+    {
+      "explanation_instance_id": "le_dev_014",
+      "source_connection_pair_id": "conn_dev_pair_bfce59cf0247f59a",
+      "source_ko": {
+        "canonical_ko_id": "conn_dev_ko_009",
+        "canonical_name": "Newton Optimisation Update",
+        "canonical_type": "Formula"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "target_ko": {
+        "canonical_ko_id": "conn_dev_ko_002",
+        "canonical_name": "Hessian Matrix",
+        "canonical_type": "Concept"
+      },
+      "evidence": [
+        {
+          "evidence_id": "evidence_012",
+          "lecture_id": "unconstrained_optimisation_001",
+          "block_index": 5,
+          "span": "The Newton optimisation method additionally requires the Hessian matrix to model local curvature. When the Hessian is invertible, the Newton optimisation update is"
+        },
+        {
+          "evidence_id": "evidence_013",
+          "lecture_id": "unconstrained_optimisation_001",
+          "block_index": 6,
+          "span": "\\[\nx_{k+1}=x_k-H_f(x_k)^{-1}\\nabla f(x_k).\n\\]"
+        }
+      ],
+      "evidence_support_scope": "single_lecture_explicit",
+      "source_annotation_rationale": "The Newton Optimisation Update requires the inverse Hessian term.",
+      "provenance_stratum": "overlap_bridge",
+      "scope_flags": {
+        "same_course_cross_lecture": true,
+        "cross_course": false,
+        "same_topic_cross_lecture": false,
+        "cross_topic": true
+      },
+      "data_role": "development_only"
+    },
+    {
+      "explanation_instance_id": "le_dev_015",
       "source_connection_pair_id": "conn_dev_pair_623dc620447526e3",
       "source_ko": {
         "canonical_ko_id": "conn_dev_ko_004",
@@ -438,7 +610,7 @@
       "data_role": "development_only"
     },
     {
-      "explanation_instance_id": "le_dev_012",
+      "explanation_instance_id": "le_dev_016",
       "source_connection_pair_id": "conn_dev_pair_225420587c4177f5",
       "source_ko": {
         "canonical_ko_id": "conn_dev_ko_007",
@@ -478,7 +650,7 @@
       "data_role": "development_only"
     },
     {
-      "explanation_instance_id": "le_dev_013",
+      "explanation_instance_id": "le_dev_017",
       "source_connection_pair_id": "conn_dev_pair_c9b55dc727622af1",
       "source_ko": {
         "canonical_ko_id": "conn_dev_ko_018",
@@ -524,7 +696,7 @@
       "data_role": "development_only"
     },
     {
-      "explanation_instance_id": "le_dev_014",
+      "explanation_instance_id": "le_dev_018",
       "source_connection_pair_id": "conn_dev_pair_d64d8e658f6dafd8",
       "source_ko": {
         "canonical_ko_id": "conn_dev_ko_023",
@@ -570,7 +742,7 @@
       "data_role": "development_only"
     },
     {
-      "explanation_instance_id": "le_dev_015",
+      "explanation_instance_id": "le_dev_019",
       "source_connection_pair_id": "conn_dev_pair_e848f855de939343",
       "source_ko": {
         "canonical_ko_id": "conn_dev_ko_020",
@@ -604,7 +776,7 @@
       "data_role": "development_only"
     },
     {
-      "explanation_instance_id": "le_dev_016",
+      "explanation_instance_id": "le_dev_020",
       "source_connection_pair_id": "conn_dev_pair_63bb993a9e7b1d30",
       "source_ko": {
         "canonical_ko_id": "conn_dev_ko_024",
@@ -638,7 +810,7 @@
       "data_role": "development_only"
     },
     {
-      "explanation_instance_id": "le_dev_017",
+      "explanation_instance_id": "le_dev_021",
       "source_connection_pair_id": "conn_dev_pair_7198ee241a3c0808",
       "source_ko": {
         "canonical_ko_id": "conn_dev_ko_006",

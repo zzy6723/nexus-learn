@@ -1,6 +1,6 @@
 {
   "artifact_type": "learning_explanation_success_criteria",
-  "artifact_schema_version": "v0.1",
+  "artifact_schema_version": "v0.2",
   "status": "proposed_pre_freeze",
   "scope": "oracle_conditioned_development_v0_1",
   "hard_gates": {
@@ -8,7 +8,8 @@
     "immutable_field_accuracy_minimum": 1.0,
     "exact_evidence_id_validity_rate_minimum": 1.0,
     "relation_faithfulness_rate_minimum": 0.95,
-    "direction_faithfulness_rate_minimum": 0.95,
+    "direction_faithfulness_rate_minimum": 1.0,
+    "maximum_direction_reversals": 0,
     "endpoint_faithfulness_rate_minimum": 0.95,
     "explanation_evidence_faithfulness_rate_minimum": 0.9,
     "faithfulness_pass_rate_minimum": 0.9,
@@ -24,7 +25,12 @@
     "pedagogically_non_empty_rate_minimum": 0.8,
     "paired_mean_learning_value_composite_gain_over_paraphrase_minimum": 0.5
   },
-  "selection_rule": "A method must pass every hard gate before secondary metrics can authorize selection. Usefulness cannot compensate for unfaithful explanation.",
+  "method_roles": {
+    "001a_deterministic_paraphrase": "non_selectable_lower_bound",
+    "001b_relation_only_llm": "non_selectable_no_evidence_control",
+    "002_evidence_grounded": "only_selectable_method"
+  },
+  "selection_rule": "Only 002_evidence_grounded is selectable. It must pass every hard gate, beat 001a_deterministic_paraphrase on the paired learning-value composite, and show no hard-gate regression. Usefulness cannot compensate for unfaithful explanation.",
   "claim_limits": [
     "Development inputs are human-validated Connections, not model-discovered Connections.",
     "Passing development gates does not establish independent generalization.",

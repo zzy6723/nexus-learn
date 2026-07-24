@@ -1,7 +1,7 @@
 # ADR-007: Oracle-Conditioned Learning Explanation
 
 **Status:** Proposed for 004-0 freeze
-**Version:** v0.1
+**Version:** v0.2
 **Date:** 2026-07-24
 **Owner:** Project
 
@@ -40,7 +40,17 @@ The experiment may generate only:
 - a concise Connection summary;
 - an Evidence-grounded explanation of why the Connection holds;
 - a generic account of its learning value;
-- references to supplied Evidence IDs.
+- field-level references to supplied Evidence IDs.
+
+Development compares:
+
+- a deterministic Relation-paraphrase lower bound;
+- a Relation-only LLM no-Evidence control;
+- an Evidence-grounded LLM method.
+
+Only the Evidence-grounded method is eligible for selection. The Relation-only
+control measures plausible unsupported elaboration; it is not an alternative
+product method.
 
 ## Excluded Capabilities
 

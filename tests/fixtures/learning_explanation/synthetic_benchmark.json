@@ -1,0 +1,94 @@
+{
+  "artifact_type": "synthetic_learning_explanation_benchmark",
+  "artifact_schema_version": "v0.1",
+  "instances": [
+    {
+      "explanation_instance_id": "le_dev_001",
+      "source_ko": {
+        "canonical_ko_id": "ko_gradient_descent_update",
+        "canonical_name": "Gradient Descent Update",
+        "canonical_type": "Formula"
+      },
+      "relation_type": "REQUIRES",
+      "symmetric": false,
+      "target_ko": {
+        "canonical_ko_id": "ko_gradient",
+        "canonical_name": "Gradient",
+        "canonical_type": "Concept"
+      },
+      "evidence": [
+        {
+          "evidence_id": "ev_001",
+          "lecture_id": "optimisation_fixture",
+          "span": "Gradient descent requires the gradient of the objective function."
+        }
+      ]
+    },
+    {
+      "explanation_instance_id": "le_dev_002",
+      "source_ko": {
+        "canonical_ko_id": "ko_ridge_regression",
+        "canonical_name": "Ridge Regression",
+        "canonical_type": "Method"
+      },
+      "relation_type": "EXTENDS",
+      "symmetric": false,
+      "target_ko": {
+        "canonical_ko_id": "ko_ordinary_least_squares",
+        "canonical_name": "Ordinary Least Squares",
+        "canonical_type": "Method"
+      },
+      "evidence": [
+        {
+          "evidence_id": "ev_002",
+          "lecture_id": "regression_fixture",
+          "span": "Ridge regression extends ordinary least squares by adding a coefficient penalty."
+        }
+      ]
+    },
+    {
+      "explanation_instance_id": "le_dev_003",
+      "source_ko": {
+        "canonical_ko_id": "ko_taylor_formula",
+        "canonical_name": "First-Order Taylor Formula",
+        "canonical_type": "Formula"
+      },
+      "relation_type": "FORMALIZES",
+      "symmetric": false,
+      "target_ko": {
+        "canonical_ko_id": "ko_taylor_approximation",
+        "canonical_name": "First-Order Taylor Approximation",
+        "canonical_type": "Concept"
+      },
+      "evidence": [
+        {
+          "evidence_id": "ev_003",
+          "lecture_id": "calculus_fixture",
+          "span": "The first-order Taylor approximation can be written as the displayed formula."
+        }
+      ]
+    },
+    {
+      "explanation_instance_id": "le_dev_004",
+      "source_ko": {
+        "canonical_ko_id": "ko_gradient_descent",
+        "canonical_name": "Gradient Descent",
+        "canonical_type": "Method"
+      },
+      "relation_type": "CONTRASTS_WITH",
+      "symmetric": true,
+      "target_ko": {
+        "canonical_ko_id": "ko_newton_optimisation",
+        "canonical_name": "Newton Optimisation Method",
+        "canonical_type": "Method"
+      },
+      "evidence": [
+        {
+          "evidence_id": "ev_004",
+          "lecture_id": "optimisation_fixture",
+          "span": "Gradient descent uses a step size, whereas Newton's method adjusts the step using curvature."
+        }
+      ]
+    }
+  ]
+}

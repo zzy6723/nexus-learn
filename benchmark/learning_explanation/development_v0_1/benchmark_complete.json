@@ -6,23 +6,27 @@
   "artifacts": {
     "source_manifest": {
       "path": "benchmark/learning_explanation/development_v0_1/source_manifest.json",
-      "sha256": "54020abf099c620098f6c2389f16e92ea0428d3b5e2c32d4c523950c72e04832"
+      "sha256": "bf6fa97a7d99506c8d6bf9ed4e2795170f3142abc5f0dfc3796bfb3171d3c281"
     },
     "connection_instances": {
       "path": "benchmark/learning_explanation/development_v0_1/connection_instances.json",
-      "sha256": "757d5efcbc2abadde63afd4239e5317a053cd60446cd78cc3f83413dde778d52"
+      "sha256": "31306d82b82b80d6095edccaf3672d9e28f6c4fd2ac050d5e94b143871c5b29b"
+    },
+    "annotation_scaffold": {
+      "path": "benchmark/learning_explanation/development_v0_1/annotation_scaffold.json",
+      "sha256": "34d26c893025c382c02958ed48f757e240b9cca3e259a7ebc4054b6f24018c56"
     }
   },
   "counts": {
-    "instances": 17,
+    "instances": 21,
     "relation_support": {
-      "APPLIED_IN": 6,
-      "REQUIRES": 4,
+      "APPLIED_IN": 8,
+      "REQUIRES": 6,
       "FORMALIZES": 4,
       "EXTENDS": 2,
       "CONTRASTS_WITH": 1
     },
-    "evidence_items": 30
+    "evidence_items": 40
   },
   "model_execution_authorized": false,
   "next_gate": "Human review, protocol review, repository freeze, and clean-state preflight are required before any explanation model run."

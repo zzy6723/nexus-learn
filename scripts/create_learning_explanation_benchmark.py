@@ -14,6 +14,7 @@ from typing import Any
 GENERATED_FILENAMES = (
     "source_manifest.json",
     "connection_instances.json",
+    "annotation_scaffold.json",
     "benchmark_complete.json",
 )
 
@@ -42,6 +43,7 @@ def create_benchmark(
     *,
     project_root: Path,
     selection_path: Path,
+    annotation_path: Path,
     ground_truth_path: Path,
     inventory_path: Path,
     lecture_dir: Path,
@@ -56,6 +58,7 @@ def create_benchmark(
         raise ValueError(f"Generated benchmark artifacts already exist: {rendered}")
 
     selection = read_json(selection_path)
+    annotation_spec = read_json(annotation_path)
     ground_truth = read_json(ground_truth_path)
     inventory = read_json(inventory_path)
 
@@ -64,6 +67,19 @@ def create_benchmark(
     selected = selection.get("selected_connections")
     if not isinstance(selected, list) or not selected:
         raise ValueError("Selection must contain selected_connections.")
+    annotations = annotation_spec.get("annotations")
+    if not isinstance(annotations, list) or not annotations:
+        raise ValueError("Annotation spec must contain annotations.")
+    annotations_by_pair = {
+        item["canonical_pair_id"]: item for item in annotations
+    }
+    if len(annotations_by_pair) != len(annotations):
+        raise ValueError("Annotation spec contains duplicate Connection IDs.")
+    selected_ids = [item["canonical_pair_id"] for item in selected]
+    if set(annotations_by_pair) != set(selected_ids):
+        raise ValueError(
+            "Annotation spec Connection IDs must exactly match the selection."
+        )
 
     pairs = {
         pair["canonical_pair_id"]: pair for pair in ground_truth.get("pairs", [])
@@ -74,6 +90,7 @@ def create_benchmark(
     }
 
     instances: list[dict[str, Any]] = []
+    annotation_items: list[dict[str, Any]] = []
     relation_counts: Counter[str] = Counter()
     lecture_ids: set[str] = set()
 
@@ -107,9 +124,10 @@ def create_benchmark(
         for item in evidence:
             lecture_ids.add(item["lecture_id"])
 
+        explanation_instance_id = f"le_dev_{index:03d}"
         instances.append(
             {
-                "explanation_instance_id": f"le_dev_{index:03d}",
+                "explanation_instance_id": explanation_instance_id,
                 "source_connection_pair_id": pair_id,
                 "source_ko": {
                     "canonical_ko_id": source_id,
@@ -129,6 +147,26 @@ def create_benchmark(
                 "provenance_stratum": pair["provenance_stratum"],
                 "scope_flags": pair["scope_flags"],
                 "data_role": "development_only",
+            }
+        )
+        annotation = annotations_by_pair[pair_id]
+        required_points = annotation.get("required_points")
+        forbidden_points = annotation.get("forbidden_or_unsupported_points")
+        risk_tags = annotation.get("risk_tags")
+        if not isinstance(required_points, list) or not required_points:
+            raise ValueError(f"{pair_id} must define required semantic points.")
+        if not isinstance(forbidden_points, list) or not forbidden_points:
+            raise ValueError(f"{pair_id} must define forbidden points.")
+        if not isinstance(risk_tags, list) or not risk_tags:
+            raise ValueError(f"{pair_id} must define risk tags.")
+        annotation_items.append(
+            {
+                "explanation_instance_id": explanation_instance_id,
+                "source_connection_pair_id": pair_id,
+                "required_points": required_points,
+                "forbidden_or_unsupported_points": forbidden_points,
+                "risk_tags": risk_tags,
+                "model_input_allowed": False,
             }
         )
         relation_counts[relation_type] += 1
@@ -162,6 +200,10 @@ def create_benchmark(
                 "path": relative_path(selection_path, project_root),
                 "sha256": sha256(selection_path),
             },
+            "annotation_scaffold_spec": {
+                "path": relative_path(annotation_path, project_root),
+                "sha256": sha256(annotation_path),
+            },
             "connection_ground_truth": {
                 "path": relative_path(ground_truth_path, project_root),
                 "sha256": sha256(ground_truth_path),
@@ -194,8 +236,21 @@ def create_benchmark(
 
     manifest_path = output_dir / "source_manifest.json"
     bundle_path = output_dir / "connection_instances.json"
+    annotation_scaffold_path = output_dir / "annotation_scaffold.json"
     write_json(manifest_path, manifest)
     write_json(bundle_path, bundle)
+    write_json(
+        annotation_scaffold_path,
+        {
+            "artifact_type": "learning_explanation_annotation_scaffold",
+            "artifact_schema_version": "v0.1",
+            "status": "prepared_not_frozen",
+            "split": "development",
+            "reference_prose": False,
+            "model_input_allowed": False,
+            "annotations": annotation_items,
+        },
+    )
 
     complete = {
         "artifact_type": "learning_explanation_benchmark_complete",
@@ -211,6 +266,10 @@ def create_benchmark(
                 "path": relative_path(bundle_path, project_root),
                 "sha256": sha256(bundle_path),
             },
+            "annotation_scaffold": {
+                "path": relative_path(annotation_scaffold_path, project_root),
+                "sha256": sha256(annotation_scaffold_path),
+            },
         },
         "counts": bundle["counts"],
         "model_execution_authorized": False,
@@ -225,6 +284,13 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--selection-spec",
         default="benchmark/learning_explanation/development_v0_1/selection_spec.json",
+    )
+    parser.add_argument(
+        "--annotation-spec",
+        default=(
+            "benchmark/learning_explanation/development_v0_1/"
+            "annotation_scaffold_spec.json"
+        ),
     )
     parser.add_argument(
         "--ground-truth",
@@ -256,6 +322,7 @@ def main() -> int:
         complete = create_benchmark(
             project_root=project_root,
             selection_path=Path(args.selection_spec),
+            annotation_path=Path(args.annotation_spec),
             ground_truth_path=Path(args.ground_truth),
             inventory_path=Path(args.canonical_inventory),
             lecture_dir=Path(args.lecture_dir),

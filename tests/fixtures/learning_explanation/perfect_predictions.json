@@ -1,0 +1,87 @@
+{
+  "artifact_type": "synthetic_learning_explanation_predictions",
+  "artifact_schema_version": "v0.1",
+  "method_id": "002_evidence_grounded",
+  "results": [
+    {
+      "explanation_instance_id": "le_dev_001",
+      "source_ko_id": "ko_gradient_descent_update",
+      "relation_type": "REQUIRES",
+      "target_ko_id": "ko_gradient",
+      "connection_summary": {
+        "text": "The Gradient Descent Update requires the gradient.",
+        "evidence_refs": []
+      },
+      "why_connected": {
+        "text": "The update uses the gradient to determine its descent direction.",
+        "evidence_refs": [
+          "ev_001"
+        ]
+      },
+      "learning_value": {
+        "text": "This link helps connect a calculus object to its role inside an optimisation update.",
+        "evidence_refs": []
+      }
+    },
+    {
+      "explanation_instance_id": "le_dev_002",
+      "source_ko_id": "ko_ridge_regression",
+      "relation_type": "EXTENDS",
+      "target_ko_id": "ko_ordinary_least_squares",
+      "connection_summary": {
+        "text": "Ridge Regression extends Ordinary Least Squares.",
+        "evidence_refs": []
+      },
+      "why_connected": {
+        "text": "It adds a coefficient penalty to the ordinary least-squares objective.",
+        "evidence_refs": [
+          "ev_002"
+        ]
+      },
+      "learning_value": {
+        "text": "This link helps organize Ridge Regression as a modification of an existing fitting method.",
+        "evidence_refs": []
+      }
+    },
+    {
+      "explanation_instance_id": "le_dev_003",
+      "source_ko_id": "ko_taylor_formula",
+      "relation_type": "FORMALIZES",
+      "target_ko_id": "ko_taylor_approximation",
+      "connection_summary": {
+        "text": "The First-Order Taylor Formula formalizes the First-Order Taylor Approximation.",
+        "evidence_refs": []
+      },
+      "why_connected": {
+        "text": "The displayed formula is the mathematical expression of that approximation.",
+        "evidence_refs": [
+          "ev_003"
+        ]
+      },
+      "learning_value": {
+        "text": "This link helps interpret the formula as an operational statement of the approximation.",
+        "evidence_refs": []
+      }
+    },
+    {
+      "explanation_instance_id": "le_dev_004",
+      "source_ko_id": "ko_gradient_descent",
+      "relation_type": "CONTRASTS_WITH",
+      "target_ko_id": "ko_newton_optimisation",
+      "connection_summary": {
+        "text": "Gradient Descent contrasts with the Newton Optimisation Method.",
+        "evidence_refs": []
+      },
+      "why_connected": {
+        "text": "Gradient Descent controls its move with a step size, while Newton optimisation adjusts the move using curvature.",
+        "evidence_refs": [
+          "ev_004"
+        ]
+      },
+      "learning_value": {
+        "text": "This contrast helps compare how first-order and curvature-adjusted updates are constructed.",
+        "evidence_refs": []
+      }
+    }
+  ]
+}

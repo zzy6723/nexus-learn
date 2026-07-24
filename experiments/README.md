@@ -75,7 +75,8 @@ now development-only for all three tested architectures. This is a scoped
 negative development result, not evidence that Connection Discovery is
 generally impossible.
 
-Experiment 004 has entered benchmark and evaluation preparation only as an
+Experiment 004 has prepared a repository-freeze candidate for benchmark and
+evaluation contracts as an
 Oracle-conditioned component experiment. It fixes human-validated Connections
 and Evidence and does not evaluate predicted-Connection explanations or the
 end-to-end product pipeline.

@@ -32,20 +32,31 @@ def validate_path_hash(project_root: Path, record: dict[str, Any]) -> Path:
 def validate_benchmark(project_root: Path, benchmark_dir: Path) -> dict[str, Any]:
     manifest_path = benchmark_dir / "source_manifest.json"
     bundle_path = benchmark_dir / "connection_instances.json"
+    annotation_scaffold_path = benchmark_dir / "annotation_scaffold.json"
     complete_path = benchmark_dir / "benchmark_complete.json"
-    for path in (manifest_path, bundle_path, complete_path):
+    for path in (
+        manifest_path,
+        bundle_path,
+        annotation_scaffold_path,
+        complete_path,
+    ):
         if not path.is_file():
             raise ValueError(f"Missing required benchmark artifact: {path}")
 
     manifest = read_json(manifest_path)
     bundle = read_json(bundle_path)
+    annotation_scaffold = read_json(annotation_scaffold_path)
     complete = read_json(complete_path)
 
     validate_path_hash(project_root, complete["artifacts"]["source_manifest"])
     validate_path_hash(project_root, complete["artifacts"]["connection_instances"])
+    validate_path_hash(project_root, complete["artifacts"]["annotation_scaffold"])
 
     sources = manifest["sources"]
     selection_path = validate_path_hash(project_root, sources["selection_spec"])
+    annotation_spec_path = validate_path_hash(
+        project_root, sources["annotation_scaffold_spec"]
+    )
     ground_truth_path = validate_path_hash(
         project_root, sources["connection_ground_truth"]
     )
@@ -58,12 +69,21 @@ def validate_benchmark(project_root: Path, benchmark_dir: Path) -> dict[str, Any
     }
 
     selection = read_json(selection_path)
+    annotation_spec = read_json(annotation_spec_path)
     ground_truth = read_json(ground_truth_path)
     inventory = read_json(inventory_path)
     selected = selection["selected_connections"]
     selected_ids = [item["canonical_pair_id"] for item in selected]
     if len(selected_ids) != len(set(selected_ids)):
         raise ValueError("Selection contains duplicate canonical pair IDs.")
+    spec_annotations = annotation_spec.get("annotations")
+    if not isinstance(spec_annotations, list):
+        raise ValueError("Annotation spec must contain an annotations list.")
+    spec_ids = [item["canonical_pair_id"] for item in spec_annotations]
+    if len(spec_ids) != len(set(spec_ids)):
+        raise ValueError("Annotation spec contains duplicate Connection IDs.")
+    if set(spec_ids) != set(selected_ids):
+        raise ValueError("Annotation spec does not align with the selection.")
 
     pairs = {
         pair["canonical_pair_id"]: pair for pair in ground_truth.get("pairs", [])
@@ -77,6 +97,18 @@ def validate_benchmark(project_root: Path, benchmark_dir: Path) -> dict[str, Any
         raise ValueError("Connection instance bundle must contain an instances list.")
     if len(instances) != len(selected_ids):
         raise ValueError("Connection instance count does not match selection.")
+    generated_annotations = annotation_scaffold.get("annotations")
+    if not isinstance(generated_annotations, list):
+        raise ValueError("Generated annotation scaffold must contain annotations.")
+    if len(generated_annotations) != len(instances):
+        raise ValueError("Annotation scaffold count does not match instances.")
+    if annotation_scaffold.get("model_input_allowed") is not False:
+        raise ValueError("Annotation scaffold must be forbidden from model input.")
+    annotation_by_instance = {
+        item["explanation_instance_id"]: item for item in generated_annotations
+    }
+    if len(annotation_by_instance) != len(generated_annotations):
+        raise ValueError("Annotation scaffold contains duplicate instance IDs.")
 
     relation_counts: Counter[str] = Counter()
     evidence_count = 0
@@ -90,6 +122,9 @@ def validate_benchmark(project_root: Path, benchmark_dir: Path) -> dict[str, Any
         if expected_instance_id in seen_instance_ids:
             raise ValueError("Duplicate explanation instance ID.")
         seen_instance_ids.add(expected_instance_id)
+        annotation = annotation_by_instance.get(expected_instance_id)
+        if annotation is None:
+            raise ValueError("Annotation scaffold is missing an instance.")
 
         pair_id = instance["source_connection_pair_id"]
         if pair_id != selected_ids[index - 1]:
@@ -97,6 +132,18 @@ def validate_benchmark(project_root: Path, benchmark_dir: Path) -> dict[str, Any
         if pair_id in seen_pair_ids:
             raise ValueError("Duplicate source Connection pair.")
         seen_pair_ids.add(pair_id)
+        if annotation["source_connection_pair_id"] != pair_id:
+            raise ValueError("Annotation scaffold pair alignment changed.")
+        for field in (
+            "required_points",
+            "forbidden_or_unsupported_points",
+            "risk_tags",
+        ):
+            values = annotation.get(field)
+            if not isinstance(values, list) or not values:
+                raise ValueError(f"{pair_id} annotation field {field} is empty.")
+        if annotation.get("model_input_allowed") is not False:
+            raise ValueError(f"{pair_id} annotation is not model-input isolated.")
 
         pair = pairs[pair_id]
         if pair["category"] != "IN_SCHEMA_CONNECTION":

@@ -1,44 +1,68 @@
 {
   "artifact_type": "learning_explanation_004_0_preflight",
-  "artifact_schema_version": "v0.1",
-  "status": "structural_preflight_passed_pending_review_and_freeze",
+    "artifact_schema_version": "v0.2",
+    "status": "freeze_candidate_prepared_pending_repository_freeze",
   "scope": "oracle_conditioned_development_v0_1",
   "bindings": {
     "decision": {
       "path": "docs/decisions/007-oracle-conditioned-learning-explanation.md",
-      "sha256": "1b853983c39c525b163061adeac6aa0cf96c4b12c28720f595f92f4e08e05f22"
+            "sha256": "d8a8b03a73af8d612a22e1e30db8002b08a931971062ddb2b16143dbb43e0719"
     },
     "contract": {
       "path": "benchmark/learning_explanation_contract.md",
-      "sha256": "7dbab50347f90517a54ac3579d419f335378cf8791517f01237e51244d67d856"
+            "sha256": "aed167a931e3500bc180ab8b7173246c0a7a3c0c6bfe2306e95ee0f9407126fc"
     },
     "annotation_guidelines": {
       "path": "benchmark/learning_explanation_annotation_guidelines.md",
-      "sha256": "afe2deaa2bc6a3ecdf09547f3d7b257da998a9884b1ee0584d105863ab7c2523"
+            "sha256": "1b78cb2a217c1be185cec1a6e2ce14355a318b97bc6c754da09bb841e6883c2c"
     },
     "evaluation_protocol": {
       "path": "benchmark/learning_explanation_evaluation_protocol.md",
-      "sha256": "56b5c1994ba37a2b7e6f3718e4113a9cb5c23eedca2cd8fc5ff979980d0c51ed"
+            "sha256": "828de0ac2bcee32f1544492ceed1db1e776121727ab64005a6438fb5fc953026"
     },
     "success_criteria": {
       "path": "benchmark/learning_explanation_success_criteria_v0_1.json",
-      "sha256": "7f2b0d3ee273a0350f2616e313191e68f43444b4af0e3dec2dfe49ad0be030d7"
+            "sha256": "bdf7c4bc53f9fcbdfa3752dc873aeba8b51aa7bf9f54058e4867e2e047ea90c4"
+        },
+        "input_schema": {
+            "path": "benchmark/schema/learning_explanation_input.schema.json",
+            "sha256": "53e8a9d977a48a0a2579c743067adf922146710c30dcd90beec42cc8ea8d1dc1"
     },
     "output_schema": {
       "path": "benchmark/schema/learning_explanation_output.schema.json",
-      "sha256": "4fe003042a57060608167b7976133c9406a460ae99273458458644a8685a92e5"
+            "sha256": "2712bfd62382e63fbb50c74bd670814456b3f3027534a7e2fd506bb67d0fa792"
+        },
+        "evaluation_schema": {
+            "path": "benchmark/schema/learning_explanation_evaluation.schema.json",
+            "sha256": "728743947858af471b5e56d3f5aeb09028a1ea973abfeeb61bdb3e7c0ec5eddf"
     },
-    "benchmark_completion": {
-      "path": "benchmark/learning_explanation/development_v0_1/benchmark_complete.json",
-      "sha256": "44c6b0a4e67c231849cc1747d5cc67f5aa4b90f53c68f3480cf9638760200051"
+        "benchmark_completion": {
+            "path": "benchmark/learning_explanation/development_v0_1/benchmark_complete.json",
+            "sha256": "8bca1d58d90fb5ddd63571ffb3e5fd006bb2ac6807ad3f671e7b40bae7f28fe6"
+        },
+        "benchmark_creator": {
+            "path": "scripts/create_learning_explanation_benchmark.py",
+            "sha256": "ae9b8827b9cd7100ae43ac37a775482cc5875f4352e0820887e0bb6a35619e76"
+        },
+        "benchmark_checker": {
+            "path": "scripts/check_learning_explanation_benchmark.py",
+            "sha256": "92c451338f889a8469c1bf3850bbd5c319536278f980b87711735eedb5bd83cb"
+        },
+        "benchmark_test_suite": {
+            "path": "tests/test_learning_explanation_benchmark.py",
+            "sha256": "342aab587014854f162dfab6bb304e9a95d75a49ac88df24961f0f2e43fffa57"
+        },
+        "evaluator_validation": {
+            "path": "experiments/learning_explanation/004_0_benchmark_preparation/evaluator_validation.json",
+            "sha256": "d48658a52484dd97942c846a8f02bfd29c4cafa10e9a053047f3819948865a49"
     }
   },
   "counts": {
-    "instances": 17,
-    "evidence_items": 30,
+        "instances": 21,
+        "evidence_items": 40,
     "relation_support": {
-      "APPLIED_IN": 6,
-      "REQUIRES": 4,
+            "APPLIED_IN": 8,
+            "REQUIRES": 6,
       "FORMALIZES": 4,
       "EXTENDS": 2,
       "CONTRASTS_WITH": 1
@@ -49,10 +73,14 @@
     "uses_connection_model_predictions": false,
     "uses_human_validated_evidence": true,
     "related_to_excluded_without_positive_support": true,
-    "claim_protocol_defined": true,
-    "faithfulness_precedes_learning_value": true,
+        "claim_protocol_defined": true,
+        "field_level_evidence_contract_defined": true,
+        "relation_only_no_evidence_control_defined": true,
+        "annotation_scaffold_isolated_from_model_input": true,
+        "synthetic_evaluator_validation_passed": true,
+        "faithfulness_precedes_learning_value": true,
     "independent_validation_source_reserved": false,
     "model_execution_authorized": false
   },
-  "next_gate": "Human review and repository freeze are required before implementing formal explanation model execution."
+    "next_gate": "Repository-freeze this 004-0 method boundary, then implement Baselines 001A and 001B without changing the frozen benchmark or evaluator."
 }

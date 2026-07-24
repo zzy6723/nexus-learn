@@ -1,6 +1,6 @@
 # Experiment 004: Oracle-Conditioned Learning Explanation
 
-**Status:** 004-0 structurally prepared; pending human review and repository freeze
+**Status:** 004-0 freeze candidate prepared; pending repository freeze
 **Product boundary:** Downstream predicted-Connection explanation remains blocked
 
 ## Objective
@@ -19,10 +19,10 @@ component, not the end-to-end MVP.
 
 | Stage | Name | Status |
 | --- | --- | --- |
-| 004-0 | Benchmark and Evaluation Preparation | Structurally prepared; pending review and freeze |
-| 004-1 | Deterministic Relation-Paraphrase Baseline | Not started |
+| 004-0 | Benchmark and Evaluation Preparation | Freeze candidate prepared |
+| 004-1 | Oracle-Connection Explanation Baselines | Not started |
 | 004-2 | Evidence-Grounded Explanation Method | Not started |
-| 004-3 | Faithfulness and Learning-Value Evaluation | Not started |
+| 004-3 | Development Validation and Method Selection | Not started |
 | 004-4 | Independent Validation | Not authorized until development gates pass |
 
 ## Boundary
@@ -47,6 +47,16 @@ Faithfulness is a hard gate. Learning-value scores are considered only for
 faithfulness-passing explanations. A fluent explanation cannot repair a
 Relation distortion, direction reversal, endpoint drift, contradiction, or
 unsupported substantive claim.
+
+Development uses three fixed method roles:
+
+- `001a_deterministic_paraphrase`: deterministic lower bound;
+- `001b_relation_only_llm`: no-Evidence hallucination control;
+- `002_evidence_grounded`: only selectable method.
+
+The development benchmark contains 21 Oracle Connection instances and 40
+human-validated Evidence entries. `RELATED_TO` remains excluded because the
+source benchmark has no reliable positive support.
 
 ## Records
 

@@ -1,0 +1,155 @@
+{
+  "artifact_type": "synthetic_learning_explanation_reviews",
+  "artifact_schema_version": "v0.1",
+  "prediction_sha256": "f5053ae3609d404d8de81b20bffb60cf9666273c04ea78225677b1e5686f55fc",
+  "reviews": [
+    {
+      "blind_review_id": "blind_001",
+      "explanation_instance_id": "le_dev_001",
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "field": "connection_summary",
+          "claim_text": "The update requires the gradient.",
+          "support_label": "RELATION_ENTAILED"
+        },
+        {
+          "claim_id": "claim_002",
+          "field": "why_connected",
+          "claim_text": "The update uses the gradient to determine its direction.",
+          "support_label": "SOURCE_GROUNDED"
+        },
+        {
+          "claim_id": "claim_003",
+          "field": "learning_value",
+          "claim_text": "The link connects calculus to an optimisation update.",
+          "support_label": "GENERIC_PEDAGOGICAL_INFERENCE"
+        }
+      ],
+      "faithfulness": {
+        "relation_faithful": true,
+        "direction_faithful": true,
+        "endpoint_faithful": true,
+        "evidence_faithful": true
+      },
+      "failure_labels": [],
+      "learning_value_scores": {
+        "conceptual_mechanism": 2,
+        "learning_relevance": 2,
+        "specificity": 2,
+        "clarity": 2
+      }
+    },
+    {
+      "blind_review_id": "blind_002",
+      "explanation_instance_id": "le_dev_002",
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "field": "connection_summary",
+          "claim_text": "Ridge Regression extends Ordinary Least Squares.",
+          "support_label": "RELATION_ENTAILED"
+        },
+        {
+          "claim_id": "claim_002",
+          "field": "why_connected",
+          "claim_text": "Ridge Regression adds a coefficient penalty.",
+          "support_label": "SOURCE_GROUNDED"
+        },
+        {
+          "claim_id": "claim_003",
+          "field": "learning_value",
+          "claim_text": "The link organizes one method as a modification of another.",
+          "support_label": "GENERIC_PEDAGOGICAL_INFERENCE"
+        }
+      ],
+      "faithfulness": {
+        "relation_faithful": true,
+        "direction_faithful": true,
+        "endpoint_faithful": true,
+        "evidence_faithful": true
+      },
+      "failure_labels": [],
+      "learning_value_scores": {
+        "conceptual_mechanism": 2,
+        "learning_relevance": 2,
+        "specificity": 2,
+        "clarity": 2
+      }
+    },
+    {
+      "blind_review_id": "blind_003",
+      "explanation_instance_id": "le_dev_003",
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "field": "connection_summary",
+          "claim_text": "The formula formalizes the approximation.",
+          "support_label": "RELATION_ENTAILED"
+        },
+        {
+          "claim_id": "claim_002",
+          "field": "why_connected",
+          "claim_text": "The formula is the mathematical expression of the approximation.",
+          "support_label": "SOURCE_GROUNDED"
+        },
+        {
+          "claim_id": "claim_003",
+          "field": "learning_value",
+          "claim_text": "The link helps interpret a formula operationally.",
+          "support_label": "GENERIC_PEDAGOGICAL_INFERENCE"
+        }
+      ],
+      "faithfulness": {
+        "relation_faithful": true,
+        "direction_faithful": true,
+        "endpoint_faithful": true,
+        "evidence_faithful": true
+      },
+      "failure_labels": [],
+      "learning_value_scores": {
+        "conceptual_mechanism": 2,
+        "learning_relevance": 2,
+        "specificity": 2,
+        "clarity": 2
+      }
+    },
+    {
+      "blind_review_id": "blind_004",
+      "explanation_instance_id": "le_dev_004",
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "field": "connection_summary",
+          "claim_text": "The two methods contrast.",
+          "support_label": "RELATION_ENTAILED"
+        },
+        {
+          "claim_id": "claim_002",
+          "field": "why_connected",
+          "claim_text": "One uses step-size control while the other uses curvature.",
+          "support_label": "SOURCE_GROUNDED"
+        },
+        {
+          "claim_id": "claim_003",
+          "field": "learning_value",
+          "claim_text": "The contrast helps compare update construction.",
+          "support_label": "GENERIC_PEDAGOGICAL_INFERENCE"
+        }
+      ],
+      "faithfulness": {
+        "relation_faithful": true,
+        "direction_faithful": true,
+        "endpoint_faithful": true,
+        "evidence_faithful": true
+      },
+      "failure_labels": [],
+      "learning_value_scores": {
+        "conceptual_mechanism": 2,
+        "learning_relevance": 2,
+        "specificity": 2,
+        "clarity": 2
+      }
+    }
+  ]
+}

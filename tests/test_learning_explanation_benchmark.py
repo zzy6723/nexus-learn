@@ -21,6 +21,11 @@ class LearningExplanationBenchmarkTest(unittest.TestCase):
             project_root=PROJECT_ROOT,
             selection_path=PROJECT_ROOT
             / "benchmark/learning_explanation/development_v0_1/selection_spec.json",
+            annotation_path=PROJECT_ROOT
+            / (
+                "benchmark/learning_explanation/development_v0_1/"
+                "annotation_scaffold_spec.json"
+            ),
             ground_truth_path=PROJECT_ROOT
             / "benchmark/connection_discovery/development_v0_1/ground_truth.json",
             inventory_path=PROJECT_ROOT
@@ -36,11 +41,12 @@ class LearningExplanationBenchmarkTest(unittest.TestCase):
 
     def test_creator_and_checker_pass(self):
         complete = self.create()
-        self.assertEqual(complete["counts"]["instances"], 17)
+        self.assertEqual(complete["counts"]["instances"], 21)
         self.assertFalse(complete["model_execution_authorized"])
 
         counts = validate_benchmark(PROJECT_ROOT, self.output_dir)
-        self.assertEqual(counts["instances"], 17)
+        self.assertEqual(counts["instances"], 21)
+        self.assertEqual(counts["evidence_items"], 40)
         self.assertEqual(counts["relation_support"]["FORMALIZES"], 4)
         self.assertEqual(counts["relation_support"]["CONTRASTS_WITH"], 1)
 
@@ -66,6 +72,25 @@ class LearningExplanationBenchmarkTest(unittest.TestCase):
         complete_path.write_text(json.dumps(complete, indent=2) + "\n")
 
         with self.assertRaisesRegex(ValueError, "source endpoint changed"):
+            validate_benchmark(PROJECT_ROOT, self.output_dir)
+
+    def test_checker_rejects_annotation_alignment_change(self):
+        self.create()
+        scaffold_path = self.output_dir / "annotation_scaffold.json"
+        scaffold = json.loads(scaffold_path.read_text())
+        scaffold["annotations"][0]["source_connection_pair_id"] = "changed"
+        scaffold_path.write_text(json.dumps(scaffold, indent=2) + "\n")
+
+        complete_path = self.output_dir / "benchmark_complete.json"
+        complete = json.loads(complete_path.read_text())
+        import hashlib
+
+        complete["artifacts"]["annotation_scaffold"]["sha256"] = hashlib.sha256(
+            scaffold_path.read_bytes()
+        ).hexdigest()
+        complete_path.write_text(json.dumps(complete, indent=2) + "\n")
+
+        with self.assertRaisesRegex(ValueError, "pair alignment changed"):
             validate_benchmark(PROJECT_ROOT, self.output_dir)
 
 

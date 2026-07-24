@@ -11,8 +11,7 @@
     "target_ko_id",
     "connection_summary",
     "why_connected",
-    "learning_value",
-    "evidence_ids"
+    "learning_value"
   ],
   "properties": {
     "explanation_instance_id": {
@@ -38,24 +37,36 @@
       "minLength": 1
     },
     "connection_summary": {
-      "type": "string",
-      "minLength": 1
+      "$ref": "#/$defs/explanation_field"
     },
     "why_connected": {
-      "type": "string",
-      "minLength": 1
+      "$ref": "#/$defs/explanation_field"
     },
     "learning_value": {
-      "type": "string",
-      "minLength": 1
-    },
-    "evidence_ids": {
-      "type": "array",
-      "minItems": 1,
-      "uniqueItems": true,
-      "items": {
-        "type": "string",
-        "minLength": 1
+      "$ref": "#/$defs/explanation_field"
+    }
+  },
+  "$defs": {
+    "explanation_field": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "text",
+        "evidence_refs"
+      ],
+      "properties": {
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_refs": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
       }
     }
   }

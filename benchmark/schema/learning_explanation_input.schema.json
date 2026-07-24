@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "learning_explanation_input.schema.json",
+  "title": "Learning Explanation Model Input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "explanation_instance_id",
+    "source_ko",
+    "relation_type",
+    "symmetric",
+    "target_ko",
+    "evidence_catalog"
+  ],
+  "properties": {
+    "explanation_instance_id": {
+      "type": "string",
+      "pattern": "^le_(dev|ind)_[0-9]{3}$"
+    },
+    "source_ko": {
+      "$ref": "#/$defs/knowledge_object"
+    },
+    "relation_type": {
+      "type": "string",
+      "enum": [
+        "REQUIRES",
+        "APPLIED_IN",
+        "EXTENDS",
+        "CONTRASTS_WITH",
+        "FORMALIZES"
+      ]
+    },
+    "symmetric": {
+      "type": "boolean"
+    },
+    "target_ko": {
+      "$ref": "#/$defs/knowledge_object"
+    },
+    "evidence_catalog": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/evidence_item"
+      }
+    }
+  },
+  "$defs": {
+    "knowledge_object": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "canonical_ko_id",
+        "canonical_name",
+        "canonical_type"
+      ],
+      "properties": {
+        "canonical_ko_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "canonical_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "canonical_type": {
+          "type": "string",
+          "enum": [
+            "Concept",
+            "Method",
+            "Formula"
+          ]
+        }
+      }
+    },
+    "evidence_item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "evidence_id",
+        "lecture_id",
+        "span"
+      ],
+      "properties": {
+        "evidence_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "lecture_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "span": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

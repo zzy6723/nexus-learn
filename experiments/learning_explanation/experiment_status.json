@@ -1,7 +1,7 @@
 {
   "artifact_type": "learning_explanation_experiment_status",
-  "artifact_schema_version": "v0.1",
-  "status": "004_0_structurally_prepared_pending_review_and_freeze",
+    "artifact_schema_version": "v0.2",
+    "status": "004_0_freeze_candidate_prepared_pending_repository_freeze",
   "authoritative_as_of": "2026-07-24",
   "experiment_name": "Oracle-Conditioned Learning Explanation",
   "product_pipeline_validation_authorized": false,
@@ -9,16 +9,16 @@
   "current_stage": {
     "id": "004_0",
     "name": "Benchmark and Evaluation Preparation",
-    "status": "structural_preflight_passed_pending_review_and_freeze",
+        "status": "freeze_candidate_prepared_pending_repository_freeze",
     "preflight": {
       "path": "experiments/learning_explanation/004_0_benchmark_preparation/preflight.json",
-      "sha256": "2c4178ca40f0a4bcdd59cdf6fbec68b47b73e6f6e89b265973489e738d3a98c6"
+            "sha256": "d518bc5badb42f315071ca9059351211eb5728d508feae9172f6d22b92a55cb8"
     }
   },
   "development_benchmark": {
     "path": "benchmark/learning_explanation/development_v0_1/benchmark_complete.json",
-    "sha256": "44c6b0a4e67c231849cc1747d5cc67f5aa4b90f53c68f3480cf9638760200051",
-    "instances": 17,
+        "sha256": "8bca1d58d90fb5ddd63571ffb3e5fd006bb2ac6807ad3f671e7b40bae7f28fe6",
+        "instances": 21,
     "independent_validation_source": false
   },
   "blocked_capabilities": [
@@ -27,5 +27,5 @@
     "connection_ranking",
     "learner_state_personalization"
   ],
-  "next_gate": "Human review, threshold acceptance, repository freeze, and clean-state execution preflight before Baseline 001 implementation or any model run."
+    "next_gate": "Repository freeze and clean-state method preflight before Baselines 001A and 001B implementation or any model run."
 }

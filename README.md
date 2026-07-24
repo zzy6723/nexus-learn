@@ -73,7 +73,7 @@ Technical Validation currently has the following experiment status:
 | 002B-2 | Candidate Pair Generation under predicted KOs | Completed with partial feasibility |
 | 002C | Knowledge Object Resolution / Canonicalization | Completed with limited independent validation |
 | 003 | Learner-relevant Connection Discovery | Closed with negative development Technical Validation results |
-| 004 | Oracle-conditioned Learning Explanation | 004-0 preparation; downstream product validation remains blocked |
+| 004 | Oracle-conditioned Learning Explanation | 004-0 freeze candidate prepared; downstream product validation remains blocked |
 
 Experiment 002B is complete. The current lecture-local safety path uses
 All-Pairs candidate generation because the deterministic Rule-Filtered v0.1

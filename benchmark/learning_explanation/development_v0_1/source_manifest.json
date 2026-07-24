@@ -6,7 +6,11 @@
   "sources": {
     "selection_spec": {
       "path": "benchmark/learning_explanation/development_v0_1/selection_spec.json",
-      "sha256": "eef126caba3c452eb6570f6913956f7c566a6fab744a20bbd51d21adb07e17a8"
+      "sha256": "ef09fc9d3b20c339c9d17426a78031cc310d70ed4818d175f80f918742009005"
+    },
+    "annotation_scaffold_spec": {
+      "path": "benchmark/learning_explanation/development_v0_1/annotation_scaffold_spec.json",
+      "sha256": "627e5b4af48dec531d4efc569edca185c3e57bcbf78aa3944b897339f0433f5e"
     },
     "connection_ground_truth": {
       "path": "benchmark/connection_discovery/development_v0_1/ground_truth.json",

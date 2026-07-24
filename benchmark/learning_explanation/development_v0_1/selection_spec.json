@@ -11,8 +11,8 @@
     "unit": "human_validated_primary_positive_connection",
     "include_all_labels_with_source_support_at_most": 4,
     "sampled_relation_types": {
-      "APPLIED_IN": "Six fixed examples spanning calculus, optimisation, ODEs, statistics, root finding, and linear regression.",
-      "REQUIRES": "Four fixed examples spanning formula prerequisites, iterative updates, and model assumptions."
+      "APPLIED_IN": "Eight fixed examples spanning calculus, optimisation, ODEs, statistics, root finding, and linear regression.",
+      "REQUIRES": "Six fixed examples spanning formula prerequisites, iterative updates, model assumptions, gradients, and Hessians."
     },
     "excluded_relation_types": {
       "RELATED_TO": "The source benchmark has no reliable positive support."
@@ -20,10 +20,10 @@
     "selection_was_defined_before_explanation_model_output": true
   },
   "expected_counts": {
-    "instances": 17,
+    "instances": 21,
     "relation_support": {
-      "APPLIED_IN": 6,
-      "REQUIRES": 4,
+      "APPLIED_IN": 8,
+      "REQUIRES": 6,
       "FORMALIZES": 4,
       "EXTENDS": 2,
       "CONTRASTS_WITH": 1
@@ -55,6 +55,14 @@
       "expected_relation_type": "APPLIED_IN"
     },
     {
+      "canonical_pair_id": "conn_dev_pair_5729188da76c91ec",
+      "expected_relation_type": "APPLIED_IN"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_799174f17022eacc",
+      "expected_relation_type": "APPLIED_IN"
+    },
+    {
       "canonical_pair_id": "conn_dev_pair_a1259045b6b2d2c7",
       "expected_relation_type": "REQUIRES"
     },
@@ -68,6 +76,14 @@
     },
     {
       "canonical_pair_id": "conn_dev_pair_8404187bbee08589",
+      "expected_relation_type": "REQUIRES"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7f5ac4c6e2fe5268",
+      "expected_relation_type": "REQUIRES"
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_bfce59cf0247f59a",
       "expected_relation_type": "REQUIRES"
     },
     {

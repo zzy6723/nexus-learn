@@ -1,0 +1,308 @@
+{
+  "artifact_type": "learning_explanation_annotation_scaffold_spec",
+  "artifact_schema_version": "v0.1",
+  "status": "ready_for_review",
+  "split": "development",
+  "annotation_policy": {
+    "required_points_are_semantic_constraints_not_reference_prose": true,
+    "forbidden_points_are_non_exhaustive": true,
+    "model_input_allowed": false,
+    "defined_before_explanation_model_output": true
+  },
+  "annotations": [
+    {
+      "canonical_pair_id": "conn_dev_pair_f089c625fb64bde0",
+      "required_points": [
+        "The gradient provides the local linear term used by the first-order Taylor approximation."
+      ],
+      "forbidden_or_unsupported_points": [
+        "The approximation is exact for every differentiable function.",
+        "Using the gradient guarantees a small approximation error."
+      ],
+      "risk_tags": [
+        "approximation_guarantee",
+        "endpoint_drift"
+      ]
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ff190ee933b57b25",
+      "required_points": [
+        "Gradient Descent uses the gradient to choose its descent direction."
+      ],
+      "forbidden_or_unsupported_points": [
+        "Gradient Descent always reaches a global minimum.",
+        "The supplied material establishes a particular convergence rate."
+      ],
+      "risk_tags": [
+        "convergence_overclaim",
+        "direction_reversal"
+      ]
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_1a40513a66e7f15d",
+      "required_points": [
+        "The step size determines the time increment used by each Forward Euler step."
+      ],
+      "forbidden_or_unsupported_points": [
+        "A smaller step size always makes Forward Euler stable.",
+        "The supplied material establishes an optimal step size."
+      ],
+      "risk_tags": [
+        "stability_overclaim",
+        "causal_overreach"
+      ]
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_9c6621685b9ef5e5",
+      "required_points": [
+        "Maximum Likelihood Estimation uses the log-likelihood as the objective it maximizes."
+      ],
+      "forbidden_or_unsupported_points": [
+        "Maximizing log-likelihood always produces an unbiased estimator.",
+        "The log-likelihood is itself the statistical model."
+      ],
+      "risk_tags": [
+        "statistical_guarantee",
+        "endpoint_substitution"
+      ]
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_ea10f05ebcebff54",
+      "required_points": [
+        "Newton's root-finding method can be applied to the score equation within Maximum Likelihood Estimation."
+      ],
+      "forbidden_or_unsupported_points": [
+        "Maximum Likelihood Estimation always uses Newton's method.",
+        "Newton's method guarantees the global maximum of the likelihood."
+      ],
+      "risk_tags": [
+        "universality_overclaim",
+        "convergence_overclaim"
+      ]
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d6043a4c35e6c8b9",
+      "required_points": [
+        "Linear Regression fitting uses the least-squares objective by minimizing prediction residuals."
+      ],
+      "forbidden_or_unsupported_points": [
+        "Least squares is the only possible objective for Linear Regression.",
+        "Minimizing least squares guarantees causal correctness."
+      ],
+      "risk_tags": [
+        "exclusivity_overclaim",
+        "causal_overreach"
+      ]
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_5729188da76c91ec",
+      "required_points": [
+        "The Newton Optimisation Method updates parameters in order to optimize an objective function."
+      ],
+      "forbidden_or_unsupported_points": [
+        "Every objective function has an invertible Hessian.",
+        "Newton optimisation always reaches the global optimum."
+      ],
+      "risk_tags": [
+        "assumption_overclaim",
+        "convergence_overclaim"
+      ]
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_799174f17022eacc",
+      "required_points": [
+        "The score function supplies the stationarity equation used to identify an interior Maximum Likelihood candidate."
+      ],
+      "forbidden_or_unsupported_points": [
+        "Every zero of the score function is a global maximum.",
+        "The score equation alone guarantees estimator consistency."
+      ],
+      "risk_tags": [
+        "stationarity_sufficiency",
+        "statistical_guarantee"
+      ]
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_a1259045b6b2d2c7",
+      "required_points": [
+        "The first-order Taylor formula requires the gradient as its linear term."
+      ],
+      "forbidden_or_unsupported_points": [
+        "The gradient alone determines every higher-order term.",
+        "The formula is exact without additional conditions."
+      ],
+      "risk_tags": [
+        "prerequisite_direction",
+        "approximation_guarantee"
+      ]
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_654033881f94fbf0",
+      "required_points": [
+        "The Gradient Descent update requires the step size to scale the gradient term."
+      ],
+      "forbidden_or_unsupported_points": [
+        "Any positive step size guarantees descent.",
+        "The step size determines the gradient itself."
+      ],
+      "risk_tags": [
+        "prerequisite_direction",
+        "convergence_overclaim"
+      ]
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_6aa4cd7ede0d0fd8",
+      "required_points": [
+        "The Forward Euler update requires the step size as its time increment."
+      ],
+      "forbidden_or_unsupported_points": [
+        "The step size guarantees numerical stability.",
+        "Forward Euler chooses the step size automatically."
+      ],
+      "risk_tags": [
+        "prerequisite_direction",
+        "stability_overclaim"
+      ]
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_8404187bbee08589",
+      "required_points": [
+        "Maximum Likelihood Estimation requires a statistical model because the likelihood is defined from that model."
+      ],
+      "forbidden_or_unsupported_points": [
+        "The statistical model is learned only after the likelihood is maximized.",
+        "Any statistical model guarantees an identifiable maximum-likelihood estimate."
+      ],
+      "risk_tags": [
+        "prerequisite_direction",
+        "identifiability_overclaim"
+      ]
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7f5ac4c6e2fe5268",
+      "required_points": [
+        "The Gradient Descent update requires the gradient term that determines the update direction."
+      ],
+      "forbidden_or_unsupported_points": [
+        "The update defines the gradient.",
+        "Having a gradient guarantees convergence."
+      ],
+      "risk_tags": [
+        "prerequisite_direction",
+        "convergence_overclaim"
+      ]
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_bfce59cf0247f59a",
+      "required_points": [
+        "The Newton Optimisation update requires the Hessian matrix through its inverse-curvature term."
+      ],
+      "forbidden_or_unsupported_points": [
+        "Every Hessian is invertible.",
+        "Using the Hessian guarantees a better update than Gradient Descent."
+      ],
+      "risk_tags": [
+        "prerequisite_direction",
+        "comparative_overclaim"
+      ]
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_623dc620447526e3",
+      "required_points": [
+        "The first-order Taylor formula is the formal mathematical expression of the first-order Taylor approximation."
+      ],
+      "forbidden_or_unsupported_points": [
+        "Any formula containing a gradient formalizes Taylor approximation.",
+        "The formalization supplies an exact equality in every context."
+      ],
+      "risk_tags": [
+        "formalizes_direction",
+        "formula_symbol_shortcut"
+      ]
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_225420587c4177f5",
+      "required_points": [
+        "The Gradient Descent update formula specifies one iteration of the Gradient Descent method."
+      ],
+      "forbidden_or_unsupported_points": [
+        "The method formalizes the formula.",
+        "The displayed update proves convergence."
+      ],
+      "risk_tags": [
+        "formalizes_direction",
+        "convergence_overclaim"
+      ]
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_c9b55dc727622af1",
+      "required_points": [
+        "The mean-squared-error formula expresses the least-squares objective up to positive scaling."
+      ],
+      "forbidden_or_unsupported_points": [
+        "Mean squared error and least squares are numerically identical under every scaling convention.",
+        "The formula guarantees a unique fitted model."
+      ],
+      "risk_tags": [
+        "scaling_precision",
+        "uniqueness_overclaim"
+      ]
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_d64d8e658f6dafd8",
+      "required_points": [
+        "The Newton root update formula specifies one iteration of Newton's root-finding method."
+      ],
+      "forbidden_or_unsupported_points": [
+        "The method is guaranteed to converge from every starting point.",
+        "The method formalizes the update formula rather than the formula formalizing the method."
+      ],
+      "risk_tags": [
+        "formalizes_direction",
+        "convergence_overclaim"
+      ]
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_e848f855de939343",
+      "required_points": [
+        "Ridge Regression extends Ordinary Least Squares by adding a coefficient penalty."
+      ],
+      "forbidden_or_unsupported_points": [
+        "Ridge Regression always improves predictive accuracy.",
+        "Ordinary Least Squares is a special case only when every coefficient is zero."
+      ],
+      "risk_tags": [
+        "performance_overclaim",
+        "extension_direction"
+      ]
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_63bb993a9e7b1d30",
+      "required_points": [
+        "The Damped Newton Method extends Newton's root-finding method by scaling its correction."
+      ],
+      "forbidden_or_unsupported_points": [
+        "Damping guarantees convergence.",
+        "Newton's original method extends the damped method."
+      ],
+      "risk_tags": [
+        "convergence_overclaim",
+        "extension_direction"
+      ]
+    },
+    {
+      "canonical_pair_id": "conn_dev_pair_7198ee241a3c0808",
+      "required_points": [
+        "Gradient Descent uses a step-size-controlled gradient move, whereas Newton optimisation adjusts its move using curvature information."
+      ],
+      "forbidden_or_unsupported_points": [
+        "Newton optimisation is always faster or better than Gradient Descent.",
+        "The two methods cannot be used on the same objective."
+      ],
+      "risk_tags": [
+        "comparative_overclaim",
+        "symmetric_relation"
+      ]
+    }
+  ]
+}

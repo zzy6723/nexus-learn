@@ -1,7 +1,7 @@
 # Learning Explanation Annotation Guidelines
 
-**Status:** Ready for 004-0 review
-**Version:** v0.1
+**Status:** Ready for 004-0 freeze review
+**Version:** v0.2
 
 ## Unit Of Review
 
@@ -41,14 +41,18 @@ This contains two claims:
 
 ## Claim Support Labels
 
-`DIRECTLY_SUPPORTED`
+`SOURCE_GROUNDED`
 : The supplied Evidence explicitly states or formally displays the claim.
 
-`LICENSED_PEDAGOGICAL_INFERENCE`
-: The claim follows directly from the fixed Connection and Evidence without
-  introducing a new STEM fact. Examples include a generic statement that
-  recognizing a prerequisite helps organize study, or that connecting a
-  formula to a method helps interpret notation operationally.
+`RELATION_ENTAILED`
+: The claim follows from the frozen Relation semantics and exact endpoint
+  roles without adding a new STEM fact.
+
+`GENERIC_PEDAGOGICAL_INFERENCE`
+: The claim states a bounded educational benefit that follows from the
+  Connection without asserting learner-specific facts. Examples include that
+  recognizing a prerequisite can organize dependencies, or that connecting a
+  formula to a method can help interpret notation operationally.
 
 `UNSUPPORTED`
 : The claim adds a factual, causal, comparative, performance, or learner claim
@@ -60,9 +64,14 @@ This contains two claims:
 `UNRESOLVED`
 : The reviewer cannot determine support under the frozen material.
 
-Only `DIRECTLY_SUPPORTED` and `LICENSED_PEDAGOGICAL_INFERENCE` count as
-supported. `UNRESOLVED` enters adjudication and never silently counts as
-supported.
+`SOURCE_GROUNDED`, `RELATION_ENTAILED`, and
+`GENERIC_PEDAGOGICAL_INFERENCE` count as supported. `UNRESOLVED` enters
+adjudication and never silently counts as supported.
+
+Claims about what learners typically misunderstand, what they should study
+next, whether they will improve, or what instructional intervention works are
+not bounded generic inferences unless the supplied material directly supports
+them.
 
 ## Faithfulness Dimensions
 
@@ -85,8 +94,9 @@ supplied and must not replace an endpoint.
 ### Evidence Faithfulness
 
 Pass when every substantive STEM claim is supported and every cited Evidence
-ID is supplied. Generic pedagogical inference is allowed only under the
-licensed label above.
+ID is supplied to that field. Generic pedagogical inference is allowed only
+under the label above. Under a no-Evidence method, Evidence faithfulness is
+reported as `not_applicable`, not silently treated as a pass.
 
 ### Contradiction
 
@@ -130,10 +140,15 @@ Apply all supported labels:
 - `EVIDENCE_OVERREACH`;
 - `ENDPOINT_DRIFT`;
 - `CONTRADICTION`;
-- `PEDAGOGICALLY_EMPTY`.
+- `PEDAGOGICALLY_EMPTY`;
+- `PEDAGOGICAL_OVERREACH`.
 
 `PEDAGOGICALLY_EMPTY` applies when the explanation passes faithfulness but
 scores `0` on both Conceptual Mechanism and Learning Relevance.
+
+`PEDAGOGICAL_OVERREACH` applies when a learning-value claim invents typical
+misconceptions, study order, mastery changes, learning outcomes, or
+instructional effectiveness beyond the supplied Connection and Evidence.
 
 ## Reviewer Independence
 
